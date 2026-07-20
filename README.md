@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧠 Agentic Second-Brain OS
 
 **A Claude-Code-native template that turns any document corpus into a cross-linked knowledge vault —
@@ -146,3 +147,7 @@ interviews, or course material — the flow is identical.
 | `.claude/skills/` | Project skills (`session-end`) |
 
 *Ships unactivated and data-free. Activate to make it yours.*
+=======
+# talabat-retention-agentic-os
+MBA Agentic OS Capstone Project – An AI Operating System for Customer Lifetime Value Optimization and Customer Retention in Talabat Egypt.
+>>>>>>> 4ba7062c13ca1f9481a95da1eceb63f57714ac56
