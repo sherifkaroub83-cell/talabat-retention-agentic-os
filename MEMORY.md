@@ -138,6 +138,16 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   pressure-test standard: McKinsey (SCQA/MECE/Pyramid) + full GSB 14-section coverage.
 - 2026-07-20 — Nightly maintenance available but unscheduled (manual, propose-only) per handout
   guardrail.
+- 2026-07-21 — Revised problem statement (owner's recommendation): reframed the charter's problem
+  paragraph to foreground the Agentic OS / centralized-knowledge-base deliverable and Customer
+  Lifetime Value (CLV), merged with the original's concrete Egypt evidence (competitors, inflation/
+  devaluation, t pro pricing) so the paragraph still satisfies the guide's company/problem/why-it-
+  matters/obtainable-data structure. Two scope decisions locked in: (1) synthetic data / primary
+  research may be used only where proprietary operational data is genuinely unavailable, and must
+  always be clearly labeled as such, never blended with or presented as real disclosed data; (2)
+  Egypt remains the target market for the actual deliverable — "MENA" is company-level backdrop
+  context (talabat operates in 8 countries), not a scope expansion. See `CLAUDE.md` standing
+  instructions and `Problem_Charter_DRAFT.md` for the resulting text.
 - 2026-07-21 — Ingested the 29-document native-PDF primary-source corpus (uploaded to
   `Input_Data/00_Inbox/`) into the structured knowledge base under `vault/Knowledge/` (source
   notes, topic-consolidated facts, entities, relationship map). Installed PyMuPDF + Tesseract OCR

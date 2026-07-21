@@ -48,6 +48,15 @@ These persist across sessions — follow them unless the user says otherwise:
 - **Write to McKinsey standards:** SCQA executive summary, Pyramid Principle, MECE breakdowns, hypothesis-driven analysis, value-driver-tree financials, MENA-grounded market figures.
 - **Ground claims in the sources.** When synthesizing or writing deliverables, cite which source
   document(s) a point comes from; don't introduce outside facts as if they came from the corpus.
+- **Synthetic data is allowed only as a clearly-labeled last resort.** Where proprietary operational
+  data is genuinely unavailable (e.g. individual-customer churn/feedback records), synthetic data or
+  primary research (surveys/interviews) may be used to illustrate the retention framework — but must
+  be explicitly labeled as such wherever it appears, and never presented as, or blended with, real
+  disclosed company data. (Decision recorded 21/07/2026, revised problem charter.)
+- **Scope: Egypt is the target market; MENA is backdrop context only.** The Agentic OS integrates
+  information at the MENA-company level (talabat operates across 8 countries), but the deliverable
+  analysis, retention strategy, and business plan stay scoped to talabat Egypt. Don't broaden the
+  actual recommendation beyond Egypt without an explicit instruction to do so.
 - **Write generated artifacts to `Outputs/`**, never into `Input_Data/`. Create `Outputs/` if absent.
 - **Extract before reading** — get text/Markdown first; never read the binaries as raw text.
 - **Propose, don't execute, on destructive vault work** — hand the user a changelist to approve
