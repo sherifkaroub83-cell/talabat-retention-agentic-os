@@ -16,6 +16,11 @@ Geography and competitive context — where talabat operates and who it competes
 - [[Competition]] — the gap between talabat's generic competitive framing and the one document (the IPO Offering Memorandum) that names real rivals (Deliveroo, Careem, noon, Jahez, Snoonu)
 - [[Growth Strategy]] — the 2026 "Everyday App" investment thesis and how retention is funded as a growth lever
 
+## Strategic synthesis
+- [[Competitive Advantages]] · [[Competitive Weaknesses]] — the honest two-sided competitive picture
+- [[Strategic Risks]] — FX/currency, geopolitical, margin, and governance-disclosure risk clusters
+- [[Growth Drivers]] — the Everyday App investment thesis and the three unreconciled 2026 investment totals found in the corpus
+
 ## Important scope note
 This MOC covers only what the **29-document primary corpus** discloses. Egypt-specific competitor detail (Breadfast, Rabbit, elmenus) lives in the separate secondary corpus at `Input_Data/03_Competitors/2026-07-20_egypt_delivery_competitive_landscape.md` — outside this semantic layer's citation regime by design (see [[Competition]]'s Open Questions). Don't blend the two without re-establishing a citation trail.
 

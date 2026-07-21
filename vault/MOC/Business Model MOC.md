@@ -20,6 +20,11 @@ How talabat actually makes money and structures its operations — the four mone
 - [[Pricing]] — commission rates, regulatory caps, take-rate structure
 - [[Promotions]] — vouchers, CARC economics, loyalty benefit stacking
 
+## Strategic synthesis
+- [[How Talabat Creates Value]] — the umbrella argument connecting all four monetization layers
+- [[Revenue Model]] — the logic linking the four revenue streams to volume/pricing drivers
+- [[Cost Structure]] — what's disclosed about cost drivers and margin structure (thin, flagged as such)
+
 ## Structural underpinnings
 - [[Corporate Structure]] — the legal entity structure this business model operates through
 - `Knowledge/Entities/Delivery_Models.md` — the four delivery-model roster (marketplace, own-delivery, quick commerce, cloud kitchens)

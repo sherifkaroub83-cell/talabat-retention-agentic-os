@@ -22,6 +22,13 @@ The top-level entry point into everything the vault knows about talabat, built f
 - [[IPO]] — the November 2024 Dubai Financial Market listing
 - [[Egypt]] — the capstone's target market; start here for anything Egypt-specific
 
+## Strategic knowledge (cross-cutting synthesis)
+- [[How Talabat Creates Value]] · [[Revenue Model]] · [[Cost Structure]] — the business model, argued
+- [[Competitive Advantages]] · [[Competitive Weaknesses]] · [[Strategic Risks]] — the competitive/risk picture
+- [[Growth Drivers]] · [[Customer Retention Drivers]] — what's actually moving the numbers
+- [[AI Opportunities]] · [[Future AI Opportunities]] — evidenced AI roadmap vs. capstone recommendation-space
+- [[Decision-Making Process]] · [[Current Pain Points]] — governance and the vault's own gap roll-up
+
 ## Foundational synthesis
 - [[Relationship_Map]] — how Customers/Restaurants/Riders/Talabat Pro/Marketplace/Q-Commerce/Advertising/Logistics/AI/Revenue/GMV/Orders connect, with a Mermaid diagram
 - [[Business_Relationships]] — explicit causal reasoning chains (Retention → CLV → Revenue → Profitability; Competition → Pricing → Promotions → Retention), also with Mermaid diagrams

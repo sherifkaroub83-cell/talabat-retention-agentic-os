@@ -19,6 +19,10 @@ talabat's AI/ML use cases specifically — this is likely the single most import
 - [[Talabat Pro]] — the subscription programme AI is used to promote and time
 - [[Customer Journey]] — the 6-order personalization threshold structurally defines an early phase of the journey
 
+## Strategic synthesis
+- [[AI Opportunities]] — talabat's own stated AI roadmap items (evidenced intent, not invention)
+- [[Future AI Opportunities]] — the capstone's own recommendation-space, explicitly labeled as synthesis rather than reported fact
+
 ## Known gap (flagged across every AI-related Topic Note)
 Nearly every AI/personalization figure in the corpus is Group-level or explicitly **excludes Egypt** — there is no Egypt-specific AI deployment, personalization uplift, or recommendation-engine data anywhere in the primary corpus. This is one of the most important open questions for the capstone's Egypt-scoped business plan: the retention mechanism the plan wants to recommend (AI-driven personalization) is the same mechanism the evidence base says least about, for Egypt specifically.
 

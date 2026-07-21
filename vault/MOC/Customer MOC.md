@@ -20,6 +20,9 @@ The customer-facing side of the business — this is the domain closest to the c
 - [[Pricing]] — commission/take-rate pressure and its downstream effect on customer-facing pricing
 - [[Personalization]] — the customer-experience angle on AI (recommendation timing, cross-sell)
 
+## Strategic synthesis
+- [[Customer Retention Drivers]] — the corpus's retention mechanisms ranked by evidence strength (talabat pro > multi-vertical > Rewards > PostPaid > Family Plan)
+
 ## Raw data
 - `Knowledge/Facts/Retention.md`, `Knowledge/Facts/Customer_Growth.md`, `Knowledge/Facts/Talabat_Pro.md`, `Knowledge/Facts/Subscription.md`, `Knowledge/Facts/Monthly_Active_Customers.md`
 
