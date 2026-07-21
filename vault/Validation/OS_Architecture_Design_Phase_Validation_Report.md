@@ -51,11 +51,23 @@ against `git status` at time of writing.
 **Conclusion: this phase is architecture design only. No Business Plan content was drafted**,
 consistent with the user's explicit governing instruction for this phase.
 
-## Not merged
+## Review and merge
 
-This branch (`feature/agentic-os-architecture`) has not been merged to `main`. Per the project's
-established convention (see the Obsidian Graph Cleanup precedent), review and merge approval is the
-user's call, not automatic.
+This branch (`feature/agentic-os-architecture`) went through two PR review passes before merging to
+`main`, per the project's established convention (see the Obsidian Graph Cleanup precedent) that
+review and merge approval is the user's call, not automatic:
+
+1. **First review** — found 5 Required Changes (frontmatter overclaiming approval before review;
+   two files breaking established backlink/template conventions; an unregistered template pair; a
+   "Phase 6" naming collision with unrelated, pre-existing project history) and 5 Recommended
+   Improvements.
+2. **Fixes applied** — all 5 Required Changes resolved; all 5 Recommended Improvements applied,
+   including a real smoke test of `research-agent` + the `external-research` skill (passed on all
+   dimensions: agent invocation, skill resolution, file output, provenance, backlinks, validation
+   behavior, source-file integrity). A sixth defect — a wikilink basename collision across the three
+   new layer README files — was found and fixed during re-validation.
+3. **Second review** — verdict **APPROVED FOR MERGE**.
+4. Merged to `main` on the user's explicit authorization.
 
 ## See also
 [[Agentic_OS_Architecture|Agentic OS Architecture]] · [[Validation and Audit]]

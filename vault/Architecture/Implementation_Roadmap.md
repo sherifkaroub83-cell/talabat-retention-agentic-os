@@ -1,6 +1,6 @@
 ---
 type: architecture
-status: proposed
+status: approved
 created: "2026-07-21"
 ---
 
@@ -12,7 +12,7 @@ Plan**, broken into buildable, git-branch-scoped increments.
 
 | Phase | Objective | Deliverables | Dependencies | Completion criteria | Git branch | Expected outputs |
 |---|---|---|---|---|---|---|
-| **6 — OS Architecture Design** *(this document's own phase — complete)* | Design the Decision/Research/Forecast layers and the 11-stage pipeline before any drafting | `vault/Architecture/*.md` (5 docs), 8 agent files, 6 new/redesigned skills, 3 scaffolded vault layers | Phase 3 (ingestion + semantic layer) | All 12 OS Architecture Design Phase tasks delivered; user reviews and merges | `feature/agentic-os-architecture` | This document and its companions |
+| **6 — OS Architecture Design** *(this document's own phase — ✅ complete, merged to `main`)* | Design the Decision/Research/Forecast layers and the 11-stage pipeline before any drafting | `vault/Architecture/*.md` (5 docs), 8 agent files, 6 new/redesigned skills, 3 scaffolded vault layers | Phase 3 (ingestion + semantic layer) | All 12 OS Architecture Design Phase tasks delivered; user reviewed (2 PR review passes) and merged | `feature/agentic-os-architecture` (merged) | This document and its companions |
 | **7 — Pilot Drafting (load-bearing sections)** | Run the 11-stage pipeline end to end on the 4 sections everything else depends on: Business Description (2), Market Analysis (3), Financial Plan (9), Risk Analysis (10) | 4 section drafts + their Citation Audit and QA Review reports; first real entries in `Assumptions_Register.md`, `Decision_Log/`, `Research_Register.md`, `Value_Driver_Tree.md` | Phase 6 merged to `main` | All 4 sections reach ✅ Done (passed QA); at least one real Decision Log entry exists resolving a known discrepancy (Egypt category-share, the 2026 investment total, or the Subscription reclassification) | `feature/bp-pilot-sections` | Draft content in the Project tracker; populated Decisions/Research/Forecasts layers |
 | **8 — Remaining Section Drafting** | Sections 4–8, 11, 12, 14 (all sections not in the Phase 7 pilot, excluding Section 1) | 9 section drafts + reports | Phase 7 (reuses its now-populated Assumption Register/Decision Log where sections overlap, e.g. Section 4 and 13 share value mechanisms with Section 9) | All 13 non-Section-1 sections ✅ Done | `feature/bp-remaining-sections` | Draft content for Sections 4-8, 11, 12, 14 |
 | **9 — Executive Summary, Cross-Section QA, Traceability** | Run `exec-summary-agent` (gated on Phase 8 completion); run a whole-plan consistency pass; compile the Appendix traceability note | Section 1 draft; whole-plan QA pass; `Outputs/Traceability_Note.md` | Phase 8 complete (all 13 sections ≥ 🟡) | Section 1 ✅ Done; traceability note covers every claim → note → source | `feature/bp-executive-summary` | `Outputs/` draft of the full 14-section plan |

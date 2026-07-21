@@ -1,6 +1,6 @@
 ---
 type: architecture
-status: proposed
+status: approved
 created: "2026-07-21"
 ---
 

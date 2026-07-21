@@ -179,7 +179,9 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   evidence model (Facts → External Research → Forecasts → Decisions → Business Plan) where every
   number downstream must resolve to a citation or an Approved assumption. Full design in
   `vault/Architecture/` (`Agentic_OS_Architecture.md` + 4 companion docs). Work done on branch
-  `feature/agentic-os-architecture`, not yet merged to `main` pending user review. **No Business
+  `feature/agentic-os-architecture`, reviewed (two PR review passes — 5 Required Changes and 5
+  Recommended Improvements applied, a research-agent smoke test passed) and merged to `main` on
+  the user's explicit authorization. **No Business
   Plan content was drafted** — the 14-section checklist remains 0/14; this was architecture design
   only, per explicit instruction.
 

@@ -12,7 +12,7 @@ Capstone project-management content — team, milestones, decisions. Distinct fr
 - [[Talabat-Egypt-AI-Retention-Business-Plan]] — the capstone deliverable tracker (open decisions, plan of attack)
 - [[MOC-Second-Brain]] — the whole-vault root index
 
-## Agentic OS architecture (OS Architecture Design Phase, 21/07/2026 — design only, not yet merged to main)
+## Agentic OS architecture (OS Architecture Design Phase, 21/07/2026 — design only; reviewed and merged to main)
 - [[Agentic_OS_Architecture]] — the architecture root doc: current-state assessment, 14 missing
   capabilities, 8 agent designs, 6 skill designs, workflow diagram, gap analysis
 - [[Decision_Management_Layer]] · [[External_Research_Layer]] · [[Forecasting_Layer]] — the three
