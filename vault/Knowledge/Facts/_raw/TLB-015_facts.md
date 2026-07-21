@@ -111,3 +111,9 @@
 - **Competitors:** Referenced only generically as "next largest online peer platform" / "regional peers" per OC&C/Redseer analysis (not individually named, except Meituan in the China benchmark) (TLB-015, page 12, 44, 100)
 - **Technology Platforms:** talabat's proprietary personalisation/ranking algorithm, order-stacking algorithm, smart auction system (AdTech), telematics (rider safety), rider wallet, self-service ads portal (TLB-015, pages 21, 57, 85-86, 106)
 - **Delivery Models:** Marketplace (Food and Grocery & Retail via Local shops), talabat-owned tMarts (delivery-only dark stores), 3PL rider/logistics model, quick-commerce-style grocery delivery (<30 min via tMarts) (TLB-015, pages 18-19, 64, 71)
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

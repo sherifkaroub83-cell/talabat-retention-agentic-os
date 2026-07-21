@@ -27,8 +27,8 @@ This is the single most consequential disclosure-related finding for the capston
 
 ## Links to Facts
 - [[Revenue]] — carries the audited Egypt segment revenue figures (both TLB-002/008 annual and TLB-010 quarterly) that anchor this note's numbers.
-- [[GMV]] — confirms that Egypt GMV is still not separately disclosed even after the segment-reporting change, an asymmetry worth noting.
-- [[Marketplace]] — carries the fuller Egypt segment P&L (gross profit, profit before tax, net profit, delivery cost, D&A) consolidated from the FY2025 audited financials.
+- [[GMV_Facts]] — confirms that Egypt GMV is still not separately disclosed even after the segment-reporting change, an asymmetry worth noting.
+- [[Marketplace_Facts]] — carries the fuller Egypt segment P&L (gross profit, profit before tax, net profit, delivery cost, D&A) consolidated from the FY2025 audited financials.
 
 ## Open Questions
 - The corpus never explains, in its own words, exactly which IFRS 8 quantitative threshold Egypt crossed (revenue, profit, or assets) or by how much — it states the outcome (Egypt now meets the threshold) without the underlying calculation.

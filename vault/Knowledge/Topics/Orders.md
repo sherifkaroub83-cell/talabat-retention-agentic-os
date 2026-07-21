@@ -27,8 +27,8 @@ Order frequency is the single most direct, quantified link between retention mec
 - [[TLB-013_investor-presentation-may2025|TLB-013 Investor Presentation (May 2025)]] — the Ramadan/seasonality order-dip trend showing reduced y/y seasonality impact since 2023.
 
 ## Links to Facts
-- [[Orders]] — the full cited order-frequency, volume, and delivery-time series this note synthesizes.
-- [[GMV]] — the explicit statement that 2024 GMV growth combined MAU expansion with an 8% order-frequency uplift.
+- [[Orders_Facts]] — the full cited order-frequency, volume, and delivery-time series this note synthesizes.
+- [[GMV_Facts]] — the explicit statement that 2024 GMV growth combined MAU expansion with an 8% order-frequency uplift.
 - [[Talabat_Pro]] and [[Subscription]] — the subscription-driven order-frequency uplift data underlying this note's retention argument.
 
 ## Open Questions

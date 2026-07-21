@@ -72,3 +72,9 @@
 - **Business Units:** Food, Grocery & Retail (G&R), AdTech (TLB-016, page 11, page 12)
 - **Technology Platforms:** New/redesigned talabat app (personalized experience) (TLB-016, page 7, page 8)
 - **Delivery Models:** Marketplace (Food, G&R), Q-commerce/dark stores (tMart) implied via G&R segment (TLB-016, page 12)
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

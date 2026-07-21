@@ -52,3 +52,9 @@
 - **Products:** talabat pro (loyalty/subscription programme); talabat mart (grocery dark-store vertical)
 - **Business Units:** GCC segment (UAE, Kuwait, Qatar, Bahrain, Oman); Non-GCC segment (Egypt, Jordan, Iraq); Food vertical; Grocery & Retail (G&R) vertical
 - **Delivery Models:** Marketplace/commission-based food delivery; first-party dark-store grocery (talabat mart); third-party "Local Shops"; advertising/adtech
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

@@ -81,3 +81,9 @@
 - **Technology Platforms:** Not separately named beyond talabat platform (TLB-019, page 7)
 - **Delivery Models:** Marketplace (Food, local shops), Q-commerce/dark stores (tMart), own-fleet logistics (riders/pickers) (TLB-019, page 7, page 11)
 - **Third-party research:** Redseer Analysis (Grocery TAC penetration source) (TLB-019, page 11)
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

@@ -27,7 +27,7 @@ Q-commerce is explicitly named in the 2026 guidance as one of two priority inves
 
 ## Links to Facts
 - [[Q-Commerce]] — full cited data on tMart store counts, GMV growth, take rates, InstaShop financials, and grocery TAM
-- [[Marketplace]] — Groceries and Retail vertical's share of total GMV as reported alongside marketplace facts
+- [[Marketplace_Facts]] — Groceries and Retail vertical's share of total GMV as reported alongside marketplace facts
 
 ## Open Questions
 - No Egypt-specific tMart store count, GMV, or penetration figure appears in the corpus — the 127-160 store footprint is reported only at the 8-market aggregate level (TLB-026, page 130-131; TLB-002, page 14).

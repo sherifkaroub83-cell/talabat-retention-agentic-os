@@ -46,3 +46,9 @@
 - **Business Units:** GCC segment; Egypt segment (new standalone reportable segment as of this filing); Non-GCC segment (residual: Jordan, Iraq)
 - **Delivery Models:** Online marketplace services; delivery-only stores; advertising services; subscription fees; service fees; payment fees
 - **Technology Platforms:** Dubai Financial Market (DFM) — treasury share/liquidity provision arrangement
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

@@ -88,3 +88,9 @@
 - **Business Units:** Food, Grocery & Retail (G&R), instashop, AdTech (TLB-014, page 5, page 15, page 19)
 - **Technology Platforms:** Not separately named beyond the talabat platform/app itself
 - **Delivery Models:** Marketplace (Food, Local shops), Q-commerce/dark stores (talabat mart), instashop hyper-local grocery delivery, own-fleet logistics (riders and pickers) (TLB-014, page 13, page 14, page 19)
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

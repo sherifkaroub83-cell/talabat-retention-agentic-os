@@ -234,3 +234,9 @@
 - **Delivery Models:** Marketplace (third-party restaurants/Local Shops), proprietary dark stores
   (talabat mart), delivery-only cloud kitchens (talabat kitchens), third-party logistics (3PL) rider
   fleet, quick commerce
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

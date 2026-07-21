@@ -65,3 +65,9 @@
 - **Competitors:** Not named in this document.
 - **Technology Platforms:** Online marketplace platform; ad-tech solutions (TLB-008, page 3).
 - **Delivery Models:** Online marketplace services (agent model, commission fees); delivery services (principal model, delivery fees); delivery-only stores (principal model, GMV-based); advertising services; subscription programs; quick commerce partners (referenced in principal/agent judgement note) (TLB-008, Note 3.3, page 40).
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

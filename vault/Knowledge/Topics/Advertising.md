@@ -28,8 +28,8 @@ Advertising is powered by the same AI-driven targeting and audience-segmentation
 - [[TLB-009_q4-fy25-results-press-release|TLB-009 Q4 FY2025 Results Press Release]] — confirms talabat pro surge as a Q4 2025 GMV driver alongside continued AdTech growth.
 
 ## Links to Facts
-- [[Advertising]] — the full, per-document cited fact base this note synthesizes (revenue figures, ROAS by product, growth trajectory).
-- [[AI]] — the source of the AI-driven targeting and ad-personalisation EBITDA claims.
+- [[Advertising_Facts]] — the full, per-document cited fact base this note synthesizes (revenue figures, ROAS by product, growth trajectory).
+- [[AI_Facts]] — the source of the AI-driven targeting and ad-personalisation EBITDA claims.
 
 ## Open Questions
 - No document discloses Egypt-specific AdTech revenue, penetration (% of GMV), or ROAS — all reported figures are company-wide or UAE-specific (e.g., the 7% of GMV talabat mart milestone is UAE-only).

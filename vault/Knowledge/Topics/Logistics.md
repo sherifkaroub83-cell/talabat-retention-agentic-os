@@ -27,7 +27,7 @@ Logistics performance (speed, reliability) is a direct input to customer experie
 - [[TLB-023_intention-to-float-announcement|TLB-023 Intention to Float Announcement]] — description of the "pioneering and scalable logistics and service technology stack" and the Cairo tech-hub's role in building it
 
 ## Links to Facts
-- [[Logistics]] — full cited data on delivery times, safety scores, 3PL sourcing, EV fleet, and technology stack across all sourced documents
+- [[Logistics_Facts]] — full cited data on delivery times, safety scores, 3PL sourcing, EV fleet, and technology stack across all sourced documents
 - [[Q-Commerce]] — dark-store logistics facts (order processing speed, shrinkage) that extend the logistics concept into quick-commerce
 
 ## Open Questions

@@ -32,3 +32,9 @@
 - **Executives:** Pieter-Jan Vandepitte (Chairman of the Board) (TLB-003, page 1); Tomaso Rodriguez (Chief Executive Officer) (TLB-003, page 1)
 - **Business Units:** GCC segment; non-GCC segment; Food vertical; Grocery & Retail vertical
 - **Delivery Models:** Marketplace (implied via commission fees); quick commerce/grocery (Grocery & Retail line)
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

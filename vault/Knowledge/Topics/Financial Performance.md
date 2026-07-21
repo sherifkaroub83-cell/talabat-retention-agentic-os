@@ -26,9 +26,9 @@ The consistent guidance-beat pattern and strengthening balance sheet establish t
 - [[TLB-026_international-offering-memorandum|TLB-026 International Offering Memorandum]] — the pre-IPO financial baseline and earliest guidance targets (medium-term GMV growth of 14–15%) in the corpus.
 
 ## Links to Facts
-- [[GMV]] and [[Revenue]] — the guidance-vs-actual tables (by year, by document) that this note's "beat" narrative is built from.
-- [[Marketplace]] — Group-level profitability, cash, tax-rate, and dividend figures that complete the financial-performance picture beyond top-line growth.
-- [[Orders]] — order-frequency and seasonality data (e.g., reduced Ramadan order dip) cited as an operational driver behind financial-performance improvements.
+- [[GMV_Facts]] and [[Revenue]] — the guidance-vs-actual tables (by year, by document) that this note's "beat" narrative is built from.
+- [[Marketplace_Facts]] — Group-level profitability, cash, tax-rate, and dividend figures that complete the financial-performance picture beyond top-line growth.
+- [[Orders_Facts]] — order-frequency and seasonality data (e.g., reduced Ramadan order dip) cited as an operational driver behind financial-performance improvements.
 
 ## Open Questions
 - The corpus does not explain why FY2025 GMV guidance was revised twice within the year (17–18% → 27–29% → 28% actual) beyond citing a "strong first half" — the underlying demand drivers (Egypt vs. GCC, organic vs. InstaShop, seasonality) are not decomposed.

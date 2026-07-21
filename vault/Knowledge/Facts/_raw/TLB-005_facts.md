@@ -41,3 +41,9 @@
 - **Executives:** Anurag Bajpai (KPMG signatory, Abu Dhabi) (TLB-005, page 3)
 - **Business Units:** GCC segment; Other segments
 - **Delivery Models:** Online marketplace services; delivery-only stores; advertising services; subscription fees; service fees; payment fees
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

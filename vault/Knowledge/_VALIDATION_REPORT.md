@@ -118,3 +118,9 @@ All 8 ingestion phases specified in the task brief are complete:
 | 8 — Validation | ✅ This report |
 
 No facts were invented at any stage; every fact and entity in the knowledge base traces to a specific document and page (or sheet, for the one XLSX source).
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup._
+
+- [[Validation and Audit]]

@@ -24,7 +24,7 @@ Pricing sits upstream of retention economics: talabat pro's flat monthly/annual 
 - [[TLB-001_annual-report-2024|TLB-001 Annual Report 2024]] — Qatar commission-rate cap and Oman licensing-dispute risk factors; ~40% blended take rate for FY2024
 
 ## Links to Facts
-- [[Competition]] — commission-rate caps (Qatar), licensing disputes (Oman), and consolidation risk to commission rates/margins
+- [[Competition_Facts]] — commission-rate caps (Qatar), licensing disputes (Oman), and consolidation risk to commission rates/margins
 - [[Revenue]] — full commission-fee, delivery-fee, and take-rate figures by year/quarter
 - [[Subscription]] — subscription fees as % of GMV (1.0% Q1 2026 vs. 0.5% Q1 2025), the clearest direct customer-facing pricing metric disclosed
 

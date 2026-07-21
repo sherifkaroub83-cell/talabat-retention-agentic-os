@@ -11,3 +11,9 @@ date: "[INSERT YYYY-MM-DD]"
 - `[INSERT: what you did today]`
 
 **Next:** `[INSERT: the obvious next action]`
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup._
+
+- [[Templates and Methods]]

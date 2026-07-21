@@ -28,9 +28,9 @@ The marketplace is the demand-and-supply substrate every retention lever operate
 - [[TLB-019_q4-fy25-results-presentation|TLB-019 Q4/FY2025 Results Presentation]] and [[TLB-020_q1-2026-results-presentation|TLB-020 Q1 2026 Results Presentation]] — most recent Active Partner trend data
 
 ## Links to Facts
-- [[Marketplace]] — full cited data on Partner/restaurant counts, category share, and per-document marketplace disclosures across all 29 sources
+- [[Marketplace_Facts]] — full cited data on Partner/restaurant counts, category share, and per-document marketplace disclosures across all 29 sources
 - [[Q-Commerce]] — the grocery/retail vertical facts that extend the marketplace concept
-- [[Logistics]] — rider-side facts that complete the three-sided structure
+- [[Logistics_Facts]] — rider-side facts that complete the three-sided structure
 
 ## Open Questions
 - The vault does not disclose an Egypt-specific Partner or restaurant count broken out from the platform-wide totals — Egypt marketplace density (Partners per capita, category share vs. local competitors) is not directly evidenced.

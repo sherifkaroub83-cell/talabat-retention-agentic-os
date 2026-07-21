@@ -28,6 +28,7 @@ regime — see [[Competition]]'s Open Questions for why that boundary is kept de
 
 ## Active work
 - [[Talabat-Egypt-AI-Retention-Business-Plan]] — the capstone deliverable tracker
+- [[Project Administration]] — team, milestones, decisions, and links to the repo-root tracking files
 
 ## Reading arc
 No prescribed order. Recommended path for new team members: `_CORPUS_INDEX.md` → Q4/FY2025 press

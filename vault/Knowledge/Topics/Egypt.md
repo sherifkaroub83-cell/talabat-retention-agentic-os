@@ -30,11 +30,11 @@ Egypt is the direct subject of this capstone's AI-driven retention strategy, so 
 - [[TLB-001_annual-report-2024|TLB-001 Annual Report 2024]] — reports the February 2025 Egypt talabat pro launch and "seven of eight countries" milestone
 
 ## Links to Facts
-- [[GMV]] — Egypt sits inside the "Non-GCC" GMV line (+42% to +57% YoY across the corpus's later documents), the fastest-growing geographic segment
+- [[GMV_Facts]] — Egypt sits inside the "Non-GCC" GMV line (+42% to +57% YoY across the corpus's later documents), the fastest-growing geographic segment
 - [[Talabat_Pro]] — records the Feb 2025 Egypt launch date and the broader frequency/retention uplift metrics that presumably apply once Egypt subscribers mature, though no Egypt-specific uplift figure is disclosed
 - [[Retention]] — general retention mechanisms and metrics (talabat pro uplift, rewards uplift, PostPaid uplift) that are documented at the Group level but not broken out for Egypt
 - [[Customer_Growth]] — Group-level acquisition and frequency drivers of GMV growth; Egypt's specific contribution to these Group totals is not separately disclosed
-- [[Competition]] — Egypt's relative category-share figures (10x+ in TLB-001/TLB-002; a different 1x+ rising to 4x+ figure in TLB-014) sit in this Facts file
+- [[Competition_Facts]] — Egypt's relative category-share figures (10x+ in TLB-001/TLB-002; a different 1x+ rising to 4x+ figure in TLB-014) sit in this Facts file
 
 ## Open Questions
 - No fact in the corpus discloses an Egypt-specific talabat pro adoption rate, frequency uplift, or retention uplift — all uplift metrics (28% frequency, 26% retention, etc.) are Group-level or explicitly exclude Egypt/Iraq at the time they were measured (e.g. TLB-012, TLB-013, TLB-016 explicitly exclude Egypt from the "2.1x adoption growth" figure because Egypt's programme wasn't live yet).

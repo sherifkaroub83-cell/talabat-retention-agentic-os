@@ -115,3 +115,9 @@
 - **Competitors:** Deliveroo, Careem, noon, Jahez, Snoonu (TLB-026, page 146)
 - **Technology Platforms:** talabat mobile application, talabat Partner Portal, rider staffing algorithm, order dispatch algorithm, picking tools/handheld devices (all licensed from Delivery Hero), "tcamp" rider training app, "tPatrollers" on-ground fleet support (TLB-026, page 131-132, page 138)
 - **Delivery Models:** Marketplace (Food Vertical, Local Shops), quick commerce / dark stores (tMarts), own-delivery logistics via third-party logistics providers (~95% of riders), cloud kitchens ("Kitchens") (TLB-026, page 126, page 130-131, page 138)
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

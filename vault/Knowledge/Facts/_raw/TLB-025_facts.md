@@ -14,3 +14,9 @@
 - **Countries:** UAE, Kuwait, Qatar, Bahrain, Egypt, Oman, Jordan, Iraq (talabat's 8 MENA markets, referenced collectively) (TLB-025, page 3-4)
 - **Executives:** Tomaso Rodriguez, Chief Executive Officer of talabat (TLB-025, page 3)
 - **Delivery Models:** Marketplace (food ordering/delivery, groceries and convenience retail) (TLB-025, page 2)
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

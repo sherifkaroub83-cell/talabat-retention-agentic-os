@@ -29,8 +29,8 @@ Although this capstone's deliverable is scoped to Egypt, the UAE matters as the 
 
 ## Links to Facts
 - [[Talabat_Pro]] — the UAE-specific launch date, subscriber CAGR, and early feature set (2x rewards points, DineOut Deals) that later rolled out more broadly
-- [[Competition]] — UAE-specific competitive-pressure and antitrust-notice facts (UAE Competition and Consumer Protection Department notices re: Partner subscription-agreement clauses)
-- [[GMV]] — GCC segment GMV figures, in which the UAE is the largest but not separately disclosed component
+- [[Competition_Facts]] — UAE-specific competitive-pressure and antitrust-notice facts (UAE Competition and Consumer Protection Department notices re: Partner subscription-agreement clauses)
+- [[GMV_Facts]] — GCC segment GMV figures, in which the UAE is the largest but not separately disclosed component
 - [[Retention]] — the -4% YoY non-high-value M1 retention decline in competitive markets including the UAE
 
 ## Open Questions

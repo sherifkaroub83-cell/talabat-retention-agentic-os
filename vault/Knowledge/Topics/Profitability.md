@@ -26,8 +26,8 @@ Egypt's swing from near-breakeven to solidly profitable in roughly a year — co
 - [[TLB-026_international-offering-memorandum|TLB-026 International Offering Memorandum]] — the only pre-2025 Egypt-specific profitability datapoint (6% of 2023 revenue, only 1% of 2023 Adjusted EBITDA), establishing the "before" state.
 
 ## Links to Facts
-- [[Marketplace]] — the primary consolidated source for Group and segment-level gross profit, Adjusted EBITDA, Net Income, Adjusted Free Cash Flow, net cash, tax rate, and dividend data (despite the filename, this is where the corpus's profitability figures were consolidated).
-- [[GMV]] — carries the FY2024/FY2025 Adjusted EBITDA and Net Income figures expressed as % of GMV from the Directors' Reports.
+- [[Marketplace_Facts]] — the primary consolidated source for Group and segment-level gross profit, Adjusted EBITDA, Net Income, Adjusted Free Cash Flow, net cash, tax rate, and dividend data (despite the filename, this is where the corpus's profitability figures were consolidated).
+- [[GMV_Facts]] — carries the FY2024/FY2025 Adjusted EBITDA and Net Income figures expressed as % of GMV from the Directors' Reports.
 - [[Revenue]] — Gross Profit consensus estimates (FY2024A–FY2028e) from sell-side sources, for forward-looking margin context.
 
 ## Open Questions

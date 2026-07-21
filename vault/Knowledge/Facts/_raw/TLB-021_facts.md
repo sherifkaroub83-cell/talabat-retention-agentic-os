@@ -24,3 +24,9 @@
 - **Countries:** United Arab Emirates
 - **Executives:** Abdullah AlGhrawi — VP Legal, GRC & Board Secretary (signatory of the notice) (TLB-021, page 1)
 - **Business Units:** Legal, Governance, Risk & Compliance (GRC) function
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

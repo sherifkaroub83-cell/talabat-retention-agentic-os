@@ -27,7 +27,7 @@ Personalisation is where AI investment converts most directly into retention eco
 - [[TLB-026_international-offering-memorandum|TLB-026 International Offering Memorandum]] — prospectus-level description of personalised recommendations requiring "at least 6 orders" to activate.
 
 ## Links to Facts
-- [[AI]] — the full, per-document cited fact base underlying personalisation, including the EBITDA figures and the loyalty-timing claim.
+- [[AI_Facts]] — the full, per-document cited fact base underlying personalisation, including the EBITDA figures and the loyalty-timing claim.
 - [[Talabat_Pro]] — the subscription product personalisation is used to time and promote.
 - [[Retention]] — the broader retention context personalisation's EBITDA and UX claims sit within.
 

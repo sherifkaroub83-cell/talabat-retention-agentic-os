@@ -25,7 +25,7 @@ Competitive intensity is one of the few headwinds management names explicitly ag
 - [[TLB-020_q1-2026-results-presentation|TLB-020 Q1 2026 Results Presentation]] — the ~USD 55mn Food-leadership investment framed explicitly as a competitive defense, funded via CVP investment rather than discounting
 
 ## Links to Facts
-- [[Competition]] — the full per-document consolidated competitive-landscape facts this note synthesizes
+- [[Competition_Facts]] — the full per-document consolidated competitive-landscape facts this note synthesizes
 - [[Retention]] — the specific retention-decline figures attributed to competitive pressure
 
 ## Open Questions

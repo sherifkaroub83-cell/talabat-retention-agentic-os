@@ -26,7 +26,7 @@ Restaurant selection breadth and quality are a direct driver of the customer-sid
 - [[TLB-004_q4-fy24-audited-financials|TLB-004 Q4/FY2024 Audited Financials]] — the accounting basis (agent vs. principal) for how restaurant commission revenue is recognized
 
 ## Links to Facts
-- [[Marketplace]] — full cited data on restaurant/Partner counts, GMV tiering, and category share across all sourced documents
+- [[Marketplace_Facts]] — full cited data on restaurant/Partner counts, GMV tiering, and category share across all sourced documents
 - [[Q-Commerce]] — Local Shops and Grocery & Retail branch counts that sit adjacent to the restaurant Partner base
 
 ## Open Questions

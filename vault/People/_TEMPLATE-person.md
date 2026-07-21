@@ -20,3 +20,4 @@ source: "[INSERT: where this info came from]"
 
 ## Links
 - [[MOC-Second-Brain]]
+- [[Templates and Methods]]

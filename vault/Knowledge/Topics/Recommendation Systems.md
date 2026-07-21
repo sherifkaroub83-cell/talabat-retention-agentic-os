@@ -25,7 +25,7 @@ The item-level granularity shift (cuisine → specific meal/item) is the most co
 - [[TLB-026_international-offering-memorandum|TLB-026 International Offering Memorandum]] — prospectus-level description confirming the 6-order minimum and ~13 terabytes/day of data underpinning it (as of Sept 2024).
 
 ## Links to Facts
-- [[AI]] — the source fact file containing every recommendation-system citation used in this note.
+- [[AI_Facts]] — the source fact file containing every recommendation-system citation used in this note.
 - [[Talabat_Pro]] — the loyalty product whose offer-timing depends on recommendation-system output.
 
 ## Open Questions

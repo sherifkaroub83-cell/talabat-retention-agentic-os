@@ -69,3 +69,9 @@
 - Adjusted Net Income: FY'24A 393, Q4'24A 122; Q4'25e Cons. 130 (#8, Min 104, Median 129, Max 150); FY'25e Cons. 461 (#8, Min 435, Median 460, Max 480); FY'26e Cons. 457 (#8, Min 362, Median 470, Max 494); FY'27e Cons. 512 (#8, Min 413, Median 511, Max 602) (TLB-027, page 1)
 - Adjusted Free Cash Flow: FY'24A 462, Q4'24A 118; Q4'25e Cons. 107 (#9, Min 3, Median 124, Max 201); FY'25e Cons. 538 (#9, Min 434, Median 555, Max 632); FY'26e Cons. 477 (#9, Min 343, Median 489, Max 577); FY'27e Cons. 523 (#9, Min 351, Median 546, Max 657) (TLB-027, page 1)
 - Dividends: FY'25e Cons. 415 (#9, Min 400, Median 421, Max 427); FY'26e Cons. 400 (#9, Min 285, Median 415, Max 445); FY'27e Cons. 444 (#9, Min 290, Median 458, Max 542); payout ratio ~89-90% of net income across all periods; NOSH held constant at 23,288mn shares (TLB-027, page 1)
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

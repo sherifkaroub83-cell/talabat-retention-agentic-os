@@ -200,3 +200,9 @@ needs explicit "Not covered" markers).
 List the files you created (source notes + facts fragments) in your final report, and flag
 any document you could not fully process (e.g., corrupted, unreadable, unexpectedly empty)
 so the orchestrator can address it.
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup._
+
+- [[Templates and Methods]]

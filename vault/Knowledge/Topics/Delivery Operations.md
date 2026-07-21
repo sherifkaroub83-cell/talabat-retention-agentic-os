@@ -27,9 +27,9 @@ Delivery Operations is where customer-facing service quality is actually produce
 - [[TLB-026_international-offering-memorandum|TLB-026 International Offering Memorandum]] — tMart store operating specs (size, seamless-order rate) alongside rider/3PL provider concentration data, including Egypt
 
 ## Links to Facts
-- [[Logistics]] — full cited operational data (delivery times, safety, 3PL sourcing, EV fleet)
+- [[Logistics_Facts]] — full cited operational data (delivery times, safety, 3PL sourcing, EV fleet)
 - [[Q-Commerce]] — dark-store operational metrics (store counts, shrinkage rate, order-processing speed)
-- [[Marketplace]] — the restaurant/Local-Shop order stream Delivery Operations fulfills under the agent model
+- [[Marketplace_Facts]] — the restaurant/Local-Shop order stream Delivery Operations fulfills under the agent model
 
 ## Open Questions
 - The vault does not disclose a unified, cross-vertical Egypt-specific delivery-operations KPI (e.g., a single Egypt average delivery time spanning both Food and tMart) — the closest data points (Egypt EV pilot, Egypt's 3PL provider concentration) are narrow and model-specific.

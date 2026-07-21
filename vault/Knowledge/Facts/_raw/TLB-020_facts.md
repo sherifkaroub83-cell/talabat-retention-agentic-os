@@ -69,3 +69,9 @@
 - **Technology Platforms:** Not separately named beyond talabat/instashop platforms (TLB-020, page 8)
 - **Delivery Models:** Marketplace (Food), Q-commerce/dark stores (talabat mart, instashop), own-fleet logistics (riders/pickers) (TLB-020, page 7, page 8, page 12)
 - **Macro/Event Context:** "regional conflict" starting 28 Feb 2026, ceasefire mid-April 2026 (TLB-020, page 7, page 18)
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

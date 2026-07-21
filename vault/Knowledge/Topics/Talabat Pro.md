@@ -36,7 +36,7 @@ talabat pro is the most directly quantified retention mechanism in the entire co
 - [[Talabat_Pro]] — the full, per-document cited fact base this note synthesizes.
 - [[Retention]] — the broader retention metrics context that talabat pro's uplift figures sit within.
 - [[Subscription]] — the revenue-line counterpart (subscription fees as a P&L item, USD 74mn in 2025 and 1.0% of GMV in Q1 2026).
-- [[AI]] — source of the "right time for customers" ML-timing claim that underpins pro's cross-sell mechanics.
+- [[AI_Facts]] — source of the "right time for customers" ML-timing claim that underpins pro's cross-sell mechanics.
 
 ## Open Questions
 - The corpus's headline adoption and uplift figures (2.1x adoption growth, 28% frequency uplift, 32% retention uplift) are explicitly measured on the six GCC/Jordan markets live before December 2024 and **exclude Egypt and Iraq** (TLB-012, page 17; TLB-013, page 8; TLB-016, page 9) — no Egypt-specific pro adoption rate, frequency uplift, or retention uplift figure appears anywhere in the corpus.

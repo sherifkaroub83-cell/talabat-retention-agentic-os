@@ -65,3 +65,9 @@ Approximate conceptual centrality, by how many of the 14 Facts files and 29 Sour
 5. **12 Strategic Knowledge notes** (`vault/Knowledge/Strategic/`) — cross-cutting synthesis, built after Topic Notes exist so they can link into them.
 
 No existing note's factual content or citations will be rewritten, removed, or duplicated — every addition is either a new note or an appended "Related Topics" section.
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup._
+
+- [[Validation and Audit]]

@@ -26,9 +26,9 @@ GMV is the top of talabat's growth funnel and the base against which every other
 - [[TLB-026_international-offering-memorandum|TLB-026 International Offering Memorandum]] — pre-IPO GMV history in AED with GCC/non-GCC and vertical CAGRs back to 2021.
 
 ## Links to Facts
-- [[GMV]] — the full cited GMV series (FY2021–Q1 2026), by segment, vertical, and guidance-vs-actual, that this note synthesizes.
+- [[GMV_Facts]] — the full cited GMV series (FY2021–Q1 2026), by segment, vertical, and guidance-vs-actual, that this note synthesizes.
 - [[Revenue]] — take-rate context (Revenue as % of GMV) needed to connect GMV to monetization.
-- [[Orders]] — order frequency and volume data underlying the "orders × basket = GMV" mechanic.
+- [[Orders_Facts]] — order frequency and volume data underlying the "orders × basket = GMV" mechanic.
 
 ## Open Questions
 - The vault does not disaggregate Egypt-specific GMV as a standalone number pre-FY2025 (it is bundled into non-GCC with Jordan and Iraq) — how much of the non-GCC GMV acceleration seen through 2023–2024 in TLB-001/TLB-026 was actually Egypt versus Jordan/Iraq is not answerable from the corpus.

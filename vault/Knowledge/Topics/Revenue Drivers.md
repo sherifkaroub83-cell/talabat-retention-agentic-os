@@ -27,9 +27,9 @@ This is the topic that most directly operationalizes the capstone's "AI-driven r
 
 ## Links to Facts
 - [[Revenue]] — the underlying revenue-by-type and revenue-by-region data this note interprets causally.
-- [[GMV]] — the volume base against which take rate and driver effects are measured.
+- [[GMV_Facts]] — the volume base against which take rate and driver effects are measured.
 - [[Subscription]] — subscription fee revenue-line detail and its documented frequency side-effect.
-- [[Advertising]] — AdTech revenue, ROAS, and the stated 7%-of-GMV benchmark gap.
+- [[Advertising_Facts]] — AdTech revenue, ROAS, and the stated 7%-of-GMV benchmark gap.
 - [[Q-Commerce]] — tMart's take rate and rising revenue-mix contribution.
 - [[Talabat_Pro]] — GMV-share penetration data (32% → 49% GMV share, TLB-014/TLB-020) showing how fast the subscription driver is scaling.
 - [[Customer_Growth]] — MAU expansion and CAC/CARC figures that frame the acquisition side of revenue growth alongside the frequency side.

@@ -65,3 +65,9 @@
 - **Business Units:** Grocery & Retail (G&R) (TLB-017, page 6)
 - **Technology Platforms:** InstaShop platform/app (TLB-017, page 6, page 7)
 - **Delivery Models:** Q-commerce/hyper-local grocery delivery (InstaShop), own-fleet logistics (pickers, cars, bikes, walkers) (TLB-017, page 6, page 7)
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

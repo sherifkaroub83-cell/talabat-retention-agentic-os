@@ -38,10 +38,11 @@ The top-level entry point into everything the vault knows about talabat, built f
 - `Knowledge/Facts/` — 14 topic-consolidated fact files, every figure cited to `(DocID, page N)`
 - `Knowledge/Entities/` — 9 deduplicated rosters (Companies, Brands, Countries, Executives, Products, Business Units, Competitors, Technology Platforms, Delivery Models)
 
-## Process record
-- `Knowledge/_AUDIT_REPORT_PHASE4.md` — the pre-work audit that motivated this semantic layer
-- `Knowledge/_VALIDATION_REPORT.md` — the original ingestion's completion report
-- `Knowledge/_PHASE4_VALIDATION_REPORT.md` — this semantic layer's completion report
+## Administrative MOCs
+- [[Source Register]] — document-level index (Sources notes + raw facts fragments)
+- [[Validation and Audit]] — every quality-control checkpoint (ingestion, semantic layer, graph cleanup)
+- [[Templates and Methods]] — reusable note templates and the ingestion/synthesis methodology
+- [[Project Administration]] — team, milestones, and the repo-root project-management files
 
 ## See also
 - [[MOC-Second-Brain]] — the whole-vault root (identity, active projects, maintenance)

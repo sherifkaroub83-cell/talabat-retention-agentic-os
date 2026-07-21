@@ -63,3 +63,9 @@
 - **Business Units:** Food, Grocery & Retail (G&R), FinTech (TLB-018, page 5)
 - **Technology Platforms:** Not separately named beyond talabat app/platform (TLB-018, page 5)
 - **Delivery Models:** Marketplace (Food, G&R), Q-commerce (tMart, InstaShop) (TLB-018, page 13)
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

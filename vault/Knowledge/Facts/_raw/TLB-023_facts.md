@@ -65,3 +65,9 @@
 - **Competitors:** Zomato (named in UAE alliance context, not necessarily a direct competitor reference); "next largest online peer platform" referenced generically per OC&C category analysis (not named) (TLB-023, page 5-6, 9)
 - **Technology Platforms:** Machine learning models for cross-selling and personalisation; Delivery Hero's global technology platforms (TLB-023, page 7-8)
 - **Delivery Models:** Marketplace (Food and Groceries and Retail Verticals), own warehousing/distribution via tMarts, logistics and service technology stack (TLB-023, page 5)
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

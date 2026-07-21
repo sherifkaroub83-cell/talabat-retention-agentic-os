@@ -35,3 +35,9 @@
 - **Companies:** talabat, instashop (explicitly excluded from this dataset), Delivery Hero (implied
   as the pre-restructuring parent, via reference to the corporate restructuring ahead of IPO)
 - **Business Units:** GCC segment, non-GCC segment, Food vertical, Groceries & Retail (G&R) vertical
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

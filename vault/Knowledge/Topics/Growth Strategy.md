@@ -27,7 +27,7 @@ Retention is not treated as separate from growth in talabat's own strategy langu
 - [[TLB-015_capital-markets-day-2024|TLB-015 Capital Markets Day 2024]] — Egypt/Iraq city-coverage headroom (~42%/~19% of larger cities) and the medium-term GMV growth targets
 
 ## Links to Facts
-- [[GMV]] — the full cited GMV-by-segment growth-rate data (GCC vs. non-GCC, by year and quarter) underlying this strategy
+- [[GMV_Facts]] — the full cited GMV-by-segment growth-rate data (GCC vs. non-GCC, by year and quarter) underlying this strategy
 - [[Customer_Growth]] — acquisition and order-frequency drivers that jointly explain GMV growth alongside geographic mix shift
 - [[Talabat_Pro]] — the loyalty-programme investment detail feeding into the Everyday App thesis
 - [[Retention]] — the explicit 2026 strategic objective language ("retain high and medium value customers against... churn to competition")

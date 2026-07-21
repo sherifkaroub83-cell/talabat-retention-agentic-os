@@ -68,3 +68,9 @@
 - Free Cash Flow: FY'25A 667, Q1'25A 98; Q1'26e Cons. 93 (#3 analysts only, Min 85, Median 95, Max 97); FY'26e Cons. 392 (#9, Min 270, Median 390, Max 486); FY'27e Cons. 426 (#9, Min 309, Median 442, Max 533); FY'28e Cons. 488 (#9, Min 355, Median 513, Max 583) (TLB-028, page 1)
 - Dividends: FY'26e Cons. 287 (#10, Min 250, Median 277, Max 343); FY'27e Cons. 330 (#10, Min 287, Median 328, Max 369); FY'28e Cons. 375 (#10, Min 316, Median 372, Max 467); payout ratio ~90% of net income across all periods; NOSH held constant at 23,288mn shares (TLB-028, page 1)
 - Adjusted EBITDA margin trajectory (Cons.): compresses from 6.2% (FY'25A) to ~4.5% (FY'26e), recovering modestly to ~4.6-4.7% by FY'27e-28e — consistent with talabat's own disclosed 2026 investment-cycle guidance (cross-reference TLB-019, TLB-020) (TLB-028, page 1)
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]

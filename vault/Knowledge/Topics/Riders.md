@@ -26,7 +26,7 @@ Rider capacity and quality directly gate delivery speed and reliability, which a
 - [[TLB-002_annual-report-2025|TLB-002 Annual Report 2025]] — FY2025 rider fleet size, delivery cost paid to riders, EV fleet detail including Egypt's inaugural EV programme, and tip earnings
 
 ## Links to Facts
-- [[Logistics]] — full cited data on rider counts, safety scores, sourcing model, tenure, training, and EV fleet across all sourced documents
+- [[Logistics_Facts]] — full cited data on rider counts, safety scores, sourcing model, tenure, training, and EV fleet across all sourced documents
 
 ## Open Questions
 - No Egypt-specific Active Rider count is disclosed in the corpus; rider figures are reported only at the 8-country platform level.

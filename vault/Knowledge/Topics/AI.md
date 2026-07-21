@@ -27,9 +27,9 @@ AI is the only lever in the corpus with a directly quantified, multi-year EBITDA
 - [[TLB-026_international-offering-memorandum|TLB-026 International Offering Memorandum]] — legal/prospectus-level description of AI use across personalisation, dispatch, ad placement, and fraud detection, each individually cited.
 
 ## Links to Facts
-- [[AI]] — the full, per-document cited fact base this note synthesizes.
-- [[Logistics]] — the operational metrics (delivery times, dispatch efficiency) that AI-driven logistics tools are credited with improving.
-- [[Advertising]] — the revenue line that AI-driven targeting and automated ad-buying support.
+- [[AI_Facts]] — the full, per-document cited fact base this note synthesizes.
+- [[Logistics_Facts]] — the operational metrics (delivery times, dispatch efficiency) that AI-driven logistics tools are credited with improving.
+- [[Advertising_Facts]] — the revenue line that AI-driven targeting and automated ad-buying support.
 
 ## Open Questions
 - No document discloses whether talabat's AI/ML models are trained on or tuned separately for the Egyptian market, or whether Egypt currently runs on the same regional/Delivery Hero-inherited models used in the GCC.

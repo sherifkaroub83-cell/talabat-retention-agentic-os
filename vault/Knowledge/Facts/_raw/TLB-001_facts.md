@@ -126,3 +126,9 @@
 - **Competitors:** Referenced only generically — "offline restaurants and shops," "technology giants," "well-funded companies," "integrated e-commerce companies," "quick commerce providers," "SuperApps" (no named competitor brands appear in this document) (TLB-001, page 32)
 - **Technology Platforms:** Delivery Hero technology stack (dispatch algorithms, GPS tracking, rider staffing algorithm, Partner Portal, picking tools — all licensed from Delivery Hero); tcamp (rider e-learning); Guru (employee learning platform); GRC portal
 - **Delivery Models:** Marketplace (commission-based, third-party Restaurants/Local Shops); own-delivery/logistics (talabat-managed riders and third-party logistics providers); quick commerce / dark stores (tMarts); cloud kitchens (Kitchens)
+
+
+## Related MOCs
+_Connected during the Obsidian Graph Cleanup — this raw fragment is the audit-trail source for its corresponding Source Note and the consolidated Facts/Entities layer; kept for provenance, not further edited._
+
+- [[Source Register]]
