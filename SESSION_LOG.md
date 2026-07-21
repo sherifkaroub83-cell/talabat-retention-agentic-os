@@ -6,6 +6,50 @@ writes these entries for you.
 
 ---
 
+## Session 2 — 2026-07-21 (continued: Phase 6 — Agentic OS architecture design)
+
+**Focus:** Design the complete Agentic Operating System architecture required before any Business
+Plan drafting begins, per explicit instruction ("The Agentic OS—not the Business Plan—is the
+primary product of this project"). Design only — no Business Plan content was written.
+
+**Done:**
+- Assessed the current OS: strong, fully-linked knowledge base (154 notes, 0 orphans); zero
+  decision-making apparatus above it (no agents roster, no research/forecast/decision layers, no
+  content QA).
+- Catalogued and mapped all 14 previously-missing capabilities (Decision Management, Forecast
+  Generation, Assumption Management, External Research Integration, Data Validation, Evidence
+  Ranking, Conflict Resolution, Citation Verification, KPI Generation, Executive Summary Generation,
+  Scenario Planning, Recommendation Prioritization, Quality Assurance, Final Review) to specific new
+  agents/skills.
+- Designed and built 8 named agents (`.claude/agents/`): `bp-orchestrator`, `research-agent`,
+  `forecasting-agent`, `decision-steward`, `evidence-citation-agent`, `kpi-agent`,
+  `exec-summary-agent`, `qa-review-agent`.
+- Designed and built 6 new skills (`external-research`, `forecast-builder`, `decision-log`,
+  `evidence-ranking`, `citation-audit`, `qa-review`) and redesigned `business-plan-drafting` into
+  the pipeline's content-map entry point.
+- Designed and scaffolded three new, currently-empty knowledge layers implementing a five-tier
+  evidence model (Facts → External Research → Forecasts → Decisions → Business Plan):
+  `vault/Decisions/` (Assumptions Register + Decision Log + template), `vault/Research/` (Research
+  Register + Notes + template), `vault/Forecasts/` (Value Driver Tree + Scenarios + KPI Tree).
+- Redesigned the Business Plan drafting flow into an 11-stage pipeline (Intake → Evidence Assembly →
+  Gap Detection → External Research → Forecast Generation → Decision Escalation → Evidence Ranking →
+  Drafting → Citation Verification → Cross-Section/KPI Consistency → QA & Final Review), run by
+  `bp-orchestrator`.
+- Produced an end-to-end workflow diagram, a gap-analysis table (capability/priority/effort/
+  dependencies), and a phased implementation roadmap (Phases 6–10, each with a git branch,
+  deliverables, dependencies, and completion criteria).
+- Updated `CLAUDE.md`, `MEMORY.md`, `PROJECT_PROGRESS.md`, and the Project tracker to reflect the
+  new architecture. Full design: `vault/Architecture/` (5 documents).
+
+**Explicitly not done (by instruction):** no Business Plan section drafted; no Assumption
+registered; no Decision logged; no Research item resolved. The 14-section checklist stays 0/14.
+
+**Next:** user review of `vault/Architecture/`; merge `feature/agentic-os-architecture` to `main`;
+then roadmap Phase 7 — run the 11-stage pipeline on the four load-bearing sections (Business
+Description, Market Analysis, Financial Plan, Risk Analysis) on `feature/bp-pilot-sections`.
+
+---
+
 ## Session 2 — 2026-07-21 (continued: charter approval + readiness assessment)
 
 **Focus:** Record instructor approval of the charter; run a formal Project Readiness Assessment

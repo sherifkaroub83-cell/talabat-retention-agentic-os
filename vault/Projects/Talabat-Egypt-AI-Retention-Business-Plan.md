@@ -17,15 +17,23 @@ OS structure document (3–5 pp) and a 30-slide group presentation (5 slides × 
 - **Specification:** [`AI_Business_Plan_Template.md`](../../AI_Business_Plan_Template.md) — verbatim
   copy of the graded 14-section template, kept in-repo
 - **Drafting procedure:** `.claude/skills/business-plan-drafting/SKILL.md` — maps every section to
-  the specific vault notes that already exist to feed it
+  the specific vault notes that already exist to feed it; now the content map for the 11-stage
+  pipeline in [`vault/Architecture/Business_Plan_Generation_Pipeline.md`](../Architecture/Business_Plan_Generation_Pipeline.md),
+  run by the `bp-orchestrator` agent
+- **Architecture:** [`vault/Architecture/Agentic_OS_Architecture.md`](../Architecture/Agentic_OS_Architecture.md)
+  — 8 agents, 6 new skills, and three evidence layers (`Decisions/`, `Research/`, `Forecasts/`) that
+  resolve gaps instead of just flagging them; sequencing in
+  [`Implementation_Roadmap.md`](../Architecture/Implementation_Roadmap.md)
 - **Process:** capstone guide's 5-phase pipeline (charter → OS → ingest → analyze/draft → finalize)
 - **Overlay / standards:** McKinsey concepts (Pyramid, SCQA, MECE, hypothesis-driven, value driver
   tree); Three Horizons roadmap; 7S readiness; Second Brain governance guardrails
 
 ## Status
 🟢 Charter **approved** (Dr. Hossam Daoud, 21/07/2026) · OS activated · corpus ingested and fully
-linked (154 vault notes, 0 orphans) · **Phase 4 drafting has not started — 0 of 14 sections
-written.** This is the single largest remaining task on the project (40% of the grade).
+linked (154 vault notes, 0 orphans) · **Agentic OS architecture designed** (21/07/2026 —
+Decision/Research/Forecasting layers, 8 agents, 11-stage pipeline; see `vault/Architecture/`) ·
+**Drafting has not started — 0 of 14 sections written.** This is the single largest remaining task
+on the project (40% of the grade). Next: roadmap Phase 7 (pilot sections 2/3/9/10).
 
 ## Open decisions (needed before/while drafting)
 - [ ] Team role assignments (6 members / 5 defined roles — charter approved as-is; mapping still open)
@@ -61,15 +69,20 @@ written.** This is the single largest remaining task on the project (40% of the 
 **Legend:** ✅ Done · 🟡 Drafted, needs verification · ⬜ Not started
 
 ## Plan of attack
+(Now formalized as roadmap Phases 6–10 in `vault/Architecture/Implementation_Roadmap.md`.)
 1. ~~Submit charter → approval~~ ✅ Approved 21/07/2026
 2. Assign roles among the 6 members; close the MCP decision
 3. ~~Collect + ingest corpus~~ ✅ Done — 29 docs, fully linked knowledge base
-4. Draft Sections 2, 3, 9, 10 first (hypothesis, market, financials, risk — the sections everything
-   else depends on), using `business-plan-drafting` skill's per-section vault mapping
-5. Draft the remaining sections; write the Executive Summary last
-6. Pressure-test the full draft against the McKinsey Lens callouts in `AI_Business_Plan_Template.md`
-7. Write the one-page traceability note; export to `Outputs/`; write the OS structure document;
-   build the presentation deck; upload to Moodle
+4. ~~Design the Agentic OS architecture~~ ✅ Done 21/07/2026 (Phase 6) — Decision/Research/Forecast
+   layers, 8 agents, 11-stage pipeline; see `vault/Architecture/`
+5. **Phase 7 (next):** run the pipeline on Sections 2, 3, 9, 10 first (hypothesis, market,
+   financials, risk — the sections everything else depends on) via `bp-orchestrator`, on branch
+   `feature/bp-pilot-sections`
+6. Phase 8: draft the remaining sections (4–8, 11, 12, 14)
+7. Phase 9: write the Executive Summary last (gated on all 13 others); whole-plan McKinsey Lens
+   pressure test against `AI_Business_Plan_Template.md`; compile the traceability note
+8. Phase 10: export to `Outputs/`; write the OS structure document; build the presentation deck;
+   upload to Moodle
 
 ## Links
 - [[MOC-Second-Brain]] · [[Talabat MOC]] · [[Project Administration]] · [[user]] · [[identity]]
