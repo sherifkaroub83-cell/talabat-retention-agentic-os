@@ -20,7 +20,7 @@ Group G02 · Dr. Hossam Daoud · charter submission 26/07/2026.
 | # | Milestone | Status | Notes |
 |---|-----------|--------|-------|
 | 1 | Phase 1 — Problem & Charter (wk 1–2) | 🟢 Approved, one item open | Charter **approved** by Dr. Hossam Daoud (`Problem_Charter.md`) — team of 6 and 30-slide presentation confirmed. Remaining: map the 6 members onto the guide's 5 defined roles |
-| 2 | Phase 2 — OS Activation (wk 2–3) | 🟡 In progress | Template activated 20/07 (identity, memory, tracking). Remaining: agent definitions, MCP decision, team walkthrough |
+| 2 | Phase 2 — OS Activation (wk 2–3) | 🟡 In progress | Template activated 20/07 (identity, memory, tracking). `business-plan-drafting` skill added 21/07 (maps all 14 GSB sections to vault sources); `AI_Business_Plan_Template.md` stored verbatim in-repo. Remaining: agent-role documentation, MCP decision, team walkthrough |
 | 3 | Phase 3 — Data Collection & Ingestion (wk 3–5) | ✅ Done | 9-doc Markdown corpus + 29-doc native-PDF corpus (annual reports, quarterly financials, investor decks, earnings calls, IPO/regulatory, consensus) collected and organized. Ingestion pipeline: extracted (incl. OCR) → 29 source notes → 14 topic fact files → 9 entity rosters → relationship map. **Extended with a semantic knowledge layer** (21/07): 30 synthesis Topic Notes, 8 domain MOCs, 12 Strategic Knowledge notes, an explicit-reasoning Business Relationships note, and semantic `[[wiki-links]]` added to all 52 pre-existing notes — 0 orphan notes, 1 fully-connected graph across 103 notes (was 103 isolated notes). All in `vault/Knowledge/`; see `_PHASE4_VALIDATION_REPORT.md`. |
 | 4 | Phase 4 — Analysis & Business Plan (wk 5–8) | ⬜ Not started | 14 sections vs GSB template; every claim → vault note → source. The knowledge base is now fully linked and ready to draft from — start with `vault/MOC/Talabat MOC.md` and `vault/Knowledge/Strategic/` |
 | 5 | Phase 5 — Finalize & Present (wk 8–9) | ⬜ Not started | Quality pass, export, OS structure doc, deck, Moodle upload |
@@ -58,3 +58,7 @@ now-linked `vault/Knowledge/Topics/`, `Strategic/`, `Relationship_Map.md`, and
   (`vault/MOC/`), 12 Strategic Knowledge notes, `Business_Relationships.md` — see
   `vault/Knowledge/_PHASE4_VALIDATION_REPORT.md` for the graph-quality audit (0 orphans, 1
   connected component, 937 semantic links)
+- `AI_Business_Plan_Template.md` (2026-07-21) — verbatim copy of the graded GSB v2.0 McKinsey
+  Edition template, plus `.claude/skills/business-plan-drafting/SKILL.md` mapping all 14 sections
+  to the specific vault notes that feed them, and a live 14-section checklist in
+  `vault/Projects/Talabat-Egypt-AI-Retention-Business-Plan.md`

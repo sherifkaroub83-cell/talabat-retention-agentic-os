@@ -3,8 +3,10 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 > **Activated 20 July 2026** for the AASTMT MBA capstone, Group G02: *Talabat Egypt — AI-driven
-> customer retention*. Owner: Sherif Samy Karoub. See `MEMORY.md` for project facts and
-> `Problem_Charter.md` for the approved problem statement.
+> customer retention*. Owner: Sherif Samy Karoub. See `MEMORY.md` for project facts,
+> `Problem_Charter.md` for the approved problem statement, and `AI_Business_Plan_Template.md` for
+> the graded 14-section GSB v2.0 (McKinsey Edition) specification the final deliverable must follow
+> — draft against it using the `business-plan-drafting` skill (`.claude/skills/business-plan-drafting/`).
 
 ## What this project is
 

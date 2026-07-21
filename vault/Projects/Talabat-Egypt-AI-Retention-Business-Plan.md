@@ -3,42 +3,73 @@ type: project
 status: active
 owner: "Sherif Samy Karoub (G02)"
 started: "2026-07-20"
-updated: "2026-07-20"
+updated: "2026-07-21"
 ---
 
 # Project — Talabat Egypt AI Retention Business Plan
 
 The G02 capstone deliverable: a 15–25 page **AI Business Plan** recommending AI-driven customer
-retention (churn prediction, personalized offers, t pro targeting) for talabat Egypt in Greater
-Cairo, written to the GSB 14-section template v2.0 (McKinsey Edition), grounded claim-by-claim in
-the `Input_Data/` corpus. Companion deliverables: OS structure document (3–5 pp) and group
-presentation (5 slides × 6 members).
+retention for talabat Egypt, written to the GSB 14-section template v2.0 (McKinsey Edition),
+grounded claim-by-claim in the `Input_Data/` corpus via `vault/Knowledge/`. Companion deliverables:
+OS structure document (3–5 pp) and a 30-slide group presentation (5 slides × 6 members).
 
 ## Source of method
-- **Outline / structure:** GSB AI Business Plan Template v2.0 — 14 sections, SCQA executive summary
+- **Specification:** [`AI_Business_Plan_Template.md`](../../AI_Business_Plan_Template.md) — verbatim
+  copy of the graded 14-section template, kept in-repo
+- **Drafting procedure:** `.claude/skills/business-plan-drafting/SKILL.md` — maps every section to
+  the specific vault notes that already exist to feed it
 - **Process:** capstone guide's 5-phase pipeline (charter → OS → ingest → analyze/draft → finalize)
 - **Overlay / standards:** McKinsey concepts (Pyramid, SCQA, MECE, hypothesis-driven, value driver
   tree); Three Horizons roadmap; 7S readiness; Second Brain governance guardrails
 
 ## Status
-🟡 Phase 1/2 — charter drafted (due 26/07), OS activated, corpus started (9 docs)
+🟢 Charter **approved** (Dr. Hossam Daoud, 21/07/2026) · OS activated · corpus ingested and fully
+linked (154 vault notes, 0 orphans) · **Phase 4 drafting has not started — 0 of 14 sections
+written.** This is the single largest remaining task on the project (40% of the grade).
 
-## Open decisions (needed before drafting)
-- [ ] Instructor approval of the problem charter
-- [ ] Team role assignments (6 members / 5 roles)
-- [ ] MCP integration: yes/no (distinction credit vs fragility)
+## Open decisions (needed before/while drafting)
+- [ ] Team role assignments (6 members / 5 defined roles — charter approved as-is; mapping still open)
+- [ ] MCP integration: yes/no (distinction credit vs. fragility) — undecided, past its Phase 2 deadline
 - [ ] Governing hypothesis wording for Section 2 ("We believe [AI retention intervention] will
-      [impact] because [logic]")
-- [ ] Egypt market-size definition to adopt (IMARC online-food-delivery vs Mordor foodservice
-      vs talabat non-GCC-derived estimate)
+      [impact] because [logic]") — not yet authored; see the skill's Section 2 notes for raw material
+- [ ] Egypt market-size definition to adopt (IMARC online-food-delivery vs. Mordor foodservice
+      vs. talabat's own disclosed Egypt segment financials, now available for FY2025 onward)
+- [ ] How to handle the three documented internal discrepancies (Egypt category-share figure,
+      the 2026 investment programme's three different totals, the Subscription revenue-line
+      reclassification) — resolve against primary sources or footnote explicitly; do not pick
+      silently (see the skill's "Known evidence gaps" section)
+
+## 14-section checklist (GSB Template v2.0 — status against `AI_Business_Plan_Template.md`)
+
+| # | Section | Status | Primary vault sources (see skill for full mapping) |
+|---|---|---|---|
+| 1 | Executive Summary (SCQA) | ⬜ Not started | Write last — depends on 2–13 |
+| 2 | Business Description | ⬜ Not started | `Strategic/Current Pain Points.md`, `Strategic/How Talabat Creates Value.md` |
+| 3 | Market Analysis | ⬜ Not started | `Topics/Egypt.md`, `Strategic/Competitive Advantages.md`, `Strategic/Competitive Weaknesses.md` |
+| 4 | Value Proposition | ⬜ Not started | `Strategic/Customer Retention Drivers.md` |
+| 5 | AI Technology and Development | ⬜ Not started | `Topics/AI.md`, `Entities/Technology_Platforms.md` |
+| 6 | Business Model and Revenue Streams | ⬜ Not started | `Strategic/Revenue Model.md`, `Facts/Revenue.md` |
+| 7 | Marketing and Sales Strategy | ⬜ Not started | `Topics/Customer Journey.md`, `Topics/Promotions.md` (funnel data is a known gap) |
+| 8 | Operations Plan | ⬜ Not started | `Strategic/Decision-Making Process.md` (7S check is net-new synthesis) |
+| 9 | Financial Plan | ⬜ Not started | `Topics/Financial Performance.md`, `Topics/Segment Reporting.md` |
+| 10 | Risk Analysis | ⬜ Not started | `Strategic/Strategic Risks.md`, `Strategic/Competitive Weaknesses.md` |
+| 11 | CSR & Responsible AI | ⬜ Not started | Thinnest vault coverage — mostly net-new authoring |
+| 12 | Implementation Plan (Three Horizons) | ⬜ Not started | `Strategic/AI Opportunities.md` (H1) vs. `Strategic/Future AI Opportunities.md` (H2/H3) |
+| 13 | Monitoring and Evaluation (KPIs) | ⬜ Not started | `Strategic/Customer Retention Drivers.md` (no churn baseline exists — known gap) |
+| 14 | Appendices + traceability note | ⬜ Not started | `vault/MOC/Source Register.md` — mechanically closest to ready |
+
+**Legend:** ✅ Done · 🟡 Drafted, needs verification · ⬜ Not started
 
 ## Plan of attack
-1. Submit charter 26/07 → approval
-2. Complete Phase 2: agent definitions, MCP decision, team walkthrough of the OS
-3. Download the 10 native PDFs from `_CORPUS_INDEX.md`; ingest corpus → cited Knowledge notes
-4. Hypothesis-driven analysis: churn drivers, retention economics, competitor benchmarks
-5. Draft the 14 sections in `Outputs/`; pressure-test against standards; traceability note
-6. Export final plan + OS structure doc + deck to `Outputs/`; upload to Moodle.
+1. ~~Submit charter → approval~~ ✅ Approved 21/07/2026
+2. Assign roles among the 6 members; close the MCP decision
+3. ~~Collect + ingest corpus~~ ✅ Done — 29 docs, fully linked knowledge base
+4. Draft Sections 2, 3, 9, 10 first (hypothesis, market, financials, risk — the sections everything
+   else depends on), using `business-plan-drafting` skill's per-section vault mapping
+5. Draft the remaining sections; write the Executive Summary last
+6. Pressure-test the full draft against the McKinsey Lens callouts in `AI_Business_Plan_Template.md`
+7. Write the one-page traceability note; export to `Outputs/`; write the OS structure document;
+   build the presentation deck; upload to Moodle
 
 ## Links
-- [[MOC-Second-Brain]] · [[user]] · [[identity]]
+- [[MOC-Second-Brain]] · [[Talabat MOC]] · [[Project Administration]] · [[user]] · [[identity]]

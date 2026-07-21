@@ -158,6 +158,13 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   per-document note/fact extraction, each following a shared briefing
   (`vault/Knowledge/_source_text/_INGESTION_BRIEFING.md`) with a strict no-invented-facts rule and
   per-fact page citations.
+- 2026-07-21 — Instructor (Dr. Hossam Daoud) approved the problem charter, the 6-person team size,
+  and a 30-slide (5×6) group presentation. Received the graded AI Business Plan Template v2.0
+  (McKinsey Edition) and stored it verbatim as `AI_Business_Plan_Template.md`. Built the
+  `business-plan-drafting` skill (`.claude/skills/business-plan-drafting/SKILL.md`) — the Guide's
+  third named example skill, previously missing — mapping all 14 GSB sections to the specific
+  vault notes that feed them, and flagging every known evidence gap (no churn baseline, no Egypt
+  funnel data, three unreconciled internal figures) so drafting doesn't silently paper over them.
 
 ## Session log
 

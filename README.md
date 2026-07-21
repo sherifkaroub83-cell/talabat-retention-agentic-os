@@ -142,6 +142,7 @@ interviews, or course material — the flow is identical.
 | `CLAUDE.md` | Auto-loaded project instructions |
 | `MEMORY.md` / `PROJECT_PROGRESS.md` / `SESSION_LOG.md` | Memory · milestones · session log |
 | `Problem_Charter.md` | The approved G02 problem statement |
+| `AI_Business_Plan_Template.md` | The graded 14-section GSB v2.0 (McKinsey Edition) plan specification |
 | `vault/` | The Obsidian second brain |
 | `scripts/` | Nightly maintenance script |
-| `.claude/skills/` | Project skills (`session-end`) |
+| `.claude/skills/` | Project skills (`session-end`, `business-plan-drafting`) |
