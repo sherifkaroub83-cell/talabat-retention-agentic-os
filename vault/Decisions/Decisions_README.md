@@ -7,14 +7,14 @@ created: "2026-07-21"
 # Decisions Layer
 
 Implements the Decision Management Layer designed in
-[`vault/Architecture/Decision_Management_Layer.md`](../Architecture/Decision_Management_Layer.md).
+[[Decision_Management_Layer]].
 Read that document for the full five-tier evidence model and schema definitions. This folder is the
 operative repository:
 
-- [`Assumptions_Register.md`](Assumptions_Register.md) — every numeric/qualitative assumption in
+- [[Assumptions_Register]] — every numeric/qualitative assumption in
   use anywhere downstream of the raw corpus, with tier, source, and confidence.
 - [`Decision_Log/`](Decision_Log/) — one file per management judgment call (`DEC-001`, `DEC-002`, ...).
-- [`_TEMPLATE-decision.md`](_TEMPLATE-decision.md) — template for new Decision Log entries.
+- [[_TEMPLATE-decision]] — template for new Decision Log entries.
 
 **Current status:** layer scaffolded, empty. No decisions have been logged and no assumptions have
 been registered yet — this happens as Business Plan drafting proceeds (Phase 7+ per

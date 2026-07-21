@@ -19,8 +19,8 @@ Every quality-control checkpoint produced while building this vault, in chronolo
 - `Validation/Obsidian_Graph_Cleanup_Report.md` — full-vault orphan audit (all 148 `.md` files, not just the Phase 4-scoped 103), classification, before/after metrics
 - `Validation/Orphan_Notes_Review.md` — the per-note classification detail and human-review list
 
-## Phase 6 — Agentic OS architecture design
-- [[Phase6_Architecture_Design_Report]] — confirms what was built (8 agents, 6 skills, 3 evidence layers, the 11-stage pipeline) and, explicitly, what wasn't (no Business Plan content, no populated Decisions/Research/Forecasts entries) — design-only scope check
+## OS Architecture Design Phase
+- [[OS_Architecture_Design_Phase_Validation_Report|OS Architecture Design Phase Validation Report]] — confirms what was built (8 agents, 6 skills, 3 evidence layers, the 11-stage pipeline) and, explicitly, what wasn't (no Business Plan content, no populated Decisions/Research/Forecasts entries) — design-only scope check
 
 ## Related registers
 - [[Source Register]] — the document-level provenance index (Sources notes + raw fact fragments)

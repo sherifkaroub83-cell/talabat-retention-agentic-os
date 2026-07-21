@@ -28,3 +28,7 @@ Which Assumption Register row(s) this creates/updates; which Business Plan secti
 ## Approval
 Team decisions may be marked `approved` by the OS owner. Decisions requiring instructor/team
 judgment beyond the OS owner's authority stay `proposed` until the user confirms.
+
+## Links
+- [[Decision_Management_Layer|Decision Management Layer]]
+- [[Templates and Methods]]

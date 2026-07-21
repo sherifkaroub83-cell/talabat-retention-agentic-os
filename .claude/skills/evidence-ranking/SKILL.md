@@ -1,7 +1,6 @@
 ---
 name: evidence-ranking
-description: The primary-over-secondary evidence hierarchy and the procedure for resolving or explicitly footnoting a conflict between sources, rather than silently picking one. Trigger when the evidence-citation-agent finds two sources disagreeing (pipeline stage 7).
-trigger: (invoked programmatically by evidence-citation-agent)
+description: The primary-over-secondary evidence hierarchy and the procedure for resolving or explicitly footnoting a conflict between sources, rather than silently picking one. No user-facing trigger — invoked internally by the evidence-citation-agent when it finds two sources disagreeing (pipeline stage 7).
 ---
 
 # Evidence Ranking Skill

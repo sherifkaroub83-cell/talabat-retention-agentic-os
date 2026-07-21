@@ -165,7 +165,7 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   third named example skill, previously missing — mapping all 14 GSB sections to the specific
   vault notes that feed them, and flagging every known evidence gap (no churn baseline, no Egypt
   funnel data, three unreconciled internal figures) so drafting doesn't silently paper over them.
-- 2026-07-21 — **Phase 6: designed the complete Agentic OS architecture, explicitly before starting
+- 2026-07-21 — **OS Architecture Design Phase: designed the complete Agentic OS architecture, explicitly before starting
   any Business Plan drafting** (user instruction: "The Agentic OS—not the Business Plan—is the
   primary product of this project"). Assessed the current OS (strong knowledge base, zero decision-
   making apparatus above it) and catalogued 14 missing capabilities. Designed and built: 8 named
@@ -195,7 +195,7 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   notes), ran an Obsidian graph cleanup (fixed 7 filename collisions, connected 34 orphans), ran a
   formal Project Readiness Assessment against the official Project Guide, recorded instructor
   approval of the charter/team/slide count, ingested the graded AI Business Plan Template and built
-  the `business-plan-drafting` skill, then designed the full Agentic OS architecture (Phase 6:
+  the `business-plan-drafting` skill, then designed the full Agentic OS architecture (OS Architecture Design Phase:
   Decision Management, External Research, and Forecasting layers; 8 agents; 6 new skills; the
   11-stage drafting pipeline) — all before any Business Plan section was drafted, per explicit
   instruction. See `vault/Architecture/` for the architecture design.

@@ -4,7 +4,7 @@ Living status of the project. Update whenever a milestone moves. `SESSION_LOG.md
 day-to-day detail; this file is the high-level snapshot.
 
 **Last updated:** 2026-07-21
-**Overall status:** 🟢 Phase 1 — charter **approved** by Dr. Hossam Daoud (team of 6, 30-slide presentation confirmed); role assignment among the 6 members is the one remaining Phase 1 item. Phase 3 data ingestion and semantic knowledge layer complete. **Phase 6 — Agentic OS architecture design complete**: Decision Management, External Research, and Forecasting layers designed and scaffolded; 8 agents and 6 new skills defined; the Business Plan drafting skill redesigned into an 11-stage pipeline. Business Plan drafting itself (Phase 7 of the roadmap) has **not started** — 0 of 14 sections written.
+**Overall status:** 🟢 Phase 1 — charter **approved** by Dr. Hossam Daoud (team of 6, 30-slide presentation confirmed); role assignment among the 6 members is the one remaining Phase 1 item. Phase 3 data ingestion and semantic knowledge layer complete. **OS Architecture Design Phase complete**: Decision Management, External Research, and Forecasting layers designed and scaffolded; 8 agents and 6 new skills defined; the Business Plan drafting skill redesigned into an 11-stage pipeline. Business Plan drafting itself (roadmap Phase 7) has **not started** — 0 of 14 sections written.
 
 ---
 
@@ -31,7 +31,7 @@ Group G02 · Dr. Hossam Daoud · charter submission 26/07/2026.
 
 Finalize role assignments among the 6 members → close out Phase 2 (agent-role documentation, MCP
 decision). Data ingestion and the semantic knowledge layer (Phase 3) are done ahead of schedule.
-The Agentic OS architecture (Phase 6 of the roadmap) is now designed — Decision Management, External
+The Agentic OS architecture (the OS Architecture Design Phase, roadmap step 6) is now designed — Decision Management, External
 Research, and Forecasting layers plus an 8-agent, 11-stage drafting pipeline — see
 `vault/Architecture/Agentic_OS_Architecture.md`. **Next up is roadmap Phase 7**: run the pipeline on
 the four load-bearing sections (Business Description, Market Analysis, Financial Plan, Risk

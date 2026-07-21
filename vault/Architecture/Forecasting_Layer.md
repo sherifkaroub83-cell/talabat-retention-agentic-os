@@ -1,12 +1,12 @@
 ---
 type: architecture
-status: design-approved
+status: proposed
 created: "2026-07-21"
 ---
 
 # Forecasting Layer
 
-Task 7 of the Phase 6 architecture design. Separates **historical fact** (already disclosed, cited,
+Task 7 of the OS Architecture Design Phase. Separates **historical fact** (already disclosed, cited,
 immutable — `vault/Knowledge/Facts/`) from **forecast assumption** (projected, method-stated,
 scenario-tagged — this layer), so Section 9 (Financial Plan) and Section 13 (KPIs) never blur the
 two.

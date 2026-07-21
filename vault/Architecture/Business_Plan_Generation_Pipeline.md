@@ -1,12 +1,12 @@
 ---
 type: architecture
-status: design-approved
+status: proposed
 created: "2026-07-21"
 ---
 
 # Business Plan Generation Pipeline — 11 Stages
 
-Task 8 of the Phase 6 architecture design. This redesigns the *process* the `business-plan-drafting`
+Task 8 of the OS Architecture Design Phase. This redesigns the *process* the `business-plan-drafting`
 skill runs — the skill's 14-section content map (which vault notes feed which section) is unchanged
 and still the reference for *what* goes in each section; this document defines *how* a section moves
 from "requested" to "Done," closing the old flow's core weakness: it went straight from "gap
@@ -60,7 +60,7 @@ all before.
 
 Design only — **no section has been run through this pipeline yet.** First execution begins in the
 implementation roadmap's drafting phase, not during this architecture-design phase. See
-[`Implementation_Roadmap.md`](Implementation_Roadmap.md).
+[[Implementation_Roadmap]].
 
 ## See also
 [[Agentic_OS_Architecture]] · [[Project Administration]]

@@ -1,7 +1,6 @@
 ---
 name: citation-audit
-description: Mechanical trace-check that every number or named-fact claim in a drafted Business Plan section resolves to a Facts/Sources citation or an Approved Assumption Register entry. Trigger when the evidence-citation-agent runs pipeline stage 9 (Citation Verification) on a section draft.
-trigger: (invoked programmatically by evidence-citation-agent)
+description: Mechanical trace-check that every number or named-fact claim in a drafted Business Plan section resolves to a Facts/Sources citation or an Approved Assumption Register entry. No user-facing trigger — invoked internally by the evidence-citation-agent at pipeline stage 9 (Citation Verification).
 ---
 
 # Citation Audit Skill

@@ -1,7 +1,6 @@
 ---
 name: qa-review
-description: The final-gate checklist for a Business Plan section - template completeness, McKinsey Lens pressure test, citation-audit consumption, research staleness check, and the drafting skill's Anti-patterns list. Trigger when the qa-review-agent runs pipeline stage 11 on a section.
-trigger: (invoked programmatically by qa-review-agent)
+description: The final-gate checklist for a Business Plan section - template completeness, McKinsey Lens pressure test, citation-audit consumption, research staleness check, and the drafting skill's Anti-patterns list. No user-facing trigger — invoked internally by the qa-review-agent at pipeline stage 11.
 ---
 
 # QA Review Skill

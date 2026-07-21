@@ -1,8 +1,8 @@
 ---
 type: architecture
-status: design-approved
+status: proposed
 created: "2026-07-21"
-scope: "Phase 6 — OS architecture design. No Business Plan content is drafted in this document."
+scope: "OS Architecture Design Phase. No Business Plan content is drafted in this document."
 ---
 
 # Agentic OS Architecture — talabat Egypt Retention Capstone
@@ -10,13 +10,13 @@ scope: "Phase 6 — OS architecture design. No Business Plan content is drafted 
 **Read this first.** This document is the map of the whole operating system: what exists today,
 what's missing, and the eight new agents / six new skills / three new knowledge layers that close
 the gap. It is a **design specification**, produced *before* any Business Plan section is drafted,
-per the explicit project decision recorded in `MEMORY.md` (2026-07-21, Phase 6). Companion documents:
+per the explicit project decision recorded in `MEMORY.md` (2026-07-21, OS Architecture Design Phase). Companion documents:
 
-- [`Decision_Management_Layer.md`](Decision_Management_Layer.md) — Task 5
-- [`External_Research_Layer.md`](External_Research_Layer.md) — Task 6
-- [`Forecasting_Layer.md`](Forecasting_Layer.md) — Task 7
-- [`Business_Plan_Generation_Pipeline.md`](Business_Plan_Generation_Pipeline.md) — Task 8 (the redesigned skill)
-- [`Implementation_Roadmap.md`](Implementation_Roadmap.md) — Task 11
+- [[Decision_Management_Layer]] — Task 5
+- [[External_Research_Layer]] — Task 6
+- [[Forecasting_Layer]] — Task 7
+- [[Business_Plan_Generation_Pipeline]] — Task 8 (the redesigned skill)
+- [[Implementation_Roadmap]] — Task 11
 
 ---
 
@@ -159,9 +159,9 @@ several skills). Six skills are new; one (`business-plan-drafting`) is redesigne
 | `external-research` (new) | `/research` | Research Agent | How to search, extract, cite, and confidence-score an external source; what counts as an acceptable provider (industry reports, official competitor disclosures, reputable press) vs. unacceptable (unsourced blogs, AI-generated summaries of unknown provenance). |
 | `forecast-builder` (new) | `/forecast` | Forecasting Agent | How to build a driver-tree projection from a historical anchor: state the anchor fact, the growth logic, the confidence, and produce base/upside/downside. |
 | `decision-log` (new) | `/decide` | Decision Steward | The Decision record template and workflow: propose → evidence review → (user approval where judgment-based) → approved/superseded status. |
-| `evidence-ranking` (new) | (invoked programmatically by the Evidence & Citation Agent) | Evidence & Citation Agent | The primary > secondary > external-research > forecast > synthetic hierarchy, and the procedure for footnoting an unresolved conflict rather than silently picking a side. |
-| `citation-audit` (new) | (invoked programmatically) | Evidence & Citation Agent | Mechanical trace-check: every number/claim in a draft → Assumption Register or Facts/Sources note → original `(DocID, page N)`. |
-| `qa-review` (new) | (invoked programmatically) | QA/Final Review Agent | The McKinsey Lens checklist + template-completeness checklist + Anti-patterns checklist, applied per section. |
+| `evidence-ranking` (new) | internal — no user-facing trigger | Evidence & Citation Agent | **Evaluates source strength and suitability**: the primary > secondary > external-research > forecast > synthetic hierarchy, and the procedure for footnoting an unresolved conflict rather than silently picking a side. Runs *before* a claim is drafted (pipeline stage 7) — a question about which evidence to trust. |
+| `citation-audit` (new) | internal — no user-facing trigger | Evidence & Citation Agent | **Verifies drafted claims are accurately supported and cited**: mechanical trace-check that every number/claim already *in a draft* → Assumption Register or Facts/Sources note → original `(DocID, page N)`. Runs *after* a claim is drafted (pipeline stage 9) — a question about whether the drafted sentence honestly reflects the evidence. Kept as a separate skill from `evidence-ranking` deliberately: ranking is a pre-drafting judgment call, auditing is a post-drafting mechanical check, and collapsing them would blur that stage boundary in the pipeline. |
+| `qa-review` (new) | internal — no user-facing trigger | QA/Final Review Agent | The McKinsey Lens checklist + template-completeness checklist + Anti-patterns checklist, applied per section. |
 
 ---
 
@@ -241,15 +241,15 @@ in the Business Plan must pass through at least the Orchestrator → Evidence & 
 
 ## 7. Cross-references
 
-- Roadmap with git branches, phase-by-phase deliverables and completion criteria: [`Implementation_Roadmap.md`](Implementation_Roadmap.md)
-- The four-tier evidence model and decision repository structure: [`Decision_Management_Layer.md`](Decision_Management_Layer.md)
-- Research sourcing procedure and register: [`External_Research_Layer.md`](External_Research_Layer.md)
-- Forecasting methodology and Value Driver Tree: [`Forecasting_Layer.md`](Forecasting_Layer.md)
-- The redesigned 11-stage pipeline (supersedes the old "flag the gap and write anyway" flow): [`Business_Plan_Generation_Pipeline.md`](Business_Plan_Generation_Pipeline.md)
+- Roadmap with git branches, phase-by-phase deliverables and completion criteria: [[Implementation_Roadmap]]
+- The four-tier evidence model and decision repository structure: [[Decision_Management_Layer]]
+- Research sourcing procedure and register: [[External_Research_Layer]]
+- Forecasting methodology and Value Driver Tree: [[Forecasting_Layer]]
+- The redesigned 11-stage pipeline (supersedes the old "flag the gap and write anyway" flow): [[Business_Plan_Generation_Pipeline]]
 
 **Explicit scope boundary (per user instruction):** this document and its companions design the
 operating system. **No Business Plan section has been drafted.** `vault/Projects/Talabat-Egypt-AI-Retention-Business-Plan.md`'s 14-section checklist remains 0/14 — see `PROJECT_PROGRESS.md` for the
 current phase status.
 
 ## See also
-[[Project Administration]] · [[MOC-Second-Brain]] · [[Phase6_Architecture_Design_Report]]
+[[Project Administration]] · [[MOC-Second-Brain]] · [[OS_Architecture_Design_Phase_Validation_Report|OS Architecture Design Phase Validation Report]]

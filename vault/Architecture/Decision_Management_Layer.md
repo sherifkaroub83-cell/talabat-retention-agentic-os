@@ -1,12 +1,12 @@
 ---
 type: architecture
-status: design-approved
+status: proposed
 created: "2026-07-21"
 ---
 
 # Decision Management Layer
 
-Task 5 of the Phase 6 architecture design. Defines the evidence hierarchy that every claim in the
+Task 5 of the OS Architecture Design Phase. Defines the evidence hierarchy that every claim in the
 future Business Plan must be traceable through, and the version-controlled repository that
 implements it.
 
@@ -113,6 +113,37 @@ confidence, and either (a) select one with stated rationale, or (b) decide to pr
 footnote — either way, an Assumption Register row exists and Section 3 cites `ASM-XXX`, not a bare
 number. **No such decision has been drafted yet** — this is a worked example of the mechanism, not
 an executed decision.
+
+## Superseded-decision workflow
+
+A `supersedes:` field existing on a Decision record is not enough by itself — without a defined
+re-verification cascade, a superseded decision can leave already-drafted plan content citing an
+assumption that's no longer current. When Decision Steward Agent marks `DEC-NEW` as superseding
+`DEC-OLD`, it must additionally:
+
+1. **Identify affected Assumption Register rows** — every row whose `Source` traces to `DEC-OLD`
+   gets its `Status` set to `Superseded` and a new row (or an updated `Value`) created citing
+   `DEC-NEW`, never silently overwritten in place (history must stay readable).
+2. **Identify affected forecasts** — any node in `vault/Forecasts/Value_Driver_Tree.md` or scenario
+   in `Scenarios.md` tagged with a now-superseded Assumption ID is flagged `stale` and handed to
+   Forecasting Agent for re-derivation before it's cited again.
+3. **Identify affected Business Plan sections** — cross-reference the Assumption Register's
+   `Used in (BP sections)` column for every row touched in step 1; every listed section that has
+   already reached 🟡 or ✅ status is flagged `needs re-verification` in the Project tracker.
+4. **Required re-drafting** — only the specific sentences/exhibits that cited the superseded
+   assumption need rewriting, not the whole section — Decision Steward Agent's handoff to
+   `bp-orchestrator` must name the exact claims, not just the section number.
+5. **Required QA** — a flagged section cannot return to ✅ Done without re-running pipeline Stage 9
+   (Citation Verification) and Stage 11 (QA & Final Review) specifically on the changed claims;
+   passing once on the old assumption does not carry forward.
+6. **Required consistency re-verification** — if the superseded assumption was one of the 3–5 value
+   mechanisms threaded through Sections 4/9/13 (the drafting skill's value-driver-logic rule), all
+   three sections are flagged together, not independently, since they're required to stay mutually
+   consistent.
+
+This workflow has never been exercised (no decision has been superseded yet, since no decision has
+been logged at all — see the Phase-scope note below) — it is specified now so Phase 7 doesn't have
+to improvise it the first time a real conflict resolution changes mid-drafting.
 
 ## Interactions
 

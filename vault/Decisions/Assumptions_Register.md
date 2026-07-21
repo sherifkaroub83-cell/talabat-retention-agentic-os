@@ -9,7 +9,7 @@ created: "2026-07-21"
 Single source of truth for every assumption used anywhere downstream of the raw corpus (a forecast
 growth rate, an adopted market-size figure, a funnel-conversion estimate, a resolved-conflict
 figure). Schema defined in
-[`vault/Architecture/Decision_Management_Layer.md`](../Architecture/Decision_Management_Layer.md).
+[[Decision_Management_Layer]].
 
 **Rule:** no number may appear in the Business Plan (`Outputs/`) unless it either (a) is a direct
 quote of a Fact/Source note citation, or (b) has a row here with an Assumption ID the plan cites.

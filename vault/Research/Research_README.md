@@ -7,12 +7,12 @@ created: "2026-07-21"
 # Research Layer
 
 Implements the External Research Layer designed in
-[`vault/Architecture/External_Research_Layer.md`](../Architecture/External_Research_Layer.md). Read
+[[External_Research_Layer]]. Read
 that document for the enumerated gap list, acceptable-provider rules, and Research Note schema.
 
-- [`Research_Register.md`](Research_Register.md) — request/status table.
+- [[Research_Register]] — request/status table.
 - [`Notes/`](Notes/) — one Research Note per resolved item (`RES-001`, `RES-002`, ...).
-- [`_TEMPLATE-research-item.md`](_TEMPLATE-research-item.md) — Research Note template.
+- [[_TEMPLATE-research-item]] — Research Note template.
 
 **Current status:** layer scaffolded, empty. No external research has been conducted yet — items are
 added to the register only when a Business Plan drafting stage actually hits a gap the corpus can't

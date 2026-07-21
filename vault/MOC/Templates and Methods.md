@@ -12,6 +12,10 @@ Reusable scaffolding and process documentation — how notes get created, not wh
 - [[_TEMPLATE-daily]] — daily-log template (`Daily/`)
 - [[_TEMPLATE-person]] — person-note template (`People/`)
 - [[_TEMPLATE-project]] — project-tracker template (`Projects/`)
+- [[_TEMPLATE-decision]] — Decision Log entry template (`Decisions/Decision_Log/`), added with the
+  OS Architecture Design Phase's Decision Management Layer — see [[Decision_Management_Layer|Decision Management Layer]]
+- [[_TEMPLATE-research-item]] — Research Note template (`Research/Notes/`), added with the OS
+  Architecture Design Phase's External Research Layer — see [[External_Research_Layer|External Research Layer]]
 
 ## Ingestion / synthesis methodology (process record, one-time use — kept for methodological transparency, not further action)
 - [[_INGESTION_BRIEFING]] — the spec given to the 8 parallel agents that built the 29 Source notes + raw facts fragments

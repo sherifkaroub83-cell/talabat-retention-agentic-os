@@ -1,12 +1,12 @@
 ---
 type: architecture
-status: design-approved
+status: proposed
 created: "2026-07-21"
 ---
 
 # External Research Layer
 
-Task 6 of the Phase 6 architecture design. No number from this layer is "made up" — it defines
+Task 6 of the OS Architecture Design Phase. No number from this layer is "made up" — it defines
 exactly what's missing, where it may legitimately come from, how confident the OS is in it, and how
 it gets updated if a better source appears later.
 

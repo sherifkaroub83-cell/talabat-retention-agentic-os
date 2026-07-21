@@ -24,3 +24,7 @@ What this source does NOT tell us.
 
 ## Feeds
 Which Assumption Register row this becomes; which Business Plan section(s) it's for.
+
+## Links
+- [[External_Research_Layer|External Research Layer]]
+- [[Templates and Methods]]

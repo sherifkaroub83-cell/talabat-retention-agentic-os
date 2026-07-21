@@ -6,7 +6,7 @@ created: "2026-07-21"
 
 # Value Driver Tree — talabat Egypt
 
-**Not yet built.** See [`vault/Architecture/Forecasting_Layer.md`](../Architecture/Forecasting_Layer.md)
+**Not yet built.** See [[Forecasting_Layer]]
 for the intended structure (anchored on FY2025 Egypt segment financials: revenue USD 509.9m, gross
 profit USD 125.0m, net profit USD 44.4m — `Facts/Revenue.md`, `Topics/Segment Reporting.md`) and the
 Fact-vs-Assumption tagging rule every node must carry.

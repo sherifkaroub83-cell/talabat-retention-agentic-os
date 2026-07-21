@@ -13,7 +13,7 @@ convention. Target: 15–25 pages of substance, all 14 sections, PDF or Word, ex
 
 ## This skill is now the content map for an 11-stage pipeline, not a standalone drafting checklist
 
-As of the Phase 6 architecture design (`vault/Architecture/`), invoking `/business-plan` runs the
+As of the OS Architecture Design Phase (`vault/Architecture/`), invoking `/business-plan` runs the
 `bp-orchestrator` agent through the 11-stage pipeline defined in
 [`Business_Plan_Generation_Pipeline.md`](../../../vault/Architecture/Business_Plan_Generation_Pipeline.md).
 This file still tells the Orchestrator *which vault notes feed each section* (below) and *what

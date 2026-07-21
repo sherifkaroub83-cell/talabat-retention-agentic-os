@@ -18,12 +18,12 @@ OS structure document (3–5 pp) and a 30-slide group presentation (5 slides × 
   copy of the graded 14-section template, kept in-repo
 - **Drafting procedure:** `.claude/skills/business-plan-drafting/SKILL.md` — maps every section to
   the specific vault notes that already exist to feed it; now the content map for the 11-stage
-  pipeline in [`vault/Architecture/Business_Plan_Generation_Pipeline.md`](../Architecture/Business_Plan_Generation_Pipeline.md),
+  pipeline in [[Business_Plan_Generation_Pipeline]],
   run by the `bp-orchestrator` agent
-- **Architecture:** [`vault/Architecture/Agentic_OS_Architecture.md`](../Architecture/Agentic_OS_Architecture.md)
+- **Architecture:** [[Agentic_OS_Architecture]]
   — 8 agents, 6 new skills, and three evidence layers (`Decisions/`, `Research/`, `Forecasts/`) that
   resolve gaps instead of just flagging them; sequencing in
-  [`Implementation_Roadmap.md`](../Architecture/Implementation_Roadmap.md)
+  [[Implementation_Roadmap]]
 - **Process:** capstone guide's 5-phase pipeline (charter → OS → ingest → analyze/draft → finalize)
 - **Overlay / standards:** McKinsey concepts (Pyramid, SCQA, MECE, hypothesis-driven, value driver
   tree); Three Horizons roadmap; 7S readiness; Second Brain governance guardrails
@@ -73,7 +73,7 @@ on the project (40% of the grade). Next: roadmap Phase 7 (pilot sections 2/3/9/1
 1. ~~Submit charter → approval~~ ✅ Approved 21/07/2026
 2. Assign roles among the 6 members; close the MCP decision
 3. ~~Collect + ingest corpus~~ ✅ Done — 29 docs, fully linked knowledge base
-4. ~~Design the Agentic OS architecture~~ ✅ Done 21/07/2026 (Phase 6) — Decision/Research/Forecast
+4. ~~Design the Agentic OS architecture~~ ✅ Done 21/07/2026 (OS Architecture Design Phase) — Decision/Research/Forecast
    layers, 8 agents, 11-stage pipeline; see `vault/Architecture/`
 5. **Phase 7 (next):** run the pipeline on Sections 2, 3, 9, 10 first (hypothesis, market,
    financials, risk — the sections everything else depends on) via `bp-orchestrator`, on branch
