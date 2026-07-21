@@ -15,21 +15,16 @@ oriented toward the **G02 AI Business Plan on AI-driven customer retention for t
 - [[soul]] — how the AI should behave
 - [[identity]] — what the AI is to me
 
-## Knowledge notes
-_Populated during ingestion — one cross-linked note per source document, grouped to mirror
-`Input_Data/`:_
+## Knowledge base
+Ingestion is complete. The 29-document primary corpus (`Input_Data/01_Annual_Reports/` through
+`07_Supplementary_Data/`) has been fully processed into a semantic knowledge graph — start at:
 
-### Company filings (primary)
-- _(pending ingestion: Q4/FY2025 results, Q1 2026 results)_
+- [[Talabat MOC]] — the domain-level entry point (Business Model, Finance, Customer, Technology,
+  AI, Operations, Market Intelligence sub-MOCs)
 
-### Market research (secondary)
-- _(pending ingestion: IMARC Egypt online food delivery, Mordor Egypt foodservice)_
-
-### Competitors (secondary)
-- _(pending ingestion: Egypt delivery competitive landscape)_
-
-### Strategy & news (primary)
-- _(pending ingestion: newsroom index, Egypt mega-DC, t pro Egypt launch)_
+The earlier 9-document secondary corpus (`Input_Data/01_Company_Filings/` through
+`04_Strategy_News/`) remains available but was not carried into this semantic layer's citation
+regime — see [[Competition]]'s Open Questions for why that boundary is kept deliberate.
 
 ## Active work
 - [[Talabat-Egypt-AI-Retention-Business-Plan]] — the capstone deliverable tracker
