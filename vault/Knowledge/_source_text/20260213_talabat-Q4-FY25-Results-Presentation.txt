@@ -1,0 +1,1207 @@
+SOURCE FILE: 20260213_talabat-Q4-FY25-Results-Presentation.pdf
+CATEGORY: 04_Earnings_Call_Presentations
+PAGE COUNT: 29
+PDF METADATA: {"format": "PDF 1.4", "title": "20260213_talabat Q4 & FY'25 Results Presentation", "author": "", "subject": "", "keywords": "", "creator": "Google", "producer": "", "creationDate": "", "modDate": "", "trapped": "", "encryption": null}
+
+
+===== PAGE 1 =====
+
+1
+13 February 2026
+THE LEADING 
+ON-DEMAND
+DELIVERY 
+PLATFORM
+IN MENA
+Q4 & FY 2025 Results
+
+
+===== PAGE 2 =====
+
+2
+Today’s presenters and agenda
+Agenda for today
+Key highlights
+1.
+Business update
+2.
+Financial update
+3.
+Q&A
+5.
+Appendix
+6.
+Outlook
+4.
+TOON GYSSELS
+CEO
+KHALED ALFAKESH
+CFO
+SHADI SALMAN
+IR
+
+
+===== PAGE 3 =====
+
+4
+Key highlights
+
+
+===== PAGE 4 =====
+
+5
+Note: The financial numbers above are pro forma for talabat excluding instashop.
+(1) Year-on-year growth on a constant currency basis, whereby current period figures are restated using prior-period foreign exchange rates, to neutralise currency variations. In nominal currency, GMV and Management Revenue grew at the same rates
+(2) Adjusted net income of USD  124 million for Q4 ‘25, or 5.0% of GMV; Adjusted Net Income excludes certain non-operating items such as interest income and expenses related to non core financing arrangements, explaining the difference.
+(3) Final dividend of USD 219 million, subject to shareholder approval at upcoming AGM. Comes in addition to interim dividend of 202 million previously declared in September 2025 and paid in October 2025. 
+Final dividend of USD 219mn, bringing total FY 2025 dividends to USD 421mn(3) or 90% of reported 
+net income 
+Q4 2025 key financial highlights
+Dividends
+GMV 
+Growth (1)
+USD (cFX) 
+2.5bn
++21% y/y (1)
+Management 
+Revenue
+USD (cFX) 
+1.0bn
++26% y/y (1)
+Adjusted 
+EBITDA
+USD 
+156mn
+6.3% of GMV
+Net 
+Income (2)
+USD 
+123mn
+5.0% of GMV
+
+
+===== PAGE 5 =====
+
+6
+Full year performance achieved guidance across GMV, 
+Mgmt. Revenue, Adj. EBITDA and dividends
+Performance 
+measure
+Original 2025 
+guidance(1)
+Revised 2025 
+guidance(2)
+2025
+actual
+Performance 
+vs. guidance
+2025
+GMV growth 
+(y/y at constant currency)
+17-18%
+USD 8.7-8.8bn
+27-29%
+USD 9.4-9.6bn
+28%
+USD 9.5bn
+In line
+(mid-range)
+27%
+USD 10.2bn
+Mgmt. Revenue growth 
+(y/y at constant currency)
+18-20%
+USD 3.49-3.55bn 
+29-32%
+USD 3.81-3.90bn 
+33%
+USD 3.92bn
+Exceeded
+32%
+USD 4.04bn
+Adj. EBITDA 
+(margin, % of GMV)
+6.5-7.0%
+USD 565-614mn
+6.5%
+USD 613-623mn
+6.5%
+USD 615mn
+In line
+6.2%
+USD 625mn
+Net income 
+(margin, % of GMV)
+5.0-5.5%
+USD 435-482mn(4)
+5.0%
+USD 472-479mn(4)
+4.9%
+USD 464mn(4)
+Near
+(<2% off low end)
+4.6%
+USD 470mn
+Adj. FCF 
+(margin, % of GMV)
+6.0-6.5%
+USD 521-570mn
+6.0%
+USD 566-575mn
+5.9%
+USD 559mn
+Near
+(<2% off low end)
+5.6%
+USD 567mn
+Dividends
+min. USD 
+400mn
+min. USD 
+400mn
+ USD 421mn(5)
+Exceeded
+n/a
+talabat-only
+✔
+✔
+✔
+-
+-
+✔
+Notes:
+(1) Issued on 24 October 2024 as part of talabat’s Capital Markets Day ahead of IPO and reiterated 13 February 2025 as part of Q4’25 earnings release
+(2) Revised upwards on 12 August 2025 as part of Q2’25 earnings release
+(3) Pro-forma for the inclusion of 12 months of instashop performance in FY’25 and FY’24 comparative year (dilutive on growth rates and margins) to better compare with 2026 guidance, which includes full year performance of instashop
+(4) Absolute US dollar ranges calculated by applying margin to constant currency GMV figures; on a constant currency basis, FY’25 net income reached 469 million
+(5) Subject to shareholder approval at the upcoming AGM
+Pro-forma including 
+instashop(3)
+
+
+===== PAGE 6 =====
+
+7
+Business update
+
+
+===== PAGE 7 =====
+
+8
+Business momentum continues, driven by our core pillars
+Dec ‘24
+Dec ‘25
+84k
+69k
+22%
+y/y growth
+Dec ‘24
+Dec ’25
+157k
+123k
+27%
+y/y growth
+Q4 ’24
+Q4 ’25
+$159mn
+$138mn
+15%
+y/y growth
+73%
+68%
++5.4pp
+y/y growth
+25%
+1.9x
+growth
+All-time high partner- 
+funded savings in any 
+quarter
+# of active partners
+# of active riders
+Partner funded savings (USD)
+GMV share of multi-vertical customers 
+Multi-vertiality (5)
+GMV share of talabat pro subscribers
+Loyalty (6)
+Advertising Revenue Margin (% GMV)
+AdTech
+Selection (1)
+Experience (2)
+Value (4)
+Dec ‘24
+Dec ’25
+Dec ‘24
+Dec ’25
+Q4 ’24
+Q4 ’25
+Our active partners expanded by 22% y/y, 
+with even faster growth on local shops 
+reflecting an increased focus on G&R
+Rider base expansion continues to 
+support a strong customer experience, 
+even in highly competitive markets
+Partner-funded savings reached 
+$588mn in 2025, continuing to grow 
+quarter-on- quarter.
+Ecosystem products like pro underpin 
+one-quarter of the MAUs, translating to 
+higher engagement & better retention
+Multi-vertical customers now exceed 
+one-third of the base, indicating higher 
+lifetime value and engagement
+AdTech margins continue to expand on a 
+rapidly growing GMV base; with NMR 
+now representing >20% of AdRev
+Source: Company information as of December 2025  excluding instashop
+Note: Due to rounding, numbers presented may not add up precisely to the totals provided and percentages may not precisely reflect the absolute figures.
+(1) Active partners on the platform as of December 2025 (2) Active riders as of December 2025 (3) 3M avg pre/post new entrant launch (4) Total partner funded savings include Food, Grocery & Retail (excluding tMart as not a partner), B2B and Banks (including talabat 
+ADCB credit cards) and tPro. (5) GMV from multi-vertical users divided by GMV from active users i.e. multi-vertical users + single vertical Food users + single vertical Grocery & Retail users. (6)talabat pro GMV share calculated as the GMV of pro subscribers divided by 
+the GMV of the platform active users in that respective month
+Growth of rider base even in 
+highly competitive markets 
+like UAE(3); with 5 key players
+3.5%
+3.3%
++0.2pp
+y/y growth
+Exponential growth in 
+tMart NMR; with UAE NMR 
+now at ~7% of tMart sales
+47%
+
+
+===== PAGE 8 =====
+
+9
+In 2025, we expanded our customer base by 1.2mn and 
+deepened engagement across customer tiers
+Q4’ 25
+Q4’ 24
+Q4’ 23
+Top 5% Customer 
+Frequency
+Platform MAUs and order frequency trends for platform & top 5% customers (1)
+32.9
+36.1
+37.9
+Customer base grew by 1.2mn 
+(+19% y/y) reflecting continued 
+momentum
+Growing customer base with rising engagement across tiers
+Order frequency continues to 
+increased across cohorts, 
+including for our most engaged 
+users
+5.1mn
+6.4mn
+7.6mn
+Source: Company information as of December 2025 excluding instashop
+(1) All metrics are calculated as the average for the quarter, applicable for all MAU and frequency numbers
+1.3mn
+1.2mn
+Platform Customer 
+Frequency
+6.2
+6.7
+6.8
+
+
+===== PAGE 9 =====
+
+10
+High value customers remain sticky and continue to 
+increase their frequency, despite competitive pressure
+Customer Share
+GMV Share
+High value 
+customers
+Non-High Value 
+Customers
+New 
+Customers
+39%
+52%
+9%
+Q4 ’25 customer & GMV mix by customer tier (1) in competitive markets
+81%
+16%
+Source: Company information as of December 2025 excluding instashop. 
+Notes: Data shown for talabat’s competitive markets as of Q4 ‘25, which includes UAE, Kuwait, and Qatar
+(1) Customers are segmented into high & non-high value tiers based on their profitability contribution and order frequency. New customers are defined as customers with less than 90 days tenure on the platform.
+3%
+-3%
+~0%
++1%
++6%
+-4%
+~0%
+y/y M1 Retention
+(Q4‘25 vs Q4‘24)
+y/y Frequency
+(Q4‘25 vs Q4‘24)
+
+
+===== PAGE 10 =====
+
+11
+Loyalty and multi-verticality as key retention drivers
+Average M1 retention(1) for Q4 2025 by customer segment
+Increased retention as customers adopt talabat pro & additional verticals
+Source: Company information as of December 2025 excluding instashop
+Notes: (1) M1 retention is calculated as the % of users that are retained and active on the platform from the previous month, averaged over Q4 2025. 
+Mono-vertical non-subscriber
+Mono-vertical subscriber
+Multi-vertical subscriber
+A customer NOT subscribed to talabat 
+pro and placing orders on a single 
+vertical on talabat
+A customer subscribed to talabat pro 
+and placing orders across multiple 
+verticals on talabat
+A customer subscribed to talabat pro 
+and placing orders on a single 
+vertical on talabat
++20pp
+Retention Growth
+Retention Growth
++16pp
+
+
+===== PAGE 11 =====
+
+12
+Doubling down on building talabat as the everyday app 
+with more than $100mn of investment(1) in 2026
+Source: Company information as of December 2025 excluding instashop
+Notes: (1) Investment on ecosystem pillars including capex of $45mn on tMarts (2) Q4 2025 vs Q4 2024 tMart GMV growth. (3) Grocery TAC penetration represents FY25 tMart GMV as a share of the Grocery Total Addressable Category, per Redseer Analysis 
+(updated for 2025 in January 2026). (4) Calculated as % of talabat pro customers that are retained on talabat after joining talabat pro, relative to lookalike customers (i.e. customers that have exactly the same frequency, AFV & talabat tenure as talabat pro 
+users in the period before joining talabat pro, but who did not join talabat pro) (5) talabat pro frequency uplift is the delta in frequency of talabat pro user cohort vs. lookalike users 
+mart
+Deepening the value customers receive from our 
+subscription proposition
+Further build out the t-mart infrastructure to cope with 
+future demand and deliver even faster
+Higher retention 
+vs non-pro customers(4)
+Higher frequency
+vs non-pro customers(5)
+Fastest growing vertical 
+w/ accelerating growth
+Huge headroom to 
+penetrate Grocery TAC(3)
++26%
+Retention Uplift
++28%
+Frequency Uplift
+~47%
+YoY Growth(2)
+<1.5%
+TAC Penetration
+We are also placing few 
+bets on building out new 
+verticals & ecosystem 
+enablers
+..and more
+
+
+===== PAGE 12 =====
+
+13
+Financial update
+
+
+===== PAGE 13 =====
+
+14
+GMV momentum translating into strong revenue growth
+GMV (USD million)
+Management Revenue (USD million)
+Strong GMV growth reflects order volume growth across all 
+markets in Q4’25 (increased MAUs, higher order frequency and 
+average order values) 
+Revenue growth outperformed GMV, reflecting rapid expansion of 
+tMart business (grocery dark stores), improved adtech margins 
+and better subscription fee monetisation on higher adoption
+Source: Company information as of December 2025 excluding instashop
+Notes: Quarterly financials not drawn to scale against FY financials
+(1) Year-on-year growth at constant currency
+talabat-only
+Q4’ 24
+Q4’ 25
+2024
+2025
+7,428
+9,421
+2,044
+2,476
+27%
+y/y growth
+21%
+y/y growth
+Q4’ 24
+Q4’ 25
+2024
+2025
+2,956
+3,876
+824
+1,039
+31%
+y/y growth
+26%
+y/y growth
+40%
+41%
+40%
+42%
+% of GMV
+Commission Fees
+Subscription Fees & Other Income
+Delivery & Service Fees
+Advertising & Listing Fees
+14.3%
+13.8%
+14.2%
+13.3%
+12.8%
+14.8%
+13.5%
+16.2%
+9.4%
+9.1%
+9.3%
+8.9%
+3.3%
+3.4%
+3.3%
+3.5%
++28% y/y (1)
++21% y/y (1)
++33% y/y (1)
++26% y/y (1)
+% of GMV shown
+
+
+===== PAGE 14 =====
+
+15
+GMV growth across verticals and regions
+GMV by vertical (USD million)
+GMV by geography (USD million)
+Continued double-digit growth for Food vertical in Q4’25, whilst 
+Grocery & Retail (G&R) vertical grew much faster, albeit from a 
+lower base (G&R now  32% of total GMV in Q4’25).
+GCC still growing at healthy double-digit rates in Q4’25, despite 
+dynamic competitive environment. Non-GCC segment grew much 
+faster. Egypt is now our third largest market by GMV, after UAE and 
+Kuwait, and our largest user base
+Source: Company information as of December 2025 excluding instashop
+talabat-only
+Q4 ’24
+Q4 ’25
+2024
+2025
+5,542
+6,652
+1,500
+1,687
+1,886
+2,768
+544
+788
+7,428
+9,421
+2,044
+2,476
+G&R YoY
+Food YoY
+G&R %
+Food
+G&R
+Q4 ’24
+Q4 ’25
+2024
+2025
+GCC
+Non-GCC
+Non-GCC YoY
+GCC YoY
+Non-GCC%
+20%
+6,332
+7,702
+1,724
+1,974
+7,428
+9,421
+2,044
+2,476
+1,096
+1,719
+320
+501
+47%
+45%
+25%
+20%
+29%
+27%
+12%
+32%
+15%
+18%
+16%
+20%
+57%
+22%
+57%
+15%
+
+
+===== PAGE 15 =====
+
+16
+Adj. EBITDA in line with guidance; Adj. FCF near guidance
+talabat-only
+Adj. EBITDA (USD million)
+Adj. Free Cash Flow (USD million)
+Adj. EBITDA growth slowed in Q4’25, with 0.5pp margin 
+compression reflecting product-mix shift to G&R and higher 
+CARC(1) offset by improved cost margins (operating leverage) and 
+adtech momentum
+Adj. FCF grew 14% in Q4’25, with slightly lower margins reflecting 
+Adj. EBITDA impact, with higher capex offset by positive net 
+working capital changes
+Q4 ’24
+Q4 ’25
+2024
+2025
+Q4 ’24
+Q4 ’25
+2024
+2025
+24%
+y/y growth
+13%
+y/y growth
+497
+615
+139
+156
+462
+559
+118
+134
+21%
+y/y growth
+14%
+y/y growth
+talabat-only
+6.2%
+5.9%
+5.8%
+5.4%
+6.7%
+6.5%
+6.8%
+6.3%
+% of GMV
+% of GMV
+Source: Company information as of December 2025 excluding instashop
+(1) Customer Acquisition & Retention Cost, which refers to customer acquisition & retention as defined within IFRS Marketing Expense, adding vouchers cost for acquisition & retention
+
+
+===== PAGE 16 =====
+
+17
+Net income near guidance, dividends in excess of guidance
+talabat-only
+Net income (USD million)
+Dividend policy
+Net income was 11% lower in Q4’25 on base effects (deferred tax 
+income). Adjusting for non-operating items, net income was stable 
+versus the prior year, with a 5.0% GMV margin
+Board has recommended a final dividend of USD 219mn, subject to 
+shareholder approval. Brings total FY 2025 dividends to USD 421mn, 
+or 90% of reported net income, exceeding guidance
+Q4 ’24
+Q4 ’25
+2024
+2025
+-11%
+y/y
+34%
+y/y growth
+346
+talabat-only
+464
+138
+123
+Dividends (USD Million)
+DPS (fils/share)
+202
+H1 2025
+H2 2025
+3.188
+3.450
+4.7%
+4.9%
+6.7%
+5.0%
+% of GMV
+219
+Source: Company information as of December 2025 excluding instashop
+
+
+===== PAGE 17 =====
+
+18
+Outlook
+
+
+===== PAGE 18 =====
+
+19
+Performance 
+measure
+FY 2026E
+Guidance drivers
+GMV growth (1)
+(y/y at constant currency)
+11-14%
+USD 11.2-11.5bn
+●
+Growing from a larger base following accelerated FY’25 growth
+●
+More competitive environment (new entrants and incumbents) 
+●
+Macro-economic (consumer spending) headwinds
+●
+Instashop dilution (7% of pro-forma FY’25 GMV, grew 12% in FY’25 at cFX)
+Revenue growth (1) (2)
+(y/y at constant currency)
+14-17%
+USD 4.4-4.5bn 
+●
+Outpacing GMV growth on talabat mart expansion, subscription fees
+Adj. EBITDA 
+(margin, % of GMV)
+510-540mn
+4.4%-4.8%
+●
+Gross Profit margin investments (product-mix shift, commission rates, 
+delivery net take rate, talabat mart retail margins)
+Net income 
+(margin, % of GMV)
+280-310mn
+2.4%-2.8%
+●
+Increased D&A and finance lease costs (tMart capital expenses)
+●
+Lower finance income (lower global interest rates)
+Free Cash Flow(3)
+(margin, % of GMV)
+370-400mn
+3.2%-3.6%
+●
+Increased capital expenses (talabat mart)
+●
+Higher cash tax payments (higher 2025 DMTT taxes paid in 2026)
+Dividends
+90% of net income
+USD 252-279mn 
+●
+As per current shareholder-approved dividend policy
+FY 2026 guidance
+Notes:
+(1) Growth rates based on pro-forma FY’25 results including talabat + 12 months of instashop
+(2) To enhance financial disclosure, talabat is aligning its external and internal reporting and as a result will only report IFRS revenue from 2026 onwards. In FY 2025, IFRS Revenue for talabat + 12m instashop amounted to USD 3,870 million.
+(3) Free Cash Flow is calculated as cash flow from operating activities as stated in the IFRS Cash Flow statement less net capital expenditures, and payment of lease liabilities. Free Cash Flow excludes interest income and expense
+talabat + 
+instashop
+
+
+===== PAGE 19 =====
+
+20
+Focused investment in 2026 to strengthen food and build 
+the everyday future
+Strengthen our food leadership
+Invest in building the everyday future (1)
+Adj. EBITDA 2026 margin bridge (disciplined investments) 
+Notes:
+(1)  In addition to the ~USD 75mn in Adj. EBITDA margin investments, we plan to invest ~USD 45mn of capex and lease investments to support expanding our grocery integrated vertical (tMart); making it a total of $120m investment
+6.0%
+~USD 680mn
+(0.5%)
+~USD 55mn
+(0.7%)
+~USD 75mn
+4.6%
+$525mn
+Adj. EBITDA 2026 (at constant Q4’25 margin)
+Adj. EBITDA 2026E (2)
+Product mix shift to G&R
+(0.2%)
+~USD 25mn
+5.3%
+~USD 600mn
+Adj. EBITDA 2026E (before strategic investments)
+Long-term margin range
+
+
+===== PAGE 20 =====
+
+21
+Q&A
+
+
+===== PAGE 21 =====
+
+22
+Appendix
+
+
+===== PAGE 22 =====
+
+23
+Gross profit to Adjusted EBITDA bridge
+(USD million)
+Q4 ‘25
+Q4 ‘24
+Q4’25
+% of GMV
+Q4’24
+% of GMV
+FY25
+FY24
+FY25
+% of GMV
+FY24
+% of GMV
+Gross profit
+288
+255
+11.6%
+12.5%
+1,124
+915
+11.9%
+12.3%
+Marketing 
+Expenses (A)
+(54)
+(37)
+(2.2%)
+(1.8%)
+(193)
+(143)
+(2.1%)
+(1.9%)
+IT Expense (B)
+(12)
+(17)
+(0.5%)
+(0.8%)
+(60)
+(62)
+(0.6%)
+(0.8%)
+G&A (excl Dep. & Amor. 
+and other non-income 
+taxes)
+(29)
+(37)
+(1.2%)
+(1.8%)
+(119)
+(122)
+(1.3%)
+(1.6%)
+Other income & 
+Expenses (C)
+(41)
+(21)
+(1.7%)
+(1.0%)
+(156)
+(106)
+(1.7%)
+(1.4%)
+EBITDA (reported)
+153
+144
+6.2%
+7.0%
+596
+482
+6.3%
+6.5%
+Adjustments
+Share-based 
+compensation (D)
+4
+6
+0.2%
+0.3%
+21
+17
+0.2%
+(0.2%)
+Other Adjustments
+(0)
+(11)
+(0.0%)
+(0.5%)
+(1)
+(3)
+(0.0%)
+(0.0%)
+Adj. EBITDA
+156
+139
+6.3%
+6.8%
+615
+497
+6.5%
+6.7%
+●
+(A) Marketing expenses mainly 
+include restaurants acquisition 
+and customer acquisition & 
+retention costs
+●
+(B) IT expenses include research 
+& development and technology 
+related costs to drive further 
+efficiencies
+●
+(C) Other income & expenses 
+mainly consist of Group Costs 
+which refer to global services 
+provided by Delivery Hero SE (e.g. 
+logistics technology, vendor 
+technology and other services)
+●
+(D) Share-based compensation 
+represents talabat employees’ 
+participation in the share-based 
+compensation arrangement 
+managed by Delivery Hero SE
+Source: Company information as of December 2025 excluding instashop
+
+
+===== PAGE 23 =====
+
+24
+Adjusted EBITDA to Adjusted Free Cash Flow bridge
+(USD million)
+Q4 ‘25
+Q4 ‘24
+FY25
+FY24
+Adj. EBITDA
+156
+139
+615
+497
+(-) Capex (A)
+(28)
+(2)
+(58)
+(34)
+(-) IFRS 16 lease payments
+(12)
+(10)
+(40)
+(26)
++/(-) Change in NWC (B)
+21
+(6)
+80
+38
+(-) Taxes (C)
+(2)
+(2)
+(39)
+(12)
+= Adj. Free Cash Flow
+134
+118
+559
+462
+YoY Growth
+14%
+21%
+FCF Margin (% of GMV)
+5.4%
+5.8%
+5.9%
+6.2%
+Cash Conversion
+86%
+85%
+91%
+93%
+Source: Company information as of December 2025 excluding instashop
+●
+(A) Asset-light business model 
+with low capex requirements of 
+0.6% in FY’25
+●
+(B) Cash inflow from active 
+Working Capital management 
+and efficient cash conversion 
+cycle in the Grocery & Retail 
+business
+●
+(C) Low effective tax rate of ~9% 
+in FY’24 paid in FY’25
+
+
+===== PAGE 24 =====
+
+25
+Net income to Adjusted Net Income bridge
+(USD million)
+Q4 ‘25
+Q4 ‘24
+Q4’25
+% of GMV
+Q4’24
+% of GMV
+FY25
+FY24
+FY25
+% of GMV
+FY24
+% of GMV
+Net Income
+123
+138
+5.0%
+6.7%
+464
+346
+4.9%
+4.7%
+Interest Income
+(6)
+(2)
+(0.2%)
+(0.1%)
+(20)
+(16)
+(0.2%)
+(0.2%)
+Interest Expenses on 
+loans
+0
+0
+0.0%
+0.0%
+-
+19
+-
+0.3%
+FX result
+(1)
+(1)
+(0.0%)
+(0.0%)
+(1)
+57
+(0.0%)
+0.8%
+Deferred tax income (A)
+8
+(13)
+0.3%
+(0.6%)
+8
+(13)
+0.1%
+(0.2%)
+Adjusted Net Income
+124
+122
+5.0%
+6.0%
+451
+393
+4.8%
+5.3%
+Source: Company information as of December 2025 excluding instashop
+●
+(A) During the year ended 2024, 
+the Group recognised a deferred 
+tax asset in relation to temporary 
+differences arising from 
+unrealised foreign exchange 
+losses following the corporate 
+restructuring. A portion of these 
+losses was realized in 2025, with 
+the remaining balance expected 
+to be realised in the foreseeable 
+future.
+
+
+===== PAGE 25 =====
+
+26
+Q4’25 financial results (including instashop)
+talabat-only
+talabat + instashop
+(USD million)
+Q4 ‘25
+Q4’25
+% of GMV
+Q4 ‘25
+Q4’25
+% of GMV
+Management Revenue
+1,039
+42%
+1,070
+40%
+Adj. EBITDA
+156
+6.3%
+159
+6.0%
+Net income
+123
+5.0%
+122
+4.6%
+Adj. Free Cash Flows
+134
+5.4%
+137
+5.1%
+Source: Company information as of December 2025
+
+
+===== PAGE 26 =====
+
+27
+Adj. EBITDA
+(-) Other Taxes Paid
+(-Income Taxes Paid)
+(+/-) Change in Working Capital
+[Excl. PSP, restaurant liabilities, and other non trade 
+related balances]
+(-) CAPEX (tangible and intangible)
+(-) Lease payments (IFRS 16)
+Adjusted Free Cash Flow (old)
+IFRS-aligned FCF definition effective from FY 2026
+Net result
+(+) Non-Cash Items
+(-) Income Taxes Paid
+(+/-) Change in Working Capital
+(+/-) Change in Provisions
+Cash Flow from Operating Activities [IFRS]
+(-) CAPEX (tangible and intangible)
+(-) Lease payments (IFRS 16)
+Free Cash Flow (new)
+Old Adjusted Free Cash Flow definition
+Old FCF definition: Adj. EBITDA after 
+changes in WC [excluding receivables 
+from payment service providers, 
+restaurant liabilities, and other non 
+trade related balances], less tax, capex,  
+and lease payments.
+New Free Cash Flow definition
+New FCF definition: Cash Flow from 
+operating activities, less net capex and 
+lease payments
+
+
+===== PAGE 27 =====
+
+28
+Alternative Performance 
+Measure
+Definition
+Gross Merchandise Value 
+(“GMV”)
+The total value paid by customers for goods sold through the platform (including VAT, delivery fees, other fees and subsidies but excluding 
+subscription fees, tips to the riders and delivery-as-a-service fees).
+Management revenue
+Revenue in accordance with IFRS 15, excluding the effect of vouchers, discounts and other reconciliation effects. 
+Adjusted EBITDA
+(“AEBITDA”)
+Earnings from continuing operations before income taxes, financial result, depreciation and amortisation according to management reporting, and 
+non-operating earnings effects. Non-operating earnings effects comprise, in particular (i) expenses for share-based compensation, (ii) expenses for 
+services related to corporate transactions, financing measures and certain legal matters, (iii) expenses for reorganisation measures and (iv) other 
+non-operating expenses, and income, especially the result from disposal of tangible and intangible assets, the result from sale and abandonment of 
+subsidiaries, impairments of goodwill, allowances for other receivables, and non-income taxes.
+Adjusted Net Income
+(“ANI”)
+Net income in accordance with IFRS, excluding (1) foreign exchange income (loss) (mainly related to non-cash unrealised foreign exchange loss 
+from shareholder loan liability in Delivery Hero Egypt SAE), (2) and interest expense on loans and interest income (mainly related to shareholder 
+loans and deposits that will be capitalised pre-IPO), (3) Deferred Tax Income.
+Constant currency
+Constant currency provides an indication of the business performance by removing the impact of foreign exchange rate movements.
+Monthly Active Customers
+Individuals who have placed at least one successful order through the talabat platform within the full calendar month specified
+Average Order Frequency
+The average number of orders placed per Monthly Active Customer within the specified calendar month.
+AdTech or advertising
+Refers to non-commission based revenues (NCR).
+Adjusted Free Cash Flow 
+(“AFCF”)
+Cash flow from operations (changes in WC exclude receivables from payment service providers and restaurant liabilities and other non trade 
+related balances) less capital expenditures and payment of lease liabilities. Free Cash Flow excludes interest income and expense.
+Free Cash Flow (“FCF”)
+Cash flow from operating activities as stated in the IFRS Cash Flow statement less net capital expenditures, and payment of lease liabilities. Free 
+Cash Flow excludes interest income and expense.
+Average Order Value (“AOV”)
+Revenue (net of discounts) divided by the number of orders
+talabat regularly uses alternative performance measures which are relevant to enhance the understanding of the financial performance and financial position of the 
+Company. These measures may not be comparable to similar measures used by other companies; they are neither measurements under IFRS nor any other body of 
+generally accepted accounting principles and thus should not be considered as substitutes for the information contained in the Company’s financial statements.
+Alternative Performance Measures (“APMs”)
+
+
+===== PAGE 28 =====
+
+29
+Disclaimer
+The information contained in this presentation (the “Presentation”) represents a summary of the pro forma financial statements for the three-month period ended 30 September 2025 
+(the “Q3 2025 Financial Statements”) of Talabat Holding plc (“talabat” or the “Company”). This presentation does not purport to contain all of the information that you may wish to 
+consider in making any investment decision and should not be relied upon in substitution for a review of the auditor-reviewed financial statements for the same period (the “Reviewed 
+Q2 2025 Financial Statements”) or the exercise of independent judgment. talabat uses alternative performance measures (“APM”s) which are relevant to enhance the understanding of 
+the financial performance and financial position of the Company, which are neither measurements under IFRS nor any other body of generally accepted accounting principles and 
+thus should not be considered as substitutes for the information contained in the Company’s financial statements. These APMs may not be comparable to similarly titled measures 
+presented by other companies and are subject to change without notice. A summary of these APMs can be found at the end of this presentation.
+Any statements in this Presentation attributable to third party industry experts represent talabat’s interpretation of data, research opinion or viewpoints published by such industry 
+experts, and have not been reviewed by them. Each publication of such industry experts speaks as of its original publication date and not as of the date of this document.
+Neither this presentation nor anything contained herein constitutes a financial promotion of securities for sale in any jurisdiction. This presentation is also not intended to constitute 
+investment, legal, tax or other professional advice. Recipients should consult their own professional advisers before making any investment decisions.
+Cautionary statement regarding forward-looking statements
+This presentation contains certain forward-looking statements with respect to the Company. These forward-looking statements can be identified by the fact that they do not relate 
+only to historical or current facts.
+Forward-looking statements often use words such as "anticipate", "target", "expect", "estimate", "intend", "plan", "will", "goal", "believe", "aim", "may", "would", "could" or "should" or other 
+words of similar meaning or the negative thereof. These forward-looking statements involve known and unknown risks, uncertainties and other factors which may cause actual results, 
+performance or achievements to be materially different from those expressed or implied by these forward-looking statements. The Company does not accept any responsibility for the 
+accuracy or fairness of forward-looking statements and expressly disclaims any obligation to update any such forward looking statement, except as required pursuant to applicable 
+law and regulation.
+Many of the risks and uncertainties relating to forward-looking statements are beyond the Company’s ability to control or estimate precisely, such as future market conditions and the 
+behaviours of other market participants, and therefore undue reliance should not be placed on such statements. For further information regarding the Company's risk factors, please 
+refer to the International Offering Memorandum used as part of the Company’s initial public offering in December 2024, available on its corporate website or using the link. 
+The amount and payment of dividends by the Company is subject to consideration by the Board of Directors of the cash management requirements of the Company for operating 
+expenses, interest expense, any anticipated capital expenditures, market conditions, the then current operating environment in its markets, and the Board of Directors’ outlook for the 
+business of the Company. In addition, any level or payment of dividends will depend on, among other things, future profits and the business plan of the Company, as determined at the 
+discretion of the Board of Directors.
+Rounding
+Due to rounding, numbers presented may not add up precisely to the totals provided and percentages may not precisely reflect the absolute figures.
+
+
+===== PAGE 29 =====
+
+30
+ir@talabat.com
+Thank you!

@@ -1,0 +1,1418 @@
+SOURCE FILE: 20251110_talabat-Q325-Financial-Statements-En.pdf
+CATEGORY: 02_Quarterly_Financial_Statements
+PAGE COUNT: 26
+NOTE: Scanned document (no text layer) — OCR'd via Tesseract 5.3.4
+
+
+===== PAGE 1 (OCR) =====
+
+Talabat Holding PLC
+
+Condensed consolidated interim financial statements
+For the period since inception on 3 September 2024 till 30 September 2025
+
+Principal business address:
+
+Unit no. 2341, 23rd Floor, Sky Tower, Shams Abu Dhabi,
+Abu Dhabi, Al Reem Island
+
+United Arab Emirates
+
+
+===== PAGE 2 (OCR) =====
+
+Talabat Holding PLC
+
+Condensed consolidated interim financial statements
+For the period since inception on 3 September 2024 till 30 September 2025
+
+Content Pages
+Independent auditors’ review report , 1
+Condensed consolidated interim statement of financial position 2
+
+Condensed consolidated interim statement of profit or loss and other comprehensive
+income
+
+Condensed consolidated interim statement of changes in equity 4
+Condensed consolidated interim statement of cash flows =)
+
+Notes to the condensed consolidated interim financial statements 6-24
+
+
+===== PAGE 3 (OCR) =====
+
+KPMG!
+
+KPMG Lower Gulf Limited
+
+Office No 15-111, 15th Floor
+
+Al Khatem Tower,
+
+Abu Dhabi Global Market Square, Al Maryah Island
+Abu Dhabi, United Arab Emirates
+
+Tel. +971 (2) 401 4800, www.kpmg.com/ae
+
+Incegendent Auditors keport on Review of Gancensed
+Gonsdiidated Interim Financial Information
+
+To the Shareholders of Talabat Holding PLC
+
+Introduction
+
+We have reviewed the accompanying 30 September 2025 condensed consolidated interim financial
+information of Talabat Holding PLC (“the Company”) and its subsidiaries (“the Group”), which comprises:
+
+. the condensed consolidated interim statement of financial position as at 30 September 2025;
+
+. the condensed consolidated interim statements of profit or loss and other comprehensive income for
+the three-month and 393 day periods ended 30 September 2025;
+
+. the condensed consolidated interim statements of changes in equity for the 393 day period ended 30
+September 2025;
+
+. the condensed consolidated interim statements of cash flows for the 393 day period ended 30
+September 2025; and
+
+. notes to the condensed consolidated interim financial information.
+
+Management is responsible for the preparation and presentation of this condensed consolidated interim
+financial information in accordance with IAS 34, ‘Interim Financial Reporting’. Our responsibility is to
+express a conclusion on this condensed consolidated interim financial information based on our review.
+
+Scope of Review
+
+We conducted our review in accordance with the International Standard on Review Engagements 2410,
+“Review of Interim Financial Information Performed by the Independent Auditor of the Entity’. A review of
+condensed consolidated interim financial information consists of making inquiries, primarily of persons
+responsible for financial and accounting matters, and applying analytical and other review procedures. A
+review is substantially less in scope than an audit conducted in accordance with International Standards on
+Auditing and consequently does not enable us to obtain assurance that we would become aware of all
+significant matters that might be identified in an audit. Accordingly, we do not express an audit opinion.
+
+Conclusion
+
+Based on our review, nothing has come to our attention that causes us to believe that the accompanying
+30 September 2025 condensed consolidated interim financial information is not prepared, in all material
+respects, in accordance with IAS 34, ‘Interim Financial Reporting’.
+
+KPMG Lower Gulf Limited
+
+-“nurag Bajpai
+Abu Dhabi, United Arab Emirates
+
+Date: 07 NOV 2025
+
+©2025 KPMG Lower Gulf Limited, licensed in the United Arab Emirates and a member firm of the KPMG global organization of independent member firms affiliated with KPMG International
+Limited, a private English company limited by guarantee. All rights reserved. KPMG Lower Gulf Limited is registered and licensed under the rules and regulations of Abu Dhabi Global Markets.
+
+
+===== PAGE 4 (OCR) =====
+
+talabat
+Talabat Holding PLC
+
+Condensed consolidated interim statement of financial position
+As at 30 September 2025
+
+30 September
+2025
+Notes USD
+ASSETS
+Non-current assets
+Property and equipment 5 201,039,973
+Intangible assets and goodwill 6 323,308,260
+Deferred tax assets 19 11,217,972
+Trade and other receivables 7 6,028,623
+Total non-current assets 541,594,828
+Current assets
+Inventories 8 70,838,488
+Trade and other receivables 7 197,185,986
+Due from related parties 9 5,360,740
+Cash and cash equivalents 10 775,559,005
+Total current assets 1,048,944,219
+Total assets 1,590,539,047
+EQUITY AND LIABILITIES
+Equity
+Share capital Il 253,650,000
+Foreign currency translation reserve (1,563,002)
+Retained earnings 323,135,269
+Total equity 575,222,267
+Non-current liabilities
+Loan from related party 9 2,059,354
+Trade and other payables 12 1,276,127
+Lease liabilities 13 106,547,694
+Income tax liabilities 19 27,418,348
+Employees’ end of service benefits 14 24,608,159
+Total non-current liabilities 161,909,682
+Current liabilities
+Due to related parties 9 38,974,100
+Trade and other payables 12 556,441,994
+Dividends payable 23 202,159,050
+Lease liabilities 13 28,584,273
+Income tax liabilities 27,247,681
+Total current liabilities 853,407,098
+Total liabilities 1,015,316,780
+Total equity and liabilities 1,590,539,047
+
+These condensed consolidated interim financial statements were authorised and approved for issue by the Board
+of Directors on 7 November 2025 and signed on their behalf by:
+\
+
+Chief Financial Officer tee Chairperson aN \
+
+The notes on pages 6 to 24 are an integral part of these condensed consolidated interim financial statements \
+The independent auditors’ review report is set out on page 1
+
+
+
+===== PAGE 5 (OCR) =====
+
+talabat
+
+Talabat Holding PLC
+
+Condensed consolidated interim statement of profit or loss and other
+
+comprehensive income
+For the period since inception on 3 September 2024 till 30 September 2025
+
+For the three
+months period
+
+For the period
+since inception
+
+ended 30 till 30 September
+
+September 2025 2025
+
+Notes USD USD
+Revenue 15 1,004,150,633 — 3,620,046,024
+Cost of sales 16 (712,107,046) _(2,502,787,867)
+Gross profit 292,043,587 1,117,258,157
+Marketing expenses (57,134,501) (189,355,676)
+IT expenses (17,152,163) (69,997,661)
+General and administrative expenses (47,203,669) (190,698,088)
+Other income 17 3,772,814 19,356,023
+Other expenses 18 (39,280,605) (144,532,953)
+Provision for expected credit loss 7 (2,637,702) (10,658,839)
+Operating profit 132,407,761 531,370,963
+Net finance income 4,460,349 9,042,979
+Foreign exchange gain, net 869,208 2,375,149
+Profit before income tax 137,737,318 542,789,091
+Income tax expense, net 19 (16,873,184) (59,402,116)
+Net profit 120,864,134 483,386,975
+Other comprehensive income
+Items that will be subsequently reclassified to profit or
+loss:
+Foreign currency translation differences, net 667,527 (2,434,909)
+Deferred / current tax (expense) / income on net
+investment in foreign operations 19 (1,250,952) 871,907
+Other comprebensive (loss), net of tax (583,425) (1,563,002)
+Total comprehensive income 120,280,709 481,823,973
+Earnings per share (cent/share)
+Basic Et 0.52 2.20
+Diluted 20 0.52 2.20
+
+The notes on pages 6 to 24 are an integral part of these condensed consolidated interim financial statements
+The independent auditors’ review report is set out on page 1.
+
+
+===== PAGE 6 (OCR) =====
+
+LOTTTTSLS (z00°¢9S‘T) 69TSELETE 000‘0S9‘¢sz
+(SEL‘6LI'71E) > (sec‘6LI'z1E) =>
+SLO‘EPh EZ < 8LO0‘Err'ez :
+PS6'VS8H‘871 = PS6P8P'S7I °
+000‘0S9°ESz = - 000°0S9‘¢Esz
+ELOEZS ISP (zo0‘¢9S‘T) SLO‘98EE8P =
+(Z00°¢9S‘1) (zoo‘e9s‘ 1) = =
+SLO98E'E8P i SLO98E'E8P “
+asn asn asn asn
+Aymba [v0], 9AINS3.1 ssulaie3 [evides
+none[sue. paulivjoy a1eys
+AQUaIIND
+USI9104q
+
+1 WO,UT payepiy! asoup yo ped jesrdayur ue ore 7 0) 9 sofled uo sofou oY],
+
+P e
+
+SZ07 Jequiajdas O¢ Je aouElEg
+
+(€Z 9}0N) spuaplaiq
+
+(ZZ 9J0N) UOKSesUeY] paseg-oreys popes AyInbq
+
+(LZ 9}0N) [04jU0d UOWUWOD JopuUN saLeIpisqns Jo uoLIsInboy
+(L1 9J0N) [ejIdeo azeys Jo s0uenss]
+
+OWOOUT SAISUDYSIdU0D JOYIO,
+yyosd yon,
+poniod uj JOF SUSU SATSUDYSIGUIOS [eI |,
+
+SZOZ 4aquiaidag OF 1111 PZ0Z 4aquiajdag ¢ uo uoYdaoul aus potsad ayy AON
+Ayinbo ul sasueys Jo JUSW9}e]S WILINJUI poyepljosuod pasuapuo7
+
+OTd SuIpjoy sequel
+
+
+===== PAGE 7 (OCR) =====
+
+Talabat Holding PLC
+
+Condensed consolidated interim statement of cash flows
+
+talabat
+
+For the period since inception on 3 September 2024 till 30 September 2025
+
+For the period
+since inception till
+30 September
+2025
+Notes USD
+Cash flows from operating activities
+Net profit 483,386,975
+Adjustments for:
+Depreciation of property and equipment 49,933,722
+Amortisation of intangible assets 6,713,409
+Gains on disposal of property and equipment 17 (1,161,355)
+Employees’ end-of-service benefits 9,092,160
+Provision for expected credit loss 7 10,658,839
+Interest expense on lease liabilities 6,674,246
+Equity settled share-based transactions 22 23,443,078
+Interest income (15,834,882)
+Income tax expense, net 19 59,402,116
+632,308,308
+Working capital changes:
+Inventories (31,025,492)
+Trade and other receivables (51,801,515)
+Due from related parties (4,399,862)
+Due to related parties 5,854,765
+Trade and other payables 136,186,247
+Cash generated from operating activities 687,122,451
+Employees’ end-of-service benefits paid (3,953,659)
+Interest received 15,834,882
+Income tax paid (36,417,850)
+Net cash generated from operating activities 662.585.824
+Cash flows from investing activities
+Purchase of property and equipment (29,566,137)
+Proceeds from disposal of property and equipment 1,589,350
+Addition of intangible assets (12,248,481)
+Net cash acquired on acquisition of subsidiaries under common 27
+control 305,911,891
+Net cash generated from investing activities 265,686,623
+Cash flows from financing activities
+Payment of principal portion of lease liabilities (28,570,593)
+Payments of interest on lease liabilities (6,674,246)
+Dividends paid 23 (110,020,688)
+Repayment of loans from related party (6,145,028)
+Net cash used in financing activities (151,410,555)
+Net increase in cash and cash equivalents 776,861,892
+Effect of movement in exchange rates on cash held (1,302,887)
+Cash and cash equivalents at the end of the period 10 775,559,005
+
+The notes on pages 6 to 24 are an integral part of these condensed consolidated interim financial statements.
+The independent auditors’ review report is set out on page 1.
+
+
+===== PAGE 8 (OCR) =====
+
+Talabat Holding PLC talabat
+
+Notes to the condensed consolidated interim financial statements
+1. General information
+
+Talabat Holding PLC, Dubai — United Arab Emirates (the “Company”) was incorporated on 3 September
+2024 (date of inception) in accordance with ADGM laws, ADGM registration number: is 20827
+
+The registered address of the company: Unit no. 2341, 23rd Floor, Sky Tower, Shams Abu Dhabi, Al Reem
+Island, Abu Dhabi, UAE.
+
+Delivery Hero MENA Holding GmbH is the parent company (the “Parent”). Delivery Hero SE is the
+ultimate parent company of the Group which is also the ultimate controlling party (the “Ultimate Parent
+Company”).
+
+The Company was established as part of a broader restructuring plan initiated by the Ultimate Parent
+Company to facilitate the listing of its shares on the Dubai Financial Market (“DFM”) through an Initial
+Public Offering (“IPO”). The restructuring involved transactions among entities under common control to
+consolidate the Ultimate Parent Company’s business in the MENA region, which includes the United Arab
+Emirates (“UAE”), Kuwait, Qatar, Oman, Bahrain, Iraq, Egypt, and Jordan.
+
+On 24 September 2024, the Ultimate Parent Company transferred its shareholding and control in Delivery
+Hero FZ LLC (“DH FZ”) and its subsidiaries to the Company. Further, on 30 September 2024, DH FZ
+acquired control of certain entities as part of a common control transaction (refer to Note 27).
+
+In exchange for these acquisitions, the Company issued 253,649,900 ordinary shares to the Parent Company
+(refer to Note 11).
+
+These transactions were undertaken to align the Group’s corporate structure with the Ultimate Parent
+Company’s plan to offer 20% of its shareholding in the Company through an IPO.
+
+During November 2024, the Security and Commodities Authority ("SCA") (UAE) accepted the Company’s
+application for the offering and issuance of 20% of the Company's authorised and issued share capital. On
+10 December 2024, the Company was admitted to be listed on the Dubai Financial Market (“DFM”).
+
+On 25 February 2025, Talabat Holding PLC acquired 100% of Instashop Ltd’s (Instashop) share capital
+from Delivery Hero SE (the Ultimate Parent Company), under a common control transaction. (refer to Note
+27).
+
+The Company and its subsidiaries are collectively referred to as the Group (the “Group”). The principal
+activity of the Group is to provide access to an online platform to order food, grocery and deliver to end
+customers.
+
+
+===== PAGE 9 (OCR) =====
+
+tal
+Talabat Holding PLC abat
+
+Notes to the condensed consolidated interim financial statements
+
+1. General information (continued)
+
+These condensed interim consolidated financial statements include the results of operations and financial
+position of the Company and it’s subsidiaries as at 30 September 2025, and should be read in conjunction
+with the Group’s last consolidated interim financial statements as at 31 December 2024. These condensed
+interim consolidated financial statements also include the results of operations and financial position of the
+subsidiaries acquired on 24 September 2024 and on 30 September 2024, in addition to the subsidiaries
+listed below which were acquired on 25 February 2025 (refer to Note 27 regarding the acquisition of
+
+subsidiaries).
+Country of _ EASEMNE
+Name of the subsidiary : Principal activities holding
+Incorporation 2025
+Instashop Ltd BVI Holding company 100%
+InstaShop General United Arab General Trading 100%
+Trading LLC Emirates
+Instashop Portal LLC, United Arab Network websites contents 100%
+Dubai Emirates entering and supplying, and E-
+Commerce through websites
+InstaShop DMCC United Arab Software House, Computer 100%
+Emirates Systems Consultancies, Web
+Design, Internet Content Provider,
+E-Marketplace Service Provider
+(DMCC) and Delivery Service
+InstaShop Supermarket- | United Arab Super Market 100%
+Sole Proprietorship LLC Emirates
+GroCart DMCC United Arab E-Marketplace service provider 100%
+Emirates (DMCC)
+GroCart General Trading United Arab General Trading 100%
+Emirates
+InstaShop Co WLL Bahrain Computer programming activities 100%
+and Operations of e-marketplaces,
+websites, web portals
+InstaShop LLC Egypt E-Commerce, E-Marketing and 100%
+Providing home delivery services
+InstaShop WLL Qatar Providing the professional services 100%
+of information services in relation
+to an e-commerce platform.
+InstaShop WLL Qatar Transferring consumables to 100%
+customers and trading via internet.
+InstaShop Saudi for Kingdom of Delivery services via electronic 100%
+Information Technology Saudi Arabia _ platform, system analyses,
+
+LLC
+
+designing and performing special
+software, establishing the
+infrastructure for hosting websites,
+data processing services and
+related services, registration to
+provide cloud computing services
+and providing marketing services
+on behalf of others.
+
+
+===== PAGE 10 (OCR) =====
+
+Talabat Holding PLC
+
+Notes to the condensed consolidated interim financial statements
+
+1. General information (continued)
+
+Name of the subsidiary County Ds
+Incorporation
+
+InstaShop SPC Oman
+
+InstaShop SARL Lebanon
+
+InstaShop Single Member Greece
+Private Company
+
+Principal activities
+
+Delivery of meals, collection of
+data from one or more sources,
+designing and programming
+software, maintenance of soft
+wares and designing of websites,
+data entry services, retail sale via
+Internet (E-Commerce), create and
+implement databases and web
+pages, cloud and Hosting Services
+and systems analysis
+
+Design, create, own, manage,
+maintain, buy, sell and distribute
+all kinds of applications, computer
+software and websites.
+
+Develop applications, computer
+software and websites and provide
+necessary consultancy, support and
+studies, perform all commercial
+and production operations in
+Lebanon and abroad in compliance
+
+with provisions of D.L n.35 of
+Awonct § 10647
+
+AUG US Vy 1 FUs.
+
+Information technology design and
+development services, food
+delivery services, electronic
+advisory activities, electronic
+systems management services,
+public relations and
+communication services,
+marketing consulting services,
+other advisory services and sale of
+advertising space or time with
+payment or contract
+
+talabat
+
+Effective
+holding
+
+2025
+100%
+
+100%
+
+100%
+
+
+===== PAGE 11 (OCR) =====
+
+tal
+Talabat Holding PLC abat
+
+Notes to the condensed consolidated interim financial statements
+
+2. New standards or amendments
+
+2.1 New and revised IFRSs applied with no material effect on the consolidated interim financial
+statements of the Group.
+
+The following new and revised IFRSs, which became effective for annual periods beginning on or after 1
+January 2024, have been adopted in these consolidated interim financial statements. The application of
+these revised IFRSs has not had any material impact on the amounts reported but may affect the accounting
+for future transactions or arrangements.
+
+Supplier Finance In May 2023, the IASB issued amendments to IAS 7 Statement of Cash Flows
+Arrangements - and JFRS 7 Financial Instruments: Disclosures to clarify the characteristics of
+Amendments toIAS 7 supplier finance arrangements and require additional disclosure of such
+and IFRS 7 arrangements. The disclosure requirements in the amendments are intended to
+
+assist users of financial statements in understanding the effects of supplier
+finance arrangements on an entity’s liabilities, cash flows and exposure to
+liquidity risk. The transition rules clarify that an entity is not required to provide
+the disclosures in any interim periods in the year of initial application of the
+amendments.
+
+Amendments to IFRS In September 2022, the IASB issued amendments to IFRS 16 to specify the
+
+16: Lease Liability in requirements that a seller-lessee uses in measuring the lease liability arising in
+
+a Sale and Leaseback _a sale and leaseback transaction, to ensure the seller-lessee does not recognize
+any amount of the gain or loss that relates to the right of use it retains.
+
+Amendments to IAS In January 2020 and October 2022, the IASB issued amendments to paragraphs
+1: Classification of 69 to 76 of IAS | to specify the requirements for classifying liabilities as current
+Liabilities as Current or non-current. The amendments clarify:
+or Non-current
+* What is meant by a right to defer settlement
+* That a right to defer must exist at the end of the reporting period
+¢ That classification is unaffected by the likelihood that an entity will exercise
+its deferral right
+* That only if an embedded derivative in a convertible liability is itself an
+equity instrument would the terms of a liability not impact its classification
+
+In addition, a requirement has been introduced whereby an entity must disclose
+when a liability arising from a loan agreement is classified as non-current and
+the entity’s right to defer settlement is contingent on compliance with future
+covenants within twelve months.
+
+
+===== PAGE 12 (OCR) =====
+
+tal
+Talabat Holding PLC abat
+
+Notes to the condensed consolidated interim financial statements
+2. New standards or amendments (continued)
+2.2 New and amended IFRSs in issue but not yet effective and not early adopted.
+
+New and revised IFRSs Effective for annual periods beginning on or after
+Amendments to IAS 21— Lack of exchangeability 1 January 2025
+
+Amendments to IFRS 9 and IFRS 7- 1 January 2026
+Classification and Measurement of Financial
+
+Instruments
+
+Annual Improvements to IFRS Accounting 1 January 2026
+
+Standards — Volume 11
+
+IFRS 18 Presentation and Disclosure in Financial 1 January 2027
+Statements
+
+10
+
+
+===== PAGE 13 (OCR) =====
+
+tal
+Talabat Holding PLC abat
+
+Notes to the condensed consolidated interim financial statements
+
+3. Material accounting policy information
+
+3.1 Basis of accounting
+
+These condensed consolidated interim financial statements for the period ended 30 September 2025 have been
+prepared in accordance with International Accounting Standard 34 ‘Interim Financial Reporting’ and should be
+read in conjunction with the Group’s last consolidated interim financial statements as at 31 December 2024.
+These do not include all the information required for a complete set of financial statements prepared in
+accordance with the IFRS Accounting Standards as issued by the International Accounting Standards Board
+(IFRS Accounting Standards). However, selected explanatory notes are included to explain the events and
+transactions that are significant to an understanding of the Group’s financial position and performance since the
+inception on 3 September 2024 till 30 September 2025. The accounting policies applied in these condensed
+consolidated interim financial statements are the same as those were applied in the Group’s consolidated interim
+financial statements as at and for the period ended 31 December 2024.
+
+4. Judgements and use of estimates
+
+In the application of the accounting policies, which are described in Group’s consolidated interim financial
+statements prepared for the period since inception on 3 September 2024 till 31 December 2024, management is
+required to make judgements, estimates and assumptions about the carrying amounts of assets and liabilities that
+are not readily apparent from other sources. The estimates and associated assumptions are based on historical
+experience and other factors that are considered to be relevant. Actual results may differ from these estimates.
+
+The estimates and underlying assumptions are reviewed on an ongoing basis. Revisions to accounting estimates
+are recognised in the period in which the estimate is revised if the revision affects only that period, or in the
+period of the revision and future periods if the revision affects both current and future periods.
+
+Accounting judgements and estimates used in the preparation of these condensed consolidated interim financial
+statements are the same as disclosed in the consolidated interim financial statements prepared for the period
+ended 31 December 2024. Except for, during 2025, the Group conducted an operational efficiency review of
+all of its internally generated intangible assets, which resulted in changes in the expected useful lives of those
+assets. The impact of change in useful lives of intangible assets is not material.
+
+1]
+
+
+===== PAGE 14 (OCR) =====
+
+tal
+Talabat Holding PLC abat
+
+Notes to the condensed consolidated interim financial statements
+
+5. Property and equipment
+
+During the period since inception on 3 September 2024 till 30 September 2025, the Group acquired
+property and equipment at a cost of USD 365,207,260 out of which USD 261,297,651 (net of depreciation
+USD 152,744,359), relates to the acquisition of the subsidiaries under common control (Refer note 27).
+
+6. Intangible assets and goodwill
+
+During the period since inception on 3 September 2024 till 30 September 2025, the Group acquired
+intangible assets with a cost of USD 343,668,485 out of which USD 331,420,004 (net of amortization USD
+
+317,897,842) relates to the acquisition of the subsidiaries under common contro] (Refer note 27).
+
+7. Trade and other receivables
+
+30 September
+
+2025
+
+USD
+
+Trade receivables 57,286,411
+Receivable from riders 16,819,478
+Gross trade receivables 74,105,889
+Less: Allowance for expected credit loss (17,464,858)
+Net trade receivables 56,641,031
+Receivable from payment service providers* 63,489,520
+Prepayments 38,379,045
+Deposits 7,944,914
+Loans to employees 193,113
+Other receivables 36,566,986
+Total 203,214,609
+there of non-current 6,028,623
+there of current 197,185,986
+
+*There is no history of default of these receivables. and hence no expected credit loss provision was
+
+considered.
+
+12
+
+
+===== PAGE 15 (OCR) =====
+
+tal
+Talabat Holding PLC abat
+
+Notes to the condensed consolidated interim financial statements
+
+7. Trade and other receivables (continued)
+Movement in provision for expected credit loss of trade receivables, receivable from riders is as follows:
+
+30 September
+
+2025
+
+USD
+
+Acquisition through business combination (8,473,386)
+
+Charged during the period (10,658,839)
+
+Utilized during the period 1,672,914
+
+Translation differences (5,547)
+
+Balance as at 30 September 2025 (17,464,858)
+8. Inventories
+
+30 September
+
+2025
+
+USD
+
+Trading inventories 64,011,310
+
+Rider equipment 5,651,791
+
+Others 1,175,387
+
+Total 70,838,488
+
+9. Related party transactions and balances
+
+The Group enters into transactions with companies and entities that fall within the definition of a related
+party as contained in IAS 24 Related Party Disclosures. Related parties comprise companies and entities
+under common ownership and/or common control, key management personnel and entities that exercise
+control over the Group. The management decides on the terms and conditions of the transactions and
+services received/rendered from/to related parties as well as on other charges.
+
+Balances included in the condensed consolidated interim statement of financial position as of 30 September
+2025:
+
+Companies
+
+Ultimate Under
+
+Parent Common
+Company Control Total
+30 September 2025 USD USD USD
+Due from related parties (a) 5,110,932 249,808 5,360,740
+Due to related parties (a) 14,942,835 24,031,265 38,974,100
+Loans trom related party (b) 2,059,354 - 2,059,354
+
+(a) Due to and from related parties are priced at a mutually agreed terms and are to be settled in cash within
+12 months of the reporting date. None of these balances are secured. No exposure has been recognised
+in the current period for bad or doubtful debts in respect of amounts owed by related parties.
+
+(b) This represents an interest-bearing loan obtained by InstaShop Single Member Private Company from
+the Ultimate Parent Company. The loan is repayable on maturity in September 2027.
+
+13
+
+
+===== PAGE 16 (OCR) =====
+
+tal
+Talabat Holding PLC abat
+
+Notes to the condensed consolidated interim financial statements
+
+9. Related party transactions and balances (continued)
+
+Transactions included in the condensed consolidated interim statement of profit or loss and other
+comprehensive income for three months period ended 30 September 2025 and for the period since inception
+on 3 September 2024 till 30 September 2025 and as follows:
+
+Companies
+Ultimate Under
+Parent Common Associate
+
+Company Control Company Total
+For the three months period ended 30 September
+2025 USD USD USD USD
+Other income from service allocation (Note 17) 2,350,272 - - 2,350,272
+Shared group cost charges (Note 18) (12,800,324) (25,595,464) - (38,395,788)
+Delivery costs * - - (7,663,884) (7,663,884)
+Other expenses - (869,553) - (869,553)
+
+Companies
+Ultimate Under
+Parent Common Associate
+
+Company Control Company Total
+For the period since inception till 30 September
+2025 USD USD USD USD
+Other income from service allocation (Note 17) 14,777,450 1,720,158 - 16,497,608
+Shared group cost charges (Note 18) (38,326,102) (100,973,104) - (139,299,206)
+Delivery costs * - - (26,806,683) (26,806,683)
+Other expenses - (1,727,190) - (1,727,190)
+
+Transactions with related parties are priced at a mutually agreed terms and are in normal course of
+business.
+
+* Transactions include the logistic services provided by Zone Elite Investment LLC (Associate operating
+in UAE) to group subsidiaries in the UAE amounting USD 26,806,683 for the period since inception till
+30 September 2025. The liability to Zone Elite Investment LLC (associate) amounted to USD 2,560,483
+included in trade payable (Note 12) The Group has significant influence over the associate however, as of
+30 September 2025 management assessed that the investment amounting to USD 4 million in the associate
+was not recoverable and accordingly, was recognised at Nil value.
+
+Compensation of key management personnel
+
+The remuneration of members of key management during the period was as follows:
+For the three For the
+months period since
+period ended inception till
+30 September 30 September
+
+2025 2025
+USD USD
+Short-term benefits 1,398,176 6,260,202
+Share based compensation 1,677,452 6,334,971
+Employees’ end of service benefits 202,825 418,903
+Total 3,278,453 13,014,076
+
+The above shows the compensation received by key management personnel (Executive Management Team
+and Senior Management).
+
+14
+
+
+===== PAGE 17 (OCR) =====
+
+tal
+Talabat Holding PLC
+
+Notes to the condensed consolidated interim financial statements
+
+10. Cash and cash equivalents
+30
+September
+2025
+USD
+Cash at banks 401,045,319
+Cash in hand 2,095,231
+Term deposit* 372,418,455
+Total 775,559,005
+
+The Group’s cash and cash equivalents comprises of cash at banks, cash in hand and term deposit with
+maturity up to 3 months.
+
+*The balance is represented in a term deposit with several banks, the interest rate on term deposit ranges
+from 3.83% to 4.8% annually.
+
+11. Share capital
+
+Number
+ordinary shares USD
+Issued tor cash (refer i below) 100 100
+Issued in business combination (refer ii below) 253,649,900 253,649,900
+At 08 October 2024 before share split (refer iii below) 253,650,000 253,650,000
+Nominal value per share before stock split 1 1
+Shares re-denomination from USD to AED on 9 October 2024
+Ordinary
+shares AED
+Nominal] value per share 1 0.04
+Outstanding at 30 September 2025 after share split
+(refer iii below) 23,288,240,625 931,529,625
+
+i) On incorporation in the Abu Dhabi Global Market (“ADGM™”) on 3 September 2024, the Company issued
+100 ordinary shares with a nominal value of USD 1.00 each, which were fully subscribed by the Parent
+
+Company.
+
+ii) On 26 September 2024, the Company issued 178,040,951 ordinary shares with a nominal value of USD
+1.00 each to the Parent in connection with the transfer of Delivery Hero FZ LLC to the Company. This
+increased the Company’s share capital to USD 178,041,051 consisting of 178,041,051 ordinary shares of
+USD 1.00 each.
+
+Additionally, 75,608,949 ordinary shares with a nominal value of USD 1.00 each were issued to the Parent
+Company in connection with the transfer of certain other subsidiaries to Delivery Hero FZ LLC on 30
+September 2024. Following this issuance, the Company’s share capital increased to USD 253,650,000
+consisting of ordinary shares of USD 1.00 each.
+
+iii) On 9 October 2024, Shares were re-denominated from USD to AED, accordingly the registered share
+capital of the Company was changed to AED 931,529,625 (USD 253,650,000). Furthermore, the nominal
+value of each share was also changed from USD 1 to AED 0.04 and accordingly the Company re-issued
+23,288,240,625 ordinary shares of AED 0.04 each (USD 0.01).
+
+15
+
+
+===== PAGE 18 (OCR) =====
+
+tal
+Talabat Holding PLC abat
+
+Notes to the condensed consolidated interim financial statements
+
+12. Trade and other payables
+
+30 September
+
+2025
+
+USD
+
+Liabilities to restaurants 147,623,488
+Liabilities for outstanding invoices 151,391,851
+Trade payables 181,956,340
+Liabilities to riders 228,861
+Staff related accruals 40,303,897
+Other payables 36,213,684
+Total 557,718,121
+thereof non-current 1,276,127
+thereof current 556,441,994
+
+The Group has financial risk management policies in place to ensure that all payables are paid within the
+credit timeframe.
+
+13. Lease liabilities
+During the period since inception on 3 September 2024 till 30 September 2025, the Group recognised lease
+_ liabilities and right of use assets amounting to USD 168,498,310 out of which USD 94,154,838 relates to
+
+the acquisition of the subsidiaries under common control (Refer Note 27).
+
+During the same period, the Group derecognised lease liabilities amounting to USD 4,585,690 as a result
+of termination of lease contracts prior to the end of the lease term. Lease liabilities are monitored within
+the group treasury function.
+
+14. Employees’ end of service benefits
+During the period since inception on 3 September 2024 till 30 September 2025, the Group recognised
+
+employees’ end of service benefits amounting to USD 28,570,258 out of which USD 19,478,098 relates to
+the acquisition of the subsidiaries under common control (Refer Note 27).
+
+16
+
+
+===== PAGE 19 (OCR) =====
+
+tal
+Talabat Holding PLC
+
+Notes to the condensed consolidated interim financial statements
+
+15. Revenue
+For the three For the
+months period since
+period ended inception till
+30 September 30 September
+2025 2025
+USD USD
+Commission fees 348,182,291 1,288,651,545
+Delivery fees 171,910,739 668,826,423
+Advertising and listing fees 86,197,720 307,271,294
+Service fees 55,464,578 180,774,731
+Subscription fees 21,875,615 59,392,852
+Other direct income 351,106,322 1,221,456,493
+1,034,737,265 3,726,373,338
+
+Less:
+
+- Vouchers (23,634,090) (76,996,514)
+- Other revenue reduction (6,952,542) (29,330,800)
+Total 1,004,150,633 3,620,046,024
+
+Timing of revenue recognition
+For the
+For the three period since
+months period inception till
+
+ended 30 30 September
+
+September 2025 2025
+
+USD USD
+
+Revenue recognised at point in time 896,077,298 3,253,381 ,886
+Revenue recognised over time 108,073,335 366,664,138
+
+1,004,150,633 3,620,046,024
+
+The following table provides information about receivables and payables from contracts with customers.
+
+2025
+USD
+Receivables included in “trade receivables” (Note 7) 74,105,889
+Payables to restaurants included in “trade and other
+payables “(Note 12) 147,623,488
+16. Cost of sales
+For the three
+
+months __ For the period
+period ended _ since inception
+30 September till 30
+2025 September 2025
+
+Delivery expenses (393,178,537) (1,413,046,905)
+Order processing cost (52,959,986) (179,106,755)
+Other direct cost * (265,968,523) (910,634,207)
+Total (712,107,046) (2,502,787,867)
+
+* Other direct costs include costs of groceries, payment service providers, other overheads and salaries and
+other benefits of staff that are directly related to the generation of revenue.
+
+17
+
+
+===== PAGE 20 (OCR) =====
+
+talabat
+
+Talabat Holding PLC
+Notes to the condensed consolidated interim financial statements
+17. Other income
+For the three For the
+months _ period since
+period ended inception till
+30 September 30 September
+2025 2025
+USD USD
+Other income from service allocation (Note 9) 2,350,272 16,497,608
+Other income 739,186 1,697,060
+Gains on disposal of property and equipment 683,356 1,161,355
+Total 3,772,814 19,356,023
+18. Other expenses
+For the three For the
+
+months period since
+period ended inception till
+30 September 30 September
+
+2025 2025
+USD USD
+Shared group cost (a) (38,395,788) (139,299,206)
+Other expenses (884,817) (5,233,747)
+Total (39,280,605) (144,532,953)
+
+(a) Shared group cost mainly represents charges in relation to the use of global services, as disclosed in
+note 9.
+
+19. Income tax expense, net
+
+Income tax recognised in profit or loss:
+
+For the three For the
+
+months _ period since
+period ended inception till
+30 September 30 September
+
+2025 2025
+USD USD
+Current tax
+Current tax expense for the current period (13,253,510) (71,475,105)
+Deferred tax
+Recognition / Reversal of previously unrecognized
+deductible temporary differences (3,619,674) 9,348,059
+Recognition of previously unrecognized tax losses - 2,724,930
+Total deferred tax credit recognised (3,619,674) 12,072,989
+Total income tax expense during the period (16,873,184) (59,402,116)
+
+18
+
+
+===== PAGE 21 (OCR) =====
+
+tal
+Talabat Holding PLC abat
+
+Notes to the condensed consolidated interim financial statements
+
+19. Income tax expense, net (continued)
+
+Reconciliation of effective tax rate:
+For the three For the
+months __ period since
+period ended _ inception till
+30 September 30 September
+
+2025 2025
+USD USD
+Profit before tax (A) 137,737,318 542,789,091
+Tax at the Company’s domestic rate of 15% / 9% (20,660,598) (73,465,201)
+Effect of tax rates in foreign jurisdictions and domestic
+minimum top-up tax impact 9,904,024 11,335,202
+Withholding taxes (2,496,936) (9,345,106)
+Deferred income taxes (3,619,674) 12,072,989
+Total tax expense (B) (16,873,184) (59,402,116)
+Effective tax rate (B/A) 12.25% 10.94%
+Amount recognised in other comprehensive income:
+Items that will be subsequently reclassified to profit or
+loss:
+Deferred / current tax income on net investment in
+foreign operations (1,250,952) 871,907
+
+The Group has recorded deferred tax asset amounting of USD 11,217,972 for the period ended 30
+September 2025, primarily arising from unrealized foreign exchange losses. These losses are expected to
+be realized in the foreseeable future. Out of the total deferred tax asset, USD 2,122,859 is recognised in
+the relation exchange loss on net investment in foreign operations. The related exchange loss on net
+investment in foreign operations is recorded in other comprehensive income.
+
+The Group has determined that the Domestic Minimum Top-up Tax (DMTT), effective from January 1,
+2025, in various jurisdictions, qualifies as an income tax within the scope of IAS 12.
+
+The Company’s applicable domestic tax rate from incorporation on 3 September 2024 to 31 December
+2024 was 9%. Effective January 1, 2025, the domestic tax rate increased to 15% following the
+implementation of DMTT in the UAE. Additionally, during 2025, the Group recognized, for the first time,
+a current tax expense related to DMTT in several jurisdictions where the relevant legislation has also been
+introduced, including Kuwait, Qatar, Bahrain, and the UAE, with Tax rates increasing to 15%.
+
+20. Earnings per share
+The calculation of basic and diluted earnings per share depends on the following information
+
+For the For the
+
+three months period since
+period ended 30 inception till 30
+September 2025 September 2025
+
+USD USD
+Net profit for the period 120,864,134 483,386,975
+Weighted average number of shares outstanding at the
+end of the period * 23,288,240,625  21,925,316,138
+Basic and diluted earning per share (cent/share) 0.52 2.20
+
+* Weighted average number of shares have been adjusted for shares split (refer note 11).
+
+19
+
+
+===== PAGE 22 (OCR) =====
+
+tal
+Talabat Holding PLC abat
+
+Notes to the condensed consolidated interim financial statements
+
+21. Contingent liabilities and guarantees
+
+As at 30 September 2025, the outstanding bank guarantees issued on behalf of the certain Group entities
+amounted to USD 8,961,489.
+
+22. Share-based payments
+
+The Ultimate Parent Company has been operating share-based payment programs since 2011. As at 30
+September 2025, the Group is participating in the share-based payment arrangements managed by the
+Ultimate Parent Company. The Group has recorded an expense with a corresponding credit to equity of
+USD 23,443,078 for the period since inception till 30 September 2025 and USD 5,809,004 for the three
+months period ended 30 September 2025.
+
+23. Dividend
+
+On 26 March 2025, the Board of Directors proposed and paid an interim cash dividend of USD 110,020,688
+(USD 0.005 per share) in respect of the financial results for the fourth quarter of 2024, which was approved
+by the shareholders at their annual general assembly meeting held on 29 April 2025.
+
+Further, on 22 September 2025, the Board of Directors proposed an additional interim cash dividend of
+USD 202,159,050 (USD 0.009 per share) in respect of the financial results for the six months period ended
+on 30 June 2025. The dividend was subsequently paid after the period end.
+
+24. Operating segment
+
+Operating segments are disclosed on the basis of internal reports reviewed by the Executive Management,
+who are the Chief Operating Decision Maker (CODM), and responsible for resource allocation,
+
+performance evaluation, and strategic decision making on operational segments.
+
+Operating segments with similar geographical characteristics, economic characteristics, products, services,
+and similar customer categories are required to be aggregated and recorded where possible as units to be
+reported. The Executive Management reviews the internal management reports of each segment at least
+monthly.
+
+a) Basis for segmentation
+
+The Group has identified a Country as a segment. This segment is derived based on their geographical
+location or region which is the key consideration by CODM for evaluating performance, making strategic
+decisions and allocating resources.
+
+The following table describes, in more detail, about the segment and the countries included therein:
+
+Reportable Details
+
+Segment
+
+Gulf Cooperation The GCC segment comprises countries where the Group currently operates its
+
+Council (“GCC”) business and offers its products and services, including Kuwait, the United Arab
+
+region Emirates, Oman, Qatar, and Bahrain. Management has assessed that aggregating the
+disclosure of information for the GCC segment enables users of the Group's interim
+financial statements to evaluate the nature and financial effects of its business
+activities within this region. The operations in these countries share similar economic
+characteristics, including market conditions, consumer behavior, and business
+practices. Based on this assessment, management has concluded that these countries
+qualify for aggregation into a single reportable segment.
+
+20
+
+
+===== PAGE 23 (OCR) =====
+
+Talabat Holding PLC
+
+Notes to the condensed consolidated interim financial statements
+
+24. Operating segment (continued)
+
+a) Basis for segmentation (continued)
+
+Reportable segment and other segments generate revenue mainly from online marketplace services,
+separately charged delivery fees, orders placed in the Group’s delivery-only stores and advertising services,
+
+as well as subscription fees, service fees and, in certain cases, separately charged payment fees.
+
+(b) Segment financial information and reconciliation of segment information
+
+The revenue with external customers reported to the CODM generally equals the measurement of the
+revenue recognised in the consolidated interim statement of profit and loss and other comprehensive income
+
+with the following exceptions:
+
+i) inter-segment elimination — these mainly include inter-segment recharge for logistic and other services.
+
+The intersegment revenue is eliminated to derive the total segment revenue.
+
+Financial results of the segments are presented below:
+
+GCC Other segments Total
+For the three months period ended 30 September 2025 USD USD USD
+External revenue (reported to CODM) 829,636,897 205,967,229  1,035,604,126
+Inter segment elimination (432,246) (434,615) (866,861)
+Profit before income taxes 120,770,762 16,966,556 137,737,318
+For the period since inception till 30 September 2025
+Extemal revenue (reported to CODM) 3,059,125,633 671,066,100  3,730,191,733
+Inter segment elimination (1,734,682) (2,083,713) (3,818,395)
+Profit before income taxes 526,768,773 16,020,318 542,789,091
+Segment Assets and Liabilities:
+Assets Liabilities
+USD USD
+30 September 2025
+GCC 1,502,810,477 863,149,234
+Other segments 254,199,188 318,638,164
+Inter segment elimination (166,470,618) (166,470,618)
+
+Total
+
+1,590,539,047
+
+1,015,316,780
+
+25. Fair value measurement
+
+Financial instruments comprise of financial assets and financial liabilities. Financial assets consist of cash
+and bank balances, amounts due from related parties and trade and other receivables. Financial liabilities
+
+consist of trade payables and other payable and amounts due to related parties.
+
+The fair value of the financial assets and liabilities are included at the amount at which the instrument could
+be exchanged in a current transaction between willing parties, other than in a forced or liquidation sale.
+
+21
+
+
+===== PAGE 24 (OCR) =====
+
+tal
+Talabat Holding PLC abat
+
+Notes to the condensed consolidated interim financial statements
+
+25. Fair value measurement (continued)
+
+Fair value measurement of a non-financial asset takes into account a market participant's ability to generate
+economic benefits by using the asset in its highest and best use or by selling it to another market participant
+that would use the asset in its highest and best use. .
+
+Fair value is the price that would be received to sell an asset or paid to transfer a liability in an orderly
+transaction between market participants at the measurement date. The fair value measurement is based on
+the presumption that the transaction to sell the asset or transfer the liability takes place either:
+
+- Inthe principal market for the asset or liability; or
+- Inthe absence of a principal market, in the most advantageous market for the asset or liability.
+
+The principal or the most advantageous market must be accessible to the Group.
+
+The fair value of an asset or a liability is measured using the assumptions that market participants would
+use when pricing the asset or liability, assuming that market participants act in their economic best interest.
+
+A fair value measurement of a financial asset takes into account a market participant's ability to generate
+economic benefits by using the asset in its highest and best use or by selling it to another market participant
+that would use the asset in its highest and best use.
+
+The Group uses valuation techniques that are appropriate in the circumstances and for which sufficient data
+are available to measure fair value, maximising the use of relevant observable inputs and minimising the
+use of unobservable inputs.
+
+The management considers that the carrying amounts of financial assets and financial liabilities recognised
+at amortised cost in the consolidated financial statements approximate their fair values.
+
+26. Capital risk management
+
+The Group manages its capital to ensure that it will be able to continue as a going concern while maximising
+the return to Shareholder through the optimisation of the debt and equity balance. The capital structure of
+the Group consists of equity attributable to the shareholder, comprising issued capital, reserves, and
+retained earnings.
+
+27. Acquisition of subsidiaries under common control
+Business combination common control transactions
+
+A business combination involving entities or businesses under common control is a business combination
+in which all the combining entities or businesses are ultimately controlled by the same Ultimate Controlling
+Party both before and after the combination.
+
+The Group follows book value (carry-over basis) accounting prospectively on the basis that the investment
+has simply been moved from one part of the group to another. As per the book value accounting, the Group
+recognizes assets and liabilities at their book values at the acquisition date. The difference between book
+values of assets acquired and liabilities assumed, and the consideration paid is reflected in retained earnings
+within the statement of changes in equity.
+
+As part of a broader restructuring plan initiated by the Ultimate Parent Company, several transactions
+
+among entities under common control were executed to consolidate the Ultimate Parent Company’s
+business in the MENA region ahead of the Initial Public Offering (“IPO”).
+
+22
+
+
+===== PAGE 25 (OCR) =====
+
+talabat
+
+Talabat Holding PLC
+
+Notes to the condensed consolidated interim financial statements
+27. Acquisition of subsidiaries under common control (continued)
+
+Business combination common control transactions (continued)
+
+On 24 September 2024, the Ultimate Parent Company transferred its shareholding and control in Delivery
+Hero FZ LLC (‘DH FZ’) and its subsidiaries to the Company. In consideration for this transfer, the
+Company issued 178,040,951 ordinary shares to the Parent Company (refer to Note 11 — Share Capital for
+details).
+
+On 30 September 2024, Delivery Hero FZ LLC obtained control of the following entities and their
+respective subsidiaries as part of a common control transaction. To facilitate this transfer, the Company
+issued an additional 75,608,949 ordinary shares to the Parent Company. This also included the settlement
+of certain intra-group liabilities towards the Ultimate Parent. (refer to Note 11 — Share Capital for details).
+
+Foodonclick.com FZ-LLC;
+
+Talabat for Delivery Services LLC;
+
+Delivery Hero Egypt SAE;
+
+Dark Stores MENA Holding Ltd;
+
+Delivery Hero Kitchens MENA Holding Ltd;
+DH Kitchens LLC; and
+
+Delivery Hero Payments MENA FZ-LLC.
+
+These transactions were executed to realign the Group’s corporate structure in preparation for the IPO, in
+line with the Ultimate Parent Company’s objective of offering 20% of its shareholding in the Company
+through the IPO.
+
+The acquisition of the aforementioned companies was strategically executed to streamline and centralize
+both operational and financial management. By restructuring under the full control of the Company,
+Group’s goal was to list the shares of the Company on the DFM. These companies were already under
+common control, with Delivery Hero SE as the Ultimate Parent.
+
+On 25 February 2025, Talabat Holding PLC acquired 100% of Instashop Ltd’s (Instashop) share capital
+from Delivery Hero SE (the Ultimate Parent Company), under a common control transaction. With this
+acquisition, Instashop becomes a wholly-owned subsidiary of The Company.
+
+Total consideration for the acquisition transaction was USD 31,928,889, reflecting the capital amount of
+Insta Shop Ltd, including the subscribed capital and capital reserves. The consideration was paid in cash.
+
+23
+
+
+===== PAGE 26 (OCR) =====
+
+Talabat Holding PLC
+
+Notes to the condensed consolidated interim financial statements
+
+27. Acquisition of subsidiaries under common control (continued)
+
+Business combination common control transactions (continued)
+
+talabat
+
+The following table summarises the book values of assets acquired and liabilities assumed at the date of
+
+acquisition:
+Delivery Hero Instashop
+FZ LLC * Ltd’s Total
+USD USD USD
+Property and equipment (Note 5) 148,423,687 4,320,672 152,744,359
+Intangible assets (Note 6) 317,823,453 74,389 317,897,842
+Trade and other receivables 126,734,495 35,337,439 162,071,934
+Inventories 38,920,567 892,429 39,812,996
+Due from related parties 960,878 - 960,878
+Cash and cash equivalents** 316,150,394 21,690,387 337,840,781
+Loans from related parties (1,587,389) (6,616,994) (8,204,383)
+Due to related parties (33,020,765) (98,571) (33,119,336)
+Trade and other payables (388,376,407) (33,155,570) (421,531,977)
+Lease liabilities (Note 13) (92,490,561) (1,664,277) (94,154,838)
+Employees' end of service benefits (Note 14) (17,786,656) (1,691,442) (19,478,098)
+Income tax liabilities (19,881,395) (895,020) (20,776,415)
+Total identifiable net assets acquired 395,870,301 18,193,442 414,063,743
+Less: Issuance of share capital (Note 11) *** (253,649,900) - (253,649,900)
+Less: Consideration paid** - (31,928,889) (31,928,889)
+Net impact on acquisition of entities under common
+control taken to retained earnings within equity 142,220,401 (13,735,447) 128,484,954
+
+* This includes the book value of net assets of DH FZ on 24 September 2024, and the net assets of the
+subsidiaries acquired by DH FZ on 30 September 2024.
+
+** The net cash acquired from the acquisition of subsidiaries under common control (Delivery Hero FZ
+LLC and Instashop Ltd) amounting to USD 305,911,892 represents cash and cash equivalents received
+amounting to USD 337,840,781 less the cash paid for the acquisition of Instashop Ltd’s amounting to USD
+31,928,889.
+
+*** The Company issued share capital to the parent company as a consideration for the acquisition of
+Delivery Hero FZ LLC subsidiaries.
+
+The acquisition of the aforementioned entities is considered as a business combination under common
+control, which does not fall under IFRS 3 - Business Combination. Accordingly, the acquisition of the
+aforementioned entities was accounted for prospectively at the book values of the acquiree as at the
+acquisition date.
+
+24

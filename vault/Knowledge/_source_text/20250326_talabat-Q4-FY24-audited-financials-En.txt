@@ -1,0 +1,5563 @@
+SOURCE FILE: 20250326_talabat-Q4-FY24-audited-financials-En.pdf
+CATEGORY: 02_Quarterly_Financial_Statements
+PAGE COUNT: 64
+PDF METADATA: {"format": "PDF 1.7", "title": "Annex 1 (1_2) Talabat Holding PLC _ Dec. 2024 Final English", "author": "Abdullah Alghrawi", "subject": "", "keywords": "", "creator": "Preview", "producer": "macOS Version 15.3.2 (Build 24D81) Quartz PDFContext", "creationDate": "D:20250326113402Z", "modDate": "D:20250326155910+04'00'", "trapped": "", "encryption": null}
+
+
+===== PAGE 1 =====
+
+ 
+ 
+ 
+ 
+ 
+Talabat Holding PLC 
+ 
+Consolidated interim financial statements 
+For the period since inception on 3 September 2024 till 31 December 2024 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Principal business address: 
+Unit no. 2341, 23rd Floor, Sky Tower, Shams Abu Dhabi, 
+Abu Dhabi, Al Reem Island 
+United Arab Emirates
+
+
+===== PAGE 2 =====
+
+ 
+ 
+Talabat Holding PLC 
+ 
+Consolidated interim financial statements  
+For the period since inception on 3 September 2024 till 31 December 2024 
+ 
+ 
+ 
+Content 
+Pages 
+ 
+Directors’ report 
+1 - 2 
+Independent Auditors’ report 
+3 - 6 
+Consolidated interim statement of financial position 
+7 
+Consolidated interim statement of profit or loss and other comprehensive income 
+8 
+Consolidated interim statement of changes in equity 
+9 
+Consolidated interim statement of cash flows 
+10 
+Notes to the consolidated interim financial statements 
+11 - 62
+
+
+===== PAGE 3 =====
+
+ 
+1 
+ 
+ 
+ 
+Talabat Holding PLC 
+ 
+Director’s Report 
+ 
+ 
+ 
+The Board of Directors of Talabat Holding PLC (the “Company”) presents  the consolidated interim 
+statement of financial position of the Company and its Subsidiaries (the “Group”) as at 31 December 
+2024 and the related consolidated interim statement of profit or loss and other comprehensive 
+income, consolidated interim statement of changes in equity and consolidated interim statement of 
+cash flows for the period since inception on 3 September 2024 till 31 December 2024. 
+ 
+Principal activities 
+ 
+ 
+The Group’s principal activities  during the period ended 31 December 2024 were  providing an 
+online platform for ordering food, grocery, and retail, along with delivery services to end customers 
+and ad-tech solutions to partners. 
+ 
+Financial Highlights and Performance 
+ 
+The fiscal year 2024 represented a significant milestone for the Company. On a proforma basis, the 
+Group achieved a 23% increase in Gross Merchandise Value (GMV) compared to the preceding year, 
+reaching a record high of USD 7.4 billion in accordance with established guidance. Revenue 
+increased by 32%, thereby surpassing the upper limit of guidance, to reach USD 3.0 billion. Adjusted 
+EBITDA increased by 55%, attaining nearly USD 500 million – equivalent to 6.7% of GMV – which 
+also exceeded guidance. Net income rose by 64% to USD 346 million (representing 4.7% of GMV), 
+consistent with expectations.
+-
+alike
+ 
+facilitate a
+ 
+to
+ 
+items
+ 
+recurring
+-
+non
+ 
+material
+ 
+for
+  
+When adjusted for
+ 
+USD 393 million or 5.3% of GMV.
+ 
+increased by 53% to
+  
+income
+ -
+net
+ 
+like comparison,
+-
+or
+f
+ 
+ 
+Financial Results 
+ 
+The Group reported a revenue of USD 801 million for the period since inception on 3 September 
+2024 till 31 December 2024. The Group’s profit for the same period was USD 138 million. 
+ 
+Dividend 
+ 
+The Board of Directors has proposed a cash dividend amounting to approximately USD 110 million 
+in respect of the financial results of the fourth quarter of 2024, which is subject to the approval of the 
+shareholders at the forthcoming Annual General Meeting. 
+ 
+Outlook and Strategy for 2025 
+ 
+The Group anticipates the continuation of its robust growth trajectory into 2025. The 2025 growth 
+expectations and margin expansion targets, as outlined in the financial guidance provided during the 
+initial public offering (IPO), are hereby reaffirmed. 
+ 
+ 
+ 
+
+
+===== PAGE 4 =====
+
+ 
+2 
+ 
+ 
+ 
+ 
+Transactions with Related Parties 
+ 
+Related party transactions and balances are fully disclosed in Note 9 of the consolidated interim 
+financial statements. All such transactions are conducted in the ordinary course of business of the 
+Company and in accordance with all applicable laws and regulations. 
+ 
+Auditors 
+ 
+KPMG Lower Gulf Limited (“KPMG”) served as external auditors for the Group for the financial 
+year ended 31 December 2024. KPMG has indicated its willingness to continue in this capacity for 
+the fiscal year 2025. A recommendation for the reappointment of KPMG for the subsequent financial 
+year will be submitted for shareholder approval at the forthcoming Annual General Meeting. 
+ 
+Statement of Disclosure to Auditors 
+ 
+The Directors Talabat Holding PLC hereby certify that, to the best of their knowledge, there exists 
+no material audit information of which  the Group's auditor is unaware.  The Directors further 
+confirm that all necessary measures have been taken as Directors to ascertain the completeness of all 
+relevant audit information provided to the Group's auditor. 
+ 
+Directors 
+ 
+Name 
+Position 
+Mr. Pieter-Jan Vandepitte 
+Chairperson 
+Mr. Andreas Krause 
+Vice Chairperson 
+Mr. Tomaso Rodriguez 
+Executive Director 
+Ms. Marie-Anne Popp 
+Non-Executive Director 
+Mr. Abdullah Alharoun 
+Independent, Non-Executive 
+Mr. Muhammad Hussain Ghati Al Jbori 
+Independent, Non-Executive 
+ 
+ 
+ 
+On behalf of the Board 
+ 
+ 
+Pieter-Jan Vandepitte 
+Chairperson 
+Dubai, UAE 
+26 March 2025 
+
+
+===== PAGE 5 =====
+
+KPMG Lower Gulf Limited 
+Office No 15-111, 15th Floor 
+Al Khatem Tower 
+Abu Dhabi Global Market Square, Al Maryah Island 
+Abu Dhabi, United Arab Emirates 
+Tel. +971 (2) 401 4800, www.kpmg.com/ae 
+© 2025 KPMG Lower Gulf Limited, licensed in the United Arab Emirates and a member firm of the KPMG global organization of independent member firms affiliated with KPMG International 
+Limited, a private English company limited by guarantee. All rights reserved. KPMG Lower Gulf Limited is registered and licensed under the rules and regulations of Abu Dhabi Global Markets. 
+3 
+To the Shareholders of Talabat Holding PLC  
+Opinion 
+ 
+as at 31 December 2024, the consolidated interim statements of profit or loss and other comprehensive 
+income, changes in equity and cash flows for the 120 days period then ended, and notes, comprising 
+material accounting policies and other explanatory information. 
+In our opinion, the accompanying consolidated interim financial statements present fairly, in all material 
+respects, the consolidated interim financial position of the Group as at 31 December 2024, and its 
+consolidated interim financial performance and its consolidated interim cash flows for the 120 days period 
+then ended in accordance with IFRS Accounting Standards as issued by the International Accounting 
+Basis for Opinion 
+We conducted our audit in accordance with International Standards on Auditing (ISAs). Our responsibilities 
+under those standards are further described in the 
+Consolidated Interim Financial Statements section of our report. We are independent of the Group in 
+Professional Accountants (including International Independence Standards) (IESBA Code) together with 
+the ethical requirements that are relevant to our audit of the consolidated interim financial statements in 
+accordance with these requirements and the IESBA Code. We believe that the audit evidence we have 
+obtained is sufficient and appropriate to provide a basis for our opinion. 
+Emphasis of Matter 
+We draw attention to Note 3.2 (a) in the consolidated interim financial statements, which describes that 
+these consolidated interim financial statements are also considered as initial accounts pursuant to the 
+requirements of Section 766 of Abu Dhabi Global Market (ADGM) Companies Regulations 2020 (as 
+amended). Our opinion is not modified in respect of this matter. 
+Key Audit Matters 
+Key audit matters are those matters that, in our professional judgment, were of most significance in our 
+audit of the consolidated interim financial statements of the current period. These matters were addressed 
+in the context of our audit of the consolidated interim financial statements as a whole, and in forming our 
+opinion thereon, and we do not provide a separate opinion on these matters. 
+
+
+===== PAGE 6 =====
+
+ 
+Talabat Holding PLC 
+31 December 2024 
+© 2025 KPMG Lower Gulf Limited, licensed in the United Arab Emirates and a member firm of the KPMG global organization of independent member firms affiliated with KPMG International 
+Limited, a private English company limited by guarantee. All rights reserved. KPMG Lower Gulf Limited is registered and licensed under the rules and regulations of Abu Dhabi Global Markets. 
+4 
+Key Audit Matters (continued) 
+ 
+Revenue  
+See Note 15 to the consolidated interim financial statements. 
+The key audit matter 
+How the matter was addressed in our audit 
+consolidated interim financial performance, 
+primarily earned through online marketplace 
+services, separately charged delivery fees, orders 
+The revenue recognition process is highly 
+automated, relying on IT systems to record and 
+process a high volume of daily transactions. 
+performance indicators and also represents a key 
+decision-making metric. In this respect, both 
+internal and external decisions are affected by 
+revenue growth.  
+Given the significance of revenue to the 
+consolidated interim financial statements and the 
+nature of the business, we identified the following 
+specific risks that, individually or in combination, 
+could lead to a material misstatement of revenue, 
+and therefore required significant auditor 
+attention: 
+ 
+A risk related to revenue earned from new 
+restaurants contracts entered into during the 
+period, specifically from potentially non-
+existent restaurants given the manual 
+intervention during new restaurant 
+onboarding and potential incentive to 
+overstate revenue. 
+ 
+A risk of revenue recognition that is not in 
+accordance with the Group's accounting 
+policies and IFRS 15 through journal entries 
+being posted directly into the revenue 
+accounts with no corresponding transactions 
+in the online marketplace platform, bypassing 
+normal system controls. This could result in 
+an overstatement of reported revenue. 
+ 
+To address this risk, we performed the following 
+procedures amongst others: 
+revenue process, including relevant IT 
+applications and controls designed to mitigate the 
+identified risks. 
+ 
+We assessed the design and implementation of 
+controls related to restaurants onboarding and 
+those preventing unauthorized journal entries. 
+ 
+We performed risk assessment procedures 
+including inquiries from management and 
+revenue trend analysis. 
+ 
+We tested the existence of revenue earned for a 
+sample of new restaurants by examining relevant 
+underlying documentation.  
+ 
+We performed test of detail procedures and data 
+analytics routines to test collections from online 
+market place services, delivery fees and from 
+delivery only stores. We also performed 
+substantive analytical procedures on the different 
+components of online marketplace revenue. 
+ 
+Performed test of details procedures for a sample 
+of advertising, subscriptions and other fees 
+earned from restaurants by examining the 
+supporting documentation. 
+ 
+We performed a reconciliation of the revenue 
+accounts per the general ledger to the 
+aggregated transactions processed through the 
+online marketplace platform. We examined any 
+reconciling items, on a sample basis, by 
+examining their underlying documentation to 
+determine whether they represented valid 
+revenue transactions and were recorded in 
+accordance with the Group's accounting policies 
+and IFRS 15. 
+ 
+We identified unusual journal entries related to 
+revenue and tested all such journal entries to the 
+underlying documentation. 
+ 
+We assessed the adequacy of disclosures in the 
+consolidated interim financial statements in 
+accordance with the applicable financial reporting 
+framework. 
+ 
+ 
+
+
+===== PAGE 7 =====
+
+ 
+Talabat Holding PLC 
+31 December 2024 
+© 2025 KPMG Lower Gulf Limited, licensed in the United Arab Emirates and a member firm of the KPMG global organization of independent member firms affiliated with KPMG International 
+Limited, a private English company limited by guarantee. All rights reserved. KPMG Lower Gulf Limited is registered and licensed under the rules and regulations of Abu Dhabi Global Markets. 
+5 
+ 
+ 
+Other Information 
+Management is responsible for the other information. The other information comprises the information 
+included in the annual report, but does not include the consolidated interim financial statements and our 
+expect to obtain the remaining sections of the Annual Report after that date. 
+Our opinion on the consolidated interim financial statements does not cover the other information and we 
+do not and will not express any form of assurance conclusion thereon.  
+In connection with our audit of the consolidated interim financial statements, our responsibility is to read 
+the other information identified above and, in doing so, consider whether the other information is materially 
+inconsistent with the consolidated interim financial statements or our knowledge obtained in the audit, or 
+otherwise appears to be materially misstated.  
+If, based on the work we have performed on the other information that we have obtained prior to the date 
+required to report that fact. We have nothing to report in this regard. 
+Responsibilities of Management and Those Charged with Governance for the Consolidated 
+Interim Financial Statements 
+Management is responsible for the preparation and fair presentation of the consolidated interim financial 
+statements in accordance with IFRS Accounting Standards and for such internal control as management 
+determines is necessary to enable the preparation of consolidated interim financial statements that are free 
+from material misstatement, whether due to fraud or error. 
+In preparing the consolidated interim financial statements, management is responsible for assessing the 
+and using the going concern basis of accounting unless management either intends to liquidate the Group 
+or to cease operations, or has no realistic alternative but to do so. 
+ 
+Our objectives are to obtain reasonable assurance about whether the consolidated interim financial 
+statements as a whole are free from material misstatement, whether due to fraud or error, and to issue an 
+guarantee that an audit conducted in accordance with ISAs will always detect a material misstatement 
+when it exists. Misstatements can arise from fraud or error and are considered material if, individually or in 
+the aggregate, they could reasonably be expected to influence the economic decisions of users taken on 
+the basis of these consolidated interim financial statements. 
+As part of an audit in accordance with ISAs, we exercise professional judgment and maintain professional 
+skepticism throughout the audit. We also: 
+ 
+Identify and assess the risks of material misstatement of the consolidated interim financial 
+statements, whether due to fraud or error, design and perform audit procedures responsive to those 
+risks, and obtain audit evidence that is sufficient and appropriate to provide a basis for our opinion. 
+The risk of not detecting a material misstatement resulting from fraud is higher than for one resulting 
+from error, as fraud may involve collusion, forgery, intentional omissions, misrepresentations, or the 
+override of internal control. 
+Obtain an understanding of internal control relevant to the audit in order to design audit procedures 
+that are appropriate in the circumstances, but not for the purpose of expressing an opinion on the 
+ 
+ 
+
+
+===== PAGE 8 =====
+
+Talabat Holding PLC 
+31 December 2024 
+© 2025 KPMG Lower Gulf Limited, licensed in the United Arab Emirates and a member firm of the KPMG global organization of independent member firms affiliated with KPMG International 
+Limited, a private English company limited by guarantee. All rights reserved. KPMG Lower Gulf Limited is registered and licensed under the rules and regulations of Abu Dhabi Global Markets. 
+6 
+(continued) 
+Evaluate the appropriateness of accounting policies used and the reasonableness of accounting
+estimates and related disclosures made by management. 
+and, based on the audit evidence obtained, whether a material uncertainty exists related to events 
+report to the related disclosures in the consolidated interim financial statements or, if such 
+disclosures are inadequate, to modify our opinion. Our conclusions are based on the audit evidence 
+Group to cease to continue as a going concern. 
+Evaluate the overall presentation, structure and content of the consolidated interim financial
+statements, including the disclosures, and whether the consolidated interim financial statements 
+represent the underlying transactions and events in a manner that achieves fair presentation. 
+Plan and perform the Group audit to obtain sufficient appropriate audit evidence regarding the
+financial information of the entities or business units within the Group as a basis for forming an 
+and review of the audit work performed for purposes of the Group audit. We remain solely 
+responsible for our audit opinion.  
+We communicate with those charged with governance regarding, among other matters, the planned scope 
+and timing of the audit and significant audit findings, including any significant deficiencies in internal 
+control that we identify during our audit. 
+We also provide those charged with governance with a statement that we have complied with relevant 
+ethical requirements regarding independence, and communicate with them all relationships and other 
+matters that may reasonably be thought to bear on our independence, and where applicable, actions taken 
+to eliminate threats or safeguards applied.  
+From the matters communicated with those charged with governance, we determine those matters that 
+were of most significance in the audit of the consolidated interim financial statements of the current period 
+regulation precludes public disclosure about the matter or when, in extremely rare circumstances, we 
+determine that a matter should not be communicated in our report because the adverse consequences of 
+doing so would reasonably be expected to outweigh the public interest benefits of such communication. 
+KPMG Lower Gulf Limited
+Anurag Bajpai 
+Abu Dhabi, United Arab Emirates 
+Date
+
+
+===== PAGE 9 =====
+
+Talabat Holding PLC 
+7 
+Consolidated interim statement of financial position 
+As at 31 December 2024 
+2024 
+2023 
+Notes 
+USD 
+USD 
+ASSETS 
+Non-current assets 
+Property and equipment 
+5 
+154,641,711 
+Intangible assets and goodwill 
+6 
+318,357,202 
+Deferred tax assets 
+23 
+12,003,159 
+Trade and other receivables 
+7 
+6,090,950 
+Total non-current assets 
+491,093,022 
+Current assets 
+Inventories 
+8 
+42,632,018 
+Trade and other receivables 
+7 
+133,082,169 
+Due from related parties 
+9 
+21,422,453 
+Cash and cash equivalents 
+10 
+418,637,477 
+Total current assets 
+615,774,117 
+Total assets 
+1,106,867,139 
+EQUITY AND LIABILITIES 
+Equity 
+Share capital 
+11 
+253,650,000 
+Foreign currency translation reserve 
+(1,183,208) 
+Retained earnings 
+285,932,222 
+Total equity 
+538,399,014 
+Non-current liabilities 
+Trade and other payables 
+12 
+966,622 
+Lease liabilities 
+13 
+76,131,392 
+Employees’ end of service benefits 
+14 
+18,929,582 
+Total non-current liabilities 
+96,027,596 
+Current liabilities 
+Due to related parties 
+9 
+36,510,621 
+Trade and other payables 
+12 
+390,037,452 
+Lease liabilities 
+13 
+20,398,148 
+Income tax liabilities 
+25,494,308 
+Total current liabilities 
+472,440,529 
+Total liabilities 
+568,468,125 
+Total equity and liabilities 
+1,106,867,139 
+To the best of our knowledge, the consolidated interim financial statements present fairly, in all material respects, 
+the financial position, results of operation and cash flows of the group as at and for the period ended 31 December 
+2024. 
+These consolidated interim financial statements were authorised and approved for issue by the Board of Directors 
+on 26 March 2025 and signed on their behalf by: 
+____________________________
+____________________________ 
+  The notes on pages 11 to 62 are an integral part of these consolidated financial statements.
+The independent auditors’ report is set out on pages 3 to 6.
+Chief Financial Officer
+Chairperson
+
+
+===== PAGE 10 =====
+
+Talabat Holding PLC 
+8 
+ 
+ 
+Consolidated interim statement of profit or loss and other comprehensive 
+income 
+For the period since inception on 3 September 2024 till 31 December 2024 
+ 
+ 
+ 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+ 
+Notes 
+ 
+ 
+ 
+ 
+ 
+ 
+Revenue 
+15 
+801,268,830  
+Cost of sales 
+16 
+(546,241,012)  
+Gross profit 
+ 
+255,027,818  
+ 
+ 
+ 
+ 
+Marketing expenses 
+17 
+(36,981,671)  
+IT expenses 
+18 
+(17,053,121)  
+General and administrative expenses 
+19 
+(49,344,543)  
+Other income 
+20 
+8,105,746  
+Other expenses and impairment 
+21 
+(28,648,428)  
+Operating profit 
+ 
+131,105,801  
+ 
+ 
+ 
+ 
+Net finance income 
+22 
+561,640  
+Foreign exchange gain, net 
+ 
+885,278  
+Profit before income tax 
+ 
+132,552,719  
+ 
+ 
+ 
+ 
+Income tax credit, net 
+23 
+5,365,818  
+Net profit 
+ 
+137,918,537  
+ 
+ 
+ 
+ 
+Other comprehensive income 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Items that will be subsequently reclassified to profit 
+or loss: 
+ 
+ 
+ 
+Foreign currency translation reserve 
+ 
+(1,183,208)  
+Other comprehensive (loss), net of tax 
+ 
+(1,183,208)  
+ 
+ 
+ 
+ 
+Total comprehensive income 
+ 
+136,735,329  
+ 
+ 
+ 
+ 
+Earnings per share 
+ 
+ 
+ 
+Basic 
+24 
+0.01  
+Diluted 
+24 
+0.01  
+ 
+The notes on pages 11 to 62 are an integral part of these consolidated financial statements. 
+The independent auditors’ report is set out on pages 3 to 6.
+
+
+===== PAGE 11 =====
+
+Talabat Holding PLC 
+ 
+9 
+ 
+Consolidated interim statement of changes in equity 
+For the period since inception on 3 September 2024 till 31 December 2024 
+ 
+ 
+ 
+ 
+ 
+Share 
+capital 
+Retained 
+earnings 
+Foreign 
+currency 
+translation 
+reserve 
+Total equity 
+ 
+ 
+USD 
+USD 
+USD 
+USD 
+Total comprehensive income for the period 
+ 
+ 
+ 
+  
+Net profit 
+ 
+- 
+137,918,537 
+- 
+137,918,537 
+Other comprehensive income 
+ 
+- 
+- 
+(1,183,208) 
+(1,183,208) 
+ 
+ 
+- 
+137,918,537 
+(1,183,208) 
+136,735,329 
+ 
+ 
+ 
+ 
+  
+Transactions with owners of the Group: 
+ 
+ 
+ 
+  
+Issuance of share capital (Note 11) 
+ 
+253,650,000 
+- 
+- 
+253,650,000 
+Acquisition of subsidiaries under common control (Note 33) 
+ 
+- 
+142,220,401 
+- 
+142,220,401 
+Equity settled share-based transaction (Note 26) 
+ 
+- 
+5,793,284 
+- 
+5,793,284 
+Balance at 31 December 2024 
+ 
+253,650,000 
+285,932,222 
+(1,183,208) 
+538,399,014 
+ 
+ 
+ 
+ 
+The notes on pages 11 to 62 are an integral part of these consolidated financial statements. 
+ The independent auditors’ report is set out on pages 3 to 6 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 12 =====
+
+Talabat Holding PLC 
+ 
+10 
+ 
+Consolidated interim statement of cash flows  
+For the period since inception on 3 September 2024 till 31 December 2024 
+ 
+ 
+ 
+2024 
+2023 
+ 
+Notes 
+USD 
+USD 
+Cash flows from operating activities 
+ 
+ 
+ 
+Net profit 
+ 
+137,918,537  
+Adjustments for: 
+ 
+ 
+ 
+Depreciation of property and equipment 
+5 
+11,155,751  
+Amortisation of intangible assets 
+6 
+1,214,571  
+Gains on disposal of property and equipment 
+20 
+(477,999)  
+Employees’ end-of-service benefits 
+14 
+1,898,901  
+Provision for expected credit loss 
+21 
+3,097,431  
+Interest expense on lease liabilities 
+13,22 
+1,432,182  
+Equity settled share-based transactions 
+26 
+5,793,284  
+Interest income 
+22 
+(1,993,822)  
+Income tax, net 
+23 
+(5,365,818)  
+ 
+ 
+154,673,018  
+Working capital changes: 
+ 
+ 
+ 
+Inventories 
+ 
+(3,711,452)  
+Trade and other receivables 
+ 
+(15,467,966)  
+Due from related parties 
+ 
+(53,482,339)  
+Due to related parties 
+ 
+36,510,621  
+Trade and other payables 
+ 
+2,627,767  
+Cash generated from operating activities 
+ 
+121,149,649  
+Employees’ end-of-service indemnity paid 
+14 
+(732,056)  
+Interest received 
+ 
+1,993,822  
+Income tax paid 
+ 
+(2,245,965)  
+Net cash generated from operating activities 
+ 
+120,165,450  
+ 
+ 
+ 
+ 
+Cash flows from investing activities 
+ 
+ 
+ 
+Purchase of property and equipment 
+5,27 
+(8,372,706)  
+Proceeds from disposal of property and equipment 
+ 
+821,133  
+Addition of intangible assets 
+6 
+(1,818,817)  
+Cash acquired on acquisition of subsidiaries under common 
+control 
+33 
+316,150,394  
+Net cash generated from investing activities 
+ 
+306,780,004  
+ 
+ 
+ 
+ 
+Cash flows from financing activities 
+ 
+ 
+ 
+Payment of principal portion of lease liabilities 
+13 
+(5,710,008)  
+Payments of interest on lease liabilities 
+13 
+(1,432,182)  
+Repayment of loans from related parties 
+ 
+(1,587,389)  
+Net cash used in financing activities 
+ 
+(8,729,579)  
+ 
+ 
+  
+Net increase in cash and cash equivalents 
+ 
+418,215,875  
+Effect of movement in exchange rates on cash held 
+ 
+421,602  
+Cash and cash equivalents at the end of the period 
+10 
+418,637,477  
+ 
+The notes on pages 11 to 62 are an integral part of these consolidated financial statements. 
+The independent auditors’ report is set out on pages 3 to 6.
+
+
+===== PAGE 13 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+11 
+ 
+ 
+1. 
+ General information 
+ 
+Talabat Holding PLC, Dubai – United Arab Emirates (the “Company”) was incorporated on 3 September 
+2024 (date of inception) in accordance with ADGM laws, ADGM registration number: is 20827 
+ 
+The registered address of the company: Unit no. 2341, 23rd Floor, Sky Tower, Shams Abu Dhabi, Al Reem 
+Island, Abu Dhabi, UAE 
+ 
+Delivery Hero MENA Holding GmbH is the parent company (the “Parent”). Delivery Hero SE is the 
+ultimate controlling parent of the Group which is also the ultimate controlling party (the “Ultimate Parent 
+Company”). 
+ 
+The Company was established as part of a broader restructuring plan initiated by the Ultimate Parent 
+Company to facilitate the listing of its shares on the Dubai Financial Market (“DFM”) through an Initial 
+Public Offering (“IPO”). The restructuring involved transactions among entities under common control to 
+consolidate the Ultimate Parent Company’s business in the MENA region, which includes the United Arab 
+Emirates (“UAE”), Kuwait, Qatar, Oman, Bahrain, Iraq, Egypt, and Jordan. 
+ 
+On 24 September 2024, the Ultimate Parent Company transferred its shareholding and control in Delivery 
+Hero FZ LLC (“DH FZ”) and its subsidiaries to the Company. Further, on 30 September 2024, DH FZ 
+acquired control of certain entities as part of a common control transaction. (refer to Note 33)  
+ 
+In exchange for these acquisitions, the Company issued 253,649,900 ordinary shares to the Parent Company 
+(refer to Note 11). 
+ 
+These transactions were undertaken to align the Group’s corporate structure with the Ultimate Parent 
+Company’s plan to offer 20% of its shareholding in the Company through an IPO.   
+ 
+During November 2024, the Security and Commodities Authority ("SCA") (UAE) accepted the Company’s 
+application for the offering and issuance of 20% percent of the Company's authorised and issued share 
+capital. On 10 December 2024, the Company was admitted to be listed on the Dubai Financial Market 
+(“DFM”). 
+ 
+The Company and its subsidiaries are collectively referred to as the Group (the “Group”). The principal 
+activity of the Group is to provide access to an online platform to order food, grocery and deliver to end 
+customers. 
+ 
+ 
+
+
+===== PAGE 14 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+12 
+ 
+ 
+1. General information (continued) 
+ 
+These consolidated financial statements include the results of operations and the financial position of the 
+material subsidiaries, as shown below: 
+ 
+DHH II SPC (DIFC) Ltd. 
+United Arab 
+Emirates 
+Licensed to do structured 
+financing for qualifying purposes. 
+ 100% 
+ 
+Talabat Electronic and 
+Delivery Services Company 
+SPC 
+Oman 
+Licensed for export and import, 
+delivery of meals, and software 
+designing and programming. 
+   
+100% 
+ 
+Delivery Hero Talabat DB 
+LLC 
+United Arab 
+Emirates 
+Provide access to an online 
+platform to order food and deliver 
+to end customers. 
+100% 
+  
+Talabat For General 
+Trading and Electronic 
+Commerce Ltd 
+Iraq 
+Online food ordering commercial 
+services and electronic trading 
+100% 
+ 
+Talabat For Stores Services 
+Company (Private 
+Shareholding Company) 
+Iraq 
+Commercial services and general 
+trade of all kinds in the local and 
+global market, exporting legally 
+approved materials and 
+equipment, providing delivery 
+services for all legally permitted 
+materials from all related 
+services. 
+100% 
+ 
+Talabat General Trading 
+and Contracting Company 
+W.L.L* 
+Kuwait 
+General trading and contracting 
+100% 
+ 
+Carriage Holding Company 
+Limited* 
+United Arab 
+Emirates 
+Registered as Special Purpose 
+Vehicle in Abu Dhabi Global 
+Market and is acting as holding 
+entity of its subsidiaries. The 
+subsidiaries are engaged in 
+processing online orders on 
+behalf of customers and 
+delivering food to customers. 
+100% 
+ 
+Carriage Logistics General 
+Trading LLC 
+Kuwait 
+Wholesale and retail trade 
+ 100% 
+ 
+ 
+ 
+Name of the subsidiary 
+Country of 
+Incorporation 
+ 
+Principal activities 
+Effective 
+holding 
+2024 
+ 
+ 
+ 
+ 
+ 
+ 
+Delivery Hero FZ-LLC 
+United Arab 
+Emirates 
+Provide access to an online 
+platform to order food and deliver 
+to end customers 
+100% 
+ 
+ 
+ 
+Talabat QFC LLC 
+Qatar 
+Provide professional services of 
+information services in relation to 
+an online restaurant ordering and 
+advertisement services. 
+100% 
+ 
+Talabat Services Company 
+S.P.C 
+Bahrain 
+Engaged in business of retail sale 
+via internet. 
+100%
+ 
+ 
+DHH I SPC (DIFC) Ltd.* 
+United Arab 
+Emirates 
+ Licensed to do structured 
+financing for qualifying purposes. 
+100% 
+ 
+
+
+===== PAGE 15 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+13 
+ 
+ 
+1. General information (continued) 
+ 
+Delivery Hero 
+Carriage Kuwait for 
+Delivery of 
+Consumables S.P.C. 
+Kuwait 
+Delivery service for consumables 
+products 
+100% 
+ 
+Carriage Logistics 
+S.P.C 
+Bahrain 
+Retail sales via internet and food 
+transportation for companies 
+100% 
+ 
+Delivery Hero 
+Carriage DB LLC 
+United Arab 
+Emirates 
+Delivery services coordination and 
+provision 
+100% 
+ 
+Carriage Delivery 
+Services AD LLC 
+United Arab 
+Emirates 
+Delivery services coordination and 
+provision 
+100% 
+ 
+Kitchens Saudi For 
+Food Services LLC 
+Saudi Arabia 
+Food services contractors including 
+transportation, storage and cooling 
+100% 
+ 
+Carriage Trading and 
+Services W.L.L 
+Qatar 
+ Trading via internet 
+100% 
+ 
+DH Stores Bahrain 
+WLL 
+Bahrain 
+Food and beverage service 
+activities, general trade and sale of 
+tobacco products. 
+100% 
+ 
+Stores Services Kuwait 
+for General Trading 
+Company WLL 
+Kuwait 
+Import and export, grocery, central 
+market, non-food supermarket, 
+general trade office, commission 
+agent. 
+100% 
+ 
+Delivery Hero 
+Kitchens Kuwait Food 
+Services Management 
+Company WLL 
+Kuwait 
+Bakery management, management 
+of catering services, food 
+equipment, fast food stores, 
+restaurant 
+ 
+100% 
+ 
+Delivery Hero 
+Kitchens Bahrain WLL 
+Bahrain 
+Real estate activities with own or 
+leased property and general trade 
+100% 
+ 
+Delivery Hero 
+Lebanon 
+Lebanon 
+Online ordering of food and other 
+consumer goods, distribution and 
+delivery services for the individuals, 
+companies and other entities in all 
+sectors. 
+ 
+100% 
+ 
+Foodonclick.com FZ-
+LLC 
+United Arab 
+Emirates 
+Registered as Special Purpose 
+Vehicle in Abu Dhabi Global 
+Market and is acting as holding 
+entity of its subsidiaries. The 
+subsidiaries are engaged in 
+processing online orders on behalf 
+of customers and delivering food to 
+customers.  
+100% 
+ 
+ 
+Foodclick.com Jordan 
+Private Shareholding 
+Co. 
+Jordan 
+Providing integrated solutions in the 
+field of information and 
+communications systems 
+100% 
+ 
+ 
+Name of the subsidiary 
+Country of 
+Incorporation 
+ 
+Principal activities 
+Effective 
+holding 
+2024 
+ 
+
+
+===== PAGE 16 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+14 
+ 
+ 
+2. General information (continued) 
+ 
+Name of the subsidiary 
+Country of 
+Incorporation 
+ 
+Principal activities 
+Effective 
+holding 
+2024 
+ 
+ 
+Talabat Log. & Online 
+Management 
+Jordan 
+Providing logistics services 
+  
+100% 
+ 
+Talabat for Delivery 
+Services LLC 
+ Iraq 
+Food and beverage service 
+activities, general trade and sale 
+of tobacco products. 
+100% 
+ 
+Batal Al Tawsil for 
+Delivery Services Ltd.  
+ Iraq 
+  
+Providing logistics services 
+  
+100% 
+ 
+Delivery Hero Egypt SAE 
+Egypt 
+Import and export, grocery, 
+central market, non-food 
+supermarket, general trade 
+office, commission agent. 
+100% 
+ 
+Dark Stores MENA 
+Holding Ltd 
+United Arab 
+Emirates 
+  
+Bakery management, 
+management of catering 
+services, food equipment, fast 
+food stores, restaurant 
+100% 
+ 
+ Jordanian Stores for 
+General Trading LLC 
+ Jordan 
+Ecommerce and retail trade 
+100% 
+ 
+ Talabat Services Company 
+W.L.L. 
+ Qatar 
+  
+ Wholesale and retail trade 
+100% 
+ 
+Delivery Hero Stores DB 
+LLC 
+  
+United Arab 
+Emirates 
+  
+General trade 
+  
+100% 
+ 
+Delivery Hero Dmart Egypt 
+LLC 
+ Egypt 
+  
+General trade and distribution 
+  
+100% 
+ 
+Delivery Hero Stores LLC  
+ Oman 
+ Real estate activities with own 
+or leased property and general 
+trade 
+100% 
+ 
+Delivery Hero Kitchens 
+MENA Holding Ltd 
+ United Arab 
+Emirates 
+ Ecommerce and other activities 
+100% 
+ 
+Delivery Hero Kitchen DB 
+LLC 
+United Arab 
+Emirates 
+ Trading and service supply 
+100% 
+ 
+DH Kitchens LLC 
+  
+ Qatar 
+Ready-meal supply and trade of 
+fresh and preserved fruits and 
+vegetables 
+100% 
+ 
+Delivery Hero Payments 
+MENA FZ-LLC 
+ United Arab 
+Emirates 
+ Development, consultancy and 
+support service provider 
+100% 
+ 
+Delivery Hero Tech 
+Payment Limited 
+United Arab 
+Emirates 
+ Development & research 
+technology 
+100% 
+ 
+Delivery Hero Kitchens 
+MENA Holding Jordan 
+LLC  
+Jordan 
+Real estate activities with own 
+or leased property and general 
+trade 
+100% 
+ 
+ 
+* These entities are effectively and beneficially fully owned by the Company under the terms of a Mudarabah Agreement, which 
+grants Company control over the relevant activities of these companies and rights over the variable returns. 
+ 
+ 
+
+
+===== PAGE 17 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+15 
+ 
+ 
+2. 
+New standards or amendments 
+ 
+2.1 
+ New and revised IFRSs applied with no material effect on the consolidated financial statements 
+of the Group. 
+ 
+The following new and revised IFRSs, which became effective for annual periods beginning on or after 1 
+January 2024, have been adopted in these consolidated financial statements. The application of these 
+revised IFRSs has not had any material impact on the amounts reported but may affect the accounting for 
+future transactions or arrangements. 
+ 
+Supplier Finance 
+Arrangements - 
+Amendments to IAS 7 
+and IFRS 7  
+In May 2023, the IASB issued amendments to IAS 7 Statement of Cash Flows 
+and IFRS 7 Financial Instruments: Disclosures to clarify the characteristics of 
+supplier finance arrangements and require additional disclosure of such 
+arrangements. The disclosure requirements in the amendments are intended to 
+assist users of financial statements in understanding the effects of supplier 
+finance arrangements on an entity’s liabilities, cash flows and exposure to 
+liquidity risk. The transition rules clarify that an entity is not required to provide 
+the disclosures in any interim periods in the year of initial application of the 
+amendments.  
+ 
+Amendments to IFRS 
+16: Lease Liability in 
+a Sale and Leaseback  
+In September 2022, the IASB issued amendments to IFRS 16 to specify the 
+requirements that a seller-lessee uses in measuring the lease liability arising in 
+a sale and leaseback transaction, to ensure the seller-lessee does not recognize 
+any amount of the gain or loss that relates to the right of use it retains.  
+ 
+Amendments to IAS 
+1: Classification of 
+Liabilities as Current 
+or Non-current  
+In January 2020 and October 2022, the IASB issued amendments to paragraphs 
+69 to 76 of IAS 1 to specify the requirements for classifying liabilities as current 
+or non-current. The amendments clarify:  
+ 
+• What is meant by a right to defer settlement  
+• That a right to defer must exist at the end of the reporting period  
+• That classification is unaffected by the likelihood that an entity will exercise 
+its deferral right  
+• That only if an embedded derivative in a convertible liability is itself an 
+equity instrument would the terms of a liability not impact its classification  
+ 
+In addition, a requirement has been introduced whereby an entity must disclose 
+when a liability arising from a loan agreement is classified as non-current and 
+the entity’s right to defer settlement is contingent on compliance with future 
+covenants within twelve months.  
+
+
+===== PAGE 18 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+16 
+ 
+ 
+2. 
+New standards or amendments (continued) 
+ 
+2.2    New and amended IFRSs in issue but not yet effective and not early adopted. 
+ 
+New and revised IFRSs 
+Effective for annual periods beginning on or 
+after 
+ 
+Amendments to IAS 21– Lack of exchangeability  
+ 
+Amendments to IFRS 10 Consolidated Financial 
+Statements and IAS 28 Investments in Associates 
+and Joint Ventures: Sale or Contribution of 
+Assets between an Investor and its Associate or 
+Joint Venture 
+ 
+IFRS 18 Presentation and Disclosure in Financial 
+Statements 
+ 
+IFRS Accounting Taxonomy 2024 – Update 1 
+International Tax Reform – Pillar Two Model 
+Rules, Supplier Finance Arrangements and Lack 
+of Exchangeability 
+ 
+IFRS Accounting Taxonomy 2024 – Update 2 
+Common Practice for Financial Instruments, 
+General Improvements and Technology Update 
+ 
+1 January 2025 
+ 
+Effective date not yet decided. 
+ 
+ 
+ 
+ 
+1 January 2027 
+ 
+ 
+Effective date not yet decided. 
+ 
+ 
+ 
+ 
+Effective date not yet decided. 
+ 
+ 
+
+
+===== PAGE 19 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+17 
+ 
+ 
+ 
+3. 
+Material accounting policy information 
+ 
+3.1 
+Statement of compliance 
+ 
+These interim consolidated financial statements were prepared in accordance with in accordance with IFRS 
+Accounting Standards as issued by the International Accounting Standards Board (IFRS Accounting 
+Standards), including the requirement of IAS 34, ‘Interim Financial Reporting’. 
+ 
+3.2 
+Basis of preparation  
+ 
+(a) 
+These interim consolidated financial statements have been prepared for the purpose of enabling 
+dividend distribution for the period ended 31 December 2024. These interim consolidated financial 
+statements are also considered as initial accounts pursuant the requirements of Section 766 of Abu 
+Dhabi Global Market (ADGM) Companies Regulations 2020 (as amended) for the purpose of 
+enabling dividend distribution.  
+ 
+(b) 
+Basis of measurement 
+ 
+The consolidated interim financial statements have been prepared on the historical cost basis as explained 
+in the accounting policies below.  
+ 
+Business combination common control transactions 
+ 
+A business combination involving entities or businesses under common control is a business combination 
+in which all the combining entities or businesses are ultimately controlled by the same Ultimate Parent 
+Company both before and after the combination. 
+ 
+The Group follows book value (carry-over basis) accounting prospectively, on the basis that the investment 
+has simply been moved from one part of the group to another. As per the book value accounting, the Group 
+recognizes assets and liabilities at their book values at the acquisition date. The difference between book 
+values of assets acquired and liabilities assumed, and the consideration paid is reflected in retained earnings 
+within the statement of changes in equity. 
+ 
+When a subsidiary is deconsolidated on account of loss of control over subsidiary in a common control 
+transaction with no / nominal consideration, the difference between the net book value of the subsidiary 
+and the consideration received is recognised in retained earnings within equity.  
+ 
+(c) 
+Use of estimates and judgments 
+ 
+In preparing these consolidated financial statements, management has made judgements, estimates and 
+assumptions that affect the application of the Group accounting policies and the reported amounts of assets, 
+liabilities, income and expenses. Actual results may differ from these estimates. 
+ 
+Estimates and underlying assumptions are reviewed on an ongoing basis. Revisions to estimates are 
+recognised prospectively. Information about significant areas of estimation uncertainty and critical 
+judgements in applying accounting policies that have the most significant effect on the amounts recognised 
+in these consolidated financial statements are described in note 4. 
+ 
+(d) 
+Current vs non-current classification 
+ 
+The Group presents assets and liabilities in statement of financial position based on current/non-current 
+classification.  
+ 
+An asset is current when it is: 
+ 
+- 
+Expected to be realised or intended to be sold or consumed in normal operating cycle; 
+- 
+Held primarily for the purpose of trading; 
+- 
+Expected to be realised within twelve months after the reporting period; or 
+
+
+===== PAGE 20 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+18 
+ 
+ 
+3.  
+Material accounting policy information (continued) 
+ 
+3.2 
+ Basis of preparation (continued) 
+ 
+(d)       Current vs non-current classification (continued) 
+ 
+- 
+Cash or cash equivalent unless restricted from being exchanged or used to settle a liability for at 
+least twelve months after the reporting period 
+ 
+A liability is current when: 
+ 
+- 
+It is expected to be settled in normal operating cycle; 
+- 
+It is held primarily for the purpose of trading; 
+- 
+It is due to be settled within twelve months after the reporting period; or 
+- 
+There is no unconditional right to defer the settlement of the liability for at least twelve months 
+after the reporting period. 
+ 
+The Group classifies all other assets and liabilities as non-current. 
+ 
+(e) 
+Fair value measurement 
+ 
+Fair value is the price that would be received to sell an asset or paid to transfer a liability in an orderly 
+transaction between market participants at the measurement date, regardless of whether that price is directly 
+observable or estimated using another valuation technique. In estimating the fair value of an asset or a 
+liability, the Group takes into account the characteristics of the asset or liability if market participants would 
+take those characteristics into account when pricing the asset or liability at the measurement date.  
+ 
+For the purpose of fair value disclosures, the Group has determined classes of assets and liabilities on the 
+basis of the nature, characteristics and risks of the asset or liability and the level of the fair value hierarchy. 
+ 
+In addition, for financial reporting purposes, fair value measurements are categorised into Level 1, 2 or 3 
+based on the degree to which the inputs to the fair value measurements are observable and the significance 
+of the inputs to the fair value measurement in its entirety, which are described as follows:  
+ 
+● Level 1 inputs are quoted prices (unadjusted) in active markets for identical assets or liabilities that the 
+entity can access at the measurement date; 
+● Level 2 inputs are inputs, other than quoted prices included within Level 1, that are observable for the 
+asset or liability, either directly or indirectly; and 
+● Level 3 inputs are unobservable inputs for the asset or liability 
+ 
+(f) 
+Functional and presentation currency 
+ 
+These consolidated financial statements, unless otherwise indicated are presented in United States dollar 
+(“USD”), which is the Company’s presentation currency. United Arab Emirates Dirhams (AED) is the 
+functional currency of the company. Items included in the consolidated financial statements in respect of 
+foreign subsidiaries are measured using the currency of the primary economic environment in which they 
+operate and are translated in accordance with the policy stated in note 3.5. 
+
+
+===== PAGE 21 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+19 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.2        Basis of preparation (continued) 
+ 
+(g) 
+ Basis of consolidation 
+ 
+The consolidated financial statements incorporate the financial statements of the Company and entities 
+controlled by the Company (its subsidiaries) made up to 31 December each year. Control is achieved when 
+the Company: 
+ 
+- 
+Has power over the investee; 
+- 
+Is exposed, or has rights, to variable returns from its involvement with the investee; and 
+- 
+Has the ability to use its power to affect its returns. 
+ 
+The Company reassesses whether or not it controls an investee if facts and circumstances indicate that there 
+are changes to one or more of the three elements of control listed above. 
+ 
+When the Company has less than a majority of the voting rights of an investee, it considers that it has power 
+over the investee when the voting rights are sufficient to give it the practical ability to direct the relevant 
+activities of the investee unilaterally. The Company considers all relevant facts and circumstances in 
+assessing whether or not the Company’s voting rights in an investee are sufficient to give it power, 
+including: 
+ 
+- 
+The size of the Company’s holding of voting rights relative to the size and dispersion of holdings of 
+the other vote holders; 
+- 
+Potential voting rights held by the Company, other vote holders or other parties;  
+- 
+Rights arising from other contractual arrangements; and 
+- 
+Any additional facts and circumstances that indicate that the Company has, or does not have, the current 
+ability to direct the relevant activities at the time that decisions need to be made, including voting 
+patterns at previous shareholders’ meetings. 
+ 
+Consolidation of a subsidiary begins when the Company obtains control over the subsidiary and ceases 
+when the Company loses control of the subsidiary. Specifically, the results of subsidiaries acquired or 
+disposed off during the year are included in profit or loss from the date the Company gains control until 
+the date when the Company ceases to control the subsidiary. 
+ 
+Where necessary, adjustments are made to the financial statements of subsidiaries to bring the accounting 
+policies used into line with the Group’s accounting policies. 
+ 
+All intragroup assets and liabilities, equity, income, expenses and cash flows relating to transactions 
+between the members of the Group are eliminated on consolidation. 
+ 
+Non-controlling interests in subsidiaries are identified separately from the Group’s equity therein. Those 
+interests of non-controlling shareholders that are present ownership interests entitling their holders to a 
+proportionate share of net assets upon liquidation may initially be measured at fair value or at the non-
+controlling interests’ proportionate share of the fair value of the acquiree’s identifiable net assets. The 
+choice of measurement is made on an acquisition-by-acquisition basis. Subsequent to acquisition, the 
+carrying amount of non-controlling interests is the amount of those interests at initial recognition plus the 
+non-controlling interests’ share of subsequent changes in equity.
+
+
+===== PAGE 22 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+20 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.2       Basis of preparation (continued) 
+ 
+(g)       Basis of consolidation (continued) 
+ 
+Profit or loss and each component of other comprehensive income are attributed to the owners of the 
+Company and to the non-controlling interests. Total comprehensive income of the subsidiaries is attributed 
+to the owners of the Company and to the non-controlling interests even if this results in the non-controlling 
+interests having a deficit balance. 
+ 
+Changes in the Group’s interests in subsidiaries that do not result in a loss of control are accounted for as 
+equity transactions. The carrying amount of the Group’s interests and the non-controlling interests are 
+adjusted to reflect the changes in their relative interests in the subsidiaries. Any difference between the 
+amount by which the non-controlling interests are adjusted and the fair value of the consideration paid or 
+received is recognised directly in equity and attributed to the owner of the Company. 
+ 
+When the Group loses control of a subsidiary, the gain or loss on disposal recognised in profit or loss is 
+calculated as the difference between (i) the aggregate of the fair value of the consideration received and 
+the fair value of any retained interest and (ii) the previous carrying amount of the assets (including 
+goodwill), less liabilities of the subsidiary and any non-controlling interests. All amounts previously 
+recognised in other comprehensive income in relation to that subsidiary are accounted for as if the Group 
+had directly disposed of the related assets or liabilities of the subsidiary (i.e., reclassified to profit or loss 
+or transferred to another category of equity as required/permitted by applicable IFRS). The fair value of 
+any investment retained in the former subsidiary at the date when control is lost is regarded as the fair value 
+on initial recognition for subsequent accounting when applicable, or the cost on initial recognition of an 
+investment in an associate or a joint venture. 
+ 
+Interests in equity-accounted investees 
+ 
+An associate is an entity over which the Group has significant influence. Significant influence is the power 
+to participate in the financial and operating policy decisions of the investee but is not control or joint control 
+over those policies. A joint venture is a joint arrangement whereby the parties that have joint control of the 
+arrangement have rights to the net assets of the joint arrangement. Joint control is the contractually agreed 
+sharing of control of an arrangement, which exists only when decisions about the relevant activities require 
+unanimous consent of the parties sharing control. 
+ 
+The results and assets and liabilities of associates or joint ventures are incorporated in these consolidated 
+financial statements using the equity method of accounting, except when the investment, or a portion 
+thereof, is classified as held for sale, in which case it is accounted for in accordance with IFRS 5.  
+ 
+Under the equity method, an investment in an associate or a joint venture is initially recognised in the 
+consolidated statement of financial position at cost and adjusted thereafter to recognise the Group’s share 
+of the profit or loss and other comprehensive income of the associate or joint venture. When the Group’s 
+share of losses of an associate or a joint venture exceeds the Group’s interest in that associate or joint 
+venture (which includes any long-term interests that, in substance, form part of the Group’s net investment 
+in the associate or joint venture), the Group discontinues recognise its share of further losses. Additional 
+losses are recognised only to the extent that the Group has incurred legal or constructive obligations or 
+made payments on behalf of the associate or joint venture.
+
+
+===== PAGE 23 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+21 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.2       Basis of preparation (continued) 
+ 
+(g)       Basis of consolidation (continued) 
+ 
+An investment in an associate or a joint venture is accounted for using the equity method from the date on 
+which the investee becomes an associate or a joint venture. On acquisition of the investment in an associate 
+or a joint venture, any excess of the cost of the investment over the Group’s share of the net fair value of 
+the identifiable assets and liabilities of the investee is recognised as goodwill, which is included within the 
+carrying amount of the investment. Any excess of the Group’s share of the net fair value of the identifiable 
+assets and liabilities over the cost of the investment, after reassessment, is recognised immediately in profit 
+or loss in the period in which the investment is acquired. 
+ 
+The Group continues to use the equity method when an investment in an associate becomes an investment 
+in a joint venture or an investment in a joint venture becomes an investment in an associate. There is no 
+remeasurement to fair value upon such changes in ownership interests. When the Group reduces its 
+ownership interest in an associate or a joint venture but the Group continues to use the equity method, the 
+Group reclassifies to profit or loss the proportion of the gain or loss that had previously been recognised in 
+other comprehensive income relating to that reduction in ownership interest if that gain or loss would be 
+reclassified to profit or loss on the disposal of the related assets or liabilities.  
+ 
+When the Group transacts with an associate or a joint venture of the Group, profits and losses resulting 
+from the transactions with the associate or joint venture are recognised in the Group’s consolidated 
+financial statements only to the extent of interests in the associate or joint venture that are not related to the 
+Group. 
+ 
+(h) 
+Business combination 
+ 
+The Group accounts for business combinations using the acquisition method when the acquired set of 
+activities and assets meets the definition of a business and control is transferred to the Group. In 
+determining whether a particular set of activities and assets is a business, the Group assesses whether the 
+set of assets and activities acquired include inputs and processes applied to those inputs that have the ability 
+to contribute to the creation of outputs. 
+ 
+The Group has an option to apply a 'concentration test' that permits a simplified assessment of whether an 
+acquired set of activities and assets is not a business. The optional concentration test is met if substantially 
+all of the fair value of the gross assets acquired is concentrated in a single identifiable asset or group of 
+similar identifiable assets.  
+ 
+The consideration transferred in the acquisition is generally measured at fair value, as are the identifiable 
+net assets acquired. Any goodwill that arises is tested annually for impairment. Any gain on a bargain 
+purchase is recognised in profit or loss immediately. Transaction costs are expensed as incurred, except if 
+related to the issue of debt or equity securities. 
+ 
+The consideration transferred does not include amounts related to the settlement of pre-existing 
+relationships. Such amounts are generally recognised in profit or loss.  
+ 
+Any contingent consideration is measured at fair value at the date of acquisition. If an obligation to pay 
+contingent consideration that meets the definition of a financial instrument is classified as equity, then it is 
+not remeasured, and settlement is accounted for within equity. Otherwise, other contingent consideration 
+is remeasured at fair value at each reporting date and subsequent changes in the fair value of the contingent 
+consideration are recognised in profit or loss.
+
+
+===== PAGE 24 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+22 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.2 
+Basis of preparation (continued) 
+ 
+(h) 
+Business combination (continued) 
+ 
+If share-based payment awards (replacement awards) are required to be exchanged for awards held by the 
+acquiree’s employees (acquiree’s awards), then all or a portion of the amount of the acquirer’s replacement 
+awards is included in measuring the consideration transferred in the business combination. This 
+determination is based on the market-based measure of the replacement awards compared with the market-
+based measure of the acquiree’s awards and the extent to which the replacement awards relate to pre-
+combination service. 
+ 
+Goodwill or bargain purchase gain 
+ 
+Goodwill is measured as the excess of the sum of the consideration transferred, the amount of any non-
+controlling interests in the acquiree, and the fair value of the acquirer’s previously held equity interest in 
+the acquiree (if any) over the net of the acquisition-date amounts of the identifiable assets acquired and the 
+liabilities assumed. If, after reassessment, the net of the acquisition-date amounts of the identifiable assets 
+acquired and liabilities assumed exceeds the sum of the consideration transferred, the amount of any non-
+controlling interests in the acquiree and the fair value of the acquirer’s previously held interest in the 
+acquiree (if any), the excess is recognised immediately in profit or loss as a bargain purchase gain. 
+ 
+ 
+3.3 
+Revenue recognition 
+ 
+Revenue recognition under IFRS 15 Revenue from Contracts with Customer: 
+ 
+The Group recognises revenue from contracts with customers based on the five-step model set out in IFRS 
+15: 
+ 
+Step 1: Identify the contract(s) with a customer 
+ 
+A contract is defined as an agreement between two or more parties that creates enforceable rights and 
+obligations and sets out the criteria for every contract that must be met. 
+ 
+Step 2: Identify the performance obligations in the contract 
+ 
+A performance obligation is a unit of account and a promise in a contract with a customer to transfer a 
+good or service to the customer. 
+ 
+Step 3: Determine the transaction price 
+ 
+The transaction price is the amount of consideration to which the Group expects to be entitled in exchange 
+for transferring promised goods or services to a customer, excluding amounts collected on behalf of third 
+parties. 
+ 
+Step 4: Allocate the transaction price to the performance obligations in the contract 
+ 
+For a contract that has more than one performance obligation, the Group will allocate the transaction price 
+to each performance obligation in an amount that depicts the consideration to which the Group expects to 
+be entitled in exchange for satisfying each performance obligation.
+
+
+===== PAGE 25 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+23 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.3 
+Revenue recognition (continued) 
+ 
+Step 5: Recognise revenue when (or as) the entity satisfies a performance obligation 
+ 
+The Group satisfies a performance obligation and recognises revenue over time, if one of the following 
+criteria is met: 
+ 
+- 
+The customer simultaneously receives and consumes the benefits provided by the Group’s performance 
+as and when the Group performs; or 
+- 
+The Group’s performance creates or enhances an asset that the customer controls as the asset is created 
+or enhanced; or 
+- 
+The Group’s performance does not create an asset with an alternative use to the Group and the Group 
+has an enforceable right to payment for performance completed to date. 
+ 
+For performance obligations where none of the above conditions are met, revenue is recognised at the point 
+in time at which the performance obligation is satisfied. 
+ 
+Revenue is measured at an amount that reflects the considerations, to which an entity expects to be entitled 
+in exchange for selling of goods or rendering services to the customers, excluding amounts collected on 
+behalf of third parties. Revenue is adjusted for expected sales discounts and volume discounts, which are 
+estimated based on the historical data or forecast and projections. The Group recognises revenue after the 
+services are rendered to its customers and on the basis of contractual rates agreed with the customers. 
+ 
+The stand-alone selling prices are determined based on the observable price at which the Group sells the 
+goods or services. 
+ 
+The Group generates revenue mainly from online marketplace services, separately charged delivery fees, 
+orders placed in the Group’s delivery-only stores and advertising services, as well as subscription fees, 
+service fees and, in certain cases, separately charged payment fees.  
+ 
+The Group determines for each specified good and service promised to the customer, primarily restaurants 
+and/or orderers, whether it obtains control of the good or service before it is transferred to the customer. 
+Often the Group is principal for a specified service, but agent for another service, when a single order is 
+placed through its online marketplaces (refer to Note 4 for more details). 
+ 
+For online marketplace services in which the Group arranges for restaurants to sell food to orderers, the 
+Group acts as an agent. The consideration for the online marketplace services primarily consists of 
+commission fees charged to restaurants. Based on the specific contract with the partner restaurant, the 
+Group might charge and recognise separately a fee for online payments, despite this payment option not 
+representing a distinct performance obligation. Revenue from commission fees is recognised at a point in 
+time when the order has been placed.  
+ 
+The Group also offers delivery services in which the ordered meals or other products are collected at a 
+restaurant or store and delivered to the orderers. The Group acts as principal for delivery services. The 
+Group entities carry out the delivery services to the orderer (customer for delivery service) as principal. 
+The consideration for the usage of delivery services primarily consists of delivery fees charged to 
+customers and restaurants. Revenue from delivery fees is recognised at a point in time when the order is 
+delivered.  
+ 
+ 
+ 
+ 
+
+
+===== PAGE 26 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+24 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.3 
+Revenue recognition (continued) 
+ 
+For the sale and delivery of a variety of grocery and other convenience items through our delivery-only 
+stores to orderers (customer of sold items), the Group acts as principal. The consideration for the orders 
+placed in delivery-only stores comprises the Gross Merchandise Value (“GMV”) net of VAT. GMV is the 
+total value paid by customers (including VAT, delivery fees, service fees less other subsidies, such as 
+voucher and other discounts). Revenue from delivery-only stores sales is recognised at a point in time when 
+the order is delivered. 
+ 
+For advertising services to restaurants and other businesses (customer of the service), the Group entities 
+also act as principal. The control over the advertising services passes to the customer over time. Revenue 
+for advertising services is recognised based on the time elapsed relative to the contract term at the reporting 
+date.  
+ 
+For subscription programs offered to orderers and restaurants, the Group acts as principal. Revenue from 
+subscription fees is recognised on a straight-line basis over the period of the subscription.  
+ 
+Service fees are separately charged to orderers in certain markets for the usage of marketplace platforms. 
+The Group acts as principal for the services offered. Revenue from services fees is recognised at a point in 
+time when an order has been placed.  
+ 
+Other direct income mainly includes revenue generated from retail sales, payment processing fee, and other 
+income streams. Retail sales are attributable to orders placed through our stores where the Group acts as a 
+principal. Revenue from retail sales is recognised at a point in time when the order is delivered. For 
+payment processing fees, based on the specific contract with the partner restaurant, the Group might charge 
+and recognise separately a fee for online payments, despite this payment option not representing a distinct 
+performance obligation. 
+ 
+Vouchers and discounts are treated as a reduction of revenue. The consideration is collected via online 
+payment providers, as cash or via invoices to the restaurants. Settlement of the earned commissions and 
+fees is initiated on a weekly, bi-weekly, or monthly basis contingent on an individual contractual 
+agreement. The payment terms vary between two and ninety days.  
+ 
+Customer acquisition costs 
+  
+The Group capitalises incremental costs incurred as a result of obtaining a customer contract - e.g. sales 
+commissions only if it expects to recover these costs. Costs that are incurred regardless of whether the 
+contract is obtained, including costs that are incremental to trying to obtain a contract,  are expensed as 
+they are incurred. 
+  
+As a practical expedient, the Group does not capitalise the incremental costs to obtain a contract if the 
+amortisation period of the resulting asset would not exceed one year. The assessment of whether the 
+practical expedient applies is made at the contract level. 
+ 
+ 
+ 
+
+
+===== PAGE 27 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+25 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.4 
+Leases 
+ 
+As a lessee, the Group leases various offices, warehouses, retail stores, equipment and cars. Lease terms 
+are negotiated on an individual basis and contain a wide range of different terms and conditions. The lease 
+agreements do not impose any covenants, but leased assets may not be used as security for borrowing 
+purposes.  
+ 
+At inception of a contract, the Group assesses whether a contract is, or contains, a lease. A contract is, or 
+contains, a lease if the contract conveys the right to control the use of an identified asset for a period of 
+time in exchange for consideration. 
+ 
+At commencement or on modification of a contract that contains a lease component, the Group allocates 
+the consideration in the contract to each lease component on the basis of its relative stand‑alone prices. 
+However, for the leases of property the Group has elected not to separate non‑lease components and 
+account for the lease and non‑lease components as a single lease component. 
+ 
+The Group recognises a right‑of‑use asset and a lease liability at the lease commencement date. The 
+right‑of‑use asset is initially measured at cost, which comprises the initial amount of the lease liability 
+adjusted for any lease payments made at or before the commencement date, plus any initial direct costs 
+incurred and an estimate of costs to dismantle and remove the underlying asset or to restore the underlying 
+asset or the site on which it is located, less any lease incentives received. 
+ 
+The right‑of‑use asset is classified within property and equipment based on the intended use of the assets 
+by the Group. Right of use asset is subsequently depreciated using the straight‑line method from the 
+commencement date to the end of the lease term, unless the lease transfers ownership of the underlying 
+asset to the Group by the end of the lease term or the cost of the right‑of‑use asset reflects that the Group 
+will exercise a purchase option. In that case the right‑of‑use asset will be depreciated over the useful life 
+of the underlying asset, which is determined on the same basis as those of property and equipment. In 
+addition, the right‑of‑use asset is periodically reduced by impairment losses, if any, and adjusted for certain 
+remeasurements of the lease liability. 
+ 
+The lease liability is initially measured at the present value of the lease payments that are not paid at the 
+commencement date, discounted using the interest rate implicit in the lease or, if that rate cannot be readily 
+determined, the Group’s incremental borrowing rate. Generally, the Group uses its incremental borrowing 
+rate as the discount rate. 
+ 
+The Group determines its incremental borrowing rate by obtaining interest rates from various external 
+financing sources and makes certain adjustments to reflect the terms of the lease and type of the asset 
+leased. 
+ 
+Lease payments included in the measurement of the lease liability comprise the following: 
+ 
+- 
+fixed payments, including in‑substance fixed payments; 
+- 
+variable lease payments that depend on an index or a rate, initially measured using the index or rate as 
+at the commencement date; 
+- 
+amounts expected to be payable under a residual value guarantee; and 
+- 
+the exercise price under a purchase option that the Group is reasonably certain to exercise, lease 
+payments in an optional renewal period if the Group is reasonably certain to exercise an extension 
+option, and penalties for early termination of a lease unless the Group is reasonably certain not to 
+terminate early. 
+ 
+ 
+
+
+===== PAGE 28 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+26 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.4        Leases (continued) 
+ 
+The lease liability is measured at amortised cost using the effective interest method. It is remeasured when 
+there is a change in future lease payments arising from a change in an index or rate, if there is a change in 
+the Group’s estimate of the amount expected to be payable under a residual value guarantee, if the Group 
+changes its assessment of whether it will exercise a purchase, extension or termination option or if there is 
+a revised in‑substance fixed lease payment. When the lease liability is remeasured in this way, a 
+corresponding adjustment is made to the carrying amount of the right‑of‑use asset or is recorded in profit 
+or loss if the carrying amount of the right‑of‑use asset has been reduced to nil. 
+ 
+Variable rents that do not depend on an index or rate are not included in the measurement of the lease 
+liability and the right-of-use asset. The related payments are recognised as an expense in the period in 
+which the event or condition that triggers those payments occurs and are included in the line ‘General and 
+administrative expenses’ in the consolidated statement of profit or loss and other comprehensive income. 
+ 
+Short-term leases and leases of low-value assets 
+ 
+The Group has elected not to recognise right‑of‑use assets and lease liabilities for leases of low‑value assets 
+and short‑term leases, including IT equipment. The Group recognises the lease payments associated with 
+these leases as an expense on a straight‑line basis over the lease term. 
+ 
+The Group presents right-of-use assets in ‘property and equipment’, and lease liabilities in ‘lease 
+liabilities’. 
+ 
+Whenever the Group incurs an obligation for costs to dismantle and remove a leased asset, restore the site 
+on which it is located or restore the underlying asset to the condition required by the terms and conditions 
+of the lease, a provision is recognised and measured under IAS 37. The costs are included in the related 
+right-of-use asset, unless those costs are incurred to produce inventories. 
+ 
+In order to determine the lease term for lease contracts in which the Group is a lessee that include renewal 
+or termination options, judgment is applied to assess the exercise of the respective option (refer to Note 4 
+for more details). 
+ 
+3.5 
+Foreign currencies and operations 
+ 
+Foreign currencies 
+ 
+Transactions in foreign currencies are translated into USD at the exchange rates at the dates of the 
+transactions. 
+ 
+Monetary assets and liabilities denominated in foreign currencies are translated into the functional currency 
+of the group at the exchange rate at the reporting date. Non-monetary assets and liabilities that are measured 
+at fair value in a foreign currency are translated into the functional currency at the exchange rate when the 
+fair value was determined. Non-monetary items that are measured based on historical cost in a foreign 
+currency are translated at the exchange rate at the date of the transaction. Foreign currency differences are 
+generally recognised in profit or loss. 
+ 
+ 
+
+
+===== PAGE 29 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+27 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.5       Foreign currencies and operations (continued)   
+ 
+Foreign operations 
+ 
+The assets and liabilities of foreign operations and fair value adjustments arising on acquisition are 
+translated into USD at the exchange rates at the reporting date. The income and expenses of foreign 
+operations are translated to USD at the exchange rates at the dates of the transactions. 
+ 
+Foreign currency differences are recognised in other comprehensive income and accumulated in the foreign 
+currency translation reserve. 
+ 
+3.6 
+Employee benefits 
+ 
+Provision is made for the full amount of end of service indemnity due to employees in accordance with the 
+applicable Labour Law and is based on current remuneration and their period of service at the end of the 
+reporting year. 
+ 
+Short-term employee benefits 
+ 
+Short-term employee benefits are expensed as the related service is provided. A liability is recognised for 
+the amount expected to be paid if the Group has a present legal or constructive obligation to pay this amount 
+as a result of past service provided by the employee and the obligation can be estimated reliably. 
+ 
+Provision for end of service benefits 
+ 
+The Group’s net obligation in respect of long-term employee benefits is the amount of future benefit that 
+employees have earned in return for their service in the current and prior periods. That benefit is discounted 
+to determine its present value. Re-measurements are recognised in profit or loss in the period in which they 
+arise. 
+ 
+Share based payment  
+ 
+The Group participates in several share-based payment arrangements established and operated by the 
+Ultimate Parent Company, under which its employees are awarded shares in the Ultimate Parent Company 
+in return for their services to the Group. The Group classifies its share-based compensation programs as 
+equity settled as the Group has no obligation to settle the award on behalf of the Ultimate Parent Company. 
+ 
+The grant date fair value of equity-settled share-based payment arrangements granted to employees is 
+recognised as an expense, with a corresponding increase in the retained earning in equity over the vesting 
+period of the awards. The amount recognised as an expense is adjusted to reflect forfeited awards. 
+ 
+ 
+ 
+
+
+===== PAGE 30 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+28 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.7 
+Property and equipment  
+ 
+Items of property and equipment are measured at cost less accumulated depreciation and any impairment 
+losses. Subsequent expenditure is capitalised only if it is probable that the future economic benefits 
+associated with the expenditure will flow to the Group. All other repairs and maintenance are expensed 
+when incurred. Depreciation is calculated to write off the cost of items of property and equipment less their 
+estimated residual values using the straight-line method over their estimated useful lives, and is generally 
+recognised in profit or loss. 
+ 
+The estimated useful lives of significant items of property and equipment are as follows: 
+ 
+Years 
+Buildings 
+5-10 
+Leasehold improvements 
+2-10 
+Technical equipment and machineries 
+5 
+Office equipment and others 
+4-5 
+Vehicles fleet 
+3 
+Computer and IT equipment 
+3 
+ 
+Depreciation methods, useful lives and residual values are reviewed at each reporting date and adjusted if 
+appropriate. 
+ 
+An item of property and equipment is derecognised upon disposal or when no future economic benefits are 
+expected to arise from the continued use of the asset. The gain or loss arising on the disposal or retirement 
+of an asset is determined as the difference between the sales proceeds and the carrying amount of the asset 
+and is recognised in consolidated statement of profit or loss and other comprehensive income.  
+  
+3.8 
+Capital work in progress 
+ 
+Assets in the course of construction for supply or administrative purposes, or for purposes not yet 
+determined, are carried at cost, less any recognised impairment loss. Cost includes directly attributable 
+costs incurred and, for qualifying assets, borrowing costs capitalised in accordance with the Group’s 
+accounting policy. Depreciation of these assets is charged on the same basis as other property and 
+equipment, commences when assets are ready for their intended use. 
+ 
+3.9 
+Intangible assets 
+ 
+Intangible assets acquired separately 
+ 
+Intangible assets with finite useful lives that are acquired separately are carried at cost less accumulated 
+amortisation and accumulated impairment losses, if any. Amortisation is recognised on a straight-line basis 
+over the estimated useful life of the asset. The estimated useful life and amortisation method are reviewed 
+at the end of each reporting period, with the effect of any changes in estimate being accounted for on a 
+prospective basis. Intangible assets with indefinite useful lives that are acquired separately are carried at 
+cost less accumulated impairment losses, if any and tested for impairment annually. 
+ 
+The estimated useful lives for the interim period of intangible assets are as follows: 
+ 
+ 
+Years 
+Goodwill 
+Indefinite 
+Licenses and software 
+2-5 
+Development costs of internally generated intangible assets 
+1.5-2 
+Other intangible assets 
+2-5 
+ 
+ 
+
+
+===== PAGE 31 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+29 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.9 
+Intangible assets (continued) 
+ 
+Research and development expenditure on internally generated intangible assets 
+ 
+Expenditure on research activities is recognised in the consolidated interim statement of profit or loss and 
+other comprehensive income as incurred. Development expenditure is capitalized only if the expenditure 
+can be measured reliably, the product or process is technically and commercially feasible, future economic 
+benefits are possible, and the Group intends to and has sufficient resources to complete development and 
+to use the asset. Otherwise, it is recognised in consolidated interim statement of profit or loss and other 
+comprehensive income as incurred. Subsequent to initial recognition, development expenditure is 
+measured at cost less accumulated amortisation and any accumulated impairment losses. 
+ 
+Intangible assets acquired in a business combination. 
+ 
+Intangible assets acquired in a business combination and recognised separately from goodwill are 
+recognised initially at their fair value at the acquisition date (which is regarded as their cost). 
+ 
+Subsequent to initial recognition, intangible assets acquired in a business combination are reported at cost 
+less accumulated amortisation and accumulated impairment losses, on the same basis as intangible assets 
+that are acquired separately. 
+ 
+Goodwill arising on an acquisition of a business is carried at cost as established at the date of acquisition 
+of the business less accumulated impairment losses, if any.  
+ 
+For the purposes of impairment testing, goodwill is allocated to each of the Group’s cash-generating units 
+(or groups of cash-generating units) that is expected to benefit from the synergies of the combination.  
+ 
+3.10 
+      Impairment of non-financial assets including goodwill 
+ 
+A cash-generating unit to which goodwill has been allocated is tested for impairment annually, or more 
+frequently when there is an indication that the unit may be impaired. If the recoverable amount of the cash-
+generating unit is less than it carrying amount, the impairment loss is allocated first to reduce the carrying 
+amount of any goodwill allocated to the unit and then to the other assets of the unit pro rata based on the 
+carrying amount of each asset in the unit. Any impairment loss for goodwill is recognised directly in profit 
+or loss. An impairment loss recognised for goodwill is not reversed in subsequent periods.  
+ 
+Recoverable amount is the higher of fair value less costs to sell and value in use. In assessing value in use, 
+the estimated future cash flows are discounted to their present value using a discount rate that reflects 
+current market assessments of the time value of money and the risks specific to the asset. 
+ 
+On disposal of the relevant cash-generating unit, the attributable amount of goodwill is included in the 
+determination of the profit or loss on disposal. 
+ 
+At each reporting date, the Group reviews the carrying amounts of its non-financial assets, including 
+goodwill, to determine whether there is any indication that those assets have suffered an impairment loss. 
+If any such indication exists, the recoverable amount of the asset is estimated in order to determine the 
+extent of the impairment loss (if any). Where it is not possible to estimate the recoverable amount of an 
+individual asset, the Group estimates the recoverable amount of the cash-generating unit to which the asset 
+belongs. When a reasonable and consistent basis of allocation can be identified, corporate assets are also 
+allocated to individual cash-generating units, or otherwise they are allocated to the smallest cash-generating 
+units for which a reasonable and consistent allocation basis can be identified. 
+ 
+
+
+===== PAGE 32 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+30 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.10 
+     Impairment of non-financial assets including goodwill (continued) 
+ 
+Intangible assets, including goodwill, with indefinite useful lives and intangible assets not yet available for 
+use are tested for impairment at least annually, and whenever there is an indication that the asset may be 
+impaired. 
+ 
+Where an impairment loss on non-financial assets, excluding goodwill, subsequently reverses, the carrying 
+amount of the asset (cash-generating unit) is increased to the revised estimate of its recoverable amount, 
+but so that the increased carrying amount does not exceed the carrying amount that would have been 
+determined had no impairment loss been recognised for the asset (cash-generating unit) in prior years. A 
+reversal of an impairment loss is recognised immediately in profit or loss, unless the relevant asset is carried 
+at a revalued amount, in which case the reversal of the impairment loss is treated as a revaluation increase. 
+ 
+An impairment loss on goodwill is not subsequently reversed. 
+ 
+3.11 
+    Inventories 
+ 
+Inventories are stated at the lower of cost and net realizable value. Costs of inventories are determined on 
+a weighted average basis. Net realizable value represents the estimated selling price for inventories less all 
+estimated costs of completion and costs necessary to make the sale. 
+ 
+3.12 
+     Provisions 
+ 
+Provisions are recognised when the Group has a present obligation (legal or constructive) as a result of a 
+past event, it is probable that the Group will be required to settle the obligation, and a reliable estimate can 
+be made of the amount of the obligation. 
+  
+The amount recognised as a provision is the best estimate of the consideration required to settle the present 
+obligation at the end of the reporting period, taking into account the risks and uncertainties surrounding the 
+obligation. 
+  
+Where a provision is measured using the cash flows estimated to settle the present obligation, it carrying 
+amount is the present value of those cash flows discounted at pre-tax rate. When some or all of the 
+economic benefits required to settle a provision are expected to be recovered from a third party, the 
+receivable is recognised as an asset if it is virtually certain that reimbursement will be received, and the 
+amount of the receivable can be measured reliably. 
+ 
+ 
+
+
+===== PAGE 33 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+31 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.13 
+Financial instruments 
+ 
+Financial assets 
+ 
+Initial measurement of financial assets 
+ 
+At initial recognition, the Group measures a financial asset at its fair value plus, in the case of financial 
+assets not measured at fair value through profit or loss, transaction costs that are directly attributable to the 
+acquisition of the financial asset. Transaction costs of a financial asset measured at fair value through profit 
+or loss are recognised in profit or loss. A trade receivable is initially measured at the transaction price. 
+ 
+Classification of financial assets 
+ 
+The Group classifies financial assets at initial recognition as either financial assets measured at amortized 
+cost, financial assets measured at fair value through other comprehensive income (not applicable at the 
+reporting date), or financial assets measured at fair value through profit or loss. (not applicable at the 
+reporting date) 
+ 
+Financial assets measured at amortized cost.  
+ 
+A financial asset that meets both of the following conditions is classified as a financial asset measured at 
+amortized cost: 
+ 
+- 
+The financial asset is held within the Group’s business model of which the objective is to hold assets 
+in order to collect contractual cash flows; and 
+- 
+The contractual terms of the financial asset give rise on specified dates to cash flows that are solely 
+payments of principal and interest on the principal amount outstanding.  
+ 
+After initial recognition, the carrying amount of the financial asset measured at amortized cost is 
+determined using the effective interest method, net of impairment loss. 
+ 
+Within the Group, such financial assets are represented by cash and cash equivalents and receivables. Cash 
+and bank balances comprise cash on hand and demand deposits and other short-term highly liquid 
+investments that are readily convertible to a known amount of cash and are subject to an insignificant risk 
+of changes in value.  
+ 
+Trade receivables are non-derivative financial assets with fixed or determinable payments that are not 
+quoted in an active market. Receivables (including trade and other receivables), bank balances and cash 
+and others are measured at amortised cost using the effective interest method, less any impairment. Trade 
+receivables are typically unsecured and are derived from revenue earned from restaurants and other 
+customers. 
+ 
+Financial assets measured at FVOCI 
+ 
+Financial instruments that meet the following conditions are measured subsequently at fair value through 
+other comprehensive income (FVTOCI): 
+ 
+- 
+it is held within a business model whose objective is achieved by both collecting contractual cash flows 
+and selling financial assets; and  
+- 
+its contractual terms give rise on specified dates to cash flows that are solely payments of principal and 
+interest on the principal amount outstanding.  
+ 
+
+
+===== PAGE 34 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+32 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.13 
+Financial instruments (continued)  
+ 
+Financial assets (continued)  
+ 
+Financial assets measured at amortized cost (continued) 
+ 
+Financial assets measured at FVTPL 
+ 
+By default, all other financial assets are measured subsequently at fair value through profit or loss (FVTPL).   
+ 
+Impairment of financial assets 
+ 
+Lifetime ECL represents the expected credit losses that will result from all possible default events over the 
+expected life of a financial instrument. In contrast, 12-month ECL represents the portion of lifetime ECL 
+that is expected to result from default events on a financial instrument that are possible within 12 months 
+after the reporting date. 
+  
+The Group writes off a financial asset when there is information indicating that the counterparty is in severe 
+financial difficulty and there is no realistic prospect of recovery, e.g. when the counterparty has been placed 
+under liquidation or has entered into bankruptcy proceedings. Financial assets written off 
+may still be subject to enforcement activities under the Group’s recovery procedures, taking into account 
+legal advice where appropriate. Any recoveries made are recognised in profit or loss. 
+ 
+Derecognition 
+ 
+The Group derecognises financial assets when, and only when, the Group's obligations are discharged, 
+cancelled or have expired. The difference between the carrying amount of the financial liability 
+derecognised and the consideration paid and payable is recognised in profit or loss. 
+ 
+Financial liabilities and equity 
+ 
+Classification as debt or equity 
+ 
+Debt and equity instruments are classified as either financial liabilities or as equity in accordance with the 
+substance of the contractual arrangements and the definitions of a financial liability and an equity 
+instrument. 
+ 
+Equity instruments 
+ 
+An equity instrument is any contract that evidences a residual interest in the assets of an entity after 
+deducting all of its liabilities. Equity instruments issued by the Group are recognised at the proceeds 
+received, net of direct issue costs. 
+ 
+Financial liabilities 
+ 
+All financial liabilities are measured subsequently at amortised cost using the effective interest method.  
+ 
+However, financial liabilities that arise when a transfer of a financial asset does not qualify for 
+derecognition or when the continuing involvement approach applies, and financial guarantee contracts 
+issued by the Group, are measured in accordance with the specific accounting policies set out below. 
+ 
+ 
+ 
+
+
+===== PAGE 35 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+33 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.13 
+Financial instruments (continued)  
+ 
+Financial liabilities and equity (continued) 
+ 
+Financial liabilities measured subsequently at amortised cost. 
+ 
+Financial liabilities that are not (i) contingent consideration of an acquirer in a business combination, (ii) 
+held for-trading, or (iii) designated as at FVTPL, are measured subsequently at amortised cost using the 
+effective interest method.  
+The effective interest method is a method of calculating the amortised cost of a financial liability and of 
+allocating interest expense over the relevant period. The effective interest rate is the rate that exactly 
+discounts estimated future cash payments (including all fees and points paid or received that form an 
+integral part of the effective interest rate, transaction costs and other premiums or discounts) through the 
+expected life of the financial liability, or (where appropriate) a shorter period, to the amortised cost of a 
+financial liability. 
+ 
+Derecognition of financial liabilities 
+ 
+The Group derecognises financial liabilities when, and only when, the Group's obligations are discharged, 
+cancelled or have expired. The difference between the carrying amount of the financial liability 
+derecognised and the consideration paid and payable is recognised in profit or loss. 
+ 
+When the Group exchanges with the existing lender one debt instrument into another one with the 
+substantially different terms, such exchange is accounted for as an extinguishment of the original financial 
+liability and the recognition of a new financial liability. Similarly, the Group accounts for substantial 
+modification of terms of an existing liability or part of it as an extinguishment of the original financial 
+liability and the recognition of a new liability. It is assumed that the terms are substantially different if the 
+discounted present value of the cash flows under the new terms, including any fees paid net of any fees 
+received and discounted using the original effective rate is at least 10 per cent different from the discounted 
+present value of the remaining cash flows of the original financial liability. If the modification is not 
+substantial, the difference between: (1) the carrying amount of the liability before the modification; and (2) 
+the present value of the cash flows after modification should be recognised in profit or loss as the 
+modification gain or loss within other gains and losses. 
+ 
+Offsetting financial instruments 
+ 
+Financial assets and liabilities are offset and the net amount reported in the statement of financial position, 
+when there is a legally enforceable right to offset the recognised amounts and there is an intention to settle 
+on a net basis or realise the asset and settle the liability simultaneously. 
+ 
+
+
+===== PAGE 36 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+34 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.14 
+Income taxes 
+  
+Current tax 
+  
+Current tax is the expected tax payable on the taxable income for the period, using tax rates enacted or 
+substantively enacted at the reporting date, and any adjustment to tax payable in respect of previous 
+years. Current tax also includes any tax arising from dividends. Current tax assets and liabilities are 
+offset only if certain criteria are met. 
+  
+Deferred tax 
+  
+Deferred tax is recognised in respect of temporary differences between the carrying amounts of assets 
+and liabilities for financial reporting purposes and the amounts used for taxation purposes. 
+  
+Deferred tax is not recognised for: 
+  
+_           Temporary differences on the initial recognition of assets or liabilities in a transaction that is not 
+a business combination and that affects neither accounting nor taxable profit or loss; 
+_          Temporary differences related to investments in subsidiaries, associates and joint arrangements 
+to the extent that the Group is able to control the timing of the reversal of the temporary 
+differences and it is probable that they will not reverse in the foreseeable future; and 
+_           Taxable temporary differences arising on the initial recognition of goodwill. 
+  
+Deferred tax assets are recognised for unused tax losses, unused tax credits and deductible temporary 
+differences to the extent that it is probable that future taxable profits will be available against which they 
+can be used. 
+  
+Deferred tax is measured at the tax rates that are expected to be applied to temporary differences when they 
+reverse, using tax rates enacted or substantively enacted at the reporting date. The measurement of deferred 
+tax reflects the tax consequences that would follow from the manner in which the Group expects, at the 
+reporting date to recover or settle the carrying amount of its assets and liabilities. Deferred tax assets and 
+liabilities are offset only if certain criteria are met. 
+ 
+3.15 
+Earnings per share  
+ 
+Basic earnings per share is calculated by dividing the profit from continuing operations attributable to 
+ordinary shareholders by the weighted average number of ordinary shares outstanding during the period.  
+ 
+For diluted earnings per share, the weighted average number of ordinary shares in issue is adjusted to future 
+expected conversion of all dilutive potential ordinary shares. As the Group does not have any dilutive 
+potential, the basic and diluted earnings per share are the same. 
+ 
+ 
+
+
+===== PAGE 37 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+35 
+ 
+ 
+3. 
+Material accounting policy information (continued) 
+ 
+3.16 
+Operating segment 
+  
+The Group follows the management approach for segment reporting in accordance with IFRS 8 – Operating 
+Segments. Operating segments are determined based on the internal reporting structure used by the Chief 
+Operating Decision Maker (CODM), who is responsible for resource allocation, performance evaluation, 
+and strategic decision-making. In the case of the Group, Executive Management has ultimate decision-
+making authority and is identified as the CODM for the purposes of IFRS 8. 
+  
+Segments are identified based on the country level, as profitability and performance assessments are 
+reviewed and conducted at this level. Each country in which the Group operates is considered a separate 
+operating segment, and the internal management reporting structure is organized accordingly. 
+ 
+For aggregation purposes, the Group has considered the geographical characteristics, economic 
+environment, and the risks and characteristics of its business activities. Based on management's analysis, 
+the Gulf Cooperation Council (GCC) region, comprising UAE, Kuwait, Qatar, Bahrain and Oman, is 
+considered a single operating segment due to the similarity in economic characteristics and performance 
+across these countries. The GCC segment constitutes more than 75% of the Group's total revenue and 
+assets. 
+  
+In contrast, the Non-GCC countries (Egypt, Jordan, and Iraq) do not individually meet the 10% threshold 
+for revenue, assets, or profits. As such, these countries do not qualify as reportable segments, but are 
+disclosed under other segments. 
+ 
+4. 
+Judgements and use of estimates 
+ 
+In the application of the accounting policies, which are described in note 3 to these consolidated financial 
+statements, management is required to make judgements, estimates and assumptions about the carrying 
+amounts of assets and liabilities that are not readily apparent from other sources. The estimates and 
+associated assumptions are based on historical experience and other factors that are considered to be 
+relevant. Actual results may differ from these estimates. 
+ 
+The estimates and underlying assumptions are reviewed on an ongoing basis. Revisions to accounting 
+estimates are recognised in the period in which the estimate is revised if the revision affects only that 
+period, or in the period of the revision and future periods if the revision affects both current and future 
+periods.  
+ 
+The significant judgements and estimates made by management that have a significant risk of causing a 
+material adjustment to the carrying amounts of assets and liabilities within the next financial year are 
+described below: 
+ 
+ 
+
+
+===== PAGE 38 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+36 
+ 
+ 
+4. 
+Judgements and use of estimates (continued) 
+ 
+4.1  
+Critical judgements in applying accounting policies 
+ 
+Revenue recognition of commissions from marketplace services 
+ 
+The Group has assessed its role in the provision of food, groceries and other ordering services via its online 
+platforms and concluded that it acts as an agent. This assessment is based on the fact that the Group does 
+not have primary responsibility for fulfilling these orders, does not bear inventory risk, and does not have 
+discretion in setting the prices offered by restaurants or partners. Instead, the Group facilitates transactions 
+between orderer and restaurants or other partners and earns a commission as remuneration for its services. 
+  
+Revenue recognition of delivery services 
+ 
+The Group exercises judgment in determining whether it acts as a principal or an agent in relation to 
+logistics services not provided by restaurant or quick commerce partners. This assessment considers market 
+demand, operational efficiencies, and the evolving regulatory environment. Given the ongoing adaptation 
+of courier models, the Group evaluates the responsibilities of the parties involved in the delivery process. 
+Based on this assessment, the Group has concluded that it acts as a principal for organizing and providing 
+delivery services through its platforms, as it is primarily responsible for carrying out the delivery and 
+controls the delivery service before it is transferred to the orderer. 
+ 
+Determination of lease term and implicit interest rate 
+ 
+Lease contracts entered into by entities occasionally include extension options. The Group applies 
+judgment on whether exertion of extension options is reasonably certain. The Group also applies judgment 
+in determining the incremental borrowing rate in the lease.   
+ 
+Determining whether activities should be considered research activities or development activities 
+ 
+Activities which have been carried out merely to maintain an existing asset are expensed. The costs of 
+research activities related to development of new features are expensed whereas the costs incurred on 
+activities for development of new features within the platform are capitalized as it is probable that there 
+would be future economic benefits which would be derived from the new features. The management carries 
+out a review on a monthly basis to check the accuracy and completeness of the assets capitalized and cost 
+expensed. 
+ 
+Determination of cash generating unit for goodwill impairment 
+  
+The Group allocates goodwill acquired in a business combination to each of the cash-generating units 
+(CGUs) or groups of CGUs that are expected to benefit from the synergies of the combination. 
+
+
+===== PAGE 39 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+37 
+ 
+ 
+4. 
+Judgements and use of estimates (continued) 
+ 
+4.1 
+Critical judgements in applying accounting policies (continued) 
+ 
+Determination of cash generating unit for goodwill impairment (continued) 
+  
+For the purposes of impairment testing, the Group exercises judgement to determine the appropriate CGU 
+based on the internal management structure and the operational synergy expected from acquisitions. Each 
+CGU or group of CGUs to which goodwill is allocated must: 
+  
+•    Represent the lowest level within the Group at which the goodwill is monitored for internal 
+management purposes; and 
+•    Not be larger than an operating segment, as defined by IFRS 8 Operating Segments, before 
+aggregation. 
+  
+As the Group operates an online marketplace across multiple regions, the geographical segment structure 
+forms the basis for CGU identification. Specifically, the Group considers countries as its segments prior to 
+aggregation. 
+  
+Goodwill arising from the acquisition of a business in the UAE was allocated to Talabat UAE, as the 
+integration of customers into the platform generated synergies that were primarily realized in this market. 
+Similarly, goodwill related to the acquisition in Kuwait was allocated to Talabat Kuwait, as the synergies 
+were realized in this market. Both goodwill amounts were tested for impairment using the “value in use” 
+cash flows specific to each market. 
+  
+Given the synergies obtained in the UAE and Kuwait markets related to the historical acquisitions, goodwill 
+has been allocated to these countries, as the benefits of the acquisition were realized primarily in these 
+markets. Consequently, the UAE and Kuwait are considered distinct CGUs for the purpose of goodwill 
+allocation and impairment testing, consistent with the internal management reporting structure and segment 
+aggregation under IFRS 8. 
+ 
+Determining operating segments for reporting 
+  
+The determination of operating segments and the subsequent aggregation of those segments requires 
+significant management judgement. The Group's Executive Management assesses the disclosure of 
+information that enables users of the Group's interim financial statements to evaluate the nature and 
+financial effects of the business activities in which it engages and the economic environment in which it 
+operates including economic characteristics, risks, regulatory environment and performance across various 
+geographical locations to determine the most appropriate basis for segment reporting. 
+ 
+While each country is treated as a separate operating segment based on the Group's internal reporting 
+structure, judgement is applied in aggregating countries with similar economic environments. The GCC 
+region (UAE, Kuwait, Qatar, Bahrain, and Oman) has been identified as a single operating segment due to 
+the similar economic characteristics shared by these countries. These factors include shared market 
+conditions, consumer behavior, and business practices within the region, resulting in homogeneous 
+economic results for the Group. 
+  
+Management has also considered the investment decisions of users of the financial statements, who have 
+recently evaluated the nature and financial effects of the business activities at the aggregated level. This 
+supports the decision to present the GCC segment as a single reportable segment under IFRS 8, while the 
+Non-GCC countries are aggregated due to their individual insignificance in meeting the reportable segment 
+thresholds. 
+ 
+ 
+ 
+
+
+===== PAGE 40 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+38 
+ 
+ 
+4. 
+Judgements and use of estimates (continued) 
+ 
+4.2 
+Assumptions and estimation uncertainty 
+ 
+Goodwill impairment testing 
+ 
+Determination of a CGU’s recoverable amount for the purpose of impairment testing requires assumptions 
+and estimates, in particular on the Weighted Average Cost of Capital (WACC), future development of 
+EBITDA and revenue growth per annum over the planning period. While management believes that the 
+assumptions and estimates used are appropriate, any unforeseeable changes to these assumptions could 
+affect the Group’s financial position and financial performance. 
+ 
+Determining whether the conditions for recognising an internally generated intangible asset are met 
+requires assumptions about future market conditions, customer demand, and other developments. 
+ 
+Following conditions are considered for recognising an intangible asset: 
+ 
+a) Technical feasibility of completing the intangible asset so that it will be available for the use or sale; 
+b) The Group has intention to complete the asset and ability to use the asset; 
+c) Asset will generate future probable economic benefits; 
+d) The Group has availability of resource to complete and use the asset; and 
+e) Expenditure for development can be measured reliably. 
+ 
+All costs incurred are reviewed and any assumptions relating to future market conditions, customer demand 
+and other developments are considered before determining if the cost is to be recognised as an intangible 
+asset. 
+ 
+Direct and indirect costs to develop an asset are identifiable and those costs cannot be avoided as they are 
+necessary to the completion of it. The management carries out a feasibility study and acquires all necessary 
+approvals internally before incurring a particular cost. 
+ 
+Amortisation of intangible assets with finite useful lives 
+ 
+The determination of the useful lives of intangible assets with finite useful lives requires the use of 
+assumptions and estimates, which serve as the basis for calculating the appropriate amortisation charge. 
+These useful lives are regularly reviewed by the Group management and adjusted when necessary to reflect 
+any changes in circumstances or new information. 
+ 
+Useful lives of property and equipment 
+ 
+Property and equipment is depreciated over its estimated useful life, which is based on expected usage of 
+the asset and expected physical wear and tear which depends on operational factors. The management has 
+not considered any residual value as it is deemed immaterial. 
+ 
+Impairment of financial assets 
+ 
+The loss allowances for financial assets are based on assumptions about risk of default and expected loss 
+rates. The Group uses judgement in making these assumptions and selecting the inputs to the impairment 
+calculation, based on the Group’s past history, existing market conditions as well as forward looking 
+estimates at the end of each reporting period. Details of the key assumptions and inputs used are disclosed 
+in the relevant notes to the consolidated financial statements. 
+ 
+ 
+ 
+
+
+===== PAGE 41 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements 
+39 
+5.
+Property and equipment
+Buildings 
+and 
+leasehold 
+improvements 
+Technical 
+equipment 
+and 
+machineries 
+Office 
+equipment 
+and others 
+Vehicle fleet 
+Computers 
+and IT 
+equipment Capital work 
+in progress 
+Total 
+USD 
+USD 
+USD 
+USD 
+USD 
+USD 
+USD 
+Cost 
+Acquisition through business combination (Note 33) 
+160,297,124 
+28,968,486 
+20,999,326 
+22,424,766 
+14,541,487 
+6,489,930 
+253,721,119 
+Additions 
+13,779,744 
+1,762,934 
+486,046 
+-
+944,365
+4,363,784 
+21,336,873 
+Reclassifications 
+1,242,476 
+113,689 
+1,398,197 
+30,851 
+97,438 
+(2,882,651) 
+   - 
+Disposals/write off 
+-
+(87,466)
+(27,274) 
+(831,580) 
+(50,019) 
+(231,853) 
+(1,228,192) 
+Termination of leases (Note 27) 
+(4,338,887) 
+- 
+- 
+- 
+- 
+-
+(4,338,887)
+Translation differences 
+(1,677,398) 
+(372,721) 
+(285,444) 
+(38,097) 
+(174,289) 
+(58,947) 
+(2,606,896) 
+As at 31 December 2024 
+169,303,059 
+30,384,922 
+22,570,851 
+21,585,940 
+15,358,982 
+7,680,263 
+266,884,017 
+Accumulated depreciation: 
+Acquisition through business combination (Note 33) 
+(50,750,277) 
+(19,584,972) 
+(12,418,002) 
+(11,864,357) 
+(10,679,825) 
+- (105,297,433)
+Depreciation (a) 
+(7,550,992) 
+(1,360,367) 
+(765,325) 
+(785,166) 
+(693,901) 
+-
+(11,155,751)
+Disposals/write off 
+-
+22,511
+10,625 
+831,580 
+20,342 
+-
+885,058
+Termination of leases (Note 27) 
+2,409,576 
+- 
+- 
+- 
+- 
+-
+2,409,576
+Translation differences 
+454,724 
+188,036 
+135,495 
+33,447 
+104,542 
+-
+916,244
+As at 31 December 2024 
+(55,436,969) 
+(20,734,792) 
+(13,037,207) 
+(11,784,496) 
+(11,248,842) 
+- (112,242,306)
+Carrying amount as at 31 December 2024 
+113,866,090 
+9,650,130 
+9,533,644 
+9,801,444 
+4,110,140 
+7,680,263 
+154,641,711 
+(a)
+Depreciation has been apportioned as follows in the consolidated interim statement of profit or loss and other comprehensive income: 
+2024
+2023
+USD
+USD 
+Cost of sales 
+(831,436)
+-
+General administrative expense 
+(10,324,315)
+-
+(11,155,751)
+-
+
+
+===== PAGE 42 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+40 
+ 
+ 
+6. 
+ Intangible assets and goodwill 
+ 
+ 
+Goodwill 
+Licenses 
+Software 
+Development 
+costs of 
+internally 
+generated 
+intangible 
+assets 
+Other 
+intangible 
+assets 
+Total 
+ 
+USD 
+USD 
+USD 
+USD 
+USD 
+USD 
+Cost 
+ 
+ 
+ 
+ 
+ 
+ 
+Acquisition through business combination (Note 
+33) 
+302,309,699 
+280,344 
+1,501,108 
+18,216,070 
+8,948,887 331,256,108 
+Additions 
+- 
+- 
+4,938 
+1,813,879 
+- 
+1,818,817 
+Reclassifications 
+- 
+- 
+- 
+8,940,905 
+(8,940,905) 
+- 
+Translation differences 
+- 
+(2,636) 
+(13,846) 
+(83,546) 
+(5,480) 
+(105,508) 
+As at 31 December 2024 
+302,309,699 
+277,708 
+1,492,200 
+28,887,308 
+2,502 332,969,417 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Accumulated depreciation: 
+ 
+ 
+ 
+ 
+ 
+ 
+Acquisition through business combination (Note 
+33) 
+- 
+(280,344) 
+(1,271,789) 
+(11,880,522) 
+- (13,432,655) 
+Amortisation (a) 
+- 
+- 
+(54,531) 
+(1,160,040) 
+- 
+(1,214,571) 
+Translation differences 
+- 
+2,636 
+15,295 
+17,080 
+- 
+35,011 
+As at 31 December 2024 
+- 
+(277,708) 
+(1,311,025) 
+(13,023,482) 
+- (14,612,215) 
+Carrying amount as at 31 December 2024 
+302,309,699 
+- 
+181,175 
+15,863,826 
+2,502 318,357,202 
+ 
+(a) 
+Amortisation has been apportioned as follows in the consolidated interim statement of profit or loss and other comprehensive income: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2024 
+2023 
+ 
+ 
+USD USD 
+General administrative expense 
+ 
+(1,214,571) 
+ 
+ 
+Goodwill background 
+ 
+Impairment testing for CGUs containing goodwill 
+  
+For the purpose of impairment testing, following goodwill has been allocated to the Group’s CGUs. 
+ 
+ 
+ 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Talabat UAE 
+ 
+209,055,619  
+Talabat Kuwait 
+ 
+93,254,080  
+ 
+ 
+302,309,699 
+- 
+ 
+In line with the requirements of IAS 36, the Group conducted annual impairment testing for both of the above 
+allocated Goodwill. Based on the management’s assessment, the recoverable amount was assessed as being higher 
+than its carrying value, accordingly no impairment was recognised at the reporting date. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 43 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+41 
+ 
+ 
+6. 
+Intangible assets and goodwill (continued) 
+ 
+The value in use was calculated by applying the discounted cash flow method. The basis for determining 
+the expected future cash flow is a detailed planning period of five years for the free cash flows.  
+ 
+The following table shows the range of key assumptions of Talabat UAE and Talabat Kuwait for 2024: 
+ 
+For calculating EBITDA and revenue budgets, the process is based on a structured bottom-up approach 
+that is carried out once a year. The overall process is directed by regional management via top-down target-
+setting in the form of specific KPIs. The respective local management then prepares the budget and adjusts 
+it in an iterative process together with regional management. The business plan is prepared by regional 
+management. 
+ 
+Local management teams use cohort models for revenue planning. The cohort models analyse the past 
+order behaviour of (local) end customers and apply statistical methods to forecast the future behaviour of 
+existing end customers. Future revenue from new end customers is derived from the planned marketing 
+expenses and the development of estimated acquisition costs per new end customer. The key inputs of the 
+cohort models include the customer retention/reorder rate, customer activity rate, average order size, and 
+commission rates. 
+ 
+The discount rate was a post-tax measure estimated based on the historical industry weighted average cost 
+of capital. 
+ 
+As part of the impairment testing in 2024, a sensitivity analysis was conducted with regard to the headroom. 
+Management noted that any reasonably possible change (+/- 5%) in the key assumptions shown above will 
+not lead to a situation where the carrying value of the cash generating unit exceeds its value in use.  
+ 
+ 
+2024 
+ 
+ 
+% 
+ 
+Revenue growth p. a. in planning period (CAGR) 
+14-16 
+ 
+EBITDA margin in planning period 
+20-21 
+ 
+Terminal value revenue growth 
+1 
+ 
+EBITDA margin after end of planning period 
+17-20 
+ 
+Discount rate in planning period/WACC (post tax) 
+ 12 
+ 
+
+
+===== PAGE 44 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+42 
+ 
+ 
+7. 
+ Trade and other receivables 
+ 
+ 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Trade receivables 
+ 
+31,642,686  
+Receivable from riders 
+ 
+12,924,050  
+Gross trade receivables 
+ 
+44,566,736  
+Less: Allowance for expected credit loss (Note 30) 
+ 
+(10,144,921)  
+Net trade receivables 
+ 
+34,421,815  
+Receivable from payment service providers (a) 
+ 
+52,723,715  
+Prepayments 
+ 
+26,132,787       
+Deposits 
+ 
+6,765,800  
+Loans to employees 
+ 
+656,100  
+Other receivables 
+ 
+18,472,902  
+Total 
+ 
+139,173,119  
+ 
+ 
+  
+there of non-current 
+ 
+6,090,950  
+there of current 
+ 
+133,082,169  
+ 
+ 
+Information about the Group’s exposure to credit and market risks, and impairment losses for trade 
+receivables and other receivables is included in Note 30. 
+ 
+(a)  As an online delivery service platform, a significant portion of the Group’s Gross Merchandise Value 
+(GMV) is collected through online payments made via debit and credit cards, reflecting the Group’s 
+high level of online penetration. The Group typically receive funds from its payment service providers 
+and payment gateways within one to two days (T+1 or T+2) depending on the country of operation. 
+These accumulated balances are subsequently settled and distributed to the Group’s restaurant partners 
+following the clearing of funds from payment service providers usually on a weekly basis, depending 
+on the specific country of operation. 
+ 
+There is no history of default of these receivables. and hence no expected credit loss provision was 
+considered. 
+ 
+Movement in provision for expected credit loss of trade receivables, receivable from riders and other 
+receivables is as follows: 
+ 
+ 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Acquisition through business combination 
+ 
+(7,949,445) - 
+Charge during the period (Note 21) 
+ 
+(3,097,431) 
+- 
+Utilized during the period 
+ 
+894,993 
+- 
+Translation differences 
+ 
+6,962 
+- 
+Balance as at 31 December 2024 
+ 
+(10,144,921) 
+- 
+ 
+ 
+
+
+===== PAGE 45 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+43 
+ 
+ 
+8. 
+ Inventories 
+ 
+ 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Trading inventories 
+ 
+39,771,744 
+ 
+Rider equipment 
+ 
+2,296,726 
+ 
+Others 
+ 
+563,548 
+ 
+Total 
+ 
+42,632,018 
+ 
+ 
+ 
+ 
+ 
+9. 
+ Related party transactions and balances  
+ 
+The Group enters into transactions with companies and entities that fall within the definition of a related 
+party as contained in IAS 24 Related Party Disclosures. Related parties comprise companies and entities 
+under common ownership and/or common control, key management personnel and shareholders. The 
+management decides on the terms and conditions of the transactions and services received/rendered from/to 
+related parties as well as on other charges. 
+ 
+Balance included in the consolidated statement of financial position as of 31 December 2024: 
+ 
+ 
+ 
+Ultimate 
+Parent 
+Company 
+Companies 
+Under 
+Common 
+Control 
+Total 
+ 
+ 
+USD 
+USD 
+USD 
+ 
+ 
+ 
+ 
+ 
+Due from related parties (a) 
+ 
+20,947,803 
+474,650 21,422,453 
+Due to related parties (a) 
+ 
+15,128,991 
+21,381,630 36,510,621 
+ 
+(a) Due to and from related parties are priced at a mutually agreed terms and are to be settled in cash within 
+12 months of the reporting date. None of these balances are secured. No exposure has been recognised 
+in the current year for bad or doubtful debts in respect of amounts owed by related parties. 
+ 
+ 
+Transactions included in the consolidated statement of profit or loss and other comprehensive income for 
+the period since inception on 3 September 2024 till 31 December 2024: 
+ 
+ 
+Ultimate 
+Parent 
+Company 
+Companies 
+Under 
+Common 
+Control 
+Associate 
+Company 
+Total 
+ 
+USD 
+USD 
+USD 
+USD 
+Other income from service allocation (Note 20) 
+5,907,589 
+1,720,158 
+- 
+7,627,747 
+Shared group cost charges (Note 21) 
+1,299,769 
+(24,380,630) 
+- (23,080,861) 
+Delivery costs * 
+- 
+- (6,305,176) 
+(6,305,176) 
+ 
+Transactions with related parties are priced at a mutually agreed terms and are in normal course of 
+business. 
+ 
+ *  Transactions include the logistic services provided by Zone elite investment LLC (Associate) to group 
+subsidiaries in the UAE amounting USD 6,305,167 for the period. At 31 December 2024 the liability to 
+Zone elite investment LLC (Associate) amounted to USD 1,826,803. The Group has significant influence 
+over the associate however, as of 31 December 2024 and 30 September 2024 management assessed that 
+the investment in associate was not recoverable and accordingly, was recognised at Nil value. 
+
+
+===== PAGE 46 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+44 
+ 
+ 
+9. 
+Related party transactions and balances (continued) 
+ 
+Compensation of key management personnel 
+ 
+The remuneration of members of key management during the period was as follows: 
+ 
+ 
+ 
+USD 
+USD 
+Short-term benefits 
+ 
+1,595,292 
+- 
+Share based compensation 
+ 
+1,478,824 
+- 
+Employees’ end of service benefits 
+ 
+98,265 
+- 
+Total 
+ 
+3,172,381 
+- 
+ 
+The above shows the compensation received by key management personnel (Executive Management Team 
+& Senior Management) who were actively engaged with the Group throughout the fiscal period.  
+ 
+10. 
+ Cash and cash equivalents 
+ 
+ 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Cash at banks (a) 
+ 
+416,884,612  
+Cash in hand 
+ 
+1,752,865  
+Total 
+ 
+418,637,477  
+ 
+(a) The Group’s cash at bank are amounting to USD 416,884,612 at 31 December  2024. These are held 
+with financial institutions, which are rated AA- to AA+, based on S&P Global Ratings. Impairment on 
+cash at bank has been measured on a 12-month expected loss basis and reflects the short maturities of 
+the exposures. The group considers that these have low credit risk based on the external credit ratings 
+of the counterparties. 
+ 
+11. 
+ Share capital  
+ 
+ 
+2024 
+2024 
+ 
+ 
+Ordinary 
+shares 
+USD 
+ 
+ 
+ 
+ 
+Issued for cash (refer i below) 
+ 
+100 
+100 
+Issued in business combination (refer ii below) 
+ 
+253,649,900 
+253,649,900 
+In issue at 31 December – fully paid 
+ 
+253,650,000 
+253,650,000 
+ 
+Nominal value per share before stock split 
+ 
+1 
+1 
+ 
+Shares re-denomination from USD to AED 
+ 
+ 
+Ordinary 
+shares 
+AED 
+Nominal value per share 
+ 
+1 
+0.04 
+Ordinary shares issued after share split (refer iii below)  
+23,288,240,625 
+931,529,625 
+ 
+i) On incorporation in the Abu Dhabi Global Market (“ADGM”) on 3 September 2024, the company issued 
+100 ordinary shares with a nominal value of USD 1.00 each, which were fully subscribed by the Parent 
+Company. 
+ 
+ii) On 26 September 2024, the Company issued 178,040,951 ordinary shares with a nominal value of USD 
+1.00 each to the Parent in connection with the transfer of Delivery Hero FZ LLC to the Company. This 
+increased the Company’s share capital to USD 178,041,051 consisting of 1.00 ordinary shares of USD 1.00 
+each. 
+ 
+
+
+===== PAGE 47 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+45 
+ 
+ 
+11.      Share capital (continued) 
+ 
+Additionally, 75,608,949 ordinary shares with a nominal value of USD 1.00 each were issued to the Parent 
+Company in connection with the transfer of certain subsidiaries to Delivery Hero FZ LLC. Following this 
+issuance, the Company’s share capital increased to USD 253,650,000 consisting of ordinary shares of USD 
+1.00 each. 
+ 
+iii) On 9 October 2024, Shares were re-denominated from USD to AED, accordingly the registered share 
+capital of the Company was changed to AED 931,529,625 (USD 253,650,000). Furthermore, the nominal 
+value of each share was also changed from USD 1 to AED 0.04 and accordingly the Company re-issued 
+23,288,240,625 ordinary shares of AED 0.04 each (USD 0.01). 
+ 
+12. 
+ Trade and other payables 
+ 
+ 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Liabilities to restaurants 
+ 
+103,216,998 
+ 
+Liabilities for outstanding invoices 
+ 
+109,816,990 
+ 
+Trade payables 
+ 
+110,087,286 
+ 
+Liabilities to riders 
+ 
+218,247 
+ 
+Staff related accruals 
+ 
+38,497,985 
+ 
+Other payables 
+ 
+29,166,568 
+ 
+Total 
+ 
+391,004,074 
+ 
+ 
+ 
+ 
+ 
+thereof non-current 
+ 
+966,622 
+ 
+thereof current 
+ 
+390,037,452 
+ 
+ 
+The Group has financial risk management policies in place to ensure that all payables are paid within the 
+credit timeframe. 
+ 
+13. 
+ Lease liabilities 
+ 
+The movement in the lease liabilities is as follows: 
+ 
+ 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Acquisition through business combination (Note 33) 
+ 
+92,490,561 
+ 
+Additions 
+ 
+12,964,167  
+Related to early termination of right-of-use assets 
+ 
+(1,929,311) 
+ 
+Interest expense (Note 22) 
+ 
+1,432,182 
+ 
+Lease payments 
+ 
+(7,142,190) 
+ 
+Translation difference 
+ 
+(1,285,869) 
+ 
+As at 31 December 2024 
+ 
+96,529,540 
+ 
+ 
+ 
+ 
+ 
+thereof non-current 
+ 
+76,131,392  
+thereof current 
+ 
+20,398,148 
+ 
+ 
+During the period, the Group derecognised lease liabilities amounting to USD 1,929,311 as a result of 
+termination of lease contracts prior to the end of the lease term. Lease liabilities are monitored within the 
+Group’s treasury function. 
+ 
+
+
+===== PAGE 48 =====
+
+46 
+2024
+2023
+USD
+USD
+1,432,182
+6,488,608
+264,013
+2024 
+2023 
+USD
+USD
+5,710,008
+1,432,182 
+2024
+2023
+USD
+USD
+17,786,656
+1,898,901 
+(732,056)
+(23,919)
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements 
+13. 
+Lease liability (continued)
+  Amounts recognised in profit or loss 
+Interest expense on lease liabilities
+Depreciation on right-of-use assets (Note 27)
+Short term and low value leases (Note 19)
+  Amounts recognised in statement of cash flow 
+Payment of principal portion lease liabilities
+Payments of interest on lease liabilities
+14. 
+Employees’ end of service benefits
+Acquisition through business combination (Note 33)
+Charge for the period 
+Payments during the period
+Translation difference
+As at 31 December 2024
+18,929,582
+Principal assumptions used in determining benefit obligations for the Company are shown below: 
+2024
+Discount rate
+4.75% _ 7.93%
+Salary increase rate
+3%
+Normal retirement age (years)
+60
+2024
+USD
+Current service cost
+2,109,022
+Finance cost
+227,746
+  The expected maturity analysis of undiscounted employee benefits obligations is as follows: 
+Less than 1 year
+3,650,304
+Between 1 – 5 years
+9,005,581
+Over 5 years
+6,615,524
+
+
+===== PAGE 49 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+47 
+ 
+ 
+14.      Employees’ end of service benefits (continued) 
+ 
+ A quantitative sensitivity analysis for significant assumptions on the defined benefit obligation as at 31 
+December 2024 is, as shown below: 
+ 
+ 
+Impact on 
+defined 
+benefit 
+obligation 
+AED 
+Discount rate: 
+ 
+0.1% increase 
+ 
+(888,004) 
+0.1% decrease 
+ 
+985,266 
+ 
+ 
+ 
+Salary increase rate: 
+ 
+ 
+0.1% increase 
+ 
+1,086,826 
+0.1% decrease 
+ 
+(995,782) 
+ 
+ The sensitivity analyses above have been determined based on a method that extrapolates the impact on the 
+defined benefit obligation as a result of reasonable changes in key assumptions occurring at the end of the 
+reporting period. The sensitivity analyses are based on a change in a significant assumption, keeping all 
+other assumptions constant. The sensitivity analysis may not be representative of an actual change in the 
+defined benefit obligation as it is unlikely that changes in assumptions would occur in isolation of one 
+another. 
+ 
+15. 
+ Revenue 
+ 
+ 
+For the 
+period ended 
+31 December 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Commission fees 
+ 
+290,787,842 
+ 
+Delivery fees 
+ 
+160,717,059 
+ 
+Advertising and listing fees 
+ 
+66,169,147 
+ 
+Service fees 
+ 
+30,262,859 
+ 
+Subscription fees 
+ 
+9,728,074 
+ 
+Other direct income 
+ 
+265,013,936 
+ 
+Less: 
+ 
+ 
+ 
+- Vouchers 
+ 
+(14,297,092)  
+- Other revenue reduction 
+ 
+(7,112,995)  
+Total 
+ 
+801,268,830 
+ 
+ 
+ Timing of revenue recognition 
+ 
+ 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Revenue recognised at point in time 
+ 
+725,371,609 
+ 
+Revenue recognised over time 
+ 
+75,897,221 
+ 
+ 
+ 
+801,268,830  
+ 
+The following table provides information about receivables and payables from contract with customers. 
+ 
+ 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Receivables included in “trade receivables” (Note 7) 
+ 
+44,566,736 
+ 
+Payables to restaurants included in “ trade and other 
+payables “ (Note 12) 
+ 
+103,216,998 
+ 
+ 
+
+
+===== PAGE 50 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+48 
+ 
+ 
+16. 
+  Cost of sales 
+ 
+ 
+For the 
+ period ended 
+31 December 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Delivery expenses 
+ 
+(315,301,219)  
+Order processing cost 
+ 
+(36,551,546)  
+Other direct cost * 
+ 
+(194,388,247)  
+Total 
+ 
+(546,241,012)  
+ 
+* Other direct costs include costs of groceries, payment service providers, other overheads and salaries and 
+other benefits of staff that are directly related to the generation of revenue. 
+ 
+17. 
+  Marketing Expenses 
+ 
+ 
+For the 
+period ended 
+31 December 
+2024 
+2022 
+ 
+ 
+USD 
+USD 
+Restaurant acquisition (a) 
+ 
+(16,491,030) 
+ 
+Customer acquisition (b) 
+ 
+(13,749,610) 
+ 
+Other marketing expenses (c) 
+ 
+(6,741,031) 
+ 
+Total 
+ 
+(36,981,671) 
+ 
+ 
+(a)  Restaurant acquisition costs relate to general support to restaurants’ sales. 
+(b) Customer acquisition costs include television, radio, offline marketing, search engine marketing     
+(SEM) and other costs related to social media, display, and mobile marketing. 
+(c) Other marketing expenses mainly include personnel costs for salaries and wages, expenses for    
+influencers, vendor branding, marketing tools and research and sponsorships costs. 
+ 
+18. 
+  IT Expenses 
+ 
+ 
+For the 
+period ended 
+31 December 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Personnel expenses 
+ 
+(15,583,778) 
+ 
+Other non-personnel IT expenses 
+ 
+(1,469,343) 
+ 
+Total 
+ 
+(17,053,121) 
+ 
+ 
+IT expenses are primarily associated with research focusing on platform and product innovation. 
+ 
+ 
+
+
+===== PAGE 51 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+49 
+ 
+ 
+19. 
+  General administrative expenses 
+ 
+ 
+For the 
+period ended 
+31 December 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Personnel expenses 
+ 
+(20,993,948) 
+ 
+Share-based compensation (Note 26) 
+ 
+(5,793,284) 
+ 
+Depreciation and amortisation 
+ 
+(11,538,886) 
+ 
+Consulting and professional services 
+ 
+(2,450,735) 
+ 
+Other (non-income) taxes 
+ 
+(750,113) 
+ 
+Other office expenses 
+ 
+(2,193,920) 
+ 
+Travel expenses 
+ 
+(719,784) 
+ 
+Insurances 
+ 
+(376,347) 
+ 
+Telecommunications 
+ 
+(681,545) 
+ 
+Other HR and recruiting costs 
+ 
+(276,890) 
+ 
+Bank charges 
+ 
+(425,753) 
+ 
+Rent and lease expenses (Note 13) 
+ 
+(264,013) 
+ 
+Miscellaneous 
+ 
+(2,879,325) 
+ 
+Total 
+ 
+(49,344,543) 
+ 
+ 
+20. 
+  Other income 
+ 
+ 
+For the 
+period ended 
+31 December 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Other income from service allocation (Note 9) 
+ 
+7,627,747 
+ 
+Gains on disposal of property and equipment 
+ 
+477,999 
+ 
+Total 
+ 
+8,105,746 
+ 
+ 
+21. 
+  Other expenses and impairment 
+ 
+ 
+For the 
+period ended 
+31 December 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Shared group cost (a) 
+ 
+(23,080,861) 
+ 
+Other expenses 
+ 
+(2,470,136) 
+ 
+Provision for expected credit loss (Note 7) 
+ 
+(3,097,431) 
+ 
+Total 
+ 
+(28,648,428) 
+ 
+ 
+(a) Shared group cost mainly represents charges in relation to the use of global services, as disclosed in 
+note 9. 
+ 
+22. 
+ Net finance income 
+ 
+ 
+For the 
+period ended 
+31 December 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Interest income 
+ 
+1,993,822 
+ 
+Interest expense on lease liabilities (Note 13) 
+ 
+(1,432,182) 
+ 
+Total 
+ 
+561,640 
+ 
+
+
+===== PAGE 52 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+50 
+ 
+ 
+23. 
+ Income tax credit, net  
+ 
+23.1    Income tax recognised in profit or loss 
+ 
+ 
+For the 
+period ended 
+31 December 
+2024 
+2023 
+ 
+ 
+USD 
+AED 
+Current tax 
+ 
+ 
+ 
+Current tax expense for the current period 
+ 
+(10,326,845)  
+ 
+ 
+ 
+ 
+Deferred tax 
+ 
+ 
+ 
+Recognition of previously unrecognized deductible 
+temporary differences 
+ 
+12,967,733  
+ Recognition of previously unrecognized tax losses 
+ 
+2,724,930  
+Total deferred tax credit recognised 
+ 
+15,692,663  
+Total income tax credit during the period 
+ 
+5,365,818  
+ 
+23.2    Reconciliation of effective tax rate: 
+ 
+ 
+ 
+For the 
+period ended 
+31 December 
+2024 
+2023 
+ 
+ 
+USD 
+AED 
+Profit before tax (A) 
+ 
+132,552,719  
+Tax at the Company’s domestic rate of 9% 
+ 
+(11,929,745)  
+Effect of tax rates in foreign jurisdictions 
+ 
+3,947,400  
+Withholding taxes 
+ 
+(2,344,500)  
+Deferred income taxes 
+ 
+15,692,663  
+Total tax expense (B) 
+ 
+5,365,818  
+Effective tax rate (B/A) 
+ 
+(4.05%)  
+ 
+23.3    Movement in deferred tax asset 
+ 
+The Group has recognized a deferred tax asset related to temporary differences arising from unrealized 
+foreign exchange losses. These losses are expected to be realized in the foreseeable future. 
+ 
+ 
+ 
+2024 
+2023 
+ 
+ 
+USD 
+AED 
+Recognised during the period 
+ 
+15,692,663  
+Adjusted against tax charge for the period 
+ 
+(2,467,964)  
+Translation differences 
+ 
+(1,221,540)  
+Total deferred tax assets As at 31 December 2024 
+ 
+12,003,159  
+ 
+ 
+ 
+
+
+===== PAGE 53 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+51 
+ 
+ 
+23.     Income tax (continued) 
+ 
+Recent changes in tax laws in the markets where the Group operates 
+ 
+On 9 December 2022, the UAE Ministry of Finance released Federal Decree-Law No 47 of 2022 on the 
+Taxation of Corporations and Businesses, Corporate Tax Law (‘CT Law’) to enact a new CT regime in the 
+UAE.  
+ 
+The new CT regime has become effective for accounting periods beginning on or after 1 June 2023. The 
+taxable income of the entities that are in scope for UAE CT purposes is subject to 9% CT rate. 
+ 
+On 23 May 2023, the International Accounting Standards Board (IASB) issued amendments to IAS 12 
+‘Income taxes’ introducing a mandatory temporary exception to the requirements of IAS 12 under which 
+an entity does not recognise or disclose information about deferred tax assets and liabilities related to the 
+Pillar Two rules. In line with IAS 12 (as amended), the Group has applied the exception with regards to 
+recognizing and disclosing information about deferred tax assets and liabilities related to Pillar Two income 
+taxes 
+ 
+Domestic Minimum Top-Up Tax 
+ 
+Bahrain has enacted the Domestic Minimum Top-up Tax (DMTT) at 15% rate for multinational enterprises 
+(MNEs), effective from 1 January 2025. 
+ 
+Subsequent to the year end, UAE has also enacted the Domestic Minimum Top-up Tax (DMTT) at 15% 
+rate for multinational enterprises (MNEs), effective from 1 January 2025. 
+ 
+Additionally, Kuwait and Qatar (current tax of 10%)  have announced the introduction of a Domestic 
+Minimum Top-up Tax (DMTT) at 15%, which shall take effect for financial years starting on or after 1 
+January 2025. 
+ 
+The Group is currently assessing the potential impact on its consolidated financial statements for the period 
+beginning 1 January 2025 onwards. 
+ 
+24. 
+ Earnings per share 
+ 
+ 
+For the 
+ period ended 
+31 December 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Net profit for the period 
+ 
+137,918,537  
+ 
+ 
+ 
+ 
+Weighted average number of shares outstanding at the 
+end of the period: * 
+ 
+ 
+ 
+- Effect of shares issued at inception 
+ 
+1,760  
+- Effect of shares issued related to business combination 
+in September 2024 
+ 
+18,824,661,172  
+Total 
+ 
+18,824,662,932  
+Basic and diluted earning per share 
+ 
+0.01  
+ 
+* Weighted average number of shares have been adjusted for shares split (refer note 11). 
+ 
+
+
+===== PAGE 54 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+52 
+ 
+ 
+25. 
+Contingent liabilities and guarantees  
+ 
+During the period, one of the Group entities entered a contract for the construction of a solar energy project. 
+As a part of the contractual obligations, the entity issued a performance guarantee in favor of the service 
+provider. The service provider has acquired two plots of land for the project, with the legal titles of these 
+plots held in the name of the entity. As at 31 December 2024, the total contract value amounted to USD 
+1,927,543. 
+ 
+Except for the ongoing business obligations which are under normal course of business, there has been no 
+other known capital commitment on Group's financial statements as at reporting date. As at 31 December 
+2024, in addition to the above, the outstanding bank guarantees issued on behalf of the certain Group 
+entities amounted to USD 7,684,222. 
+ 
+26. 
+ Share based payments 
+ 
+The Ultimate Parent Company has been operating share-based payment programs since 2011. As at 31 
+December 2024, the Group is participating in the following share-based payment arrangements managed 
+by the Ultimate Parent Company. 
+ 
+26.1 
+Long-term incentive plan  
+ 
+Terms and conditions 
+ 
+Ultimate Parent Company is operating a long-term incentive plan (LTIP) consisting of two types of awards: 
+Restricted Stock Plan (RSP) and Stock Option Program (SOP). Eligible participants are the management 
+board, managing directors of certain subsidiaries, other members of the management, as well as certain 
+employees. The Ultimate Parent Company commits to award restricted stock units (RSUs) and stock 
+options based of a certain fixed euro amount per year-over-the year for four years. The award consists of 
+individual annual tranches that are awarded to the participants in a single award agreement in year one. 
+ 
+Measurement of fair values 
+ 
+The grant date fair value of the awards is a contractually fixed euro value. The instruments are vested in 
+instalments over the one year or quarterly vesting period, based on the contract with employees. As a result, 
+the total cost recognised each year will be different over the vesting period, which will result in recognition 
+of a higher proportion of cost in the early years of the overall plan. Additionally, the stock options also 
+have a non-market based performance condition which the Ultimate Parent Company is expected to meet. 
+ 
+ 
+ 
+2024 
+ 
+ 
+ 
+Number of 
+options 
+Weighted 
+average 
+exercise price 
+Number of 
+RSUs 
+ 
+ 
+ 
+EURO 
+ 
+Outstanding as at September 30 
+ 
+254,883 
+53.28 
+903,294 
+Granted during the period* 
+ 
+- 
+- 
+37,200 
+Forfeited during the period 
+ 
+- 
+- 
+(24,203) 
+Exercised/released during the period 
+ 
+- 
+- 
+(206,410) 
+Outstanding as at 31 December 
+ 
+254,883 
+53.28 
+709,881 
+ 
+ 
+* Reflects number of options and shares fixed at the reporting date. 
+ 
+ 
+ 
+
+
+===== PAGE 55 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+53 
+ 
+ 
+26.       Share based payments (continued) 
+ 
+26.1 
+Long-term incentive plan (continued) 
+ 
+The options outstanding as at December 31, 2024 had strike prices between Euro 28.68 and Euro 122.14 
+respectively. and a weighted average remaining contractual life of 24 months . The plan contributed USD 
+5,255,055 of expenses in 2024.. 
+ 
+26.2 
+Hero Grant 
+ 
+Terms and conditions 
+ 
+Since 2020, the Hero Grant is issued as a one-time grant with different amounts to certain employees of 
+the Group for various reasons (e.g. a substitute for discretionary bonus payments). Under this program, the 
+Ultimate Parent Company committed itself to issue RSUs on the basis of a certain euro amount. The Hero 
+Grant is usually subject to a twelve-month vesting and cliff period; in certain cases, up to two periods 
+respectively. 
+ 
+Measurement of fair values 
+ 
+The grant date fair value of the awards is the contractually fixed euro value. Such fair value does not 
+incorporate dividend expectations. A total of 37,200 RSUs were granted in 2024. The plan contributed 
+USD 538,229 of expenses in 2024.  
+ 
+27. 
+Right-of-use assets 
+ 
+The movement in the right-of-use assets balance, included in property and equipment (Note 5), during the 
+period is as follows:  
+ 
+Buildings and 
+leasehold 
+improvements 
+Technical 
+equipment 
+and 
+machineries Vehicle fleet 
+Total 
+ 
+USD 
+USD 
+USD 
+USD 
+Cost 
+ 
+ 
+ 
+ 
+Acquisition through business combination 
+112,715,758 
+469,156 
+16,449,474 
+129,634,388 
+Additions 
+12,964,167 
+- 
+- 
+12,964,167 
+Termination of leases (Note 5) 
+(4,338,887) 
+- 
+- 
+(4,338,887) 
+Translation differences 
+(1,591,319) 
+- 
+(24,780) 
+(1,616,099) 
+As at 31 December 2024 
+119,749,719 
+469,156 
+16,424,694 
+136,643,569 
+ 
+ 
+ 
+ 
+ 
+Accumulated depreciation: 
+ 
+ 
+ 
+ 
+Acquisition through business combination 
+(36,439,868) 
+(57,316) (6,453,476) (42,950,660) 
+Depreciation 
+(5,700,448) 
+(58,643) 
+(729,517) 
+(6,488,608) 
+Termination of leases (Note 5) 
+2,409,576 
+- 
+- 
+2,409,576 
+Translation differences 
+662,032 
+- 
+23,913 
+685,945 
+As at 31 December 2024 
+(39,068,708) 
+(115,959) (7,159,080) (46,343,747) 
+Carrying amount as at 31 December 2024 
+80,681,011 
+353,197 
+9,265,614 
+90,299,822 
+ 
+ 
+
+
+===== PAGE 56 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+54 
+ 
+ 
+28. 
+Dividend 
+ 
+Subsequent to the end of the reporting period, the Board of Directors announced the Company’s intention 
+to declare dividends to the shareholders amounting to USD 110 million (USD 0.005 per share) in respect 
+of the financial results of the fourth quarter of 2024. The proposed dividend is subject to approval of the 
+shareholders at the annual general assembly meeting. 
+ 
+29. 
+Operating segment 
+ 
+A segment is a separate and distinct unit of the Group’s engagement in business activities that result in 
+recognition of revenues or expenses. Operating segments are disclosed on the basis of internal reports 
+reviewed by the Executive Management, who is the Chief Operating Decision Maker (CODM), and 
+responsible for resource allocation, performance evaluation, and strategic decision making on operational 
+segments. Operating segments with similar geographical characteristics, economic characteristics, 
+products, services, and similar customer categories are required to be aggregated and recorded where 
+possible as units to be reported. 
+ 
+The Executive Management reviews the internal management reports of each division at least monthly. 
+  
+a) Basis for segmentation 
+  
+The Group has identified a Country as a segment. This segment is derived based on their geographical 
+location or region which is the key consideration by CODM for evaluating performance, making strategic 
+decisions and allocating resources. 
+  
+The following table describes, in more detail, about the segment and the countries included therein: 
+ 
+Reportable 
+Segment 
+Details 
+Gulf Cooperation 
+Council (“GCC”) 
+region 
+The GCC segment comprises countries where the Group currently operates its 
+business and offers its products and services, including Kuwait, the United Arab 
+Emirates, Oman, Qatar, and Bahrain. Management has assessed that aggregating the 
+disclosure of information for the GCC segment enables users of the Group's interim 
+financial statements to evaluate the nature and financial effects of its business 
+activities within this region. The operations in these countries share similar economic 
+characteristics, including market conditions, consumer behavior, and business 
+practices. Based on this assessment, management has concluded that these countries 
+qualify for aggregation into a single reportable segment. 
+Reportable segment and other segments generate revenue mainly from online marketplace services, 
+separately charged delivery fees, orders placed in the Group’s delivery-only stores and advertising services, 
+as well as subscription fees, service fees and, in certain cases, separately charged payment fees. 
+ 
+b) Segment financial information and reconciliation of segment information 
+ 
+The revenue with external customers reported to the CODM generally equals the measurement of the 
+revenue recognised in the consolidated interim statement of profit and loss and other comprehensive income 
+with the following exceptions: 
+ 
+i) inter-segment elimination – these mainly include inter-segment recharge for logistic and other services. 
+The intersegment revenue is eliminated to derive the total segment revenue. 
+ 
+ii) reconciliation effects – these mainly include adjustments to other direct income for on demand riders' 
+revenue, for which Group is a principal and revenue is presented on gross basis whereas for management 
+reporting purpose such revenue is netted of against its related cost. 
+
+
+===== PAGE 57 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+55 
+ 
+ 
+ 
+29.     Operating segment plan (continued) 
+ 
+Financial results of the segments are presented below: 
+ 
+ 
+ 
+GCC 
+Other 
+segments 
+Total 
+31 December 2024 
+ 
+USD 
+USD 
+USD 
+External revenue 
+ 
+679,320,500 
+145,984,341 
+825,304,841 
+Inter segment elimination 
+ 
+(567,809) 
+(783,231) 
+(1,351,040) 
+Segment Revenue after elimination 
+ 
+678,752,691 
+145,201,110 
+823,953,801 
+Reconciliation effects 
+ 
+(1,255,953) 
+(18,930) 
+(1,274,883) 
+Vouchers and other revenue deductions 
+ 
+(15,051,232) 
+(6,358,856) 
+(21,410,088) 
+Revenue 
+ 
+662,445,506 
+138,823,324 
+801,268,830 
+Gross Profit 
+ 
+227,421,345 
+27,606,473 
+255,027,818 
+Profit before income taxes 
+ 
+129,144,410 
+3,408,309 
+132,552,719 
+Net Profit 
+ 
+122,090,189 
+15,828,348 
+137,918,537 
+Depreciation and amortisation 
+ 
+(10,498,482) 
+(1,871,840) 
+(12,370,322) 
+ 
+Segment Assets and Liabilities 
+ 
+ 
+Assets 
+Liabilities 
+ 
+ 
+USD 
+USD 
+GCC 
+ 
+1,307,322,447 
+564,305,523 
+Other segments 
+ 
+ 
+161,669,593 
+366,287,503 
+Inter segment elimination 
+ 
+(362,124,901) (362,124,901) 
+Total 
+ 
+1,106,867,139 
+568,468,125 
+ 
+c) Information about geographical area 
+ 
+The tables below shows the revenue and non-current assets for material countries in the group: 
+ 
+I. Revenue      
+ 
+ 
+ 
+For the period 
+ended 31 
+December 
+2024 
+ 
+ 
+ 
+USD 
+ 
+United Arab Emirates 
+ 
+278,607,163  
+Kuwait 
+ 
+211,510,474  
+Qatar 
+ 
+87,809,431  
+Others 
+ 
+223,341,762  
+ 
+ 
+801,268,830 
+ 
+ 
+II. Non- Current assets 
+ 
+ 
+2024 
+ 
+ 
+ 
+USD 
+ 
+United Arab Emirates 
+ 
+406,844,420  
+Others 
+ 
+66,154,493  
+ 
+ 
+472,998,913 
+ 
+Non Current assets do not include Deferred tax assets. 
+ 
+A country is considered material if it is representative of >10 % of the respective metric.  
+
+
+===== PAGE 58 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+56 
+ 
+ 
+30. 
+Financial instruments / financial risk management 
+ 
+Risk management framework 
+ 
+The Group’s management has overall responsibility for the establishment and oversight of the Group’s risk 
+management framework. The Group’s management is responsible for developing and monitoring the 
+Group’s risk management policies.  
+ 
+The Group’s risk management policies are established to identify and analyse the risks faced by the Group, 
+to set appropriate risk limits and controls and to monitor risks and adherence to limits. Risk management 
+policies and systems are reviewed regularly to reflect changes in market conditions and the Group’s 
+activities. The Group, through its training and management standards and procedures, aims to maintain a 
+disciplined and constructive control environment in which all employees understand their roles and 
+obligations. 
+ 
+Credit risk 
+ 
+Credit risk is the risk of financial loss to the Group if a customer or counterparty to a financial instrument 
+fails to meet its contractual obligations and arises principally from the Group’s trade and other receivables. 
+The carrying amounts of financial assets represent the maximum credit exposure. 
+ 
+Credit risk refers to the risk that a counterparty will default on its contractual obligations resulting in 
+financial loss to the Group. As at 31 December 2024, the Group’s maximum exposure to credit risk without 
+taking into account any collateral held or other credit enhancements, which will cause a financial loss to 
+the Group due to failure to discharge an obligation by the counterparties and financial guarantees provided 
+by the Group arises from the carrying amount of the respective recognised financial assets as stated in the 
+consolidated statement of financial position. 
+ 
+ 
+Exposure to credit risk 
+ 
+Note 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Trade and other receivables 
+ 
+94,567,429 
+ 
+Cash at bank 
+10 
+416,884,612 
+ 
+Due from related parties 
+9 
+21,422,453 
+ 
+ 
+ 
+532,874,494 
+ 
+ 
+The Group held cash at bank and short term deposit balances of USD 416,884,612 as at 31 December 2024 
+. The cash and cash bank balances are held with bank and financial institution counterparties, which are 
+rated AA- to AA+, based on S&P Global Ratings.  
+ 
+ 
+
+
+===== PAGE 59 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+57 
+ 
+ 
+30.     Financial instruments / Financial risk management (continued) 
+ 
+Expected credit loss for receivables  
+ 
+The following table provides information about the exposure to credit risk and ECL for trade and other 
+receivables: 
+ 
+ 
+Weighted 
+average loss 
+rate 
+Gross 
+carrying 
+amount 
+Loss 
+allowance 
+ 
+ 
+USD 
+USD 
+December 31, 2024 
+ 
+ 
+ 
+Current 
+13.90% 
+37,546,795 
+(5,218,057) 
+1-30 Days 
+63.00% 
+1,062,399 
+(669,336) 
+31-60 Days 
+96.29% 
+3,918,255 
+(3,773,053) 
+61-90 Days 
+20.97% 
+896,812 
+(188,034) 
+91-120 Days 
+25.17% 
+936,368 
+(235,640) 
+120-180 
+29.50% 
+206,107 
+(60,801) 
+Above 180 days 
+ 
+- 
+- 
+Total 
+ 
+44,566,736 
+(10,144,921) 
+ 
+Loss rates are based on actual credit loss experience over the past three years. These rates are multiplied 
+by scalar factors to reflect differences between economic conditions during the period over which the 
+historical data has been collected, current conditions and the Group’s view of economic conditions over 
+the expected lives of the receivables. 
+ 
+In order to minimise credit risk, the Group has tasked its management to develop and maintain the Group’s 
+credit risk gradings to categories exposures according to their degree of risk of default. The credit rating 
+information is supplied by independent rating agencies where available and, if not available, management 
+uses other publicly available financial information and the Group’s own trading records to rate its major 
+customers and other debtors. The Group’s exposure and the credit ratings of its counterparties are 
+continuously monitored and the aggregate value of transactions concluded is spread amongst approved 
+counterparties. 
+ 
+Due from related parties 
+ 
+Based on management’s assessment, amounts due from related parties are not considered to be credit-
+impaired as at 31 December 2024. 
+ 
+Liquidity risk 
+ 
+Liquidity risk is the risk that the Group will encounter difficulty in meeting the obligations associated with 
+its financial liabilities that are settled by delivering cash or another financial asset. The Group’s objective 
+when managing liquidity is to ensure, as far as possible, that it will have sufficient liquidity to meet its 
+liabilities when they are due, under both normal and stressed conditions, without incurring unacceptable 
+losses or risking damage to the Group’s reputation. 
+ 
+The following table summaries the maturity profile of the Group’s financial instruments. The contractual 
+maturities of the financial instruments have been determined on the basis of the remaining period at the 
+statement of financial position date to the contractual maturity date. The maturity profile is monitored by 
+management to ensure adequate liquidity is maintained. 
+  
+ 
+
+
+===== PAGE 60 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+58 
+ 
+ 
+30.     Financial instruments / Financial risk management (continued) 
+ 
+Liquidity risk (continued) 
+ 
+The maturity profile of the assets and liabilities at the statement of financial position date based on 
+contractual repayment arrangements was as follows: 
+ 
+ 
+ 
+ 
+Contractual Cash flows 
+ 
+ 
+Carrying 
+amount 
+Total 
+Less than 
+one year 
+One to five 
+years 
+More than 
+five years 
+31 December 2024 
+ 
+USD 
+USD 
+USD 
+USD 
+USD 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Trade and other payables (excluding advance from 
+customer and unearned income) 
+ 
+323,339,521 
+323,339,521 
+323,339,521 
+- 
+- 
+Due to related parties 
+ 
+36,510,621 
+36,510,621 
+36,510,621 
+- 
+- 
+Lease liabilities 
+ 
+96,529,540 
+166,248,316 
+91,956,969 
+58,359,987 
+15,931,360 
+Total 
+ 
+456,379,682 
+526,098,458 
+451,807,111 
+58,359,987 
+15,931,360 
+ 
+Market risk 
+ 
+Market risk is the risk that changes in market prices – e.g., foreign exchange rates, interest rates and equity 
+prices – will affect the Group’s income or the value of its holdings of financial instruments. The objective 
+of market risk management is to manage and control market risk exposures within acceptable parameters, 
+while optimising the return. 
+ 
+Currency risk  
+ 
+The Company’s exposure to foreign exchange risk is limited, as a significant proportion of the foreign 
+currency transactions, monetary assets and liabilities are in the currencies which are pegged to the US 
+Dollar and have minimal exchange rate impact. 
+ 
+The Reporting Entity is exposed to currency risk due to mismatches between the currencies in which sales, 
+purchases, and borrowings are denominated and the functional currencies of Group entities. The functional 
+currencies of Group companies are primarily the UAE Dirham (AED), Saudi Arabia Riyal (SAR), 
+Jordanian Dinar (JOD), Kuwaiti Dinar (KWD), Egyptian Pound (EGP), Omani Rial (OMR), Bahraini 
+Dinar (BHD), Iraqi Dinar (IQD) and Qatari Riyal (QRY). 
+ 
+ 
+ 
+2024 
+ 
+Assets 
+Liabilities 
+Net Assets 
+EUR 
+77,965,483 
+79,877,713 
+(1,912,230) 
+IQD 
+57,546,363 
+- 
+57,546,363 
+BHD 
+109,505,212 
+376,233 
+109,128,979 
+EGP 
+60,786,814 
+- 
+60,786,814 
+JOD 
+106,573,214 
+- 
+106,573,214 
+KWD 
+206,407,614 
+9,474,098 
+196,933,516 
+OMR 
+24,934,818 
+- 
+24,934,818 
+QAR 
+89,436,886 
+- 
+89,436,886 
+SAR 
+1,814,134 
+- 
+1,814,134 
+ 
+ 
+
+
+===== PAGE 61 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+59 
+ 
+ 
+30.    Financial instruments / Financial risk management (continued) 
+ 
+Currency risk (continued) 
+ 
+The following significant exchange rates were applied: 
+ 
+ 
+Average rate Closing rate 
+ 
+ 
+ 
+2024 
+2024 
+ 
+ 
+EUR 
+0.79 
+0.97  
+ 
+IQD 
+1,310.00 
+1,310.00  
+ 
+BHD 
+0.38 
+0.38  
+ 
+EGP 
+50.59 
+50.84  
+ 
+JOD 
+0.71 
+0.71  
+ 
+KWD 
+0.31 
+0.31  
+ 
+OMR 
+0.39 
+0.39  
+ 
+QAR 
+3.65 
+3.65  
+ 
+SAR 
+3.76 
+3.76  
+ 
+ 
+Sensitivity analysis 
+ 
+The Reporting Entity’s exposure to foreign currency risk for a reasonably possible change of 1% 
+fluctuation in foreign currencies is as follows: 
+ 
+ 
+Strengthening 
+Weakening 
+2024 
+Equity 
+Profit 
+Equity 
+Profit 
+ 
+USD 
+USD 
+USD 
+USD 
+EUR 
+(19,122) 
+(19,122) 
+19,122 
+19,122 
+IQD 
+575,464 
+575,464 
+(575,464) 
+(575,464) 
+BHD 
+1,091,290 
+1,091,290 
+(1,091,290) 
+(1,091,290) 
+EGP 
+6,078,681 
+6,078,681 
+(6,078,681) 
+(6,078,681) 
+JOD 
+1,065,732 
+1,065,732 
+(1,065,732) 
+(1,065,732) 
+KWD 
+1,969,335 
+1,969,335 
+(1,969,335) 
+(1,969,335) 
+OMR 
+249,348 
+249,348 
+(249,348) 
+(249,348) 
+QAR 
+894,369 
+894,369 
+(894,369) 
+(894,369) 
+SAR 
+18,141 
+18,141 
+(18,141) 
+(18,141) 
+ 
+11,923,238 
+11,923,238 (11,923,238) (11,923,238) 
+ 
+ 
+
+
+===== PAGE 62 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+60 
+ 
+ 
+31. 
+Fair value measurement 
+ 
+Financial instruments comprise of financial assets and financial liabilities. Financial assets consist of cash 
+and bank balances, amounts due from related parties and trade and other receivables. Financial liabilities 
+consist of trade payables and other payable and amounts due to related parties. 
+ 
+The fair value of the financial assets and liabilities are included at the amount at which the instrument could 
+be exchanged in a current transaction between willing parties, other than in a forced or liquidation sale. 
+ 
+A fair value measurement of a non-financial asset takes into account a market participant's ability to 
+generate economic benefits by using the asset in its highest and best use or by selling it to another market 
+participant that would use the asset in its highest and best use. 
+ 
+Fair value is the price that would be received to sell an asset or paid to transfer a liability in an orderly 
+transaction between market participants at the measurement date. The fair value measurement is based on 
+the presumption that the transaction to sell the asset or transfer the liability takes place either: 
+ 
+- 
+In the principal market for the asset or liability; or 
+- 
+In the absence of a principal market, in the most advantageous market for the asset or liability. 
+ 
+The principal or the most advantageous market must be accessible to the Group. 
+ 
+The fair value of an asset or a liability is measured using the assumptions that market participants would 
+use when pricing the asset or liability, assuming that market participants act in their economic best interest. 
+ 
+A fair value measurement of a financial asset takes into account a market participant's ability to generate 
+economic benefits by using the asset in its highest and best use or by selling it to another market participant 
+that would use the asset in its highest and best use. 
+ 
+The Group uses valuation techniques that are appropriate in the circumstances and for which sufficient data 
+are available to measure fair value, maximising the use of relevant observable inputs and minimising the 
+use of unobservable inputs. 
+ 
+The management considers that the carrying amounts of financial assets and financial liabilities recognised 
+at amortised cost in the consolidated financial statements approximate their fair values. 
+ 
+32. 
+Capital risk management 
+ 
+The Group manages its capital to ensure that it will be able to continue as a going concern while maximising 
+the return to Shareholder through the optimisation of the debt and equity balance. The capital structure of 
+the Group consists of equity attributable to the shareholder, comprising issued capital, reserves, and 
+retained earnings. 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 63 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+61 
+ 
+ 
+33. 
+Acquisition of subsidiaries under common control 
+ 
+Business combination common control transactions 
+ 
+A business combination involving entities or businesses under common control is a business combination 
+in which all the combining entities or businesses are ultimately controlled by the same Ultimate Controlling 
+Party both before and after the combination.  
+ 
+The Group follows book value (carry-over basis) accounting prospectively on the basis that the investment 
+has simply been moved from one part of the group to another. As per the book value accounting, the Group 
+recognizes assets and liabilities at their book values at the acquisition date. The difference between book 
+values of assets acquired and liabilities assumed, and the consideration paid is reflected in retained earnings 
+within the statement of changes in equity. 
+ 
+As part of a broader restructuring plan initiated by the Ultimate Parent Company, several transactions 
+among entities under common control were executed to consolidate the Ultimate Parent Company’s 
+business in the MENA region ahead of the Initial Public Offering (“IPO”). 
+  
+On 24 September 2024, the Ultimate Parent Company transferred its shareholding and control in Delivery 
+Hero FZ LLC (‘DH FZ’) and its subsidiaries to the Company. In consideration for this transfer, the 
+Company issued 178,040,951 ordinary shares to the Parent Company (refer to Note 11 – Share Capital for 
+details). 
+ 
+On 30 September 2024, Delivery Hero FZ LLC obtained control of the following entities and their 
+respective subsidiaries as part of the common control transaction. To facilitate this transfer, the Company 
+issued an additional 75,608,949 ordinary shares to the Parent Company. This also included the settlement 
+of certain intra-group liabilities towards the Ultimate Parent. (refer to Note 11 – Share Capital for details). 
+ 
+Foodonclick.com FZ-LLC; 
+Talabat for Delivery Services LLC; 
+Delivery Hero Egypt SAE; 
+Dark Stores MENA Holding Ltd; 
+Delivery Hero Kitchens MENA Holding Ltd; 
+DH Kitchens LLC; and 
+Delivery Hero Payments MENA FZ-LLC. 
+ 
+These transactions were executed to realign the Group’s corporate structure in preparation for the IPO, in 
+line with the Ultimate Parent Company’s objective of offering 20% of its shareholding in the Company 
+through the IPO. 
+ 
+The acquisition of the aforementioned companies was strategically executed to streamline and centralize 
+both operational and financial management. By restructuring under the full control of the Company, 
+Group’s goal was to list the shares of the Company on the DFM. These companies were already under 
+common control, with Delivery Hero SE as the Ultimate Parent. 
+ 
+ 
+
+
+===== PAGE 64 =====
+
+Talabat Holding PLC 
+Notes to the consolidated interim financial statements  
+62 
+ 
+ 
+33.     Acquisition of subsidiaries under common control (continued) 
+ 
+The following table summarises the book values of assets acquired and liabilities assumed at the date of 
+acquisition: 
+ 
+ 
+2024 
+2023 
+ 
+ 
+USD 
+USD 
+Property and equipment (Note 5) 
+ 
+148,423,686  
+Intangible assets (Note 6) 
+ 
+317,823,453  
+Trade and other receivables 
+ 
+126,734,495  
+Inventories 
+ 
+38,920,567  
+Due from related parties 
+ 
+960,778  
+Cash and cash equivalents 
+ 
+316,150,394  
+Loans from related parties 
+ 
+(1,587,389)  
+Due to related parties 
+ 
+(33,020,765)  
+Trade and other payables 
+ 
+(388,376,307)  
+Lease liabilities (Note 13) 
+ 
+(92,490,561)  
+Employees' end of service benefits (Note 14) 
+ 
+(17,786,656)  
+Income tax liabilities 
+ 
+(19,881,394)  
+Total identifiable net assets acquired 
+ 
+395,870,301  
+Less: Issuance of share capital (Note 11) * 
+ 
+(253,649,900)  
+Net impact on acquisition of entities under common control 
+taken to retained earnings within equity 
+142,220,401  
+ 
+* The Company issued share capital to the parent company as a consideration for the acquisition of above 
+subsidiaries. 
+  
+The acquisition of the aforementioned entities is considered as a business combination under common 
+control, which does not fall under IFRS 3 - Business Combination. Accordingly, the acquisition of the 
+aforementioned entities was accounted for prospectively at the book values of the acquiree as at the 
+acquisition date. 
+ 
+ 
+34. 
+Subsequent events 
+ 
+On 25 February 2025, Talabat Holding PLC has acquired 100% of Insta Shop Ltd’s (Instashop) share 
+capital from Delivery Hero SE (the Ultimate Parent Company) being under a common control transaction.  
+With this acquisition, Instashop becomes a wholly-owned subsidiary of The Company, strengthening its 
+Grocery and Retail offering and expanding its partner network across the MENA region 
+The acquisition of Instashop, which will continue to operate as an independent brand within talabat’s 
+Grocery and Retail vertical, enables both platforms to collaborate and share insights to enhance customer 
+experience and partner tools. 
+Total consideration for the acquisition transaction is USD 31,928,889, reflecting the capital amount of 
+Insta Shop Ltd, including the subscribed capital and capital reserves. 
+This strategic acquisition strengthens Talabat Holding PLC's marketplace capabilities and expands the 
+Group service offerings. The acquisition aligns with our growth strategy to enhance our digital platform 
+ecosystem and provide additional value to our customers. 
+ 
