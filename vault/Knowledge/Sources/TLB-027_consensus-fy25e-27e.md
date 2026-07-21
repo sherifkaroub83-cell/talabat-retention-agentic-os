@@ -97,3 +97,13 @@ Not covered in this document directly — but the decelerating GMV growth trajec
 
 ## Tags
 #consensus #secondary-source #sell-side #analyst-estimates #fy2025e #fy2026e #fy2027e #gmv #ebitda #financials #mena
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Financial Performance]]
+- [[Investor Relations]]
+- [[GMV]]
+- [[Profitability]]
+- [[Growth Strategy]]

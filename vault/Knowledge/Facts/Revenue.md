@@ -217,3 +217,12 @@ Consolidated from 25 of 29 corpus documents (Phase 4 consolidation of `vault/Kno
 - FY'24 Delivery & service fees: USD 695.61mn (9.36% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
 - FY'24 Advertising and listing fees: USD 245.62mn (3.31% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
 - Quarterly Management revenue: Q1'24 USD 633.51mn, Q2'24 USD 726.56mn, Q3'24 USD 771.99mn, Q4'24 USD 823.95mn. (TLB-029, sheet: 2024 Quarterly Historicals)
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this Facts file feeds. Does not alter any fact or citation above._
+
+- [[Revenue Drivers]]
+- [[GMV]]
+- [[Profitability]]
+- [[Financial Performance]]

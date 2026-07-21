@@ -150,3 +150,12 @@ Consolidated from 25 of 29 corpus documents (Phase 4 consolidation of `vault/Kno
 - FY'24 Adjusted Net Income: USD 392.76mn (5.29% margin of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
 - FY'24 Adjusted Free Cash Flow: USD 462.43mn (6.23% margin of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
 - FY'24 Cash conversion (% Adj. EBITDA): 93.07%. (TLB-029, sheet: 2024 Quarterly Historicals)
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this Facts file feeds. Does not alter any fact or citation above._
+
+- [[Marketplace]]
+- [[Restaurants]]
+- [[Riders]]
+- [[Profitability]]

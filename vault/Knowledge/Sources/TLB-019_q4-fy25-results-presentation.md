@@ -87,3 +87,15 @@ UAE, Kuwait, Qatar (explicitly named as talabat's "competitive markets," p.9). E
 
 ## Tags
 #financials #fy2025 #q4-2025 #egypt #retention #loyalty #talabat-pro #multi-vertical #high-value-customers #m1-retention #guidance #earnings-call #mena #tmart
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Financial Performance]]
+- [[Egypt]]
+- [[Customer Retention]]
+- [[Talabat Pro]]
+- [[Customer Journey]]
+- [[Investor Relations]]
+- [[Growth Strategy]]

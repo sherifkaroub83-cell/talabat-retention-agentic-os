@@ -21,3 +21,11 @@ Deduplicated from all 29 documents' raw facts fragments.
 ## Documents with no distinct technology-platform content beyond the core app
 
 TLB-014, TLB-018, TLB-019, TLB-020 reference only "the talabat/instashop platform(s)" generically. TLB-022, TLB-027, TLB-028 have no technology detail.
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this Entities file feeds. Does not alter any fact or citation above._
+
+- [[AI]]
+- [[Logistics]]
+- [[Recommendation Systems]]

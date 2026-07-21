@@ -138,3 +138,15 @@ UAE, Kuwait, Qatar, Egypt, Bahrain, Oman, Jordan, Iraq (talabat's 8 countries of
 
 ## Tags
 #financials #fy2024 #annual-report #egypt #retention #loyalty #talabat-pro #talabat-rewards #postpaid #adtech #ai #personalisation #ipo #governance #risk-factors #segment-reporting #non-gcc #instashop #sustainability #kpis
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Financial Performance]]
+- [[Egypt]]
+- [[Customer Retention]]
+- [[Talabat Pro]]
+- [[Promotions]]
+- [[Advertising]]
+- [[AI]]

@@ -27,3 +27,10 @@ Deduplicated from all 29 documents' raw facts fragments. Two distinct groupings 
 ## Documents with no business-unit content
 
 TLB-027, TLB-028 (sell-side consensus reports — group-consolidated financials only, no segment or vertical breakdown).
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this Entities file feeds. Does not alter any fact or citation above._
+
+- [[Segment Reporting]]
+- [[Marketplace]]

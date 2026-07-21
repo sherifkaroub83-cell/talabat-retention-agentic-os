@@ -81,3 +81,15 @@ United Arab Emirates, Kuwait, Qatar, Oman, Bahrain, Iraq, Egypt, Jordan (Group's
 
 ## Tags
 #financials #fy2024 #audited #ifrs #kpmg-audit #gcc-segment #non-gcc #egypt #subscription-fees #instashop-acquisition #cohort-models #retention-driver
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Financial Performance]]
+- [[Segment Reporting]]
+- [[Egypt]]
+- [[Talabat Pro]]
+- [[Quick Commerce]]
+- [[Customer Lifetime Value]]
+- [[Customer Retention]]

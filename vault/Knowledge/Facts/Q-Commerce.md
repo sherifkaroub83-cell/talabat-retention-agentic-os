@@ -108,3 +108,10 @@ Consolidated from 18 of 29 corpus documents (Phase 4 consolidation of `vault/Kno
 ## TLB-028 — Sell-Side Consensus FY26e-28e (secondary)
 
 - Not covered in this document.
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this Facts file feeds. Does not alter any fact or citation above._
+
+- [[Quick Commerce]]
+- [[Delivery Operations]]

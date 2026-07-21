@@ -96,3 +96,15 @@ UAE, Kuwait, Qatar, Bahrain, Egypt, Oman, Jordan, Iraq (the 8 "talabat perimeter
 
 ## Tags
 #financials #fy2024 #q4-2024 #egypt #talabat-pro #retention #loyalty #multi-vertical #gmv #guidance #investor-presentation #mena
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Financial Performance]]
+- [[Egypt]]
+- [[Talabat Pro]]
+- [[Customer Retention]]
+- [[Customer Journey]]
+- [[GMV]]
+- [[Investor Relations]]

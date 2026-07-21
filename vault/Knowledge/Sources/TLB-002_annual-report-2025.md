@@ -256,3 +256,12 @@ Approximately 39 explicit Egypt mentions were identified. Substantive ones, with
 #financials #fy2025 #annual-report #egypt #egypt-segment #retention #talabat-pro #loyalty #subscription
 #ai #personalisation #adtech #talabat-mart #grocery #q-commerce #governance #esg #sustainability
 #competition #risk-management #ipo #dividend #ceo-transition #fintech #postpaid
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Financial Performance]]
+- [[Egypt]]
+- [[Customer Retention]]
+- [[Talabat Pro]]

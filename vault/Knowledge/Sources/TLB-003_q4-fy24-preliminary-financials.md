@@ -73,3 +73,12 @@ Egypt is not mentioned in this document.
 
 ## Tags
 #financials #fy2024 #q4-2024 #preliminary-results #pro-forma #dfm-disclosure #gcc-vs-non-gcc #talabat-holding
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Financial Performance]]
+- [[Investor Relations]]
+- [[Segment Reporting]]
+- [[Corporate Structure]]

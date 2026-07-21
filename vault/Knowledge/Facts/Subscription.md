@@ -127,3 +127,10 @@ Consolidated from 25 of 29 corpus documents (Phase 4 consolidation of `vault/Kno
 - FY'24 "Subscription fee & other income" line item (combined, not broken out separately): USD 952.36mn,
   representing 12.82% of GMV — this combines talabat pro subscription fees with other income and is
   not a pure subscription-only figure. (TLB-029, sheet: 2024 Quarterly Historicals)
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this Facts file feeds. Does not alter any fact or citation above._
+
+- [[Talabat Pro]]
+- [[Revenue Drivers]]

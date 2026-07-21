@@ -51,3 +51,13 @@ This is a legal/regulatory subscription announcement, not a financial or strateg
 
 ## Tags
 #ipo #dfm #regulatory #capital-markets #2024 #talabat-pro #fintech #loyalty #valuation
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[IPO]]
+- [[Investor Relations]]
+- [[Talabat Pro]]
+- [[Customer Retention]]
+- [[Financial Performance]]

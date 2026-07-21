@@ -69,3 +69,15 @@ Egypt is not explicitly named anywhere in the body text of this document (only t
 
 ## Tags
 #financials #q2-2025 #h1-2025 #talabat-pro #family-plan #retention #loyalty #multi-vertical #mau #guidance #earnings-call #mena
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Financial Performance]]
+- [[Talabat Pro]]
+- [[Promotions]]
+- [[Customer Retention]]
+- [[Customer Journey]]
+- [[Investor Relations]]
+- [[Growth Strategy]]

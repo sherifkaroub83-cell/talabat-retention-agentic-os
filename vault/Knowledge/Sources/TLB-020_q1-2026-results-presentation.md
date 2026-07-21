@@ -76,3 +76,15 @@ UAE (referenced re: fuel price increases, "excl. UAE," p.7). Iraq and Egypt refe
 
 ## Tags
 #financials #q1-2026 #egypt #fx-risk #talabat-pro #retention #loyalty #multi-vertical #investment-programme #everyday-app #guidance #earnings-call #mena #share-buyback
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Financial Performance]]
+- [[Egypt]]
+- [[Talabat Pro]]
+- [[Customer Retention]]
+- [[Customer Journey]]
+- [[Growth Strategy]]
+- [[Investor Relations]]

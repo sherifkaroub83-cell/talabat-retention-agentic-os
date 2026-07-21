@@ -80,3 +80,15 @@ Financial figures are presented on a "combined basis" from unaudited interim com
 
 ## Tags
 #ipo #dfm #regulatory #capital-markets #2024 #financials #talabat-pro #fintech #loyalty #adtech #instashop #otlob #egypt #machine-learning #retention
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[IPO]]
+- [[Investor Relations]]
+- [[Financial Performance]]
+- [[Talabat Pro]]
+- [[Customer Retention]]
+- [[Advertising]]
+- [[Quick Commerce]]

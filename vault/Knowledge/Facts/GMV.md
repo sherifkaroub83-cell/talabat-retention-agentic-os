@@ -179,3 +179,11 @@ Consolidated from 21 of 29 corpus documents (Phase 4 consolidation of `vault/Kno
 - FY'24 GMV o/w non-GCC: USD 1,096.31mn (14.76% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
 - FY'24 GMV o/w Food: USD 5,542.07mn (74.61% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
 - FY'24 GMV o/w Groceries & Retail (G&R): USD 1,885.78mn (25.39% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this Facts file feeds. Does not alter any fact or citation above._
+
+- [[GMV]]
+- [[Revenue Drivers]]
+- [[Orders]]

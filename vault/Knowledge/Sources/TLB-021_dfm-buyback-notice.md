@@ -72,3 +72,11 @@ relevant to customer retention, loyalty, or subscription strategy.
 
 ## Tags
 #regulatory #dfm #buyback #capital-markets #corporate-governance #2026 #not-egypt-specific
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[IPO]]
+- [[Investor Relations]]
+- [[Corporate Structure]]

@@ -65,3 +65,12 @@ United Arab Emirates, Kuwait, Qatar, Oman, Bahrain, Iraq, Egypt, Jordan (MENA fo
 
 ## Tags
 #financials #q2-2025 #ifrs #interim-statements #gcc-segment #egypt #subscription-fees #dividends #kpmg-review
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Financial Performance]]
+- [[Segment Reporting]]
+- [[Egypt]]
+- [[Talabat Pro]]

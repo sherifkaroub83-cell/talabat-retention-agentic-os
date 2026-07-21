@@ -83,3 +83,15 @@ United Arab Emirates, Kuwait, Qatar, Egypt, Bahrain, Oman, Jordan, Iraq (TLB-009
 
 ## Tags
 #financials #q4-2025 #fy2025 #press-release #egypt #talabat-pro #retention #loyalty-subscription #talabat-mart #non-gcc #guidance-2026
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Financial Performance]]
+- [[Investor Relations]]
+- [[Egypt]]
+- [[Talabat Pro]]
+- [[Customer Retention]]
+- [[Quick Commerce]]
+- [[Segment Reporting]]

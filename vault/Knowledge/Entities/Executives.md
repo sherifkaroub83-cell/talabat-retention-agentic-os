@@ -30,3 +30,10 @@ Deduplicated from all 29 documents' raw facts fragments. Grouped by role; notes 
 ## Documents with no executives named
 
 TLB-013, TLB-014 (no presenter list in extracted text), TLB-017 (generic "Our presenters for today…" placeholder), TLB-027, TLB-028 (consensus reports — compiled by "Chadi Salman" per PDF author metadata, not named in body text).
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this Entities file feeds. Does not alter any fact or citation above._
+
+- [[Corporate Structure]]
+- [[Investor Relations]]

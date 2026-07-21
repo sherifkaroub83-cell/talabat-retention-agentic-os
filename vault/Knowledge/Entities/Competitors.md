@@ -26,3 +26,9 @@ TLB-004, TLB-008 (financial statements — no competitive discussion), TLB-027, 
 ## Implication for the capstone
 
 The corpus itself does not provide a rich named-competitor dataset for Egypt specifically. The project's separate secondary-source corpus (`Input_Data/03_Competitors/2026-07-20_egypt_delivery_competitive_landscape.md`) — covering Rabbit, Breadfast, elmenus, Akelni/Mrsool, Roboost — remains the primary source for Egypt-specific competitive intelligence and should be cross-referenced alongside this primary-source corpus.
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this Entities file feeds. Does not alter any fact or citation above._
+
+- [[Competition]]

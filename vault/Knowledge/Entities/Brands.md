@@ -24,3 +24,11 @@ Deduplicated from all 29 documents' raw facts fragments.
 ## Limitations
 
 TLB-027 and TLB-028 (sell-side consensus reports) contain no brand-level detail — they are pure financial-estimate tables.
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this Entities file feeds. Does not alter any fact or citation above._
+
+- [[Talabat Pro]]
+- [[Promotions]]
+- [[Marketplace]]

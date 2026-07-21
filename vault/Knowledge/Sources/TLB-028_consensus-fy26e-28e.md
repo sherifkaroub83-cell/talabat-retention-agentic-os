@@ -88,3 +88,13 @@ Not covered directly, but notable: consensus Adjusted EBITDA margin is expected 
 
 ## Tags
 #consensus #secondary-source #sell-side #analyst-estimates #fy2026e #fy2027e #fy2028e #gmv #ebitda #margin-compression #financials #mena
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Financial Performance]]
+- [[Investor Relations]]
+- [[GMV]]
+- [[Profitability]]
+- [[Growth Strategy]]

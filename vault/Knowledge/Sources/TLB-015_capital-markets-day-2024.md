@@ -105,3 +105,15 @@ This is an investor/strategy presentation, not audited financial statements — 
 
 ## Tags
 #capital-markets-day #2024 #financials #talabat-pro #postpaid #talabat-rewards #loyalty #retention #fintech #adtech #ai #personalisation #egypt #non-gcc #instashop #grocery-retail #cohort-analysis #nps #ipo-precursor
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Growth Strategy]]
+- [[Financial Performance]]
+- [[Talabat Pro]]
+- [[Promotions]]
+- [[Customer Retention]]
+- [[Advertising]]
+- [[AI]]

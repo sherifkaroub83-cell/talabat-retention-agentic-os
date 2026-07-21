@@ -73,3 +73,14 @@ United Arab Emirates, Kuwait, Qatar, Oman, Bahrain, Iraq, Egypt, Jordan (MENA fo
 
 ## Tags
 #financials #q1-2026 #ifrs #interim-statements #egypt-segment #egypt #gcc-segment #non-gcc #subscription-fees #share-buyback #treasury-shares #geopolitical-risk
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Financial Performance]]
+- [[Egypt]]
+- [[Segment Reporting]]
+- [[Talabat Pro]]
+- [[Investor Relations]]
+- [[Competition]]

@@ -28,3 +28,11 @@ Per the talabat Annual Report 2025 (TLB-002): these eight countries have a combi
 ## Documents with no country-level content
 
 TLB-018 (Q2 2025 results presentation) names no countries explicitly in body text (generic "GCC" reference only). TLB-027 and TLB-028 (sell-side consensus reports) report only group-consolidated figures with no country breakdown.
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this Entities file feeds. Does not alter any fact or citation above._
+
+- [[Egypt]]
+- [[UAE]]
+- [[Segment Reporting]]

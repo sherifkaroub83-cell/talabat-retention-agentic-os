@@ -120,3 +120,15 @@ The eight "talabat countries": UAE, Kuwait, Qatar, Bahrain, Egypt, Oman, Jordan,
 
 ## Tags
 #financials #fy2021-fy2023 #ipo-prospectus #egypt #retention #loyalty #talabat-pro #talabat-rewards #subscription #gmv #ebitda #risk-factors #competition #industry-overview #management #dividend-policy #instashop #mena
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this source note feeds. Does not alter any fact or citation above._
+
+- [[Financial Performance]]
+- [[IPO]]
+- [[Egypt]]
+- [[Customer Retention]]
+- [[Talabat Pro]]
+- [[Promotions]]
+- [[GMV]]

@@ -53,3 +53,10 @@ Arqaam Capital, Bank of America, Citi, Barclays, EFG Hermes, Goldman Sachs, JPMo
 ## Limitations
 
 The subsidiary list above is a deduplicated union across five near-identical financial-statement notes (TLB-004 through TLB-008); it is not itself a single-document disclosure — consult the individual `_raw` fragments for the exact document and page each entity was named in.
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this Entities file feeds. Does not alter any fact or citation above._
+
+- [[Corporate Structure]]
+- [[IPO]]

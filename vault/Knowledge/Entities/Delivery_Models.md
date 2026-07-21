@@ -26,3 +26,11 @@ talabat mart / tMarts — talabat-owned delivery-only dark stores targeting <30-
 ## Documents with no delivery-model content
 
 TLB-021 (DFM buyback notice — pure capital-markets disclosure), TLB-027, TLB-028 (consensus reports — not applicable).
+
+
+## Related Topics
+_Added in Phase 4 (semantic knowledge layer) — links out to the synthesis Topic Notes this Entities file feeds. Does not alter any fact or citation above._
+
+- [[Marketplace]]
+- [[Quick Commerce]]
+- [[Delivery Operations]]
