@@ -6,6 +6,36 @@ writes these entries for you.
 
 ---
 
+## Session 2 — 2026-07-21 (continued: charter approval + readiness assessment)
+
+**Focus:** Record instructor approval of the charter; run a formal Project Readiness Assessment
+against the official Project Guide v1.1.
+
+**Done:**
+- Ran a full traceability-matrix assessment of the repository against the Project Guide (32
+  requirements scored Completed/Partial/Missing/Exceeds), five weighted category evaluations, and
+  a submit-today grade estimate. Headline finding: Phases 2–3 (OS build, ingestion, semantic
+  layer) are strong-to-over-built; Phases 4–5 (the Business Plan, 40% of the grade, and the
+  Presentation, 20%) are at 0%; the OS structure document (a required Moodle upload) does not
+  exist; 5 of 6 team members have no visible footprint in the repo.
+- Recorded **instructor approval** of the problem charter (Dr. Hossam Daoud, 21/07/2026), along
+  with confirmation of the 6-person team size and a 30-slide (5×6) group presentation. Renamed
+  `Problem_Charter_DRAFT.md` → `Problem_Charter.md` and updated all live references
+  (`CLAUDE.md`, `MEMORY.md`, `PROJECT_PROGRESS.md`, `vault/MOC/Project Administration.md`).
+
+**Decisions:**
+- Team-of-6 and 30-slide presentation are now instructor-confirmed, not an open risk — only how
+  the 6 members map onto the guide's 5 defined roles remains unassigned.
+
+**Next (per the readiness assessment's priority order):**
+1. Assign roles among the 6 members
+2. Draft the AI Business Plan (all 14 GSB sections) — the single largest remaining gap
+3. Write the 3–5 page OS structure document
+4. Build the 30-slide group presentation
+5. Fix `README.md`'s leftover merge-conflict markers and delete the stale `vault/Welcome.md`
+
+---
+
 ## Session 2 — 2026-07-21 (continued: Phase 4 semantic knowledge layer)
 
 **Focus:** Transform the frozen 29-document knowledge base from a document repository into a

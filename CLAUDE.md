@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 > **Activated 20 July 2026** for the AASTMT MBA capstone, Group G02: *Talabat Egypt — AI-driven
 > customer retention*. Owner: Sherif Samy Karoub. See `MEMORY.md` for project facts and
-> `Problem_Charter_DRAFT.md` for the approved problem statement.
+> `Problem_Charter.md` for the approved problem statement.
 
 ## What this project is
 

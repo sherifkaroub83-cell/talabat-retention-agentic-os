@@ -1,5 +1,6 @@
 # Capstone Problem Charter — Group G02
 
+**Status:** ✅ **APPROVED by Dr. Hossam Daoud** (confirmed 21/07/2026) — team size of 6 and a 30-slide group presentation (5 slides × 6 members) approved alongside the problem statement.
 **Instructor:** Dr. Hossam Daoud · **Submission date:** 26/07/2026
 **Company:** Talabat Holding plc — Egypt operations (talabat Egypt)
 
@@ -12,7 +13,7 @@
 | Ahmed Abd Elhakam Abd Elfattah Zaian | 24224008 | [assign] |
 | Abdallah Mahmoud Abdo Ahmed | 24220430 | [assign] |
 
-*Roles per the project guide: OS Architect, Data & Research Lead, Business Plan Lead, Strategy & Risk Lead, Integration & Delivery Lead. Note: the guide specifies teams of 4–5; with 6 members, confirm role split with the instructor (e.g., co-leads on Data & Research).*
+*Roles per the project guide: OS Architect, Data & Research Lead, Business Plan Lead, Strategy & Risk Lead, Integration & Delivery Lead. The 6-person team size is instructor-approved; how the 6 members map onto the 5 defined roles (e.g., co-leads on one role, or a 6th custom role) is the one remaining open item — see `PROJECT_PROGRESS.md` blockers.*
 
 ---
 

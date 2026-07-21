@@ -1,17 +1,16 @@
-<<<<<<< HEAD
-# 🧠 Agentic Second-Brain OS
+# talabat-retention-agentic-os
 
-**A Claude-Code-native template that turns any document corpus into a cross-linked knowledge vault —
-and a finished deliverable.**
+**MBA Agentic OS Capstone Project** (AASTMT, AI for Business Organizations track, Group G02) — an
+AI-driven Agentic Operating System built around one problem: **customer retention and Customer
+Lifetime Value for talabat Egypt.** Problem statement approved by Dr. Hossam Daoud, 21/07/2026 —
+see [`Problem_Charter.md`](Problem_Charter.md). Project facts and current status:
+[`MEMORY.md`](MEMORY.md) · [`PROJECT_PROGRESS.md`](PROJECT_PROGRESS.md). Start browsing the
+knowledge base at [`vault/MOC/Talabat MOC.md`](vault/MOC/Talabat%20MOC.md).
 
-Point it at a folder of PDFs, docs, or transcripts. It extracts them, synthesizes each into a
-source-cited note in an Obsidian "second brain," keeps a living record of your progress and
-decisions, audits itself nightly, and carries the work all the way to an exported deliverable. Setup
-is a guided interview, so every user activates their own project **with no data conflicts**.
-
-> **Just cloned this?** It's unactivated. Open the folder in Claude Code and say
-> **"activate this template"** — Claude reads [`template_Activate.md`](template_Activate.md) and
-> interviews you to stand up the project.
+This repository is built on the **Agentic Second-Brain OS** template (below): a Claude-Code-native
+scaffold that turns a document corpus into a cross-linked knowledge vault and carries the work to a
+finished deliverable. It has been activated and populated for this project — the generic
+description below documents the underlying machinery, not an unactivated starting point.
 
 ---
 
@@ -142,12 +141,7 @@ interviews, or course material — the flow is identical.
 | `template_Activate.md` | Activation interview + setup runbook (for Claude) |
 | `CLAUDE.md` | Auto-loaded project instructions |
 | `MEMORY.md` / `PROJECT_PROGRESS.md` / `SESSION_LOG.md` | Memory · milestones · session log |
+| `Problem_Charter.md` | The approved G02 problem statement |
 | `vault/` | The Obsidian second brain |
 | `scripts/` | Nightly maintenance script |
 | `.claude/skills/` | Project skills (`session-end`) |
-
-*Ships unactivated and data-free. Activate to make it yours.*
-=======
-# talabat-retention-agentic-os
-MBA Agentic OS Capstone Project – An AI Operating System for Customer Lifetime Value Optimization and Customer Retention in Talabat Egypt.
->>>>>>> 4ba7062c13ca1f9481a95da1eceb63f57714ac56

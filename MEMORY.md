@@ -12,7 +12,8 @@ McKinsey Edition, 15–25 pages), an OS structure document (3–5 pages), and a 
 (5 slides per member). Problem: talabat Egypt's price-crushed, low-switching-cost customers (71.9%
 food inflation, 38% devaluation) are exposed to Breadfast, Rabbit, and elmenus; the plan argues for
 AI-driven retention — churn prediction, personalized offers, t pro subscription targeting — in
-Greater Cairo. Charter: `Problem_Charter_DRAFT.md`, submission 26/07/2026.
+Greater Cairo. Charter: `Problem_Charter.md` — **✅ approved by Dr. Hossam Daoud, 21/07/2026**
+(team of 6 and a 30-slide group presentation approved alongside the problem statement).
 
 ## Team (Group G02)
 
@@ -25,7 +26,9 @@ Greater Cairo. Charter: `Problem_Charter_DRAFT.md`, submission 26/07/2026.
 | Ahmed Abd Elhakam Abd Elfattah Zaian | 24224008 | TBD |
 | Abdallah Mahmoud Abdo Ahmed | 24220430 | TBD |
 
-Guide specifies 4–5 members / 5 roles; team is 6 — split to confirm with instructor.
+Guide specifies 4–5 members / 5 roles; team size of 6 is now instructor-approved (with a 30-slide,
+5-slides-per-member presentation confirmed to match). **Still open:** how the 6 members map onto
+the guide's 5 defined roles (e.g., co-leads on one role, or a 6th custom role) — not yet assigned.
 
 ## Source corpus (`Input_Data/`)
 
@@ -147,7 +150,7 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   always be clearly labeled as such, never blended with or presented as real disclosed data; (2)
   Egypt remains the target market for the actual deliverable — "MENA" is company-level backdrop
   context (talabat operates in 8 countries), not a scope expansion. See `CLAUDE.md` standing
-  instructions and `Problem_Charter_DRAFT.md` for the resulting text.
+  instructions and `Problem_Charter.md` for the resulting text.
 - 2026-07-21 — Ingested the 29-document native-PDF primary-source corpus (uploaded to
   `Input_Data/00_Inbox/`) into the structured knowledge base under `vault/Knowledge/` (source
   notes, topic-consolidated facts, entities, relationship map). Installed PyMuPDF + Tesseract OCR
