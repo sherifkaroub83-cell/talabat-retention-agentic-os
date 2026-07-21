@@ -6,6 +6,39 @@ writes these entries for you.
 
 ---
 
+## Session 2 — 2026-07-21 (continued: Phase 4 semantic knowledge layer)
+
+**Focus:** Transform the frozen 29-document knowledge base from a document repository into a
+linked semantic knowledge graph, per an explicit 8-part brief (audit → Topic Notes → MOCs →
+semantic links → business relationships → strategic knowledge → graph quality → validation).
+
+**Done:**
+- Audited the vault first (as required before any changes): found a 100% orphan rate — 0
+  `[[wiki-links]]` existed anywhere in `vault/Knowledge/` despite thorough prose citations
+- Built 30 business-level Topic Notes (`vault/Knowledge/Topics/`) via 6 parallel background agents,
+  each synthesizing (not copying) from the existing Facts/Entities/Sources layer
+- Built 8 domain MOCs (`vault/MOC/`) plus refreshed the stale root `MOC-Second-Brain.md`
+- Added a "Related Topics" section to all 52 pre-existing notes (29 Sources, 14 Facts, 9 Entities)
+  — verified as pure additions (491 insertions, 0 deletions; no citation touched)
+- Built `Business_Relationships.md` — 5 explicit causal chains with Mermaid diagrams
+- Built 12 Strategic Knowledge synthesis notes (`vault/Knowledge/Strategic/`) via 3 parallel agents
+- Result: 0 orphan notes (was 103/103), 1 connected component covering 100% of the vault, 937
+  wiki-link edges (was 0). Full detail: `vault/Knowledge/_PHASE4_VALIDATION_REPORT.md`
+
+**Key findings surfaced during synthesis (flagged as Open Questions, not resolved):**
+- Egypt's relative category-share figure is inconsistent across documents (10x+ vs. 1x+→4x+)
+- The 2026 investment programme has three different disclosed totals (>USD 100mn / ~USD 120mn /
+  ~USD 175mn)
+- Nearly every AI/personalization/retention uplift metric in the corpus is Group-level or
+  explicitly excludes Egypt — the single most important gap for the Egypt-scoped business plan
+
+**Next:**
+- Fold `vault/Knowledge/Topics/` and `Strategic/` into the GSB 14-section business plan draft
+- Resolve the three internal inconsistencies above against source documents before citing any of
+  them in the plan
+
+---
+
 ## Session 2 — 2026-07-21
 
 **Focus:** Ingest the 29-document native-PDF primary-source corpus into a structured knowledge base.
