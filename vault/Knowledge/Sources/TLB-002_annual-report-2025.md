@@ -77,9 +77,9 @@ distinction from the 485-day audited "since inception" figures):
 - Employees: 7,821 total (talabat-only, excluding instashop) as of 31 Dec 2025, across 90+ nationalities;
   436 tech (product/design/engineering/data) FTEs; 157k rider fleet paid USD 1.5bn in 2025 delivery costs (TLB-002, pages 5, 11, 16)
 - Data processed: 235 terabytes daily (TLB-002, page 15)
-- Rider Safety Score: 94% (December 2025) (TLB-002, page 15)
+- Rider Safety Score: 94% (December 2025) (TLB-002, page 16)
 - talabat pro: subscriber base grew 3.2x in 2025; subscribers now account for ~50% of GMV (TLB-002, pages 4, 13)
-- Personalisation algorithm: estimated incremental EBITDA contribution of USD 30mn+ p.a. (2025 estimate) (TLB-002, page 15)
+- Personalisation algorithm: estimated incremental EBITDA contribution of USD 30mn+ p.a. (2025 estimate) (TLB-002, page 16)
 
 ## Countries Mentioned
 UAE, Kuwait, Egypt, Qatar, Bahrain, Oman, Jordan, Iraq (talabat's 8 countries of operation);

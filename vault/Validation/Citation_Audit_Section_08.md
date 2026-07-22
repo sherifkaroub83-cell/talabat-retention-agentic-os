@@ -244,3 +244,137 @@ the error does not continue propagating into later sections) and this audit is r
 - `vault/Knowledge/Strategic/Decision-Making Process.md` · `vault/Knowledge/Topics/Corporate Structure.md` · `vault/Knowledge/Strategic/Competitive Weaknesses.md` · `vault/Knowledge/Topics/Customer Journey.md`
 - `vault/Research/Notes/RES-004_egypt-official-newsroom-operational-datapoints.md` · `vault/Decisions/Assumptions_Register.md` (`ASM-004`)
 - [[Citation_Audit_Section_07|Citation Audit — Section 7]] · [[Citation_Audit_Section_03|Citation Audit — Section 3]] — precedent for this report's format, the wrong-page-citation defect class, and the absence-claim citation standard
+
+---
+
+# Targeted re-audit — fix verification (2026-07-22)
+
+## Scope
+Independent Stage 9 re-verification of the two hard-failure fixes claimed against this report, performed
+by a fresh `evidence-citation-agent` invocation with no memory of the original audit thread. Re-read
+`vault/Projects/Business_Plan_Drafts/Section_08_Operations_Plan.md` in full (current state), and
+independently re-checked both corrected citations against the raw source text's `===== PAGE N =====`
+markers directly — not against the draft's own citation text, and not against the original audit's
+findings taken on faith. Also read `vault/Projects/Business_Plan_Drafts/Section_05_AI_Technology_and_
+Development.md` in full (current state) and `vault/Knowledge/Sources/TLB-002_annual-report-2025.md` and
+`vault/Knowledge/Topics/AI.md` in full, per the task's instruction to spot-check the upstream fix for new
+inconsistencies, plus the raw source text at the `===== PAGE 15 =====` and `===== PAGE 16 =====` marker
+ranges (lines 1252–1380) to independently re-establish which facts belong on which page.
+
+## Fix #1 re-verified — "international standards for privacy and security" quote
+
+Section 8 (current text) now reads: '...a stated commitment to "international standards for privacy and
+security in our FinTech initiatives and e-commerce operations" (TLB-002, page 25)...'
+
+Independently re-checked against the raw source text. The `===== PAGE 25 =====` marker is at line 2233;
+the `===== PAGE 26 =====` marker is at line 2290. The verbatim quote is at line 2279, squarely inside that
+range ("Furthermore, we emphasise data protection and adhere to international standards for privacy and
+security in our FinTech initiatives and e-commerce operations"). Also independently re-read page 24's
+full content (lines 2199–2232, the `===== PAGE 24 =====` range) to confirm it remains what the original
+audit described: exclusively dividend-policy prose (90% payout target, USD 421mn total dividend), no
+privacy/security content of any kind. **Fix #1 confirmed correct.**
+
+## Fix #2 re-verified — 235TB/day data-processing figure
+
+Section 8 (current text) now reads: "...only the scale of data processed (235TB/day, TLB-002, page 15)
+and the shared Delivery Hero technology stack it runs on."
+
+Independently re-checked against the raw source text. The `===== PAGE 15 =====` marker is at line 1252;
+the `===== PAGE 16 =====` marker is at line 1316. The figure appears at line 1265, inside the page-15
+range ("Data generated daily 235TB (235,000 gigabytes)"), immediately preceding the six-order
+personalisation narrative Section 8 also references elsewhere. Independently re-read the full page-16
+range (lines 1316–1380) again: confirmed it contains the rider-staffing-algorithm description, the
+personalisation algorithm's "Incremental EBITDA1 p.a. USD 30mn+" line, and the "Rider safety score3,4 94%"
+line — no 235TB/terabytes reference anywhere on that page. **Fix #2 confirmed correct** as applied to
+Section 8's own text.
+
+## New uncited claims introduced by the edits — none found
+
+Diffed the surrounding prose in both corrected sentences against the rest of Section 8's argument: neither
+edit altered any other claim, number, or citation nearby — both changes are isolated single-digit
+page-number substitutions ("24"→"25", "16"→"15") with no other text disturbed. No new numeric or
+named-fact claim was introduced by either edit, and no existing claim lost its citation in the process.
+Section 8's Traceability summary table (bottom of the document) and Links section were also re-checked
+against the current body text and remain internally consistent with the two corrected citations.
+
+## Upstream spot-check — Section 5 and the TLB-002 Sources note: new inconsistency found
+
+The task asked specifically whether the upstream fix (applied to `Section_05_AI_Technology_and_
+Development.md` and `Sources/TLB-002_annual-report-2025.md` to stop the wrong page-16/page-14 citation
+from propagating) introduced any new inconsistency. **It did.** The fix correctly repointed the 235TB/day
+figure's citations from page 16 (Section 5, `Topics/AI.md`) and page 14 (the Sources note) to page 15 —
+but in the Sources note and in one place in Section 5, the same "16 → 15" correction was also applied to
+**two different, adjacent facts that were already correctly cited to page 16** and should not have been
+touched, because — as independently re-verified above — page 16 genuinely contains the personalisation
+algorithm's "USD 30mn+" incremental-EBITDA figure and the 94% Rider Safety Score, while page 15 does not
+mention either:
+
+- `vault/Knowledge/Sources/TLB-002_annual-report-2025.md`, line 80: "Rider Safety Score: 94% (December
+  2025) (TLB-002, page 15)" — **should be page 16.** Independently confirmed: the raw source text's
+  `===== PAGE 16 =====` range contains "Rider safety score3,4 / 94%"; page 15 contains no Rider Safety
+  Score content at all.
+- `vault/Knowledge/Sources/TLB-002_annual-report-2025.md`, line 82: "Personalisation algorithm: estimated
+  incremental EBITDA contribution of USD 30mn+ p.a. (2025 estimate) (TLB-002, page 15)" — **should be
+  page 16.** Independently confirmed: the raw source text's `===== PAGE 16 =====` range contains
+  "Personalisation / Proprietary personalisation and ranking algorithm / Incremental EBITDA1 p.a. / USD
+  30mn+"; page 15 contains no EBITDA/personalisation-financial-impact content (its personalisation content
+  is the six-order recommendation-threshold narrative, a different fact).
+- `vault/Projects/Business_Plan_Drafts/Section_05_AI_Technology_and_Development.md`, §5.2 (Option A table
+  cell, "Capability" column): "...the only directly quantified AI-EBITDA trail in the corpus, $14mn+→
+  $30mn+ FY24→FY25, TLB-001, page 23; TLB-002, page 15..." — **the "TLB-002, page 15" portion should be
+  page 16** for the same reason (the $30mn+ figure is a page-16 fact, not page-15). Line 42 and line 50 of
+  the same file (the "Data scale" and "Meal for One" sentences in §5.1) are correctly page 15 and were
+  not affected — this is an isolated instance, not a file-wide error, but it is a genuine new wrong-page
+  citation sitting in a file whose own frontmatter still reads "citation audit PASS."
+- `vault/Knowledge/Topics/AI.md`, line 7 ("Why It Matters"): "...rose from USD 14mn+ p.a. (FY2024) to USD
+  30mn+ p.a. (FY2025) (TLB-001, page 23; TLB-002, page 15)" carries the same $30mn+/page-15 mismatch —
+  should be page 16. Separately, and not a product of this round's fix at all, `Topics/AI.md` line 4 still
+  cites the 235TB figure itself as "(TLB-002, page 16)" — **this file's own instance of the original
+  defect was never actually corrected**, despite the original audit's "Fix needed" note explicitly naming
+  `Topics/AI.md` as one of the three places (with Section 5 and the Sources note) that needed the same
+  fix. This is a second, distinct gap: an intended fix that was not applied at all, sitting in the same
+  file as a new fix that was mis-applied to the wrong adjacent fact.
+
+None of these four instances appear inside Section 8's own text — Section 8 does not cite the $30mn+
+EBITDA figure or the 94% Rider Safety Score anywhere, so this defect does not currently taint any claim
+Section 8 makes. But it is a direct, verifiable answer to the question this re-audit was asked to check,
+and per this project's "silent suppression is as bad as silent selection" standard it cannot be dropped
+just because it falls outside Section 8's own text.
+
+## Overall verdict
+
+**PASS for Section 8 specifically.** Both of the two original hard failures are independently confirmed
+fixed against the raw source text: the FinTech/privacy quote is now correctly cited to page 25, and the
+235TB/day figure is now correctly cited to page 15, both verified directly against the `===== PAGE N
+=====` markers rather than taken on the draft's or the original audit's word. No new uncited claim, lost
+citation, or collateral text change was introduced by either edit. **Section 8 is ready to proceed to
+Stage 11 QA review.**
+
+This PASS is scoped to Section 8's own document. It does **not** extend to `Section_05_AI_Technology_and_
+Development.md`, whose frontmatter still claims "citation audit PASS" but now contains a newly-introduced
+wrong-page citation (the $30mn+ EBITDA figure at §5.2, mis-cited to page 15 instead of page 16) that this
+re-audit found independently while spot-checking the upstream fix as instructed. Separately, and not
+newly introduced, `vault/Knowledge/Topics/AI.md` still carries the *original*, never-fixed page-16
+citation for the 235TB figure, plus the same new $30mn+/page-15 mismatch found in the Sources note. Two
+follow-up actions for the Orchestrator, neither blocking Section 8's own progression but both needed
+before any future section cites these facts from these notes:
+
+1. Fix the newly-introduced error: change "TLB-002, page 15" → "TLB-002, page 16" for the $30mn+
+   incremental-EBITDA figure in `Section_05_AI_Technology_and_Development.md` §5.2 (Option A table cell)
+   and `vault/Knowledge/Topics/AI.md` ("Why It Matters"), and change "TLB-002, page 15" → "TLB-002, page
+   16" for the 94% Rider Safety Score in `vault/Knowledge/Sources/TLB-002_annual-report-2025.md` (line 80)
+   and for the $30mn+ figure in the same file (line 82).
+2. Complete the never-applied part of the original fix: change "TLB-002, page 16" → "TLB-002, page 15"
+   for the 235TB/day figure itself in `vault/Knowledge/Topics/AI.md` (line 4, "Overview"), which still
+   carries the original defect this audit's first pass flagged for correction there.
+Given `Section_05_AI_Technology_and_Development.md`'s frontmatter asserts a citation-audit PASS that is no
+longer accurate as of this newly-found defect, its status should be flagged to the Orchestrator for
+re-audit before Section 5 is treated as clean for Stage 10/11 purposes — this is outside this re-audit's
+assigned scope (Section 8) to fix directly, so it is reported here rather than corrected silently.
+
+## Links
+- [[Section_08_Operations_Plan|vault/Projects/Business_Plan_Drafts/Section_08_Operations_Plan.md]] — re-audited, PASS
+- [[Section_05_AI_Technology_and_Development]] — spot-checked, new wrong-page citation found (§5.2, $30mn+ EBITDA figure), not in this re-audit's scope to fix
+- `vault/Knowledge/Sources/TLB-002_annual-report-2025.md` — spot-checked, two new wrong-page citations found (lines 80, 82)
+- `vault/Knowledge/Topics/AI.md` — spot-checked, one never-fixed original-defect citation (line 4) plus one new wrong-page citation (line 7)
+- `vault/Knowledge/_source_text/20260331_talabat-Annual-Report-2025-En-Interactive.txt` (pages 15, 16, 24, 25 markers — the direct source of this addendum's findings)
