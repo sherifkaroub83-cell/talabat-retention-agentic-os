@@ -114,7 +114,7 @@ must build from, not around.
 | Development/maintenance workflow gap | `Strategic/Decision-Making Process.md` | Explicit gap statement, not filled |
 | Team roles / skills gap | `Section_10_Risk_Analysis.md` (AI-capability ownership ambiguity), `ASM-004` | Cross-referenced, not re-derived |
 | 7S alignment check | `Strategic/Decision-Making Process.md`, `Topics/Corporate Structure.md`, TLB-002 p.14, TLB-020 p.16, `Section_07_Marketing_and_Sales_Strategy.md`, `Section_10_Risk_Analysis.md`, `Strategic/Competitive Weaknesses.md` | Direct citation + cross-reference, structured as a table per the template's own instruction |
-| Security and compliance | TLB-002, pages 24, 27, 29 | Direct citation; explicit absence statement for Egypt-specific data-protection law |
+| Security and compliance | TLB-002, pages 25, 27, 29 | Direct citation; explicit absence statement for Egypt-specific data-protection law |
 
 ## Links
 - [[Talabat-Egypt-AI-Retention-Business-Plan|Project tracker]]
