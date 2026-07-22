@@ -257,6 +257,29 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   Section 9 reached ✅ Done (independently verified). Full report:
   `vault/Validation/Pilot3_Execution_Report_Section_09.md`. Work done on branch
   `feature/bp-pilot-sections`, not merged to `main`.
+- 2026-07-22 — **Pilot 4: redefined mid-flight, on explicit instruction, into a full-system operational-
+  stability test.** Original design (deliberate two-pass QA on Section 10) preserved intact as one
+  component; primary deliverable became `vault/Validation/Pilot4_System_Stability_Report.md`. A
+  pre-execution integrity audit of Pilots 1–3's output found and fixed 2 real defects (3 graph orphans;
+  2 stale Validation-report frontmatter fields) and correctly identified 1 false positive. Section 10
+  (Risk Analysis) was drafted as a deliberate cross-subsystem integration test — re-reading Section 9's
+  Forecast Layer confidence tags as financial-risk input, referencing Section 3's Threats rather than
+  re-deriving them — and underwent the most rigorous verification of any section: this project's first
+  **citation-audit FAIL** (3 hard failures, fixed and re-verified), then two genuinely independent QA
+  passes that both failed and — critically — **diverged**: both caught a missing algorithm-bias risk and
+  a confidence/probability conflation, but only Pass 2 caught a real internal MECE contradiction (claimed
+  five categories, proved four, used five in the matrix) that Pass 1 read past. This is the first
+  concrete evidence in this project that a second independent QA pass catches something a rigorous first
+  pass misses — see `vault/Validation/QA_Review_Section_10_Comparison.md`. All findings fixed and
+  independently re-verified a third time; Section 10 reached ✅ Done (independently verified).
+  **Stability verdict: the Agentic OS is operationally stable when every major subsystem is exercised
+  together** — 17 real `Agent` invocations this session, zero failures, zero pipeline-gate violations,
+  zero content contradictions. Findings classified against Phase 8's 8-category taxonomy: zero new
+  Architecture Issues/Implementation Bugs/Knowledge Issues, only two Process Improvements (MOC-linking
+  and frontmatter-freshness discipline, now standing conventions, not architecture changes) and four
+  Successfully Validated Design confirmations. **All four Pilot Validation Plan pilots now complete —
+  Phase 8 of the roadmap (drafting the remaining 10 sections) can begin.** Work done on branch
+  `feature/bp-pilot-sections`, not merged to `main`.
 
 ## Session log
 
@@ -320,3 +343,17 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   independently confirmed the fix. Section 9 reached ✅ Done (independently verified). See
   `vault/Validation/Pilot3_Execution_Report_Section_09.md`. Work done on branch
   `feature/bp-pilot-sections`, not merged to `main`.
+- 2026-07-22 — Session 7: ran Pilot 4 (Section 10, Risk Analysis) — redefined mid-flight, on explicit
+  instruction, from a narrow two-pass-QA test into a full-system operational-stability question. A
+  pre-execution integrity audit of Pilots 1–3's output found and fixed 2 real defects and correctly
+  flagged 1 false positive. Section 10 was drafted as a deliberate cross-subsystem integration test and
+  underwent this project's first citation-audit FAIL (fixed, re-verified) plus the original two-pass QA
+  design — two independent threads both failed, converged on two findings, and diverged on a third (Pass
+  2 caught an internal MECE contradiction Pass 1 missed), the first concrete proof in this project that a
+  second independent pass adds real value beyond formality. Combined fix independently re-verified a
+  third time. Section 10 reached ✅ Done (independently verified). The pilot's primary deliverable, a
+  full-system stability report, concludes the Agentic OS is operationally stable across 17 real agent
+  invocations this session, with only a bounded, non-architectural repository-hygiene gap (now a
+  standing process convention). All four Pilot Validation Plan pilots are now complete. See
+  `vault/Validation/Pilot4_System_Stability_Report.md`. Work done on branch `feature/bp-pilot-sections`,
+  not merged to `main`.

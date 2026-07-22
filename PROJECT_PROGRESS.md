@@ -4,7 +4,7 @@ Living status of the project. Update whenever a milestone moves. `SESSION_LOG.md
 day-to-day detail; this file is the high-level snapshot.
 
 **Last updated:** 2026-07-22
-**Overall status:** 🟢 Phase 1 — charter **approved** by Dr. Hossam Daoud (team of 6, 30-slide presentation confirmed); role assignment among the 6 members is the one remaining Phase 1 item. Phase 3 data ingestion and semantic knowledge layer complete. **OS Architecture Version 2 live and now operationally confirmed across three pilots**: Pilot 1 (Section 3) validated most of the Version 1 design and surfaced the agent-delegation finding that produced v2's Change 1 fix; Pilot 2 (Section 2) confirmed Change 1 works and found a second runtime constraint (`AskUserQuestion` unavailable to subagents); **Pilot 3 (Section 9) exercised the Forecast Layer for the first time** (`forecasting-agent`, `kpi-agent`) and produced this project's first complete fail/fix/independently-re-verified cycle — independent Stage 11 QA issued a genuine FAIL (two template-completeness gaps), both fixed from already-Approved components and independently re-confirmed. Pilot 3 also found that one of the three originally-"unreconcilable" internal discrepancies (the 2026 investment total) is actually reconcilable once its primary source is re-read directly. 3 of 14 Business Plan sections drafted; Sections 2 and 9 are ✅ Done (independently verified), Section 3 is ✅ Done (self-reviewed + independently re-verified on one point). Pilot 4 (Section 10, deliberate two-pass QA comparison) is planned, not yet run — see `vault/Architecture/Pilot_Validation_Plan.md`.
+**Overall status:** 🟢 Phase 1 — charter **approved** by Dr. Hossam Daoud (team of 6, 30-slide presentation confirmed); role assignment among the 6 members is the one remaining Phase 1 item. Phase 3 data ingestion and semantic knowledge layer complete. **OS Architecture Version 2 live and operationally confirmed across all four planned pilots — Pilot Validation Plan complete.** Pilot 1 (Section 3) validated most of the Version 1 design and surfaced the agent-delegation finding that produced v2's Change 1 fix; Pilot 2 (Section 2) confirmed Change 1 works and found a second runtime constraint (`AskUserQuestion` unavailable to subagents); Pilot 3 (Section 9) exercised the Forecast Layer for the first time and produced the project's first fail/fix/independently-re-verified cycle. **Pilot 4 was redefined mid-flight, on explicit instruction, from a narrow two-pass-QA test into a full-system operational-stability question — the OS was found stable** (see `vault/Validation/Pilot4_System_Stability_Report.md`): 17 real `Agent` invocations this session, zero failures, zero pipeline-gate violations, zero content contradictions; the one recurring gap (repository-hygiene discipline) is process, not architecture. Section 10 (Risk Analysis) itself went through the most rigorous verification of any section — a citation-audit fail/fix/re-verify cycle, then two genuinely independent QA passes that both failed and diverged (Pass 2 caught an internal MECE contradiction Pass 1 missed), then a combined fix and final re-verify. **4 of 14 Business Plan sections drafted, all four ✅ Done (independently verified except Section 3, which is self-reviewed + independently re-verified on one point).** With all four pilots retired, Phase 8 of the roadmap (drafting the remaining 10 sections) can now begin.
 
 ---
 
@@ -22,7 +22,7 @@ Group G02 · Dr. Hossam Daoud · charter submission 26/07/2026.
 | 1 | Phase 1 — Problem & Charter (wk 1–2) | 🟢 Approved, one item open | Charter **approved** by Dr. Hossam Daoud (`Problem_Charter.md`) — team of 6 and 30-slide presentation confirmed. Remaining: map the 6 members onto the guide's 5 defined roles |
 | 2 | Phase 2 — OS Activation (wk 2–3) | 🟡 In progress | Template activated 20/07 (identity, memory, tracking). `business-plan-drafting` skill added 21/07 (maps all 14 GSB sections to vault sources); `AI_Business_Plan_Template.md` stored verbatim in-repo. Remaining: agent-role documentation, MCP decision, team walkthrough |
 | 3 | Phase 3 — Data Collection & Ingestion (wk 3–5) | ✅ Done | 9-doc Markdown corpus + 29-doc native-PDF corpus (annual reports, quarterly financials, investor decks, earnings calls, IPO/regulatory, consensus) collected and organized. Ingestion pipeline: extracted (incl. OCR) → 29 source notes → 14 topic fact files → 9 entity rosters → relationship map. **Extended with a semantic knowledge layer** (21/07): 30 synthesis Topic Notes, 8 domain MOCs, 12 Strategic Knowledge notes, an explicit-reasoning Business Relationships note, and semantic `[[wiki-links]]` added to all 52 pre-existing notes — 0 orphan notes, 1 fully-connected graph across 103 notes (was 103 isolated notes). All in `vault/Knowledge/`; see `_PHASE4_VALIDATION_REPORT.md`. |
-| 4 | Phase 4 — Analysis & Business Plan (wk 5–8) | 🟡 Drafting underway, 3/14 | 14 sections vs GSB template; every claim → vault note → source. Sub-phase 6 (OS architecture v1) done 21/07. Sub-phase 7 (Pilot 1) — Section 3 (Market Analysis) drafted, cited, and QA-passed (self-reviewed) 22/07. Sub-phase 7.5 ("Phase 8", evidence-based architecture v2) done 22/07. Pilot 2 done 22/07 — Section 2 (Business Description) drafted and independently QA-passed. **Pilot 3 done 22/07**: Section 9 (Financial Plan) drafted using the Forecast Layer's first real content (`Value_Driver_Tree.md`, `Scenarios.md`, `KPI_Tree.md`) — independent QA issued a genuine FAIL (missing revenue figure, missing P&L), fixed and independently re-verified. `Pilot_Validation_Plan.md` defines Pilot 4 (Section 10) next. 11 of 14 sections still not started |
+| 4 | Phase 4 — Analysis & Business Plan (wk 5–8) | 🟡 Drafting underway, 4/14 | 14 sections vs GSB template; every claim → vault note → source. Sub-phase 6 (OS architecture v1) done 21/07. Sub-phase 7 (Pilot 1) — Section 3 (Market Analysis) drafted, cited, and QA-passed (self-reviewed) 22/07. Sub-phase 7.5 ("Phase 8", evidence-based architecture v2) done 22/07. Pilot 2 done 22/07 — Section 2 (Business Description) drafted and independently QA-passed. Pilot 3 done 22/07 — Section 9 (Financial Plan), first real Forecast Layer test, fail/fix/re-verify cycle. **Pilot 4 done 22/07** (redefined mid-flight into a full-system stability test): Section 10 (Risk Analysis) drafted as a deliberate cross-subsystem integration exercise, passed through a citation-audit fail/fix/re-verify cycle plus two genuinely independent QA passes (converged on two findings, diverged on a third), fixed, and independently re-verified. Full-system stability verdict: stable, no architecture redesign needed. **All four Pilot Validation Plan pilots now complete — Phase 8 (drafting the remaining 10 sections) can begin.** 10 of 14 sections still not started |
 | 5 | Phase 5 — Finalize & Present (wk 8–9) | ⬜ Not started | Quality pass, export, OS structure doc, deck, Moodle upload — roadmap sub-phase 10 |
 
 **Legend:** ✅ Done · 🟡 In progress · ⬜ Not started · 🔴 Blocked
@@ -66,9 +66,29 @@ pattern elsewhere. Both gaps were fixed from already-Approved components (no new
 Decision work) and independently re-verified by a fresh agent thread — the project's first complete
 fail/fix/re-verify cycle. Full report: `vault/Validation/Pilot3_Execution_Report_Section_09.md`.
 
-**Next:** Pilot 4 (Section 10, Risk Analysis — deliberately testing the two-pass QA protocol by running
-Stage 11 twice on purpose and comparing results) per `vault/Architecture/Pilot_Validation_Plan.md` — only
-after it reports back does drafting the remaining 11 sections begin in earnest.
+**Pilot 4 (Section 10, 22/07) is done** — redefined mid-flight, on explicit instruction, from a narrow
+two-pass-QA test into a full-system operational-stability question: is the Agentic OS stable when every
+major subsystem is exercised together? A pre-execution integrity audit of Pilots 1–3's accumulated
+output found and fixed two real defects (3 graph orphans, 2 stale frontmatter fields) and correctly
+identified one false positive. Section 10 was drafted as a deliberate cross-subsystem integration test
+— re-reading Section 9's Forecast Layer confidence tags as financial-risk input, referencing Section
+3's Threats rather than re-deriving them. It then underwent the most rigorous verification of any
+section: a citation-audit fail/fix/re-verify cycle (this project's first citation-audit FAIL — 3 hard
+failures), then the original two-pass QA test itself — two genuinely independent threads reviewing the
+same unedited draft, both reaching FAIL, converging on two findings, and **diverging on a third** (Pass
+2 caught a real internal MECE contradiction Pass 1 read past) — then a combined fix and a final
+independent re-verification. Full comparison: `vault/Validation/QA_Review_Section_10_Comparison.md` —
+the first concrete evidence in this project that a second independent QA pass catches something a
+rigorous first pass misses. The pilot's primary deliverable, a full-system stability report
+(`vault/Validation/Pilot4_System_Stability_Report.md`), concludes the Agentic OS **is** operationally
+stable: 17 real `Agent` invocations this session, zero failures, zero pipeline-gate violations, zero
+content contradictions across two independent full-repository integrity audits. The one recurring
+instability class found (new Validation files not automatically linked into MOC navigation; QA/Citation
+frontmatter going stale after an addendum) is process, not architecture — now recorded as a standing
+convention for the remaining pilots, not a redesign trigger.
+
+**All four Pilot Validation Plan pilots are now complete.** Next: Phase 8 of the roadmap — drafting the
+remaining 10 Business Plan sections — per `vault/Architecture/Implementation_Roadmap.md`.
 
 ## Blockers / open questions
 
@@ -138,3 +158,16 @@ after it reports back does drafting the remaining 11 sections begin in earnest.
   forecasted revenue figure, no P&L projection) — fixed from already-Approved components and
   independently re-verified, this project's first complete fail/fix/re-verify cycle. Full execution
   report: `vault/Validation/Pilot3_Execution_Report_Section_09.md`
+- **Pilot 4** (2026-07-22, branch `feature/bp-pilot-sections`, redefined mid-flight into a full-system
+  operational-stability test): pre-execution integrity audit of Pilots 1–3's output (2 real defects
+  found and fixed, 1 false positive correctly identified). Section 10 (Risk Analysis) drafted
+  (`vault/Projects/Business_Plan_Drafts/Section_10_Risk_Analysis.md`) as a deliberate cross-subsystem
+  integration test. Citation-audited: this project's first citation-audit **FAIL** (3 hard failures),
+  fixed and independently re-verified. Two-pass QA test (the pilot's original design, preserved):
+  `QA_Review_Section_10_Pass1.md` and `QA_Review_Section_10_Pass2.md`, both independently FAIL,
+  compared explicitly in `QA_Review_Section_10_Comparison.md` — converged on two findings, diverged on
+  a third (Pass 2 alone caught an internal MECE contradiction). Combined fix, independently re-verified
+  in `QA_Review_Section_10_Final.md`. Primary deliverable:
+  `vault/Validation/Pilot4_System_Stability_Report.md` — the Agentic OS is operationally stable across
+  17 real agent invocations this session, with only a bounded, non-architectural repository-hygiene
+  finding, now a standing convention. All four Pilot Validation Plan pilots complete.

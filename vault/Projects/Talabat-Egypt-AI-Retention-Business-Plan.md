@@ -33,17 +33,21 @@ OS structure document (3–5 pp) and a 30-slide group presentation (5 slides × 
 linked (154 vault notes, 0 orphans) · **Agentic OS architecture designed** (21/07/2026 —
 Decision/Research/Forecasting layers, 8 agents, 11-stage pipeline; see `vault/Architecture/`) ·
 **Architecture Version 2 shipped, evidence-based, 22/07/2026** (Phase 8; see
-[[Agentic_OS_Architecture_v2]]) · **Operational validation ongoing (Pilot Validation Plan, 22/07/2026):
-Pilots 1–3 complete — 3 of 14 sections drafted, all now Done (Sections 2 and 9 independently verified;
-Section 3 self-reviewed + independently re-verified on one point). Pilot 3 (Section 9, Financial Plan)
-was the first real test of the Forecast Layer — `forecasting-agent` and `kpi-agent` both ran for the
-first time, building the Value Driver Tree, three scenarios, and the KPI Tree from empty scaffolds.
-Independent QA review issued a genuine FAIL on first pass (two template-completeness gaps — no
-forecasted revenue figure, no P&L projection), which were fixed and independently re-verified — the
-project's first real fail/fix/re-verify cycle, proving the two-pass discipline catches real defects, not
-just rubber-stamps drafts.** This is still the single largest remaining task on the project (40% of the
-grade). Next: Pilot 4 (Section 10, Risk Analysis — deliberate two-pass QA comparison), per
-[[Pilot_Validation_Plan]].
+[[Agentic_OS_Architecture_v2]]) · **Operational validation complete (Pilot Validation Plan, 22/07/2026):
+all four pilots done — 4 of 14 sections drafted, all now ✅ Done (independently verified). Pilot 4
+(Section 10, Risk Analysis) was redefined mid-flight, on explicit instruction, from a narrow two-pass-QA
+test into a full-system operational-stability question: is the Agentic OS stable when every major
+subsystem is exercised together? [[Pilot4_System_Stability_Report|Answer: yes]], with one bounded,
+non-architectural caveat (repository-hygiene discipline, now a standing convention) — 17 real `Agent`
+invocations this session, zero failures, zero pipeline-gate violations, zero content contradictions.
+Section 10 itself passed through the most rigorous verification cycle of any section: a citation-audit
+fail/fix/re-verify cycle, then two genuinely independent QA passes that both failed and — critically —
+diverged (Pass 2 caught a real internal MECE contradiction Pass 1 missed), then a combined fix and final
+independent re-verify. See [[QA_Review_Section_10_Comparison]] for the first concrete evidence in this
+project that a second independent QA pass catches defects a rigorous first pass can miss.** This is
+still the single largest remaining task on the project (40% of the grade). Next: with all four pilots
+retired, Phase 8 of the roadmap (drafting the remaining 10 sections) can begin — see
+[[Implementation_Roadmap]] and [[Pilot_Validation_Plan]]'s own "Sequencing and what happens after" note.
 
 ## Open decisions (needed before/while drafting)
 - [ ] Team role assignments (6 members / 5 defined roles — charter approved as-is; mapping still open)
@@ -105,7 +109,7 @@ grade). Next: Pilot 4 (Section 10, Risk Analysis — deliberate two-pass QA comp
 | 7 | Marketing and Sales Strategy | ⬜ Not started | `Topics/Customer Journey.md`, `Topics/Promotions.md` (funnel data is a known gap) |
 | 8 | Operations Plan | ⬜ Not started | `Strategic/Decision-Making Process.md` (7S check is net-new synthesis) |
 | 9 | Financial Plan | ✅ Done (independently verified) | `Topics/Financial Performance.md`, `Topics/Segment Reporting.md`, `Strategic/Cost Structure.md`, `Strategic/Growth Drivers.md`, `Strategic/Customer Retention Drivers.md`. Draft: [[Section_09_Financial_Plan]]. First section built on the Forecast Layer — [[Value_Driver_Tree]] and [[Scenarios]] (`forecasting-agent`, first real use) and [[KPI_Tree]] (`kpi-agent`, first real use), all invoked top-level. Pipeline artifacts: [[DEC-004_2026-investment-total]] (2026-investment-total reconciliation), [[DEC-005_section9-headline-scenario]] (scenario framing), `ASM-006`–`ASM-012`, [[Citation_Audit_Section_09]], [[QA_Review_Section_09]]. **Genuinely independent Stage 11 QA issued a real FAIL on first pass** (two template-completeness gaps: no forecasted revenue figure, no P&L projection) — fixed from Approved-tier components already on hand, then independently re-verified by a fresh `qa-review-agent` thread (addendum in [[QA_Review_Section_09]]) — PASS. The project's first fail/fix/re-verify cycle, proving independent QA catches real gaps rather than rubber-stamping. |
-| 10 | Risk Analysis | ⬜ Not started | `Strategic/Strategic Risks.md`, `Strategic/Competitive Weaknesses.md` |
+| 10 | Risk Analysis | ✅ Done (independently verified) | `Strategic/Strategic Risks.md`, `Strategic/Competitive Weaknesses.md`, plus cross-section evidence from [[Section_03_Market_Analysis|Section 3]] and [[Section_09_Financial_Plan|Section 9]]. Draft: [[Section_10_Risk_Analysis]]. Deliberately built as a cross-subsystem integration test — re-reads Section 9's Forecast Layer confidence tags as financial-risk input, references Section 3's Threats rather than re-deriving them. Pipeline artifacts: [[Citation_Audit_Section_10]] (FAIL→fix→PASS, this project's first citation-audit failure), [[QA_Review_Section_10_Pass1]] / [[QA_Review_Section_10_Pass2]] / [[QA_Review_Section_10_Comparison]] (two genuinely independent QA passes, both FAIL, converged on two findings, diverged on a third that Pass 2 alone caught), [[QA_Review_Section_10_Final]] (combined fix, independently re-verified PASS). The most rigorously verified section in the plan so far — see [[Pilot4_System_Stability_Report]] for the full-system stability conclusion this section's drafting was used to test. |
 | 11 | CSR & Responsible AI | ⬜ Not started | Thinnest vault coverage — mostly net-new authoring |
 | 12 | Implementation Plan (Three Horizons) | ⬜ Not started | `Strategic/AI Opportunities.md` (H1) vs. `Strategic/Future AI Opportunities.md` (H2/H3) |
 | 13 | Monitoring and Evaluation (KPIs) | ⬜ Not started | `Strategic/Customer Retention Drivers.md` (no churn baseline exists — known gap) |
@@ -122,10 +126,11 @@ grade). Next: Pilot 4 (Section 10, Risk Analysis — deliberate two-pass QA comp
 3. ~~Collect + ingest corpus~~ ✅ Done — 29 docs, fully linked knowledge base
 4. ~~Design the Agentic OS architecture~~ ✅ Done 21/07/2026 (OS Architecture Design Phase) — Decision/Research/Forecast
    layers, 8 agents, 11-stage pipeline; see `vault/Architecture/`
-5. **Phase 7 (next):** run the pipeline on Sections 2, 3, 9, 10 first (hypothesis, market,
-   financials, risk — the sections everything else depends on) via `bp-orchestrator`, on branch
-   `feature/bp-pilot-sections`
-6. Phase 8: draft the remaining sections (4–8, 11, 12, 14)
+5. ~~Phase 7: run the pipeline on Sections 2, 3, 9, 10 first (hypothesis, market, financials,
+   risk — the sections everything else depends on)~~ ✅ Done 22/07/2026 — all four Pilot
+   Validation Plan pilots complete, all four sections ✅ Done (independently verified), branch
+   `feature/bp-pilot-sections`, not yet merged to `main`
+6. **Phase 8 (next):** draft the remaining sections (4–8, 11, 12, 14)
 7. Phase 9: write the Executive Summary last (gated on all 13 others); whole-plan McKinsey Lens
    pressure test against `AI_Business_Plan_Template.md`; compile the traceability note
 8. Phase 10: export to `Outputs/`; write the OS structure document; build the presentation deck;
