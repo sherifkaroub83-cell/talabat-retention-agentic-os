@@ -1,7 +1,7 @@
 ---
 section: 4
 title: Value Proposition
-status: Done — citation audit PASS (independently re-verified), QA review PASS (independently re-verified, one fix cycle)
+status: Done — citation audit PASS (independently re-verified), QA review PASS (independently re-verified, one fix cycle); one additional wording fix 22/07/2026 per Whole_Plan_McKinsey_Lens_Pressure_Test.md (§4.2 branch count corrected two→matches Value_Driver_Tree.md/Section 9 §9.1; no number or argument changed; re-verified directly against both source citations)
 pipeline_run: 2026-07-22
 ---
 
@@ -46,7 +46,7 @@ section does not restate DEC-003, it quantifies the value that hypothesis create
 
 ## 4.2 Value Creation Mechanisms — Each Quantified
 
-Per [[Value_Driver_Tree|the Value Driver Tree]]'s three intervention-driven branches, the three
+Per [[Value_Driver_Tree|the Value Driver Tree]]'s two intervention-driven branches, the three
 mechanisms below are MECE at the level of distinct **causal levers**: Mechanism 1 acts on what a
 customer sees (recommendation quality), Mechanism 2 acts on when an offer reaches them (cross-sell/
 loyalty timing), and Mechanism 3 acts on the Partner-facing advertising layer — no fourth lever exists

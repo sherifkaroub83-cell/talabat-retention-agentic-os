@@ -275,6 +275,32 @@ Decision Log entry or re-derivation of any figure:
 Both fixes are single-sentence, single-section edits. Neither reflects a defect in the plan's underlying
 recommendation, financial case, risk framing, or evidence base.
 
+## Addendum — both fixes applied, 22/07/2026
+
+Both non-blocking fixes above were applied by the top-level session and directly re-verified against
+the same ground-truth citations this report used (not a full re-audit, per this report's own closing
+note):
+
+1. **Section 4 §4.2** — "three intervention-driven branches" → "two," matching `Value_Driver_Tree.md`
+   line 26 and `Section_09_Financial_Plan.md` §9.1's own citation verbatim. No number, mechanism, or
+   argument elsewhere in Section 4 changed.
+2. **Section 2 §2.5** — the combined "Commission and delivery/service fees" bullet was split into two
+   separate bullets ("Commission fees"; "Delivery/service fees"), so the section now itemizes four
+   revenue lines matching its own "four-layer" heading, Section 6's canonical four-line MECE structure,
+   and Section 2's own closing sentence ("talabat's four existing streams"). No revenue-line count,
+   figure, or argument changed — the split bullet carries the identical benefit-statement.
+
+**Incidental correction, out of this pressure test's original scope but discovered while applying fix
+1:** `Section_02_Business_Description.md`'s own frontmatter `status:` field still read "drafted —
+pending citation verification and QA (pipeline stage 9/11)" despite `Citation_Audit_Section_02.md` and
+`QA_Review_Section_02.md` both existing and passing, and the project tracker having recorded this
+section as ✅ Done (independently verified) since Pilot 2. This was a stale bookkeeping field that had
+never been synced, not a re-opened review — corrected to match the tracker's long-standing status,
+with both source artifacts cited inline.
+
+Neither fix, nor the frontmatter correction, reopens or changes this report's PASS WITH MINOR FIXES
+verdict — the plan is now fully consistent with no outstanding items from this test.
+
 ## Closing note
 
 This document is **not** a per-section pipeline stage and does **not** reopen or supersede any

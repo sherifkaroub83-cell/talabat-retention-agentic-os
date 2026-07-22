@@ -1,7 +1,7 @@
 ---
 section: 2
 title: Business Description
-status: drafted — pending citation verification and QA (pipeline stage 9/11)
+status: Done — citation audit PASS ([[Citation_Audit_Section_02]]), QA review PASS ([[QA_Review_Section_02]], independently invoked per Pilot 2 — [[Pilot2_Execution_Report_Section_02]]); frontmatter corrected 22/07/2026 to match the project tracker's own long-standing ✅ Done (independently verified) status, which this field had never been synced to. One additional wording fix 22/07/2026 per Whole_Plan_McKinsey_Lens_Pressure_Test.md (§2.5's "four-layer" heading now matches four separately-itemized bullets, split from three; no revenue-line count, figure, or argument changed)
 pipeline_run: 2026-07-22
 ---
 
@@ -151,8 +151,10 @@ capability to third parties in the corpus. It is an **internal capability** (per
 category options), embedded into talabat's existing four-layer Egypt monetization system
 ([[How Talabat Creates Value]]; [[Revenue Model]]):
 
-- **Commission and delivery/service fees** benefit indirectly — better-timed, more relevant offers
-  protect existing order-volume revenue against the "churn to competition" risk named in TLB-002.
+- **Commission fees** benefit indirectly — better-timed, more relevant offers protect existing
+  order-volume revenue against the "churn to competition" risk named in TLB-002.
+- **Delivery/service fees** benefit indirectly for the same reason — order-volume protection carries
+  through to this line exactly as it does to commission, since both scale with the same order.
 - **Subscription (talabat pro)** is the most direct beneficiary — the same ML mechanism this plan
   proposes extending to Egypt already decides when to surface a talabat pro offer, and subscription is
   documented as "monetized twice" (a direct fee plus a 20–28% order-frequency uplift that feeds
