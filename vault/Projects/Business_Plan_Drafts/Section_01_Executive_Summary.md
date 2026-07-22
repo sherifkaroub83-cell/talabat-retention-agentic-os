@@ -145,8 +145,12 @@ fees, Delivery & Service fees, Subscription fee & Other Income, Advertising & li
 
 talabat's own leadership states both directly, though neither appears in the Facts/Topics layer any other
 section of this plan drew on, and this plan corrects that gap here rather than repeating it: the
-Chairperson's 2025 Annual Report statement names talabat's "vision to 'empower our communities,' realised
-through a multi-vertical approach" (TLB-002, page 7), and the CEO's statement separately names "the
+2025 Annual Report's own "talabat at a glance" page states, under the heading "Vision and mission,"
+**"Empowering our communities. We proudly deliver to the region that delivers. We're the Orange Ones"**
+(TLB-002, page 3) — the single most direct statement of both in the entire corpus. The Chairperson's
+narrative statement elsewhere in the same report echoes the vision specifically — "vision to 'empower
+our communities,' realised through a multi-vertical approach" (TLB-002, page 7) — and the CEO's statement
+separately names "the
 clarity of our mission to empower everyday convenience across the MENA region" (TLB-002, page 9). Neither
 is an Egypt-specific statement, and the corpus does not restate either in an Egypt context anywhere. Read
 alongside these, talabat's customer-value-proposition framing (**Quality, Convenience, Value** —
@@ -172,8 +176,8 @@ Group level, roughly 25% of monthly active users (talabat pro subscribers/"ecosy
 account for roughly half of platform GMV — a disclosed 80/20 concentration this plan targets directly,
 though not yet Egypt-proven, since talabat pro launched in Egypt only in February 2025. This is a distinct
 statistic from the separately-disclosed multi-vertical cohort, which "now exceed[s] one-third of the
-base" and shows its own higher order frequency and retention — the two should not be conflated as one
-group ([[Section_03_Market_Analysis|Section 3]] §3.2).
+base" (TLB-019, page 7) and shows its own higher order frequency and retention — the two should not be
+conflated as one group.
 
 **The value proposition's USP is speed and cost of deployment, not novelty of capability**
 ([[Section_04_Value_Proposition|Section 4]] §4.1): talabat's proposition is redeployment of an
@@ -228,7 +232,7 @@ does not have.
 | Answer — largest risk and its mitigation | [[Section_10_Risk_Analysis\|Section 10]] §10.2/§10.3/§10.4 | Direct citation |
 | Answer — implementation path (Three Horizons) | [[Section_12_Implementation_Plan\|Section 12]] | Direct citation |
 | Business overview | [[Section_02_Business_Description\|Section 2]] §2.5/§2.6, [[Section_06_Business_Model_and_Revenue_Streams\|Section 6]] §6.1 | Direct citation |
-| Mission and vision (explicit gap + closest analogs) | [[Section_08_Operations_Plan\|Section 8]] 7S check, [[Section_02_Business_Description\|Section 2]] §2.1 | Explicit gap statement, closest analogs cited |
+| Mission and vision (disclosed, not a gap) | TLB-002, page 3 ("Vision and mission" heading), page 7 (Chairperson), page 9 (CEO); [[Section_08_Operations_Plan\|Section 8]] 7S check and [[Section_02_Business_Description\|Section 2]] §2.1 cited as operational analogs, not as filling an absence | Direct citation |
 | AI product/service, target market, value proposition | [[Section_02_Business_Description\|Section 2]] §2.4, [[Section_03_Market_Analysis\|Section 3]] §3.2, [[Section_04_Value_Proposition\|Section 4]] §4.1/§4.2 | Direct citation, referenced not re-derived |
 | Key objectives, growth goals | [[Section_12_Implementation_Plan\|Section 12]], [[Section_13_Monitoring_and_Evaluation\|Section 13]] §13.1/§13.4, [[DEC-007_section13-review-cadence-kill-criteria]] | Direct citation, referenced not re-derived |
 | Financial projections and funding needs summary | [[Section_09_Financial_Plan\|Section 9]] §9.2–§9.5 | Direct citation, no new arithmetic |

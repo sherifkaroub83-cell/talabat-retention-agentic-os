@@ -238,3 +238,209 @@ section with no drift found.
 - `vault/Knowledge/_source_text/20260331_talabat-Annual-Report-2025-En-Interactive.txt` (pages 7, 9, 10 — Finding 1's primary-source evidence)
 - `vault/Knowledge/Sources/TLB-002_annual-report-2025.md`, `vault/Knowledge/Sources/TLB-019_q4-fy25-results-presentation.md`, `vault/Knowledge/Facts/_raw/TLB-019_facts.md` (Finding 2's primary-source evidence)
 - [[Citation_Audit_Section_14|Citation Audit — Section 14]] — precedent for this report's format
+
+---
+
+# Targeted re-audit — fix verification (2026-07-22)
+
+## Overall verdict: **FAIL** (still cannot proceed to Stage 10 — but the two original hard failures are genuinely resolved; the remaining issues are new/residual, discovered only by re-verifying deeper against primary source than the original fix did)
+
+## Scope and method for this pass
+Re-read `Section_01_Executive_Summary.md` in full (current text, post-fix). For each of the four claimed
+fixes, went back to the actual source layer rather than trusting the "fixed" framing:
+- Raw TLB-002 text (`20260331_talabat-Annual-Report-2025-En-Interactive.txt`) at the `PAGE 7`, `PAGE 9`
+  markers, and — beyond the original audit's scope — the surrounding pages (1–10) generally, since the
+  brief specifically asked for an independent re-check against the primary document, not the fix's own
+  citations.
+- `vault/Knowledge/Sources/TLB-002_annual-report-2025.md`, in full.
+- `Section_03_Market_Analysis.md` §3.2 and §3.3 (and, this time, the *entire* file, via a full-text search
+  for the key phrase Section 1 now cites) — not just the paragraph the fix points to.
+- `Section_09_Financial_Plan.md` §9.5 and `Assumptions_Register.md` ASM-006–012, recomputed independently.
+- A full-section sweep of Section 1 for any other absence-type phrasing ("no ...", "not disclosed", "does
+  not restate", "with no disclosed deployment", etc.), given the brief's framing that a false-absence claim
+  slipping through once is now a demonstrated risk pattern specific to this section.
+
+## Fix 1 (Mission/Vision) — quotes verified accurate; TWO new issues found, one residual completeness gap
+
+**What holds up:** Both quotes Section 1 now carries are verified **character-for-character accurate**
+against the raw source text, at the pages claimed:
+- Page 7 (Chairperson): raw text lines 356–360 read *"...Our vision to 'empower our communities' is
+  realised through a multi-vertical approach that now firmly encompasses grocery and retail."* — matches
+  Section 1's quotation exactly.
+- Page 9 (CEO): raw text lines 588–591 read *"...I am energised by the momentum we have sustained and the
+  clarity of our mission to empower everyday convenience across the MENA region."* — matches Section 1's
+  quotation exactly.
+
+`vault/Knowledge/Sources/TLB-002_annual-report-2025.md` now correctly carries both quotes under a new
+"Important Quotations" section (lines 190–194), each attributed to the correct named individual and page —
+the upstream ingestion gap Finding 1 flagged has genuinely been closed at the Facts/Sources layer, not just
+patched locally in Section 1.
+
+**New issue A — a *third*, more directly on-point disclosure was still missed.** Going further into the
+primary text than the original fix did (per this pass's explicit brief to check the raw document, not the
+fix's own citations): **TLB-002 page 3** carries a page explicitly headed **"Vision and mission"** —
+*"talabat at a glance / Vision and mission / Empowering our communities. We proudly deliver to the region
+that delivers. We're the Orange Ones."* (raw text lines 71–76, under `===== PAGE 3 =====`). This is the
+single most directly on-point primary-source evidence in the entire corpus for a formally-labeled
+"Vision and mission" statement — more so than the Chairperson's/CEO's letter language the fix does cite,
+because it is the document's own explicitly-titled section for exactly this content, not embedded prose in
+a leadership letter. It is captured **nowhere**: not in `TLB-002_annual-report-2025.md`'s Important
+Quotations (checked directly — no match for "Orange Ones," "proudly deliver," or "talabat at a glance"),
+and not in Section 1's Mission and Vision section. Section 1's current framing — *"talabat's own leadership
+states both directly, though neither appears in the Facts/Topics layer any other section of this plan drew
+on, and this plan corrects that gap here rather than repeating it"* — implicitly claims the gap is now
+closed, but it is not fully closed: the actual formally-titled "Vision and mission" page-3 content is still
+missing from both the extraction layer and Section 1. This is not a contradiction of the fix (the page 7/9
+quotes are real), but it is the same category of error the original Finding 1 identified — a mission/vision
+absence-adjacent claim not fully verified against the primary source — recurring at one level deeper.
+**Fix required:** add TLB-002 page 3's "Vision and mission" heading content to
+`TLB-002_annual-report-2025.md`'s Important Quotations, and either fold it into Section 1's Mission and
+Vision section as the primary citation (with pages 7/9 as supporting elaboration) or explicitly note it
+alongside the existing two quotes.
+
+**New issue B — the Traceability summary table (bottom of Section 1) was not updated to match the fix.**
+The table's "Mission and vision" row (currently: *"Mission and vision (explicit gap + closest analogs) |
+Section 8 7S check, Section 2 §2.1 | Explicit gap statement, closest analogs cited"*) still describes the
+old, pre-fix framing — an "explicit gap statement" — even though the body text above it no longer states a
+gap at all; it states the actual quotes. This table is explicitly built "for Appendix/Section 14 use" (per
+its own heading), so this stale row risks propagating the already-corrected false-absence framing into
+Section 14 if that table is trusted rather than re-read. **Fix required:** update the row to reflect the
+current body text (e.g., "Direct citation: TLB-002 pp.7, 9 (leadership quotes); Section 8/Section 2 §2.1 as
+closest operational analogs, not substitutes") and its citation column to include TLB-002 directly, not
+only Section 8/Section 2.
+
+## Fix 2 (cohort conflation) — core mislabeling corrected; ONE new untraceable-citation defect introduced
+
+**What holds up:** The corrected pairing — *"roughly 25% of monthly active users (talabat pro
+subscribers/'ecosystem products')"* — now matches `Section_03_Market_Analysis.md` §3.2's actual wording
+exactly ("talabat pro subscribers/'ecosystem products' underpin roughly one-quarter of monthly active
+users... talabat pro subscribers represent around half of platform GMV"). The original mislabeling (pairing
+this figure with "multi-vertical customers") is genuinely gone.
+
+**New issue — the added clarifying sentence cites a section that does not contain the quote it attributes
+to it.** Section 1 now adds: *"This is a distinct statistic from the separately-disclosed multi-vertical
+cohort, which 'now exceed[s] one-third of the base' and shows its own higher order frequency and
+retention — the two should not be conflated as one group ([[Section_03_Market_Analysis|Section 3]]
+§3.2)."* A full-text search of `Section_03_Market_Analysis.md` (the entire file, not just §3.2) for
+"one-third" returns **zero matches**. The phrase "now exceed one-third of the base" is real and accurately
+quoted — but it exists only in `vault/Knowledge/Facts/_raw/TLB-019_facts.md` (line 49: *"multi-vertical
+customers now exceed one-third of the base, indicating higher lifetime value and engagement"* (TLB-019,
+page 7)) and in the raw TLB-019 presentation text — **not** anywhere in Section 3's drafted text, §3.2 or
+otherwise. Section 3 §3.2 discusses multi-vertical customers' "significantly higher order frequency and
+retention" (correctly cited to TLB-002, pages 7–8, 12) but never states the one-third-of-base figure or
+quote at all. As written, this is a claim that traces to nothing at its cited location — exactly the
+untraceable-claim failure mode this audit's zero-tolerance rule exists to catch, even though a valid trace
+exists one level further down (TLB-019, page 7, directly) and even though the underlying fact is true.
+**Fix required:** either (a) re-cite this sentence directly to TLB-019, page 7 (bypassing Section 3, since
+Section 3 does not carry this specific figure), or (b) first add the "one-third of the base" quote to
+Section 3 §3.2's own text (it would fit naturally next to the existing "significantly higher order
+frequency and retention" sentence, which already discusses multi-vertical customers) and then cite Section
+3 §3.2 as intended. Per this plan's own stated discipline — Section 1 "does not re-derive any figure
+independently... every number below cites the section that already established it" — option (b) is the
+more consistent fix, since it keeps Section 1 as a pure synthesis layer rather than the first place a new
+Section-3-level figure appears.
+
+## Fix 3 (Low-confidence rationale) — VERIFIED, genuinely fixed
+
+Both instances in Section 1 (the Answer's "Expected impact" paragraph and the "Financial Projections and
+Funding Needs Summary") were checked. The Answer paragraph now reads: *"...six of the seven Assumption rows
+this financial case depends on are Low confidence — most because the quantified uplift figure behind them
+is Group or GCC evidence that explicitly excludes Egypt at the time it was measured, though not all for the
+identical reason (one is a pure Egypt data gap with no uplift figure at all; another is directional
+inflation/FX logic, not an extrapolated Group figure)."* This is independently verified accurate against
+`Assumptions_Register.md`: the "pure data gap" carve-out matches ASM-007 exactly ("No numeric value —
+qualitative gap-flag only... no disclosed Egypt customer-count data point exists anywhere in the corpus at
+any date"), and the "directional inflation/FX logic" carve-out matches ASM-009 exactly ("Directional
+mechanism only (inflation drift vs. FX offset) — no numeric AOV value asserted"). The remaining three
+(ASM-008, ASM-010, ASM-011) do genuinely fit the Group/GCC-extrapolation pattern the "most" now correctly
+scopes to. The Financial Projections summary's second instance was also checked and now reads "a
+correctly-labeled consequence of how thin Egypt-specific AI-impact disclosure remains in the corpus" —
+consistent with (not verbatim, but faithful to) Section 9 §9.5's own actual framing ("the direct,
+correctly-labeled consequence of how thin Egypt-specific disclosure remains outside the segment P&L
+headline figures"). **Both instances of Finding 3 are resolved. No further fix required.**
+
+## Fix 4 (M1 qualifier) — VERIFIED, genuinely fixed
+
+Section 1's Complication paragraph now reads *"non-high-value customer **M1** retention already declined 4%
+YoY in the UAE, Kuwait, and Qatar"* — the qualifier is restored and matches Section 3 §3.3's own wording.
+No further action needed; this was already optional polish, not a blocking item, and is now moot.
+
+## Full-section sweep for other false-absence claims (per this pass's specific brief)
+
+Grepped Section 1 in full for absence-type phrasing ("no ...", "not disclosed", "does not...", "nowhere",
+"absent", "not confirmed," etc.) and checked every hit against its cited source, beyond the four claims the
+brief named:
+
+- *"None of the three Group AI roadmap items above carries an Egypt-specific commitment, deployment date,
+  or budget anywhere in the corpus"* ([[Section_02_Business_Description|Section 2]] §2.1) — **verified
+  accurate**: Section 2 §2.1 states, near-verbatim, "None of these three roadmap items carries an
+  Egypt-specific commitment, deployment date, or budget in the corpus."
+- *"...the other two are named Group-level roadmap ambitions with no disclosed deployment anywhere yet,
+  Egypt included"* ([[Section_02_Business_Description|Section 2]] §2.6) — **verified accurate**: Section 2
+  §2.6 states this almost word-for-word.
+- *"Neither is an Egypt-specific statement, and the corpus does not restate either in an Egypt context
+  anywhere"* (Mission and Vision section, newly added as part of the Finding-1 fix) — this is itself a new
+  absence claim introduced by the fix, so it was checked with the same rigor as Finding 1 originally
+  required: searched the full corpus (`_source_text/`, `Knowledge/` tree) for "empower" and confirmed no
+  instance pairs "empower our communities" or "empower everyday convenience" with Egypt specifically
+  anywhere (the closest Egypt-adjacent content — the charity/CSR section naming Ahl Misr Foundation, the
+  Egyptian Food Bank, etc., TLB-002 page 39 — does not reuse the vision/mission language). **This claim
+  holds up** — it is a true absence claim, correctly and (for once) actually independently verified.
+- *"no Egypt baseline exists yet to support a numeric threshold"* (Key Objectives section) — consistent
+  with `DEC-007_section13-review-cadence-kill-criteria.md` and `ASM-014`'s own framing; **PASS**, already
+  covered by the original audit's claim #19/#20 trace.
+- No other instance of a Section-1-invented (rather than correctly-inherited) false-absence claim was
+  found. The two new issues above (Fix 1's page-3 gap, Fix 2's mis-citation) are not false-absence claims
+  in the Finding-1 sense — they are, respectively, a residual completeness gap and an untraceable-citation
+  defect — but they are flagged here anyway since both surfaced only by applying the same "go one level
+  deeper than the fix's own citations" discipline this pass was asked to apply.
+
+## Zero-tolerance items, re-checked
+
+- **Group-level-as-Egypt-proven anti-pattern:** no violation found in the post-fix text (unchanged from the
+  original audit's finding — every Group/GCC figure Section 1 restates still carries its scope label).
+- **Untraceable-claim check:** the original two hard failures are resolved, but **one new untraceable
+  citation was introduced by the Fix-2 edit** (the "one-third of the base" sentence citing Section 3 §3.2,
+  which does not contain it — see above). Per the zero-tolerance standard, this alone is sufficient to keep
+  Section 1 out of Stage 10 until corrected, even though it is a narrower, lower-blast-radius defect than
+  either original hard failure.
+
+## Result of this re-audit
+
+**FAIL.** Section 1 still may not proceed to Stage 10. Status of each item:
+
+| Item | Status |
+|---|---|
+| Finding 1 core claim (false "no mission/vision disclosed" statement) | **Resolved** — quotes verified accurate against primary source, upstream Facts/Sources note updated correctly |
+| Finding 1 — new: TLB-002 page 3's explicitly-titled "Vision and mission" section still uncaptured | **Open — required fix** (completeness gap, not a contradiction) |
+| Finding 1 — new: Traceability summary table's "Mission and vision" row not updated to match the fixed body text | **Open — required fix** (internal-consistency defect, risk of propagating stale framing into Section 14) |
+| Finding 2 core claim (wrong cohort label on the 25%/50% figure) | **Resolved** — parenthetical now correctly matches Section 3 §3.2 |
+| Finding 2 — new: added "one-third of the base" sentence cites Section 3 §3.2, which does not contain that figure anywhere in the file | **Open — required fix** (untraceable-citation defect; zero-tolerance item) |
+| Finding 3 (overgeneralized Low-confidence rationale, both instances) | **Resolved** — no further action |
+| Finding 4 (dropped "M1" qualifier) | **Resolved** — no further action |
+
+Three open items remain, all lower severity than the original two hard failures and all narrower in scope
+(one completeness gap, one stale cross-reference, one mis-citation of an otherwise-true fact), but under
+this project's 0%-tolerance rule for untraceable numeric/named-fact claims, any one of the three is
+sufficient to withhold a PASS. Recommend: (1) add TLB-002 page 3's "Vision and mission" heading content to
+`TLB-002_annual-report-2025.md` and Section 1; (2) update the Traceability summary table's Mission-and-vision
+row; (3) either re-cite the "one-third of the base" sentence to TLB-019 page 7 directly or add that quote to
+Section 3 §3.2 first. None of these three requires an escalation to `decision-steward` — they are citation/
+completeness corrections, not tier-conflict or same-tier-disagreement cases. **Section 1 may proceed to
+Stage 10 once these three items are fixed and a final citation sweep confirms no further drift; a third
+full re-audit is not required if the fixes are narrowly scoped to these three points and independently
+spot-checked against the sources named above.**
+
+## Links (this addendum)
+- `vault/Knowledge/_source_text/20260331_talabat-Annual-Report-2025-En-Interactive.txt` (page 3, lines
+  69–81 — the newly-found "Vision and mission" heading; pages 7 and 9 re-confirmed)
+- `vault/Knowledge/Sources/TLB-002_annual-report-2025.md` (lines 190–194, Important Quotations — confirmed
+  updated for the page 7/9 quotes; page-3 content still absent)
+- `vault/Projects/Business_Plan_Drafts/Section_03_Market_Analysis.md` (full-file search confirming
+  "one-third" does not appear anywhere in the file)
+- `vault/Knowledge/Facts/_raw/TLB-019_facts.md` (line 49 — the correct primary trace for the "one-third of
+  the base" quote)
+- `vault/Decisions/Assumptions_Register.md` (ASM-007, ASM-009 — confirmed the carve-out reasons Section 1
+  now states)
+- `vault/Projects/Business_Plan_Drafts/Section_09_Financial_Plan.md` §9.5 (lines 177–196 — confirmed
+  wording Section 1 draws on)
