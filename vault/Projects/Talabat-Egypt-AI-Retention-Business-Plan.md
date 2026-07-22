@@ -41,8 +41,20 @@ the orchestrator has the `Agent` tool available.
 ## Open decisions (needed before/while drafting)
 - [ ] Team role assignments (6 members / 5 defined roles — charter approved as-is; mapping still open)
 - [ ] MCP integration: yes/no (distinction credit vs. fragility) — undecided, past its Phase 2 deadline
-- [ ] Governing hypothesis wording for Section 2 ("We believe [AI retention intervention] will
-      [impact] because [logic]") — not yet authored; see the skill's Section 2 notes for raw material
+- [x] Governing hypothesis wording for Section 2 — **resolved 2026-07-22 via
+      [[DEC-003_section2-governing-hypothesis]]** (approved): the plan commits to **extending
+      talabat's already-announced Group AI roadmap into Egypt** (new recommendation form factors,
+      cross-sell timing/incentive optimisation, deepened adtech-embedded personalisation), not the
+      net-new churn-prediction build or the subscription-uplift-only framing also drafted as
+      candidates. `decision-steward`, running as a subagent, correctly judged this a genuine strategic
+      framing choice requiring escalation and attempted `AskUserQuestion` — which is **not available
+      inside a spawned subagent thread**, a hard tool error, not a silent skip. It refused to infer or
+      default an answer and preserved the escalation prompt verbatim for the top-level session. The
+      top-level session then ran that exact prompt via a real `AskUserQuestion` call and got a genuine
+      user answer. Confirms the same runtime constraint identified in Phase 7 (`Agent`/`WebSearch`/
+      `WebFetch` unavailable to subagents) extends to `AskUserQuestion` — see Pilot 2 execution report.
+      Assumption Register row ASM-005 is `Approved`. Sections 4, 5, 9, 12, 13 must stay consistent with
+      this intervention/causal-claim/scope per DEC-003's Impact section.
 - [ ] Egypt market-size definition to adopt (IMARC online-food-delivery vs. Mordor foodservice
       vs. talabat's own disclosed Egypt segment financials, now available for FY2025 onward)
 - [ ] How to handle the three documented internal discrepancies (Egypt category-share figure,
