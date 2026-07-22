@@ -3,7 +3,7 @@ type: project
 status: active
 owner: "Sherif Samy Karoub (G02)"
 started: "2026-07-20"
-updated: "2026-07-21"
+updated: "2026-07-22"
 ---
 
 # Project — Talabat Egypt AI Retention Business Plan
@@ -49,12 +49,18 @@ still the single largest remaining task on the project (40% of the grade). Next:
 retired, Phase 8 of the roadmap (drafting the remaining 10 sections) can begin — see
 [[Implementation_Roadmap]] and [[Pilot_Validation_Plan]]'s own "Sequencing and what happens after" note.
 **Phase 8 progress (2026-07-22):** Sections 4 (Value Proposition), 5 (AI Technology and Development),
-6 (Business Model and Revenue Streams), 7 (Marketing and Sales Strategy), 8 (Operations Plan), and 11
-(CSR & Responsible AI) now ✅ Done (independently verified) — 10 of 14 sections complete. Section 11
-went through a real citation-audit and QA fail/fix/re-verify cycle (a fabricated "Section 2
-marketplace-flywheel framing" cross-reference, caught on independent QA review, fixed, then
-independently re-verified PASS — see [[QA_Review_Section_11]]). Next: Sections 1 (Executive Summary,
-written last), 12 (Implementation Plan), 13 (Monitoring & Evaluation), 14 (Appendices).
+6 (Business Model and Revenue Streams), 7 (Marketing and Sales Strategy), 8 (Operations Plan), 11
+(CSR & Responsible AI), and 12 (Implementation Plan) now ✅ Done (independently verified) — 11 of 14
+sections complete. Section 11 went through a real citation-audit and QA fail/fix/re-verify cycle (a
+fabricated "Section 2 marketplace-flywheel framing" cross-reference, caught on independent QA review,
+fixed, then independently re-verified PASS — see [[QA_Review_Section_11]]). Section 12 went through a
+real citation-audit fail/fix/re-verify cycle (three wrong-section/misattributed cross-references, fixed,
+independently re-verified PASS — see [[Citation_Audit_Section_12]]) and a QA fail/fix/re-verify cycle
+(three completeness/substance defects on independent first pass — a functionally-missing marketing
+rollout plan, an ungated H2→H3 transition, and Section 10's own highest-priority risk mitigation not
+carried into Section 12's go/no-go framing — all three fixed and independently re-verified PASS on a
+targeted re-review; see [[QA_Review_Section_12]]). Next: Sections 1 (Executive Summary, written last),
+13 (Monitoring & Evaluation), 14 (Appendices).
 
 ## Open decisions (needed before/while drafting)
 - [ ] Team role assignments (6 members / 5 defined roles — charter approved as-is; mapping still open)
@@ -118,7 +124,7 @@ written last), 12 (Implementation Plan), 13 (Monitoring & Evaluation), 14 (Appen
 | 9 | Financial Plan | ✅ Done (independently verified) | `Topics/Financial Performance.md`, `Topics/Segment Reporting.md`, `Strategic/Cost Structure.md`, `Strategic/Growth Drivers.md`, `Strategic/Customer Retention Drivers.md`. Draft: [[Section_09_Financial_Plan]]. First section built on the Forecast Layer — [[Value_Driver_Tree]] and [[Scenarios]] (`forecasting-agent`, first real use) and [[KPI_Tree]] (`kpi-agent`, first real use), all invoked top-level. Pipeline artifacts: [[DEC-004_2026-investment-total]] (2026-investment-total reconciliation), [[DEC-005_section9-headline-scenario]] (scenario framing), `ASM-006`–`ASM-012`, [[Citation_Audit_Section_09]], [[QA_Review_Section_09]]. **Genuinely independent Stage 11 QA issued a real FAIL on first pass** (two template-completeness gaps: no forecasted revenue figure, no P&L projection) — fixed from Approved-tier components already on hand, then independently re-verified by a fresh `qa-review-agent` thread (addendum in [[QA_Review_Section_09]]) — PASS. The project's first fail/fix/re-verify cycle, proving independent QA catches real gaps rather than rubber-stamping. |
 | 10 | Risk Analysis | ✅ Done (independently verified) | `Strategic/Strategic Risks.md`, `Strategic/Competitive Weaknesses.md`, plus cross-section evidence from [[Section_03_Market_Analysis|Section 3]] and [[Section_09_Financial_Plan|Section 9]]. Draft: [[Section_10_Risk_Analysis]]. Deliberately built as a cross-subsystem integration test — re-reads Section 9's Forecast Layer confidence tags as financial-risk input, references Section 3's Threats rather than re-deriving them. Pipeline artifacts: [[Citation_Audit_Section_10]] (FAIL→fix→PASS, this project's first citation-audit failure), [[QA_Review_Section_10_Pass1]] / [[QA_Review_Section_10_Pass2]] / [[QA_Review_Section_10_Comparison]] (two genuinely independent QA passes, both FAIL, converged on two findings, diverged on a third that Pass 2 alone caught), [[QA_Review_Section_10_Final]] (combined fix, independently re-verified PASS). The most rigorously verified section in the plan so far — see [[Pilot4_System_Stability_Report]] for the full-system stability conclusion this section's drafting was used to test. |
 | 11 | CSR & Responsible AI | ✅ Done (independently verified) | Thinnest vault coverage — mostly net-new authoring, deliberately structured as risk management/license-to-operate rather than decoration. Draft: [[Section_11_CSR_and_Responsible_AI]]. §11.1 ties every ethical-AI commitment to a named Section 10 risk (bias/fairness, model transfer, model drift) with concrete controls or explicit gap statements; §11.2 cites three real, Egypt-specific sustainability initiatives (TLB-001/TLB-002: SME academy, two years of charity partnerships, the "Electrifying Egypt" EV pilot); §11.3 proposes a standing segment-fairness review gate, explicitly labeled as this plan's own governance recommendation, not a disclosed talabat process. Pipeline artifacts: [[Citation_Audit_Section_11]] (PASS with 3 non-blocking limitations, all independently confirmed resolved), [[QA_Review_Section_11]] (FAIL on first independent pass — a fabricated "Section 2 marketplace-flywheel framing" cross-reference that does not exist anywhere in Section 2 or the plan; fixed by removing the false citation and resting the argument on the genuinely-accurate Section 7 Partner-co-funding reference; independently re-verified PASS via a fresh full-section sweep finding no other Section 2 reference anywhere in the file). |
-| 12 | Implementation Plan (Three Horizons) | ⬜ Not started | `Strategic/AI Opportunities.md` (H1) vs. `Strategic/Future AI Opportunities.md` (H2/H3) |
+| 12 | Implementation Plan (Three Horizons) | ✅ Done (independently verified) | `Strategic/AI Opportunities.md` (H1) vs. `Strategic/Future AI Opportunities.md` (H2/H3). Draft: [[Section_12_Implementation_Plan]]. Three Horizons roadmap (H1 limited Egypt pilot / H2 full-cohort rollout / H3 cross-vertical extension into Grocery & Retail), each horizon explicitly gated on the prior one's evidence — H1→H2 on GCC-benchmark aggregate + segment-fairness checkpoints plus Section 10's own highest-priority Financial Risk KPI checkpoint (`KPI_Tree.md` K5–K9/K13–K14), H2→H3 on at least one full reporting cycle of the same Egypt KPI evidence — with Section-12-owned marketing-rollout sequencing across all three horizons (no customer-facing spend during H1; a reasoned internal→Partner/card→customer-facing activation order at H2, extended to tMart Partners at H3), cross-referencing Sections 4/5/7/8/10/11 rather than re-deriving them, and an explicit, reasoned exclusion of DEC-003's unchosen churn-prediction option (Option 1). Pipeline artifacts: [[Citation_Audit_Section_12]] (FAIL, 3 hard failures — all wrong-section/misattributed cross-references — fixed across two re-audit rounds, independently re-verified PASS), [[QA_Review_Section_12]] (FAIL on first independent pass — a functionally-missing marketing rollout plan, an ungated H2→H3 transition, and Section 10's own highest-priority risk mitigation not carried into Section 12's go/no-go framing; all three fixed and independently re-verified PASS on a targeted re-review that re-read the current draft and Sections 7/10/11/`KPI_Tree.md` directly rather than trusting the fix descriptions — see the addendum in [[QA_Review_Section_12]]). |
 | 13 | Monitoring and Evaluation (KPIs) | ⬜ Not started | `Strategic/Customer Retention Drivers.md` (no churn baseline exists — known gap) |
 | 14 | Appendices + traceability note | ⬜ Not started | `vault/MOC/Source Register.md` — mechanically closest to ready |
 
@@ -137,7 +143,7 @@ written last), 12 (Implementation Plan), 13 (Monitoring & Evaluation), 14 (Appen
    risk — the sections everything else depends on)~~ ✅ Done 22/07/2026 — all four Pilot
    Validation Plan pilots complete, all four sections ✅ Done (independently verified), branch
    `feature/bp-pilot-sections`, not yet merged to `main`
-6. **Phase 8 (in progress):** draft the remaining sections (4–8, 11 done; 12, 13, 14 remain; 1 last)
+6. **Phase 8 (in progress):** draft the remaining sections (4–8, 11, 12 done; 13, 14 remain; 1 last)
 7. Phase 9: write the Executive Summary last (gated on all 13 others); whole-plan McKinsey Lens
    pressure test against `AI_Business_Plan_Template.md`; compile the traceability note
 8. Phase 10: export to `Outputs/`; write the OS structure document; build the presentation deck;

@@ -299,3 +299,181 @@ Orchestrator.
 - `vault/Decisions/Assumptions_Register.md` (`ASM-004`, `ASM-008`, `ASM-012`)
 - [[QA_Review_Section_11]] · [[QA_Review_Section_10_Final]] — precedent for this report's format and rigor
 - [[Business_Plan_Generation_Pipeline]]
+
+---
+
+# Targeted re-review — fix verification (2026-07-22)
+
+## Scope and independence note
+
+A separate, targeted re-review of the three fixes claimed against the FAIL report above, run against the
+current text of `vault/Projects/Business_Plan_Drafts/Section_12_Implementation_Plan.md`, read in full
+directly (not taken on the fix descriptions handed down with the task). Also re-read directly, in full:
+`Section_10_Risk_Analysis.md` (all of §10.1–§10.4), `KPI_Tree.md` (in full, to check the K5–K9/K13–K14
+citation against the tree's own node structure), `Section_07_Marketing_and_Sales_Strategy.md` (Positioning,
+Customer Acquisition, Partnerships, Retention), `Section_11_CSR_and_Responsible_AI.md` §11.2 (to verify the
+new Partner-trust citation Section 12's marketing sequencing now makes), `Citation_Audit_Section_12.md`
+(confirming its final closeout verdict is still PASS, unchanged since the original FAIL report above), and
+the Project tracker's Section 12 row.
+
+## Fix 1 — Marketing rollout plan (§2c of the original FAIL)
+
+**Verified fixed — genuinely Section-12-owned sequencing, not a restatement.** Independently re-read
+`Section_07_Marketing_and_Sales_Strategy.md` in full and confirmed it contains **no** horizon/timing
+sequencing logic anywhere — Positioning, Customer Acquisition, Partnerships, and Retention are all
+point-in-time descriptions of what exists and what this plan does/does not pursue, with zero "when does
+X activate relative to Y" content. That temporal-sequencing content is what Section 12 now supplies, and
+it is new synthesis, not restatement:
+
+- **H1:** "no acquisition-channel activity... H1's pilot is retention-mechanism validation on an
+  already-acquired customer subset, not a market-facing launch," with the one H1-scoped marketing action
+  being an internal-only Partner/rider briefing. This is a real, if not verbatim, version of the
+  experimental-design point the original review asked for (avoid confounding the pilot read with
+  customer-facing marketing) — it reaches the same substantive conclusion (no customer-facing marketing
+  during H1) via a slightly different framing (retention-validation vs. confounding), which is an
+  acceptable equivalent, not a gap.
+- **H2:** an explicit three-step activation order — (1) internal Partner/rider communication first, tied
+  to Section 11 §11.2's Partner-trust/CSR-footprint point (independently re-read; Section 11 §11.2 does
+  state, verbatim in substance, that eroding Partner or rider trust "would work against this existing CSR
+  footprint" — the citation is accurate); (2) CIB co-branded card and Partner-co-funded offer messaging,
+  correctly tied to Section 7's Partnerships subsection, which does confirm both are "already-live Egypt
+  relationships"; (3) broader customer-facing retention messaging last, with an explicit, reasoned rationale
+  ("deliberately the slowest-to-activate piece, since it is the one most exposed to the fairness/performance
+  risk H1's checkpoints were built to catch"). This ordering logic — and its risk-based rationale — appears
+  nowhere in Section 7; it is Section 12's own construction, correctly built on top of Section 7's and
+  Section 11's already-cited content rather than re-deriving it.
+- **H3:** extends the same three-step H2 sequence into the Grocery & Retail vertical, with one genuine
+  H3-specific addition (timing the extension to when tMart-side Partners, not only Food-side Partners, have
+  received the same internal briefing). This is a real horizon-specific decision, not a copy-paste of H2.
+
+This resolves the original finding cleanly: Section 12 now states what marketing activity (if any)
+accompanies each horizon, what specifically activates at each stage, and why the sequence is ordered the
+way it is — the three things the original FAIL found missing.
+
+## Fix 2 — H2→H3 evidence gate (§2a of the original FAIL)
+
+**Verified fixed — explicit and substantive, not vague.** H2's milestones now include a dedicated
+"H2→H3 gate, not an unconditional progression" bullet: H3 "does not begin on a fixed calendar date," and
+begins "only once H2's full-cohort rollout has produced at least one full reporting cycle of Egypt-specific
+evidence against the same KPIs (`KPI_Tree.md`'s K5–K9, K13–K14) H1's checkpoint used." This supplies exactly
+what a `Grep` for `go/no-go|kill criteri|checkpoint` previously found missing for the H2→H3 transition: a
+named evidence threshold (a full reporting cycle of KPI evidence), tied to specific, named KPIs, with an
+explicit statement of what the gate is for ("proof the mechanisms work at Egypt scale, not only in a
+limited pilot"). This is symmetrical in rigor with the H1→H2 gate the original review found acceptable, and
+it correctly reuses the same KPI set as the new H1 financial checkpoint (Fix 3 below) rather than inventing
+an unrelated threshold — internally consistent.
+
+## Fix 3 — Section 10's highest-priority mitigation carried into Section 12 (§2e of the original FAIL)
+
+**Verified fixed and accurately attributed.** Re-read `Section_10_Risk_Analysis.md` §10.3 and §10.4
+directly. §10.3's pre-mortem states, verbatim: "narratives 1 and 2 share the same root cause (the upside
+case's Low confidence) and together account for the single highest-severity matrix cell (the High/High
+financial risk) — **instrumenting the newly-baseline KPIs (`KPI_Tree.md`'s K5–K9, K13–K14) as early as
+possible is the single highest-priority mitigation**." §10.4's mitigation table, "Upside case underperforms
+base case" row, states: "Instrument the newly-baseline KPIs (`KPI_Tree.md`) from day one of rollout, with an
+explicit go/no-go checkpoint against the base-case trajectory before scaling investment further — do not
+wait for a full fiscal year to find out the upside case didn't materialize," owned by "Egypt Country GM,
+with Group FP&A." Section 12's new H1 bullet — "The single highest-priority checkpoint, carried directly
+from Section 10's own pre-mortem ranking... names instrumenting the newly-baseline KPIs (`KPI_Tree.md`'s
+K5–K9, K13–K14) 'as early as possible' as its single highest-priority mitigation... H1 does not exit, and H2
+does not begin, without an explicit go/no-go read against the base-case trajectory — the exact checkpoint
+Section 10 §10.4 specifies for the Financial Risk row" — matches both source passages accurately: the
+"single highest-priority mitigation" quote is exact, the K5–K9/K13–K14 KPI list is an exact match to
+Section 10's own citation of the same set, and "Financial Risk row" is a fair paraphrase of the matrix's own
+category label ("Financial") for the "Upside case underperforms base case" cell. This is not a new,
+independently-derived claim about which KPIs matter — it is an accurate carry-forward of a citation Section
+10 already made, which is exactly what was required.
+
+**Cross-check against `KPI_Tree.md`:** independently re-read the tree in full. K5 (active customers), K6
+(orders/active customer/month), K7 (pro adoption rate), K8 (12-month retention rate), K9 (churn rate to
+competition), K13 (advertising revenue % of segment revenue), and K14 (active/paying advertisers) are all
+real, named nodes in the tree, all tagged "Newly-instrumented," all traced to `ASM-007`/`ASM-008`/`ASM-011`.
+Section 10's own selection of exactly this subset (as opposed to the tree's other newly-instrumented nodes,
+K10–K12 and K15–K16) is Section 10's own editorial judgment, not something this re-review was asked to
+re-litigate — the task here is confirming Section 12 quotes Section 10 accurately, which it does, verbatim
+on the KPI list and near-verbatim on the "single highest-priority mitigation" characterization.
+
+**Placement check:** the new bullet is correctly positioned as H1's *primary* gate ("not a secondary one
+alongside the model-transfer/fairness checks above"), which does not contradict or displace the two
+pre-existing H1 checkpoints (GCC-benchmark aggregate performance and segment-level fairness) — all three
+now coexist as H1 exit criteria, consistent with the original review's instruction to add this checkpoint
+"alongside the two already present."
+
+## Full-section re-read — the five original pressure-test questions, checked for regression
+
+**(a) Each horizon generates the evidence that justifies the next.** Now true for both transitions.
+H1→H2 unchanged from the original PASS-worthy state; H2→H3 now has the explicit gate described in Fix 2.
+No regression — the Answer-stated-first paragraph's claim ("only once H1/H2 have produced real Egypt
+evidence") is now actually operationalized by the milestone content, closing the gap the original review
+found between the section's framing and its substance.
+
+**(b) Team expansion and recruitment goals.** Unchanged from the original review — same H3 bullet, same
+thin-but-acceptable treatment, same non-blocking observation about the "recruitment goals" half being
+addressed only structurally, not with even an illustrative role/headcount estimate. No regression, and this
+was never a blocking finding.
+
+**(c) Marketing rollout plan.** Resolved — see Fix 1 above. Independently confirmed the new content is
+genuine Section-12-owned sequencing logic across all three horizons, not a heading satisfied by citation
+alone.
+
+**(d) DEC-003 drift / residual churn-prediction language.** Re-ran a full-file `Grep` for `churn`
+(case-insensitive) against the current draft: still exactly the same two locations as the original review
+found (the provenance note and H3's explicit-exclusion paragraph), both unchanged by the fixes made. No new
+churn-prediction language was introduced anywhere in the new marketing-sequencing or gating content added
+for Fixes 1–3. Clean, as before.
+
+**(e) Kill-criteria substance.** Resolved — H1 now has three named exit criteria (GCC-benchmark aggregate
+performance, segment-level fairness, and the newly-added base-case-trajectory KPI checkpoint, explicitly
+ranked as primary), and H2→H3 now has its own explicit evidence gate (Fix 2). The original review's
+narrower concern — that Section 12 operationalized two of Section 10's mitigation rows but not the one
+Section 10 itself ranks highest-priority, while claiming full alignment — is closed: the highest-priority
+row is now explicitly present, and the Answer-stated-first paragraph's "operationalizes what Sections 10
+and 11 already established" claim is now accurate rather than partially true.
+
+**No new issue introduced.** The Traceability summary table's two new rows ("Financial Risk go/no-go
+checkpoint (H1 primary gate, also H2->H3 gate)" and "Marketing rollout sequencing (H1/H2/H3-scoped,
+building on Section 7)") were checked against the body text they summarize and match it accurately — no
+new untraceable claim, no new Group-as-Egypt-proven violation (the new content introduces no new Group/GCC
+statistics), and no new internal contradiction between the H1 bullets (the new financial checkpoint
+coexists with, rather than displacing, the two pre-existing checkpoints). The non-blocking MECE observation
+from the original review (no explicit MECE statement for the Three Horizons breakdown itself) remains
+unaddressed but was explicitly non-blocking in the original report and stays non-blocking here — it is not
+newly introduced by these fixes and does not affect the verdict.
+
+## Citation audit re-confirmation
+
+Re-read `Citation_Audit_Section_12.md`'s final closeout addendum directly: **"Verdict: PASS. All three
+original hard failures are now fully fixed and verified. Section 12's citation..."** — unchanged since the
+original QA report above, which already correctly summarized this in its §3. No new citation-audit concern
+arises from the three fixes reviewed here (all newly-added citations — Section 10 §10.3/§10.4, `KPI_Tree.md`
+K5–K9/K13–K14, Section 11 §11.2, Section 7's Partnerships subsection — were independently spot-verified
+above and found accurate), but this re-review does not constitute a formal re-run of the citation audit's
+own procedure; it is a QA-level spot-check consistent with the original report's scope.
+
+## Overall verdict: PASS
+
+All three of the original FAIL report's findings are verified fixed, on independent re-read of the source
+sections each fix cites, not merely the fix descriptions supplied with this task:
+
+1. **Marketing rollout plan** is now genuinely Section-12-owned sequencing logic across H1/H2/H3, correctly
+   built on — not restated from — Section 7's and Section 11's already-cited content. Verified against a
+   full re-read of Section 7 confirming no equivalent sequencing content exists there.
+2. **H2→H3 gate** is explicit, substantive, and internally consistent with H1's checkpoints (same KPI set),
+   not a vague sequencing assertion.
+3. **The Financial Risk checkpoint** is accurately attributed to Section 10 §10.3 (the "single
+   highest-priority mitigation" ranking, quoted correctly) and §10.4 (the mitigation-table action, quoted
+   correctly), with the K5–K9/K13–K14 KPI citation verified accurate against `KPI_Tree.md` itself.
+
+The full-section re-read of all five original pressure-test questions found no regression and no new issue
+introduced by these edits. The churn-prediction exclusion (DEC-003 consistency) remains clean. The citation
+audit remains closed, PASS. The one remaining item from the original review — the non-blocking MECE
+observation for the Three Horizons breakdown — was explicitly non-blocking in the original report and
+remains so; it does not affect this verdict.
+
+**Section 12 is now cleared on both the citation audit and QA fronts and is ready to be marked ✅ Done in
+the Project tracker.**
+
+## Links (addendum)
+- [[Section_12_Implementation_Plan|vault/Projects/Business_Plan_Drafts/Section_12_Implementation_Plan.md]] — current text re-read in full for this addendum
+- [[Citation_Audit_Section_12]] — final closeout addendum re-confirmed PASS
+- [[Section_10_Risk_Analysis]] §10.3/§10.4 · [[KPI_Tree]] · [[Section_11_CSR_and_Responsible_AI]] §11.2 · [[Section_07_Marketing_and_Sales_Strategy]]
