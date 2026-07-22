@@ -336,3 +336,170 @@ program for the plan.
 - [[Talabat-Egypt-AI-Retention-Business-Plan|Project tracker]] — row 1 and Section 1's own frontmatter both
   flagged stale in §2(f)/§6; not edited by this review since the verdict is FAIL, per this project's rule
   that only a passed review flips a section's tracker row to ✅ Done
+
+---
+
+# Targeted re-review — fix verification (2026-07-22)
+
+## Scope and independence note
+
+Freshly-invoked thread, no memory of the drafting session or the fix session that inserted the "Bottom
+Line" callout. Re-read `vault/Projects/Business_Plan_Drafts/Section_01_Executive_Summary.md` in full,
+directly from disk, rather than trusting the fix description in the task brief. Also re-checked
+`AI_Business_Plan_Template.md` lines 19–29 directly (the same governing instruction cited in the original
+FAIL). This addendum reviews only the fix and does not re-litigate the original FAIL report's findings
+above, all of which stand as the historical record of what was found and why.
+
+## (a) Does the Bottom Line callout now satisfy "the Answer must appear within the first half page"?
+
+**Yes.** The file now reads, in order: frontmatter → title → the pipeline provenance note (a blockquote) →
+`## Bottom Line` → `## Situation` → `## Complication` → `## Question` → `## Answer` → ... The Bottom Line
+callout is the first substantive heading after the title, genuinely ahead of any Situation/Complication/
+Question content — it satisfies the template's ordering requirement outright.
+
+Independently counted the Bottom Line callout word-by-word (the text between the `## Bottom Line` heading
+and the `## Situation` heading): **≈136 words** — a four-sentence callout (Recommendation / Investment /
+Expected impact / a closing sentence naming the Low-confidence label, the plan's own highest-severity risk,
+and a pointer to the full Answer section). At normal business-document formatting (≈500–600 words per
+single-spaced page at 11–12pt, the same basis the original FAIL report used to judge the 550-word S+C+Q
+block as "roughly a full page"), 136 words is comfortably under a quarter page, well inside any reasonable
+reading of "the first half page." This is a materially more conservative result than the fix description's
+own "~200-word" estimate — the actual callout is shorter than described, which only strengthens the case
+for compliance.
+
+**One methodological note, applied for consistency with the original FAIL report's own measurement basis:**
+the pipeline provenance note that precedes the Bottom Line (≈179 words, independently counted) is not
+counted against the "half page" budget here, for the same reason the original FAIL report's own word count
+did not count it — that FAIL report measured only "Situation+Complication+Question... before the Answer
+heading" (≈550 words), deliberately starting its count at `## Situation`, not at the top of the file. The
+provenance note is pipeline-governance metadata (identical in kind and function to the frontmatter block
+above it), present verbatim at the top of all fourteen section drafts in `Business_Plan_Drafts/` as a
+standing project convention, and its own text explicitly states this is "a working draft in
+`vault/Projects/`, not yet promoted to `Outputs/`" — i.e., it is not part of the leadership-facing document
+the template's "half page" rule is written for, and should not survive promotion to the final `Outputs/`
+deliverable. Applying the same measurement basis the original review used, the callout clears the bar
+cleanly. (For full transparency: even if a reviewer chose to count the provenance note as page content
+too — a stricter reading than the original FAIL report itself applied — the combined provenance-note +
+Bottom-Line block is ≈315 words, still meaningfully under the ≈550-word block that was judged "roughly a
+full page," and well within a defensible reading of "half page" once markdown heading/blockquote formatting
+overhead is set aside. Either way, this is not a blocking concern.)
+
+**Verdict: satisfied**, on the same basis the original review used to measure the defect, with an even
+larger margin than the fix's own word-count estimate implied.
+
+## (b) Does every figure in the callout match the fully-cited Answer section exactly?
+
+Checked each figure and claim in the Bottom Line callout against the `## Answer` section's own text,
+line by line:
+
+| Callout claim | Answer section's matching text | Match? |
+|---|---|---|
+| Recommendation: extend Group AI roadmap into Egypt; not a new churn-prediction build; not subscription-uplift-only | "extending talabat's already-announced Group AI roadmap into Egypt... **not** building a new churn-prediction product and **not** a subscription-uplift-only strategy" | Yes, same substance |
+| Citation: DEC-003 | Answer cites DEC-003 in the same opening sentence | Yes, identical citation |
+| Investment: ≈USD 13.2m | "an illustrative **≈USD 13.2m**" | Yes, exact figure |
+| "entirely a prioritization within... USD 175mn 2026 envelope, not new capital" | "part of a USD 175mn total Board-approved envelope... **This is not new capital**" | Yes, same substance |
+| Citation: DEC-004 | Answer cites DEC-004 in the same sentence | Yes, identical citation |
+| Base case: ≈USD 581–597m FY2026 Egypt revenue, no intervention credit | "projects revenue of **≈USD 581–597m**... taking **no credit** for this plan's own intervention" | Yes, exact figure and framing |
+| Break-even: ≈USD 53.9m / ≈10.6% | "would need to generate **≈USD 53.9m** in incremental revenue... **≈10.6%** of Egypt's FY2025 revenue base" | Yes, exact figures |
+| "well below the 20–28% uplift... at Group level" | "a materially lower bar than the 20–28% order-frequency and 26–32% retention uplift... at Group/GCC level" | Yes — callout cites only the 20–28% figure (omits the 26–32% retention-uplift figure), a legitimate compression for a four-sentence summary, not a factual mismatch |
+| Citation: Section 9 | Answer cites Section 9 §9.4 for this comparator | Yes, same source (callout omits the §-anchor, acceptable for a summary) |
+| "Low confidence throughout" | "carried at Low confidence throughout this plan, not overstated as a central estimate" | Yes, identical framing |
+| "single highest-severity risk," citing Section 10 §10.2 | "rated High probability / High impact, the only cell at that severity in the entire risk register" (Section 10 §10.2) | Yes, same substance — callout does not restate the "High/High" cell label explicitly but "single highest-severity risk" is an accurate, non-diluting paraphrase of the identical fact |
+
+**No numeric drift found anywhere.** Every dollar figure, percentage, and named Decision/Section citation
+in the callout is identical to its counterpart in the Answer section — not merely consistent in spirit, but
+exact. The two omissions noted above (the 26–32% retention-uplift comparator; the explicit "High/High"
+label) are legitimate summarization choices for a four-sentence callout, not inaccuracies — the reader is
+explicitly pointed to "the Answer section below" for the full detail, and nothing the callout does say
+contradicts or waters down what appears there.
+
+## (c) Does the callout introduce any new claim not already present and cited elsewhere in the section?
+
+**No new claim found.** Every substantive assertion in the callout — the recommendation and its scope
+exclusions, the investment figure and its "not new capital" framing, the base-case revenue figure, the
+break-even bar and its Group-level comparator, the Low-confidence label, and the single-highest-severity-
+risk claim — is a restatement of content already established, cited, and unchanged in the `## Answer`
+section immediately below (and, in turn, already independently verified against Sections 9 and 10 by the
+original QA pass's §2(b)/§2(d) checks and the closed citation audit). The four citations used in the
+callout ([[DEC-003_section2-governing-hypothesis|DEC-003]], [[DEC-004_2026-investment-total|DEC-004]],
+[[Section_09_Financial_Plan|Section 9]], [[Section_10_Risk_Analysis|Section 10]] §10.2) are all citations
+that already appear, identically linked, in the Answer section — no new citation target was introduced.
+
+**One minor, non-blocking cosmetic note:** the callout describes the recommendation as "**richer**
+recommendation form factors," while the Answer section and the "AI Product/Service" section both use
+"**new** recommendation form factors" / "new-form-factor recommendations." This is a wording variance, not
+a factual or scope difference — "richer" and "new" describe the same DEC-003 Option 2 mechanism, and no
+reader could construe this as a different capability or a broadened claim. Flagging for optional word-choice
+consistency only; does not rise to a required fix and does not affect this review's verdict.
+
+## (d) Is the SCQA structure below the callout genuinely unchanged?
+
+Spot-checked the current `## Situation`, `## Complication`, `## Question`, and `## Answer` sections against
+the original FAIL report's own record of this content (word counts, direct quotes, and specific citations
+the original review verified):
+
+- **Situation** still opens with talabat's category-leadership framing (4x+/10x+ footnoted via DEC-001),
+  the FY2025 segment-profitability inflection (revenue USD 509.9m, gross profit USD 125.0m at 24.5% margin,
+  net profit USD 44.4m, Q1 2026 PBT USD 9.4m vs. USD 0.5m), and the Group AI roadmap's EBITDA trail
+  (USD 14mn+ → USD 30mn+) — matching the original review's §2(b) description verbatim in substance and
+  citation set (DEC-001, Section 3 §3.1/§3.3, Section 4 §4.2, Section 9 §9.1).
+- **Complication** still opens with the "None of the three Group AI roadmap items above carries an
+  Egypt-specific commitment..." framing, the talabat pro one-year-tenure point, the `ASM-002`-labeled
+  Breadfast/Rabbit/elmenus competitive set, the food-inflation/EGP-devaluation pressure, and the UAE/Kuwait/
+  Qatar M1 retention-decline precedent (TLB-019, page 9) — all present, all citing the same sources the
+  original review checked.
+- **Question** still poses the identical (a)/(b)/(c) framing mapped to DEC-003's Options 1, 3, 2
+  respectively, closing on "This is the exact decision DEC-003 escalated and resolved" — unchanged from what
+  the original review verified in §2(c).
+- **Answer** is textually identical to what the original review quoted and checked line-by-line in §2(b)–
+  §2(e) — the recommendation sentence, the ≈USD 13.2m investment paragraph, the ≈USD 581–597m/≈USD 53.9m/
+  ≈10.6% impact paragraph with its Low-confidence and High/High risk-cell language, and the Three Horizons
+  "Path to impact" paragraph all match verbatim.
+
+No wording, citation, or figure was found to have changed anywhere in Situation, Complication, Question, or
+Answer relative to the original review's record. **The fix is genuinely additive-only**, exactly as the
+original FAIL report's instruction required ("Do **not** solve this by simply deleting supporting detail...
+the fix is to add a short answer-first callout above it, not to thin out the evidence base").
+
+## General full-section coherence read
+
+Read the entire current file top to bottom (frontmatter through the Links list) as a final check, since
+this is the last verification gate for the whole plan. All required template items remain present and
+substantive (Bottom Line does not displace or duplicate any of the seven required §1 items — it sits
+alongside them as an additive front-loaded summary). The Traceability summary table is unchanged and does
+not need a new row for the Bottom Line, since every claim in it already has a row covering its content
+(Situation, Answer — investment and scope, Answer — expected impact figures, Answer — largest risk). The
+Links section is intact and complete. Frontmatter's `status` field has been refreshed to reflect the
+citation-audit-PASS / QA-in-progress state (see below for the final update this review makes). No orphaned
+references, no broken heading hierarchy, no stray formatting artifacts introduced by the edit. The section
+reads coherently and cleanly from top to bottom.
+
+## Result
+
+**PASS.** The one required fix from the original review — the Bottom Line callout — is correctly
+implemented: it appears before any SCQA content, is a genuinely short (≈136-word) answer-first summary
+comfortably within "the first half page" on the same measurement basis the original FAIL used, every figure
+in it is an exact match (not a paraphrase-with-drift) to the fully-cited Answer section, and it introduces
+no new claim or citation target anywhere. The SCQA structure below it is verified unchanged — additive-only,
+as required. The one cosmetic wording variance noted in §(c) ("richer" vs. "new") is optional polish, not a
+required fix, and does not block approval.
+
+**Section 1 is now cleared on both the citation-audit front (closed PASS, per
+`vault/Validation/Citation_Audit_Section_01.md`'s four-round history, not re-litigated by this review) and
+the QA front (this review, PASS, no remaining required fixes).** With this disposition, **all fourteen
+sections of the Talabat Egypt AI Retention Business Plan have now passed both their citation audit and their
+independent QA review — no verification work remains in the Stage 9/Stage 11 pipeline for any section.**
+The plan is clear to proceed to Phase 10 (export to `Outputs/`, OS structure document, presentation deck)
+per the Project tracker's own "Plan of attack."
+
+**Actions taken by this review, consistent with `.claude/skills/qa-review/SKILL.md`'s "on pass, flip the
+status cell" instruction:**
+1. Section 1's tracker row in `vault/Projects/Talabat-Egypt-AI-Retention-Business-Plan.md` updated from
+   `⬜ Not started` to `✅ Done (independently verified)`.
+2. `Section_01_Executive_Summary.md`'s frontmatter `status` field updated to reflect both gates closed.
+
+## Links
+- [[Section_01_Executive_Summary|vault/Projects/Business_Plan_Drafts/Section_01_Executive_Summary.md]] —
+  re-read in full for this addendum
+- [[Citation_Audit_Section_01]] — consumed, still closed PASS, not re-opened by this addendum
+- [[Talabat-Egypt-AI-Retention-Business-Plan|Project tracker]] — row 1 flipped to ✅ Done by this review
