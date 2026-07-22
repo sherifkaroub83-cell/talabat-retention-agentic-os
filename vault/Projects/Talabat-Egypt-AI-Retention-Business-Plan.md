@@ -65,7 +65,7 @@ the orchestrator has the `Agent` tool available.
 |---|---|---|---|
 | 1 | Executive Summary (SCQA) | ⬜ Not started | Write last — depends on 2–13 |
 | 2 | Business Description | ⬜ Not started | `Strategic/Current Pain Points.md`, `Strategic/How Talabat Creates Value.md` |
-| 3 | Market Analysis | ✅ Done* | `Topics/Egypt.md`, `Strategic/Competitive Advantages.md`, `Strategic/Competitive Weaknesses.md`, `Topics/Competition.md`, `Topics/UAE.md`, `Entities/Competitors.md`, `Facts/Competition_Facts.md`. Draft: [[Section_03_Market_Analysis]]. Pipeline artifacts: [[DEC-001_egypt-category-share-figure]], [[DEC-002_egypt-market-size-definition]], [[RES-001_egypt-named-competitors]]–[[RES-004_egypt-official-newsroom-operational-datapoints]], [[Citation_Audit_Section_03]], [[QA_Review_Section_03]]. **\*Passed Stage 11 QA, but that review was self-administered by `bp-orchestrator` (no `Agent` tool available this session to invoke an independent `qa-review-agent` thread) — recommend re-verification with a genuinely independent QA pass before treating this as submission-final. Also pending: re-check hypothesis-traceability once Section 2 exists (QA Finding 2).** |
+| 3 | Market Analysis | ✅ Done (self-reviewed) | `Topics/Egypt.md`, `Strategic/Competitive Advantages.md`, `Strategic/Competitive Weaknesses.md`, `Topics/Competition.md`, `Topics/UAE.md`, `Entities/Competitors.md`, `Facts/Competition_Facts.md`. Draft: [[Section_03_Market_Analysis]]. Pipeline artifacts: [[DEC-001_egypt-category-share-figure]], [[DEC-002_egypt-market-size-definition]], [[RES-001_egypt-named-competitors]]–[[RES-004_egypt-official-newsroom-operational-datapoints]], [[Citation_Audit_Section_03]], [[QA_Review_Section_03]]. Passed Stage 11 QA (Pass 1 only — self-administered by `bp-orchestrator`, no `Agent` tool available this session to invoke an independent `qa-review-agent` thread; see [[Agentic_OS_Architecture_v2]] Change 2). **Pass 2 (independent verification) required before submission-final** — a fresh, separately-invoked QA pass. Also pending: re-check hypothesis-traceability once Section 2 exists (QA Finding 2). |
 | 4 | Value Proposition | ⬜ Not started | `Strategic/Customer Retention Drivers.md` |
 | 5 | AI Technology and Development | ⬜ Not started | `Topics/AI.md`, `Entities/Technology_Platforms.md` |
 | 6 | Business Model and Revenue Streams | ⬜ Not started | `Strategic/Revenue Model.md`, `Facts/Revenue.md` |
@@ -78,7 +78,9 @@ the orchestrator has the `Agent` tool available.
 | 13 | Monitoring and Evaluation (KPIs) | ⬜ Not started | `Strategic/Customer Retention Drivers.md` (no churn baseline exists — known gap) |
 | 14 | Appendices + traceability note | ⬜ Not started | `vault/MOC/Source Register.md` — mechanically closest to ready |
 
-**Legend:** ✅ Done · 🟡 Drafted, needs verification · ⬜ Not started
+**Legend:** ✅ Done (independently verified — Pass 2 QA by a separately-invoked agent thread) ·
+✅ Done (self-reviewed — Pass 1 only, see [[Agentic_OS_Architecture_v2]] Change 2) ·
+🟡 Drafted, needs verification · ⬜ Not started
 
 ## Plan of attack
 (Now formalized as roadmap Phases 6–10 in `vault/Architecture/Implementation_Roadmap.md`.)

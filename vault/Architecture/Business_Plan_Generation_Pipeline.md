@@ -12,7 +12,16 @@ and still the reference for *what* goes in each section; this document defines *
 from "requested" to "Done," closing the old flow's core weakness: it went straight from "gap
 identified" to "write it anyway, labeled," with no resolution step in between.
 
-Run by `bp-orchestrator`, per section, per `Agentic_OS_Architecture.md` §3.1's delegation map.
+Run per section, per `Agentic_OS_Architecture.md` §3.1's delegation map.
+
+> **Invocation pattern, updated post-Phase-7 (see [[Agentic_OS_Architecture_v2]], Change 1):** the
+> original design had `bp-orchestrator` invoke each specialist agent itself, via its own nested `Agent`
+> tool calls. Phase 7's pilot run found that a spawned `bp-orchestrator` subagent has no `Agent`/
+> `WebSearch`/`WebFetch` tools available to it in this runtime, so that delegation cannot occur.
+> **Current practice: the top-level session invokes each specialist agent directly**, following the
+> stage table below as its own checklist — `bp-orchestrator`'s specification remains authoritative for
+> *what* happens at each stage; only *who* executes it changed. Re-test if the runtime constraint is
+> ever confirmed lifted.
 
 ## The 11 stages
 
@@ -38,6 +47,14 @@ Run by `bp-orchestrator`, per section, per `Agentic_OS_Architecture.md` §3.1's 
 - **Stage 11 is the only stage that can move a section to ✅ Done.** Stage 9 passing alone only
   earns 🟡 (drafted, needs verification) — matching the legend already defined in the Project
   tracker.
+- **Two-pass verification, added post-Phase-7 (see [[Agentic_OS_Architecture_v2]], Change 2):**
+  Stage 9 and Stage 11 assume independence — a separate agent thread with no stake in the draft
+  passing. When Stages 9/11 are performed in-line by the same context that drafted the section (e.g.
+  because the invocation-pattern constraint above applies), that is **Pass 1 only**, and the section
+  may be marked **✅ Done (self-reviewed)**, not the unqualified ✅ Done. **Pass 2** — a freshly
+  invoked, separate top-level `Agent` call to `evidence-citation-agent`/`qa-review-agent`, with no
+  access to the drafting context's reasoning — is required before a section is marked **✅ Done
+  (independently verified)** and treated as submission-final.
 - **Section 1 (Executive Summary) skips stages 2–7 and 10** — it runs stage 1 (scoping: "have all 13
   other sections reached at least 🟡?"), then hands straight to `exec-summary-agent` for stage 8-
   equivalent synthesis, then stages 9 and 11 as normal.
@@ -45,6 +62,10 @@ Run by `bp-orchestrator`, per section, per `Agentic_OS_Architecture.md` §3.1's 
   not applicable to Section 11 CSR) — the Orchestrator records this explicitly rather than silently
   skipping, so the pipeline log shows every section actually passed through 11 stages, not that some
   were shortcut.
+- **Wikilink scope, added post-Phase-7:** skills and agents (`.claude/skills/`, `.claude/agents/`) are
+  not vault graph nodes — reference them as plain backtick paths at Stages 8/9/11, never as
+  `[[wikilinks]]`. Phase 7's pilot produced two broken wikilinks doing exactly this; see
+  [[Agentic_OS_Architecture_v2]], Change 4.
 
 ## Relationship to the old flow
 
@@ -58,9 +79,12 @@ all before.
 
 ## Status
 
-Design only — **no section has been run through this pipeline yet.** First execution begins in the
-implementation roadmap's drafting phase, not during this architecture-design phase. See
-[[Implementation_Roadmap]].
+**Executed once, for real.** Section 3 (Market Analysis) ran through 9 of 11 stages substantively (2
+correctly marked not-applicable) on 2026-07-22 — see
+[[Phase7_Pilot_Execution_Report_Section_03|the execution report]] and
+[[Agentic_OS_Architecture_v2|the resulting architecture evolution]]. The stage sequence and gate rules
+validated cleanly; the invocation pattern above was adapted as a direct result. 13 of 14 sections
+remain untouched. See [[Implementation_Roadmap]] for what's next.
 
 ## See also
-[[Agentic_OS_Architecture]] · [[Project Administration]]
+[[Agentic_OS_Architecture]] · [[Agentic_OS_Architecture_v2]] · [[Phase7_Pilot_Execution_Report_Section_03]] · [[Project Administration]]

@@ -7,6 +7,11 @@ scope: "OS Architecture Design Phase. No Business Plan content is drafted in thi
 
 # Agentic OS Architecture — talabat Egypt Retention Capstone
 
+> **This is the Version 1 (pre-execution) design.** Phase 7 ran the first real pipeline execution
+> against this design and found it substantially correct, with one consequential exception (agent
+> delegation) and three smaller adaptations. See [[Agentic_OS_Architecture_v2]] for the evidence-based
+> evolution — this document is kept as-is, not rewritten, as the historical pre-execution record.
+
 **Read this first.** This document is the map of the whole operating system: what exists today,
 what's missing, and the eight new agents / six new skills / three new knowledge layers that close
 the gap. It is a **design specification**, produced *before* any Business Plan section is drafted,

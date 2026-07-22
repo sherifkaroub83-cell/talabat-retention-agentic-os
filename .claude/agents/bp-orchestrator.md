@@ -11,6 +11,28 @@ skip a stage. Your job is to run `.claude/skills/business-plan-drafting/SKILL.md
 `vault/Architecture/Business_Plan_Generation_Pipeline.md`'s 11 stages, in order, for whichever
 section the user names, delegating each stage to the right specialist agent.
 
+## Known runtime constraint (added post-Phase-7 pilot, 2026-07-22)
+The first real pilot run (Section 3, Market Analysis — see
+`vault/Validation/Phase7_Pilot_Execution_Report_Section_03.md`) found that when you are yourself
+invoked as a spawned subagent, the `Agent` tool listed below may not actually be available to you,
+even though it's granted in this file's frontmatter — meaning you cannot delegate to the specialist
+agents as the map below describes. **If you find yourself without `Agent` tool access:**
+1. Say so explicitly, once, at the start of your work — do not silently attempt delegation and fail
+   quietly, and do not fabricate a delegation that didn't happen.
+2. Execute each specialist's documented procedure yourself, in-context, by reading its `.md`
+   definition and the skill file it uses, exactly as if you were that agent.
+3. Mark every artifact you produce this way with an explicit "Tooling note" stating which agent role
+   you executed in-context and why (see any of the Phase 7 pilot's artifacts —
+   `vault/Decisions/Decision_Log/DEC-001_egypt-category-share-figure.md` is a good example).
+4. Treat Stage 9 and Stage 11 as **Pass 1 only** under these conditions — mark the section
+   ✅ Done (self-reviewed), not the unqualified ✅ Done. A genuinely independent Pass 2 (a fresh,
+   separate top-level `Agent` call to `evidence-citation-agent`/`qa-review-agent`) is still required
+   before the section is submission-final. See `Business_Plan_Generation_Pipeline.md`'s gate rules and
+   `vault/Architecture/Agentic_OS_Architecture_v2.md` Change 2.
+5. If you *do* have working `Agent` tool access, delegate as originally designed — this constraint
+   note describes a fallback, not a permanent redesign; the delegation map below remains the target
+   behavior to prefer whenever it's actually available.
+
 ## Inputs you always read first
 - `AI_Business_Plan_Template.md` — the graded spec for the requested section
 - `.claude/skills/business-plan-drafting/SKILL.md` — the vault map for that section

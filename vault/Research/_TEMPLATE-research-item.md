@@ -4,6 +4,7 @@ status: found
 retrieved: YYYY-MM-DD
 publisher: <org>
 url: <url>
+sourcing_method: live-web-retrieval   # or: corpus-reclassification — see External_Research_Layer.md
 confidence: Medium
 ---
 

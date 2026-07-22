@@ -49,7 +49,8 @@ vault/Research/
 | `Why needed` | Which BP section, which required sub-bullet |
 | `Status` | Requested / In progress / Found / Verified / Rejected (no acceptable source found) |
 | `Candidate provider` | e.g. Statista, Mordor Intelligence, IMARC, official competitor press release |
-| `Confidence (once found)` | High / Medium / Low — same scale as the Assumptions Register |
+| `Sourcing method` *(added post-Phase-7, see [[Agentic_OS_Architecture_v2]] Change 3)* | `corpus-reclassification` (already sat in `Input_Data/`, newly classified as a Research finding) or `live-web-retrieval` (freshly retrieved this session via `WebSearch`/`WebFetch`) |
+| `Confidence (once found)` | High / Medium / Low — same scale as the Assumptions Register. **Rule:** `corpus-reclassification` sourcing is capped at Medium/Medium-High regardless of the underlying source's reputability — it has not been independently re-verified as current |
 | `Research Note` | Link to `Notes/RES-###...md` once found |
 | `Date requested` / `Date resolved` | |
 
@@ -62,6 +63,7 @@ status: verified   # found | verified | rejected
 retrieved: YYYY-MM-DD
 publisher: <org>
 url: <url>
+sourcing_method: live-web-retrieval   # or: corpus-reclassification
 confidence: Medium
 ---
 
@@ -119,4 +121,4 @@ never silently dropped or silently guessed.
 happens during Business Plan drafting (Phase 7+), not during this architecture-design phase.
 
 ## See also
-[[Agentic_OS_Architecture]] · [[Project Administration]]
+[[Agentic_OS_Architecture]] · [[Agentic_OS_Architecture_v2]] · [[Project Administration]]
