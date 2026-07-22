@@ -12,6 +12,18 @@ Capstone project-management content — team, milestones, decisions. Distinct fr
 - [[Talabat-Egypt-AI-Retention-Business-Plan]] — the capstone deliverable tracker (open decisions, plan of attack)
 - [[MOC-Second-Brain]] — the whole-vault root index
 
+## Agentic OS architecture (OS Architecture Design Phase, 21/07/2026 — design only; reviewed and merged to main)
+- [[Agentic_OS_Architecture]] — the architecture root doc: current-state assessment, 14 missing
+  capabilities, 8 agent designs, 6 skill designs, workflow diagram, gap analysis
+- [[Decision_Management_Layer]] · [[External_Research_Layer]] · [[Forecasting_Layer]] — the three
+  new evidence layers designed between the corpus and the plan
+- [[Business_Plan_Generation_Pipeline]] — the redesigned 11-stage drafting process
+- [[Implementation_Roadmap]] — phased rollout with git branches, dependencies, completion criteria
+- [[OS_Architecture_Design_Phase_Validation_Report|OS Architecture Design Phase Validation Report]] — validation report confirming design-only scope
+- [[Decisions_README|Decisions layer]] · [[Research_README|Research layer]] · [[Forecasts_README|Forecasts layer]]
+  — the three layers' own folder-index notes (scaffolded, empty; see each for its repository structure)
+- Operative, not vault graph nodes: `.claude/agents/` (8 files), `.claude/skills/` (6 new + 1 redesigned)
+
 ## Outside the vault (repo root — not part of the Obsidian graph, linked here as plain paths for navigation only)
 - `../PROJECT_PROGRESS.md` — milestone status snapshot
 - `../SESSION_LOG.md` — chronological session record

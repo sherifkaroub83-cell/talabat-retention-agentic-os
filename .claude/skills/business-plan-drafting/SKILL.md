@@ -11,6 +11,24 @@ graded specification — read it in full before drafting anything; this skill su
 vault-mapped procedure but is not a substitute for it). Output lands in `Outputs/` per project
 convention. Target: 15–25 pages of substance, all 14 sections, PDF or Word, exported from this OS.
 
+## This skill is now the content map for an 11-stage pipeline, not a standalone drafting checklist
+
+As of the OS Architecture Design Phase (`vault/Architecture/`), invoking `/business-plan` runs the
+`bp-orchestrator` agent through the 11-stage pipeline defined in
+[`Business_Plan_Generation_Pipeline.md`](../../../vault/Architecture/Business_Plan_Generation_Pipeline.md).
+This file still tells the Orchestrator *which vault notes feed each section* (below) and *what
+McKinsey standard to write to* — that hasn't changed. What's new: when this file's "Caution" notes
+flag a gap, the pipeline now has somewhere to send it instead of just labeling and proceeding —
+external gaps go to the Research Agent (`vault/Research/`), forward-looking numbers go to the
+Forecasting Agent (`vault/Forecasts/`), and judgment calls go to the Decision Steward
+(`vault/Decisions/`). Every number the drafted section ultimately cites must resolve to a Facts/
+Sources citation or an `Approved` row in `vault/Decisions/Assumptions_Register.md` — checked
+mechanically by the `evidence-citation-agent` before any section can be marked ✅ Done. See
+`vault/Architecture/Agentic_OS_Architecture.md` for the full agent/skill roster this pipeline runs on.
+
+**Current status: design complete, 0 of 14 sections have entered the pipeline.** This skill update
+is architecture, not drafting — no Business Plan content exists yet.
+
 **Golden rule:** every claim in the plan must trace to a specific vault note, and every vault note
 already traces to a specific source document (`vault/Knowledge/Sources/TLB-XXX...md`, page N). Do not
 write a number, a market-share claim, or a competitor fact that doesn't already exist, cited, in the
@@ -141,3 +159,5 @@ These are not blockers — they're exactly the kind of finding a rigorous plan n
 - ❌ Building Section 9/13 numbers that don't trace back to the Section 4 value mechanisms.
 - ❌ Treating Section 11 (Responsible AI) as boilerplate disconnected from Section 10's actual risks.
 - ❌ Drafting the Executive Summary first — it's SCQA's Answer, which requires the rest of the plan to exist.
+- ❌ Resolving a flagged gap by drafting around it silently instead of routing it through the
+  pipeline's Research/Forecast/Decision stages (see `Business_Plan_Generation_Pipeline.md`).

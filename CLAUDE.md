@@ -7,6 +7,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 > `Problem_Charter.md` for the approved problem statement, and `AI_Business_Plan_Template.md` for
 > the graded 14-section GSB v2.0 (McKinsey Edition) specification the final deliverable must follow
 > — draft against it using the `business-plan-drafting` skill (`.claude/skills/business-plan-drafting/`).
+> **Before drafting any section**, read `vault/Architecture/Agentic_OS_Architecture.md` — the
+> capstone's primary product is the Agentic OS itself, not the plan (the plan is one execution of
+> it). Drafting runs through an 11-stage pipeline (`vault/Architecture/Business_Plan_Generation_Pipeline.md`)
+> via the `bp-orchestrator` agent, not free-form writing.
 
 ## What this project is
 
@@ -41,6 +45,18 @@ If you set up working directories, follow this convention:
 - `Input_Data/` — source documents (read-only)
 - `Outputs/` — generated artifacts and deliverables (create if absent)
 - `vault/` — the Obsidian second brain (knowledge notes, identity, MOC, daily logs)
+- `vault/Architecture/` — Agentic OS design specs (agent/skill roster, the three decision-support
+  layers below, the drafting pipeline, the roadmap) — see `Agentic_OS_Architecture.md`
+- `vault/Decisions/`, `vault/Research/`, `vault/Forecasts/` — the Decision Management, External
+  Research, and Forecasting layers (scaffolded 21/07/2026, populated only once drafting begins —
+  see the Implementation Roadmap). **Evidence tiers, in order:** Repository Facts
+  (`Knowledge/Facts`) → External Research (`Research/`) → Forecasts (`Forecasts/`) → Management
+  Decisions (`Decisions/`) → Business Plan (`Outputs/`). A tier may only cite tiers above it; no
+  number reaches `Outputs/` without resolving to a Facts citation or an `Approved` row in
+  `Decisions/Assumptions_Register.md`.
+- `.claude/agents/` — 8 named subagents running the Business Plan pipeline (`bp-orchestrator`,
+  `research-agent`, `forecasting-agent`, `decision-steward`, `evidence-citation-agent`, `kpi-agent`,
+  `exec-summary-agent`, `qa-review-agent`)
 
 ## Standing instructions
 

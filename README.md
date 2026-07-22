@@ -144,5 +144,8 @@ interviews, or course material — the flow is identical.
 | `Problem_Charter.md` | The approved G02 problem statement |
 | `AI_Business_Plan_Template.md` | The graded 14-section GSB v2.0 (McKinsey Edition) plan specification |
 | `vault/` | The Obsidian second brain |
+| `vault/Architecture/` | Agentic OS design docs — agent/skill roster, Decision/Research/Forecasting layers, the 11-stage drafting pipeline, the implementation roadmap |
+| `vault/Decisions/`, `vault/Research/`, `vault/Forecasts/` | The three evidence layers between "what the corpus says" and "what the plan claims" (scaffolded, populated once drafting begins) |
 | `scripts/` | Nightly maintenance script |
-| `.claude/skills/` | Project skills (`session-end`, `business-plan-drafting`) |
+| `.claude/agents/` | 8 named subagents that run the Business Plan pipeline (`bp-orchestrator` + 7 specialists) |
+| `.claude/skills/` | Project skills — `session-end`, `business-plan-drafting`, plus 6 pipeline-support skills (`external-research`, `forecast-builder`, `decision-log`, `evidence-ranking`, `citation-audit`, `qa-review`) |

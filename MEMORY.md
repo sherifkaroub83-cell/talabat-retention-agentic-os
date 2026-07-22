@@ -165,6 +165,25 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   third named example skill, previously missing — mapping all 14 GSB sections to the specific
   vault notes that feed them, and flagging every known evidence gap (no churn baseline, no Egypt
   funnel data, three unreconciled internal figures) so drafting doesn't silently paper over them.
+- 2026-07-21 — **OS Architecture Design Phase: designed the complete Agentic OS architecture, explicitly before starting
+  any Business Plan drafting** (user instruction: "The Agentic OS—not the Business Plan—is the
+  primary product of this project"). Assessed the current OS (strong knowledge base, zero decision-
+  making apparatus above it) and catalogued 14 missing capabilities. Designed and built: 8 named
+  agents in `.claude/agents/` (`bp-orchestrator`, `research-agent`, `forecasting-agent`,
+  `decision-steward`, `evidence-citation-agent`, `kpi-agent`, `exec-summary-agent`,
+  `qa-review-agent`); 6 new skills (`external-research`, `forecast-builder`, `decision-log`,
+  `evidence-ranking`, `citation-audit`, `qa-review`) plus a redesign of `business-plan-drafting`
+  into an 11-stage pipeline entry point; three new, scaffolded-but-empty knowledge layers —
+  `vault/Decisions/` (Assumptions Register + Decision Log), `vault/Research/` (Research Register +
+  Notes), `vault/Forecasts/` (Value Driver Tree + Scenarios + KPI Tree) — implementing a five-tier
+  evidence model (Facts → External Research → Forecasts → Decisions → Business Plan) where every
+  number downstream must resolve to a citation or an Approved assumption. Full design in
+  `vault/Architecture/` (`Agentic_OS_Architecture.md` + 4 companion docs). Work done on branch
+  `feature/agentic-os-architecture`, reviewed (two PR review passes — 5 Required Changes and 5
+  Recommended Improvements applied, a research-agent smoke test passed) and merged to `main` on
+  the user's explicit authorization. **No Business
+  Plan content was drafted** — the 14-section checklist remains 0/14; this was architecture design
+  only, per explicit instruction.
 
 ## Session log
 
@@ -174,3 +193,11 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   documents; built `vault/Knowledge/` (29 source notes, 14 topic fact files, 9 entity rosters,
   relationship map); corrected the "Egypt financials not disclosed" assumption (now a standalone
   reportable segment as of FY2025). See `vault/Knowledge/_VALIDATION_REPORT.md` for the full audit.
+  Same session, later: built the semantic knowledge layer (30 Topic Notes, 8 MOCs, 12 Strategic
+  notes), ran an Obsidian graph cleanup (fixed 7 filename collisions, connected 34 orphans), ran a
+  formal Project Readiness Assessment against the official Project Guide, recorded instructor
+  approval of the charter/team/slide count, ingested the graded AI Business Plan Template and built
+  the `business-plan-drafting` skill, then designed the full Agentic OS architecture (OS Architecture Design Phase:
+  Decision Management, External Research, and Forecasting layers; 8 agents; 6 new skills; the
+  11-stage drafting pipeline) — all before any Business Plan section was drafted, per explicit
+  instruction. See `vault/Architecture/` for the architecture design.
