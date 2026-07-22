@@ -29,6 +29,13 @@ mechanically by the `evidence-citation-agent` before any section can be marked �
 **Current status: design complete, 0 of 14 sections have entered the pipeline.** This skill update
 is architecture, not drafting — no Business Plan content exists yet.
 
+**The 14-section structure below is an architectural contract, not a drafting suggestion.** Its
+count, numbering, titles, and order come directly from `AI_Business_Plan_Template.md` and may only
+change if that template itself changes — not during drafting, not during a later publication or
+executive-editing pass. `.claude/skills/template-compliance-gate/SKILL.md` enforces this downstream,
+immediately before any export; this skill enforces it upstream, by never proposing a different
+section map than the one below.
+
 **Golden rule:** every claim in the plan must trace to a specific vault note, and every vault note
 already traces to a specific source document (`vault/Knowledge/Sources/TLB-XXX...md`, page N). Do not
 write a number, a market-share claim, or a competitor fact that doesn't already exist, cited, in the
