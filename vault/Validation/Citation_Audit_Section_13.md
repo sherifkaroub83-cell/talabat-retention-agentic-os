@@ -201,3 +201,122 @@ fixed and re-verified.
 - [[DEC-007_section13-review-cadence-kill-criteria]] · `vault/Decisions/Assumptions_Register.md` (`ASM-014`)
 - [[Section_10_Risk_Analysis]] §10.3/§10.4 · [[Section_12_Implementation_Plan]] (H1, H2) · [[Section_11_CSR_and_Responsible_AI]] §11.1/§11.3 · [[Section_05_AI_Technology_and_Development]] §5.6 · [[Section_08_Operations_Plan]]
 - [[Citation_Audit_Section_12|Citation Audit — Section 12]] — precedent for this report's format and the wrong-citation/drift defect classes generalized here to KPI-table reproduction drift
+
+---
+
+# Targeted re-audit — fix verification (2026-07-22)
+
+## Scope and method
+This addendum re-verifies, independently and against the source layer directly (not against the prior
+audit's own notes), the three claimed fixes to Hard Failures 1–3 above, plus a full row-by-row
+re-comparison of §13.1's current 16-row table against `KPI_Tree.md`'s Summary table to check for drift
+beyond the three originally flagged rows. Sources re-read in full for this pass: the current
+`vault/Projects/Business_Plan_Drafts/Section_13_Monitoring_and_Evaluation.md`, the current
+`vault/Forecasts/KPI_Tree.md` (Summary table, lines 155–172), and
+`vault/Projects/Business_Plan_Drafts/Section_06_Business_Model_and_Revenue_Streams.md` §6.1 and §6.2 in
+full (via direct grep/read of the revenue table and the Advertising-under-penetration paragraph).
+
+## Fix 1 — MRR/K13/Subscription mischaracterization
+
+**Current §13.1 text (MRR sub-bullet):** "...the closest genuine analog is **K13** (Egypt advertising
+revenue, % of segment revenue) for the most under-penetrated relative to talabat's own stated benchmark
+(per Section 6 §6.2) — Subscription fee & Other Income is actually the fastest-*growing* Group-level line
+(+44%→+47%, Section 6 §6.1), not Advertising (+27%→+32%) — and the Subscription-fees component of R1 for
+the recurring-revenue-adjacent figure."
+
+**Verification against Section 6 directly:**
+- §6.1's revenue table (line 41): "Subscription fee & Other Income | USD 952mn | USD 1,397mn | **+44% → +47%**"
+- §6.1's revenue table (line 42): "Advertising & listing fees | USD 246mn | USD 323mn | **+27% → +32%**"
+- §6.2 (lines 122–127): "Advertising (partner-funded, CPC/listing-based): Partners pay for visibility and
+  ad placement; this is the smallest line in dollar terms but **the most under-penetrated relative to its
+  own stated benchmark** — AdTech grew from 2.1% of GMV (2021) to 3.4-3.5% of GMV (FY2025) against a
+  management-stated medium-term target of ~7% of GMV..."
+
+Both growth-rate figures (+44%→+47% for Subscription, +27%→+32% for Advertising) and the under-penetration
+characterization of Advertising are confirmed verbatim against Section 6's own current text. The reworded
+sentence no longer attaches "fastest-growing" to K13/Advertising — it explicitly attributes that
+distinction to Subscription fee & Other Income and confines K13's citation to "most under-penetrated"
+alone. Section reference accuracy also checked directly: §6.1 (lines 31–98) is confirmed to be the
+subsection actually containing the growth-rate table, and §6.2 (lines 99–137) is confirmed to be the
+subsection actually containing the under-penetration/benchmark language — both citations point to the
+correct subsections, not just the correct document.
+
+**Verdict: PASS.** Fix 1 is confirmed accurate and correctly cited.
+
+## Fix 2 — "Root Fact" → "Root"
+
+**Current §13.1 table, R1–R4 rows:** Node column reads "Root" for all four rows (R1, R2, R3, R4).
+
+**Verification against `KPI_Tree.md` directly:** Summary table (lines 157–160) shows Node = "Root" for
+R1–R4, exactly as claimed. All four instances in Section 13's table now read "Root," with no residual
+"Root Fact" instance anywhere in the table.
+
+**Verdict: PASS.** Fix 2 is confirmed to match `KPI_Tree.md`'s Summary table exactly.
+
+## Fix 3 — K16 "(upside delta)" qualifier restored
+
+**Current §13.1 table, K16 row:** "Incremental Egypt revenue from DEC-003 intervention (upside delta)"
+
+**Verification against `KPI_Tree.md` directly:** Summary table (line 172) reads: "Incremental Egypt revenue
+from DEC-003 intervention (upside delta)" — an exact character-for-character match with Section 13's
+current K16 row.
+
+**Verdict: PASS.** Fix 3 is confirmed to match `KPI_Tree.md`'s Summary table exactly, word-for-word.
+
+## Full row-by-row re-comparison, §13.1 table vs. `KPI_Tree.md` Summary table (all 16 rows)
+
+Every row of Section 13's current table (ID, KPI name, Node, Leading/Lagging, Baseline) was checked
+directly against the corresponding row of `KPI_Tree.md`'s Summary table (lines 155–172):
+
+| ID | ID match | KPI name match | Node match | Leading/Lagging match | Baseline column |
+|---|---|---|---|---|---|
+| R1 | Yes | Yes | Yes ("Root") | Yes | Vocabulary differs ("Exists" vs. "Baseline-exists") — pre-existing Limitation 1, non-blocking |
+| R2 | Yes | Yes | Yes ("Root") | Yes | Same as above |
+| R3 | Yes | Yes | Yes ("Root") | Yes | Same as above |
+| R4 | Yes | Yes | Yes ("Root") | Yes | Same as above |
+| K5 | Yes | Yes | Yes (ASM-007) | Yes | Vocabulary differs ("None" vs. "Newly-instrumented") — same pre-existing limitation |
+| K6 | Yes | Yes | Yes (ASM-008) | Yes | Same as above |
+| K7 | Yes | Yes | Yes (ASM-008) | Yes | Same as above |
+| K8 | Yes | Yes | Yes (ASM-008) | Yes | Same as above |
+| K9 | Yes | Yes | Yes (ASM-008) | Yes | Same as above |
+| K10 | Yes | Yes | Yes (ASM-009) | Yes | Same as above |
+| K11 | Yes | Yes | Yes (ASM-010) | Yes | Same as above |
+| K12 | Yes | Yes | Yes (ASM-010) | Yes | Same as above |
+| K13 | Yes | Minor variant: "Egypt advertising revenue**,** % of segment revenue" vs. Summary table's "as % of" | Yes (ASM-011) | Yes | Same as above |
+| K14 | Yes | Yes | Yes (ASM-011) | Yes | Same as above |
+| K15 | Yes | Yes | Yes (ASM-012) | Yes | Same as above |
+| K16 | Yes | Yes (now exact, "(upside delta)" restored) | Yes (spacing cosmetic only: "ASM-008+ASM-011+Root" vs. "ASM-008 + ASM-011 + Root") | Yes | Same as above |
+
+**No new drift found beyond what the original audit already documented.** The two residual items —
+K13's "as % of" vs. ", % of" wording variant, and K16's node-column spacing ("ASM-008+ASM-011+Root" vs.
+"ASM-008 + ASM-011 + Root") — were already identified in the original audit (K13's variant explicitly, in
+Hard Failure 3's own text, where it was called "cosmetic only and not, on its own, blocking"; K16's node
+spacing was present in both the pre-fix and post-fix versions and changes no meaning). The Baseline-column
+vocabulary difference ("Exists"/"None" vs. "Baseline-exists"/"Newly-instrumented") is unchanged from the
+original audit's Limitation 1, which was already logged as non-blocking. None of these three residual
+items were part of Hard Failures 1–3, none is a factual or numeric error, and none was newly introduced by
+the fix — they were correctly left out of scope by the drafter, exactly as the original audit's own fix
+instructions specified ("this second item is cosmetic only and not, on its own, blocking").
+
+Row count, ID sequence, and totals also re-verified: both tables list exactly 16 rows in the identical
+order (R1–R4, K5–K16), and §13.2's "6 Leading / 10 Lagging" split (already PASS in the original audit,
+Finding #9) is unaffected by any of the three fixes and remains an exact match against `KPI_Tree.md`'s
+Totals line.
+
+## Overall verdict
+
+**PASS.** All three hard failures from the original audit are confirmed fixed and independently
+re-verified directly against their source documents (`Section_06_Business_Model_and_Revenue_Streams.md`
+§6.1/§6.2 and `KPI_Tree.md`'s Summary table), not merely against the prior audit's own description of what
+the fix should look like. The full-table re-comparison surfaced no new failures — only the two previously
+identified, explicitly non-blocking cosmetic items (K13's minor wording variant, K16's node-spacing
+variant) and the previously logged Baseline-vocabulary limitation, none of which were required fixes and
+none of which constitute citation-audit failures under this skill's criteria (they carry no factual error
+and no untraceable numeric claim). Zero open citation-audit failures remain for Section 13.
+
+**Section 13 is ready to proceed to Stage 11 (QA review).**
+
+## Links (addendum)
+- [[Section_13_Monitoring_and_Evaluation|vault/Projects/Business_Plan_Drafts/Section_13_Monitoring_and_Evaluation.md]] (current, post-fix version)
+- [[KPI_Tree]] (Summary table, lines 155–172, re-read directly for this addendum)
+- [[Section_06_Business_Model_and_Revenue_Streams]] §6.1 (lines 31–98, revenue table lines 39–42) and §6.2 (lines 99–137, under-penetration paragraph lines 122–127) — re-read directly for this addendum
