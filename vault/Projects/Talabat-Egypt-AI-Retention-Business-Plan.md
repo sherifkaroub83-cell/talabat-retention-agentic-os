@@ -108,6 +108,19 @@ targeted re-review; see [[QA_Review_Section_12]]). Next: Sections 1 (Executive S
       delivery figure cited only as a flagged, unreconciled lower-bound reference. Section 9 may
       need its own separate pass on this question for financial-plan purposes — this decision does
       not bind Section 9.
+- [x] Section 13's review cadence and kill criteria, given 12 of `KPI_Tree.md`'s 16 KPIs have no
+      Egypt baseline (`kpi-agent`'s own Escalation summary flagged this for `decision-steward` rather
+      than resolving it) — **resolved 2026-07-22 via
+      [[DEC-007_section13-review-cadence-kill-criteria]]** (approved): root KPIs (R1–R4) get a
+      quarterly cadence tracked against Section 9's base-case trajectory; the seven KPIs Section 10
+      §10.4/Section 12 already named the highest-priority mitigation (K5–K9, K13–K14) carry the
+      plan's only kill-criteria role, gated at Section 12's already-established H1 go/no-go
+      checkpoint and H2→H3 transition, using a qualitative, trajectory-relative test (tracking
+      toward/below the base case vs. the upside case) rather than a numeric threshold; the remaining
+      five newly-instrumented KPIs (K10–K12, K15–K16) are monitoring-only. No numeric target is set
+      for any of the 12 newly-instrumented KPIs — setting one is explicitly deferred to a future
+      Decision Log entry, possible only once H1 produces real Egypt baseline data. Assumption
+      Register row ASM-014 is `Approved`.
 
 ## 14-section checklist (GSB Template v2.0 — status against `AI_Business_Plan_Template.md`)
 
