@@ -3,7 +3,7 @@ type: validation
 section: 3
 pipeline_stage: 11
 date: "2026-07-22"
-result: PASS — with one material process caveat (see "Independence caveat" below)
+result: "PASS — with one material process caveat on the original Pass 1 (see 'Independence caveat' below). Addendum below (Pilot 2, 2026-07-22) records a second, harder finding: Section 2's independent QA review caught a real, hard-blocking cross-section defect this original review could not have caught (Section 2 didn't exist yet) — fixed and independently re-verified, PASS. Both records preserved in full."
 ---
 
 # QA & Final Review — Section 3 (Market Analysis)

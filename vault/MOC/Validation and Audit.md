@@ -47,6 +47,11 @@ Every quality-control checkpoint produced while building this vault, in chronolo
 
 ## Related registers
 - [[Source Register]] — the document-level provenance index (Sources notes + raw fact fragments)
+- [[Research_Register|Research Register]] — the External Research Layer's own index; carries
+  [[RES-000-SMOKETEST_imarc-group-publisher-check|the RES-000 smoke test]] and all four real Section 3
+  research items in one table, including [[RES-002_egypt-imarc-online-food-delivery-market-size|RES-002]]
+  and [[RES-003_egypt-mordor-foodservice-market-size|RES-003]] (linked directly here, not just via the
+  Project tracker's RES-001–RES-004 range, which only creates real links to its two endpoints)
 
 ## See also
 - [[Talabat MOC]] — top-level navigation
