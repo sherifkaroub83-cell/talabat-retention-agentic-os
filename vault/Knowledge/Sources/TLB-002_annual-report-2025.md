@@ -76,10 +76,10 @@ distinction from the 485-day audited "since inception" figures):
 - Subscription revenue: USD 74mn (2025, at-a-glance figure) (TLB-002, page 11)
 - Employees: 7,821 total (talabat-only, excluding instashop) as of 31 Dec 2025, across 90+ nationalities;
   436 tech (product/design/engineering/data) FTEs; 157k rider fleet paid USD 1.5bn in 2025 delivery costs (TLB-002, pages 5, 11, 16)
-- Data processed: 235 terabytes daily (TLB-002, page 14)
-- Rider Safety Score: 94% (December 2025) (TLB-002, page 15)
+- Data processed: 235 terabytes daily (TLB-002, page 15)
+- Rider Safety Score: 94% (December 2025) (TLB-002, page 16)
 - talabat pro: subscriber base grew 3.2x in 2025; subscribers now account for ~50% of GMV (TLB-002, pages 4, 13)
-- Personalisation algorithm: estimated incremental EBITDA contribution of USD 30mn+ p.a. (2025 estimate) (TLB-002, page 15)
+- Personalisation algorithm: estimated incremental EBITDA contribution of USD 30mn+ p.a. (2025 estimate) (TLB-002, page 16)
 
 ## Countries Mentioned
 UAE, Kuwait, Egypt, Qatar, Bahrain, Oman, Jordan, Iraq (talabat's 8 countries of operation);
@@ -188,6 +188,14 @@ Approximately 39 explicit Egypt mentions were identified. Substantive ones, with
   each user's lifetime value." (TLB-002, page 7)
 
 ## Important Quotations
+- **Vision and mission (explicit statement, "talabat at a glance" page):** "Empowering our communities.
+  We proudly deliver to the region that delivers. We're the Orange Ones" (page 3) — the single most
+  direct statement of both in the report.
+- **Vision (narrative echo):** "Our vision to 'empower our communities' is realised through a
+  multi-vertical approach that now firmly encompasses grocery and retail." — Pieter-Jan Vandepitte,
+  Chairperson (page 7)
+- **Mission (narrative echo):** "...the clarity of our mission to empower everyday convenience across
+  the MENA region." — Toon Gyssels, CEO (page 9)
 - "We have expanded our ecosystem, focusing on high-value customer retention through our talabat pro
   subscription programme and multi-vertical offerings." — Pieter-Jan Vandepitte, Chairperson (page 5)
 - "We expanded the programme to all eight of our markets, including a launch in Egypt, our third

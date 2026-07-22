@@ -422,3 +422,38 @@ in the original FAIL report above (unchanged by this re-audit) and the one resid
 - [[DEC-004_2026-investment-total]] — re-read in full to verify Fix 2
 - `vault/Knowledge/Facts/AI_Facts.md` · `vault/Knowledge/Topics/AI.md` · `vault/Knowledge/Topics/Profitability.md` — re-read in full to verify Fixes 1 and 3
 - [[Citation_Audit_Section_03|Citation Audit — Section 3]] — precedent standard for absence-claim citations (item #19), referenced in the Fix 3 residual-gap discussion
+
+---
+
+# Follow-up check: EBITDA page-citation fix (2026-07-22)
+
+## Scope
+Narrow, bounded verification of a single downstream fix — not a full re-audit. A Section 8 citation-audit
+thread discovered that Fix 1's citation above ("TLB-002, page 15") was itself imprecise: the raw source text
+shows the $30mn+ incremental-EBITDA figure sits on **page 16**, not page 15, of TLB-002. This was flagged as
+a pre-existing error inherited from the original citation (not introduced by the Fix 1 edit recorded above),
+and has since been corrected in §5.2's Option A Capability cell, `vault/Knowledge/Sources/TLB-002_annual-report-2025.md`,
+and `vault/Knowledge/Topics/AI.md`.
+
+## Independent verification
+
+**Section 5 §5.2 text.** Read directly: the Option A Capability cell in
+`vault/Projects/Business_Plan_Drafts/Section_05_AI_Technology_and_Development.md` now reads "...the only
+directly quantified AI-EBITDA trail in the corpus, $14mn+→$30mn+ FY24→FY25, TLB-001, page 23; **TLB-002,
+page 16**; `Topics/Profitability.md`)..." — confirmed the citation now reads page 16, not page 15.
+
+**Raw source text.** Read directly: `vault/Knowledge/_source_text/20260331_talabat-Annual-Report-2025-En-Interactive.txt`,
+`===== PAGE 16 =====` marker range (lines 1316–1375). This range contains, verbatim: "Personalisation /
+Proprietary personalisation and ranking algorithm / Incremental EBITDA¹ p.a. / USD 30mn+" — confirming the
+$30mn+ incremental-EBITDA figure genuinely sits on page 16, not page 15, of the source document.
+
+## Result
+
+**PASS.** The page-citation fix is independently confirmed correct on both sides: the current draft text
+cites `TLB-002, page 16`, and the raw source text's page-16 marker range genuinely contains the "Incremental
+EBITDA... USD 30mn+" figure. No further action needed on this specific citation.
+
+## Links
+- [[Section_05_AI_Technology_and_Development|vault/Projects/Business_Plan_Drafts/Section_05_AI_Technology_and_Development.md]] — §5.2 Option A Capability cell, re-checked
+- `vault/Knowledge/_source_text/20260331_talabat-Annual-Report-2025-En-Interactive.txt` — page-16 marker range, re-checked
+- `vault/Knowledge/Sources/TLB-002_annual-report-2025.md` · `vault/Knowledge/Topics/AI.md` — companion fixes noted, not independently re-verified in this narrow check
