@@ -42,6 +42,26 @@ Every quality-control checkpoint produced while building this vault, in chronolo
 - [[Citation_Audit_Section_09]] · [[QA_Review_Section_09]] — Section 9's Stage 9/11 artifacts. QA issued a genuine **FAIL** on first pass (two template-completeness gaps), fixed and independently re-verified via a fresh agent thread (addendum in the same file) — this project's first real fail/fix/re-verify cycle, proving independent QA catches real defects rather than rubber-stamping drafts
 - [[Pilot3_Execution_Report_Section_09]] — full execution log and success-criteria evaluation
 
+## Pilot 4 — Section 10, redefined mid-flight into a full-system operational-stability test (22/07/2026)
+- [[Section_10_Risk_Analysis]] — the fourth Business Plan section, deliberately built as a cross-subsystem
+  integration exercise: re-reads Section 9's Forecast Layer confidence tags (`ASM-008`/`ASM-011` Low
+  confidence) as financial-risk input rather than restating them, and references Section 3's Threats
+  quadrant rather than re-deriving it
+- [[Citation_Audit_Section_10]] — the project's first **citation-audit** FAIL (3 hard failures — a
+  misattributed cross-section citation, an unlabeled Group-wide statistic, an invented factual gloss),
+  fixed and independently re-verified in the same file's addendum. Previously only QA reviews had caught
+  real defects; this is evidence the citation gate does independent work too
+- [[QA_Review_Section_10_Pass1]] · [[QA_Review_Section_10_Pass2]] · [[QA_Review_Section_10_Comparison]] —
+  the deliberate two-pass QA test this pilot preserved from its original design: two genuinely independent
+  threads reviewed the same unedited draft, both reached FAIL, converged on two findings, and diverged on
+  a third (Pass 2 caught a real internal MECE contradiction Pass 1 read past) — the comparison file is the
+  first concrete evidence in this project that a second independent pass catches something a rigorous
+  first pass misses, not just formality
+- [[QA_Review_Section_10_Final]] — the combined-fix re-verification, closing Section 10 out to Done
+- [[Pilot4_System_Stability_Report]] — the pilot's primary deliverable: does the Agentic OS remain
+  operationally stable with every major subsystem (Decision, Research, Forecast, Citation, two-pass QA
+  layers) exercised together, on top of everything Pilots 1–3 already built
+
 ## Independent compliance audits (external-examiner perspective, not self-reported)
 - [[Independent_Project_Compliance_Report]] — v2, re-run against the merged main-equivalent state: requirements traceability, per-section Business Plan readiness, 12-area OS evaluation, architecture review, grading simulation (~33/100 as of this pass), and remaining roadmap. v1 (pre-merge) findings are marked RESOLVED in place rather than deleted, so the audit trail stays legible across passes.
 
