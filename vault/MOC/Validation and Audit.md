@@ -22,6 +22,9 @@ Every quality-control checkpoint produced while building this vault, in chronolo
 ## OS Architecture Design Phase
 - [[OS_Architecture_Design_Phase_Validation_Report|OS Architecture Design Phase Validation Report]] — confirms what was built (8 agents, 6 skills, 3 evidence layers, the 11-stage pipeline) and, explicitly, what wasn't (no Business Plan content, no populated Decisions/Research/Forecasts entries) — design-only scope check
 
+## Independent compliance audits (external-examiner perspective, not self-reported)
+- [[Independent_Project_Compliance_Report]] — v2, re-run against the merged main-equivalent state: requirements traceability, per-section Business Plan readiness, 12-area OS evaluation, architecture review, grading simulation (~33/100 as of this pass), and remaining roadmap. v1 (pre-merge) findings are marked RESOLVED in place rather than deleted, so the audit trail stays legible across passes.
+
 ## Related registers
 - [[Source Register]] — the document-level provenance index (Sources notes + raw fact fragments)
 

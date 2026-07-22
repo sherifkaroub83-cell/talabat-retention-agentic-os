@@ -2,328 +2,321 @@
 type: validation
 status: complete
 created: "2026-07-21"
+updated: "2026-07-22"
 author-role: "independent examiner (not the project builder)"
-scope: "main branch only, unless explicitly stated otherwise"
+scope: "main-equivalent repository state (audit/independent-compliance-report, synced to main post-merge), unless explicitly stated otherwise"
+supersedes: "v1 of this report (created 2026-07-21, scoped to main before the Agentic OS architecture merge)"
 ---
 
-# Independent Project Compliance Audit
+# Independent Project Compliance Audit (v2 — post-merge)
 ## Requirements vs. Achievement Assessment
 
-**Examiner posture:** this report is written as an outside MBA instructor auditing the repository
-cold, against the official *Agentic OS Capstone Project Guide v1.1* (read in full from the source
-PDF for this audit, not from memory of prior summaries) and the *AI Business Plan Template v2.0*
-(read in full from `AI_Business_Plan_Template.md`). Nothing is credited because a file exists;
-credit requires the file to actually do what the Guide requires. Where the project's own prior
-session work described something as "done," that description was re-verified against the repository
-state directly (`git log`, `git ls-tree`, `git diff`, and direct reads of sampled files) before being
-repeated here.
+**Examiner posture:** unchanged from v1 — an outside MBA instructor auditing the repository cold,
+against the official *Agentic OS Capstone Project Guide v1.1* and the *AI Business Plan Template
+v2.0*. Nothing is credited because a file exists; credit requires the file to actually do what the
+Guide requires, and — new in this pass — to actually have been *exercised*, not merely present.
 
-**Scope discipline — read this before the rest of the report.** Per the audit brief, the source of
-truth is **the `main` branch**. A large body of work — an 8-agent roster, 6 new skills, and three new
-knowledge layers (Decisions/Research/Forecasts) — exists on an **unmerged branch**
-(`feature/agentic-os-architecture`, commit `27096bc`, pushed but not merged) and is **not present on
-`main`**. This is the single most consequential fact in this audit: it means the repository, as it
-stands on the branch that would actually be submitted, does **not** contain most of the "Agentic OS"
-architecture that was designed in the immediately preceding work session. Parts 1–4 and 6–11 of this
-report grade `main` as `main` actually is. Part 5 separately reviews the *designed* architecture on
-its own merits, because the audit brief explicitly lists "architecture documentation," "agents," and
-"skills" as sources of truth to review, and those documents do exist in the repository (on a branch)
-— but Part 5's findings must not be read as credit toward `main`'s completion score.
+**What changed since v1, and why this report exists.** v1 found that a fully-designed 8-agent, 6-skill,
+three-layer Agentic OS architecture existed only on an unmerged branch and was therefore invisible to
+anyone auditing `main`. Since then: that branch went through **two PR review passes** (5 Required
+Changes + 5 Recommended Improvements applied and independently re-verified; one additional latent
+defect — a wikilink basename collision across three new files — found and fixed during
+re-validation; one real smoke test of `research-agent` executed and passed on every checked
+dimension), was approved, and was **fast-forward merged into `main`** (`bac9e2e → b23cec9`, zero
+conflicts). This report re-evaluates the repository from scratch against that new baseline. Findings
+from v1 that are now resolved are explicitly marked **RESOLVED** below rather than silently dropped,
+so the audit trail stays honest; findings that are unchanged are carried forward without re-arguing
+them from zero.
+
+**Scope note.** This audit was run on `audit/independent-compliance-report`, which was synchronized
+with `main` immediately before this pass (merge commit `df5d54e`) and is byte-for-byte identical to
+`main` except for this report itself — confirmed via `git diff main -- . ':!vault/Validation/Independent_Project_Compliance_Report.md'`
+returning empty. Findings below are "main-equivalent," not a description of some other branch.
 
 ---
 
 ## PART 1 — Executive Assessment
 
-| Dimension | Assessment |
-|---|---|
-| **Overall project maturity** | Early. Strong Phase 1–3 foundation (charter, corpus, knowledge base); Phase 4–5 (the two components worth 60% of the grade) have not begun on `main`. |
-| **Overall completion percentage** | **~18–22%** against the full graded scope, weighted by the Guide's own component weights (see Part 9 for the calculation). Within Phases 1–3 alone, completion is much higher (~75%); those phases are worth less than half the grade. |
-| **Overall confidence level** | High. Findings below are based on direct verification (`git log`, `git diff main..feature/agentic-os-architecture`, direct file reads, cross-checked figures) rather than restating prior self-reports. |
-| **Current project phase** | Between Phase 3 (done) and Phase 4 (not started) of the Guide's five phases, as measured on `main`. |
-| **Readiness for final submission** | **Not ready.** Two of three graded deliverables (`AI Business Plan`, `Group Presentation`) do not exist as artifacts anywhere in the repository. The third (`OS Structure Document`) also does not exist. |
-| **Readiness for Business Plan generation** | **Mixed.** The underlying evidence base (Facts/Topics/Strategic notes) is genuinely strong and well-cited — better than the process apparatus needed to responsibly turn it into a plan. On `main`, there is no agent, no pipeline, and no mechanism to resolve a flagged evidence gap other than manually writing around it — the exact failure mode the (unmerged) Phase 6 redesign exists to fix. |
+| Dimension | Assessment | Change since v1 |
+|---|---|---|
+| **Overall project maturity** | Early-to-mid. Phase 1–3 foundation remains strong; the OS now structurally has all six Guide-named components (Brain, Memory, Agents, Skills, MCP-undecided, LLM-justified) for the first time. Phase 4–5 content (the two components worth 60% of the grade) still has not begun. | ▲ Improved — infrastructure gap closed, content gap unchanged |
+| **Overall completion percentage** | **~28–33%** against the full graded scope, weighted by the Guide's own component weights (Part 9). Up from ~18–22% in v1. The increase is entirely in the OS-build bucket (30% weight); the Business Plan (40%) and Presentation (20%) buckets are essentially unchanged. | ▲ +10 points, concentrated in one bucket |
+| **Overall confidence level** | High. Re-verified via fresh `git log`, `git diff`, `git merge-base`, direct file reads, and a fresh full-repo wikilink/orphan scan — not by re-asserting v1's numbers. | Unchanged |
+| **Current project phase** | Still between Phase 3 (done) and Phase 4 (not started) on the Guide's own five-phase scale — the merged architecture is *infrastructure for* Phase 4, not Phase 4 itself. | Unchanged in Guide terms |
+| **Readiness for final submission** | **Still not ready.** All three graded deliverables (AI Business Plan, OS Structure Document, Group Presentation) remain absent as artifacts. `Outputs/` still contains only `.gitkeep`. | Unchanged |
+| **Readiness for Business Plan generation** | **Meaningfully improved, still not sufficient.** The 11-stage pipeline, 8 agents, and three evidence layers are now real and live on `main`, and one agent (`research-agent`) has been proven to work end-to-end. But 7 of 8 agents remain completely unexercised, the Decision and Forecast layers hold zero real content, and no section has ever been run through the pipeline. | ▲ Improved |
 
 ---
 
 ## PART 2 — Requirements Traceability Matrix
 
-Status legend: ✓ Fully Implemented · ◐ Partially Implemented · ✗ Not Implemented · ⚠ Needs Improvement · ⭐ Exceeds Requirement. All "Completion %" and "Quality Rating" are this examiner's independent estimate, not restated from prior project self-assessments.
+Status legend: ✓ Fully Implemented · ◐ Partially Implemented · ✗ Not Implemented · ⚠ Needs Improvement · ⭐ Exceeds Requirement. Rows unchanged from v1 are marked *(unchanged)*; rows with a materially different status are marked with their v1→v2 delta.
 
-| ID | Requirement | Repository Evidence | Files / Locations | Status | Completion % | Quality | Comments |
-|---|---|---|---|---|---|---|---|
-| R-01 | **Brain** — Obsidian vault: People, Companies, Decisions, Meetings, Knowledge, MOC | Knowledge/MOC layers are extensive; People/Decisions/Meetings categories are essentially empty | `vault/Knowledge/` (strong), `vault/People/` (template only), no `vault/Decisions/` or `vault/Meetings/` on main | ◐ | 55% | Good (Knowledge) / Poor (People, Decisions) | The Guide names six Brain categories explicitly. Two of six (Knowledge, MOC) are excellent; People and Decisions are essentially unbuilt on `main`. "Meetings" doesn't apply (no meetings occurred) — not counted against. |
-| R-02 | **Memory** — MEMORY.md, PROJECT_PROGRESS.md, SESSION_LOG.md | All three present, current, internally consistent (verified directly) | root | ✓ | 95% | Excellent | Best-executed component in the repo. |
-| R-03 | **Agents** — defined AI roles with explicit behavior rules (ingestion, analyst, maintenance) | **No `.claude/agents/` directory exists on `main`.** All multi-agent work to date used ad-hoc `general-purpose` Task invocations governed by one-off briefing docs (`_INGESTION_BRIEFING.md`, `_TOPIC_NOTE_BRIEFING.md`, `_STRATEGIC_NOTE_BRIEFING.md`), not persistent, reusable, named subagents | none on `main`; 8 agents exist only on the unmerged branch | ✗ | 10% | Poor | This is a named, explicit OS component (30% weight bucket) that is functionally absent on the branch that would be submitted. |
-| R-04 | **Skills** — reusable documented procedures | 2 skills: `session-end`, `business-plan-drafting` | `.claude/skills/` | ◐ | 50% | Good | Meets the Guide's two named examples closely; both are substantive, not stubs (verified by direct read). No maintenance-trigger skill, no citation-verification skill on `main`. |
-| R-05 | **MCP** — optional, distinction credit if integrated | No integration attempted; decision explicitly left open | `MEMORY.md` "MCP decision: none integrated yet... decide by end of Phase 2" | ◐ | 30% | Fair | Optional per the Guide, so absence alone isn't a failure — but "undecided, past its deadline" for two days running is a decision-hygiene gap, not a considered "no." |
-| R-06 | **LLMs** — deliberate, justified choice | Documented: Claude Code/Cowork subscription, rationale given (cost, capability, confidentiality) | `MEMORY.md` "LLM decision" | ✓ | 90% | Good | Concise and defensible. |
-| R-07 | Source documents read-only | No evidence of content edits to `Input_Data/`; only structural reorganization (`git mv`) | git history | ✓ | 100% | Excellent | |
-| R-08 | Every vault claim cites its source | Spot-checked directly (`Facts/Revenue.md`, `Topics/Egypt.md`): every bullet carries `(DocID, page N)` | `vault/Knowledge/Facts/`, `Sources/` | ◐ | 80% | Good | Practice is genuinely strong. But no independent, systematic re-verification tool has ever run against the raw source text at scale — existing validation reports check structure/links, not fact-by-fact accuracy. The citation-audit mechanism that would close this gap exists only on the unmerged branch. |
-| R-09 | Destructive vault ops are propose-then-approve | Feature-branch discipline observed (e.g., Graph Cleanup: "show proposed deletions before merging") | git branch history | ✓ | 90% | Good | |
-| R-10 | Confidential-data partitioning statement (or explicit public-data statement) | Stated twice: `_CORPUS_INDEX.md` ("nothing in this folder is confidential"), `MEMORY.md` (LLM rationale) | root/vault files | ◐ | 70% | Good | Statement exists in working files but not yet in the actual graded artifact (OS Structure Document), which doesn't exist yet. |
-| R-11 | Charter: one paragraph — company, problem, why it matters, obtainable data | Present, substantive, all four elements identifiable | `Problem_Charter.md` | ✓ | 100% | Excellent | |
-| R-12 | Instructor approval of charter | Recorded with date, consistent across `Problem_Charter.md`, `MEMORY.md`, `PROJECT_PROGRESS.md` | root | ✓ | 100% | Excellent | |
-| R-13 | Team roles assigned (one per member) | Charter table shows `[assign]` × 6; `MEMORY.md` shows `TBD` × 5 | `Problem_Charter.md`, `MEMORY.md` | ✗ | 0% | Poor | Simple, low-effort requirement, open since Phase 1 began, with no technical dependency blocking it. |
-| R-14 | OS activated from ProjectX (identity files complete) | `identity.md`, `soul.md`, `user.md` present and populated (verified directly) | `vault/` | ✓ | 95% | Good | |
-| R-15 | MCP integration decision made | See R-05 | — | ✗ | 30% | Fair | Duplicate of R-05's finding, listed separately because the Guide raises it under both the OS-component and Phase-2 headings. |
-| R-16 | Corpus collected into `Input_Data/` | 37 files across 7+4 category folders, two manifests | `Input_Data/` | ✓ | 100% | Excellent | |
-| R-17 | OS extraction/synthesis/verification into cited vault notes | 154 vault notes; 5 validation reports on `main`; direct spot-check of two notes confirmed genuine per-fact citation | `vault/Knowledge/`, `vault/Validation/` | ⭐ | 95% | Excellent | Exceeds a typical capstone bar for this phase. |
-| R-18 | All 14 Business Plan sections drafted, claims traceable | `Outputs/` contains only `.gitkeep` | `Outputs/` | ✗ | 0% | N/A | |
-| R-19 | Financial projections with shown estimation logic; MENA/Egypt-grounded market analysis | No projections exist. Underlying actuals (Egypt FY2025 segment data) are genuinely Egypt-specific and well-sourced — a strong foundation, not yet a plan | `vault/Knowledge/Facts/Revenue.md` (foundation only) | ✗ | 0% | N/A | Foundation is real; the requirement (a shown, executed estimation) is unmet. |
-| R-20 | SCQA executive summary | Instructed in the skill file; not executed anywhere | `.claude/skills/business-plan-drafting/SKILL.md` (instruction only) | ✗ | 0% | N/A | Encoding a requirement in a skill ≠ meeting it. |
-| R-21 | MECE structuring | Same as R-20 | same | ✗ | 0% | N/A | |
-| R-22 | Pyramid Principle | Same as R-20 | same | ✗ | 0% | N/A | |
-| R-23 | Hypothesis-driven analysis (governing hypothesis stated & tested) | Governing hypothesis not yet authored anywhere in the vault (confirmed by the skill's own Section 2 notes) | — | ✗ | 0% | N/A | |
-| R-24 | Value driver tree (financials + KPIs) | Doesn't exist on `main` in any form | — | ✗ | 0% | N/A | |
-| R-25 | Three Horizons roadmap | Doesn't exist as an executed artifact; raw material exists in `Strategic/AI Opportunities.md` / `Future AI Opportunities.md` | — | ✗ | 0% | N/A | |
-| R-26 | 7S organizational readiness check | Doesn't exist; skill notes it as "net-new synthesis, not yet built" | — | ✗ | 0% | N/A | |
-| R-27 | OS Structure Document (3–5 pages) | **Does not exist anywhere in the repository** (confirmed by full-repo search) | — | ✗ | 0% | N/A | A required, weighted deliverable with zero footprint — not even a stub or outline. |
-| R-28 | OS submitted as sanitized zip | Not due yet; no sanitization plan documented | — | ✗ | N/A | N/A | Not a current failure — flagged so it isn't forgotten. |
-| R-29 | AI Business Plan exported to `Outputs/` (PDF/Word, 15–25pp) | `Outputs/` empty except `.gitkeep` | `Outputs/` | ✗ | 0% | N/A | |
-| R-30 | One-page traceability note | Does not exist | — | ✗ | 0% | N/A | |
-| R-31 | Group presentation deck (5 slides × 6 = 30 slides, PDF) | Does not exist anywhere in the repository | — | ✗ | 0% | N/A | |
-| R-32 | Individual contribution visible in session log / vault history / plan authorship | 31 of 35 commits on `main` authored by `Claude <noreply@anthropic.com>`; remaining 4 by the OS owner's accounts; **zero** commits or vault content attributable to the other 5 named team members | `git log --format='%an'`, `vault/People/` (template only) | ✗ | 5% | Poor | This is an explicit, named, 10%-weighted grading criterion. The Guide states plainly: "Free-riding is visible in an Agentic OS — the logs remember." Right now the logs show no distributed authorship for anyone, including the OS owner as an individual distinct from the AI assistant. |
+| ID | Requirement | Repository Evidence | Status | Completion % | Quality | Comments |
+|---|---|---|---|---|---|---|
+| R-01 | **Brain** — People, Companies, Decisions, Meetings, Knowledge, MOC | Knowledge/MOC still excellent. **New:** `vault/Decisions/` now gives the Guide's "Decisions" Brain-category a real structural home for the first time (schema + template), though it holds zero actual decisions yet. People/Meetings still essentially unbuilt. | ◐ | 62% (was 55%) | Good (Knowledge, now Decisions-structure) / Poor (People) | ▲ Small improvement — infrastructure, not content, for the Decisions category |
+| R-02 | Memory (MEMORY.md/PROJECT_PROGRESS.md/SESSION_LOG.md) | All three current and consistent with the merged state; correctly updated to say "merged," not "pending review" | ✓ | 95% | Excellent | *(unchanged)* |
+| R-03 | **Agents** — defined AI roles with explicit behavior rules | **8 real agents now live on `main`** (`bp-orchestrator` + 7 specialists), well-formed frontmatter, cross-references verified 8/8 correct. One (`research-agent`) proven functional via a real smoke test (WebSearch → Research Note → register update, correct provenance/backlinks, zero unauthorized file changes). | ◐ | 65% (was 10%) | Good | ▲▲ Largest single change in this matrix. Not ✓ because 7 of 8 agents have never been invoked and the orchestrator has never run a real section |
+| R-04 | **Skills** — reusable documented procedures | 8 skills total (was 2): `session-end`, `business-plan-drafting` (redesigned into the pipeline's content map), plus 6 new (`external-research`, `forecast-builder`, `decision-log`, `evidence-ranking`, `citation-audit`, `qa-review`). One exercised for real (`external-research`, via the smoke test). | ◐ | 75% (was 50%) | Good | ▲ Improved. Still ◐ not ✓ — most skills unexercised |
+| R-05 | **MCP** — optional | Still undecided, still past its original deadline | ◐ | 30% | Fair | *(unchanged)* |
+| R-06 | LLM choice justified | Documented, unchanged | ✓ | 90% | Good | *(unchanged)* |
+| R-07 | Source documents read-only | Re-confirmed: `Input_Data/` and `vault/Knowledge/Sources/` untouched by the entire Phase 6 branch and both PR review passes (verified via `git diff --stat`) | ✓ | 100% | Excellent | *(unchanged, re-verified)* |
+| R-08 | Every vault claim cites its source | Practice unchanged and still strong. **New:** the `citation-audit` skill that would mechanize this check now exists on `main` — but has never been run on anything, since no Business Plan content exists yet to audit | ◐ | 82% (was 80%) | Good | ▲ Marginal — mechanism now exists, still unexercised |
+| R-09 | Propose-then-approve for destructive ops | Reinforced by this cycle itself: two PR reviews, explicit Required-Change gating, user authorization requested and obtained before the actual merge | ✓ | 92% (was 90%) | Excellent | ▲ Marginal — the review-then-merge process is itself now evidence of this discipline |
+| R-10 | Confidential-data statement | Unchanged; still not yet in a real OS Structure Document (which doesn't exist) | ◐ | 70% | Good | *(unchanged)* |
+| R-11 | Charter (one paragraph, all elements) | Unchanged | ✓ | 100% | Excellent | *(unchanged)* |
+| R-12 | Instructor approval of charter | Unchanged | ✓ | 100% | Excellent | *(unchanged)* |
+| R-13 | Team roles assigned | Still `TBD` × 5 in `MEMORY.md`, still `[assign]` × 6 in the charter table. **Zero movement** across the entire Phase 6 architecture effort and two PR review cycles, despite being named as the single lowest-effort open item in v1. | ✗ | 0% | Poor | *(unchanged — flagged as a repeat finding, see Part 8)* |
+| R-14 | OS activation / identity files | Unchanged | ✓ | 95% | Good | *(unchanged)* |
+| R-15 | MCP decision made | Same as R-05 | ◐ | 30% | Fair | *(unchanged)* |
+| R-16 | Corpus collected | Unchanged | ✓ | 100% | Excellent | *(unchanged)* |
+| R-17 | Extraction/synthesis/verification into cited notes | Unchanged; 6 validation reports now on `main` (was 5) — the new OS Architecture Design Phase Validation Report joins the ingestion/graph reports | ⭐ | 95% | Excellent | *(unchanged, one more report)* |
+| R-18 | All 14 sections drafted, traceable | `Outputs/` still only `.gitkeep`. **Confirmed via direct re-read of the 14-section checklist table: still 0 ✅, 0 🟡, 14 ⬜.** | ✗ | 0% | N/A | *(unchanged)* |
+| R-19 | Financial projections with shown logic; MENA/Egypt-grounded | No projections exist. **New:** `vault/Forecasts/` now has a real schema (Fact-vs-Assumption tagging, base/upside/downside structure) and a documented anchor (Egypt FY2025 actuals) — but `Value_Driver_Tree.md` and `Scenarios.md` are still explicitly "Not yet built" placeholder files with zero real nodes. | ✗ | 5% (was 0%) | N/A | ▲ Marginal — schema exists, content doesn't |
+| R-20 | SCQA executive summary | `exec-summary-agent` now exists and is correctly gated (refuses to run until Sections 2–13 are drafted) — but nothing has triggered it, and can't yet | ✗ | 0% | N/A | *(unchanged outcome, mechanism now exists)* |
+| R-21 | MECE structuring | Same status — instructed in skills, not executed anywhere | ✗ | 0% | N/A | *(unchanged)* |
+| R-22 | Pyramid Principle | Same | ✗ | 0% | N/A | *(unchanged)* |
+| R-23 | Hypothesis-driven analysis | Governing hypothesis still not authored anywhere | ✗ | 0% | N/A | *(unchanged)* |
+| R-24 | Value driver tree | **New:** `vault/Forecasts/Value_Driver_Tree.md` exists with a documented intended structure and anchor figures, but is explicitly a placeholder — 0 real nodes | ✗ | 5% (was 0%) | N/A | ▲ Marginal |
+| R-25 | Three Horizons roadmap | Unchanged — raw material exists, no executed artifact | ✗ | 0% | N/A | *(unchanged)* |
+| R-26 | 7S readiness check | Unchanged | ✗ | 0% | N/A | *(unchanged)* |
+| R-27 | OS Structure Document (3–5pp) | **Still does not exist.** New: `Implementation_Roadmap.md` now names an owner, required inputs, expected outputs, and completion criteria for it (planning-level only) — a real but small step, not the document itself | ✗ | 3% (was 0%) | N/A | ▲ Marginal — planned, not built |
+| R-28 | Sanitized zip submission | Not due yet | ✗ | N/A | N/A | *(unchanged)* |
+| R-29 | AI Business Plan exported | `Outputs/` still empty | ✗ | 0% | N/A | *(unchanged)* |
+| R-30 | Traceability note | Does not exist | ✗ | 0% | N/A | *(unchanged)* |
+| R-31 | Group presentation deck | **Still does not exist.** Same planning-level-only improvement as R-27 (owner/inputs/outputs/completion criteria now named in the roadmap; the dependency on R-13's still-unresolved role assignment is now explicitly documented) | ✗ | 3% (was 0%) | N/A | ▲ Marginal |
+| R-32 | Individual contribution visible | **Worse in ratio, not better.** 36 of 40 commits now authored by `Claude <noreply@anthropic.com>` (was 31 of 35) — the proportion is effectively unchanged (~90%) but the absolute gap widened, and role assignment (R-13) still hasn't moved. Zero content in `vault/People/` beyond the template. | ✗ | 5% | Poor | *(unchanged, trend flagged)* |
 
-**Matrix summary:** 8 of 32 requirements ✓ Fully Implemented, 6 ◐ Partially Implemented, 1 ⭐ Exceeds, 17 ✗ Not Implemented (of which 5 are not-yet-due deliverable items). The ✗ items cluster almost entirely in the two highest-weighted Guide categories: the AI Business Plan (40%) and the Presentation (20%).
+**Matrix summary:** 9 of 32 requirements ✓ Fully Implemented (up from 8 — R-09 crossed the line), 8 ◐ Partially Implemented (up from 6 — R-03 and R-04 moved from ✗/◐ into meaningfully-partial territory), 1 ⭐ Exceeds, 14 ✗ Not Implemented (down from 17). The remaining ✗ items still cluster almost entirely in the Business Plan content (40% weight) and Presentation (20% weight) buckets — the infrastructure gap that dominated v1's ✗ count has substantially closed.
 
 ---
 
 ## PART 3 — AI Business Plan Readiness
 
-"Repository coverage %" measures how much of the *underlying evidence* a section would need already exists in the vault, cited. It does **not** mean the section is written — on `main`, **0 of 14 sections have been drafted**, regardless of coverage %.
+**Coverage percentages are materially unchanged from v1** — no new evidence was added to the corpus, and no section has been drafted. What changed is the *process apparatus* behind these numbers, which is now real. The table below carries v1's per-section findings forward (they remain accurate) with one added column reflecting whether a genuine, live resolution path now exists for each section's gaps.
 
-| # | Section | Can it be generated today? | Coverage % | Missing evidence | Missing research | Missing management decisions | Missing forecasts | Confidence |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Executive Summary | No — gated by design; must be written after 2–13 | 0% | Everything downstream | — | — | — | N/A |
-| 2 | Business Description | Draftable with gaps | 60% | None major | None | Governing hypothesis not yet authored | None | Medium |
-| 3 | Market Analysis | Draftable with gaps | 50% | Egypt category-share figure unreconciled (10x+ vs. 1x+→4x+); no Egypt-named competitors in primary corpus | Egypt-specific competitor depth; AI/retention market sizing | Which category-share figure to cite / how to footnote | Bottom-up market sizing triangulation | Low–Medium |
-| 4 | Value Proposition | Draftable with gaps | 55% | Egypt-specific uplift figures (all Group-level) | None major | Whether/how to present Group-level data as an Egypt proxy | Quantified ROI logic | Medium |
-| 5 | AI Technology and Development | Draftable with gaps | 45% | Thin on proprietary IP/patent detail | AI/agentic-tooling comparators | Build/buy/partner stance (ironically mirrors this project's own unresolved MCP decision) | R&D roadmap timeline | Medium |
-| 6 | Business Model & Revenue Streams | Draftable with gaps | 60% | Subscription-line reclassification unresolved | None major | How to footnote the reclassification | Unit economics per customer | Medium |
-| 7 | Marketing and Sales Strategy | Blocked | 25% | No funnel-conversion data anywhere in the corpus | Funnel-conversion industry benchmarks | Whether to use labeled synthetic funnel data | Acquisition/conversion projections | Low |
-| 8 | Operations Plan | Draftable with gaps | 40% | Internal governance/decision mechanics thin | None major | 7S self-assessment (Systems/Shared Values/Skills/Style are net-new judgment) | None | Low–Medium |
-| 9 | Financial Plan | Blocked | 45% | No Egypt GMV figure (only revenue disclosed); forward consensus data not consolidated | None major | Which of 3 different 2026 investment totals to cite | Entire value driver tree / 3-scenario model (doesn't exist on `main`) | Low |
-| 10 | Risk Analysis | Draftable with gaps | 65% | None major | None major | Risk ownership assignment (needs real team members, not the OS owner alone) | Probability-impact matrix / pre-mortem artifacts not yet built | Medium |
-| 11 | CSR & Responsible AI | Blocked | 10% | No ESG/AI-ethics note exists anywhere | Industry responsible-AI benchmarks | What commitments the team will actually make | None | Low |
-| 12 | Implementation Plan | Draftable with gaps | 50% | None major | None | Which candidate AI intervention(s) to prioritize; horizon boundary | Timeline/dependency sequencing | Medium |
-| 13 | Monitoring and Evaluation | Blocked | 20% | No churn baseline anywhere in the corpus (the single largest named gap in the whole vault) | None major | Churn/KPI target-setting is a management decision, not derivable | KPI tree doesn't exist on `main` | Low |
-| 14 | Appendices | Draftable, closest to ready | 70% (underlying material) / 0% (compiled) | None major | None | None | None | Medium–High for material; the deliverable itself is unstarted |
+| # | Section | Coverage % | Missing management decisions | Missing forecasts | Pipeline apparatus now available? |
+|---|---|---|---|---|---|
+| 1 | Executive Summary | 0% | — | — | `exec-summary-agent` exists, correctly gated; cannot run until 2–13 are done |
+| 2 | Business Description | 60% | Governing hypothesis not yet authored | None | ✓ `decision-steward` could log the hypothesis decision; untested |
+| 3 | Market Analysis | 50% | Which category-share figure to cite | Bottom-up sizing triangulation | ✓ `evidence-citation-agent` + `decision-steward` could resolve; untested |
+| 4 | Value Proposition | 55% | Whether to present Group-level data as an Egypt proxy | Quantified ROI logic | ✓ mechanism exists; untested |
+| 5 | AI Technology | 45% | Build/buy/partner stance | R&D roadmap timeline | ✓ mechanism exists; untested |
+| 6 | Business Model & Revenue | 60% | Subscription-line reclassification footnote | Unit economics | ✓ mechanism exists; untested |
+| 7 | Marketing and Sales | 25% | Synthetic funnel data usage | Acquisition/conversion projections | ✓ `research-agent` proven to work in general (smoke-tested); this specific gap untested |
+| 8 | Operations Plan | 40% | 7S self-assessment | None | Partial — no dedicated 7S-check mechanism designed |
+| 9 | Financial Plan | 45% | Which 2026 investment total to cite | Entire value driver tree/3-scenario model | ✓ `forecasting-agent` + `Value_Driver_Tree.md` schema exist; **zero real content, zero test run** |
+| 10 | Risk Analysis | 65% | Risk ownership (needs real team members) | Probability-impact matrix | Blocked by R-13 (role assignment), not by tooling |
+| 11 | CSR & Responsible AI | 10% | What commitments the team will make | None | Thinnest coverage, unchanged |
+| 12 | Implementation Plan | 50% | Intervention prioritization | Timeline sequencing | ✓ mechanism exists; untested |
+| 13 | Monitoring & Evaluation | 20% | Churn/KPI target-setting | `kpi-agent` + `KPI_Tree.md` schema exist, zero content | ✓ mechanism exists; untested |
+| 14 | Appendices | 70% material / 0% compiled | None | None | Closest to ready; still uncompiled |
 
-**Average underlying coverage ≈ 45%.** This number should not be mistaken for progress — it describes the strength of the evidence base, not the plan. The gap between "evidence exists" and "plan is written" is the entire remaining scope of Phase 4, and on `main` there is currently no tooling to close it other than manual, ad-hoc drafting with the same gap-flag-and-proceed pattern used before.
+**Average underlying coverage ≈ 45%, unchanged from v1.** The honest read: this project now has a credible, cross-referenced *machine* to turn that 45% into 14 drafted sections — but the machine has been started exactly once, on the smallest possible task, and never pointed at a real Business Plan section. Coverage-plus-tooling is not the same as progress on the actual deliverable.
 
 ---
 
-## PART 4 — Agentic OS Evaluation (main branch only)
+## PART 4 — Agentic OS Evaluation (main-equivalent, current state)
 
-| Layer | Maturity (0–10) | Strengths | Weaknesses | Risks | Recommendations |
+| Layer | Maturity (0–10) | v1 score | Strengths | Weaknesses | Recommendations |
 |---|---|---|---|---|---|
-| Knowledge Layer | 8 | Deep, well-cited, internally consistent (verified by direct cross-check of two independent notes citing the same Egypt FY2025 figures) | No independent large-scale citation re-verification tool has ever run | A single miscited headline figure would be embarrassing to defend live in Q&A | Build and actually run a citation-audit pass before drafting begins |
-| Semantic Layer | 8 | 0 orphans, 1 connected component (verified merged to `main`), thorough MOC coverage | Depth of individual auto-generated links spot-checked only lightly (2 notes), not exhaustively | Low — structural quality is verifiable mechanically | None urgent |
-| Agent Layer | **1** | None on `main` | No `.claude/agents/` directory at all; the Guide names this as one of six core components | The OS, as submittable today, has no defined AI roles — a direct, named gap against a 30%-weighted grading criterion | Land the agent roster (already designed) onto `main` |
-| Skill Layer | 4 | 2 functional, substantive skills | No gap-resolution mechanism, no maintenance trigger wired to anything real (log is empty) | Skills exist but the "maintenance agent" the Guide names has literally never run once | Same as above; also actually schedule/trigger the maintenance skill at least once |
-| Decision Layer | **0** | — | Does not exist on `main` in any form | Sections 3/6/9/12/13 all name unresolved discrepancies with nowhere to log a resolution | Land the Decision layer; log at least the 3 known discrepancies before drafting touches them |
-| Research Layer | **0** | — | Does not exist on `main` | Sections 3/5/7/11 need external data with no sourcing discipline in place | Land the Research layer before any external figure enters the plan |
-| Forecast Layer | **0** | — | Does not exist on `main` | Section 9 (40%-weighted deliverable's financial core) cannot be honestly built without it | Highest-priority layer to land, given Section 9's centrality |
-| Business Plan Pipeline | 1 | The content map (`business-plan-drafting` skill) is genuinely good | It is a content map, not a pipeline — no stages, no gates, no verification step exist on `main` | Drafting today would repeat the old "flag and proceed" pattern | Land the 11-stage pipeline before drafting starts |
-| Validation Layer | 6 | 5 solid process-validation reports for ingestion/graph quality | Zero content-validation exists, because zero content exists | None yet — becomes acute the moment drafting starts without a QA gate | Stand up the QA/citation-audit mechanism before, not after, the first section is drafted |
-| Git Workflow | 6 | Real branch discipline: feature branches, `merge-base` safety checks before deletion, propose-before-merge | The largest single unit of work in the project's history (Phase 6) sits on an unmerged branch that `main`'s own tracker files never mention exists | A grader instructed to look only at `main` — as this audit was — would see **none** of it | Either merge it after review, or explicitly log its existence and status in `PROJECT_PROGRESS.md` even while unmerged, so it isn't invisible to anyone reading `main` alone |
-| Documentation | 7 | Thorough, consistent, cross-linked | Two unrelated pieces of work are both called "Phase 6" in git history (the ingestion pipeline's Phase 6 = relationship map; the architecture design's "Phase 6" = OS design) — a real naming collision; `CORPUS_INDEX.md` vs. `_CORPUS_INDEX.md` (two similarly-named manifests) is confusing for a new reader | Low, but real — a teammate or grader could easily conflate the two "Phase 6"s | Rename one of the two "Phase 6" usages retroactively in documentation prose (not history) to disambiguate |
-| Repository Architecture | 5 | Clean top-level structure, consistent conventions | On `main`, the repository is a very well-organized **document corpus with memory files** — it does not yet meet the Guide's own definition of "Agentic OS" (an environment with agents, not just notes) | The project's name and self-description ("Agentic OS") currently overstates what `main` contains | Close the Agent/Decision/Research/Forecast gap before calling this an Agentic OS in any submitted document |
+| Knowledge Layer | 8 | 8 | Unchanged — deep, cited, verified | No large-scale independent re-audit tool has run | Run `citation-audit` once real drafting starts |
+| Semantic Layer | 8 | 8 | Unchanged | — | — |
+| Agent Layer | **7** | 1 | 8 real, well-formed, cross-referenced agents live on `main`; one (`research-agent`) proven functional end-to-end via a real smoke test with honest limitation-reporting | 7 of 8 agents have never been invoked; the orchestrator has never run a real section | Smoke-test at least `decision-steward` and `evidence-citation-agent` before Phase 7 pilot drafting begins in earnest |
+| Skill Layer | **7** | 4 | 8 skills, consistent frontmatter, one exercised for real | Most skills unexercised; `evidence-ranking`/`citation-audit` still have never fired | Same as above |
+| Decision Layer | **3** | 0 | Real repository structure (Assumptions Register schema, Decision Log + template, now with a defined superseded-decision workflow) | **Zero decisions logged, zero assumptions registered** — pure infrastructure | Log the first real decision (e.g. the Egypt category-share discrepancy) as the first act of Phase 7 |
+| Research Layer | **4** | 0 | Same structural strength as Decision layer, **plus one genuine proof of execution** (the smoke test) — the only one of the three new layers actually exercised | The one exercised item was deliberately trivial and explicitly excluded from the real evidence chain | Run one real (non-smoke-test) research item early in Phase 7 |
+| Forecast Layer | **2** | 0 | Well-designed schema, documented anchor point (Egypt FY2025 actuals) | Zero execution, not even a smoke test — the least-proven of the three new layers | Build the Value Driver Tree's first real node as part of the Section 9 pilot |
+| Business Plan Pipeline | **4** | 1 | Full 11-stage design live on `main`, correctly cross-referenced to real agents; `bp-orchestrator` exists | The pipeline as a *whole* has never run once — only one of its 8 constituent agents has been individually exercised, in isolation, outside the pipeline | First full pipeline run should be treated as a dry run, watched closely, not assumed to work end-to-end on the first try |
+| Validation Layer | **8** | 6 | Now includes two real PR review cycles with concrete, repeatable automated checks (wikilink resolution, agent/skill cross-reference, YAML validation, orphan detection) in addition to the original ingestion/graph reports — genuinely elevated process rigor | Still zero *content* validation, because zero content exists | Apply the same rigor demonstrated in the PR reviews to the first drafted Business Plan section |
+| Git Workflow | **8** | 6 | The v1 finding ("largest branch invisible to main") is **RESOLVED** — clean fast-forward merge, main's own tracker files correctly say "merged," two disciplined review cycles with verified fixes | — | Keep the same review-before-merge discipline for the upcoming `feature/bp-pilot-sections` branch |
+| Documentation | **8** | 7 | The "Phase 6" naming collision flagged in v1 is **RESOLVED** (renamed to "OS Architecture Design Phase" throughout, historical entries correctly left untouched) | `CORPUS_INDEX.md` vs. `_CORPUS_INDEX.md` naming collision is still present (pre-existing, out of scope for the architecture branch) | Fix opportunistically, not urgently |
+| Repository Architecture | **7** | 5 | The repository now genuinely has agents and evidence layers alongside the knowledge base — structurally much closer to what the Guide calls an "Agentic OS" | Still short of being "used in anger" — no real work has flowed through the new machinery yet | Prioritize a real pipeline run over further architecture polish |
 
 ---
 
 ## PART 5 — Architecture Review
 
-*(This section evaluates the architecture as designed in `vault/Architecture/` and `.claude/agents/`/`.claude/skills/` — currently only on the unmerged `feature/agentic-os-architecture` branch. This is a design-quality review, independent of Part 4's finding that none of it is live on `main`. Do not read strong marks here as contradicting Part 4 — a good blueprint and a built building are different facts.)*
+*(Now evaluating live, merged architecture — the v1 caveat "does not count toward main's completion score" no longer applies; this design is main's design.)*
 
-| Principle | Assessment |
-|---|---|
-| Separation of responsibilities | Good. 8 agents map cleanly to the 14 named missing capabilities with minimal overlap; skills are separated from agents (procedure vs. actor) consistently. |
-| Modularity | Good. Each layer (Decisions/Research/Forecasts) is independently schema'd and independently owned by one agent. |
-| Reusability | Good. Templates exist for every recurring artifact type (Decision, Research item). |
-| Scalability | Untested. Reasonable for a single-plan capstone scope; no load beyond that scope was ever a design goal, so this is adequately, not exceptionally, scoped. |
-| Traceability | Strong on paper (Assumption IDs, Decision IDs, a stated five-tier evidence model) — but **zero of it has ever been exercised**. No assumption has been registered, no decision logged, no research resolved (confirmed: all three layers are empty scaffolds, even on the feature branch). Design traceability ≠ demonstrated traceability. |
-| Explainability | Good design intent — every Decision record requires a stated Rationale field — again, untested. |
-| Human-in-the-loop | Good. `decision-steward`'s design correctly gates strategic judgment calls behind `AskUserQuestion` rather than letting an agent decide unilaterally — matches the Guide's "your team owns every sentence" requirement. |
-| Evidence management | Good five-tier model (Facts → Research → Forecasts → Decisions → Plan), correctly one-directional. |
-| Decision management | Good schema; **the design itself is silent on what happens when a decision is later superseded** — there's a `supersedes:` field but no defined workflow for which already-drafted sections must be re-run through QA when an upstream decision changes. This is a real gap in the design, not just in execution. |
-| Forecast management | Adequate but shallow: "growth logic" is specified as a required prose sentence, not a computable model or formula. For a McKinsey-standard "value driver tree," this is thinner than ideal — the design would benefit from an explicit numeric linkage (e.g., a formula field), not just narrative justification. |
+| Principle | Assessment | Change since v1 |
+|---|---|---|
+| Separation of responsibilities | Good, unchanged | — |
+| Modularity | Good, unchanged | — |
+| Reusability | Good, unchanged | — |
+| Scalability | Adequately scoped, unchanged | — |
+| Traceability | Strong on paper; **partially demonstrated** — the smoke test proved the Research Layer's provenance chain (WebSearch → Research Note → Register row) actually works end-to-end. Decision and Forecast traceability remain entirely theoretical. | ▲ Partial evidence now exists |
+| Explainability | Good design intent; the smoke test's Research Note shows real, honest rationale-writing in practice (documented a WebFetch 403 rather than hiding it) | ▲ One concrete example now exists |
+| Human-in-the-loop | Good — `decision-steward` correctly gates strategic calls behind `AskUserQuestion`; the two-PR-review-plus-authorization process used to merge this very branch is itself a worked example of the pattern | ▲ Reinforced by the merge process itself |
+| Evidence management | Good five-tier model, unchanged | — |
+| Decision management | **RESOLVED (was a v1 gap):** a superseded-decision workflow was added during the PR review — affected assumptions, forecasts, sections, required re-drafting, QA, and citation re-verification are all now explicitly specified | ✓ Fixed |
+| Forecast management | Still adequate-but-shallow — growth logic remains prose-specified, not a computable formula. Unchanged critique. | — |
 
-**Missing architectural layers:**
-- **No agent or skill covers the OS Structure Document or the Group Presentation deck at all.** The entire 8-agent, 11-stage pipeline is scoped exclusively to the Business Plan (40% of the grade). The other two required deliverables (OS Structure Document, worth part of the 30% OS-build weight; Presentation, 20%) have **zero architectural coverage** anywhere in the repository, on either branch. This is the sharpest finding in this section: a sophisticated pipeline was built for less than half of what's actually due.
-- **No dedicated Recommendation-Prioritization mechanism.** The design says the Decision Steward "produces a Decision Log entry ranking interventions" but never specifies a scoring method or weighted criteria — the *capability* named in the original 14-item gap list is only nominally covered.
+**Missing architectural layers — updated:**
+- **OS Structure Document / Group Presentation coverage — partially addressed, not resolved.** `Implementation_Roadmap.md` now names an owner, required inputs, expected outputs, and completion criteria for both (added during the PR review). This closes the "zero coverage, not even acknowledged" finding from v1, but **no agent or skill actually produces either deliverable** — the gap is now planned, not built. Still a real gap, just a smaller one.
+- **No dedicated Recommendation-Prioritization scoring method** — unchanged from v1, still true.
 
-**Redundant / overlapping:**
-- `evidence-ranking` and `citation-audit` skills are closely related (both live inside `evidence-citation-agent`) and could plausibly be one skill — minor, not a real defect.
+**Redundant/overlapping — RESOLVED:** v1 flagged `evidence-ranking`/`citation-audit` as a possible redundancy. This was explicitly addressed during the PR review: both are confirmed intentional and distinct (pre-draft evidence ranking vs. post-draft citation verification), documented explicitly in `Agentic_OS_Architecture.md`'s skill table. No longer an open finding.
 
-**Missing skills:** a skill governing OS Structure Document authorship; a skill governing Presentation deck construction; a skill/workflow for "decision superseded — what needs re-QA."
-
-**Missing workflows:** re-verification cascade when a Decision is superseded after downstream sections were already drafted against it.
+**Missing skills:** a skill governing OS Structure Document authorship; a skill governing Presentation deck construction. (Unchanged — the roadmap names an owner for these, but no skill file exists yet.)
 
 ---
 
 ## PART 6 — Repository Quality Review
 
-| Area | Finding |
-|---|---|
-| Folder structure | Clean, conventional, consistently documented in `CLAUDE.md`/`README.md`. |
-| Naming conventions | Mostly good. Two collisions found: (1) `Input_Data/CORPUS_INDEX.md` vs. `Input_Data/_CORPUS_INDEX.md` — two similarly-named manifests for two different corpora, genuinely confusing to a first-time reader; (2) "Phase 6" is used for two unrelated things across git history (see Part 4). |
-| Documentation | Thorough — arguably disproportionately thorough relative to product output so far. The ratio of *documentation about the OS* to *actual OS-produced deliverables* is currently very high; this is worth naming as a pattern risk, not just a strength, going into Phase 4. |
-| Knowledge organization | Strong, verified directly. |
-| Graph quality | 0 orphans, 1 connected component, confirmed merged to `main` (`vault/Validation/Obsidian_Graph_Cleanup_Report.md`). |
-| MOCs | Comprehensive (11 MOCs on `main`), well cross-linked. |
-| Backlinks | Sampled and confirmed present and accurate on the two notes read directly. |
-| Validation reports | 5 present on `main`, all scoped to ingestion/graph process — none scoped to content correctness, because no content exists yet to validate. |
-| Memory management | Strong — `MEMORY.md`/`PROJECT_PROGRESS.md`/`SESSION_LOG.md` are current and mutually consistent as of the last commit on `main`. |
-| Git history | 35 commits on `main`, spanning 2 calendar days (2026-07-20 to 2026-07-21). 31 commits authored by `Claude <noreply@anthropic.com>`; 4 by human-attributed accounts. No commit is attributable to 5 of the 6 named team members. |
-| Branch strategy | Genuinely disciplined (feature branches, `merge-base --is-ancestor` checks before deletion) — but the largest branch in the project's history is unmerged and **unmentioned** in `main`'s own tracker files, making it invisible to anyone auditing `main` alone, exactly as this audit was instructed to do. |
-| Project maintainability | Currently maintainable by one operator with full chat context. A new team member would find strong conceptual documentation but no per-person entry point (`vault/People/` is template-only) and no way to tell from the repository alone who is supposed to be doing what. |
+| Area | Finding | Change since v1 |
+|---|---|---|
+| Folder structure | Clean, conventional; now includes `vault/Architecture/`, `vault/Decisions/`, `vault/Research/`, `vault/Forecasts/`, `.claude/agents/` | Expanded, still clean |
+| Naming conventions | **The "Phase 6" collision is RESOLVED.** `CORPUS_INDEX.md`/`_CORPUS_INDEX.md` collision remains, pre-existing, out of scope. **One additional collision was found and fixed during the PR review**: three new files (`vault/Decisions/README.md`, `vault/Research/README.md`, `vault/Forecasts/README.md`) shared the identical Obsidian basename `README` — the same class of defect as the historical 7 Facts/Topics collisions. Renamed to `Decisions_README.md`/`Research_README.md`/`Forecasts_README.md`. | ▲ Net improvement |
+| Documentation | Still thorough; the documentation-to-output ratio is even higher now (more architecture docs, still zero Business Plan content) — worth continuing to name as a pattern risk | Ratio widened further |
+| Knowledge organization | Unchanged, strong | — |
+| Graph quality | **Full-vault orphan re-check performed for this audit**: 173 notes, 2 pre-existing orphans (both predate this branch, both already flagged in earlier validation reports — `Obsidian_Graph_Cleanup_Report.md`, `Orphan_Notes_Review.md`, referenced via plain paths not wikilinks), **0 orphans introduced by the merged architecture work** | ✓ Verified clean |
+| MOCs | `Project Administration.md` and `Validation and Audit.md` correctly updated to reference the new architecture notes and the merge status | Updated, accurate |
+| Backlinks | Sampled and confirmed; the PR review's automated wikilink-resolution pass covered all 40+ new/modified files, not just a manual spot-check | ▲ More rigorously verified than v1 |
+| Validation reports | 6 on `main` now (was 5) — the new report documents its own two-pass review history | ▲ One more, and it documents process rigor |
+| Memory management | Strong, current, correctly reflects merged state (no more "pending review" language) | ▲ Corrected |
+| Git history | **40 commits** (was 35), spanning 2 calendar days still. **36 of 40 (90%) authored by `Claude`** (was 31/35, 88.6%) — proportion essentially flat, absolute gap wider. Still zero commits attributable to 5 of 6 named team members. | Flat-to-slightly-worse |
+| Branch strategy | v1's sharpest finding — "largest branch invisible to main" — is **RESOLVED**: clean fast-forward merge, two disciplined PR review passes, main's own files correctly updated | ✓ Fixed |
+| Project maintainability | Improved: a new collaborator can now see the whole intended system on `main` in one place, not split across an unreferenced branch | ▲ Improved |
 
 ---
 
 ## PART 7 — Gap Analysis
 
-**1. Missing repository knowledge** *(no amount of research or decision-making fixes this without new primary data)*
-- Egypt-specific talabat pro adoption/frequency/retention uplift figures (all disclosed figures are Group-level or explicitly exclude Egypt)
-- Egypt-specific CAC, CARC, or customer lifetime value
-- Egypt-specific GMV (only revenue/profit are disclosed post-2025)
-- Funnel-conversion data (awareness→trial→retained) for any market
-- A churn baseline for talabat or any competitor
+Category 1 (missing repository knowledge) and Category 2 (missing external research) are **unchanged from v1** — no new primary data was added, and the smoke test deliberately avoided touching any real evidence gap. Reproduced for completeness, not re-argued:
 
-**2. Missing external research** *(fixable by legitimate outside sourcing — the Research Layer's job)*
-- AI/retention-technology market sizing specific to Egypt or MENA delivery
-- Funnel-conversion industry benchmarks
-- CSR/Responsible-AI industry benchmarks for the sector
-- Egypt-specific competitor operational depth — note: much of this already sits in `Input_Data/03_Competitors/`, deliberately excluded from the primary citation regime; the "research" task here may be as much about formally re-admitting that secondary corpus through the Research Layer's provenance rules as it is about fresh web search
+**1. Missing repository knowledge** — Egypt-specific talabat pro uplift/frequency/retention figures; Egypt-specific CAC/CARC/LTV; Egypt GMV; funnel-conversion data; churn baseline. *(unchanged)*
 
-**3. Missing business decisions** *(team/instructor judgment calls, not data problems)*
-- Team role assignment among the 6 members (trivial effort, longest-open item)
-- MCP go/no-go, with rationale documented either way
-- Governing hypothesis wording for Section 2
-- Which Egypt category-share figure to cite (10x+ vs. 1x+→4x+), or how to present both
-- Which of the three 2026 investment totals to cite
-- Build/buy/partner stance for Section 5
-- Which candidate AI intervention(s) to prioritize for the core recommendation
-- Churn/KPI target-setting for Section 13
+**2. Missing external research** — AI/retention-tech market sizing for Egypt; funnel-conversion benchmarks; CSR/Responsible-AI benchmarks; Egypt-specific competitor depth (partially sitting in the secondary corpus already). *(unchanged)*
 
-**4. Missing implementation work** *(build/execute tasks)*
-- Decide the fate of the `feature/agentic-os-architecture` branch (merge after review, or explicitly supersede it with work done directly on `main`) — currently in limbo
-- Run the Business Plan pipeline (once it exists on `main`) for all 14 sections
-- Write the OS Structure Document (3–5 pages) — currently doesn't exist in any form
-- Build the 30-slide Group Presentation — currently doesn't exist in any form
-- Populate `vault/People/` with real per-member notes
-- Establish per-member git/commit attribution going forward (a process fix, not a one-time task)
-- Build the Value Driver Tree and run actual scenarios (currently only scaffolded, and only on the unmerged branch)
-- Export the finished plan to `Outputs/` as PDF/Word, 15–25 pages
-- Write the one-page traceability note
+**3. Missing business decisions** — unchanged list, **plus one item resolved off this list**: the "Phase 6 vs. main" branch-fate decision (was implicitly a business/process decision in v1's Category 4) is now moot — merged. Remaining: team role assignment; MCP go/no-go; governing hypothesis wording; Egypt category-share figure choice; 2026 investment total choice; build/buy/partner stance; intervention prioritization; churn/KPI target-setting.
+
+**4. Missing implementation work** — updated:
+- ~~Decide the fate of the `feature/agentic-os-architecture` branch~~ — **DONE, merged.**
+- Run the Business Plan pipeline for all 14 sections — still fully open; the pipeline exists but has never run
+- Write the OS Structure Document — still fully open (planning-level coverage only)
+- Build the 30-slide Group Presentation — still fully open (planning-level coverage only)
+- Populate `vault/People/` with real per-member notes — still fully open
+- Establish per-member git/commit attribution — still fully open, trend worsening
+- **New:** log a first real Decision, run a first real (non-smoke-test) Research item, and build the Value Driver Tree's first real node — the natural first steps of Phase 7, none yet taken
+- Export the finished plan to `Outputs/` — still fully open
+- Write the one-page traceability note — still fully open
 
 ---
 
 ## PART 8 — Risk Assessment
 
 ### Critical Risks
-| Risk | Likelihood | Impact | Mitigation |
+| Risk | Likelihood | Impact | Status |
 |---|---|---|---|
-| Business Plan (40% weight) at 0% drafted output on `main` | Medium (time remains, but the largest weighted item hasn't started) | Critical | Prioritize landing a working pipeline and starting Sections 2/3/9/10 immediately |
-| Individual contribution (10% weight) essentially invisible for 5 of 6 members | High — already true today | Major | Assign roles now; establish a convention for individual commits/notes going forward; populate `vault/People/` |
-| The entire Phase 6 architecture is invisible to anyone (including a grader) auditing `main` alone | High if submitted as-is | Critical | Merge after review, or at minimum log its existence and status explicitly in `PROJECT_PROGRESS.md` on `main` |
-| Team role assignment still unresolved after 2 days with zero technical blocker | High | Major | 10-minute fix; no justification for further delay |
+| Business Plan (40% weight) at 0% drafted output | Medium | Critical | **Unchanged** — the pipeline that would close this now exists and is merged, but has not been used |
+| Individual contribution (10% weight) essentially invisible for 5 of 6 members | High — already true | Major | **Worsened slightly** — 90% of commits now AI-authored (was 88.6%), role assignment still untouched |
+| ~~Entire Phase 6 architecture invisible to a `main`-only auditor~~ | — | — | **RESOLVED** — merged, verified, and correctly reflected in `main`'s own tracker files |
+| Team role assignment unresolved with zero technical blocker | High | Major | **Unchanged after 2 days and an entire architecture cycle** — this is now the single most conspicuous unforced gap in the project |
 
 ### Major Risks
-| Risk | Likelihood | Impact | Mitigation |
+| Risk | Likelihood | Impact | Status |
 |---|---|---|---|
-| Three unreconciled internal data discrepancies carried silently into the plan | Medium | Major (credibility risk in written plan and live Q&A) | Log each as a Decision before the affected section is drafted |
-| No churn baseline / no funnel data forces synthetic data into core KPIs | Certain | Major if unlabeled; mitigated if labeled | `CLAUDE.md`'s synthetic-data rule already exists — enforce it at drafting time |
-| MCP decision left open indefinitely | High | Minor–Major | Close the decision either way; document rationale |
+| Three unreconciled internal data discrepancies | Medium | Major | Unchanged — a `decision-steward` mechanism to resolve them now exists but hasn't been used on any of the three |
+| No churn baseline / no funnel data | Certain | Major if unlabeled | Unchanged, mitigated by an existing labeling rule |
+| MCP decision left open indefinitely | High | Minor–Major | Unchanged |
+| **New:** 7 of 8 agents and the full pipeline have never been executed even once | High (about to be tested for real in Phase 7) | Major if the first real run surfaces integration problems | First Phase 7 run should be treated as a dry run with room to debug, not assumed to work first try |
 
 ### Minor Risks
-| Risk | Likelihood | Impact | Mitigation |
-|---|---|---|---|
-| "Phase 6" naming collision in git history / documentation | Already occurred | Minor | Disambiguate in prose going forward |
-| `CORPUS_INDEX.md` / `_CORPUS_INDEX.md` naming confusion | Already occurred | Minor | Note the distinction prominently where both are referenced |
+| Risk | Status |
+|---|---|
+| ~~"Phase 6" naming collision~~ | **RESOLVED** |
+| `CORPUS_INDEX.md`/`_CORPUS_INDEX.md` naming confusion | Unchanged, still pre-existing and out of scope |
+| **New, found and fixed during this cycle:** README.md basename collision across 3 new folders | **RESOLVED** before merge — included here for the audit trail, not as an open risk |
 
 ### Technical Debt
-- 8 agents and 6 skills exist (on the unmerged branch) but have **never been executed once** — functional correctness is unverified.
-- Three knowledge layers (Decisions/Research/Forecasts) are empty scaffolds — infrastructure without contents creates a false impression of readiness if not populated soon.
+- **Reduced but not eliminated:** 8 agents and 8 skills now exist and are merged, but 7 agents and most skills remain unexercised — functional correctness beyond the one smoke-tested path is still unverified.
+- Decision and Forecast layers remain empty scaffolds — the "infrastructure without contents" risk named in v1 is unchanged for these two layers specifically (Research layer has one proof point).
 
 ### Knowledge Debt
-- Every gap catalogued in this report has been *named* by the project's own prior work at least once — the debt is in resolution, not identification.
+Unchanged — every gap in this report has been named at least once; the debt is in resolution.
 
 ### Architecture Debt
-- Two of three required deliverables (OS Structure Document, Presentation) have **no architectural coverage at all** — this will surface late and expensively if not addressed before Phase 5.
+- **Reduced:** the OS Structure Document / Presentation gap moved from "zero coverage" to "planned, not built" — a real but partial improvement.
+- **New, minor:** no formal dry-run of the full 11-stage pipeline exists yet; the first real use will be simultaneously the first real test.
 
 ---
 
 ## PART 9 — Grading Simulation
 
-*Snapshot as of the current repository state on `main`. The course submission deadline has not passed — this is a diagnostic simulation, not the actual grade, and is explicitly repeated as such in Part 11.*
+*Snapshot as of the current, merged repository state. Not the actual grade — the submission deadline has not passed.*
 
-| Category | Score (0–100) | Justification |
-|---|---|---|
-| Knowledge Engineering | 85 | Excellent corpus-to-vault work, directly verified; docked for no independent large-scale citation re-audit |
-| Repository Design | 72 | Clean, conventional, well-documented; docked for naming collisions and documentation-to-output imbalance |
-| Agentic Architecture (**as submitted on `main`**) | 35 | No agents, no decision/research/forecast layers, no pipeline live on `main`. (If graded on the unmerged design's quality alone, this would be closer to 75 — but that is not what's on the branch that counts.) |
-| Business Analysis | 55 | The `Strategic/` notes are genuinely good analytical synthesis — better than most first-pass capstone strategy work — but none of it has yet been turned into the graded artifact or quantified |
-| Business Plan Readiness | 30 | Strong raw material, zero drafted sections, no working resolution pipeline on `main` |
-| Technical Quality | 65 | Clean git hygiene and branch discipline; docked for zero automated verification of any new component |
-| Documentation | 80 | Thorough and consistent; docked for the two naming collisions and for `main`'s trackers not reflecting the unmerged branch's existence |
-| Innovation | 78 | The five-tier evidence model and 11-stage pipeline (on the unmerged branch) are genuinely sophisticated design thinking, above typical cohort norms — capped because pure design without any execution cannot score higher |
-| Presentation Readiness | 5 | Nothing built: no deck, no slide content, no OS Structure Document |
-| **Overall Grade (Guide-weighted, as submitted on `main` today)** | **≈27/100** | Computed from the Guide's own weights: OS build & documentation ≈55 × 30% = 16.5; AI Business Plan ≈20 × 40% = 8.0; Presentation ≈5 × 20% = 1.0; Individual contribution ≈15 × 10% = 1.5. Total ≈ 27. |
+| Category | Score (0–100) | v1 score | Justification |
+|---|---|---|---|
+| Knowledge Engineering | 85 | 85 | Unchanged |
+| Repository Design | 74 | 72 | Small bump — template registration completed, one more collision fixed |
+| Agentic Architecture (**as merged on `main`**) | **62** | 35 | Largest single-category change. All six Guide components structurally present for the first time; capped well below the v1 "if merged, ~75" estimate because most of the new machinery is still unexercised |
+| Business Analysis | 55 | 55 | Unchanged — no new analysis performed |
+| Business Plan Readiness | 35 | 30 | Small bump — a real, partially-proven pipeline now exists; content is still 0% |
+| Technical Quality | 74 | 65 | Two disciplined PR review cycles, real automated verification, clean conflict-free merge |
+| Documentation | 85 | 80 | Phase 6 naming collision fixed |
+| Innovation | 80 | 78 | Now backed by one proof of execution, not purely a design document |
+| Presentation Readiness | 8 | 5 | Trivial bump — an owner and completion criteria now exist on paper; the deck does not |
+| **Overall Grade (Guide-weighted, as merged today)** | **≈33/100** | **≈27/100** | OS build & documentation ≈68 × 30% = 20.4; AI Business Plan ≈24 × 40% = 9.6; Presentation ≈8 × 20% = 1.6; Individual contribution ≈12 × 10% = 1.2. Total ≈ 33. |
 
-This is a **fail** against any reasonable capstone pass threshold, driven almost entirely by the two highest-weighted components (Business Plan 40%, Presentation 20% — 60% of the grade) sitting at effectively zero output. It is not a reflection of the Phase 1–3 work, which is genuinely strong; it reflects how much of the total scope that strong work represents.
+**+6 points since v1**, entirely from the OS-build bucket. This remains a clear **fail** against any reasonable capstone threshold — closing the infrastructure gap did not touch the two buckets worth 60% of the grade.
 
 ---
 
 ## PART 10 — Remaining Roadmap
 
-| Phase | Objective | Deliverables | Dependencies | Est. effort | Expected outputs | Completion criteria |
-|---|---|---|---|---|---|---|
-| A — Close Phase 1/2 loose ends | Assign roles; decide MCP | Updated `Problem_Charter.md`/`MEMORY.md`; an MCP decision recorded either way | None | <1 session | Role table filled; MCP decision logged | 0 `[assign]`/`TBD` cells remain; MCP row shows a decision, not "undecided" |
-| B — Land the Agentic OS architecture | Bring the designed Agent/Skill/Decision/Research/Forecast layers onto `main` | Reviewed and merged `feature/agentic-os-architecture`, or an equivalent built directly on `main` | User review of the existing design | 1 session | `.claude/agents/`, `.claude/skills/` (6 new), `vault/Decisions/`, `vault/Research/`, `vault/Forecasts/` live on `main` | Part 4's Agent/Decision/Research/Forecast/Pipeline scores each rise from 0–1 to a working baseline |
-| C — Also design coverage for the two missing deliverables | Close the Part 5 gap: OS Structure Document and Presentation deck get their own skill/workflow, not just the Business Plan | New skill(s) for OS Structure Document authorship and Presentation deck construction | Phase B | 0.5 session | Two new skills, or an extension of the existing agent roster | Every required deliverable has at least one owning skill/agent |
-| D — Pilot section drafting | Run the (now-live) pipeline on Sections 2, 3, 9, 10 | 4 drafted, QA-passed sections; first real Decision/Research/Forecast entries | Phase B | 1–2 sessions | Populated `Assumptions_Register.md`, `Decision_Log/`, real driver-tree nodes | 4 sections ✅ Done with passed QA reviews on file |
-| E — Remaining section drafting | Sections 4–8, 11, 12, 14 | 9 drafted, QA-passed sections | Phase D | 2–3 sessions | Remaining sections drafted | 13 of 14 non-Exec-Summary sections ✅ Done |
-| F — Executive Summary + whole-plan QA | Section 1; cross-section consistency pass; traceability note | Full 14-section draft; `Outputs/Traceability_Note.md` | Phase E complete | 0.5–1 session | Complete plan draft | All 14 sections ✅ Done |
-| G — OS Structure Document | Write the 3–5 page structure document | `Outputs/OS_Structure_Document.md` (or PDF) | Phase C | 0.5 session | Structure doc covering all 6 components, adaptations, LLM/MCP rationale, governance | Document exists, 3–5 pages, addresses every Guide-named element |
-| H — Presentation deck | Build the 30-slide (5×6) deck | `Outputs/Presentation_Deck` | Phase F | 1 session | Deck telling one coherent story across all members | 30 slides, one story, each member's 5 slides map to their actual (assigned) role's work |
-| I — Individual contribution hardening | Real per-member vault footprint and git attribution | Populated `vault/People/`, a documented per-member contribution convention | Phase A | Ongoing | Named notes; visible role-linked commits | Every member has a `vault/People/<name>.md` and at least one attributable contribution |
-| J — Final export & submission prep | Format pass, sanitize, package | Final PDF/Word plan; zipped OS folder; final deck PDF | Phases F, G, H | 0.5–1 session | Three Moodle-ready artifacts | Matches every Deliverables & Submission requirement in Guide §6 |
+Phase B from v1's roadmap ("land the Agentic OS architecture") is **done**. Remaining phases, renumbered:
+
+| Phase | Objective | Deliverables | Dependencies | Est. effort | Completion criteria |
+|---|---|---|---|---|---|
+| A — Close Phase 1/2 loose ends | Assign roles; decide MCP | Updated `Problem_Charter.md`/`MEMORY.md` | None | <1 session | 0 `[assign]`/`TBD` cells remain |
+| ~~B — Land the Agentic OS architecture~~ | — | — | — | — | **✅ Done** |
+| C — Design coverage for OS Structure Doc & Presentation | Turn the roadmap's owner/inputs/outputs table into real skills | New `os-structure-authoring` and `presentation-builder` skills | None | 0.5 session | Every required deliverable has an owning skill, not just a roadmap row |
+| D — Pilot section drafting (first real pipeline run) | Run the pipeline on Sections 2, 3, 9, 10 — treat as a dry run | 4 drafted, QA-passed sections; first real Decision/Research/Forecast entries | Phase B (done) | 1–2 sessions | 4 sections ✅ Done with passed QA; ≥1 real Decision logged resolving a known discrepancy; ≥1 real (non-smoke-test) Research item resolved; Value Driver Tree has real nodes |
+| E — Remaining section drafting | Sections 4–8, 11, 12, 14 | 9 drafted, QA-passed sections | Phase D | 2–3 sessions | 13/14 non-Exec-Summary sections ✅ Done |
+| F — Executive Summary + whole-plan QA | Section 1; consistency pass; traceability note | Full 14-section draft | Phase E | 0.5–1 session | All 14 sections ✅ Done |
+| G — OS Structure Document | Write the 3–5pp doc | `Outputs/OS_Structure_Document.md` | Phase C | 0.5 session | Exists, 3–5pp, covers all six components |
+| H — Presentation deck | Build the 30-slide deck | `Outputs/Presentation_Deck` | Phase F, Phase A (roles) | 1 session | 30 slides, one story, mapped to actual assigned roles |
+| I — Individual contribution hardening | Real per-member footprint | Populated `vault/People/` | Phase A | Ongoing | Every member has a note and an attributable contribution |
+| J — Final export & submission prep | Format, sanitize, package | Final plan/OS zip/deck | F, G, H | 0.5–1 session | Matches Guide §6 exactly |
 
 ---
 
 ## PART 11 — Final Verdict
 
 **1. If this project were submitted today, would it pass?**
-No. Two of the four graded components (Business Plan 40%, Presentation 20% — 60% of the total grade) have zero output. The simulated overall score (~27/100, Part 9) is a clear fail against any reasonable threshold, regardless of how strong the underlying knowledge work is.
+No. ~33/100 against the Guide's weights — still a clear fail, though up from ~27/100. The Business Plan and Presentation buckets (60% of the grade) are essentially where they were in v1.
 
 **2. Which requirements are already fully satisfied?**
-Charter authored and approved (R-11, R-12); corpus collection and ingestion (R-16, R-17, exceeds bar); Memory files (R-02); LLM choice justified (R-06); governance guardrails — read-only sources, cited claims in practice, propose-then-approve discipline (R-07–R-09); OS activation/identity files (R-14).
+Unchanged from v1, plus R-09 (propose-then-approve — reinforced by this very review cycle): charter + approval, corpus + ingestion, Memory files, LLM justification, governance guardrails, OS activation.
 
 **3. Which requirements are only partially satisfied?**
-The Brain component outside Knowledge/MOC (People, Decisions categories are empty); the Skills layer (2 of a plausible larger set, and none wired to the gap-resolution problem); the MCP decision (raised, not closed); most Business Plan sections' underlying evidence (strong material, zero drafted text).
+**Materially expanded since v1:** Agents (R-03, now 65% not 10%) and Skills (R-04, now 75% not 50%) moved from ✗/weak-◐ into genuine partial territory. Still-partial as before: Brain's non-Knowledge categories, MCP decision, most Business Plan sections' evidence base.
 
 **4. Which requirements are still missing?**
-Agents on `main`; Decision/Research/Forecast layers on `main`; all 14 Business Plan sections as actual written, QA'd text; the OS Structure Document; the Presentation deck; team role assignment; individual-contribution visibility; every McKinsey framework artifact as an *executed* piece of work (SCQA, MECE, Pyramid, hypothesis-driven, value driver tree, Three Horizons, 7S all currently exist only as instructions to follow, not work product).
+Narrower than v1: agents/layers on `main` are **no longer** on this list. Still missing: all 14 Business Plan sections as drafted text; the OS Structure Document; the Presentation deck; team role assignment; individual-contribution visibility; every McKinsey framework artifact as *executed* work.
 
 **5. What is the single highest-priority remaining task?**
-Get the Business Plan pipeline actually producing sections — it is 40% of the grade and currently at 0% output, and every further day of delay compounds against the 15–25 page target with 14 sections to write. (Team role assignment is a close, nearly-free second priority — it should simply be done today in parallel, there is no reason it remains open.)
+Unchanged in substance, sharper in framing: **run the merged pipeline on one real section.** The infrastructure question is answered; the only way to find out if it actually works is to point it at Section 2, 3, 9, or 10 and watch. Team role assignment remains a free, parallel, zero-excuse second priority — now the most conspicuous item in the whole report precisely because everything harder around it got done first.
 
 **6. Is the repository now an Agentic Operating System?**
-**On `main`: no.** It is a very well-built, thoroughly cited knowledge base with disciplined memory files — a strong Second Brain, but not yet an Agentic OS by the Guide's own six-component definition, because the Agents component is functionally absent (score 1/10, Part 4) and three of the newly-designed layers (Decision, Research, Forecast) don't exist on `main` at all. On the unmerged branch, the *design* is much closer to the Guide's definition, but design is not deployment, and none of it has ever been executed even there.
+**Structurally, yes — operationally, not yet.** All six Guide-named components are now genuinely present on `main`: a Brain, Memory, 8 named Agents with explicit behavior rules, 8 Skills, an LLM decision, and an (unresolved but documented) MCP stance. This is a real, meaningful change from v1's "no" — the Guide's own definition is now structurally met for the first time. The caveat that keeps this from being an unqualified yes: an Agentic OS is defined by what it *does*, and this one has done exactly one small, deliberately trivial thing once. "Structurally an Agentic OS, not yet a working one" is the accurate verdict.
 
 **7. Can another team understand and continue this project without me?**
-Partially. The documentation is thorough enough to orient someone conceptually within an hour. But there is no per-person entry point, no record of who is supposed to own what, and the single largest and most recent body of work (the Phase 6 architecture) sits on a branch a new collaborator would have no reason to know to check, since `main`'s own tracker files don't mention it.
+Improved. The v1 blocker (the entire architecture living on a branch nobody would think to check) is resolved — everything is now on `main`, discoverable from the root README and the MOCs. The remaining barrier is unchanged: no per-person entry point, no visible individual ownership, nothing that tells a new team member "this is your part."
 
 **8. Can the Business Plan now be generated with minimal human intervention?**
-No — and by design, it should not be able to. The Guide is explicit: "your team owns every sentence." The (unmerged) pipeline design correctly gates every genuine judgment call — market-size choice, hypothesis wording, prioritization among candidate interventions — behind human confirmation rather than letting an agent decide unilaterally. What can and should be minimized is drudgery (evidence assembly, citation formatting, first-draft prose); what cannot and should not be minimized is judgment. Full hands-off automation would itself be an anti-pattern against this Guide, not a strength.
+No — same answer as v1, for the same reason, now with a live example: the smoke test's own honesty (explicitly documenting a failed WebFetch rather than glossing over it, explicitly declining to write an Assumption Register row for a non-real finding) is exactly the kind of judgment the Guide wants a human to remain in the loop for. The architecture is designed to require that judgment at every real decision point, by intent, not by omission.
 
 **9. What prevents a perfect score?**
-Zero Business Plan output; zero Presentation; zero OS Structure Document; unresolved team-role assignment; an unmerged and never-executed architecture; two required deliverables (Structure Doc, Deck) with no architectural coverage at all, even in the design; essentially invisible individual-contribution evidence for 5 of 6 team members.
+Same four buckets as v1, reweighted: zero Business Plan content, zero Presentation, zero OS Structure Document, and unresolved team-role assignment — the last of which is now the least excusable, having survived an entire architecture design-review-merge cycle untouched.
 
 **10. What exact work remains before final submission?**
-Per Part 10: assign roles and close the MCP decision (Phase A); land the agent/skill/layer architecture on `main`, including new coverage for the OS Structure Document and Presentation (Phases B–C); draft, QA, and finalize all 14 Business Plan sections (Phases D–F); write the OS Structure Document (Phase G); build the 30-slide presentation (Phase H); establish real individual-contribution evidence (Phase I); export and package all three deliverables (Phase J).
+Per Part 10: assign roles (Phase A, unblocks R-13, R-32, and Phase H); design skill-level coverage for the two remaining deliverables (Phase C); run the pipeline for real, starting with one pilot section as a deliberate dry run (Phase D); complete drafting (Phase E–F); write the OS Structure Document (Phase G); build the deck (Phase H); harden individual-contribution evidence (Phase I, ongoing); export and package (Phase J).
 
 ---
 
-*Prepared as an independent compliance audit, methodology stated at the top of this report. Reviewed against the source `Agentic_OS_Capstone_Project_Guide_v1.1.pdf` and `AI_Business_Plan_Template.md` directly, not against prior in-repository summaries of either document.*
+*v2 of this report. Re-run against the merged `main`-equivalent state per explicit instruction, using the same source documents (`Agentic_OS_Capstone_Project_Guide_v1.1.pdf`, `AI_Business_Plan_Template.md`) as v1, plus fresh direct verification (`git log`, `git diff`, `git merge-base`, a full-repo wikilink/orphan re-scan, and a direct re-read of the 14-section checklist and team-role tables). Findings resolved since v1 are marked RESOLVED rather than deleted, so the audit trail remains legible; nothing is asserted from memory of the prior pass.*
+
+## See also
+[[Agentic_OS_Architecture]] · [[OS_Architecture_Design_Phase_Validation_Report|OS Architecture Design Phase Validation Report]] · [[Validation and Audit]] · [[Project Administration]]
