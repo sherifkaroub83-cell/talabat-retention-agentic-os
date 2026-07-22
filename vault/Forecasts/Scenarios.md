@@ -10,9 +10,10 @@ built_by: forecasting-agent (Pilot 3, vault/Architecture/Pilot_Validation_Plan.m
 
 First live build of this file, keyed to the nodes in [[Value_Driver_Tree]]. Per
 `.claude/skills/forecast-builder/SKILL.md`, every scenario below carries its own growth-logic
-sentence (not a bare percentage), a confidence level, and the driver-tree assumption placeholders it
-depends on (`FCT-AGT-0#`, pending `decision-steward` registration as `ASM-###`). Horizon: FY2026,
-the horizon Section 9 (Financial Plan) needs.
+sentence (not a bare percentage), a confidence level, and the driver-tree assumptions it depends on
+(registered by `decision-steward` as `ASM-007` through `ASM-012`, all `Status: Approved` — see
+`vault/Decisions/Assumptions_Register.md`). Horizon: FY2026, the horizon Section 9 (Financial Plan)
+needs.
 
 **Anchor for all three scenarios:** Egypt FY2025 segment revenue **USD 509.9m** `[FACT →
 Facts/Revenue.md]` (TLB-002 p.111), with Q1 2026 (+81% YoY to USD145.3m vs. restated Q1 2025
@@ -33,8 +34,8 @@ year-over-year comparison. This is a continuation-of-disclosed-trend logic, not 
 dependent one — it assumes no incremental effect yet from the DEC-003 AI-roadmap extension beyond
 whatever is already embedded in the Q1 2026 print.
 
-**Depends on:** root revenue Fact node; FCT-AGT-01 (customer-growth gap, carried qualitatively);
-FCT-AGT-03 (AOV/FX logic).
+**Depends on:** root revenue Fact node; ASM-007 (customer-growth gap, carried qualitatively);
+ASM-009 (AOV/FX logic).
 
 **Confidence: Medium** — this is the ceiling case explicitly named in the forecast-builder skill's
 calibration rule ("extrapolating from exactly 2 disclosed data points... Medium at best"); it is not
@@ -56,8 +57,8 @@ explicitly the DEC-003 Option 2 mechanism (recommendation quality, cross-sell ti
 personalisation) — it is NOT a churn-prediction outcome and NOT a subscription-uplift-only framing;
 those were DEC-003's rejected Option 1 and Option 3.**
 
-**Depends on:** FCT-AGT-02 (order-frequency uplift via AI-roadmap extension); FCT-AGT-05 (advertising
-penetration via adtech extension); FCT-AGT-04 (implied-GMV proxy, for sizing only).
+**Depends on:** ASM-008 (order-frequency uplift via AI-roadmap extension); ASM-011 (advertising
+penetration via adtech extension); ASM-010 (implied-GMV proxy, for sizing only).
 
 **Confidence: Low** — per the forecast-builder skill's calibration rule, "projecting an effect that
 depends on an unproven intervention... Low, always — this is the honest ceiling for any upside
@@ -80,7 +81,7 @@ worsens beyond what guidance already prices in, compressing Egypt's USD-reported
 segment profitability even if local-currency, unit-level performance holds up. This scenario
 extrapolates an already-observed, named, disclosed risk (not an invented one).
 
-**Depends on:** FCT-AGT-03 (AOV/FX logic); root revenue Fact node; the delivery-cost Fact anchor
+**Depends on:** ASM-009 (AOV/FX logic); root revenue Fact node; the delivery-cost Fact anchor
 (USD113.13m, ~22% of Egypt revenue FY2025) as the cost base most exposed to FX-driven input-cost
 pressure.
 
@@ -106,20 +107,20 @@ Section 9 as a named risk case, not implied to be equally likely as the base cas
 
 ## Scenario summary table
 
-| Scenario | Growth logic (one line) | Key assumption placeholders | Confidence |
+| Scenario | Growth logic (one line) | Key assumption IDs | Confidence |
 |---|---|---|---|
-| Base | Continuation of the disclosed FY2025→Q1 2026 Egypt trend, moderating toward Group FY2026 guided growth (14-17% cFX) as base effects wash out | FCT-AGT-01, FCT-AGT-03 | Medium (2-point extrapolation ceiling) |
-| Upside | DEC-003's Group-AI-roadmap-extension intervention (recommendations, cross-sell timing, adtech personalisation) succeeds in Egypt as it has at Group level | FCT-AGT-02, FCT-AGT-05, FCT-AGT-04 | Low (unproven intervention + Group-not-Egypt evidence) |
-| Downside | Already-observed Group margin compression and the named Egypt FX-depreciation risk deepen beyond what FY2026 guidance already prices in | FCT-AGT-03, root revenue Fact, delivery-cost Fact | Medium (extrapolates a named, already-observed, partly Egypt-specific risk; direction evidenced, magnitude is not) |
+| Base | Continuation of the disclosed FY2025→Q1 2026 Egypt trend, moderating toward Group FY2026 guided growth (14-17% cFX) as base effects wash out | ASM-007, ASM-009 | Medium (2-point extrapolation ceiling) |
+| Upside | DEC-003's Group-AI-roadmap-extension intervention (recommendations, cross-sell timing, adtech personalisation) succeeds in Egypt as it has at Group level | ASM-008, ASM-011, ASM-010 | Low (unproven intervention + Group-not-Egypt evidence) |
+| Downside | Already-observed Group margin compression and the named Egypt FX-depreciation risk deepen beyond what FY2026 guidance already prices in | ASM-009, root revenue Fact, delivery-cost Fact | Medium (extrapolates a named, already-observed, partly Egypt-specific risk; direction evidenced, magnitude is not) |
 
 ---
 
-## Escalation flag for decision-steward / user
+## Escalation flag for decision-steward / user — resolved
 
-**Flagging per Step 5 of the forecast-builder skill and the task brief's explicit instruction not to
-resolve this myself:** which of these three scenarios becomes Section 9's **headline case** is a
-choice that plausibly meets the "materially affects the plan's headline recommendation" bar for a full
-Decision Log entry, not just an Assumptions Register row — because:
+**Originally flagged per Step 5 of the forecast-builder skill and the task brief's explicit
+instruction not to resolve this myself:** which of these three scenarios becomes Section 9's
+**headline case** is a choice that plausibly meets the "materially affects the plan's headline
+recommendation" bar for a full Decision Log entry, not just an Assumptions Register row — because:
 - The base case (Medium confidence, no intervention credit) would understate the financial case for
   the very AI-retention investment this entire capstone is built to recommend, if used as the sole
   headline number.
@@ -133,8 +134,14 @@ Decision Log entry, not just an Assumptions Register row — because:
   number — but that framing choice is itself a presentation decision this agent is not authorized to
   make unilaterally, since it shapes how the plan's core financial argument reads.
 
-This is handed to `decision-steward` (and, if `decision-steward` judges it meets the escalation bar
-per its own skill, to the user) as a flagged open item — not resolved here.
+**Resolved by `decision-steward`:** see `Decision_Log/DEC-005_section9-headline-scenario.md`
+(status `approved`, no user escalation required — judged a data-presentation/methodology call within
+`decision-steward`'s documented discretion, not a strategic framing choice under DEC-003's bar, since
+it does not change which intervention the plan recommends). **Decision:** Section 9 presents the base
+case as the headline financial baseline, the upside case explicitly as the projected return/delta
+attributable to the DEC-003 AI-roadmap-extension investment (not as a competing central estimate), and
+the downside case as a named risk scenario, not implied equally likely to the base case, per this
+file's own "Important tension to carry into Section 9" note above.
 
 ## Links
 [[Forecasting_Layer]] · [[Value_Driver_Tree]] · [[Strategic/Strategic Risks]] ·

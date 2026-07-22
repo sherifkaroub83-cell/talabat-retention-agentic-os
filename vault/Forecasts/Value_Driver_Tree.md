@@ -66,7 +66,7 @@ that decompose the *revenue growth rate itself* (not units), which is the only d
 evidence actually supports.
 
 ### 1a. Active Customer growth (Egypt)
-`[ASSUMPTION → pending decision-steward registration, see ASM-proposal FCT-AGT-01 below]`
+`[ASSUMPTION → ASM-007, Decisions/Assumptions_Register.md, Approved]`
 
 **Logic:** Egypt is disclosed as talabat's largest user base and third-largest GMV market (TLB-019
 p.5, per `Topics/Segment Reporting.md`), and the FY2025→Q1 2026 revenue trend (+81% YoY) is
@@ -81,7 +81,7 @@ statement of the same gap `Facts/Monthly_Active_Customers.md` and `Facts/Orders_
 confirm); this node exists to name the gap, not to project through it.
 
 ### 1b. Order Frequency uplift (Egypt) — the DEC-003 intervention channel
-`[ASSUMPTION → pending decision-steward registration, see ASM-proposal FCT-AGT-02 below]`
+`[ASSUMPTION → ASM-008, Decisions/Assumptions_Register.md, Approved]`
 
 **Logic:** DEC-003's governing hypothesis (ASM-005, Approved) commits the plan to extending talabat's
 Group AI roadmap — new recommendation form factors, cross-sell timing/incentive optimisation, deepened
@@ -105,7 +105,7 @@ this node itself flags rather than silently imports.
 
 ## Branch 2 — AOV / Pricing (Egypt)
 
-`[ASSUMPTION → pending decision-steward registration, see ASM-proposal FCT-AGT-03 below]`
+`[ASSUMPTION → ASM-009, Decisions/Assumptions_Register.md, Approved]`
 
 **Logic:** No Egypt-specific AOV figure is disclosed anywhere in the corpus. The only Egypt pricing-
 adjacent anchor is the FX/inflation risk language in `Strategic/Strategic Risks.md` (TLB-020 p.14):
@@ -126,8 +126,8 @@ trend, and is the weakest-evidenced node in the tree.
 ## Branch 3 — Take Rate / Commission (Egypt)
 
 ### 3a. Take rate proxy
-`[FACT → Facts/Revenue.md]` (TLB-002 p.111, structural) + `[ASSUMPTION → pending decision-steward
-registration, see ASM-proposal FCT-AGT-04 below]` (derived ratio)
+`[FACT → Facts/Revenue.md]` (TLB-002 p.111, structural) + `[ASSUMPTION → ASM-010,
+Decisions/Assumptions_Register.md, Approved]` (derived ratio)
 
 **No Egypt GMV figure exists anywhere in the corpus** (`Topics/Segment Reporting.md` and
 `Facts/GMV_Facts.md` both confirm this explicitly — GMV is disclosed at Group, GCC, and Non-GCC-
@@ -145,7 +145,7 @@ Group/GCC-level growth rate as the Egypt anchor without noting it's not Egypt-sp
 only by this explicit flag; the underlying ratio itself carries no Egypt-specific evidence at all.
 
 ### 3b. Advertising penetration (Egypt) — the DEC-003 adtech channel
-`[ASSUMPTION → pending decision-steward registration, see ASM-proposal FCT-AGT-05 below]`
+`[ASSUMPTION → ASM-011, Decisions/Assumptions_Register.md, Approved]`
 
 **Logic:** DEC-003's governing hypothesis explicitly names "deepened adtech-embedded personalisation"
 as one of its three Egypt-bound mechanisms. Group-level evidence: Advertising and listing fees revenue
@@ -165,7 +165,7 @@ disclosed Egypt-specific advertising data of any kind.
 ## Branch 4 — Cost / Investment (Egypt) — feeds Section 9's investment case
 
 ### 4a. Egypt-specific bottom-up investment estimate
-`[ASSUMPTION → pending decision-steward registration, see ASM-proposal FCT-AGT-06 below]`
+`[ASSUMPTION → ASM-012, Decisions/Assumptions_Register.md, Approved]`
 
 **Logic:** DEC-004 (Approved, ASM-006) confirms the Group's 2026 investment programme totals
 USD175mn (Board-approved) = ~USD120mn Everyday App (~USD75mn opex + ~USD45mn capex; funds talabat mart,
@@ -208,30 +208,32 @@ thin Egypt-specific disclosure still is outside the segment P&L headline figures
 
 ---
 
-## Proposed assumptions — handoff to decision-steward
+## Assumptions registered — decision-steward handoff complete
 
-Per Step 5 of `.claude/skills/forecast-builder/SKILL.md` ("hand off, don't self-register"), the
-following are proposed for Assumptions Register rows. `forecasting-agent` does not assign `ASM-###`
-IDs; these placeholder codes (`FCT-AGT-0#`) exist only so `Scenarios.md` and this tree can cross-
-reference the proposals until `decision-steward` assigns real IDs (register rows would follow numerically
-from ASM-006, i.e. likely ASM-007 onward, but that numbering is decision-steward's call, not asserted
-here).
+Per Step 5 of `.claude/skills/forecast-builder/SKILL.md` ("hand off, don't self-register"), the six
+proposed assumptions below were handed to `decision-steward` and have since been registered as
+`ASM-007` through `ASM-012` in `vault/Decisions/Assumptions_Register.md`, all `Status: Approved`
+(data-derivation/methodology calls within `decision-steward`'s documented discretion — not strategic
+framing choices; see the Assumptions Register and `Decision_Log/` for the full rationale class
+comparison against DEC-001/002/004). The table below is retained as the historical record of what was
+proposed; the placeholder codes originally used here (`FCT-AGT-0#`) have been fully superseded by the
+real IDs and no longer appear anywhere in this file or in `Scenarios.md`.
 
-| Placeholder | Statement | Tier | Confidence | Depends on |
+| Registered ID | Statement | Tier | Confidence | Depends on |
 |---|---|---|---|---|
-| FCT-AGT-01 | Egypt active-customer growth cannot be numerically projected — no disclosed Egypt customer-count data point exists anywhere in the corpus at any date; flagged as an open data gap, not filled with an invented number | Assumption (gap-flag only) | Low | Facts/Monthly_Active_Customers.md, Facts/Orders_Facts.md (both confirmed to lack Egypt breakout) |
-| FCT-AGT-02 | Egypt order-frequency uplift from the DEC-003 AI-roadmap-extension intervention is projected by extrapolating talabat pro's Group/GCC 20-28% frequency uplift and 26-32% retention uplift into Egypt, explicitly flagged as Group-level evidence excluding Egypt at time of measurement, not an Egypt-proven effect | Assumption | Low | Strategic/Customer Retention Drivers.md; DEC-003/ASM-005 |
-| FCT-AGT-03 | Egypt AOV is assumed to drift with local inflation, partially offset in USD terms by EGP depreciation, per management's own stated GMV inflation-hedge logic — extended here to AOV since no disclosed Egypt AOV figure exists to project directly | Assumption | Low | Strategic/Strategic Risks.md (TLB-020 p.14) |
-| FCT-AGT-04 | Egypt implied-GMV/take-rate proxy (~USD1.24bn implied GMV) is constructed by applying the Group's FY2025 41%-of-GMV revenue-conversion ratio to Egypt's disclosed FY2025 revenue (USD509.9m); explicitly labeled as a Group-ratio import, not an Egypt-measured take rate, since no Egypt GMV figure is disclosed anywhere in the corpus | Assumption (derived) | Low | Facts/Revenue.md (TLB-002 p.20, p.111); Topics/Segment Reporting.md, Facts/GMV_Facts.md (confirming the Egypt GMV gap) |
-| FCT-AGT-05 | Egypt advertising-revenue penetration is assumed to trend directionally toward the Group's adtech-driven revenue growth pattern (Advertising & listing fees +32% y/y FY2025; adtech margins cited as a Q1 2026 Group revenue-growth driver) as the DEC-003 "deepened adtech-embedded personalisation" mechanism is extended to Egypt — no target percentage is asserted, direction only | Assumption | Low | Facts/Revenue.md (TLB-002 p.20, TLB-009 p.4, TLB-014 p.15); DEC-003/ASM-005 |
-| FCT-AGT-06 | Egypt's bottom-up 2026 Everyday App investment estimate (≈USD13.2m) is derived by applying Egypt's ~11.0% share of FY2025 total disclosed revenue to the Group's disclosed ~USD120m Everyday App investment component (excluding the ~USD55m Food-leadership component); explicitly labeled as an illustrative pro-rata construction, not a disclosed or approved Egypt budget line | Assumption (derived) | Low | DEC-004/ASM-006; Facts/Revenue.md (TLB-008 p.10, p.61, p.111) |
+| ASM-007 | Egypt active-customer growth cannot be numerically projected — no disclosed Egypt customer-count data point exists anywhere in the corpus at any date; flagged as an open data gap, not filled with an invented number | Assumption (gap-flag only) | Low | Facts/Monthly_Active_Customers.md, Facts/Orders_Facts.md (both confirmed to lack Egypt breakout) |
+| ASM-008 | Egypt order-frequency uplift from the DEC-003 AI-roadmap-extension intervention is projected by extrapolating talabat pro's Group/GCC 20-28% frequency uplift and 26-32% retention uplift into Egypt, explicitly flagged as Group-level evidence excluding Egypt at time of measurement, not an Egypt-proven effect | Assumption | Low | Strategic/Customer Retention Drivers.md; DEC-003/ASM-005 |
+| ASM-009 | Egypt AOV is assumed to drift with local inflation, partially offset in USD terms by EGP depreciation, per management's own stated GMV inflation-hedge logic — extended here to AOV since no disclosed Egypt AOV figure exists to project directly | Assumption | Low | Strategic/Strategic Risks.md (TLB-020 p.14) |
+| ASM-010 | Egypt implied-GMV/take-rate proxy (~USD1.24bn implied GMV) is constructed by applying the Group's FY2025 41%-of-GMV revenue-conversion ratio to Egypt's disclosed FY2025 revenue (USD509.9m); explicitly labeled as a Group-ratio import, not an Egypt-measured take rate, since no Egypt GMV figure is disclosed anywhere in the corpus | Assumption (derived) | Low | Facts/Revenue.md (TLB-002 p.20, p.111); Topics/Segment Reporting.md, Facts/GMV_Facts.md (confirming the Egypt GMV gap) |
+| ASM-011 | Egypt advertising-revenue penetration is assumed to trend directionally toward the Group's adtech-driven revenue growth pattern (Advertising & listing fees +32% y/y FY2025; adtech margins cited as a Q1 2026 Group revenue-growth driver) as the DEC-003 "deepened adtech-embedded personalisation" mechanism is extended to Egypt — no target percentage is asserted, direction only | Assumption | Low | Facts/Revenue.md (TLB-002 p.20, TLB-009 p.4, TLB-014 p.15); DEC-003/ASM-005 |
+| ASM-012 | Egypt's bottom-up 2026 Everyday App investment estimate (≈USD13.2m) is derived by applying Egypt's ~11.0% share of FY2025 total disclosed revenue to the Group's disclosed ~USD120m Everyday App investment component (excluding the ~USD55m Food-leadership component); explicitly labeled as an illustrative pro-rata construction, not a disclosed or approved Egypt budget line | Assumption (derived) | Low | DEC-004/ASM-006; Facts/Revenue.md (TLB-008 p.10, p.61, p.111) |
 
-**Escalation note for decision-steward:** none of these six proposals individually looks like it meets
-the "materially affects the plan's headline recommendation" bar on its own — each is a component
-driver-tree leaf. However, see `Scenarios.md`'s own escalation flag below regarding **which scenario
-(base/upside/downside) becomes the plan's headline Section 9 case** — that choice, not any single
-assumption row, is the one this agent is flagging for full Decision Log treatment, not just a register
-row.
+**Escalation note (resolved):** none of these six registered assumptions individually met the
+"materially affects the plan's headline recommendation" bar on its own — each is a component
+driver-tree leaf. `Scenarios.md`'s separate escalation flag regarding **which scenario (base/upside/
+downside) becomes the plan's headline Section 9 case** was the one item `forecasting-agent` flagged for
+full Decision Log treatment; see `Decision_Log/DEC-005_section9-headline-scenario.md` for its
+resolution.
 
 ## Links
 [[Forecasting_Layer]] · [[Scenarios]] · [[Facts/Revenue]] · [[Strategic/Cost Structure]] ·
