@@ -53,6 +53,23 @@ different dollars, recorded on two different lines), but it does mean the four l
 *independent* — subscription is, in the corpus's own framing, "monetized twice." This section names that
 spillover explicitly rather than letting the MECE table imply the lines are causally isolated.
 
+**Tracing each stream to the Value Driver Tree.** Per the template's own McKinsey Lens instruction for
+this section, each revenue stream should trace to a branch of `vault/Forecasts/Value_Driver_Tree.md`. Two
+lines trace cleanly; two do not, and this section states that honestly rather than forcing a fit:
+
+| Revenue line | Value Driver Tree branch | Fit |
+|---|---|---|
+| Subscription fee & Other Income (Subscription-fees component) | Branch 1b — Order Frequency uplift (`ASM-008`), the `DEC-003` intervention channel | Direct — this is the line the plan's own retention thesis targets |
+| Advertising & listing fees | Branch 3b — Advertising penetration (`ASM-011`), the `DEC-003` adtech channel | Direct |
+| Commission fees | Branch 3a — Take rate / implied-GMV proxy (`ASM-010`) | Partial only — Branch 3a is a *blended* take-rate proxy covering all four lines together, not a Commission-specific node; the Value Driver Tree does not currently decompose take rate by fee line |
+| Delivery & Service fees | *(no dedicated branch)* | Not traced — the Value Driver Tree has no node isolating delivery/service-fee revenue specifically; it sits inside the same blended Branch 3a proxy as Commission |
+
+This gap (Commission and Delivery & Service fees sharing one blended proxy node rather than each having its
+own branch) is a genuine limitation of the current Value Driver Tree, not something this section should
+silently paper over — a future Value Driver Tree revision that splits Branch 3a by fee line would resolve
+it precisely, the same kind of flagged-not-smoothed-over open item [[Section_04_Value_Proposition|Section
+4]] names for its own ASM-008 sharing between Mechanisms 1 and 2.
+
 **The "Subscription fee & Other Income" decomposition (`DEC-006`, `ASM-013`).** This combined line is
 itself two components that only became separately visible in TLB-011's Q1 2026 press release, cross-checked
 against TLB-010's audited Q1 2026 line items:
@@ -144,6 +161,18 @@ FY2025 revenue, explicitly labeled Low confidence and illustrative only) — thi
 re-derive that figure, only notes that the same Group-ratio-import logic and confidence label applies here
 if a per-customer or per-order Egypt unit-economics figure were needed.
 
+**What it costs, not only what it earns.** The template requires stating both sides of unit economics, not
+revenue alone. The one disclosed Egypt-specific cost line in the corpus is delivery cost: USD 113.13mn for
+FY2025, ~22% of Egypt segment revenue (`Strategic/Cost Structure.md`; TLB-002, page 111) — already used as
+Section 9 §9.2's operational-cost context and tracked as `KPI_Tree.md`'s KPI R4 ("Delivery cost as % of
+Egypt revenue"). Read together with the ~40-41% Group blended take rate above, this gives a directional
+per-order economics picture: of each dollar of Egypt revenue, roughly USD 0.22 is consumed by delivery
+cost alone before other operating costs (fulfilment overhead, CARC, platform costs) are counted — none of
+which are broken out at Egypt level in the corpus. This is not a full per-customer P&L (the corpus does
+not disclose Egypt customer acquisition cost, cost-to-serve, or gross margin at the customer level), and
+this section does not construct one; it states the one cost figure the corpus does disclose, rather than
+presenting unit economics as revenue-only.
+
 The one directly disclosed unit-economics-adjacent figure worth naming: talabat pro subscribers show a
 136% gross-profit-per-customer uplift in the 30 days immediately following subscription (`Topics/Talabat
 Pro.md`; TLB-015, page 78) — a Group/GCC-level figure, not Egypt-measured (Egypt and Iraq are explicitly
@@ -160,9 +189,11 @@ unit economics than its dollar size alone suggests.
 | Four-line revenue structure, FY2024/FY2025 figures | `Strategic/Revenue Model.md`, `Facts/Revenue.md`, TLB-001 p.27, TLB-002 p.20, TLB-009 p.4 | Direct citation |
 | Subscription fee & Other Income decomposition | [[DEC-006_subscription-revenue-line-reclassification]], `ASM-013`, TLB-010 p.16, TLB-011 p.4 | Decision-tier citation, scope-limited to Q1 2025/Q1 2026 |
 | MECE justification + subscription's indirect spillover | `Strategic/Revenue Model.md`, `ASM-008` | Direct citation, explicit nuance stated |
-| Pricing strategy (commission/subscription/principal/advertising) | `Topics/Talabat Pro.md`, `Topics/Quick Commerce.md`, `Topics/Advertising.md`, `Section_04_Value_Proposition.md` | Direct citation |
+| Revenue-stream-to-Value-Driver-Tree tracing | `Forecasts/Value_Driver_Tree.md` Branches 1b/3a/3b (`ASM-008`/`ASM-010`/`ASM-011`) | Two lines trace directly; Commission and Delivery & Service fees share one blended proxy node — gap named explicitly, not forced |
+| Pricing strategy (commission/subscription/principal/advertising) | `Topics/Talabat Pro.md`, `Topics/Quick Commerce.md`, `Topics/Advertising.md`, `Section_04_Value_Proposition.md`, `ASM-004`/`RES-004` (Egypt pro price point) | Direct citation |
 | Egypt revenue-mix data gap | `Topics/Segment Reporting.md`, `Topics/Revenue Model.md` Egypt-Specific Considerations | Explicit gap statement, not filled |
-| Unit economics (Group take rate, Egypt proxy, pro gross-profit uplift) | `Facts/Revenue.md`, [[Section_09_Financial_Plan|Section 9]] §9.4 (`ASM-010`), `Topics/Talabat Pro.md` (TLB-015 p.78) | Direct citation, cross-referenced not re-derived |
+| Unit economics — earns side (Group take rate, Egypt proxy, pro gross-profit uplift) | `Facts/Revenue.md`, [[Section_09_Financial_Plan|Section 9]] §9.4 (`ASM-010`), `Topics/Talabat Pro.md` (TLB-015 p.78) | Direct citation, cross-referenced not re-derived |
+| Unit economics — costs side (Egypt delivery cost, ~22% of revenue) | `Strategic/Cost Structure.md` (TLB-002 p.111), `KPI_Tree.md` KPI R4, [[Section_09_Financial_Plan|Section 9]] §9.2 | Direct citation |
 
 ## Links
 - [[Talabat-Egypt-AI-Retention-Business-Plan|Project tracker]]
