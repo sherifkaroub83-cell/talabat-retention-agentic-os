@@ -261,3 +261,109 @@ am not editing the draft or the Project tracker myself — reporting this verdic
 - [[DEC-003_section2-governing-hypothesis]]
 - [[Assumptions_Register]] (`ASM-012`)
 - [[Business_Plan_Generation_Pipeline]]
+
+---
+
+# Targeted re-review — fix verification (2026-07-22)
+
+## Scope and independence note
+
+Fresh targeted re-review, independent of the original FAIL pass above. Files read directly for this
+re-verification: `Section_11_CSR_and_Responsible_AI.md` (full current text), the original FAIL report
+above (for the exact defect description and required fix), `Section_02_Business_Description.md` (full
+text, re-checked fresh rather than trusting the prior read), and `Section_07_Marketing_and_Sales_Strategy.md`
+(targeted, around the Partner-co-funding claim). Ran fresh `Grep` sweeps of the current Section 11 file
+for "Section 2", "Section_02", "flywheel", and "marketplace" (a full-section sweep, not limited to the
+one previously-flagged sentence), and of `Section_02_Business_Description.md` for
+"flywheel|marketplace|network effect|two-sided|ecosystem".
+
+## 1. Required fix — independently re-verified
+
+The flagged sentence in §11.2 now reads:
+
+> "This plan's own contribution is not a new sustainability programme — it is naming that these
+> initiatives already establish talabat's Egypt 'license to operate' with Partners, riders, and
+> communities, the same stakeholder trust base [[Section_07_Marketing_and_Sales_Strategy|Section 7]]'s
+> Partner-co-funding discussion depends on."
+
+Confirmed directly:
+- The `[[Section_02_Business_Description|Section 2]]` link and the "marketplace-flywheel framing" clause
+  have been removed entirely, not merely reworded around. The sentence now attributes the stakeholder-
+  trust argument solely to Section 7's Partner-co-funding discussion, which the original review already
+  independently confirmed is accurate (Section 7 does discuss Partner/restaurant co-funding with a real
+  citation to `Topics/Promotions.md`, TLB-020 p.7, TLB-023 p.6).
+- The sentence reads coherently as revised — grammatically sound, and the underlying argument (AI-driven
+  retention that erodes Partner/rider trust would work against the CSR footprint this section documents)
+  stands on its own without needing a second section-citation, exactly as the original review's Option 1
+  suggested. This matches Option 1 of the two fix paths the original FAIL report offered.
+
+**Fresh full-section sweep (not limited to the one sentence):** `Grep` of the current
+`Section_11_CSR_and_Responsible_AI.md` for `Section 2|Section_02|flywheel|marketplace` returns **zero
+matches anywhere in the file** — including the Links section at the bottom, which previously carried a
+`[[Section_02_Business_Description]]` link (used only by the now-removed sentence) and has been removed
+along with it. No other place in the section makes any Section 2 cross-reference, untraceable or
+otherwise; Section 11 no longer cites Section 2 at all, which is consistent with the fact that Section 2
+never discussed marketplace/flywheel/trust content the section needed to draw on.
+
+**Independent re-confirmation that Section 2 still contains no such content:** a fresh `Grep` of
+`Section_02_Business_Description.md` for `flywheel|marketplace|network effect|two-sided|ecosystem`
+returns zero matches, consistent with the original review's finding — Section 2's content genuinely has
+no marketplace/flywheel framing, so removing the citation (rather than trying to make it point somewhere
+that still doesn't exist) was the correct fix.
+
+**Verdict on the required fix: fully resolved.** The single blocking defect from the original review no
+longer exists in any form, and no adjacent or copy-pasted instance of the same error survives elsewhere
+in the section.
+
+## 2. Non-blocking fixes — sanity check
+
+**(1) §11.1 title-scope acknowledgment.** The section now opens with an explicit acknowledgment paragraph
+before the table:
+
+> "Model transfer risk and model drift are, strictly, performance risks rather than fairness risks in the
+> narrow sense — they are included in this table because both are the direct precondition for, and cannot
+> be cleanly separated from, the algorithmic bias/fairness risk immediately below..."
+
+This reads coherently, correctly characterizes which two rows are the stretch (Model Transfer Risk,
+Model Drift — matching the original observation exactly), and frames the inclusion as a deliberate
+risk-management choice rather than an unacknowledged mismatch. No new inaccuracy introduced — the
+framing ("cannot be cleanly separated from... fairness properties cannot be trusted") is consistent with,
+not contradictory to, the rest of §11.1's content and with Section 10's actual risk characterizations
+(independently re-checked in the original pass and not altered by this fix).
+
+**(2) Model Drift row's Owner cell.** Now reads: "Group AI/Data Science (this plan's own proposed
+assignment, not a disclosed talabat role — no owner exists in the corpus for a control that itself does
+not yet exist)." This is coherent with, and now consistent in tone with, the same row's Control cell
+("Not yet a specified control anywhere in the corpus or in Section 10 — this plan names it as an open
+governance gap..."). It resolves the original asymmetry (control cell explicit about being this plan's
+own gap-naming; owner cell previously reading as if inherited from Section 10 like the other two rows).
+No new inaccuracy — it does not claim Section 10 assigns this owner, correctly stating the opposite.
+
+**Verdict on non-blocking items: both read coherently, both genuinely address the original observations,
+neither introduces any new defect.** These were not required for a PASS and this check was not exhaustive
+per the task's own instruction, but nothing found here would have changed the verdict either way.
+
+## 3. Overall re-review verdict
+
+**PASS.**
+
+The one required, blocking finding from the original QA review — the fabricated "Section 2's
+marketplace-flywheel framing" citation in §11.2 — is fully and correctly fixed: the false citation is
+removed, the sentence rests only on the genuinely-accurate Section 7 reference, a fresh full-section
+sweep finds no other Section 2 reference or copy of the same error anywhere in the file, and the now-
+orphaned `Section_02_Business_Description` link has also been correctly removed from the Links section.
+The two non-blocking observations from the original review have also been proactively and coherently
+addressed, with no new inaccuracies introduced by either fix.
+
+Combined with the original review's other findings — which already passed independent re-verification
+and are unaffected by this fix (template completeness in §1, §11.1's Section 10 traceability in §2(a)/
+§2(e), §11.3's governance-recommendation specificity in §2(c), no DEC-003 drift in §2(d), the citation
+audit's PASS with all three limitations independently confirmed resolved in §3, no staleness concern in
+§4, and a clean anti-patterns sweep in §5 apart from the now-fixed untraceable-claim instance) — **Section
+11 is now cleared on both the citation audit and QA fronts and is ready to be marked ✅ Done in the
+Project tracker.**
+
+No further fixes required. Per this review's scope, the draft itself is not edited by this reviewer; the
+Project tracker status cell for Section 11 is being updated to ✅ Done as the direct consequence of this
+PASS, per the QA skill's own instruction ("On pass, flip the status cell to ✅ Done in the Project
+tracker").
