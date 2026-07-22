@@ -184,6 +184,32 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   the user's explicit authorization. **No Business
   Plan content was drafted** — the 14-section checklist remains 0/14; this was architecture design
   only, per explicit instruction.
+- 2026-07-22 — **Phase 7: first real, non-simulated execution of the Business Plan Generation
+  Pipeline**, per explicit instruction to stop designing and start proving the architecture works.
+  Ran a readiness check (all 8 agents/8 skills/2 templates/10 pipeline references/4 memory files
+  confirmed present), selected Section 3 (Market Analysis) as the pilot (exercises the most
+  components against real, pre-existing corpus conflicts, with no forecasting required), and invoked
+  `bp-orchestrator` for real. **Critical operational finding:** once spawned as a subagent,
+  `bp-orchestrator` had no `Agent`, `WebSearch`, or `WebFetch` tools available — despite its own
+  frontmatter listing them — so the designed delegation mechanism (orchestrator spawns isolated
+  specialist agent threads) does not work as specified in this runtime. It self-detected this and
+  adapted by executing each specialist's documented procedure in-context, flagging the degradation
+  explicitly in every artifact rather than presenting self-executed work as independently delegated.
+  Despite that, the content-generation logic worked: found and routed (never silently resolved) two
+  real corpus conflicts through Decision records — `DEC-001` (Egypt category-share: 10x+ vs.
+  1x+→4x+, present both footnoted) and `DEC-002` (three non-reconcilable Egypt market-size figures,
+  presented separately) — and caught a real analytical error (IMARC's Egypt online-food-delivery
+  figure is arithmetically smaller than talabat's own disclosed Egypt revenue). Resolved 4 research
+  gaps (`RES-001`–`004`), registered 4 real assumptions (`ASM-001`–`004`) — the Decision and
+  Research layers hold real content for the first time. Drafted Section 3 in full, McKinsey Lens
+  compliant, citation-audited (PASS, 0 hard failures), and QA-reviewed (PASS, with an explicit
+  self-review independence caveat since Stage 11 was self-administered, not independently verified).
+  Found and fixed two minor broken wikilinks during independent verification of the output. **No
+  architecture files were modified** — the recommended fix (invoke each specialist agent directly
+  from the top-level session rather than nesting delegation inside `bp-orchestrator`) is recorded as
+  a recommendation for the next pilot to test, not applied preemptively. Full report:
+  `vault/Validation/Phase7_Pilot_Execution_Report_Section_03.md`. Work done on branch
+  `feature/bp-pilot-sections`, not merged to `main`.
 
 ## Session log
 
@@ -201,3 +227,8 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   Decision Management, External Research, and Forecasting layers; 8 agents; 6 new skills; the
   11-stage drafting pipeline) — all before any Business Plan section was drafted, per explicit
   instruction. See `vault/Architecture/` for the architecture design.
+- 2026-07-22 — Session 3: ran the first real, non-simulated execution of the Business Plan
+  Generation Pipeline (Section 3, Market Analysis) — found and worked around a critical operational
+  gap (the orchestrator cannot delegate to isolated agent threads once spawned as a subagent in this
+  runtime), while proving the content-generation logic itself works, including catching a real
+  analytical error. See `vault/Validation/Phase7_Pilot_Execution_Report_Section_03.md`.

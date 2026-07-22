@@ -32,8 +32,11 @@ OS structure document (3–5 pp) and a 30-slide group presentation (5 slides × 
 🟢 Charter **approved** (Dr. Hossam Daoud, 21/07/2026) · OS activated · corpus ingested and fully
 linked (154 vault notes, 0 orphans) · **Agentic OS architecture designed** (21/07/2026 —
 Decision/Research/Forecasting layers, 8 agents, 11-stage pipeline; see `vault/Architecture/`) ·
-**Drafting has not started — 0 of 14 sections written.** This is the single largest remaining task
-on the project (40% of the grade). Next: roadmap Phase 7 (pilot sections 2/3/9/10).
+**Drafting has begun — 1 of 14 sections drafted and QA-passed (Section 3, Market Analysis, 2026-07-22,
+first real end-to-end 11-stage pipeline run; QA pass was self-administered — see the checklist row's
+caveat).** This is still the single largest remaining task on the project (40% of the grade). Next:
+continue roadmap Phase 7 (Sections 2, 9, 10), and re-verify Section 3 with an independent QA pass once
+the orchestrator has the `Agent` tool available.
 
 ## Open decisions (needed before/while drafting)
 - [ ] Team role assignments (6 members / 5 defined roles — charter approved as-is; mapping still open)
@@ -45,7 +48,16 @@ on the project (40% of the grade). Next: roadmap Phase 7 (pilot sections 2/3/9/1
 - [ ] How to handle the three documented internal discrepancies (Egypt category-share figure,
       the 2026 investment programme's three different totals, the Subscription revenue-line
       reclassification) — resolve against primary sources or footnote explicitly; do not pick
-      silently (see the skill's "Known evidence gaps" section)
+      silently (see the skill's "Known evidence gaps" section). **Egypt category-share leg: ✅
+      resolved for Section 3 via [[DEC-001_egypt-category-share-figure]] (2026-07-22, approved —
+      present both figures footnoted, use 4x+ for qualitative framing). The 2026 investment total
+      and Subscription-line discrepancies remain open (belong to Sections 9/6).**
+- [x] Egypt market-size definition to adopt for Section 3 — **resolved 2026-07-22 via
+      [[DEC-002_egypt-market-size-definition]]** (approved): bottom-up = talabat's own disclosed
+      Egypt segment revenue; top-down ceiling = Mordor total foodservice; IMARC's online-food-
+      delivery figure cited only as a flagged, unreconciled lower-bound reference. Section 9 may
+      need its own separate pass on this question for financial-plan purposes — this decision does
+      not bind Section 9.
 
 ## 14-section checklist (GSB Template v2.0 — status against `AI_Business_Plan_Template.md`)
 
@@ -53,7 +65,7 @@ on the project (40% of the grade). Next: roadmap Phase 7 (pilot sections 2/3/9/1
 |---|---|---|---|
 | 1 | Executive Summary (SCQA) | ⬜ Not started | Write last — depends on 2–13 |
 | 2 | Business Description | ⬜ Not started | `Strategic/Current Pain Points.md`, `Strategic/How Talabat Creates Value.md` |
-| 3 | Market Analysis | ⬜ Not started | `Topics/Egypt.md`, `Strategic/Competitive Advantages.md`, `Strategic/Competitive Weaknesses.md` |
+| 3 | Market Analysis | ✅ Done* | `Topics/Egypt.md`, `Strategic/Competitive Advantages.md`, `Strategic/Competitive Weaknesses.md`, `Topics/Competition.md`, `Topics/UAE.md`, `Entities/Competitors.md`, `Facts/Competition_Facts.md`. Draft: [[Section_03_Market_Analysis]]. Pipeline artifacts: [[DEC-001_egypt-category-share-figure]], [[DEC-002_egypt-market-size-definition]], [[RES-001_egypt-named-competitors]]–[[RES-004_egypt-official-newsroom-operational-datapoints]], [[Citation_Audit_Section_03]], [[QA_Review_Section_03]]. **\*Passed Stage 11 QA, but that review was self-administered by `bp-orchestrator` (no `Agent` tool available this session to invoke an independent `qa-review-agent` thread) — recommend re-verification with a genuinely independent QA pass before treating this as submission-final. Also pending: re-check hypothesis-traceability once Section 2 exists (QA Finding 2).** |
 | 4 | Value Proposition | ⬜ Not started | `Strategic/Customer Retention Drivers.md` |
 | 5 | AI Technology and Development | ⬜ Not started | `Topics/AI.md`, `Entities/Technology_Platforms.md` |
 | 6 | Business Model and Revenue Streams | ⬜ Not started | `Strategic/Revenue Model.md`, `Facts/Revenue.md` |

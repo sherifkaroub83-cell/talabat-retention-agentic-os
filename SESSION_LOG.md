@@ -6,6 +6,53 @@ writes these entries for you.
 
 ---
 
+## Session 3 — 2026-07-22 (Phase 7: first real pipeline execution, Section 3 pilot)
+
+**Focus:** stop designing, start proving. Per explicit instruction, ran the first real, non-simulated
+end-to-end execution of the Business Plan Generation Pipeline — invoking the actual `bp-orchestrator`
+agent on real Business Plan content, not a smoke test.
+
+**Done:**
+- Readiness check: confirmed all 8 agents, 8 skills, 2 templates, 10 pipeline/spec references, 4
+  memory files, and Section 3's specific evidence files present. No blockers.
+- Selected Section 3 (Market Analysis) as the pilot: exercises the most components (research,
+  decision, evidence-ranking, drafting, QA) against real pre-existing corpus conflicts, with no real
+  forecasting required.
+- Invoked `bp-orchestrator` for real. **Critical finding:** once spawned as a subagent, it had no
+  `Agent`, `WebSearch`, or `WebFetch` tools available, despite its own frontmatter listing them — the
+  designed delegation mechanism (orchestrator spawns isolated specialist agent threads) does not work
+  as specified in this runtime. It self-detected this and adapted by executing each specialist's
+  documented procedure in-context, flagging the degradation explicitly in every artifact rather than
+  presenting self-executed work as independently delegated.
+- Despite the degraded delegation, the actual content pipeline worked: found and correctly routed
+  (never silently resolved) two real corpus conflicts through Decision records — `DEC-001` (Egypt's
+  category-share figure: 10x+ vs. 1x+→4x+, present both footnoted) and `DEC-002` (three
+  non-reconcilable Egypt market-size figures, presented separately, not blended) — and caught a real
+  analytical error along the way (IMARC's Egypt online-food-delivery figure is arithmetically smaller
+  than talabat's own disclosed Egypt revenue). Resolved 4 external-research gaps (`RES-001`–`004`).
+  Registered 4 real assumptions (`ASM-001`–`004`) — the Decision and Research layers hold real content
+  for the first time. Drafted `vault/Projects/Business_Plan_Drafts/Section_03_Market_Analysis.md` in
+  full (248 lines, McKinsey Lens compliant — Pyramid, MECE justified, SWOT with "so what" per
+  quadrant), ran a citation audit (PASS, 0 hard failures) and a QA review (PASS, with an explicit
+  self-review independence caveat).
+- Found and fixed two minor broken wikilinks (skill files linked as if they were vault notes) during
+  independent verification of the agent's output.
+- Section 3 marked ✅ Done* in the Project tracker — the asterisk and inline caveat carry forward
+  honestly that the QA pass was self-administered, not independently verified by a separate agent
+  thread, pending the orchestration-pattern fix.
+- Full execution + architecture review: `vault/Validation/Phase7_Pilot_Execution_Report_Section_03.md`.
+
+**Explicitly not done:** no architecture files were modified — per instruction, the recommended fix
+(invoke each specialist agent directly from the top-level session rather than nesting delegation
+inside `bp-orchestrator`) is recorded as a recommendation for the next pilot to test, not applied
+preemptively.
+
+**Next:** re-run one pilot section (or this same section again) with the corrected invocation pattern
+to test whether real agent-thread isolation resolves the independence-caveat problem; then continue
+roadmap Phase 7 on Sections 2, 9, 10.
+
+---
+
 ## Session 2 — 2026-07-21 (continued: OS Architecture Design Phase)
 
 **Focus:** Design the complete Agentic Operating System architecture required before any Business

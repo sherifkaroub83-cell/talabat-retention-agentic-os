@@ -22,6 +22,9 @@ Every quality-control checkpoint produced while building this vault, in chronolo
 ## OS Architecture Design Phase
 - [[OS_Architecture_Design_Phase_Validation_Report|OS Architecture Design Phase Validation Report]] — confirms what was built (8 agents, 6 skills, 3 evidence layers, the 11-stage pipeline) and, explicitly, what wasn't (no Business Plan content, no populated Decisions/Research/Forecasts entries) — design-only scope check
 
+## Phase 7 — Operational validation (first real pipeline execution)
+- [[Phase7_Pilot_Execution_Report_Section_03]] — the first real, non-simulated end-to-end run of the Business Plan Generation Pipeline (Section 3, Market Analysis): readiness check, execution log (agents/skills/files/decisions/evidence), and an execution-evidence-only architecture review. Headline finding: the content-generation logic works and caught a real analytical error; the multi-agent delegation mechanism does not yet work as designed in this runtime (no `Agent`/`WebSearch`/`WebFetch` tools available to a spawned orchestrator) — see the report for the recommended fix
+
 ## Independent compliance audits (external-examiner perspective, not self-reported)
 - [[Independent_Project_Compliance_Report]] — v2, re-run against the merged main-equivalent state: requirements traceability, per-section Business Plan readiness, 12-area OS evaluation, architecture review, grading simulation (~33/100 as of this pass), and remaining roadmap. v1 (pre-merge) findings are marked RESOLVED in place rather than deleted, so the audit trail stays legible across passes.
 
