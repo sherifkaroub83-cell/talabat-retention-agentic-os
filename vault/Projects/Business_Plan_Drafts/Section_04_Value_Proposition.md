@@ -11,7 +11,7 @@ pipeline_run: 2026-07-22
 > Stage 8 (Drafting) role, per Phase 8 of the roadmap (post-Pilot-Validation-Plan drafting). Every value
 > mechanism named below is deliberately the same set already built into
 > [[Value_Driver_Tree|the Value Driver Tree]] (`ASM-008`, `ASM-011`) and [[KPI_Tree|the KPI Tree]]
-> (K6, K7, K13, K14, K16) during Pilot 3 — per the template's own instruction that "the mechanisms named
+> (K6, K7, K8, K13, K14, K16) during Pilot 3 — per the template's own instruction that "the mechanisms named
 > here must reappear as line items in Section 9 and KPIs in Section 13," this section does not invent a
 > parallel mechanism set, it names the one those two artifacts already encode. This is a working draft
 > in `vault/Projects/`, not yet promoted to `Outputs/`.
@@ -59,7 +59,7 @@ Egypt's app experience.
 **Quantified (Group-level, the only trail in the corpus; not yet Egypt-proven):** the
 personalisation/ranking algorithm's estimated EBITDA contribution rose from USD 14mn+ (FY2024) to
 USD 30mn+ (FY2025) — TLB-001 p.23, TLB-002 p.15 — the only directly quantified financial trail for any
-AI mechanism in the entire corpus.
+AI mechanism in the entire corpus (`Topics/Profitability.md`).
 
 - **So what, for the customer:** less time spent searching, more relevant product discovery — directly
   addresses the pre-personalisation "unpersonalised experience gap" [[Section_02_Business_Description|
@@ -98,9 +98,9 @@ AdTech penetration is currently unmeasured.
 
 **Quantified (Group-level):** Advertising & listing fees revenue grew from USD 246m (FY2024) to
 USD 323m (FY2025), +32% y/y (TLB-002 p.20, TLB-009 p.4), against a management-stated ~7%-of-GMV
-medium-term benchmark already reached in the UAE for talabat mart specifically (TLB-001 p.21) — current
-Group AdTech penetration sits at 3.4–3.5% of GMV, implying real headroom even before considering Egypt's
-own unmeasured baseline.
+medium-term benchmark (TLB-001, page 21) already reached in the UAE for talabat mart specifically
+(TLB-002, page 10) — current Group AdTech penetration sits at 3.4–3.5% of GMV (TLB-002, pages 11/14/19),
+implying real headroom even before considering Egypt's own unmeasured baseline.
 
 - **So what, for the customer/Partner:** more relevant Partner promotions and offers, delivered through
   the same personalisation infrastructure that already serves consumer-facing recommendations —
