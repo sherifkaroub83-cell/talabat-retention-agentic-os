@@ -69,8 +69,9 @@ USD 952mn (FY2024) and USD 1,397mn (FY2025) combined figures above are not decom
 section, per `DEC-006`'s explicit scope limit. (TLB-010, page 16; TLB-011, page 4)
 
 **Egypt-specific gap, stated plainly:** no document in the corpus breaks out Egypt's revenue by these four
-fee-type lines — Egypt's only disclosed figures are total segment revenue (USD 509.9mn FY2025, audited;
-USD 145.3mn Q1 2026, ~81% YoY growth, TLB-010, page 20; `Topics/Segment Reporting.md`). The mix-shift
+fee-type lines — Egypt's only disclosed figures are total segment revenue (USD 509.9mn FY2025, audited,
+TLB-002, page 111; TLB-008, page 61; USD 145.3mn Q1 2026, ~81% YoY growth, TLB-010, page 20;
+`Topics/Segment Reporting.md`). The mix-shift
 argument above is a Group-level mechanism this plan proposes extends to Egypt via `DEC-003`'s roadmap-
 extension hypothesis — it is not something directly observed for Egypt. Given Egypt's talabat pro
 programme is only ~18 months old at this analysis (launched February 2025), it is plausible Egypt's
@@ -108,9 +109,13 @@ one uniform pricing approach:
   (`Topics/Advertising.md`, referenced via [[Section_04_Value_Proposition|Section 4]]; TLB-001, page 21;
   TLB-002, page 10).
 
-No document in the corpus discloses Egypt-specific pricing (talabat pro's EGP price point, Egypt commission
-rates, or Egypt AdTech CPC rates) — this section names the four pricing models structurally, as disclosed
-at Group level, without inventing an Egypt figure.
+No primary TLB-XXX corpus document discloses Egypt-specific pricing for Egypt commission rates or Egypt
+AdTech CPC rates. One Egypt price point is available, but only as labeled External Research, not from the
+audited primary corpus: talabat pro's Egypt price is EGP 79/month, per `ASM-004`
+(`RES-004_egypt-official-newsroom-operational-datapoints`, sourced from talabat's official newsroom,
+explicitly outside the audited TLB-XXX regime — the same figure and same labeling discipline
+[[Section_03_Market_Analysis|Section 3]] already uses). Beyond that one figure, this section names the
+four pricing models structurally, as disclosed at Group level, without inventing an Egypt figure.
 
 ## 6.3 Recurring vs. One-Time Revenue Streams; Unit Economics
 
