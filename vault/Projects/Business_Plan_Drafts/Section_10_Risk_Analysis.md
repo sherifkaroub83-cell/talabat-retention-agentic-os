@@ -59,9 +59,9 @@ regulation; there is no sixth kind of risk this framework would need to invent a
 - **Scalability — partially de-risked, not eliminated.** Egypt already hosts real AI/engineering
   infrastructure (the largest MENA q-commerce distribution center with in-house AI demand forecasting;
   a 1,500-person Global Tech & Shared Services hub delivering 74% of shared services and 30% of app
-  features Group-wide — `ASM-004`, cited in Section 2 §2.1). This reduces, but does not eliminate,
-  scalability risk: infrastructure capacity is not the same as confirmed model performance on Egypt's
-  specific data.
+  features Group-wide — `ASM-004`, cited in [[Section_03_Market_Analysis|Section 3]] §3.1/§3.3). This
+  reduces, but does not eliminate, scalability risk: infrastructure capacity is not the same as
+  confirmed model performance on Egypt's specific data.
 - **Model drift.** No document discloses how frequently talabat retrains or monitors its personalisation
   models per market — if Egypt's rapidly growing, still-immature customer base shifts behavior faster
   than a shared, Group-wide model retraining cadence accounts for, recommendation relevance could
@@ -128,10 +128,14 @@ as risk inputs:**
   continuity this plan cannot verify.
 - **Delivery-reliability dependency risk.** ~90–95% of talabat's delivery workforce operates via
   third-party logistics or freelance arrangements (`Strategic/Competitive Weaknesses.md`, TLB-001 p.34,
-  p.47) — talabat itself names this a labour-compliance and service-quality-control risk. Because
-  consistent delivery experience is a precondition for the AI-personalisation-driven loyalty this plan
-  recommends, execution quality on a dependency talabat does not fully control is a real organizational
-  risk to the retention thesis, independent of whether the AI capability itself works.
+  p.47) — talabat itself names this a labour-compliance and service-quality-control risk. **This is a
+  Group-wide figure; no Egypt-specific rider-sourcing breakdown is disclosed, and the corpus does not
+  state whether Egypt's model differs from the GCC's** (`Strategic/Competitive Weaknesses.md`'s own
+  Open Questions). Because consistent delivery experience is a precondition for the
+  AI-personalisation-driven loyalty this plan recommends, execution quality on a dependency talabat does
+  not fully control — and cannot yet be confirmed or ruled out as more or less acute in Egypt
+  specifically — is a real organizational risk to the retention thesis, independent of whether the AI
+  capability itself works.
 - **Regulatory exposure precedent.** talabat's scale has already triggered antitrust/regulatory action
   in five of its eight markets (Kuwait, UAE, Iraq investigations; a Qatar commission-rate cap; Oman
   licensing disputes — `Strategic/Competitive Weaknesses.md`). No Egypt-specific action is disclosed,
@@ -154,7 +158,7 @@ Process.md`'s own honesty about undisclosed internal governance mechanics).
 | Risk | Category | Probability | Impact | Rationale for the rating |
 |---|---|---|---|---|
 | Upside case underperforms base case (intervention effect weaker than Group pattern in Egypt) | Financial | **High** | **High** | Every quantified input is Low-confidence, Group-extrapolated evidence explicitly excluding Egypt at time of measurement — the single most-evidenced risk in this table, not a hypothetical |
-| Model transfer risk (Egypt behavior diverges from GCC training population) | Technical | Medium | High | Plausible given Egypt's distinct macro/behavioral profile (inflation, newer digital-payment adoption), but no disclosed evidence either confirms or rules it out |
+| Model transfer risk (Egypt behavior diverges from GCC training population) | Technical | Medium | High | Plausible given Egypt's distinct macro/behavioral profile (food inflation, EGP devaluation pressuring price sensitivity — §10.1, `Strategic Risks.md`), but no disclosed evidence either confirms or rules out whether this actually degrades AI-model performance |
 | Local competitor erosion (Breadfast/Rabbit/elmenus) | Market | Medium | Medium | Real, named, but from secondary/non-primary corpus evidence only (`ASM-002`), and no source quantifies actual share loss to any of them |
 | Macro/inflation demand compression | Market | High | Medium | Already observed and quantified at the market level (Mordor: −3.8pp CAGR impact from inflation/devaluation), independent of this plan's execution |
 | FX/currency depreciation beyond guidance | Financial | Medium | Medium | Named explicitly by management as a risk already "incorporated in guidance" — meaning some depreciation is expected and priced in; risk is specifically *further* depreciation beyond that |
@@ -164,7 +168,8 @@ Process.md`'s own honesty about undisclosed internal governance mechanics).
 | Regulatory action in Egypt | Regulatory | Low | Medium | No disclosed precedent in Egypt specifically; rated above zero only because the pattern exists in 5 of 8 other markets tied to the same category-dominance profile Egypt now shares |
 | AI-capability ownership ambiguity | Organizational | Medium | Low | Plausibly slows execution/coordination, but does not by itself threaten the plan's viability the way the top risks do |
 
-**So what:** the two highest-severity cells (High/High and the two High/Medium market risks) are all
+**So what:** the top three cells by severity — the High/High financial risk, the Market-category
+High/Medium macro-pressure risk, and the Technical-category Medium/High model-transfer risk — are all
 either directly inherited from Section 9's own confidence tagging or from Section 3's already-evidenced
 Threats — this table does not manufacture new risk, it structures and scores risk this plan's own prior
 sections already carried. That is the intended behavior of a MECE risk framework applied honestly, not
@@ -200,8 +205,9 @@ Lens instruction that pre-mortem findings become mitigation priorities — not a
 
 **Mitigation priority ranking, derived directly from the pre-mortem (not independently re-ordered):**
 narratives 1 and 2 share the same root cause (the upside case's Low confidence) and together account for
-the two highest-severity matrix cells — **instrumenting the newly-baseline KPIs (`KPI_Tree.md`'s K5–K9,
-K13–K14) as early as possible is the single highest-priority mitigation**, because it is the only action
+the single highest-severity matrix cell (the High/High financial risk) — **instrumenting the
+newly-baseline KPIs (`KPI_Tree.md`'s K5–K9, K13–K14) as early as possible is the single highest-priority
+mitigation**, because it is the only action
 that converts a Low-confidence, unproven assumption into a measured, monitorable one before the
 investment case is fully committed. Narrative 3 (governance) and narrative 4 (competitive speed) are
 lower-probability but real, and their mitigations are structural rather than data-driven (see below).
