@@ -194,7 +194,12 @@ complete for the entire Business Plan as of 2026-07-22.
    fail/fix/re-verify cycle on the template's "first half page" Answer-placement requirement) — see
    [[QA_Review_Section_01]]. **All fourteen sections complete and independently verified.**
 8. Phase 10 (next): export to `Outputs/`; write the OS structure document; build the presentation deck;
-   upload to Moodle
+   upload to Moodle. **Publication Layer built 22/07/2026** — `.claude/skills/
+   executive-document-formatting/SKILL.md`, [[Publication_Layer]], and
+   [[_TEMPLATE-formatting-qa-report]] now exist (formatting/export capability only, per explicit
+   scope). Not yet exercised: no `Formatting_QA_Report.md`, no DOCX/PDF export, `Outputs/` still
+   empty, whole-plan McKinsey Lens pressure test still outstanding — all await separate authorization.
 
 ## Links
-- [[MOC-Second-Brain]] · [[Talabat MOC]] · [[Project Administration]] · [[user]] · [[identity]]
+- [[MOC-Second-Brain]] · [[Talabat MOC]] · [[Project Administration]] · [[user]] · [[identity]] ·
+  [[Publication_Layer]]

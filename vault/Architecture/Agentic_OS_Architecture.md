@@ -22,6 +22,9 @@ per the explicit project decision recorded in `MEMORY.md` (2026-07-21, OS Archit
 - [[Forecasting_Layer]] — Task 7
 - [[Business_Plan_Generation_Pipeline]] — Task 8 (the redesigned skill)
 - [[Implementation_Roadmap]] — Task 11
+- [[Publication_Layer]] — added 22/07/2026, after all 14 sections reached Done: the terminal,
+  plan-level formatting/export layer downstream of everything in this document. Narrow extension,
+  not a revision of anything below.
 
 ---
 
