@@ -97,7 +97,7 @@ presented as three co-equal numbers — each plays a distinct, explicitly labele
 
 | Scenario | Role (per DEC-005) | Growth logic | Confidence |
 |---|---|---|---|
-| **Base** | **Headline financial baseline** | Egypt's disclosed FY2025→Q1 2026 trend (+81% YoY) moderates toward the Group's FY2026 guided revenue growth (14–17% cFX) as base effects wash out. **No credit taken for this plan's own intervention.** | Medium (2-point extrapolation ceiling — the corpus's honest limit) |
+| **Base** | **Headline financial baseline** | Egypt's disclosed FY2025→Q1 2026 trend (+81% YoY) moderates toward the Group's FY2026 guided revenue growth (14–17% cFX) as base effects wash out. **No credit taken for this plan's own intervention.** **Illustrative FY2026 revenue: ≈USD 581–597m** (509.9m × 1.14–1.17; see below). | Medium (2-point extrapolation ceiling — the corpus's honest limit) |
 | **Upside** | **The intervention's projected return, not a competing central estimate** | DEC-003's AI-roadmap-extension mechanism succeeds in Egypt as it has at Group level (talabat pro's 20-28% frequency uplift / 26-32% retention uplift; AI/personalisation EBITDA contribution rising USD14mn+→USD30mn+ FY2024→FY2025) — on top of, not instead of, the base case. | Low, always — an unproven intervention, and every quantified input is Group/GCC evidence that explicitly excludes Egypt at time of measurement |
 | **Downside** | **A named risk case, not equally likely to the base case** | The already-observed Group margin compression (Q1 2026 Adj. EBITDA margin 4.8% vs. 6.3%) and the one named Egypt FX-depreciation risk (TLB-020, page 14) deepen beyond what FY2026 guidance already prices in. | Medium (extrapolates an already-observed, partly Egypt-named risk; direction evidenced, magnitude is not) |
 
@@ -107,13 +107,26 @@ compression the downside case extrapolates. Egypt may be a market whose improvin
 helping fund the Group's broader investment step-down, not one being squeezed by it. The downside case
 is a genuine, named risk to plan against — not the single most likely reading of Egypt's own trend.
 
+**Illustrative FY2026 base-case revenue figure** *(labeled synthetic — the same "estimated number with
+visible logic beats a precise number with none" treatment already applied to the investment estimate in
+§9.2 and the break-even sensitivity in §9.4, applied here for consistency; not a disclosed Egypt-specific
+forecast)*: scaling Egypt's disclosed FY2025 revenue (USD 509.9m, Fact) by the Group's own disclosed
+FY2026 guided growth range (14–17% cFX, TLB-019 p.18/TLB-020 p.14, Fact) yields **≈USD 581–597m**,
+carrying the base case's own stated Medium confidence ceiling (a 2-point trend-extrapolation cap, not
+elevated by this arithmetic). This figure applies a *Group* guidance range to an *Egypt* revenue base —
+Egypt's own disclosed growth has run well above the Group range (+81% YoY at Q1 2026) — so this range is
+best read as a conservative floor consistent with the base case's own "no intervention credit" framing,
+not a ceiling on what Egypt could plausibly do.
+
 This plan does not state a numeric upside-case revenue figure. `Value_Driver_Tree.md`'s intervention
 nodes (order frequency, advertising penetration) are built as **directional** assumptions, not
 percentage targets — per the forecast-builder skill's own confidence-calibration rule, asserting a
-specific upside revenue number here would misrepresent the evidence's actual precision. Section 9.4
-below builds an explicitly-labeled illustrative sensitivity instead of a false-precision forecast.
+specific upside revenue number here would misrepresent the evidence's actual precision, unlike the
+base-case figure above, which is a direct scaling of two already-disclosed Facts rather than an
+extrapolation through an unproven intervention. Section 9.4 below builds an explicitly-labeled
+illustrative P&L snapshot and break-even sensitivity on top of this base-case figure.
 
-## 9.4 Break-Even Analysis and Illustrative Sensitivity
+## 9.4 Break-Even Analysis, Illustrative Sensitivity, and P&L Snapshot
 
 Egypt is **already profitable at the segment level** (FY2025 net profit USD 44.4m; Q1 2026 profit
 before tax USD 9.4m) — this plan is not proposing to take a loss-making market to break-even. The
@@ -134,11 +147,32 @@ disclosed talabat figure):**
   measurements and this plan does not claim they are.
 
 **This is presented as an illustrative sensitivity anchor for discussion, not a modeled forecast with a
-break-even date.** No Egypt-specific timeline, month-by-month P&L, or revenue-ramp curve is asserted —
-the corpus does not support one, and inventing one would violate this plan's own evidence discipline. A
-future pilot or drafting pass with more granular Egypt data (order counts, active-customer figures)
-could tighten this into an actual break-even timeline; as of this corpus, direction and order-of-magnitude
-are the honest ceiling.
+break-even date.** No Egypt-specific *timeline* (month-by-month ramp curve) is asserted — the corpus does
+not support one, and inventing one would violate this plan's own evidence discipline. A future pilot or
+drafting pass with more granular Egypt data (order counts, active-customer figures) could tighten this
+into an actual break-even timeline; as of this corpus, direction and order-of-magnitude are the honest
+ceiling for a *timeline*. An annual P&L snapshot, however, does not require that missing timeline data —
+it is buildable from figures already computed above, and is given below rather than omitted.
+
+**Illustrative FY2026 annual P&L snapshot (labeled synthetic throughout — assembled entirely from
+Approved-tier figures already computed in this section, not a disclosed talabat P&L):**
+
+| Line | Illustrative FY2026 figure | Basis |
+|---|---|---|
+| Revenue (base case) | ≈USD 581–597m | §9.3 above: FY2025 revenue (Fact) × Group FY2026 guided growth (Fact) |
+| Gross profit (at FY2025's disclosed 24.5% margin) | ≈USD 142–146m | Applying the Fact-derived FY2025 gross-margin ratio forward to the illustrative revenue range |
+| Less: illustrative Egypt AI-roadmap-extension investment (§9.2) | (USD 13.2m) | `ASM-012` |
+| **Illustrative gross profit net of investment** | **≈USD 129–133m** | Arithmetic: gross profit less the investment line above |
+| *Memo: FY2025 actual profit before tax (scale reference only, not projected forward)* | *USD 39.7m* | `[FACT → Facts/Revenue.md]`, TLB-002 p.111 |
+
+**This snapshot deliberately stops at gross profit net of the investment ask — it is not a full P&L down
+to net profit.** The corpus discloses no Egypt-specific SG&A, opex-beyond-delivery-cost, or tax detail
+(`Strategic/Cost Structure.md`'s own Open Questions confirm this gap explicitly); projecting a bottom-line
+net-profit or PBT figure would require inventing an Egypt SG&A/tax ratio the corpus does not support. The
+large gap visible between FY2025's actual gross profit (USD 125.0m) and actual PBT (USD 39.7m) — roughly
+USD 85mn of undisclosed opex/other costs — is the evidence for why this snapshot does not extrapolate
+further than gross profit; doing so would silently invent that USD 85mn line rather than disclose the gap
+honestly. This is the corpus's genuine ceiling for P&L granularity, not a shortcut taken to avoid the work.
 
 ## 9.5 Key Assumptions Register (5–10 numbers the case depends on)
 
@@ -195,7 +229,8 @@ Egypt directly.
 | Value Driver Tree (6 Assumption nodes) | [[Value_Driver_Tree]] / `ASM-007`–`ASM-012` | Approved — all Low confidence except root's Medium trend ceiling |
 | Three-scenario forecast + headline framing | [[Scenarios]] / [[DEC-005_section9-headline-scenario]] | Approved — base=baseline, upside=return, downside=named risk |
 | KPI consistency (Section 13 feed) | [[KPI_Tree]] | Built — 16 KPIs, 0 orphans, no unbacked numeric targets |
-| Break-even/sensitivity illustration | Net-new synthesis (§9.4), built only from Approved-tier components | Labeled illustrative, not a disclosed figure |
+| Base-case FY2026 revenue figure (≈USD581-597m) | Net-new synthesis (§9.3), Fact revenue × Fact Group guidance range | Labeled illustrative, not a disclosed Egypt-specific forecast |
+| Break-even sensitivity + illustrative annual P&L snapshot | Net-new synthesis (§9.4), built only from Approved-tier components already computed in this section | Labeled illustrative throughout; deliberately stops at gross profit (no Egypt SG&A/tax data exists to go further) |
 | Governing hypothesis consistency (no Option 1/3 drift) | [[DEC-003_section2-governing-hypothesis]] | Checked explicitly in §9.1 — no drift found |
 
 ## Links
