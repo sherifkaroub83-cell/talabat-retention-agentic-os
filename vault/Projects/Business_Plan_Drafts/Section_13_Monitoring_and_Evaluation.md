@@ -128,9 +128,11 @@ split above:
     only, no numeric target, per `Value_Driver_Tree.md`). The operative test is therefore: **K5, K6, K7,
     K8, K9, K13, K14 are the diagnostic signal, read against the GCC benchmark** (since no Egypt base-case
     trajectory exists for any of them individually), **and R1 is the outcome signal, read against Section
-    9's base case vs. upside case** (per `DEC-005`'s framing). Sustained GCC-benchmark underperformance
-    on the seven diagnostic KPIs, corroborated by R1 tracking toward or below the base case rather than
-    the upside case, is what should trigger a stop/reassess decision — not a percentage or absolute-number
+    9's quantified base case** (≈USD581–597m; the upside case is not itself a separate dollar figure, only
+    "the intervention's projected return... on top of, not instead of, the base case," per `DEC-005`'s
+    framing). Sustained GCC-benchmark underperformance on the seven diagnostic KPIs, corroborated by R1
+    tracking at or below the quantified base case rather than showing the incremental lift the upside case
+    describes, is what should trigger a stop/reassess decision — not a percentage or absolute-number
     threshold on any individual KPI, because no absolute threshold can be derived from a corpus with zero
     Egypt baseline for any of them.
 - **Monitoring-only KPIs (K10, K11, K12, K15, K16):** tracked and reported once instrumented, but carry no

@@ -287,3 +287,131 @@ Orchestrator.
 - [[Section_04_Value_Proposition]] · [[Section_09_Financial_Plan]] §9.1/§9.3 · [[Section_10_Risk_Analysis]] §10.2–§10.4 · [[Section_12_Implementation_Plan]] (H1, H2)
 - [[QA_Review_Section_12]] — precedent for this report's format, rigor, and the thin-subsection acceptability bar applied in §2(e)
 - [[Business_Plan_Generation_Pipeline]]
+
+---
+
+# Targeted re-review — fix verification (2026-07-22)
+
+## Scope and independence note
+
+This addendum is a targeted Stage 11 re-verification, invoked specifically to check the fix applied in
+response to the FAIL above. Files re-read directly for this pass, not taken on the fix description's word:
+the current `Section_13_Monitoring_and_Evaluation.md` §13.4 (and, for context, §13.1–13.3 and the rest of
+the section, in full), `Section_09_Financial_Plan.md` in full (not just §9.3, to catch anything §9.3 alone
+might not surface), and `Value_Driver_Tree.md` in full.
+
+## 1. Re-confirming the underlying premise: is R1 genuinely the only KPI with an individually-modeled
+base-case trajectory?
+
+**Confirmed, with one nuance the fix text slightly overstates.** Re-reading Section 9 §9.3 directly: R1
+(Egypt segment revenue) has a **quantified base case** — "Illustrative FY2026 revenue: ≈USD 581–597m"
+(Egypt's disclosed FY2025 revenue × the Group's disclosed FY2026 guided growth range) — which is a real
+number decomposed nowhere else in the tree for any other KPI. Cross-checked against `Value_Driver_Tree.md`:
+`ASM-008` (feeds K6–K9) and `ASM-011` (feeds K13–K14) are explicitly built as "directional... not a
+numeric extrapolation with a stated target percentage" — confirmed, no numeric Egypt trajectory exists for
+these six KPIs individually, exactly as the fixed §13.4 text now states.
+
+**The nuance:** Section 9 §9.3 also explicitly states, in its own words, "**This plan does not state a
+numeric upside-case revenue figure**" — meaning R1's *upside* case is qualitative/directional (Group-level
+uplift ranges applied "on top of, not instead of" the base case), not a quantified trajectory either. Only
+R1's *base* case is a real number; its upside case is the same class of directional-only evidence as
+`ASM-008`/`ASM-011`, just narratively distinct because it's tied to the one Root KPI that does have a
+quantified floor to move away from. The fixed §13.4 text's phrase "Section 9 individually models a
+base-case/upside-case trajectory only for R1" and "R1 tracking toward or below the base case rather than
+the upside case" therefore slightly overstates what Section 9 provides — it reads as if both scenarios are
+quantified for R1, when only the base case is. This is a real, if narrow, precision gap, not a
+reintroduction of the original ambiguity: the actual operative trigger in the fixed text is "R1 tracking
+... below the base case" (a real, quantified ≈581–597m threshold), so the test remains executable without
+needing a number for "upside" — "upside" functions here as a directional label (growth outperforming the
+base-case floor), not a second quantified target the reader is asked to check against. **Non-blocking
+observation, not a defect that reopens the original finding** — see Result below for the recommended
+one-clause tightening.
+
+## 2. Is the reworded §13.4 internally coherent — does it resolve the contradiction, or restate the
+ambiguity in more words?
+
+**It resolves the contradiction.** Re-reading the current text directly:
+
+> "Kill criterion, stated qualitatively, not numerically, per `DEC-007` — one test, two roles, not two
+> competing anchors: Section 9 individually models a base-case/upside-case trajectory only for R1 (Egypt
+> segment revenue); it does not model a separate numeric base-case trajectory for K5–K9 or K13–K14
+> individually (`ASM-008`/`ASM-011` are explicitly directional only, no numeric target, per
+> `Value_Driver_Tree.md`). The operative test is therefore: K5, K6, K7, K8, K9, K13, K14 are the
+> diagnostic signal, read against the GCC benchmark (since no Egypt base-case trajectory exists for any of
+> them individually), and R1 is the outcome signal, read against Section 9's base case vs. upside case
+> (per `DEC-005`'s framing). Sustained GCC-benchmark underperformance on the seven diagnostic KPIs,
+> corroborated by R1 tracking toward or below the base case rather than the upside case, is what should
+> trigger a stop/reassess decision..."
+
+This is a materially different structure from the original FAIL text. The original defect was that two
+different anchors (GCC benchmark; Section 9 base case) were both asserted to govern the *same* seven KPIs,
+with no statement of which one actually decides the stop/no-stop question. The fixed text instead assigns
+each anchor to a **distinct, non-overlapping role**: the seven KPIs get exactly one anchor (GCC benchmark,
+as diagnostic/leading corroboration), and R1 gets exactly one anchor (Section 9's base case, as the
+outcome/confirming signal) — precisely the reconciliation this review's original required-fix language
+proposed almost verbatim. A reader can now execute the test as written: watch the seven KPIs against the
+GCC-benchmark ranges; watch R1 against the ≈581–597m base-case range; treat sustained underperformance on
+the former, corroborated by R1 sitting at or below the latter, as the trigger. This is coherent and
+operationally answerable — not two unreconciled tests dressed in new prose. **The blocking defect from the
+original review is resolved.**
+
+## 3. MECE fix sanity check
+
+Re-verified directly against §13.1's own 16-row table. §13.2 now states: "The split is MECE by
+construction: `KPI_Tree.md`'s own tagging convention assigns each KPI exactly one of the two tags, with no
+KPI appearing in both counts and 6+10 summing to the full 16-KPI set." Row-by-row check against §13.1:
+Leading = K5, K6, K7, K13, K14, K16 (6); Lagging = R1, R2, R3, R4, K8, K9, K10, K11, K12, K15 (10). Every
+one of the 16 rows appears in exactly one list, none in both, none in neither; 6 + 10 = 16, the full
+registered set. **Confirmed accurate — this fix is correct and sufficient, no further action needed.**
+
+## 4. Full-section re-read — any other issue?
+
+Re-read the entire current section end to end (§13.1 through the Links block), independently of the
+§13.4/§13.2 fixes, specifically hunting for anything else in this highest-stakes subsection. One additional
+minor observation surfaced, related to but distinct from the nuance in §1 above:
+
+- The closing sentence of the kill-criterion bullet — "not a percentage or absolute-number threshold on
+  any individual KPI, because no absolute threshold can be derived from a corpus with zero Egypt baseline
+  for any of them" — read in isolation could be misread as applying the "zero Egypt baseline" rationale to
+  R1 as well as to the seven diagnostic KPIs. R1 is not zero-baseline (it has FY2025 audited revenue and a
+  quantified base-case range); the "zero baseline" reasoning genuinely applies only to K5–K9/K13–K14. In
+  context, "any of them" most naturally reads back to the seven diagnostic KPIs named earlier in the same
+  sentence (not to R1, which the sentence already treated separately via the base-case/upside-case
+  language), so this is a readability nit rather than a substantive contradiction — but it sits in the same
+  sentence as the §1 nuance, so both are flagged together below as one bundled, optional tightening.
+
+No other completeness, traceability, or internal-consistency issues were found on this full re-read. §13.1,
+§13.3, the Feedback Loops subsection, and the Traceability summary are unchanged from the version already
+reviewed and passed in every respect other than §13.4/§13.2 in the original report above.
+
+## Result — Targeted re-review
+
+**PASS.** The one blocking defect from the original review — §13.4's two unreconciled comparison anchors
+for the same seven KPIs — is genuinely fixed, not just reworded around. Independently re-verified against
+Section 9 §9.3 and `Value_Driver_Tree.md` directly: the premise behind the fix (R1 is the only KPI with a
+quantified individually-modeled trajectory) holds, modulo one narrow precision nuance (R1's *base* case is
+quantified; its *upside* case, like the seven diagnostic KPIs, is directional-only) that does not reopen
+the original ambiguity, since the fixed text's actual operative trigger is a comparison against the
+quantified base-case range, not an undefined upside number. The MECE fix in §13.2 is independently
+confirmed accurate against §13.1's own table. No new blocking issue was found on a full re-read of the
+section.
+
+**Optional, non-blocking tightening (not required for pass, recommended for polish only):** in the
+kill-criterion bullet, replace "Section 9 individually models a base-case/upside-case trajectory only for
+R1" with something like "Section 9 individually models a quantified base-case trajectory only for R1 (its
+upside case is directional, per DEC-005, the same evidentiary class as the seven diagnostic KPIs' GCC
+benchmark)" — and, in the closing sentence, narrow "no absolute threshold can be derived from a corpus with
+zero Egypt baseline for any of them" to explicitly scope "them" to the seven diagnostic KPIs, since R1 is
+not zero-baseline. Neither change is required to pass this review; both are precision polish on language
+that is already operationally coherent as written.
+
+**Section 13 is now cleared on both the citation-audit front (§3 of the original report above, PASS,
+unchanged) and the QA front (this addendum, PASS).** Both blocking items from the original FAIL — the
+kill-criteria anchor reconciliation and the MECE statement — are independently re-verified as resolved.
+Section 13 is ready to be marked ✅ Done in the Project tracker.
+
+## Links (addendum)
+- [[Section_13_Monitoring_and_Evaluation|vault/Projects/Business_Plan_Drafts/Section_13_Monitoring_and_Evaluation.md]] §13.2, §13.4 — the fixed text re-verified in this addendum
+- [[Section_09_Financial_Plan]] §9.3 — re-read in full to independently confirm R1's base-case/upside-case treatment
+- [[Value_Driver_Tree]] — re-read in full to independently confirm `ASM-008`/`ASM-011`'s directional-only status
+- [[DEC-007_section13-review-cadence-kill-criteria]] · [[DEC-005_section9-headline-scenario]]
