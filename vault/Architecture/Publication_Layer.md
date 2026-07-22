@@ -128,10 +128,18 @@ that will run once authorized.
 `Agentic_OS_Architecture.md` or `Agentic_OS_Architecture_v2.md` — the eight content-pipeline agents,
 the four-tier evidence model, the 11-stage pipeline, and the two-pass verification protocol are all
 unchanged and out of scope here. This document adds exactly one new layer, downstream of all of them,
-that turns their already-verified output into a submission-ready file. No Business Plan section has
-been formatted or exported as a result of authoring this document — see
-`vault/Validation/Formatting_QA_Report.md`'s absence (not yet created) and `Outputs/`'s contents
-(unchanged) as of this commit.
+that turns their already-verified output into a submission-ready file.
+
+**Update, 22/07/2026 — first real export.** On explicit user authorization, this layer ran for real:
+[[Whole_Plan_McKinsey_Lens_Pressure_Test]] passed (PASS WITH MINOR FIXES, both fixes applied first),
+the input gate passed 14/14, and `Outputs/Talabat_Egypt_AI_Retention_Business_Plan.docx`/`.pdf` were
+produced with [[Formatting_QA_Report]] recording the run (verdict: PASS WITH MINOR FIXES — several
+formatting-pipeline bugs found via systematic integrity scan and fixed; zero content, number, or
+citation changed). One disclosed deviation from §4/§6 above: the PDF was produced via a headless-
+Chromium print pipeline rather than DOCX→LibreOffice conversion, because LibreOffice does not function
+in this execution environment (confirmed independent of this document) — see the Formatting QA
+Report's Content Flags for full disclosure. This does not change this layer's design, only how this
+one run's PDF technical requirement was satisfied.
 
 ## See also
 [[Agentic_OS_Architecture]] · [[Agentic_OS_Architecture_v2]] · [[Business_Plan_Generation_Pipeline]] ·

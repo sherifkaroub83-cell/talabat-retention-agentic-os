@@ -62,16 +62,23 @@ Every quality-control checkpoint produced while building this vault, in chronolo
   operationally stable with every major subsystem (Decision, Research, Forecast, Citation, two-pass QA
   layers) exercised together, on top of everything Pilots 1–3 already built
 
-## Publication Layer (formatting, not content — added 22/07/2026)
+## Publication Layer (formatting, not content — added 22/07/2026, exercised 22/07/2026)
 - [[Publication_Layer]] — narrow architecture extension: how a fully-drafted, independently-verified
   Business Plan becomes a submission-ready DOCX/PDF. Not Architecture Version 3 — does not revisit
   the content pipeline, the eight content agents, or the evidence model
 - `.claude/skills/executive-document-formatting/SKILL.md` — the layer's only operative procedure;
   strict content/formatting separation, "flag, don't fix" discipline
 - [[_TEMPLATE-formatting-qa-report]] — the reusable QA-verdict template this layer produces on each run
-- **Status:** capability built, not yet exercised — no `Formatting_QA_Report.md` exists yet, no
-  Business Plan section has been formatted, and no DOCX/PDF has been exported. `Outputs/` remains
-  empty pending explicit authorization to run this layer.
+- [[Formatting_QA_Report]] — the first real run's verdict record: **PASS WITH MINOR FIXES**. Several
+  formatting-pipeline bugs (wikilinks leaking raw `[[...]]` syntax inside table cells, bold spans, and
+  code spans; missing single-asterisk italic support; a doubled table-caption counter; cover-page
+  header/footer bleed) were found via a systematic corpus-wide integrity scan and fixed before export —
+  zero business content, number, claim, or citation changed. Discloses one environment limitation
+  (LibreOffice non-functional here; PDF produced via a headless-Chromium pipeline instead) as a Content
+  Flag, not silently worked around.
+- **Status:** exercised for real on explicit user authorization. `Outputs/Talabat_Egypt_AI_Retention_
+  Business_Plan.docx` (136 KB) and `.pdf` (772 KB, 82 pages) both exist, built from all 14
+  independently-verified section drafts plus the passed whole-plan pressure test.
 
 ## Whole-plan pressure test (22/07/2026, after all 14 sections reached Done)
 - [[Whole_Plan_McKinsey_Lens_Pressure_Test]] — cross-section check that no single-section QA review
