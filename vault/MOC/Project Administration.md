@@ -21,8 +21,13 @@ Capstone project-management content — team, milestones, decisions. Distinct fr
 - [[Implementation_Roadmap]] — phased rollout with git branches, dependencies, completion criteria
 - [[OS_Architecture_Design_Phase_Validation_Report|OS Architecture Design Phase Validation Report]] — validation report confirming design-only scope
 - [[Decisions_README|Decisions layer]] · [[Research_README|Research layer]] · [[Forecasts_README|Forecasts layer]]
-  — the three layers' own folder-index notes (scaffolded, empty; see each for its repository structure)
+  — the three layers' own folder-index notes; Decisions and Research now hold real content (Phase 7), Forecasts still empty
 - Operative, not vault graph nodes: `.claude/agents/` (8 files), `.claude/skills/` (6 new + 1 redesigned)
+
+## Phase 7/8 — Operational execution and evidence-based evolution (22/07/2026)
+- [[Phase7_Pilot_Execution_Report_Section_03]] — the first real, non-simulated pipeline execution
+- [[Agentic_OS_Architecture_v2]] — the evidence-based Version 2 architecture evolution: every change traced to specific execution evidence, everything execution validated left unchanged
+- [[Lessons_Learned_Phase7]] · [[Pilot_Validation_Plan]] — formal lessons-learned record and the next three planned pilots (Sections 2, 9, 10)
 
 ## Outside the vault (repo root — not part of the Obsidian graph, linked here as plain paths for navigation only)
 - `../PROJECT_PROGRESS.md` — milestone status snapshot

@@ -24,6 +24,11 @@ Every quality-control checkpoint produced while building this vault, in chronolo
 
 ## Phase 7 — Operational validation (first real pipeline execution)
 - [[Phase7_Pilot_Execution_Report_Section_03]] — the first real, non-simulated end-to-end run of the Business Plan Generation Pipeline (Section 3, Market Analysis): readiness check, execution log (agents/skills/files/decisions/evidence), and an execution-evidence-only architecture review. Headline finding: the content-generation logic works and caught a real analytical error; the multi-agent delegation mechanism does not yet work as designed in this runtime (no `Agent`/`WebSearch`/`WebFetch` tools available to a spawned orchestrator) — see the report for the recommended fix
+- [[Lessons_Learned_Phase7]] — formal what-worked/what-failed/what-surprised-us record, engineering and business recommendations
+
+## Phase 8 — Evidence-based architecture evolution
+- [[Agentic_OS_Architecture_v2]] — every architecture change traced to specific Phase 7 execution evidence (Previous Design → Evidence → Reason → New Design → Benefit); components execution validated unchanged are explicitly marked "No change recommended," not silently left as-is
+- [[Pilot_Validation_Plan]] — Pilots 2–4: the next three planned operational tests, not a jump to drafting the remaining Business Plan
 
 ## Independent compliance audits (external-examiner perspective, not self-reported)
 - [[Independent_Project_Compliance_Report]] — v2, re-run against the merged main-equivalent state: requirements traceability, per-section Business Plan readiness, 12-area OS evaluation, architecture review, grading simulation (~33/100 as of this pass), and remaining roadmap. v1 (pre-merge) findings are marked RESOLVED in place rather than deleted, so the audit trail stays legible across passes.
