@@ -176,7 +176,8 @@ Group level, roughly 25% of monthly active users (talabat pro subscribers/"ecosy
 account for roughly half of platform GMV — a disclosed 80/20 concentration this plan targets directly,
 though not yet Egypt-proven, since talabat pro launched in Egypt only in February 2025. This is a distinct
 statistic from the separately-disclosed multi-vertical cohort, which "now exceed[s] one-third of the
-base" (TLB-019, page 7) and shows its own higher order frequency and retention — the two should not be
+base" (TLB-019, page 7) and shows its own higher order frequency and retention (TLB-002, pages 7-8, 12;
+see also [[Section_03_Market_Analysis|Section 3]] §3.2) — the two should not be
 conflated as one group.
 
 **The value proposition's USP is speed and cost of deployment, not novelty of capability**

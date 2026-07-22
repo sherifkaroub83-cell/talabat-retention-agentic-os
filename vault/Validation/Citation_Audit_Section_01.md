@@ -444,3 +444,232 @@ spot-checked against the sources named above.**
   now states)
 - `vault/Projects/Business_Plan_Drafts/Section_09_Financial_Plan.md` §9.5 (lines 177–196 — confirmed
   wording Section 1 draws on)
+
+---
+
+# Second targeted re-audit (2026-07-22)
+
+## Overall verdict: **FAIL** — Section 1 still may not proceed to Stage 10. Two of the three items from the first re-audit are now genuinely, independently confirmed fixed. The third (Fix 1 / TLB-002 page 3) is confirmed fixed. But this pass's required deeper sweep of the exact sentence Fix 2 touched (the "one-third of the base" clarifying sentence) found that **the citation-location defect pattern recurred a third time, on the same sentence, immediately adjacent to where it was just corrected.** This is narrow, single-sentence, and precisely specified below — but under this project's 0%-tolerance rule it is sufficient on its own to withhold a PASS.
+
+## Scope and method for this pass
+Per the task brief: independently re-verified all three claimed fixes against the source layer directly
+(not against the first re-audit's own account of them), then ran one additional full-section sweep of
+Section 1 specifically for false-absence claims and wrong-location citations — the two defect patterns
+that have now surfaced twice in this section's history.
+
+1. Re-read the raw TLB-002 source text at and around the `===== PAGE 3 =====` marker
+   (`vault/Knowledge/_source_text/20260331_talabat-Annual-Report-2025-En-Interactive.txt`, lines 65–94).
+2. Read `vault/Knowledge/Sources/TLB-002_annual-report-2025.md` in full (not just its Important Quotations
+   section) to confirm the page-3 content is captured and correctly placed.
+3. Re-read the current Traceability summary table's "Mission and vision" row against the current Mission
+   and Vision body-text section, side by side.
+4. Read `vault/Knowledge/Facts/_raw/TLB-019_facts.md` in full and, separately, the fuller
+   `vault/Knowledge/Sources/TLB-019_q4-fy25-results-presentation.md` note, to check exactly what TLB-019
+   page 7 does and does not support, against the exact sentence in Section 1 that cites it.
+5. Full-text grep of `Section_01_Executive_Summary.md` for absence-type phrasing ("no ", "not disclosed",
+   "nowhere", "does not", "never", "not confirmed", "not yet") and checked every hit against its cited
+   source that was not already checked in the prior addendum's sweep.
+6. Spot-checked several citations not previously covered by name in either prior audit pass (GEMs/TLB-026,
+   talabat Rewards/TLB-023, the "does not license... to third parties" claim/Section 2 §2.5, Section 8's
+   7S "Shared values" row citing `Topics/Customer Journey.md`, and DEC-003's `AskUserQuestion` provenance
+   claim) — a broader net than the brief strictly required, in keeping with "one more full-section sweep."
+
+## Fix verification 1 — TLB-002 page 3 quote: VERIFIED, correctly resolved
+
+Re-read the raw source text directly at lines 65–94:
+
+```
+===== PAGE 3 =====
+
+talabat at a glance
+Vision and mission
+Empowering our communities.
+We proudly deliver to the region
+that delivers.
+We're the Orange Ones
+```
+
+This is **character-for-character accurate** to what Section 1's Mission and Vision section now quotes:
+*"Empowering our communities. We proudly deliver to the region that delivers. We're the Orange Ones"*
+(TLB-002, page 3), presented as the lead citation, with the Chairperson's (page 7) and CEO's (page 9)
+narrative statements correctly demoted to *"echoes"* rather than co-equal citations — exactly the fix
+prescribed by the first re-audit.
+
+`vault/Knowledge/Sources/TLB-002_annual-report-2025.md` was re-read in full (not only its Important
+Quotations section). The quote is now present, correctly placed as the **first, lead entry** in Important
+Quotations (lines 191–193): *"Vision and mission (explicit statement, 'talabat at a glance' page):
+'Empowering our communities. We proudly deliver to the region that delivers. We're the Orange Ones'
+(page 3) — the single most direct statement of both in the report."* — with the page 7/9 quotes correctly
+retained immediately below it as "(narrative echo)" entries. This is a genuine, correctly-sequenced fix at
+the Facts/Sources layer, not merely a local patch to Section 1. **Resolved. No further action.**
+
+## Fix verification 2 — Traceability summary table row: VERIFIED, now internally consistent
+
+Read the current table row directly (line 235 of the current draft):
+
+*"Mission and vision (disclosed, not a gap) | TLB-002, page 3 ("Vision and mission" heading), page 7
+(Chairperson), page 9 (CEO); Section 8 7S check and Section 2 §2.1 cited as operational analogs, not as
+filling an absence | Direct citation"*
+
+This now matches the body text exactly: the "disclosed, not a gap" framing is consistent with the Mission
+and Vision section's actual content, the citation column correctly leads with TLB-002 pages 3/7/9 (not just
+Section 8/Section 2), and the analogs are correctly relabeled as "operational analogs, not... filling an
+absence" — matching the body text's own "closest operational analogs" framing exactly, word for word. No
+stale "explicit gap statement" language remains anywhere in the row. **Resolved. No further action.**
+
+## Fix verification 3 — TLB-019 page 7 citation for the "one-third of the base" clause: PARTIALLY resolved — the "one-third of the base" half is now correctly cited; the immediately adjacent "higher order frequency and retention" half is not
+
+Read the current sentence directly (Section 1, lines 177–180):
+
+*"This is a distinct statistic from the separately-disclosed multi-vertical cohort, which 'now exceed[s]
+one-third of the base' (TLB-019, page 7) and shows its own higher order frequency and retention — the two
+should not be conflated as one group."*
+
+**What is now correctly fixed:** the "(TLB-019, page 7)" citation is no longer routed through Section 3
+§3.2 (which never contained this figure). Read directly:
+- `vault/Knowledge/Facts/_raw/TLB-019_facts.md`, line 49: *"multi-vertical customers now exceed one-third
+  of the base, indicating higher lifetime value and engagement"* (TLB-019, page 7).
+- `vault/Knowledge/Sources/TLB-019_q4-fy25-results-presentation.md`, line 38 and line 73 (Important
+  Quotations): *"multi-vertical customers 'now exceed one-third of the base'"* (p.7); *"Multi-vertical
+  customers now exceed one-third of the base, indicating higher lifetime value and engagement"* (p.7).
+
+Both independently confirm the quote and page. The re-citation directly to TLB-019, page 7 is accurate and
+correctly located. **This half of the fix is resolved.**
+
+**What is not fixed — a new, third occurrence of the same wrong-location-citation pattern, on the
+identical sentence:** the second half of the same sentence — *"and shows its own higher order frequency
+and retention"* — has **no independent citation of its own** and, read naturally, inherits the single
+"(TLB-019, page 7)" citation immediately preceding it. But TLB-019 page 7 does **not** say this. Checked
+directly against both `TLB-019_facts.md` (line 49) and `TLB-019_q4-fy25-results-presentation.md` (line 38,
+73): TLB-019 page 7's actual wording for multi-vertical customers is *"indicating higher **lifetime value
+and engagement**"* — not "order frequency and retention." These are related but genuinely distinct
+phrasings, and TLB-019 page 7 is never quoted anywhere in the corpus using the words "order frequency" or
+"retention" in connection with multi-vertical customers.
+
+The claim "multi-vertical customers show... higher order frequency and retention" **is** true and **is**
+disclosed in the corpus — but at a different location: `Section_03_Market_Analysis.md`, lines 105–106:
+*"Multi-vertical customers separately 'show significantly higher order frequency and retention' than
+mono-vertical customers (TLB-002, pages 7–8, 12)"* — confirmed by direct re-read of that exact passage.
+This is TLB-002 (the Annual Report), pages 7–8 and 12 — not TLB-019 page 7. Two different source documents,
+both happening to use page "7," which is very plausibly how this specific mis-citation was introduced (an
+easy page-number collision to make when compressing two adjacent facts into one sentence).
+
+As currently worded, a reader who checks the sentence's sole given citation (TLB-019, page 7) for the
+"higher order frequency and retention" claim will find a page that supports "higher lifetime value and
+engagement" instead — a real, if narrow, untraceable-citation failure under this project's zero-tolerance
+rule, and the same defect *pattern* (a claim citing a location that doesn't contain it, with the correct
+source existing one level away) that Findings 1 and 2 of the original audit, and Fix 2's own new issue in
+the first re-audit, already identified twice before — now on its third occurrence, on the very sentence
+that was just corrected for the second occurrence.
+
+**Fix required (precise):** split the sentence's citation so each clause is separately and correctly
+sourced, e.g.:
+
+*"This is a distinct statistic from the separately-disclosed multi-vertical cohort, which 'now exceed[s]
+one-third of the base' (TLB-019, page 7) and separately shows significantly higher order frequency and
+retention than mono-vertical customers (TLB-002, pages 7–8, 12; see also
+[[Section_03_Market_Analysis|Section 3]] §3.2) — the two should not be conflated as one group."*
+
+This keeps the TLB-019 page 7 citation exactly where it is now (correct), and adds the missing, correctly-
+located TLB-002 citation (with the Section 3 §3.2 cross-reference restored, since Section 3 §3.2 does
+carry this specific claim, correctly cited to TLB-002) for the second clause. No other change to this
+sentence, or to any other part of Section 1, is needed to close this out.
+
+## Full-section sweep for false-absence claims and wrong-location citations (this pass's specific brief)
+
+Beyond the item above, checked every remaining absence-type phrase and a further set of named-fact
+citations not individually verified in either prior pass:
+
+- *"talabat does not license AI recommendation or personalisation capability to third parties in the
+  corpus"* (Business Overview section) — **verified accurate**: `Section_02_Business_Description.md` §2.5,
+  lines 149–150, states this near-verbatim ("This is not a new externally-sold product — talabat does not
+  license AI recommendation or personalisation capability to third parties in the corpus").
+- GEMs, "talabat's existing AI-supported Partner-facing win-back tool" (AI Product/Service section) —
+  **verified accurate and correctly located**: both `Section_02_Business_Description.md` (line 134–135) and
+  `Section_04_Value_Proposition.md` (lines 117–118) cite this to TLB-026, page 138, and Section 1's
+  paraphrase preserves the citation correctly (cited jointly to Section 2/Section 4, both of which
+  themselves correctly cite TLB-026).
+- "talabat Rewards" / cross-sell timing mechanism — **verified accurate**: `Section_02_Business_Description.md`
+  §2.4, lines 124–126, cites this to TLB-023, page 8; Section 1's restatement is consistent and correctly
+  attributed via its Section 2 §2.4 citation.
+- "item-level recommendation ranking... has shipped at Group level but is not confirmed live in Egypt" —
+  **verified accurate**: matches `Section_02_Business_Description.md` lines 55–58 and 180–183 almost
+  word-for-word, correctly cited to TLB-002, page 15 and TLB-015, page 89 via Section 2.
+- Section 8's 7S "Shared values" row (Quality, Convenience, Value; `Topics/Customer Journey.md`) — **verified
+  accurate**: matches `Section_08_Operations_Plan.md` line 77 exactly, including the citation target
+  (`Topics/Customer Journey.md`, not a page-specific TLB citation, which is what Section 8 itself uses).
+- DEC-003's "confirmed by the user via a real `AskUserQuestion` escalation, 2026-07-22" provenance claim —
+  **verified accurate** against `vault/Decisions/Decision_Log/DEC-003_section2-governing-hypothesis.md`
+  (status: approved; "Approved 2026-07-22... via a real `AskUserQuestion` call run from the top-level
+  session — not simulated, not inferred, and not pre-selected by any agent").
+- Re-checked the four absence-type claims the first re-audit already verified (Section 2 §2.1's "no
+  Egypt-specific commitment" line, Section 2 §2.6's "no disclosed deployment... Egypt included" line, the
+  Mission and Vision section's "corpus does not restate either in an Egypt context anywhere" line, and the
+  Key Objectives section's "no Egypt baseline exists yet" line) — all four **still hold up**, unchanged
+  since the prior pass, no new drift found.
+- No further false-absence claim or wrong-location citation was found anywhere else in the section. The
+  Fix-3 (Low-confidence rationale) and Fix-4 (M1 qualifier) items were not re-litigated in this pass, since
+  the first re-audit's verification of both was independently reproducible on inspection (the current text
+  is unchanged from what that pass already confirmed) and neither is a false-absence or wrong-location
+  citation pattern.
+
+## Zero-tolerance items, re-checked (this pass)
+
+- **Group-level-as-Egypt-proven anti-pattern:** no violation found. Every Group/GCC figure Section 1
+  restates, including the newly re-examined "higher order frequency and retention" clause, still carries
+  its Group-level/"not yet Egypt-proven" scope label — the citation-location defect above is a mis-citation,
+  not a scope-mislabeling violation.
+- **Untraceable-claim check:** **one open violation remains** — the "shows its own higher order frequency
+  and retention" clause (see Fix verification 3 above), which currently traces to nothing at its only given
+  citation location. This is narrower than any prior finding in this section's audit history (a single
+  five-word clause within one sentence, not a whole claim or a whole cohort-pairing), but it is still a
+  genuine failure of this rule as written, and the rule draws no severity exception.
+
+## Result of this second re-audit
+
+**FAIL — but narrowly, and precisely scoped to one item.**
+
+| Item | Status |
+|---|---|
+| Fix 1 (TLB-002 page 3 "Vision and mission" heading, added as lead citation) | **Verified resolved** — quote character-for-character accurate; correctly sequenced ahead of the page 7/9 echoes; `TLB-002_annual-report-2025.md` correctly updated |
+| Fix 1b (Traceability table's Mission/Vision row) | **Verified resolved** — row now fully consistent with body text, citation column correctly leads with TLB-002 |
+| Fix 2 (TLB-019 page 7 re-citation for "one-third of the base") | **Partially resolved** — the "one-third of the base" clause itself is now correctly and accurately cited to TLB-019, page 7 |
+| Fix 2, residual — "shows its own higher order frequency and retention" clause in the same sentence | **Open — required fix.** Currently uncited at its own location; the sole citation given for the sentence (TLB-019, page 7) supports "higher lifetime value and engagement," not "order frequency and retention." The correct source is TLB-002, pages 7–8, 12 (already correctly cited for this exact claim in `Section_03_Market_Analysis.md`, lines 105–106) |
+
+**One open item remains**, narrowly scoped to a five-word clause inside a single sentence. Under this
+project's 0%-tolerance rule for untraceable numeric/named-fact claims, this is sufficient to withhold a
+final PASS, even though every other claim checked across two full audit passes and this second re-audit
+now traces correctly. **Recommended fix (exact wording provided above under "Fix verification 3"):** add
+"(TLB-002, pages 7–8, 12; see also [[Section_03_Market_Analysis|Section 3]] §3.2)" as an explicit,
+separate citation for the "shows its own higher order frequency and retention" clause, leaving the
+"(TLB-019, page 7)" citation for the "one-third of the base" clause exactly as it is now (it is correct).
+No other part of Section 1 requires any further change.
+
+This is a single-clause, single-citation fix — the narrowest of the three defect classes found across this
+section's full audit history. It does not require an escalation to `decision-steward` (no tier conflict, no
+same-tier disagreement), does not require any change to any other section, and does not require re-opening
+Findings 1, 3, or 4, or Fix 1/1b/3/4 above, all of which are independently re-confirmed resolved in this
+pass. **Once this one clause is re-cited as specified, Section 1's citation audit is fully closed out and
+the section is ready for Stage 11 QA review — no further re-audit round should be necessary if the fix is
+applied exactly as specified and not reworded in a way that reintroduces ambiguity about which citation
+covers which clause.**
+
+## Links (this addendum)
+- `vault/Knowledge/_source_text/20260331_talabat-Annual-Report-2025-En-Interactive.txt` (lines 65–94,
+  `PAGE 3` marker — re-confirmed character-for-character against Section 1's quote)
+- `vault/Knowledge/Sources/TLB-002_annual-report-2025.md` (lines 190–198, Important Quotations — confirmed
+  the page-3 quote is now the lead entry, correctly sequenced ahead of the page 7/9 echoes)
+- `vault/Knowledge/Facts/_raw/TLB-019_facts.md` (line 49) and
+  `vault/Knowledge/Sources/TLB-019_q4-fy25-results-presentation.md` (lines 38, 65, 73) — confirmed TLB-019
+  page 7's actual wording ("higher lifetime value and engagement"), which does not match "order frequency
+  and retention"
+- `vault/Projects/Business_Plan_Drafts/Section_03_Market_Analysis.md` (lines 100–113 — confirmed the
+  correct source, TLB-002 pages 7–8, 12, for the "significantly higher order frequency and retention"
+  claim about multi-vertical customers)
+- `vault/Projects/Business_Plan_Drafts/Section_02_Business_Description.md` (lines 53–58, 117–137, 149–151,
+  179–184 — spot-checks for GEMs/TLB-026, talabat Rewards/TLB-023, the licensing-absence claim, and the
+  item-level-ranking deployment-status claim, all verified accurate)
+- `vault/Projects/Business_Plan_Drafts/Section_08_Operations_Plan.md` (line 77 — Shared values row
+  spot-check, verified accurate)
+- `vault/Decisions/Decision_Log/DEC-003_section2-governing-hypothesis.md` (status/Approval sections —
+  `AskUserQuestion` provenance claim spot-check, verified accurate)
