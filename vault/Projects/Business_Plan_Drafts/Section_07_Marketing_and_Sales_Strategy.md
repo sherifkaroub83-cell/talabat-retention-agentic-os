@@ -20,7 +20,9 @@ category leadership in Egypt with a large, broad-reach marketplace (`Topics/Mark
 McKinsey Lens for this section — concentrate spend where Section 3's 80/20 analysis says the value is —
 points the same direction `DEC-003` already committed the plan to: **AI-driven marketing spend should
 concentrate on moving already-acquired Egypt customers along the disclosed Food → Grocery & Retail →
-talabat pro journey**, using the same personalisation/timing mechanisms [[Section_04_Value_Proposition|
+talabat pro journey** — a Group-level narrative, not yet Egypt-proven, per `Topics/Customer Journey.md`'s
+own instruction to present it as an extrapolation rather than an Egypt-verified funnel — using the same
+personalisation/timing mechanisms [[Section_04_Value_Proposition|
 Section 4]] and [[Section_05_AI_Technology_and_Development|Section 5]] describe, rather than on broad
 new-customer discount acquisition. Positioning explicitly deprioritizes price-only acquisition
 competition against Egypt's local low-cost specialists in favor of retention-of-existing-base economics,
@@ -78,7 +80,11 @@ q-commerce-specific acquisition lever, not a general one.
 
 **Sales funnel and customer journey mapping.** talabat's own investor materials describe an explicit
 customer-journey arc: **Food → Grocery & Retail → talabat pro sign-up** (`Topics/Customer Journey.md`;
-TLB-013, page 6). This is reinforced mechanically by the ~six-order personalisation threshold
+TLB-013, page 6) — **Group-level, not yet Egypt-proven**: `Topics/Customer Journey.md`'s own Business
+Implications state the vault does not disclose a formal, quantified Egypt journey/funnel model, and that
+any Egypt journey map is necessarily an extrapolation from Group-wide patterns, not an Egypt-verified
+funnel — a qualifier this section carries throughout rather than stating only once. This is reinforced
+mechanically by the ~six-order personalisation threshold
 ([[Section_05_AI_Technology_and_Development|Section 5]] §5.1; TLB-001, page 22-23) — after which
 talabat's ML models begin actively shaping subsequent behavior toward the next journey stage. Two
 Group-level anchor points quantify how much the journey matters behaviorally: food-only customers order

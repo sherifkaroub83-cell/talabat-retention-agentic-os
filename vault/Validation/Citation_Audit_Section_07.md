@@ -416,3 +416,261 @@ re-check, not a full re-audit.
 - `vault/Knowledge/Topics/Marketplace.md` (Open Questions) — independently confirms Fix 1's Group-wide/no-Egypt-figure framing
 - `vault/Knowledge/Facts/_raw/TLB-014_facts.md` (line 50, "low single-digit online penetration," TLB-014 page 19) — source of the new finding's underlying (correctly cited but unlabeled) fact
 - [[Section_03_Market_Analysis]] (line 164) and [[Citation_Audit_Section_03]] (claim #15) — the correctly-labeled precedent for the same TLB-014 p.19 fact that Section 7's new sentence should match
+
+---
+
+# Second targeted re-audit (2026-07-22)
+
+## Scope and method
+Two-part re-audit per the Orchestrator's brief. Part 1: independently re-verify the specific fix applied
+to the "grocery/retail penetration... low single-digit" sentence (the third hard failure found by the
+first re-audit pass). Part 2: run one more full-section sweep for the identical anti-pattern class — a
+Group-level/non-Egypt-specific statistic used without an explicit qualifier, especially where it sits
+next to or blends into an Egypt-specific claim — across the entire current section text, not assuming the
+pattern is now exhausted after three prior findings.
+
+Read directly for this pass: the full current text of
+`vault/Projects/Business_Plan_Drafts/Section_07_Marketing_and_Sales_Strategy.md`;
+`vault/Knowledge/Facts/_raw/TLB-014_facts.md` (full file, re-read directly, not taken from the prior
+addendum's quotation); `vault/Decisions/Assumptions_Register.md` (`ASM-004` row, re-read directly);
+`vault/Knowledge/Topics/Quick Commerce.md`, `vault/Knowledge/Topics/Customer Journey.md` (full files,
+including their Open Questions and Business Implications sections); `vault/Knowledge/Facts/_raw/TLB-001_facts.md`,
+`vault/Knowledge/Facts/_raw/TLB-002_facts.md`, `vault/Knowledge/Facts/_raw/TLB-013_facts.md` (targeted
+`Grep` for the specific page citations Section 7 uses: TLB-001 pages 22-23, TLB-002 page 10, TLB-013 page
+6); and, for cross-section labeling-consistency comparison, `vault/Projects/Business_Plan_Drafts/Section_04_Value_Proposition.md`
+(§4.1's Mechanism 1/2 and §4.3, which Section 7 explicitly cross-references as the source of "the same
+personalisation/timing mechanisms") and `vault/Projects/Business_Plan_Drafts/Section_05_AI_Technology_and_Development.md`
+§5.1.
+
+## Part 1 — Verification of the "grocery/retail penetration" fix
+
+**Confirmed correct.** The current sentence (§Positioning, "Not new-customer mass acquisition as the
+primary lever" bullet, final sentence) reads:
+
+> "Acquisition is not zero, however: **Group-level, not Egypt-specific** — grocery/retail penetration
+> remains "low single-digit" against a large TAM (TLB-014, page 19) — a genuine, secondary acquisition
+> opportunity Section 3 §3.4 already names using the same qualifier, and one where Egypt's new
+> q-commerce distribution centre (`ASM-004`, an Egypt-specific fact) is purpose-built infrastructure,
+> even though the underlying penetration statistic itself is not Egypt-measured."
+
+Checked against three independent criteria, all satisfied:
+
+1. **The sentence now correctly and unambiguously labels the TLB-014 p.19 statistic as Group-level.**
+   The clause "**Group-level, not Egypt-specific**" appears immediately before the statistic itself (not
+   deferred to the end of the sentence or buried in a subordinate clause), matching the labeling pattern
+   used one sentence earlier for the 20-25% foodservice-penetration fix and matching
+   `Section_03_Market_Analysis.md`'s own treatment of the identical fact ("Group-level, not
+   Egypt-specific" at line 164). The sentence closes with a second, reinforcing statement of the same
+   point — "even though the underlying penetration statistic itself is not Egypt-measured" — which is
+   redundant in a good way: it forecloses any reading in which a reader skims past the opening qualifier
+   and reaches the `ASM-004` clause without the caveat still in view.
+
+2. **It does not contradict or undercut the correctly-labeled `ASM-004` fact sitting next to it.** The
+   sentence now explicitly marks `ASM-004` itself as "**an Egypt-specific fact**," which is independently
+   confirmed accurate: `vault/Decisions/Assumptions_Register.md`'s `ASM-004` row (re-read directly)
+   states the assumption is "Egypt-specific operational/tech datapoints from talabat's official
+   newsroom... may be cited in Section 3's Opportunities discussion," with Value including "Largest MENA
+   q-commerce DC in Egypt (~27,000 sqm, AI demand forecasting)," Tier: External Research, Status:
+   Approved. The sentence's structure — Group-level penetration statistic, clearly flagged as such,
+   paired with a separately and correctly labeled Egypt-specific infrastructure fact — is exactly the
+   epistemically honest construction the anti-pattern rule requires: two facts of different scope are
+   used together without either borrowing the other's evidentiary weight. Nothing in the sentence implies
+   the DC's existence *proves* Egypt-specific penetration, nor does it imply the penetration statistic is
+   somehow made Egypt-specific by sitting next to an Egypt-specific fact — the "even though..." closing
+   clause actively guards against that misreading.
+
+3. **TLB-014, page 19 does say "low single-digit" grocery/retail penetration against a large TAM,
+   independently re-confirmed by direct inspection of the raw fact file** (not by re-reading the prior
+   addendum's quotation of it). `vault/Knowledge/Facts/_raw/TLB-014_facts.md`, line 50, under the
+   "Q-Commerce" heading, states verbatim: "G&R opportunity described as a 'USD 150bn+ TAM with low
+   single-digit online penetration' (TLB-014, page 19)." This is a Group-level aggregate (the "G&R"
+   business unit spans all 8 countries per the same file's Entities section), not an Egypt-measured
+   figure — consistent with how both Section 3 and Section 7 now label it. No discrepancy found between
+   what Section 7 claims TLB-014 p.19 says and what the raw fact record actually says.
+
+**Part 1 verdict: the specific fix is correctly and fully applied. No residual defect in this sentence.**
+
+## Part 2 — Full-section sweep for the same anti-pattern class
+
+A claim-by-claim re-read of every numeric or named-fact statement in the current section text was
+performed, checking each for (a) whether it is Group-level/non-Egypt-specific in its underlying source,
+and (b) if so, whether the section labels it as such wherever it does argumentative work — not only at
+first mention.
+
+**One further, previously-uncaught instance of the same anti-pattern class was found — larger in scope
+than the three already-fixed instances, because it is the section's central organizing claim rather than
+a single supporting statistic.**
+
+### New finding — the Food → Grocery & Retail → talabat pro "journey" is stated as fact without a Group-level/not-yet-Egypt-proven qualifier, in two places, despite being the section's foundational premise
+
+**Location 1 — "Answer, stated first" (opens the section):**
+
+> "...points the same direction `DEC-003` already committed the plan to: **AI-driven marketing spend
+> should concentrate on moving already-acquired Egypt customers along the disclosed Food → Grocery &
+> Retail → talabat pro journey**, using the same personalisation/timing mechanisms [[Section_04_Value_
+> Proposition|Section 4]] and [[Section_05_AI_Technology_and_Development|Section 5]] describe, rather
+> than on broad new-customer discount acquisition."
+
+**Location 2 — §7.2, "Sales funnel and customer journey mapping":**
+
+> "talabat's own investor materials describe an explicit customer-journey arc: **Food → Grocery & Retail
+> → talabat pro sign-up** (`Topics/Customer Journey.md`; TLB-013, page 6). This is reinforced mechanically
+> by the ~six-order personalisation threshold ([[Section_05_AI_Technology_and_Development|Section 5]]
+> §5.1; TLB-001, page 22-23) — after which talabat's ML models begin actively shaping subsequent behavior
+> toward the next journey stage. Two Group-level anchor points quantify how much the journey matters
+> behaviorally: food-only customers order 3.8 times/month versus 13.0 times/month for multi-vertical
+> customers (TLB-012), and multi-vertical customers accounted for 73% of GMV by December 2025 (TLB-019) —
+> neither is Egypt-specific, and the corpus states no formal, measured Egypt (or Group-level)
+> conversion-rate funnel exists between these stages (`Topics/Customer Journey.md`'s Open Questions)."
+
+**The citation itself is accurate** — independently re-verified against `Facts/_raw/TLB-013_facts.md`
+line 60 ("Multi-vertical ecosystem framed as platform for growth via customer journey: Food → Grocery &
+Retail → talabat pro sign-up (TLB-013, page 6)"), which, like every other line in that source extract, is
+a general statement from talabat's investor presentation with no Egypt-specific qualifier attached — i.e.
+a Group-level narrative, not an Egypt-measured one.
+
+**The problem is that this Group-level scope is never stated for the journey structure itself, even
+though it is directly documented in the vault and even though this exact section explicitly builds on
+Section 4, which does state it every time.** Specifically:
+
+1. `vault/Knowledge/Topics/Customer Journey.md`'s own **Open Questions** section states directly: "No
+   Egypt-specific journey or conversion data exists in the corpus; talabat pro's Egypt launch (February
+   2025) is too recent for the corpus's cohort-based journey metrics to have matured there." Its own
+   **Business Implications** section goes further, prescriptively: "Because Egypt-specific journey-stage
+   data doesn't yet exist, the capstone's Egypt journey map will necessarily be an extrapolation from
+   group-wide patterns and **should be presented as such rather than as an Egypt-verified funnel**." This
+   is not an ambiguous or implicit gap — the very note Section 7 cites for this claim instructs, in its
+   own words, that any downstream use of this journey concept should carry the "extrapolation, not
+   Egypt-verified" framing. Section 7 does not carry it.
+2. `Section_04_Value_Proposition.md` — the section Section 7 explicitly cross-references twice as the
+   source of "the same personalisation/timing mechanisms" — labels this identical fact correctly and
+   consistently every time it appears: "**Quantified (Group-level, the only trail in the corpus; not yet
+   Egypt-proven):**" precedes Mechanism 1's figures (§4.1, line 70); Mechanism 2 is introduced as using
+   the ML mechanism "to prioritize Egypt customers along the documented Food → Grocery & Retail → talabat
+   pro journey (TLB-013, page 6)" and its quantification is headed "**Quantified (Group/GCC-level,
+   explicitly excluding Egypt at time of measurement...)**" (line 88); and §4.3 states plainly that the
+   journey "correlates with materially higher retention (+16pp to +20pp M1 retention, **Group-level, not
+   yet Egypt-proven**)" (lines 154-156). Section 4 never states this journey as an unqualified fact —
+   Section 7, which relies on and cross-references Section 4, does.
+3. This is not a minor supporting statistic — it is the section's **single most load-bearing claim**. The
+   "Answer, stated first" paragraph that opens the entire section states the plan's core marketing
+   recommendation as "moving already-acquired Egypt customers along the disclosed Food → Grocery & Retail
+   → talabat pro journey" — using the word "disclosed" without qualification, which a reader would
+   reasonably take to mean disclosed *for Egypt*, especially given the sentence is specifically about
+   "Egypt customers." The §7.2 restatement compounds this: it explicitly and correctly labels the two
+   supporting frequency/GMV statistics as "neither is Egypt-specific" one sentence later, which — by
+   contrast — invites the inference that the journey-arc claim immediately preceding it (which gets no
+   such disclaimer) *is* considered established/Egypt-applicable, or at least that its geographic scope
+   was already resolved. It was not; it is exactly the same class of unproven-for-Egypt, Group-sourced
+   claim as the two statistics that do get the disclaimer.
+
+This is structurally the same defect class already found and fixed three times in this section: a
+Group-level fact, doing real argumentative work for an Egypt-specific recommendation, without the explicit
+qualifier this project's zero-tolerance rule requires wherever such a claim does that work — not only at
+its point of origin. Here the "argumentative work" is unusually significant: this journey is the spine the
+entire Marketing and Sales Strategy section is organized around (it is literally the subject of the
+section's opening sentence and the header of its central acquisition-strategy subsection).
+
+**Fix needed (two locations, both mechanical, matching the exact labeling pattern Section 4 and this
+section's own three prior fixes already establish):**
+
+- **Location 1 ("Answer, stated first"):** insert a qualifier on first mention, e.g.: "...moving
+  already-acquired Egypt customers along the disclosed **Food → Grocery & Retail → talabat pro journey —
+  a Group-level pattern this plan extends to Egypt under `DEC-003`, not yet an Egypt-verified funnel**
+  ([[Section_04_Value_Proposition|Section 4]] §4.3) — using the same personalisation/timing mechanisms..."
+- **Location 2 (§7.2 opening sentence):** insert the same qualifier where the journey is introduced as
+  fact, e.g.: "talabat's own investor materials describe an explicit customer-journey arc — **Food →
+  Grocery & Retail → talabat pro sign-up** (`Topics/Customer Journey.md`; TLB-013, page 6) — a
+  **Group-level pattern, not yet Egypt-proven** (`Topics/Customer Journey.md`'s Open Questions: 'No
+  Egypt-specific journey or conversion data exists in the corpus'; consistent with [[Section_04_Value_
+  Proposition|Section 4]] §4.1/§4.3's identical labeling of this same fact). This plan extends that
+  Group-level pattern to Egypt as a deliberate strategic choice under `DEC-003`, not because it has been
+  separately measured for Egypt customers. This is reinforced mechanically by the ~six-order
+  personalisation threshold..."
+
+Both are small, additive edits (inserting a clause at first mention in each location), consistent in form
+and effort with how the three prior fixes in this section were executed — not a restructuring of the
+section's argument, which remains valid: `DEC-003` already explicitly commits the plan to extending
+Group-level patterns into Egypt, so the underlying recommendation does not need to change, only its
+evidentiary framing.
+
+### Other claims re-checked in this sweep and found clean (no new violation)
+
+- **"increasing store density" / "affordability" as 2026-guidance q-commerce levers** (§Customer
+  Acquisition, "Channels"; TLB-002, page 10) — independently re-verified against `Facts/_raw/TLB-002_facts.md`
+  and `Topics/Quick Commerce.md` as company-wide 2026 guidance, not an Egypt-specific commitment. The
+  sentence does not assert an Egypt-specific outcome from these levers ("the corpus names... as the
+  2026-guidance levers," not "Egypt's levers"), and it sits in a paragraph whose adjacent clause ("93,000+
+  Active Partners **platform-wide**") already establishes a Group-wide reading frame the reader carries
+  forward. This is weaker/more ambiguous than the fixed instances but does not rise to the same bar —
+  **no claim of Egypt-specific effect is made**, so it is not scored as a violation. Recommended as a
+  minor, non-blocking tightening only: adding "(Group-wide 2026 guidance)" would remove any residual
+  ambiguity, but this is not required to close the audit.
+- **~six-order personalisation threshold** (TLB-001, page 22-23) — re-confirmed as a mechanism-level
+  description of how the recommendation algorithm functions ("it takes approximately six orders..."), not
+  a quantified outcome metric attributed to any region. `Section_05_AI_Technology_and_Development.md`
+  §5.1 treats it identically, without a Group/Egypt qualifier, because the underlying source itself states
+  it as a general operating characteristic of the algorithm, not a per-market measurement. Consistent
+  treatment across Sections 5 and 7; no violation.
+- **TLB-020 p.16 "rather than matching competitor discounts/vouchers"** — explicitly and correctly framed
+  as "talabat's own stated **GCC** playbook" that "this plan extends... to Egypt" — a deliberate,
+  disclosed extension, not an implied Egypt-proven claim. Consistent with the fix pattern this audit is
+  asking for elsewhere; no violation.
+- **80/20 finding, Rewards/PostPaid uplift figures, Partner-funded-savings figures, "Group-disclosed,
+  not-yet-Egypt-attributed" R&D roadmap items** — re-confirmed, as in the first two audit passes, to carry
+  explicit Group-level/not-Egypt-specific labeling at every point they do argumentative work. No change
+  from the prior findings.
+- **CIB co-branded card, talabat pro Egypt-live-since-February-2025** — both are genuinely Egypt-specific
+  facts, correctly labeled as such; no scope-inflation found in either direction (neither understated nor
+  overstated relative to their true, Egypt-specific evidentiary basis).
+
+No other unlabeled Group-level statistic doing Egypt-specific argumentative work was found anywhere else
+in the section — the Positioning bullets, the Customer Acquisition subsection (aside from the journey-arc
+finding above), the Partnerships subsection, the Retention subsection, and the traceability summary table
+were all re-read in full for this sweep.
+
+## Overall verdict for Section 7
+
+**FAIL.**
+
+Part 1 of this re-audit's task is fully satisfied: the specific fix requested (the TLB-014 p.19
+grocery/retail penetration sentence) is verified correct on all three counts asked — it now clearly labels
+the statistic as Group-level, it does not contradict or undercut the adjacent, correctly-labeled `ASM-004`
+Egypt-specific fact, and the underlying TLB-014 p.19 source is independently re-confirmed to say what
+Section 7 says it says.
+
+However, Part 2's mandated full-section sweep — undertaken specifically because this project's citation
+audits have now found this same defect class three times in one section, and the task brief warned against
+assuming the pattern is exhausted — found a **fourth, previously-uncaught instance of the identical anti-
+pattern**: the section's foundational "Food → Grocery & Retail → talabat pro journey" claim, stated as
+unqualified fact in two locations (the section's opening "Answer, stated first" paragraph and the §7.2
+"Sales funnel and customer journey mapping" subsection), is a Group-level pattern that the very Topic note
+Section 7 cites for it (`Topics/Customer Journey.md`) explicitly instructs should be "presented as
+[an extrapolation from group-wide patterns] rather than as an Egypt-verified funnel" — an instruction
+Section 4, which Section 7 explicitly builds on and cross-references, follows consistently every time it
+states this same fact ("Group-level, not yet Egypt-proven"), and which Section 7 does not follow at either
+of the two points where it states the fact. Because this claim is the section's central organizing premise
+— the subject of its opening sentence and the header claim of its acquisition-strategy subsection — this is
+not a marginal omission; it is the same zero-tolerance defect class as the three prior findings, applied to
+the section's single most load-bearing fact.
+
+**Section 7 is not yet ready for Stage 11 QA review. Citation-audit status remains OPEN.** One further,
+mechanical fix is required: add the Group-level/not-yet-Egypt-proven qualifier to the customer-journey
+claim at both points where Section 7 states it as fact (the "Answer, stated first" paragraph and the §7.2
+opening sentence), matching the exact labeling standard `Section_04_Value_Proposition.md` §4.1/§4.3 and
+this section's own three already-fixed instances already establish. Given the fix pattern is now well
+established in this section (four instances, same mechanical structure each time), this should not require
+a full re-audit — a fourth targeted verification pass, scoped only to the two edited sentences plus one
+more full-section sanity sweep (per this project's now-standing practice after each fix, since three of
+the four violations found in this section were caught by that sweep rather than by the original targeted
+check), is sufficient before Section 7 can be marked citation-audit-closed and passed to Stage 11.
+
+## Links (second addendum)
+- [[Section_07_Marketing_and_Sales_Strategy|vault/Projects/Business_Plan_Drafts/Section_07_Marketing_and_Sales_Strategy.md]] — current draft, re-read in full for this second addendum
+- `vault/Knowledge/Facts/_raw/TLB-014_facts.md` (line 50) — independently re-confirms the TLB-014 p.19 fix
+- `vault/Decisions/Assumptions_Register.md` (`ASM-004` row) — independently re-confirms `ASM-004`'s Egypt-specific scope and Approved status
+- `vault/Knowledge/Topics/Customer Journey.md` (Open Questions and Business Implications) — source of the new finding; explicitly instructs that the journey should be presented as an extrapolation, not an Egypt-verified funnel
+- `vault/Knowledge/Facts/_raw/TLB-013_facts.md` (line 60) — confirms the journey-arc citation itself is accurate but Group-level in source
+- [[Section_04_Value_Proposition]] (§4.1 lines 70, 86-93; §4.3 lines 150-156) — the correctly-labeled precedent Section 7 cross-references but does not itself follow for this fact
+- [[Section_05_AI_Technology_and_Development]] §5.1 — cross-checked for the six-order-threshold and journey mechanism treatment, found consistent (no violation)
+- `vault/Knowledge/Facts/_raw/TLB-001_facts.md`, `vault/Knowledge/Facts/_raw/TLB-002_facts.md` — re-checked for the six-order-threshold and q-commerce-lever citations, both found accurate and appropriately (if minimally) scoped
