@@ -237,6 +237,26 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   independently re-verified on one point). Full report:
   `vault/Validation/Pilot2_Execution_Report_Section_02.md`. Work done on branch
   `feature/bp-pilot-sections`, not merged to `main`.
+- 2026-07-22 — **Pilot 3: first real test of the Forecast Layer**, drafting Section 9 (Financial Plan).
+  `forecasting-agent` and `kpi-agent` both ran for the first time, building `Value_Driver_Tree.md`,
+  `Scenarios.md`, and `KPI_Tree.md` from empty scaffolds — every intervention-driven node kept strictly
+  consistent with DEC-003's confirmed mechanism, no numeric target set on any newly-instrumented KPI
+  without a backing Decision. `decision-steward` resolved two new Decisions without escalation: the
+  2026 investment-total conflict (`DEC-004_2026-investment-total.md`) — re-reading the primary source
+  directly found this discrepancy, carried since corpus ingestion as one of three "unreconcilable"
+  conflicts, is actually reconcilable (talabat's own USD175mn Board-approved total decomposes exactly
+  into its two disclosed components) — and Section 9's headline-scenario framing
+  (`DEC-005_section9-headline-scenario.md`, base=baseline/upside=return/downside=risk). **Central
+  finding: the project's first complete fail/fix/independently-re-verified cycle.** A genuinely
+  separate Stage 11 QA thread issued a real FAIL — the revenue-forecast scenarios never stated an
+  actual dollar figure, and no P&L projection existed, despite the template's explicit requirement and
+  despite the section already demonstrating the needed pattern elsewhere in itself. Both gaps were
+  fixed entirely from already-Approved components (no new Research/Forecast/Decision work) and
+  independently re-verified by a fresh agent thread — proving the two-pass QA gate does real work, not
+  formality. No architecture redesign needed; every mechanism worked as Architecture v2 designed it.
+  Section 9 reached ✅ Done (independently verified). Full report:
+  `vault/Validation/Pilot3_Execution_Report_Section_09.md`. Work done on branch
+  `feature/bp-pilot-sections`, not merged to `main`.
 
 ## Session log
 
@@ -289,3 +309,14 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   resulting genuinely-independent Stage 11 QA pass caught and drove the fix of a real cross-section
   defect in Section 3. See `vault/Validation/Pilot2_Execution_Report_Section_02.md`. Work done on
   branch `feature/bp-pilot-sections`, not merged to `main`.
+- 2026-07-22 — Session 6: ran Pilot 3 (Section 9, Financial Plan) — the first real test of the Forecast
+  Layer. `forecasting-agent` and `kpi-agent` both ran for the first time, building `Value_Driver_Tree.md`,
+  `Scenarios.md`, and `KPI_Tree.md` from empty scaffolds. `decision-steward` resolved two new Decisions
+  without escalation, including a genuine finding that the 2026 investment-total conflict — carried since
+  corpus ingestion as one of three "unreconcilable" discrepancies — is actually reconcilable once its
+  primary source is re-read directly. The project's first complete fail/fix/independently-re-verified
+  cycle: a genuinely separate Stage 11 QA thread issued a real FAIL (missing revenue figure, missing P&L
+  projection), both gaps were fixed from already-Approved components, and a fresh agent thread
+  independently confirmed the fix. Section 9 reached ✅ Done (independently verified). See
+  `vault/Validation/Pilot3_Execution_Report_Section_09.md`. Work done on branch
+  `feature/bp-pilot-sections`, not merged to `main`.

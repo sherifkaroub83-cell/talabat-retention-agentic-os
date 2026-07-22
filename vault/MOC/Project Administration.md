@@ -29,6 +29,7 @@ Capstone project-management content — team, milestones, decisions. Distinct fr
 - [[Agentic_OS_Architecture_v2]] — the evidence-based Version 2 architecture evolution: every change traced to specific execution evidence, everything execution validated left unchanged
 - [[Lessons_Learned_Phase7]] · [[Pilot_Validation_Plan]] — formal lessons-learned record and the next three planned pilots (Sections 2, 9, 10)
 - [[Pilot2_Execution_Report_Section_02]] — Pilot 2 (Section 2, Business Description): confirms the Change 1 top-level-invocation fix works; produces the project's first real human-confirmed strategic Decision ([[DEC-003_section2-governing-hypothesis]]) and first genuinely independent Stage 11 QA pass, which caught a real cross-section defect in Section 3
+- [[Pilot3_Execution_Report_Section_09]] — Pilot 3 (Section 9, Financial Plan): first real test of the Forecast Layer (`forecasting-agent`, `kpi-agent`); produces this project's first real fail/fix/re-verify cycle — independent QA issued a genuine FAIL, caught two template-completeness gaps, both fixed and independently re-verified
 
 ## Outside the vault (repo root — not part of the Obsidian graph, linked here as plain paths for navigation only)
 - `../PROJECT_PROGRESS.md` — milestone status snapshot

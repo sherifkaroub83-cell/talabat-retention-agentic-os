@@ -35,6 +35,13 @@ Every quality-control checkpoint produced while building this vault, in chronolo
 - [[Citation_Audit_Section_02]] · [[QA_Review_Section_02]] — Section 2's Stage 9/11 artifacts, both genuinely top-level-invoked
 - [[QA_Review_Section_03]] — now carries an addendum: an independent re-verification of the Section 3 fix Pilot 2's QA review drove
 
+## Pilot 3 — Section 9, first real test of the Forecast Layer (22/07/2026)
+- [[Value_Driver_Tree]] · [[Scenarios]] · [[KPI_Tree]] — the Forecast Layer's first real content, built by `forecasting-agent` and `kpi-agent` (both first real use), invoked top-level. Every intervention-driven node stays consistent with DEC-003's confirmed mechanism; no numeric target set on any newly-instrumented KPI without a backing Decision
+- [[DEC-004_2026-investment-total]] — reconciles the 2026 investment-total conflict; a genuine finding that what looked like a three-way irreconcilable conflict was actually decomposable once the primary source was re-read directly
+- [[DEC-005_section9-headline-scenario]] — resolves which scenario anchors Section 9's headline financial case (base=baseline, upside=return, downside=named risk)
+- [[Citation_Audit_Section_09]] · [[QA_Review_Section_09]] — Section 9's Stage 9/11 artifacts. QA issued a genuine **FAIL** on first pass (two template-completeness gaps), fixed and independently re-verified via a fresh agent thread (addendum in the same file) — this project's first real fail/fix/re-verify cycle, proving independent QA catches real defects rather than rubber-stamping drafts
+- [[Pilot3_Execution_Report_Section_09]] — full execution log and success-criteria evaluation
+
 ## Independent compliance audits (external-examiner perspective, not self-reported)
 - [[Independent_Project_Compliance_Report]] — v2, re-run against the merged main-equivalent state: requirements traceability, per-section Business Plan readiness, 12-area OS evaluation, architecture review, grading simulation (~33/100 as of this pass), and remaining roadmap. v1 (pre-merge) findings are marked RESOLVED in place rather than deleted, so the audit trail stays legible across passes.
 

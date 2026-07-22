@@ -4,7 +4,7 @@ Living status of the project. Update whenever a milestone moves. `SESSION_LOG.md
 day-to-day detail; this file is the high-level snapshot.
 
 **Last updated:** 2026-07-22
-**Overall status:** 🟢 Phase 1 — charter **approved** by Dr. Hossam Daoud (team of 6, 30-slide presentation confirmed); role assignment among the 6 members is the one remaining Phase 1 item. Phase 3 data ingestion and semantic knowledge layer complete. **OS Architecture Version 2 live and now operationally confirmed**: Pilot 1 (Section 3) validated most of the Version 1 design and surfaced the agent-delegation finding that produced v2's Change 1 fix; **Pilot 2 (Section 2) confirms Change 1 works** — all four specialist agents ran as genuinely separate top-level threads for the first time, producing the project's first real human-confirmed strategic Decision and first genuinely independent Stage 11 QA pass, which caught and drove the fix of a real cross-section defect in Section 3. Pilot 2 also found a second real runtime constraint (`AskUserQuestion` unavailable inside a spawned subagent, same class as `Agent`/`WebSearch`/`WebFetch`), correctly self-detected and worked around without any architecture redesign. 2 of 14 Business Plan sections drafted; Section 2 is ✅ Done (independently verified), Section 3 is ✅ Done (self-reviewed + independently re-verified on one point). Pilots 3–4 (Sections 9, 10) are planned, not yet run — see `vault/Architecture/Pilot_Validation_Plan.md`.
+**Overall status:** 🟢 Phase 1 — charter **approved** by Dr. Hossam Daoud (team of 6, 30-slide presentation confirmed); role assignment among the 6 members is the one remaining Phase 1 item. Phase 3 data ingestion and semantic knowledge layer complete. **OS Architecture Version 2 live and now operationally confirmed across three pilots**: Pilot 1 (Section 3) validated most of the Version 1 design and surfaced the agent-delegation finding that produced v2's Change 1 fix; Pilot 2 (Section 2) confirmed Change 1 works and found a second runtime constraint (`AskUserQuestion` unavailable to subagents); **Pilot 3 (Section 9) exercised the Forecast Layer for the first time** (`forecasting-agent`, `kpi-agent`) and produced this project's first complete fail/fix/independently-re-verified cycle — independent Stage 11 QA issued a genuine FAIL (two template-completeness gaps), both fixed from already-Approved components and independently re-confirmed. Pilot 3 also found that one of the three originally-"unreconcilable" internal discrepancies (the 2026 investment total) is actually reconcilable once its primary source is re-read directly. 3 of 14 Business Plan sections drafted; Sections 2 and 9 are ✅ Done (independently verified), Section 3 is ✅ Done (self-reviewed + independently re-verified on one point). Pilot 4 (Section 10, deliberate two-pass QA comparison) is planned, not yet run — see `vault/Architecture/Pilot_Validation_Plan.md`.
 
 ---
 
@@ -22,7 +22,7 @@ Group G02 · Dr. Hossam Daoud · charter submission 26/07/2026.
 | 1 | Phase 1 — Problem & Charter (wk 1–2) | 🟢 Approved, one item open | Charter **approved** by Dr. Hossam Daoud (`Problem_Charter.md`) — team of 6 and 30-slide presentation confirmed. Remaining: map the 6 members onto the guide's 5 defined roles |
 | 2 | Phase 2 — OS Activation (wk 2–3) | 🟡 In progress | Template activated 20/07 (identity, memory, tracking). `business-plan-drafting` skill added 21/07 (maps all 14 GSB sections to vault sources); `AI_Business_Plan_Template.md` stored verbatim in-repo. Remaining: agent-role documentation, MCP decision, team walkthrough |
 | 3 | Phase 3 — Data Collection & Ingestion (wk 3–5) | ✅ Done | 9-doc Markdown corpus + 29-doc native-PDF corpus (annual reports, quarterly financials, investor decks, earnings calls, IPO/regulatory, consensus) collected and organized. Ingestion pipeline: extracted (incl. OCR) → 29 source notes → 14 topic fact files → 9 entity rosters → relationship map. **Extended with a semantic knowledge layer** (21/07): 30 synthesis Topic Notes, 8 domain MOCs, 12 Strategic Knowledge notes, an explicit-reasoning Business Relationships note, and semantic `[[wiki-links]]` added to all 52 pre-existing notes — 0 orphan notes, 1 fully-connected graph across 103 notes (was 103 isolated notes). All in `vault/Knowledge/`; see `_PHASE4_VALIDATION_REPORT.md`. |
-| 4 | Phase 4 — Analysis & Business Plan (wk 5–8) | 🟡 Drafting underway, 2/14 | 14 sections vs GSB template; every claim → vault note → source. Sub-phase 6 (OS architecture v1) done 21/07. Sub-phase 7 (Pilot 1) — Section 3 (Market Analysis) drafted, cited, and QA-passed (self-reviewed) 22/07. Sub-phase 7.5 ("Phase 8", evidence-based architecture v2) done 22/07. **Pilot 2 done 22/07**: Section 2 (Business Description) drafted, cited, and independently QA-passed via genuinely top-level-invoked specialist agents — confirms the v2 Change 1 fix works, produces the first real human-confirmed strategic Decision (`DEC-003`), and catches + fixes a real cross-section defect in Section 3. `Pilot_Validation_Plan.md` defines Pilots 3–4 (Sections 9, 10) next. 12 of 14 sections still not started |
+| 4 | Phase 4 — Analysis & Business Plan (wk 5–8) | 🟡 Drafting underway, 3/14 | 14 sections vs GSB template; every claim → vault note → source. Sub-phase 6 (OS architecture v1) done 21/07. Sub-phase 7 (Pilot 1) — Section 3 (Market Analysis) drafted, cited, and QA-passed (self-reviewed) 22/07. Sub-phase 7.5 ("Phase 8", evidence-based architecture v2) done 22/07. Pilot 2 done 22/07 — Section 2 (Business Description) drafted and independently QA-passed. **Pilot 3 done 22/07**: Section 9 (Financial Plan) drafted using the Forecast Layer's first real content (`Value_Driver_Tree.md`, `Scenarios.md`, `KPI_Tree.md`) — independent QA issued a genuine FAIL (missing revenue figure, missing P&L), fixed and independently re-verified. `Pilot_Validation_Plan.md` defines Pilot 4 (Section 10) next. 11 of 14 sections still not started |
 | 5 | Phase 5 — Finalize & Present (wk 8–9) | ⬜ Not started | Quality pass, export, OS structure doc, deck, Moodle upload — roadmap sub-phase 10 |
 
 **Legend:** ✅ Done · 🟡 In progress · ⬜ Not started · 🔴 Blocked
@@ -55,9 +55,20 @@ pilot enabled caught a real cross-section defect in Section 3 (drifted framing t
 confirmed governing hypothesis) — fixed and independently re-verified. Full report:
 `vault/Validation/Pilot2_Execution_Report_Section_02.md`.
 
-**Next:** Pilot 3 (Section 9, the first real test of the Forecast Layer) and Pilot 4 (Section 10,
-deliberately testing the two-pass QA protocol) per `vault/Architecture/Pilot_Validation_Plan.md` — only
-after those two report back does drafting the remaining 11 sections begin in earnest.
+**Pilot 3 (Section 9, 22/07) is done** — the first real test of the Forecast Layer. `forecasting-agent`
+and `kpi-agent` both ran for the first time, building `Value_Driver_Tree.md`, `Scenarios.md`, and
+`KPI_Tree.md` from empty scaffolds. `decision-steward` resolved the 2026 investment-total conflict
+(`DEC-004`) and the headline-scenario framing (`DEC-005`), neither requiring escalation. The
+independently-invoked Stage 11 QA reviewer issued a genuine **FAIL** on first pass — the revenue-forecast
+scenarios never stated an actual dollar figure, and no P&L projection existed, despite the template's
+explicit requirement and despite the section already demonstrating the needed "illustrative, labeled"
+pattern elsewhere. Both gaps were fixed from already-Approved components (no new Research/Forecast/
+Decision work) and independently re-verified by a fresh agent thread — the project's first complete
+fail/fix/re-verify cycle. Full report: `vault/Validation/Pilot3_Execution_Report_Section_09.md`.
+
+**Next:** Pilot 4 (Section 10, Risk Analysis — deliberately testing the two-pass QA protocol by running
+Stage 11 twice on purpose and comparing results) per `vault/Architecture/Pilot_Validation_Plan.md` — only
+after it reports back does drafting the remaining 11 sections begin in earnest.
 
 ## Blockers / open questions
 
@@ -117,3 +128,13 @@ after those two report back does drafting the remaining 11 sections begin in ear
   GEMs-analogy bullet had drifted into the unchosen governing-hypothesis option), independently
   re-verified after the fix. Full execution report:
   `vault/Validation/Pilot2_Execution_Report_Section_02.md`
+- **Pilot 3** (2026-07-22, branch `feature/bp-pilot-sections`): Section 9 (Financial Plan) drafted
+  (`vault/Projects/Business_Plan_Drafts/Section_09_Financial_Plan.md`) on the Forecast Layer's first
+  real content — `Value_Driver_Tree.md`, `Scenarios.md` (`forecasting-agent`, first real use), and
+  `KPI_Tree.md` (`kpi-agent`, first real use), all previously empty scaffolds. Two new Decisions
+  (`DEC-004_2026-investment-total.md`, reconciling a discrepancy previously assumed irreconcilable;
+  `DEC-005_section9-headline-scenario.md`) and seven new Assumption rows (`ASM-006`–`012`).
+  Citation-audited (PASS, 0 hard failures). Independent QA issued a genuine **FAIL** on first pass (no
+  forecasted revenue figure, no P&L projection) — fixed from already-Approved components and
+  independently re-verified, this project's first complete fail/fix/re-verify cycle. Full execution
+  report: `vault/Validation/Pilot3_Execution_Report_Section_09.md`

@@ -6,6 +6,60 @@ writes these entries for you.
 
 ---
 
+## Session 6 — 2026-07-22 (Pilot 3: Section 9, first real test of the Forecast Layer)
+
+**Focus:** execute Pilot 3 per `vault/Architecture/Pilot_Validation_Plan.md` — draft Section 9
+(Financial Plan) using `forecasting-agent` and `kpi-agent` for the first time, exercising the
+previously-empty Forecast Layer (`vault/Forecasts/`). Branch `feature/bp-pilot-sections`.
+
+**Done:**
+- Readiness check: confirmed all Forecast Layer scaffolds, both agents, the `forecast-builder` skill,
+  and all seven Section 9 source notes present and usable.
+- Invoked `decision-steward` top-level to resolve the 2026 investment-total conflict
+  (`DEC-004_2026-investment-total.md`) — one of three discrepancies documented since corpus ingestion.
+  Re-reading the primary source (TLB-020) directly rather than trusting the downstream synthesis
+  note's "unresolved" framing, found the apparent three-way conflict (>$100mn/~$120mn/$175mn) is
+  actually reconcilable: the source itself decomposes its $175mn Board-approved total into ~$120mn
+  Everyday App + ~$55mn Food-leadership (55+120=175, exact match). Approved without escalation.
+- Invoked `forecasting-agent` top-level (first real use) to build `vault/Forecasts/Value_Driver_Tree.md`
+  (one Fact-anchored root node + 6 proposed Assumption nodes) and `Scenarios.md` (base/upside/downside,
+  each with a stated growth-logic sentence). Every intervention-driven node traces strictly to DEC-003's
+  confirmed mechanism. Proposed six assumptions for handoff rather than self-registering, per the
+  forecast-builder skill's own rule, and flagged (without resolving) which scenario should anchor
+  Section 9's headline case.
+- Invoked `decision-steward` top-level again to register the six proposed assumptions (`ASM-007`–
+  `ASM-012`) and resolve the headline-scenario question (`DEC-005_section9-headline-scenario.md`) —
+  base case as the headline baseline, upside as the intervention's projected return, downside as a
+  named risk. Approved without escalation.
+- Invoked `kpi-agent` top-level (first real use) to build `vault/Forecasts/KPI_Tree.md` — 16 KPIs, all
+  traced to named driver-tree nodes, 0 orphans, no numeric target set on any newly-instrumented KPI
+  (churn rate most notably) without a backing Decision.
+- Drafted Section 9 in full against the Forecast Layer's output: value driver tree, investment/opex,
+  three-scenario forecast, break-even sensitivity, assumptions register, funding/monetization.
+- Invoked `evidence-citation-agent` top-level for Stage 9 — PASS, 0 hard failures, independently
+  re-derived every Forecast/Decision-tier trace and recomputed the illustrative break-even arithmetic.
+- Invoked `qa-review-agent` top-level for Stage 11 — a genuinely independent thread issued a real
+  **FAIL**: the revenue-forecast scenarios never stated an actual dollar figure, and no P&L projection
+  existed, despite the template's explicit requirement and despite the section already demonstrating
+  the needed "illustrative, labeled" pattern elsewhere. Independently concurred that DEC-004 and DEC-005
+  were correctly self-approved without escalation.
+- Fixed both gaps using only components already computed and Approved-tier elsewhere in the section (an
+  illustrative FY2026 base-case revenue figure; a minimal illustrative annual P&L snapshot stopping at
+  gross profit, with the stopping point explicitly justified). Independently re-verified by a fresh
+  `qa-review-agent` thread — PASS. The project's first complete fail/fix/re-verify cycle.
+- Updated the Project tracker: Section 9 → ✅ Done (independently verified); Open Decisions list
+  (investment-total conflict resolved, headline-scenario framing resolved).
+- Wrote `vault/Validation/Pilot3_Execution_Report_Section_09.md` — full execution log, success-criteria
+  evaluation (all four met), and both central findings (the fail/fix/re-verify cycle; the
+  "unreconcilable" conflict that turned out reconcilable).
+- Updated `Validation and Audit.md` and `Project Administration.md` MOCs.
+
+**Explicitly not done:** no architecture redesign (every mechanism worked as Architecture v2 designed
+it); Pilot 4 not started; the remaining 11 Business Plan sections not touched; branch not merged to
+`main`.
+
+---
+
 ## Session 5 — 2026-07-22 (Pilot 2: Section 2, testing the orchestration fix for real)
 
 **Focus:** execute Pilot 2 per `vault/Architecture/Pilot_Validation_Plan.md` — draft Section 2

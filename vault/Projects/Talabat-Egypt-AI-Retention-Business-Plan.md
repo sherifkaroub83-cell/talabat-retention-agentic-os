@@ -34,14 +34,16 @@ linked (154 vault notes, 0 orphans) · **Agentic OS architecture designed** (21/
 Decision/Research/Forecasting layers, 8 agents, 11-stage pipeline; see `vault/Architecture/`) ·
 **Architecture Version 2 shipped, evidence-based, 22/07/2026** (Phase 8; see
 [[Agentic_OS_Architecture_v2]]) · **Operational validation ongoing (Pilot Validation Plan, 22/07/2026):
-Pilot 1 (Section 3) and Pilot 2 (Section 2) complete — 2 of 14 sections drafted and both now Done
-(independently verified where a real agent thread was available: Section 2 fully, Section 3 on the one
-point re-checked). Pilot 2 confirmed Architecture v2's top-level-invocation fix works and produced a
-second real architecture finding: `AskUserQuestion`, like `Agent`/`WebSearch`/`WebFetch`, is
-unavailable inside a spawned subagent thread.** This is still the single largest remaining task on the
-project (40% of the grade). Next: Pilot 3 (Section 9, Financial Plan — first real test of
-`forecasting-agent`/`kpi-agent` and the Forecast Layer) and Pilot 4 (Section 10, Risk Analysis —
-deliberate two-pass comparison), per [[Pilot_Validation_Plan]].
+Pilots 1–3 complete — 3 of 14 sections drafted, all now Done (Sections 2 and 9 independently verified;
+Section 3 self-reviewed + independently re-verified on one point). Pilot 3 (Section 9, Financial Plan)
+was the first real test of the Forecast Layer — `forecasting-agent` and `kpi-agent` both ran for the
+first time, building the Value Driver Tree, three scenarios, and the KPI Tree from empty scaffolds.
+Independent QA review issued a genuine FAIL on first pass (two template-completeness gaps — no
+forecasted revenue figure, no P&L projection), which were fixed and independently re-verified — the
+project's first real fail/fix/re-verify cycle, proving the two-pass discipline catches real defects, not
+just rubber-stamps drafts.** This is still the single largest remaining task on the project (40% of the
+grade). Next: Pilot 4 (Section 10, Risk Analysis — deliberate two-pass QA comparison), per
+[[Pilot_Validation_Plan]].
 
 ## Open decisions (needed before/while drafting)
 - [ ] Team role assignments (6 members / 5 defined roles — charter approved as-is; mapping still open)
@@ -62,13 +64,27 @@ deliberate two-pass comparison), per [[Pilot_Validation_Plan]].
       this intervention/causal-claim/scope per DEC-003's Impact section.
 - [ ] Egypt market-size definition to adopt (IMARC online-food-delivery vs. Mordor foodservice
       vs. talabat's own disclosed Egypt segment financials, now available for FY2025 onward)
-- [ ] How to handle the three documented internal discrepancies (Egypt category-share figure,
+- [x] How to handle the three documented internal discrepancies (Egypt category-share figure,
       the 2026 investment programme's three different totals, the Subscription revenue-line
       reclassification) — resolve against primary sources or footnote explicitly; do not pick
       silently (see the skill's "Known evidence gaps" section). **Egypt category-share leg: ✅
       resolved for Section 3 via [[DEC-001_egypt-category-share-figure]] (2026-07-22, approved —
-      present both figures footnoted, use 4x+ for qualitative framing). The 2026 investment total
-      and Subscription-line discrepancies remain open (belong to Sections 9/6).**
+      present both figures footnoted, use 4x+ for qualitative framing). 2026 investment-total leg:
+      ✅ resolved for Section 9 via [[DEC-004_2026-investment-total]] (2026-07-22, approved) — this
+      one turned out to be genuinely reconcilable, not a true three-way conflict: TLB-020 itself
+      decomposes its Board-approved USD175mn total into ~USD120mn Everyday App + ~USD55mn
+      Food-leadership (55+120=175, exact match, disclosed by the source), with TLB-019's earlier
+      ">USD100mn" treated as an earlier, lower-precision cut of the Everyday App component (a stated,
+      Medium-confidence inference, kept separate from the High-confidence arithmetic). The
+      Subscription-line reclassification remains open (belongs to Section 6, not yet piloted).**
+- [x] Section 9's headline scenario framing (base/upside/downside) — **resolved 2026-07-22 via
+      [[DEC-005_section9-headline-scenario]]** (approved): base case is the headline financial
+      baseline (no intervention credit), the upside case is presented as the DEC-003 investment's
+      projected return/delta (not a competing central estimate, Low confidence retained), downside is
+      a named risk case, not implied equally likely to the base case. Judged a data-presentation/
+      methodology call within `decision-steward`'s own authority (same class as DEC-001/002/004) —
+      independently reviewed and concurred with by a separately-invoked `qa-review-agent` thread
+      during Section 9's Stage 11 QA.
 - [x] Egypt market-size definition to adopt for Section 3 — **resolved 2026-07-22 via
       [[DEC-002_egypt-market-size-definition]]** (approved): bottom-up = talabat's own disclosed
       Egypt segment revenue; top-down ceiling = Mordor total foodservice; IMARC's online-food-
@@ -88,7 +104,7 @@ deliberate two-pass comparison), per [[Pilot_Validation_Plan]].
 | 6 | Business Model and Revenue Streams | ⬜ Not started | `Strategic/Revenue Model.md`, `Facts/Revenue.md` |
 | 7 | Marketing and Sales Strategy | ⬜ Not started | `Topics/Customer Journey.md`, `Topics/Promotions.md` (funnel data is a known gap) |
 | 8 | Operations Plan | ⬜ Not started | `Strategic/Decision-Making Process.md` (7S check is net-new synthesis) |
-| 9 | Financial Plan | ⬜ Not started | `Topics/Financial Performance.md`, `Topics/Segment Reporting.md` |
+| 9 | Financial Plan | ✅ Done (independently verified) | `Topics/Financial Performance.md`, `Topics/Segment Reporting.md`, `Strategic/Cost Structure.md`, `Strategic/Growth Drivers.md`, `Strategic/Customer Retention Drivers.md`. Draft: [[Section_09_Financial_Plan]]. First section built on the Forecast Layer — [[Value_Driver_Tree]] and [[Scenarios]] (`forecasting-agent`, first real use) and [[KPI_Tree]] (`kpi-agent`, first real use), all invoked top-level. Pipeline artifacts: [[DEC-004_2026-investment-total]] (2026-investment-total reconciliation), [[DEC-005_section9-headline-scenario]] (scenario framing), `ASM-006`–`ASM-012`, [[Citation_Audit_Section_09]], [[QA_Review_Section_09]]. **Genuinely independent Stage 11 QA issued a real FAIL on first pass** (two template-completeness gaps: no forecasted revenue figure, no P&L projection) — fixed from Approved-tier components already on hand, then independently re-verified by a fresh `qa-review-agent` thread (addendum in [[QA_Review_Section_09]]) — PASS. The project's first fail/fix/re-verify cycle, proving independent QA catches real gaps rather than rubber-stamping. |
 | 10 | Risk Analysis | ⬜ Not started | `Strategic/Strategic Risks.md`, `Strategic/Competitive Weaknesses.md` |
 | 11 | CSR & Responsible AI | ⬜ Not started | Thinnest vault coverage — mostly net-new authoring |
 | 12 | Implementation Plan (Three Horizons) | ⬜ Not started | `Strategic/AI Opportunities.md` (H1) vs. `Strategic/Future AI Opportunities.md` (H2/H3) |
