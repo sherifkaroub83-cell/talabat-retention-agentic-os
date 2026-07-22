@@ -82,10 +82,12 @@ independent QA has already enforced elsewhere in this plan (`QA_Review_Section_1
 Per `KPI_Tree.md`'s own tally: **6 Leading** (K5, K6, K7, K13, K14, K16) and **10 Lagging** (R1–R4, K8, K9,
 K10, K11, K12, K15). Leading indicators are early-signal metrics this plan can act on before a financial
 outcome is confirmed (customer growth, order frequency, pro adoption, advertiser count); lagging
-indicators confirm a realized outcome after the fact (revenue, margin, retention, churn, take rate). Of
-the four KPIs with an existing Egypt baseline (R1–R4), all four are lagging — a structural fact about what
-talabat currently discloses (financial outcomes), not a gap in this plan's design: no leading indicator
-has ever been disclosed for Egypt at any point in the corpus.
+indicators confirm a realized outcome after the fact (revenue, margin, retention, churn, take rate). The
+split is MECE by construction: `KPI_Tree.md`'s own tagging convention assigns each KPI exactly one of the
+two tags, with no KPI appearing in both counts and 6+10 summing to the full 16-KPI set. Of the four KPIs
+with an existing Egypt baseline (R1–R4), all four are lagging — a structural fact about what talabat
+currently discloses (financial outcomes), not a gap in this plan's design: no leading indicator has ever
+been disclosed for Egypt at any point in the corpus.
 
 ## 13.3 Tools and Methods for Performance Tracking
 
@@ -119,12 +121,18 @@ split above:
     directional read on whether these seven KPIs move consistently with the DEC-003 investment thesis.
   - **H2→H3 checkpoint:** requires at least one full reporting cycle of Egypt-specific evidence on these
     same seven KPIs at H2 (full-cohort) scale before H3 begins.
-  - **Kill criterion, stated qualitatively, not numerically, per `DEC-007`:** sustained evidence that
-    these seven KPIs track toward or below Section 9's base-case trajectory, rather than toward the
-    upside case DEC-003's investment is projected to deliver, is what should trigger a stop/reassess
-    decision — a trajectory-relative test (base case vs. upside case), not a percentage or absolute-number
-    threshold, because no absolute threshold can be derived from a corpus with zero Egypt baseline for any
-    of these seven KPIs.
+  - **Kill criterion, stated qualitatively, not numerically, per `DEC-007` — one test, two roles, not two
+    competing anchors:** [[Section_09_Financial_Plan|Section 9]] individually models a base-case/upside-
+    case trajectory only for **R1** (Egypt segment revenue); it does not model a separate numeric
+    base-case trajectory for K5–K9 or K13–K14 individually (`ASM-008`/`ASM-011` are explicitly directional
+    only, no numeric target, per `Value_Driver_Tree.md`). The operative test is therefore: **K5, K6, K7,
+    K8, K9, K13, K14 are the diagnostic signal, read against the GCC benchmark** (since no Egypt base-case
+    trajectory exists for any of them individually), **and R1 is the outcome signal, read against Section
+    9's base case vs. upside case** (per `DEC-005`'s framing). Sustained GCC-benchmark underperformance
+    on the seven diagnostic KPIs, corroborated by R1 tracking toward or below the base case rather than
+    the upside case, is what should trigger a stop/reassess decision — not a percentage or absolute-number
+    threshold on any individual KPI, because no absolute threshold can be derived from a corpus with zero
+    Egypt baseline for any of them.
 - **Monitoring-only KPIs (K10, K11, K12, K15, K16):** tracked and reported once instrumented, but carry no
   kill-criteria role — neither Section 10 nor Section 12 named them as gate KPIs, and this section does
   not invent a new gate they never established.
