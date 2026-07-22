@@ -132,7 +132,7 @@ implying real headroom even before considering Egypt's own unmeasured baseline.
   line than Mechanisms 1–2, correctly treated in [[Section_09_Financial_Plan|Section 9]] §9.6 as the
   slowest-maturing of the three monetization channels.
 
-### Risk reduction (the fifth value-creation category the template names, explicitly not quantified)
+### Risk reduction (the fourth value-creation category the template names, explicitly not quantified)
 
 **Labeled deliberately unquantified, not omitted:** no corpus figure exists to attach a specific
 risk-reduction dollar or percentage value to, so this category is stated qualitatively rather than

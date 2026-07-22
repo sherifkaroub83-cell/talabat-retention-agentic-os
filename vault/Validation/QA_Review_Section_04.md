@@ -305,3 +305,209 @@ prose).
 - [[Section_02_Business_Description]] · [[Section_09_Financial_Plan]] · [[Section_10_Risk_Analysis]]
 - [[QA_Review_Section_02]] · [[QA_Review_Section_09]]
 - [[Pilot_Validation_Plan]] · [[Implementation_Roadmap]]
+
+---
+
+## Targeted re-review — fix verification (2026-07-22)
+
+**Tooling note and independence, this pass:** separately-invoked thread, tools `Read`/`Grep`/`Write` only
+(no `Edit`, `Agent`, `WebSearch`, `WebFetch`, `Glob`, matching the original review's toolset). No memory of
+the drafting or original-review reasoning — every claim below was independently re-read at its source:
+the current text of `Section_04_Value_Proposition.md`, `AI_Business_Plan_Template.md` §4,
+`vault/Forecasts/Value_Driver_Tree.md` (node 1b / `ASM-008`, node 3b / `ASM-011`, the summary table),
+`vault/Forecasts/KPI_Tree.md` (the K16 row and its "Cross-node — Section 9 investment-return framing"
+section), `vault/Knowledge/Strategic/Cost Structure.md`, `Section_09_Financial_Plan.md` §9.2, and
+`DEC-003_section2-governing-hypothesis.md`. I did not treat the original FAIL report's or the task brief's
+description of the fixes as ground truth — each of the three claimed fixes was re-verified against the
+underlying source file, not against the drafting session's own account of what it changed.
+
+### Fix 1 — cost savings category — VERIFIED, correctly implemented
+
+The section now carries an explicit **"Cost savings"** sub-point under Mechanism 2 (current lines ~103–112):
+"the same ML-timed offer-surfacing mechanism is the vehicle for Section 9 §9.2's cost-efficiency argument —
+AI-targeted, personalised incentives replacing blanket vouchering within talabat's Customer Acquisition and
+Retention Costs (CARC), which rose Group-wide from 1.5% of GMV (2023) to 1.6% (2025) with composition
+shifting toward vouchering," explicitly closing with "No Egypt-specific cost-savings dollar figure is
+asserted, since no Egypt CARC baseline exists to measure a reduction against."
+
+- **Cross-checked against `Strategic/Cost Structure.md` directly:** CARC "rose from USD 89mn (1.5% of GMV,
+  2023)... to USD 155mn (1.6% of GMV, 2025) (TLB-001, page 28; TLB-002, page 21)," with composition shifting
+  toward vouchering (vouchering "roughly doubled or more year-over-year") and an explicit statement that "no
+  document states an Egypt-specific CARC or customer-acquisition-cost figure." Every figure and citation in
+  Section 4's new sub-point matches this source exactly — no misquotation, no rounding drift, no dropped
+  caveat.
+- **Cross-checked against `Section_09_Financial_Plan.md` §9.2 directly:** the source paragraph Section 4 now
+  cites reads "this plan's recommendation should be read as an argument for **efficiency within CARC**
+  (AI-targeted, personalized incentives replacing blanket vouchering) rather than as incremental spend
+  layered onto a flat cost base." Section 4's new sub-point paraphrases this accurately and attributes it
+  correctly to §9.2.
+- **The traceability table** now has a dedicated row: "Mechanism 2's cost-savings sub-point (CARC
+  efficiency) | Section 9 §9.2; `Strategic/Cost Structure.md`, TLB-001 p.28, TLB-002 p.21 | Direct citation,
+  labeled directional (no Egypt CARC baseline)" — consistent with the body text.
+- **This closes the anti-pattern instance the original review flagged in its Checklist §7** ("Building
+  Section 9/13 numbers that don't trace back to Section 4 value mechanisms" — Section 9 §9.2's CARC argument
+  previously had no home in Section 4). It now does. **Anti-pattern resolved.**
+
+The headers for Mechanisms 1 and 3 were relabeled from "efficiency + insight" / "... + insight" to
+"**(revenue lift)**" for both — matching what is actually quantified in each ("So what, for the P&L"
+paragraphs cite K6 and K13/K14 respectively, both genuinely revenue-side metrics), which was one of the two
+fix options the original review explicitly authorized ("or relabel those headers to match what is actually
+quantified there (revenue lift, in both cases)"). This is a faithful, verified implementation of that
+authorized path, not a reinterpretation of it.
+
+**One new, genuine, bounded defect found in this fix that was not present, and not authorized, by the
+original review — see "New issue" below (the risk-reduction heading's "fifth" mislabeling).**
+
+**Residual, non-blocking observation (not a re-opening of Finding 1):** "efficiency" and "insight" as
+independently named template categories are now not mentioned anywhere in Section 4's body — not
+quantified, and not explicitly flagged as deliberately unaddressed the way cost savings and risk reduction
+now are. This is the direct, foreseeable consequence of the relabeling path the original review itself
+explicitly authorized as an acceptable alternative to forced/fabricated quantification ("quantify or
+delete," read honestly — here, effectively "delete the category label, keep the number under its accurate
+name"). I am not reopening this as a blocking finding, because the original review considered and endorsed
+exactly this resolution path in its own words. Flagging it here only so it is on record and not silently
+lost: if a future reviewer or the drafting team wants every one of the five template categories to carry an
+explicit disposition sentence (quantified, or explicitly declared out of scope, the way cost savings and
+risk reduction now are), "efficiency" and "insight" would still need that treatment. Not required to pass
+this review.
+
+### Fix 2 — MECE justification and ASM-008 sharing — VERIFIED, correctly implemented and accurately described
+
+Section 4.2's lead-in now reads: "the three mechanisms below are MECE at the level of distinct **causal
+levers**: Mechanism 1 acts on what a customer sees (recommendation quality), Mechanism 2 acts on when an
+offer reaches them (cross-sell/loyalty timing), and Mechanism 3 acts on the Partner-facing advertising layer
+— no fourth lever exists in DEC-003's confirmed scope, and no two of these three levers describe the same
+causal action," followed by an explicit, undodged acknowledgment: "Mechanisms 1 and 2 are not yet
+financially distinct in `Value_Driver_Tree.md` — both trace to the same combined Assumption node
+(`ASM-008`)... A future Value Driver Tree revision that splits `ASM-008` into two sub-nodes... would resolve
+this precisely — flagged here as an open item, not silently smoothed over."
+
+- **Cross-checked against `Value_Driver_Tree.md` node 1b directly:** confirmed — node 1b ("Order Frequency
+  uplift (Egypt) — the DEC-003 intervention channel") is registered as `ASM-008` and its Logic paragraph
+  cites **both** "the AI/personalisation layer's estimated EBITDA contribution" (Mechanism 1's evidence) and
+  "talabat pro's 20-28% order-frequency uplift / 26-32% retention uplift" (Mechanism 2's evidence) as the
+  combined basis for the single node. Section 4's description of the sharing is accurate, not overstated or
+  understated.
+- **Cross-checked against `Value_Driver_Tree.md`'s Branch 3b (adtech) directly:** Mechanism 3 traces cleanly
+  to its own node, `ASM-011`, confirmed separate from `ASM-008`. Section 4's claim that Mechanism 3 is
+  genuinely distinct is accurate.
+- **Cross-checked against `KPI_Tree.md`'s summary table directly:** K6, K7, and K8 are each individually
+  named, distinct KPI rows (all tagged to `ASM-008` as their driver-tree parent, but K6 ≠ K7 ≠ K8 as tracked
+  metrics) — Section 4's claim that the mechanisms are "separately trackable at the KPI level" is accurate
+  and does not overstate what the KPI Tree actually provides.
+- This is a complete, accurate, and honestly-framed resolution of Finding 2 — it goes further than either of
+  the two options the original review offered by combining them (states the reasoned choice **and** flags
+  the future Value Driver Tree revision as an open item). **Fully verified, no residual issue.**
+
+### Fix 3 — K16 citation — VERIFIED, correctly implemented and accurately described
+
+§4.3's ROI paragraph now reads: "**`KPI_Tree.md`'s K16** — 'Incremental Egypt revenue attributable to the
+DEC-003 AI-roadmap-extension intervention (upside-case revenue delta vs. base-case revenue)' — is the KPI
+built specifically to make this ROI paragraph's concept measurable once Egypt data exists: it is a named
+composite of `ASM-008` + `ASM-011` + the Root Fact node, i.e. the same three mechanisms this section
+describes, expressed as a single trackable metric."
+
+- **Cross-checked against `KPI_Tree.md` directly** (the "Cross-node — Section 9 investment-return framing"
+  section and the summary table): K16's definition is quoted **verbatim, word-for-word** from the source —
+  "Incremental Egypt revenue attributable to the DEC-003 AI-roadmap-extension intervention (upside-case
+  revenue delta vs. base-case revenue)" matches exactly. Its stated composite basis, "ASM-008 + ASM-011 +
+  Root Fact node," also matches the source exactly ("Traces to: **ASM-008 + ASM-011 + Root Fact node**
+  (composite; not an orphan metric...)").
+- **The traceability summary table's "ROI calculation" row** now reads "Section 9 §9.4 — referenced, not
+  re-derived; `KPI_Tree.md` K16 | No new arithmetic introduced" — K16 is now present in the table as
+  required.
+- **The frontmatter's provenance list** ("K6, K7, K8, K13, K14, K16") already included K16 before this fix
+  cycle and is unchanged and still accurate — the loop between frontmatter, body, and table is now fully
+  closed. **Fully verified, no residual issue.**
+
+### New issue introduced by this edit round — requires a fix
+
+Re-running the McKinsey Lens and the template-completeness check against the **current, full** section text
+(not just the three fixed spots) surfaced one new, genuine, bounded defect that was not present in the
+version reviewed originally:
+
+**The risk-reduction section header now reads:** "### Risk reduction (**the fifth** value-creation category
+the template names, explicitly not quantified)."
+
+Re-checking `AI_Business_Plan_Template.md` §4 directly: *"Value creation mechanisms — efficiency, cost
+savings, revenue lift, risk reduction, insight — each quantified."* In the template's own stated order,
+**risk reduction is the fourth named category (efficiency=1, cost savings=2, revenue lift=3, risk
+reduction=4), and insight is the fifth.** Section 4's new heading mislabels risk reduction as "the fifth,"
+which is factually incorrect against the template text it is directly quoting from. This is a small, purely
+mechanical (one-word) error, but it is precisely the same class of defect the original review's Finding 1
+treated as "corroborating evidence" of a real undercounting problem (the original text's "the fourth 'so
+what'" heading was read as a symptom of the drafting having tracked only four categories) — so getting this
+count wrong a second time, in the opposite direction, in the very sentence meant to fix that exact
+corroborating-evidence issue, is a real precision failure that a careful re-check must not wave through
+silently. It does not misstate any dollar figure, does not affect any citation, and does not change the
+substance of what's being claimed (risk reduction genuinely is treated as deliberately unquantified either
+way) — but it is a factual inaccuracy in the text as submitted, on the exact topic (correctly counting the
+template's five named categories) this section's QA history has already had to correct once.
+
+**Required fix:** change "the fifth value-creation category" to "**the fourth** value-creation category" in
+the Risk reduction section header (current section, the paragraph beginning "### Risk reduction (..."). No
+other change is required to close this finding — this is a single-word correction.
+
+### McKinsey Lens — re-run against the current full text
+
+- **Pyramid Principle:** Pass, unchanged from the original review — "Answer, stated first" still leads.
+- **MECE:** **Now explicitly stated and accurately, honestly qualified** — Finding 2 is fully resolved (see
+  above). **Pass** (upgraded from Fail).
+- **Hypothesis-driven:** Pass, unchanged — re-confirmed DEC-003 consistency independently (all three
+  mechanisms, the new cost-savings sub-point, and the risk-reduction paragraph all stay within DEC-003's
+  Option 2 scope; no drift into Option 1 or Option 3 introduced by the edits).
+- **Value-driver traceability (Sections 4/9/13):** **Now fully closed at both the KPI level and the
+  cost-savings/K16 citation level** — Finding 3 is fully resolved, and the Finding-1-driven anti-pattern
+  (Section 9 §9.2 not tracing back to a Section 4 mechanism) is resolved. **Pass** (upgraded from Partial
+  pass).
+- **"Quantify or delete":** **Now honored** — cost savings is present and explicitly labeled directional
+  (not silently dropped, not fabricated); risk reduction remains explicitly, honestly labeled unquantified.
+  **Pass** (upgraded from Fail), independent of the cosmetic "fifth"/"fourth" defect noted above.
+
+### Anti-patterns checklist — re-run against the current full text
+
+- **Untraceable claim:** None found in the new text (cost-savings figures and K16 citation both verified
+  accurate above). **Pass.**
+- **Building Section 9/13 numbers that don't trace back to Section 4 value mechanisms:** Resolved — Section
+  9 §9.2's CARC argument now has an explicit home in Section 4. **Pass** (upgraded from Fail).
+- **Presenting Group/GCC-level statistics as Egypt-proven:** Re-checked the new cost-savings text
+  specifically (the figure most at risk of this, being a Group-wide CARC percentage) — it is explicitly
+  labeled "Group-wide" and closes with "No Egypt-specific cost-savings dollar figure is asserted." **Pass**,
+  no regression.
+- **Silently resolving a documented internal discrepancy / treating Section 11 as boilerplate / resolving a
+  flagged gap outside Research-Forecast-Decision:** Not applicable, unchanged from the original review.
+  **Pass.**
+
+### Overall verdict: **FAIL — one small, bounded, single-word fix required before this section can pass**
+
+All three of the original review's findings are **independently verified as correctly and accurately
+fixed**, each cross-checked directly against its underlying source file (`Value_Driver_Tree.md`,
+`KPI_Tree.md`, `Strategic/Cost Structure.md`, `Section_09_Financial_Plan.md`), not accepted on the strength
+of the task brief's description. The MECE gap, the value-driver-traceability gap, the "quantify or delete"
+gap, and the Section-9-doesn't-trace-back-to-Section-4 anti-pattern are all genuinely resolved.
+
+However, the edit round introduced one new, real defect: the risk-reduction section header now says "the
+**fifth** value-creation category the template names" when, per the template's own stated order, risk
+reduction is the **fourth** named category (insight is the fifth). This is a one-word, mechanical fix, but
+it sits on exactly the topic (accurately counting the template's five named value-creation categories) this
+section's QA history has already required one correction on, so it is called out explicitly rather than
+waved through.
+
+**Required fix (the only one remaining):** in the "### Risk reduction (...)" section header, change "the
+fifth value-creation category" to "the fourth value-creation category."
+
+**Disposition:** Section 4 stays at 🟡 (drafted, needs verification). It is **not** eligible to move to
+✅ Done in the Project tracker yet — the Project tracker's Section 4 row (currently, independently
+re-checked, still shows "⬜ Not started," which is itself stale and should be corrected to 🟡 once this
+one-word fix lands and this section is resubmitted, consistent with how the tracker reflects every other
+section's real status). I am not editing the draft or the Project tracker myself — reporting this verdict
+back to the top-level session per this review's scope (approve or reject, do not rewrite prose). Given the
+narrow scope of what remains (a single word), this section should be resubmittable for a final confirmation
+pass with minimal turnaround.
+
+## Links (re-review addendum)
+- [[Section_04_Value_Proposition|vault/Projects/Business_Plan_Drafts/Section_04_Value_Proposition.md]]
+- [[Value_Driver_Tree]] · [[KPI_Tree]]
+- `vault/Knowledge/Strategic/Cost Structure.md`
+- [[Section_09_Financial_Plan]] · [[DEC-003_section2-governing-hypothesis]]
+- `AI_Business_Plan_Template.md` §4
