@@ -1,7 +1,7 @@
 ---
 section: 7
 title: Marketing and Sales Strategy
-status: drafted — pending citation verification and QA (pipeline stage 9/11)
+status: Done — citation audit PASS (four fix rounds, independently re-verified), QA review PASS (two fix rounds, independently re-verified)
 pipeline_run: 2026-07-22
 ---
 
