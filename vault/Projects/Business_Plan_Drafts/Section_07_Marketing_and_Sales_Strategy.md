@@ -49,7 +49,7 @@ building an equivalent capability from zero (`DEC-003`).
   plan extends that playbook to Egypt rather than proposing talabat compete on blanket discounting, a
   fight Section 3 already flags as a threat, not an opportunity, for talabat's margin structure.
 - **Not new-customer mass acquisition as the primary lever.** [[Section_03_Market_Analysis|Section
-  3]] §3.4's 80/20 finding — a Group-level ~25% of MAUs (talabat pro subscribers/multi-vertical customers)
+  3]] §3.2's 80/20 finding — a Group-level ~25% of MAUs (talabat pro subscribers/multi-vertical customers)
   already accounts for roughly half of platform GMV (TLB-019, page 7; TLB-014, page 14; TLB-020, page 8)
   — means the highest-ROI marketing spend is deepening engagement with customers talabat has already
   acquired, not spending to acquire net-new ones. The ~20-25% foodservice penetration figure this section

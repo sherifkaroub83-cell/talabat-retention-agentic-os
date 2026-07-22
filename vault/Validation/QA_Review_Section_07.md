@@ -291,3 +291,146 @@ myself — reporting this verdict back to the top-level session/Orchestrator for
 - [[Section_05_AI_Technology_and_Development]] §5.6 (cross-checked, consistent)
 - [[QA_Review_Section_06]] — precedent for this report's format and rigor
 - `vault/Research/Notes/RES-001_egypt-named-competitors.md` · `vault/Research/Notes/RES-004_egypt-official-newsroom-operational-datapoints.md` — staleness flags, consistent with prior treatment in Sections 3, 5, 6
+
+---
+
+## Targeted re-review — fix verification (2026-07-22)
+
+**Scope of this addendum:** independently re-verify the two fixes claimed applied against the FAIL report
+above (the Section 3/Section 4 80/20 misattribution, and the funnel table's acquisition-stage wording), and
+run a quick full-section sanity pass for side effects. This addendum does not repeat the full six-part
+checklist above; it is a targeted re-check. Tools used: `Read`, `Grep` only. Independence note: this
+addendum is written by a separately-invoked thread with no memory of the original review or the drafting
+session — every claim below was re-derived from the current file contents, not carried over from the
+original report's text.
+
+### Fix #1 — Section 3/Section 4 misattribution
+
+**Location 1 ("Answer, stated first," closing sentence) — confirmed fixed, cleanly.** Current text (line
+29–30 of the section file): "...in favor of retention-of-existing-base economics, which
+`[[Section_03_Market_Analysis|Section 3]]'s 80/20 finding` shows is where the value already concentrates."
+The wikilink target is `Section_03_Market_Analysis`, and no incorrect subsection number was appended here —
+this location is now fully internally consistent with the same paragraph's earlier, correct sentence ("The
+McKinsey Lens for this section — concentrate spend where Section 3's 80/20 analysis says the value is").
+**Pass.**
+
+**Location 2 (Positioning, "Not new-customer mass acquisition as the primary lever" bullet) — the
+Section-4→Section-3 correction itself is confirmed fixed, but the fix introduces a new, distinct, and
+verifiable subsection-number error that was not present as a defect claim in the original FAIL report but
+is real on independent inspection.** Current text: "`[[Section_03_Market_Analysis|Section 3]] §3.4's 80/20
+finding` — a Group-level ~25% of MAUs (talabat pro subscribers/multi-vertical customers) already accounts
+for roughly half of platform GMV (TLB-019, page 7; TLB-014, page 14; TLB-020, page 8)...". The wikilink now
+correctly targets `Section_03_Market_Analysis`, and the TLB-019/TLB-014/TLB-020 citations are unchanged, as
+instructed. **However, "§3.4" is factually wrong.** Independently re-reading `Section_03_Market_Analysis.md`
+end to end:
+- A `Grep` for `^##+ 3\.` against the full file returns exactly four section headers: `## 3.1 Industry
+  Trends` (line 36), `## 3.2 Target Market` (line 81), `## 3.3 Competitive Analysis` (line 124), `## 3.4
+  Opportunities` (line 229). There is no nested `### 3.2.x`-style numbering anywhere in the file.
+- The 80/20 finding itself — the bolded paragraph "**The 20% driving 80% of value**," containing the exact
+  ~25%-of-MAU / ~50%-of-GMV figures and the exact TLB-019 p.7 / TLB-014 p.14 / TLB-020 p.8 citation set
+  Section 7 uses — sits at lines 100–113, which is inside `## 3.2 Target Market`, not `## 3.4 Opportunities`.
+- `## 3.4 Opportunities` (lines 229–244) contains two different findings entirely: the "low single-digit"
+  grocery/retail-penetration TAM opportunity, and the GEMs internal-AI-precedent point — neither is the
+  80/20 MAU/GMV finding. (Section 7's separate, unrelated GEMs citation to "Section 3 §3.4" in the
+  Partnerships subsection is correct, precisely because GEMs *is* in §3.4 — which makes the Positioning
+  bullet's §3.4 citation for the 80/20 finding easy to mistake for consistent when it is not; they are two
+  different facts that happen to share a wrongly-identical subsection tag in the current draft.)
+- The correct citation is therefore **Section 3 §3.2** (Target Market), not §3.4.
+
+This is not a new independent finding invented by this addendum out of caution — it is directly traceable
+to the original FAIL report's own suggested fix text (Result §1: "...to '[[Section_03_Market_Analysis|Section
+3]] §3.4's 80/20 finding'"), which itself named the wrong subsection, and that error was carried mechanically
+into the draft when the fix was applied. Neither the original QA pass nor the citation audit's four rounds
+caught it, because (a) the citation audit's own stated mandate is fact-accuracy against the underlying TLB
+source, not internal cross-reference/subsection accuracy (a scope boundary the original QA report itself
+states explicitly in its §3 note), and (b) the original QA report's own independent-verification language
+("lines 100–113, 'The 20% driving 80% of value'") correctly identified the *lines* but never cross-checked
+those lines against the file's actual `##` header structure to derive the subsection number, so the §3.4
+label went unchecked at the point it was first proposed.
+
+**A reader or grader following "Section 3 §3.4" to verify the 80/20 figure would land on the Opportunities
+subsection and not find it there** — this is the same category of traceability failure the original Finding
+1 existed to catch (just one level more granular: correct section, wrong subsection), and by the same
+standard applied throughout this review chain, it is not a stylistic quibble.
+
+**Fix needed (small, mechanical, one location):** in the Positioning bullet, change "Section 3 §3.4's 80/20
+finding" to "**Section 3 §3.2's** 80/20 finding" (Target Market, "The 20% driving 80% of value"). No other
+change is required — the wikilink target, the TLB-019/TLB-014/TLB-020 citations, and the surrounding
+sentence are all otherwise correct. Optionally, for full internal consistency, the "Answer, stated first"
+sentence (Location 1, which currently cites no subsection number at all) could also be tightened to
+"Section 3 §3.2's 80/20 finding," though its current unnumbered form is not itself wrong — only the added
+"§3.4" in Location 2 is a factual error.
+
+### Fix #2 — funnel table acquisition-stage wording
+
+**Confirmed applied and reads coherently.** Current cell (table row 1, "App install / registration → first
+order"): "*deliberately not modeled — this is the acquisition stage the Positioning subsection above
+explicitly deprioritizes as this plan's primary lever; a number here would misstate this plan's own scope,
+not fill a gap*." This correctly cross-references the Positioning subsection's own "Not new-customer mass
+acquisition as the primary lever" bullet (which is present and substantive, immediately above in the same
+document), turns the prior "not modeled — outside this plan's scope (acquisition, not retention)" phrasing
+(which read as a partial-answer shortfall against the template's "a number at each stage" instruction) into
+an explicit, reasoned scope decision tied to evidence already established earlier in the same section, and
+does not fabricate an illustrative figure for a funnel leg the plan deliberately deprioritizes. **Pass — no
+further action needed on this point.**
+
+### Side-effect sanity pass (full section, quick read)
+
+Re-read the section end to end (not just the two edited locations) for anything else broken as a
+consequence of the two edits:
+
+- No dangling or malformed wikilinks anywhere in the document — every `[[Section_0X_...]]` link still
+  resolves to a plausible target file name, and the two edited wikilinks (`[[Section_03_Market_Analysis|
+  Section 3]]`, both instances) are correctly formed.
+- The "Answer, stated first" paragraph's remaining Section 4/Section 5 cross-reference ("using the same
+  personalisation/timing mechanisms Section 4 and Section 5 describe") is untouched by the fix and remains
+  accurate — it refers to the *mechanisms*, not the 80/20 figure, so it was never part of the misattribution
+  and does not need to change.
+- The Positioning bullet's surrounding sentences (the Group-wide foodservice-penetration qualifier, the
+  "low single-digit" grocery/retail qualifier, the `ASM-004` distribution-centre reference) read
+  grammatically coherent before and after the edited clause — no orphaned punctuation, no broken sentence
+  boundary introduced by the wikilink/text substitution.
+- The GEMs bullet's own, separate "Section 3 §3.4" citation (Partnerships subsection) is unaffected by
+  either fix and, as independently confirmed above, is correct as written.
+- The Traceability summary table's "Positioning / USP / what this plan does not pursue" row does not name
+  the 80/20 finding's source explicitly (it cites `Section_04_Value_Proposition.md` §4.1 and the Section 3
+  competitor table only) — this is incomplete rather than wrong, was not part of either claimed fix, and is
+  noted here for completeness but is not treated as a blocking defect of this re-review (it does not
+  misattribute anything; it simply doesn't itemize every claim class in the row).
+- No other instance of "Section 4" appearing in place of "Section 3" (or vice versa) was found on a full
+  `Grep`-assisted re-read of the section text for "Section 4" and "Section 3" together with "80/20" and
+  "25%" — the misattribution was, and remains, confined to the two locations already discussed.
+
+### Overall verdict for this targeted re-review: **FAIL** (narrower than the original — one small, precise, mechanical fix remains)
+
+**Fix #2 is fully confirmed and closed — no further action needed there.**
+
+**Fix #1 is only partially closed.** The substantive part of Finding 1 — the wrong *section* (Section 4
+instead of Section 3) being cited for the 80/20 finding — is now correctly resolved in both locations,
+independently re-verified against the actual content of both `Section_03_Market_Analysis.md` (confirmed
+present, matching TLB-019 p.7/TLB-014 p.14/TLB-020 p.8) and `Section_04_Value_Proposition.md` (confirmed
+absent — a full-text `Grep` for "80/20", "25%", "quarter", and "MAU" against the current file returns **zero
+matches**, independently re-confirming the original review's own finding rather than trusting it on its
+word). However, the fix as applied introduced a new, narrower, but equally verifiable subsection-number
+error in the Positioning bullet ("§3.4" where the correct subsection is "§3.2") that must be corrected before
+this section can be marked Done.
+
+**What must change (one location, no new evidence work):** in the Positioning subsection's "Not
+new-customer mass acquisition as the primary lever" bullet, change "Section 3 §3.4's 80/20 finding" to
+"Section 3 §3.2's 80/20 finding." Nothing else in the section requires further change — Fix #2 is closed,
+the wikilink and TLB citations at both Fix #1 locations are correct, and no other side effect was found in
+the full-section sanity pass.
+
+**Disposition:** Section 7 stays at 🟡 (drafted, needs verification) and is **not yet** eligible to move to
+✅ Done in the Project tracker. This is now a single-line, mechanical correction (§3.4 → §3.2 in one bullet)
+rather than a structural defect — once applied, this section should be resubmitted for a final, brief
+confirmation pass (a full re-review should not be necessary; a targeted check of this one location, plus a
+repeat of the "any Section 3/4 misattribution left" `Grep` sweep, would suffice) before it is cleared for
+Done. Per this review's scope (approve or reject, do not rewrite prose), I am not editing the draft myself —
+reporting this verdict back to the top-level session/Orchestrator for that action.
+
+#### Addendum links
+- [[Section_07_Marketing_and_Sales_Strategy]] — current draft, both Fix #1 locations and Fix #2 re-read in full for this addendum
+- [[Section_03_Market_Analysis]] §3.2 (lines 100–113, "The 20% driving 80% of value") — independently re-confirmed via `##` header structure as the correct subsection for the 80/20 finding, not §3.4
+- [[Section_03_Market_Analysis]] §3.4 (lines 229–244, "Opportunities") — independently re-confirmed to contain the grocery/retail-TAM and GEMs findings only, not the 80/20 finding
+- [[Section_04_Value_Proposition]] — re-`Grep`ped in full for "80/20"/"25%"/"quarter"/"MAU"; zero matches, independently re-confirming the finding is not sourced there
