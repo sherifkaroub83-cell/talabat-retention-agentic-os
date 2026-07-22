@@ -258,3 +258,161 @@ until both hard failures are fixed and this audit is re-run.
 - `vault/Knowledge/Facts/Subscription.md` · `vault/Knowledge/Sources/TLB-002_annual-report-2025.md` (both independently confirm the CIB card's correct page attribution, pages 14/19, contradicting Section 7's cited pages 103/168-169)
 - `vault/Knowledge/Sources/TLB-015_capital-markets-day-2024.md` (the actual source of "page 103," a different document from the one Section 7 cites it under)
 - [[Citation_Audit_Section_06|Citation Audit — Section 6]] — precedent for this report's format and for the "number attributed to the wrong source document" and "non-blocking inherited citation imprecision" defect classes
+
+---
+
+# Targeted re-audit — fix verification (2026-07-22)
+
+## Scope and method
+Independent re-verification of the two hard failures above, claimed fixed by direct edits to
+`vault/Projects/Business_Plan_Drafts/Section_07_Marketing_and_Sales_Strategy.md`. Re-read the current
+section file in full; re-checked the edited Positioning paragraph against `Topics/Marketplace.md` and its
+Open Questions; re-checked the corrected CIB citation directly against `vault/Knowledge/Facts/Subscription.md`
+and `vault/Knowledge/Sources/TLB-002_annual-report-2025.md` (not against the draft's own citation text, and
+not against the first-pass audit's conclusions taken on faith); and did a targeted sanity sweep of the rest
+of the edited paragraph and its immediate neighbors for new uncited or anti-pattern claims, per the task
+brief. `Grep` was used to independently pull TLB-014's raw fact record and every "low single-digit"
+occurrence vault-wide, and to re-pull TLB-002's page 14/19 Egypt Mentions extract directly from the Sources
+note (not from Section 7's citation).
+
+## Fix 1 — Positioning subsection Egypt-penetration reframing
+
+**Verified correct — no residual anti-pattern.** The current text (§Positioning, "Not new-customer mass
+acquisition as the primary lever" bullet) reads:
+
+> "The ~20-25% foodservice penetration figure this section might otherwise lean on as a further reason is
+> a **Group-wide, 8-country statistic** (TLB-001, page 21; `Topics/Marketplace.md`), not an
+> Egypt-measured one — `Topics/Marketplace.md`'s own Open Questions states no Egypt-specific penetration
+> or density figure exists in the corpus, and this section does not present it as if it were
+> Egypt-proven. Acquisition is deprioritized here on the strength of the Group-level 80/20 concentration
+> finding above, not on an unverified Egypt-penetration claim."
+
+This is independently confirmed accurate on both counts the task asked to check:
+- **The Group-wide/Egypt-not-proven framing is now correct.** TLB-001, page 21 is the correct source for
+  the ~20-25% figure (matches the original audit's finding, re-confirmed here), and it is now explicitly
+  labeled "Group-wide, 8-country statistic," "not an Egypt-measured one," with the absence of any
+  Egypt-specific figure attributed correctly to `Topics/Marketplace.md`'s own Open Questions. The figure
+  is no longer doing argumentative work for an Egypt-specific claim — it is explicitly disclaimed as
+  something "this section might otherwise lean on" but does not.
+- **The 80/20 argument does not secretly still lean on the unlabeled penetration figure.** The sentence
+  immediately preceding it independently and correctly labels the 80/20 finding itself as "Group-level"
+  ("a **Group-level** ~25% of MAUs... already accounts for roughly half of platform GMV"), and the
+  deprioritization conclusion is stated explicitly: "Acquisition is deprioritized here on the strength of
+  the Group-level 80/20 concentration finding above, not on an unverified Egypt-penetration claim." This
+  directly answers the task's specific concern and holds up — no hidden dependency on the 20-25% figure
+  was found anywhere else in the paragraph, section, or the traceability summary table.
+
+**Fix 1 verdict: correctly and fully applied.**
+
+## Fix 2 — CIB co-branded card citation correction
+
+**Verified correct.** The Partnerships subsection now reads: "...alongside PostPaid's Egypt pilot phase
+(`Facts/Subscription.md`; TLB-002, pages 14, 19)." Re-checked independently, not by re-reading the first
+pass's conclusion:
+- `vault/Knowledge/Facts/Subscription.md` (its own TLB-002 entry, re-read directly): "Egypt FinTech
+  expansion: talabat PostPaid launched in Egypt; co-branded credit card launched with Commercial
+  International Bank (CIB), Egypt's largest private-sector bank — first FinTech expansion outside the
+  UAE. **(TLB-002, pages 14, 19)**" — exact match to Section 7's corrected citation.
+- `vault/Knowledge/Sources/TLB-002_annual-report-2025.md` (the raw per-document extraction, re-read
+  directly, not taken from the first-pass audit): page 14 states "Talabat pro 'strategic launches in
+  Egypt (February 2025) and Iraq (September 2025)'; 'Expanded ancillary FinTech services for the first
+  time outside of the UAE, starting with Egypt (co-branded credit card with CIB and PostPaid pilot
+  phase)'"; page 19 states "We also launched talabat PostPaid in Egypt and launched a co-branded credit
+  card with Commercial International Bank, the country's largest private-sector bank." Both pages
+  independently and directly support the claim as drafted, including the "Egypt's largest private-sector
+  bank" quote and the "pilot phase" framing.
+- No trace of pages 103 or 168-169 remains in the current citation; the fabricated/misattributed page
+  numbers from the original draft have been fully removed, not merely relabeled.
+
+**Fix 2 verdict: correctly and fully applied.**
+
+## New finding from the sanity sweep — unlabeled Group-level statistic introduced immediately adjacent to Fix 1
+
+The task asked for a check that "no new uncited or new anti-pattern-violating claims were introduced by
+the edits." One was found, sitting in the same paragraph as Fix 1, one sentence after the correctly
+relabeled 20-25% figure:
+
+> "Acquisition is not zero, however: grocery/retail penetration remains "low single-digit" against a
+> large TAM (TLB-014, page 19) — a genuine, secondary acquisition opportunity Section 3 §3.4 already
+> names, and one where Egypt's new q-commerce distribution centre (`ASM-004`) is purpose-built
+> infrastructure."
+
+**The citation itself is accurate** — independently re-verified against `Facts/_raw/TLB-014_facts.md`
+line 50 ("G&R opportunity described as a 'USD 150bn+ TAM with low single-digit online penetration' (TLB-014,
+page 19)"), which is a **Group-level** aggregate grocery-and-retail TAM/penetration statistic, not
+Egypt-specific — the same underlying fact `Section_03_Market_Analysis.md` cites (line 164, "Group-wide
+grocery penetration is described as still 'low single-digit'... — **Group-level, not Egypt-specific**,
+but Egypt's new... q-commerce distribution center... is purpose-built infrastructure to capture exactly
+this cross-sell," itself independently confirmed PASS with explicit Group-level labeling in
+`Citation_Audit_Section_03.md` claim #15).
+
+**The problem is that Section 7's version drops the explicit Group-level qualifier that both Section 3's
+own treatment of the identical fact and Section 7's own immediately-preceding sentence (the corrected
+20-25% figure) both carry.** As written, the sentence states "grocery/retail penetration remains 'low
+single-digit'" with no geographic qualifier, then pivots directly to "Egypt's new q-commerce distribution
+centre... is purpose-built infrastructure" to capture that opportunity — structurally the same
+argumentative move (Group-level penetration statistic → therefore Egypt-specific infrastructure
+opportunity) that the original hard failure was built on, minus an explicit disclaimer. A reader of
+Section 7 alone (not cross-referencing Section 3's more careful phrasing) would reasonably read this as
+implying the "low single-digit" penetration figure describes Egypt's grocery/retail market specifically,
+which the underlying source (TLB-014, page 19) does not establish — it is an aggregate, Group-wide G&R
+TAM statistic. Citing "Section 3 §3.4 already names" this opportunity does not cure the omission, since
+the anti-pattern rule requires the claim to be labeled wherever it appears doing argumentative work, not
+only at its original point of citation — this is the same standard Section 7 itself applies one sentence
+earlier to the 20-25% figure, and the same standard every other Group-level statistic in this section
+observes (compare: "Two **Group-level** anchor points..." in §7.2; ">15% order-frequency uplift...
+**Group-wide**... not Egypt-specific" in the Retention subsection; "the same three **Group-disclosed,
+not-yet-Egypt-attributed** items" in the Regular-updates paragraph). This sentence is the one outlier in
+an otherwise consistently-labeled section.
+
+It is not clear from the available evidence whether this sentence pre-dates the two fixes (i.e. was
+already present, unaudited, in the original draft) or was introduced/rewritten as part of the edit that
+produced Fix 1 — either way, it was not caught by the first-pass audit's claim table and constitutes an
+open citation-audit-relevant defect under this project's "Group-level statistics presented as if
+Egypt-proven is a citation-audit failure, not a stylistic note" rule, discovered specifically by the
+"no new anti-pattern-violating claims introduced" sanity check this re-audit was asked to perform.
+
+**Fix needed:** add the same explicit Group-level qualifier used one sentence earlier and in Section 3's
+own treatment of this identical fact — e.g. "grocery/retail penetration remains 'low single-digit' against
+a large TAM (TLB-014, page 19) — **a Group-wide, not Egypt-specific, figure**, but a genuine, secondary
+acquisition opportunity Section 3 §3.4 already names, and one where Egypt's new q-commerce distribution
+centre (`ASM-004`) is purpose-built infrastructure to pursue." This is a small, mechanical fix (inserting
+one clause), consistent in form with how Fix 1 itself was executed one sentence earlier.
+
+## Overall re-audit verdict
+
+**FAIL.**
+
+Both of the two hard failures from the original audit are **correctly and fully fixed**:
+1. The Positioning subsection's Egypt-penetration figure is now honestly labeled Group-wide, and the
+   acquisition-deprioritization argument is confirmed to rest only on the correctly-labeled Group-level
+   80/20 finding, not on the penetration figure — independently re-verified against `Topics/Marketplace.md`
+   and its Open Questions.
+2. The CIB co-branded card citation is now "TLB-002, pages 14, 19," independently re-verified as correct
+   against both `Facts/Subscription.md` and `Sources/TLB-002_annual-report-2025.md` directly (not taken
+   on the draft's or the first audit's word).
+
+However, the mandated sanity sweep for new defects introduced by the edits found **one new,
+unaddressed citation-audit-relevant issue**: the "grocery/retail penetration... low single-digit" sentence
+immediately following the Fix 1 text (TLB-014, page 19) is an accurately-cited but **unlabeled
+Group-level statistic**, presented adjacent to an Egypt-specific infrastructure claim (`ASM-004`) without
+the explicit "Group-wide, not Egypt-specific" qualifier that every comparable statistic elsewhere in this
+same section carries — including the very sentence before it. Per this project's zero-tolerance rule that
+"Group-level statistics presented as if Egypt-proven is a citation-audit failure, not a stylistic note,"
+this must be treated as a third hard failure requiring the same class of fix as the original two, not a
+non-blocking limitation.
+
+**Section 7 cannot proceed to Stage 10.** One mechanical fix remains: add an explicit Group-level/
+not-Egypt-specific qualifier to the "low single-digit" grocery/retail penetration sentence in the
+Positioning subsection (§Positioning, "Not new-customer mass acquisition as the primary lever" bullet,
+final sentence), matching the labeling standard the rest of the section — and Section 3's own treatment
+of the identical TLB-014 p.19 fact — already establish. Once applied, this should be a same-day, one-line
+re-check, not a full re-audit.
+
+## Links (addendum)
+- [[Section_07_Marketing_and_Sales_Strategy|vault/Projects/Business_Plan_Drafts/Section_07_Marketing_and_Sales_Strategy.md]] — current (post-fix) draft, re-read in full for this addendum
+- `vault/Knowledge/Facts/Subscription.md` (line 25, "(TLB-002, pages 14, 19)") — independently confirms Fix 2
+- `vault/Knowledge/Sources/TLB-002_annual-report-2025.md` (Egypt Mentions, pages 14 and 19) — independently confirms Fix 2
+- `vault/Knowledge/Topics/Marketplace.md` (Open Questions) — independently confirms Fix 1's Group-wide/no-Egypt-figure framing
+- `vault/Knowledge/Facts/_raw/TLB-014_facts.md` (line 50, "low single-digit online penetration," TLB-014 page 19) — source of the new finding's underlying (correctly cited but unlabeled) fact
+- [[Section_03_Market_Analysis]] (line 164) and [[Citation_Audit_Section_03]] (claim #15) — the correctly-labeled precedent for the same TLB-014 p.19 fact that Section 7's new sentence should match

@@ -55,9 +55,11 @@ building an equivalent capability from zero (`DEC-003`).
   states no Egypt-specific penetration or density figure exists in the corpus, and this section does not
   present it as if it were Egypt-proven. Acquisition is deprioritized here on the strength of the
   Group-level 80/20 concentration finding above, not on an unverified Egypt-penetration claim. Acquisition
-  is not zero, however: grocery/retail penetration remains "low single-digit" against a large TAM
-  (TLB-014, page 19) — a genuine, secondary acquisition opportunity Section 3 §3.4 already names, and one
-  where Egypt's new q-commerce distribution centre (`ASM-004`) is purpose-built infrastructure.
+  is not zero, however: **Group-level, not Egypt-specific** — grocery/retail penetration remains "low
+  single-digit" against a large TAM (TLB-014, page 19) — a genuine, secondary acquisition opportunity
+  Section 3 §3.4 already names using the same qualifier, and one where Egypt's new q-commerce distribution
+  centre (`ASM-004`, an Egypt-specific fact) is purpose-built infrastructure, even though the underlying
+  penetration statistic itself is not Egypt-measured.
 - **Not a generic loyalty-points scheme.** talabat's existing product suite (talabat Rewards, PostPaid,
   the CIB co-branded card) already exists — this plan does not propose inventing a new promotional
   product category, only sequencing and AI-timing the ones already built, consistent with `DEC-003`'s
