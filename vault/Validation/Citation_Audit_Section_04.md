@@ -1,11 +1,3 @@
----
-type: validation
-section: 4
-pipeline_stage: 9
-date: "2026-07-22"
-result: FAIL (3 hard failures, 4 acknowledged non-blocking limitations)
----
-
 # Citation Audit — Section 4 (Value Proposition)
 
 ## Tooling note (read first)
@@ -307,3 +299,77 @@ re-run.
   `vault/Knowledge/Topics/Customer Journey.md` · `vault/Knowledge/Topics/Profitability.md`
 - [[Citation_Audit_Section_09|Citation Audit — Section 9]] · [[Citation_Audit_Section_10|Citation Audit — Section 10]]
 - [[Pilot_Validation_Plan]]
+
+---
+
+## Targeted re-audit — fix verification (2026-07-22)
+
+**Scope of this entry:** a narrow, independent re-check of exactly the three hard failures and the two
+non-blocking bookkeeping items recorded above, following the top-level session's stated fixes. This is not
+a re-run of the full citation audit (KPI cross-references, DEC-003 consistency, cross-section accuracy to
+Sections 9/10, and the anti-pattern check were not re-performed — they remain valid from the original run
+above). Performed by a fresh, independent `evidence-citation-agent` thread with no memory of the original
+audit run; every fix was re-derived from the underlying Facts/Topics layer directly, not accepted on the
+strength of the prior audit's own wording or the top-level session's claim that it was fixed.
+
+### Fix 1 — "already reached in the UAE for talabat mart specifically"
+Current text in `Section_04_Value_Proposition.md` (Mechanism 3, "Quantified" paragraph): "...against a
+management-stated ~7%-of-GMV medium-term benchmark (TLB-001, page 21) already reached in the UAE for
+talabat mart specifically (TLB-002, page 10) — current Group AdTech penetration sits at 3.4–3.5% of GMV
+(TLB-002, pages 11/14/19)..."
+
+Independently re-read `vault/Knowledge/Facts/Advertising_Facts.md`, TLB-002 entry: "In the UAE, advertising
+technology margins have already reached 7% of GMV for talabat mart. (TLB-002, page 10)" — this is a
+verbatim match for the claim now attached to that citation. The general ~7% benchmark clause remains
+correctly attributed to TLB-001 p.21 ("Global benchmark target for AdTech revenue is ~7% of GMV in the
+medium term (talabat currently well below this)"), and the two facts are no longer sharing one citation.
+**PASS.**
+
+### Fix 2 — "current Group AdTech penetration sits at 3.4–3.5% of GMV"
+Now cited to `(TLB-002, pages 11/14/19)` in the same sentence. Independently re-read
+`Facts/Advertising_Facts.md`, TLB-002 entry: "Consolidated AdTech (advertising and listing fees) revenue:
+USD 323mn (+32% y/y), 3.4%–3.5% of GMV. (TLB-002, pages 11, 14, 19)" — verbatim match, including the exact
+page set. **PASS.**
+
+### Fix 3 — "the only directly quantified financial trail for any AI mechanism in the entire corpus"
+Now reads (Mechanism 1, "Quantified" paragraph): "...USD 30mn+ (FY2025) — TLB-001 p.23, TLB-002 p.15 — the
+only directly quantified financial trail for any AI mechanism in the entire corpus (`Topics/Profitability.md`)."
+Independently re-read `vault/Knowledge/Topics/Profitability.md`: "[[AI]] — the corpus's only directly
+quantified AI financial-impact figures (USD 14mn+ to USD 30mn+ incremental EBITDA) are profitability, not
+revenue or GMV, figures." This is a substantive match for the superlative now attached to it, and the
+citation format (a note reference rather than a `TLB-XXX, page N` pointer) is consistent with how this
+section already cites other synthesis notes (e.g., `Strategic/Customer Retention Drivers.md` in Mechanism
+2). **PASS.**
+
+### Full-document re-read (checking for new inconsistency, not just the edited sentences)
+Read `vault/Projects/Business_Plan_Drafts/Section_04_Value_Proposition.md` in full, start to end. The
+frontmatter provenance note (lines 10–17) now lists KPIs as "K6, K7, K8, K13, K14, K16," resolving Limitation
+3 (K8 was previously omitted from this list despite being correctly cited in the Mechanism 2 body text).
+No other content changed: §4.1 (USP), Mechanism 2's full paragraph, the risk-reduction paragraph, §4.3's
+ROI-referencing logic, and the traceability summary table are all identical in substance to the version the
+original audit passed on those points. No new uncited claim, no new misattribution, and no new drift from
+`DEC-003` was introduced by the edits.
+
+### Assumptions Register spot-check (Limitation 2)
+Re-read `vault/Decisions/Assumptions_Register.md` directly:
+- `ASM-002` — "Used in (BP sections)" = "Section 3, 4" — **includes Section 4.**
+- `ASM-008` — "Used in (BP sections)" = "Section 4, 9, 12, 13" — **includes Section 4.**
+- `ASM-011` — "Used in (BP sections)" = "Section 4, 9, 12, 13" — **includes Section 4.**
+- `ASM-012` — "Used in (BP sections)" = "Section 4, 9" — **includes Section 4.**
+
+All four rows remain `Status: Approved`, and their Statement/Value fields are unchanged from the original
+audit's read of them (no fix touched the substance of any row, only the "Used in" column). **PASS.**
+
+### Result
+
+**PASS.** All three hard failures from the original audit (misattributed UAE/talabat-mart citation, uncited
+3.4–3.5%-of-GMV figure, uncited "only directly quantified financial trail" superlative) are independently
+confirmed resolved against the underlying Facts/Topics source layer, not merely against the prior audit's
+own description of what a fix should look like. Both non-blocking bookkeeping items (Assumptions Register
+"Used in" column for ASM-002/ASM-008/ASM-011/ASM-012; the frontmatter KPI list's missing K8) are also
+confirmed resolved. No new citation defect was introduced by the edits anywhere else in the document. The
+two remaining acknowledged Limitations from the original audit that were *not* in scope for this fix round
+(Limitation 1 — the inherited-imprecision AdTech $246m FY2024 comparator citation; Limitation 4 — §4.3's
+uncited repeat of the +16pp/+20pp figure) remain open as non-blocking, exactly as the original audit scoped
+them, and do not affect this PASS determination. **Section 4 has zero open citation-audit failures and can
+proceed to Stage 10/11.**
