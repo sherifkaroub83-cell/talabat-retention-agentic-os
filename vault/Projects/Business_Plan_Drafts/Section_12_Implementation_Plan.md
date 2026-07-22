@@ -125,7 +125,7 @@ already-evidenced next option, rather than an invented one.
 |---|---|---|
 | Three Horizons sequencing logic | `Section_10_Risk_Analysis.md` §10.4, `Section_11_CSR_and_Responsible_AI.md` §11.3 | Cross-referenced, not re-derived |
 | H1 pilot scope and controls | `Section_05_AI_Technology_and_Development.md` §5.2, `Section_10_Risk_Analysis.md` §10.4, `Section_11_CSR_and_Responsible_AI.md` §11.1, `ASM-012` | Cross-referenced, not re-derived |
-| H1 organizational prerequisite (AI-capability ownership) | `Section_08_Operations_Plan.md` (AI-capability ownership ambiguity) | Cross-referenced, not re-derived |
+| H1 organizational prerequisite (AI-capability ownership) | `Section_10_Risk_Analysis.md` §10.1/§10.4 (originating finding and the "before Section 12" recommendation), `Section_08_Operations_Plan.md` (non-originating cross-reference to the same finding) | Cross-referenced, not re-derived |
 | H2 mechanisms and sequencing | `Section_04_Value_Proposition.md` §4.2 (`ASM-008`), `Section_07_Marketing_and_Sales_Strategy.md` | Cross-referenced, not re-derived |
 | H2 development-timeline gap | `Section_08_Operations_Plan.md` (development/maintenance workflow gap) | Cross-referenced, explicit gap statement |
 | H3 cross-vertical extension | `Section_03_Market_Analysis.md` §3.4, TLB-014 p.19 | Cross-referenced, not re-derived |
