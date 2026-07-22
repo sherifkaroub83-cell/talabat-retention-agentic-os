@@ -386,3 +386,88 @@ silently dropped either.
   "since-inception vs. FY2025" observation)
 - [[Section_03_Market_Analysis]] (competitor table — re-confirmed as the labeling-discipline precedent)
 - [[Section_06_Business_Model_and_Revenue_Streams|vault/Projects/Business_Plan_Drafts/Section_06_Business_Model_and_Revenue_Streams.md]] — specifically the Subscription-pricing bullet in §6.2, still containing the unfixed clause
+
+---
+
+# Second targeted re-audit — contradiction fix verification (2026-07-22)
+
+## Scope
+Narrow, bounded re-check (not a full re-audit) of the single remaining fix claimed since the first
+targeted re-audit above: the Subscription-pricing bullet in §6.2 was edited to remove the false
+"the corpus does not disclose Egypt's specific pro price point, only that it exists market-by-market"
+clause and replace it with a stated EGP 79/month figure. Read fresh, in full:
+`vault/Projects/Business_Plan_Drafts/Section_06_Business_Model_and_Revenue_Streams.md` §6.2 end to end
+(both the Subscription bullet and the closing paragraph), against the prior pass's already-verified
+`ASM-004`/`RES-004` facts (not re-fetched — per the task brief, that underlying sourcing was already
+independently confirmed in the first re-audit pass above and is not re-litigated here).
+
+## Check 1 — Subscription bullet no longer claims non-disclosure
+
+**Confirmed.** The bullet now reads (in full): "**Subscription (tiered, recurring membership fee):**
+talabat pro is a monthly/annual paid membership (free delivery above a minimum basket plus exclusive
+discounts), rolled out market-by-market since March 2022, reaching Egypt in February 2025
+(`Topics/Talabat Pro.md`; TLB-001, page 19; TLB-002, page 14). Pricing is value-based against the
+delivery-fee savings and discount value a frequent orderer would otherwise pay per-transaction. Egypt's
+price point is EGP 79/month (`ASM-004`, official-newsroom source, explicitly outside the audited TLB-XXX
+regime — see the closing paragraph of this subsection for the full citation and labeling discipline)."
+The false absence clause flagged in the prior pass is gone; no trace of "does not disclose" or equivalent
+absence language remains in this bullet.
+
+## Check 2 — Bullet and closing paragraph now agree; no internal contradiction
+
+**Confirmed — no contradiction.** The closing paragraph (unchanged since the first fix) reads: "...One
+Egypt price point is available, but only as labeled External Research, not from the audited primary
+corpus: talabat pro's Egypt price is EGP 79/month, per `ASM-004` (`RES-004_egypt-official-newsroom-
+operational-datapoints`, sourced from talabat's official newsroom, explicitly outside the audited TLB-XXX
+regime...)." Both passages now assert the identical fact (EGP 79/month), the identical source
+(`ASM-004`, ultimately `RES-004`), and the identical tier/labeling discipline (official-newsroom-sourced,
+explicitly outside the audited TLB-XXX regime). The bullet does not attempt to re-derive or duplicate the
+full citation apparatus — it states the figure compactly and explicitly points forward ("see the closing
+paragraph of this subsection for the full citation and labeling discipline"), which is the correct
+structure: state once in full, cross-reference elsewhere, rather than two independently-worded citations
+that could drift out of sync. A full re-read of §6.2 top to bottom found no other sentence that
+contradicts, restates inconsistently, or omits this figure.
+
+## Check 3 — EGP 79/month figure and ASM-004 sourcing/labeling stated accurately in both places
+
+**Confirmed, consistent with the prior pass's direct verification of `ASM-004`/`RES-004`.** Both the
+bullet and the closing paragraph state the value as "EGP 79/month" (matching `ASM-004`'s Value field
+verbatim, as already confirmed against the Assumptions Register in the first re-audit pass), attribute it
+to `ASM-004`, and characterize it identically as sourced from talabat's official newsroom and explicitly
+outside the audited TLB-XXX regime. Neither passage overclaims (e.g., neither asserts the EGP 799/year
+annual figure that `RES-004` discloses but `ASM-004`'s Value field does not carry, consistent with the
+conservative restatement already noted in the prior pass) or overstates confidence/tier beyond what
+`ASM-004`'s own Approved/External-Research-tier status supports.
+
+## Check 4 — No new uncited or contradictory claim introduced by this edit
+
+**Confirmed clean.** The edit is confined to the trailing clause of the Subscription bullet's third
+sentence; no other sentence in §6.2, or elsewhere in the section, was altered. The new clause introduces
+no numeric or named fact beyond the EGP 79/month figure and its `ASM-004` citation, both already
+independently verified. No new absence-style claim, no new unlabeled Group-vs-Egypt statistic, and no new
+internal inconsistency were found on a full re-read of §6.2.
+
+## Verdict — Section 6 overall
+
+**PASS.** All three defects raised across the two audit rounds are now closed:
+1. The false-absence claim in §6.2's closing paragraph (original Claim #11) — fixed and verified PASS in
+   the first re-audit pass.
+2. The wrong-document citation for the USD 509.9mn Egypt FY2025 figure in §6.1 (original Claim #12) —
+   fixed and verified PASS in the first re-audit pass.
+3. The relocated/duplicated false-absence claim in the Subscription bullet, found by the first re-audit
+   pass to still contradict the (already-fixed) closing paragraph — fixed and verified PASS in this
+   second targeted re-audit.
+
+The three non-blocking limitations carried since the original audit (AdTech citation completeness, the
+39.8%/40% precision gap, and the 136%-uplift citation pointing to the wrong sub-section of the right note)
+remain open but are, as previously characterized, non-blocking — recommended tightenings, not hard
+failures, and were out of scope for this bounded re-check.
+
+**Section 6's citation audit is now fully closed out. With no open hard failures, the section is ready for
+Stage 11 QA review** (the pipeline's Stage 10 promotion step is a separate, later gate not assessed by
+this citation-audit re-check).
+
+## Links (second addendum)
+- [[Section_06_Business_Model_and_Revenue_Streams|vault/Projects/Business_Plan_Drafts/Section_06_Business_Model_and_Revenue_Streams.md]] — §6.2, both the Subscription bullet and the closing paragraph, re-read in full and confirmed consistent
+- `vault/Decisions/Assumptions_Register.md` (ASM-004 row) and `vault/Research/Notes/RES-004_egypt-official-newsroom-operational-datapoints.md` — underlying sourcing, verified in the first re-audit pass and not re-litigated here
+- [[Section_03_Market_Analysis]] — the labeling-discipline precedent both §6.2 passages reference
