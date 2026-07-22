@@ -32,7 +32,7 @@ describing a talabat process that does not exist in the evidence.
 
 ## 11.1 Ethical AI: Bias, Transparency, Fairness — Tied to Concrete Controls
 
-| Section 10 risk this ties to | Ethical-AI commitment | Concrete control (already specified in Section 10 §10.4, cross-referenced not re-derived) | Owner |
+| Section 10 risk this ties to | Ethical-AI commitment | Concrete control (cross-referenced from Section 10 §10.4 where one exists; stated as an open gap where it does not) | Owner |
 |---|---|---|---|
 | **Algorithmic bias/fairness risk** — explicitly labeled synthetic in Section 10 (no corpus source discusses talabat's AI bias/fairness posture); this plan's own reasoned extension of the model-transfer gap to a fairness-specific failure mode | No full-scale Egypt rollout without segment-level (not just aggregate) fairness monitoring, specifically checking whether price-sensitive or newly-onboarded Egyptian segments see materially worse recommendation relevance than the overall Egypt cohort | Segment-level performance monitoring built into the limited Egypt pilot [[Section_10_Risk_Analysis|Section 10]]'s mitigation table already specifies for Model Transfer Risk — this section does not add a second, separate pilot; it extends the same one to carry a fairness lens, not only a performance lens | Group AI/Data Science, in coordination with Egypt Country GM |
 | **Model transfer risk** — the corpus does not confirm whether Egypt runs the same models as the GCC or a less mature version | No commitment to full-scale deployment ahead of validated in-market evidence that Group-trained models perform acceptably on Egypt's specific customer behavior | The limited Egypt pilot itself, instrumented to detect recommendation-relevance/cross-sell-response divergence from the GCC benchmark, before committing the full ≈USD13.2m Egypt-attributable investment estimate (`ASM-012`) | Group AI/Data Science, in coordination with Egypt Country GM |
@@ -67,9 +67,10 @@ rather than inventing a CSR programme this plan is not proposing to create:
   Cairo areas through third-party logistics partners in 2025 — its "inaugural EV programme" in Egypt
   specifically, described explicitly as an operational test of EV performance in Cairo's traffic and
   infrastructure conditions, with results "informing how talabat approaches infrastructure needs, rider
-  incentives, and fleet expansion" for a 2026 scale-up (TLB-002, pages 41-42). This sits alongside a larger
-  UAE fleet (250+ EVs, 70+ battery-swap stations, TLB-002, page 41) as part of a stated "regional
-  decarbonisation ambition."
+  incentives, and fleet expansion" for a 2026 scale-up (TLB-002, page 42, "Electrifying Egypt" narrative;
+  the aggregate "200 electric vehicles across Egypt" headline stat also appears at TLB-002, page 41). This
+  sits alongside a larger UAE fleet (250+ EVs, 70+ battery-swap stations, TLB-002, page 41) as part of a
+  stated "regional decarbonisation ambition."
 
 **This plan's own contribution is not a new sustainability programme** — it is naming that these
 initiatives already establish talabat's Egypt "license to operate" with Partners, riders, and communities,
@@ -90,8 +91,7 @@ compliance, not AI-model fairness, bias, or explainability oversight, and the co
 are the same function.
 
 **This plan's own proposed governance recommendation** (explicitly labeled as this plan's proposal, not a
-described talabat process, consistent with `Strategic/Decision-Making Process.md`'s own caution that
-internal governance mechanics are largely undisclosed): extend the role-based ownership [[Section_10_Risk_
+described talabat process): extend the role-based ownership [[Section_10_Risk_
 Analysis|Section 10]] §10.4 already assigns for Model Transfer Risk and Algorithmic bias/fairness risk
 (Group AI/Data Science, in coordination with Egypt Country GM) to include an explicit, standing
 segment-fairness review gate before any Egypt-wide AI-driven retention rollout — not a one-time pilot
@@ -110,8 +110,8 @@ once at the pilot stage and left unrevisited.
 | Transparency gap | None — explicit gap statement, vault-wide search confirmed no contradicting evidence | Explicit gap statement, not filled |
 | SME academy / MSMEDA partnership | TLB-001, page 46 | Direct citation |
 | Charity partnerships (FY2024, FY2025) | TLB-001, page 54; TLB-002, page 39 | Direct citation, two-year comparison |
-| Electrifying Egypt EV pilot | TLB-002, pages 41-42 | Direct citation |
-| Responsible-AI governance recommendation | `Strategic/Decision-Making Process.md`, `Section_08_Operations_Plan.md` (data-protection governance, distinguished not conflated), `Section_10_Risk_Analysis.md` §10.4 | Explicitly labeled as this plan's own proposal, not a disclosed talabat process |
+| Electrifying Egypt EV pilot | TLB-002, page 42 (narrative); page 41 (headline stat) | Direct citation |
+| Responsible-AI governance recommendation | `Section_08_Operations_Plan.md` (data-protection governance, distinguished not conflated), `Section_10_Risk_Analysis.md` §10.4 | Explicitly labeled as this plan's own proposal, not a disclosed talabat process |
 
 ## Links
 - [[Talabat-Egypt-AI-Retention-Business-Plan|Project tracker]]
