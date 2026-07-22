@@ -14,8 +14,9 @@ pipeline_run: 2026-07-22
 > frame this as the capstone's candidate recommendation, but it is `DEC-003`'s *unchosen* Option 1. This
 > section extracts only `Future AI Opportunities.md`'s market-timing argument (Egypt's newly-standalone,
 > newly-profitable, least-mature-loyalty-market status makes it the right proving ground *now*) and
-> redirects it toward `DEC-003`'s confirmed Option 2 mechanisms — the same correction `Section_02_Business_
-> Description.md`/`Section_03_Market_Analysis.md`'s GEMs bullet already required in Pilot 2. This is a
+> redirects it toward `DEC-003`'s confirmed Option 2 mechanisms — the same correction
+> `Section_03_Market_Analysis.md`'s GEMs bullet already required in Pilot 2 (a Section 3 defect only;
+> `QA_Review_Section_02.md` confirms Section 2 itself needed no fix). This is a
 > working draft in `vault/Projects/`, not yet promoted to `Outputs/`.
 
 ## Answer, stated first
@@ -36,8 +37,10 @@ Sections 10 and 11 already established as the plan's own risk-management discipl
 
 ### Horizon 1 (0–6 months) — Quick wins that fund credibility
 
-**What:** a limited-scope Egypt pilot of the redeployed personalisation/ranking algorithm (`DEC-003`'s
-Option A, [[Section_05_AI_Technology_and_Development|Section 5]] §5.2), instrumented specifically to
+**What:** a limited-scope Egypt pilot of the redeployed personalisation/ranking algorithm — the redeployment
+path `DEC-003`'s confirmed Option 2 commits the plan to, which [[Section_05_AI_Technology_and_Development|
+Section 5]] §5.2 separately labels "Option A" in its own build/buy/partner analysis (a distinct lettering
+scheme from DEC-003's numbered options, not the same "Option A") — instrumented specifically to
 detect whether recommendation relevance and cross-sell response diverge from the GCC benchmark, with
 segment-level (not only aggregate) fairness monitoring built in from day one — the exact controls
 [[Section_10_Risk_Analysis|Section 10]] §10.4 and [[Section_11_CSR_and_Responsible_AI|Section 11]] §11.1
@@ -51,9 +54,10 @@ already specify, not a new workstream this section invents.
 - **Organizational prerequisite, not a technology one:** [[Section_08_Operations_Plan|Section 8]]'s
   "AI-capability ownership ambiguity" finding — the corpus never confirms whether Egypt AI deployment
   would be owned by a dedicated Egypt function or the shared Group Tech hub — must be resolved before H1
-  exits, per Section 8's own recommendation that this be named "before Section 12's implementation
-  roadmap is drafted." This section flags it as still open, not resolved, and treats it as the single
-  largest H1 dependency.
+  exits. [[Section_10_Risk_Analysis|Section 10]] §10.4's mitigation table is where this recommendation
+  that ownership be named "before Section 12's implementation roadmap is drafted" actually originates
+  (Section 8 itself credits Section 10 as the source of the underlying finding, not the other way round).
+  This section flags it as still open, not resolved, and treats it as the single largest H1 dependency.
 
 **Why H1, not H2:** this is deliberately the smallest, fastest-to-evidence step — it tests `DEC-003`'s
 central assumption (that Group-trained models transfer to Egypt) before committing the ≈USD13.2m
