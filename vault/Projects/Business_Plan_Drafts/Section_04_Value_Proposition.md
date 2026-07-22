@@ -1,7 +1,7 @@
 ---
 section: 4
 title: Value Proposition
-status: drafted — pending citation verification and QA (pipeline stage 9/11)
+status: Done — citation audit PASS (independently re-verified), QA review PASS (independently re-verified, one fix cycle)
 pipeline_run: 2026-07-22
 ---
 

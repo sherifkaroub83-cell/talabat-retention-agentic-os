@@ -511,3 +511,29 @@ pass with minimal turnaround.
 - `vault/Knowledge/Strategic/Cost Structure.md`
 - [[Section_09_Financial_Plan]] · [[DEC-003_section2-governing-hypothesis]]
 - `AI_Business_Plan_Template.md` §4
+
+---
+
+## Final closeout check (2026-07-22)
+
+**Scope:** verify the single one-word fix required by the "Targeted re-review" addendum above — the
+"### Risk reduction (...)" section header — and confirm no other place in the section text still says
+"fifth" incorrectly or now reads incoherently as a result of the change. Not a full re-review.
+
+**Verification performed:** re-read the current header directly at its location in
+`vault/Projects/Business_Plan_Drafts/Section_04_Value_Proposition.md` — it now reads "### Risk reduction
+(the fourth value-creation category the template names, explicitly not quantified)," matching the
+template's stated order (`AI_Business_Plan_Template.md` §4: efficiency=1, cost savings=2, revenue lift=3,
+risk reduction=4, insight=5). A full-text grep of the section for "fifth" and "fourth" returned exactly two
+hits: this corrected header, and one unrelated, already-correct use of "fourth lever" in the §4.2 MECE
+lead-in ("no fourth lever exists in DEC-003's confirmed scope") — a different sentence about causal levers,
+not the template category count, and it does not need to change. No stray "fifth" remains anywhere else in
+the section. The paragraph immediately following the header (the "Labeled deliberately unquantified, not
+omitted" text through the Section 10 cross-reference) still reads coherently with the corrected header in
+place — no dangling reference to "fifth" or renumbering elsewhere in that paragraph.
+
+**Verdict: PASS.** The single required fix is correctly and completely implemented, and nothing else in the
+section text contradicts it. Combined with the "Targeted re-review" addendum above (which independently
+verified all three original findings resolved and found no other outstanding issue), Section 4 has now
+cleared both the citation audit (`vault/Validation/Citation_Audit_Section_04.md`, PASS) and QA review
+(this document) and is ready to be marked ✅ Done for Section 4 in the Project tracker.
