@@ -318,3 +318,128 @@ rewrite prose).
 - [[Assumptions_Register]] (ASM-006 through ASM-012)
 - [[Section_02_Business_Description]] · [[Section_03_Market_Analysis]] · [[QA_Review_Section_02]]
 - [[Pilot_Validation_Plan]]
+
+---
+
+## Targeted re-review — template-completeness fixes (2026-07-22, Pilot 3)
+
+**Scope of this addendum, per the top-level session's brief:** an independent, narrow re-check of
+whether the two edits made to `Section_09_Financial_Plan.md` since the FAIL verdict above actually
+resolve Finding 1 (no base-case FY2026 revenue figure) and Finding 2 (no P&L projection of any kind).
+This is not a re-run of the full Section 9 checklist — DEC-003/DEC-004/DEC-005 consistency, McKinsey
+Lens, cross-section consistency, KPI Tree traceability, staleness, and the anti-patterns pass above all
+stay as independently verified in the original review and are not re-litigated here.
+
+**Files read for this addendum:** `vault/Projects/Business_Plan_Drafts/Section_09_Financial_Plan.md`
+(full current text, not just the diff), this file's own original FAIL findings above, and
+`vault/Knowledge/Strategic/Cost Structure.md` (for its Open Questions and Egypt-Specific
+Considerations, to independently test the P&L snapshot's stop-at-gross-profit justification). Tools
+used: `Read`, `Grep`.
+
+### Finding 1 fix — verified
+
+§9.3 now states, inside the scenario table and again in a dedicated paragraph immediately below it:
+"**Illustrative FY2026 revenue: ≈USD 581–597m** (509.9m × 1.14–1.17)," explicitly labeled "labeled
+synthetic," explicitly tied to the base case's own pre-existing Medium confidence ceiling (not
+elevated by the new arithmetic), and explicitly framed as a conservative floor rather than a ceiling
+(since Egypt's own Q1 2026 trend, +81% YoY, runs well above the Group guidance range being applied).
+This is exactly the fix required: an actual FY2026 dollar figure for the base case, built from the same
+two already-disclosed Facts the original review identified (Egypt FY2025 revenue USD 509.9m; Group
+FY2026 guided growth 14–17% cFX), carrying the same "illustrative, labeled" treatment already applied
+elsewhere in the section.
+
+**Arithmetic independently recomputed, not just re-read:**
+- 509.9 × 1.14 = 581.286 → rounds to ≈581. Matches the stated lower bound.
+- 509.9 × 1.17 = 596.583 → rounds to ≈597. Matches the stated upper bound.
+Both check out exactly; "≈USD 581–597m" is a correct, honestly-rounded restatement of the two Facts
+being multiplied, not an inflated or fudged range.
+
+The upside case is still correctly left un-numbered, with the same confidence-ceiling reasoning the
+original review found more defensible for the upside case than for the base case — no regression there.
+The downside case also remains un-numbered; the fix instructions treated the base case as the minimum
+required fix and left the upside/downside numeric treatment to drafting-team judgment, which this
+revision exercised reasonably (an unproven-intervention upside and a magnitude-unspecified downside risk
+are both weaker candidates for a labeled number than the base case was).
+
+**Finding 1: resolved.**
+
+### Finding 2 fix — verified
+
+§9.4 now contains an "Illustrative FY2026 annual P&L snapshot (labeled synthetic throughout...)" table
+with four rows: Revenue (base case) → Gross profit (at the disclosed 24.5% margin) → less the
+illustrative ≈USD 13.2m investment ask → illustrative gross profit net of investment, plus a clearly
+separated "Memo" row carrying FY2025's actual disclosed PBT (USD 39.7m) labeled explicitly as "scale
+reference only, not projected forward" — correctly kept out of the projected P&L logic rather than
+blended into it.
+
+**Arithmetic independently recomputed:**
+- Gross profit: 581 × 0.245 = 142.345 → ≈142; 597 × 0.245 = 146.265 → ≈146. Matches the stated
+  "≈USD 142–146m."
+- Net of investment: 142.345 − 13.2 = 129.145 → ≈129; 146.265 − 13.2 = 133.065 → ≈133. Matches the
+  stated "≈USD 129–133m."
+Both check out exactly, and both are a correct, mechanical propagation of the base-case revenue range
+through figures the section had already computed (the 24.5% margin from `Facts/Revenue.md`, the
+≈USD13.2m investment ask from §9.2/`ASM-012`) — no new unlabeled number is introduced anywhere in the
+snapshot.
+
+**Independent check of the "stops at gross profit" justification (not just accepted from the section's
+own claim):** read `vault/Knowledge/Strategic/Cost Structure.md` directly. Its Open Questions state
+plainly: "The corpus does not disclose granular cost-line detail (delivery cost, order processing,
+other direct costs) broken out by segment or country anywhere except the one Egypt figure [delivery
+cost]," and "No document states an Egypt-specific CARC or customer-acquisition-cost figure." Its
+Egypt-Specific Considerations section adds that "there is no Egypt-specific CARC, no Egypt
+order-processing/handling cost, no Egypt 'other direct costs' line, and no Egypt Adjusted EBITDA
+margin" — only revenue, gross profit, PBT, and net profit are disclosed as Egypt-segment *totals*, with
+no line-item build-up (SG&A, opex, tax rate) behind them anywhere in the corpus. This independently
+confirms the section's claim: FY2025's actual PBT (USD 39.7m) and net profit (USD 44.4m) exist only as
+undecomposed bottom-line totals, not as a build-up methodology that could be projected forward onto the
+FY2026 revenue range. Extending the snapshot past gross profit would require inventing an Egypt SG&A/tax
+ratio the corpus genuinely does not support — the section does not overstate this gap; if anything the
+~USD85mn unexplained difference between FY2025's actual gross profit (USD125.0m) and actual PBT
+(USD39.7m), which §9.4 cites as its own evidence for the stopping point, is itself accurate and
+independently verifiable from `Facts/Revenue.md`'s own disclosed FY2025 figures cited elsewhere in this
+same section.
+
+**Finding 2: resolved**, including the specific "stop at gross profit" scope decision, which is
+defensible on independent re-read of the underlying corpus note, not merely asserted by the fix itself.
+
+### Labeling-consistency check (per the original citation audit's own standard)
+
+Grepped the full current file for every "illustrative"/"synthetic" occurrence. Both new figures are
+labeled at first introduction (§9.3's table cell and paragraph; §9.4's table header) and the P&L table's
+individual rows correctly inherit that label from the table's own header/caption rather than requiring
+a redundant per-cell restatement — the same convention the original citation audit already found clean
+for §9.2's investment figure and §9.4's original break-even sensitivity. No unlabeled occurrence of
+either new number was found anywhere in the file, including in the Traceability summary table, the
+Answer-stated-first block, or §9.6.
+
+### Internal-consistency check (rest of the section, not just the edited passages)
+
+Read the section in full, not just the two edited passages. The Traceability summary table at the end
+was updated to include both new items — "Base-case FY2026 revenue figure (≈USD581-597m) | Net-new
+synthesis (§9.3)... | Labeled illustrative, not a disclosed Egypt-specific forecast" and "Break-even
+sensitivity + illustrative annual P&L snapshot | Net-new synthesis (§9.4)... | Labeled illustrative
+throughout; deliberately stops at gross profit (no Egypt SG&A/tax data exists to go further)" — so no
+part of the section is left inconsistent with the fix. §9.5's Key Assumptions Register is unchanged and
+correctly so: both new figures are pure arithmetic propagations of already-Approved-tier Facts/
+Assumptions (Facts/Revenue.md's disclosed FY2025 figures, the Group's cited FY2026 guidance, ASM-012),
+not new assumptions in their own right, which is the same tier-treatment the original citation audit
+already found clean for §9.2's and §9.4's pre-existing illustrative figures — no new Assumption ID was
+needed for those either. No other passage in the section (§9.1, §9.2, §9.5, §9.6, the Answer block)
+was altered in a way that creates a new contradiction with the two fixes.
+
+### Result of this addendum
+
+**PASS.** Both fixes required by the original FAIL verdict are independently confirmed sufficient:
+Finding 1 is resolved with a correctly-computed, correctly-labeled illustrative base-case revenue range;
+Finding 2 is resolved with a correctly-computed, correctly-labeled illustrative annual P&L snapshot whose
+stopping point (gross profit, not net profit/PBT) is independently verified as the corpus's genuine
+ceiling rather than an overstated shortcut. No new inconsistency was introduced elsewhere in the section,
+and the Traceability summary table was correctly updated to reflect both additions.
+
+**Disposition:** Section 9 has now been self-reviewed for the two template-completeness gaps that were
+outstanding, and those two specific fixes have been independently re-verified by this addendum. Combined
+with the rest of the original review (DEC-003/DEC-004/DEC-005 consistency, McKinsey Lens, cross-section
+consistency, KPI Tree traceability, citation audit consumption, anti-patterns), Section 9 is eligible to
+move to ✅ Done in the Project tracker. Per this review's standing scope, I am not editing the Project
+tracker myself — reporting this verdict back to the top-level session for that action.
