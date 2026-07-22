@@ -37,11 +37,11 @@ Group level, talabat has already funded and partly shipped a next-generation AI 
 recommendation form factors, better-timed cross-sell offers, and deepened adtech-embedded
 personalisation — with a disclosed financial trail (AI/personalisation EBITDA contribution rising from
 USD 14mn+ in FY2024 to USD 30mn+ in FY2025, the only directly quantified AI-value trail in the entire
-corpus, [[Section_04_Value_Proposition|Section 4]] §4.2). No formal mission or vision statement for
-talabat is disclosed anywhere in the corpus — this plan does not invent one. The closest disclosed
-analogs are talabat's own customer-value-proposition framing (Quality, Convenience, Value,
-[[Section_08_Operations_Plan|Section 8]]'s 7S check) and its named 2026 corporate objective to "retain
-high and medium value customers against partial or complete churn to competition" (TLB-002, page 14,
+corpus, [[Section_04_Value_Proposition|Section 4]] §4.2). talabat's disclosed vision ("empower our
+communities," TLB-002, page 7) and mission ("empower everyday convenience across the MENA region,"
+TLB-002, page 9) are both Group-level, not Egypt-specific — see the Mission and Vision section below for
+the full statement and its closest operational analogs (Quality, Convenience, Value;
+[[Section_08_Operations_Plan|Section 8]]'s 7S check; the named 2026 corporate objective, TLB-002, page 14,
 cited throughout via [[Section_02_Business_Description|Section 2]] §2.1).
 
 ## Complication
@@ -56,7 +56,7 @@ evidence, explicitly labeled `ASM-002`) now contest a category position talabat 
 scale rather than loyalty depth. Consumer economics are simultaneously stressed by food inflation
 (+71.9% y/y) and EGP devaluation ([[Section_03_Market_Analysis|Section 3]] §3.1), which raises the value
 of retention relative to discount-led acquisition. The corpus's own closest precedent for what
-intensifying competition can do is not hypothetical: non-high-value customer retention already declined
+intensifying competition can do is not hypothetical: non-high-value customer M1 retention already declined
 4% YoY in the UAE, Kuwait, and Qatar, attributed explicitly to "competitive pressure" (TLB-019, page 9,
 cited in [[Section_03_Market_Analysis|Section 3]] §3.3) — Egypt is not yet in that figure, but it is the
 clearest evidenced warning of what a widening capability gap could produce. The strategic window to
@@ -102,8 +102,12 @@ base, a materially lower bar than the 20–28% order-frequency and 26–32% rete
 mechanisms have already produced at Group/GCC level ([[Section_09_Financial_Plan|Section 9]] §9.4;
 [[Section_04_Value_Proposition|Section 4]] §4.3). **This upside is carried at Low confidence throughout
 this plan, not overstated as a central estimate:** six of the seven Assumption rows this financial case
-depends on are Low confidence, because every quantified uplift figure is Group or GCC evidence that
-explicitly excludes Egypt at the time it was measured ([[Section_09_Financial_Plan|Section 9]] §9.5). This
+depends on are Low confidence — most because the quantified uplift figure behind them is Group or GCC
+evidence that explicitly excludes Egypt at the time it was measured, though not all for the identical
+reason (one is a pure Egypt data gap with no uplift figure at all; another is directional inflation/FX
+logic, not an extrapolated Group figure). As [[Section_09_Financial_Plan|Section 9]] §9.5 itself frames
+it, this reflects how thin Egypt-specific disclosure is across the corpus, not a weakness in this plan's
+own modeling. This
 plan's own Risk Analysis independently confirms this is the single largest risk to the whole case — the
 upside case underperforming the base case is rated High probability / High impact, the only cell at that
 severity in the entire risk register ([[Section_10_Risk_Analysis|Section 10]] §10.2) — and names the
@@ -139,13 +143,18 @@ fees, Delivery & Service fees, Subscription fee & Other Income, Advertising & li
 
 ## Mission and Vision
 
-**No formal mission or vision statement for talabat appears anywhere in the corpus** — this section states
-that gap plainly rather than inventing one, consistent with this plan's discipline throughout. The closest
-disclosed analogs, both cited in earlier sections, are talabat's own customer-value-proposition framing
-(**Quality, Convenience, Value** — [[Section_08_Operations_Plan|Section 8]]'s 7S "Shared values" row,
-citing `Topics/Customer Journey.md`) and its named 2026 corporate objective — "retain high and medium
-value customers against partial or complete churn to competition" (TLB-002, page 14) — which this plan's
-governing hypothesis is built to serve directly ([[Section_02_Business_Description|Section 2]] §2.1).
+talabat's own leadership states both directly, though neither appears in the Facts/Topics layer any other
+section of this plan drew on, and this plan corrects that gap here rather than repeating it: the
+Chairperson's 2025 Annual Report statement names talabat's "vision to 'empower our communities,' realised
+through a multi-vertical approach" (TLB-002, page 7), and the CEO's statement separately names "the
+clarity of our mission to empower everyday convenience across the MENA region" (TLB-002, page 9). Neither
+is an Egypt-specific statement, and the corpus does not restate either in an Egypt context anywhere. Read
+alongside these, talabat's customer-value-proposition framing (**Quality, Convenience, Value** —
+[[Section_08_Operations_Plan|Section 8]]'s 7S "Shared values" row, citing `Topics/Customer Journey.md`)
+and its named 2026 corporate objective — "retain high and medium value customers against partial or
+complete churn to competition" (TLB-002, page 14) — operationalize that mission and vision into a
+year-specific priority this plan's governing hypothesis is built to serve directly
+([[Section_02_Business_Description|Section 2]] §2.1).
 
 ## AI Product/Service, Target Market, and Value Proposition
 
@@ -159,10 +168,12 @@ echoing GEMs, talabat's existing AI-supported Partner-facing win-back tool.
 **The target market** is talabat's own three disclosed customer value tiers — high-value, medium-value,
 and non-high-value (TLB-002, page 14) — overlaid with subscription status (talabat pro vs. non-subscriber)
 and vertical breadth (mono- vs. multi-vertical usage) ([[Section_03_Market_Analysis|Section 3]] §3.2). At
-Group level, roughly 25% of monthly active users (talabat pro subscribers/multi-vertical customers)
-already account for roughly half of platform GMV — a disclosed 80/20 concentration this plan targets
-directly, though not yet Egypt-proven, since talabat pro launched in Egypt only in February 2025
-([[Section_03_Market_Analysis|Section 3]] §3.2).
+Group level, roughly 25% of monthly active users (talabat pro subscribers/"ecosystem products") already
+account for roughly half of platform GMV — a disclosed 80/20 concentration this plan targets directly,
+though not yet Egypt-proven, since talabat pro launched in Egypt only in February 2025. This is a distinct
+statistic from the separately-disclosed multi-vertical cohort, which "now exceed[s] one-third of the
+base" and shows its own higher order frequency and retention — the two should not be conflated as one
+group ([[Section_03_Market_Analysis|Section 3]] §3.2).
 
 **The value proposition's USP is speed and cost of deployment, not novelty of capability**
 ([[Section_04_Value_Proposition|Section 4]] §4.1): talabat's proposition is redeployment of an

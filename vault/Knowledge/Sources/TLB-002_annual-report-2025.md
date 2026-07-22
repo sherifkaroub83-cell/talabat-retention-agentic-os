@@ -188,6 +188,10 @@ Approximately 39 explicit Egypt mentions were identified. Substantive ones, with
   each user's lifetime value." (TLB-002, page 7)
 
 ## Important Quotations
+- **Vision:** "Our vision to 'empower our communities' is realised through a multi-vertical approach
+  that now firmly encompasses grocery and retail." — Pieter-Jan Vandepitte, Chairperson (page 7)
+- **Mission:** "...the clarity of our mission to empower everyday convenience across the MENA region." —
+  Toon Gyssels, CEO (page 9)
 - "We have expanded our ecosystem, focusing on high-value customer retention through our talabat pro
   subscription programme and multi-vertical offerings." — Pieter-Jan Vandepitte, Chairperson (page 5)
 - "We expanded the programme to all eight of our markets, including a launch in Egypt, our third
