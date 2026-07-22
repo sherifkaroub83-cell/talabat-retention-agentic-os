@@ -62,6 +62,17 @@ Every quality-control checkpoint produced while building this vault, in chronolo
   operationally stable with every major subsystem (Decision, Research, Forecast, Citation, two-pass QA
   layers) exercised together, on top of everything Pilots 1–3 already built
 
+## Publication Layer (formatting, not content — added 22/07/2026)
+- [[Publication_Layer]] — narrow architecture extension: how a fully-drafted, independently-verified
+  Business Plan becomes a submission-ready DOCX/PDF. Not Architecture Version 3 — does not revisit
+  the content pipeline, the eight content agents, or the evidence model
+- `.claude/skills/executive-document-formatting/SKILL.md` — the layer's only operative procedure;
+  strict content/formatting separation, "flag, don't fix" discipline
+- [[_TEMPLATE-formatting-qa-report]] — the reusable QA-verdict template this layer produces on each run
+- **Status:** capability built, not yet exercised — no `Formatting_QA_Report.md` exists yet, no
+  Business Plan section has been formatted, and no DOCX/PDF has been exported. `Outputs/` remains
+  empty pending explicit authorization to run this layer.
+
 ## Independent compliance audits (external-examiner perspective, not self-reported)
 - [[Independent_Project_Compliance_Report]] — v2, re-run against the merged main-equivalent state: requirements traceability, per-section Business Plan readiness, 12-area OS evaluation, architecture review, grading simulation (~33/100 as of this pass), and remaining roadmap. v1 (pre-merge) findings are marked RESOLVED in place rather than deleted, so the audit trail stays legible across passes.
 
