@@ -6,6 +6,163 @@ writes these entries for you.
 
 ---
 
+## Session 7 — 2026-07-22 (Pilot 4: redefined mid-flight into a full-system operational-stability test)
+
+**Focus:** execute Pilot 4 per `vault/Architecture/Pilot_Validation_Plan.md` — but redefined on
+explicit instruction from a narrow two-pass-QA test into the higher-value question: is the Agentic OS
+operationally stable when every major subsystem is exercised together, on top of everything Pilots 1–3
+already built? Branch `feature/bp-pilot-sections`.
+
+**Done:**
+- Recorded the redefinition in `Pilot_Validation_Plan.md` (original objective preserved, not deleted).
+- Pre-execution system integrity audit of Pilots 1–3's accumulated output (~26 files, 8 checks): found
+  and fixed 2 real defects — 3 files were true graph orphans (`RES-000-SMOKETEST`, `RES-002`, `RES-003`
+  — the Project tracker's en-dash range only links its two endpoints), and 2 Validation report
+  frontmatter `result` fields had gone stale relative to their own later addenda. Correctly identified
+  one false positive (5 apparent "broken wikilinks" that were already properly backtick-escaped).
+- Drafted Section 10 (Risk Analysis) as a deliberate cross-subsystem integration test: re-reads Section
+  9's Forecast Layer confidence tags (`ASM-008`/`ASM-011` Low confidence) as financial-risk input rather
+  than restating them, and references Section 3's Threats quadrant rather than re-deriving it. Five MECE
+  risk categories, a labeled-synthetic probability-impact matrix, a pre-mortem whose findings drive the
+  mitigation-priority ranking, and per-risk mitigations with role-based owners. No Decision Layer
+  escalation was needed — recorded as a deliberate, reasoned absence.
+- Invoked `evidence-citation-agent` top-level — this project's first **citation-audit FAIL** (3 hard
+  failures: a misattributed cross-section citation, an unlabeled Group-wide statistic used to ground an
+  Egypt-specific claim, an invented factual gloss in the matrix). Fixed and independently re-verified by
+  a fresh thread.
+- Ran the original two-pass QA test the pilot was designed around: two genuinely independent
+  `qa-review-agent` threads reviewed the same unedited draft. Both reached FAIL. **Converged** on two
+  findings (missing algorithm-bias risk; a confidence/probability conflation in the top matrix row).
+  **Diverged** on a third — Pass 2 caught a real internal MECE contradiction (the section claimed "five
+  categories" but its own justification sentence and heading structure only supported four, while the
+  matrix used five) that Pass 1's own MECE check read past. Wrote up the comparison explicitly — the
+  first concrete evidence in this project that a second independent QA pass catches something a rigorous
+  first pass misses.
+- Fixed all three combined findings (added the algorithm-bias risk; split the Organizational/Regulatory
+  heading into two to match the matrix's five categories; rewrote the top matrix row's Rationale to state
+  its bridging judgment explicitly) and had a third, fresh thread independently re-verify the combined
+  fix — PASS. Section 10 reached ✅ Done (independently verified).
+- Wrote `vault/Validation/Pilot4_System_Stability_Report.md` — the pilot's primary deliverable.
+  **Verdict: the Agentic OS is operationally stable when every major subsystem is exercised together.**
+  17 real `Agent` invocations this session across 6 specialist agent types, zero invocation failures,
+  zero tool-availability surprises beyond the one already-characterized `AskUserQuestion` constraint,
+  zero pipeline-gate violations across 4 sections (3 of which required a genuine fail/fix/re-verify
+  cycle), zero content-level contradictions across two independent integrity audits. Classified all
+  findings against Phase 8's 8-category taxonomy: zero new Architecture Issues, Implementation Bugs, or
+  Knowledge Issues — only two Process Improvements (MOC-linking discipline, frontmatter-freshness
+  discipline, both non-architectural, now standing conventions) and four Successfully Validated Design
+  confirmations.
+- Updated the Project tracker (Section 10 → Done; all four pilots marked complete), both Validation MOCs,
+  and `PROJECT_PROGRESS.md`/`MEMORY.md`.
+
+**Explicitly not done:** no architecture redesign (every mechanism worked as Architecture v2 designed
+it); the remaining 10 Business Plan sections not touched; branch not merged to `main`.
+
+---
+
+## Session 6 — 2026-07-22 (Pilot 3: Section 9, first real test of the Forecast Layer)
+
+**Focus:** execute Pilot 3 per `vault/Architecture/Pilot_Validation_Plan.md` — draft Section 9
+(Financial Plan) using `forecasting-agent` and `kpi-agent` for the first time, exercising the
+previously-empty Forecast Layer (`vault/Forecasts/`). Branch `feature/bp-pilot-sections`.
+
+**Done:**
+- Readiness check: confirmed all Forecast Layer scaffolds, both agents, the `forecast-builder` skill,
+  and all seven Section 9 source notes present and usable.
+- Invoked `decision-steward` top-level to resolve the 2026 investment-total conflict
+  (`DEC-004_2026-investment-total.md`) — one of three discrepancies documented since corpus ingestion.
+  Re-reading the primary source (TLB-020) directly rather than trusting the downstream synthesis
+  note's "unresolved" framing, found the apparent three-way conflict (>$100mn/~$120mn/$175mn) is
+  actually reconcilable: the source itself decomposes its $175mn Board-approved total into ~$120mn
+  Everyday App + ~$55mn Food-leadership (55+120=175, exact match). Approved without escalation.
+- Invoked `forecasting-agent` top-level (first real use) to build `vault/Forecasts/Value_Driver_Tree.md`
+  (one Fact-anchored root node + 6 proposed Assumption nodes) and `Scenarios.md` (base/upside/downside,
+  each with a stated growth-logic sentence). Every intervention-driven node traces strictly to DEC-003's
+  confirmed mechanism. Proposed six assumptions for handoff rather than self-registering, per the
+  forecast-builder skill's own rule, and flagged (without resolving) which scenario should anchor
+  Section 9's headline case.
+- Invoked `decision-steward` top-level again to register the six proposed assumptions (`ASM-007`–
+  `ASM-012`) and resolve the headline-scenario question (`DEC-005_section9-headline-scenario.md`) —
+  base case as the headline baseline, upside as the intervention's projected return, downside as a
+  named risk. Approved without escalation.
+- Invoked `kpi-agent` top-level (first real use) to build `vault/Forecasts/KPI_Tree.md` — 16 KPIs, all
+  traced to named driver-tree nodes, 0 orphans, no numeric target set on any newly-instrumented KPI
+  (churn rate most notably) without a backing Decision.
+- Drafted Section 9 in full against the Forecast Layer's output: value driver tree, investment/opex,
+  three-scenario forecast, break-even sensitivity, assumptions register, funding/monetization.
+- Invoked `evidence-citation-agent` top-level for Stage 9 — PASS, 0 hard failures, independently
+  re-derived every Forecast/Decision-tier trace and recomputed the illustrative break-even arithmetic.
+- Invoked `qa-review-agent` top-level for Stage 11 — a genuinely independent thread issued a real
+  **FAIL**: the revenue-forecast scenarios never stated an actual dollar figure, and no P&L projection
+  existed, despite the template's explicit requirement and despite the section already demonstrating
+  the needed "illustrative, labeled" pattern elsewhere. Independently concurred that DEC-004 and DEC-005
+  were correctly self-approved without escalation.
+- Fixed both gaps using only components already computed and Approved-tier elsewhere in the section (an
+  illustrative FY2026 base-case revenue figure; a minimal illustrative annual P&L snapshot stopping at
+  gross profit, with the stopping point explicitly justified). Independently re-verified by a fresh
+  `qa-review-agent` thread — PASS. The project's first complete fail/fix/re-verify cycle.
+- Updated the Project tracker: Section 9 → ✅ Done (independently verified); Open Decisions list
+  (investment-total conflict resolved, headline-scenario framing resolved).
+- Wrote `vault/Validation/Pilot3_Execution_Report_Section_09.md` — full execution log, success-criteria
+  evaluation (all four met), and both central findings (the fail/fix/re-verify cycle; the
+  "unreconcilable" conflict that turned out reconcilable).
+- Updated `Validation and Audit.md` and `Project Administration.md` MOCs.
+
+**Explicitly not done:** no architecture redesign (every mechanism worked as Architecture v2 designed
+it); Pilot 4 not started; the remaining 11 Business Plan sections not touched; branch not merged to
+`main`.
+
+---
+
+## Session 5 — 2026-07-22 (Pilot 2: Section 2, testing the orchestration fix for real)
+
+**Focus:** execute Pilot 2 per `vault/Architecture/Pilot_Validation_Plan.md` — draft Section 2
+(Business Description) using genuinely top-level-invoked specialist agents (Architecture v2's Change
+1), and test the `AskUserQuestion` human-escalation path for the first time. Branch
+`feature/bp-pilot-sections` (fast-forwarded to include all of Version 2 first).
+
+**Done:**
+- Readiness check: confirmed all five Section 2 source notes present and usable.
+- Invoked `decision-steward` as a genuine top-level `Agent` call for the governing-hypothesis
+  decision. It correctly judged this a strategic framing choice requiring escalation, attempted
+  `AskUserQuestion` from inside its own subagent thread, hit a hard tool-unavailability error
+  (`AskUserQuestion` is not available to spawned subagents — the same constraint class as
+  `Agent`/`WebSearch`/`WebFetch` from Phase 7), and correctly refused to infer or default an answer —
+  it preserved the exact escalation prompt for the top-level session instead of self-approving.
+- Ran that preserved prompt for real via a top-level `AskUserQuestion` call. The user chose: extend
+  talabat's already-announced Group AI roadmap into Egypt (new recommendation form factors, cross-sell
+  timing/incentive optimisation, deepened adtech-embedded personalisation) — not the net-new
+  churn-prediction option, not the subscription-uplift-only option. Recorded in
+  `DEC-003_section2-governing-hypothesis.md` (approved) and `ASM-005` (Approved).
+- Drafted Section 2 in full against the confirmed hypothesis: industry overview, a 3-leg MECE problem
+  decomposition (product/experience vs. economic vs. competitive retention-risk drivers), core
+  features/benefits, business model, and a three-level business-stage read (Group/Egypt segment/the
+  initiative itself).
+- Invoked `evidence-citation-agent` as a genuine top-level `Agent` call (not nested) for Stage 9 —
+  PASS, 0 hard failures, 5 acknowledged non-blocking limitations, independently re-confirmed DEC-003's
+  approval was genuine, not a leftover draft state.
+- Invoked `qa-review-agent` as a genuine top-level `Agent` call for Stage 11 — the first genuinely
+  independent QA pass in this project's history (confirmed: only `Read`/`Grep`/`Write`, no memory of
+  the drafting session). PASS on Section 2 itself, and it resolved Section 3's own previously-open
+  Finding 2 by cross-checking Section 3 against Section 2's now-confirmed hypothesis — finding a real,
+  hard-blocking defect: Section 3's GEMs-analogy Opportunities bullet had drifted into the *unchosen*
+  churn-prediction/win-back framing.
+- Fixed the Section 3 bullet to match the confirmed hypothesis, then ran a second, fresh top-level
+  `qa-review-agent` call to independently re-verify the fix (not self-verified) — PASS, appended as an
+  addendum to `QA_Review_Section_03.md` (original content preserved, not overwritten).
+- Updated the Project tracker: Section 2 → ✅ Done (independently verified); Section 3 → ✅ Done
+  (self-reviewed + independently re-verified on one point); Open Decisions list; Status line.
+- Wrote `vault/Validation/Pilot2_Execution_Report_Section_02.md` — full execution log, success-criteria
+  evaluation (all three met), and the central architecture finding (`AskUserQuestion` unavailable to
+  subagents) with no new architecture change required, since Change 1's existing fix already covers it.
+- Updated `Validation and Audit.md` and `Project Administration.md` MOCs.
+
+**Explicitly not done:** no architecture redesign (the one new finding is covered by the existing
+Change 1 fix); Pilots 3–4 not started; the remaining 12 Business Plan sections not touched; branch not
+merged to `main`.
+
+---
+
 ## Session 4 — 2026-07-22 (Phase 8: evidence-based Agentic OS Version 2)
 
 **Focus:** evolve the architecture using only Phase 7's execution evidence — no redesign, no design

@@ -216,7 +216,70 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   Research Notes; a wikilink-scope convention for drafting agents), explicit "No change recommended"
   for every component execution validated as designed, and recalculated readiness metrics. Version 1
   kept intact, not rewritten. See the Session log entry below for full detail. Work done on branch
-  `feature/agentic-os-v2`, not merged to `main`.
+  `feature/agentic-os-v2`, merged to `main` on explicit authorization.
+- 2026-07-22 — **Pilot 2: tested Architecture v2's Change 1 (top-level-invoked specialists) for the
+  first time**, drafting Section 2 (Business Description). All four specialist agent invocations
+  (`decision-steward`, `evidence-citation-agent`, `qa-review-agent` ×2) were genuine, separate
+  top-level `Agent` calls, not nested inside `bp-orchestrator` — the fix worked. **Second real
+  architecture finding:** `AskUserQuestion` is also unavailable inside a spawned subagent thread
+  (same constraint class as `Agent`/`WebSearch`/`WebFetch`). `decision-steward` self-detected this
+  correctly when escalating the Section 2 governing-hypothesis decision (a genuine strategic framing
+  choice, unlike Pilot 1's two data-presentation calls) and preserved the exact escalation prompt for
+  the top-level session, which ran it for real and got a genuine user decision: extend talabat's
+  Group AI roadmap into Egypt, not build a net-new churn-prediction capability or optimize
+  subscription-uplift alone (`DEC-003_section2-governing-hypothesis.md`, approved; `ASM-005`,
+  Approved). The resulting genuinely-independent Stage 11 QA pass — the first in this project's
+  history — caught a real, hard-blocking cross-section defect: Section 3's GEMs-analogy Opportunities
+  bullet had drifted into the governing hypothesis's *unchosen* option. Fixed and independently
+  re-verified (addendum to `QA_Review_Section_03.md`, original preserved). No architecture redesign
+  was needed — the new finding is covered by the existing Change 1 fix. Section 2 reached ✅ Done
+  (independently verified) on the first real attempt; Section 3 reached ✅ Done (self-reviewed +
+  independently re-verified on one point). Full report:
+  `vault/Validation/Pilot2_Execution_Report_Section_02.md`. Work done on branch
+  `feature/bp-pilot-sections`, not merged to `main`.
+- 2026-07-22 — **Pilot 3: first real test of the Forecast Layer**, drafting Section 9 (Financial Plan).
+  `forecasting-agent` and `kpi-agent` both ran for the first time, building `Value_Driver_Tree.md`,
+  `Scenarios.md`, and `KPI_Tree.md` from empty scaffolds — every intervention-driven node kept strictly
+  consistent with DEC-003's confirmed mechanism, no numeric target set on any newly-instrumented KPI
+  without a backing Decision. `decision-steward` resolved two new Decisions without escalation: the
+  2026 investment-total conflict (`DEC-004_2026-investment-total.md`) — re-reading the primary source
+  directly found this discrepancy, carried since corpus ingestion as one of three "unreconcilable"
+  conflicts, is actually reconcilable (talabat's own USD175mn Board-approved total decomposes exactly
+  into its two disclosed components) — and Section 9's headline-scenario framing
+  (`DEC-005_section9-headline-scenario.md`, base=baseline/upside=return/downside=risk). **Central
+  finding: the project's first complete fail/fix/independently-re-verified cycle.** A genuinely
+  separate Stage 11 QA thread issued a real FAIL — the revenue-forecast scenarios never stated an
+  actual dollar figure, and no P&L projection existed, despite the template's explicit requirement and
+  despite the section already demonstrating the needed pattern elsewhere in itself. Both gaps were
+  fixed entirely from already-Approved components (no new Research/Forecast/Decision work) and
+  independently re-verified by a fresh agent thread — proving the two-pass QA gate does real work, not
+  formality. No architecture redesign needed; every mechanism worked as Architecture v2 designed it.
+  Section 9 reached ✅ Done (independently verified). Full report:
+  `vault/Validation/Pilot3_Execution_Report_Section_09.md`. Work done on branch
+  `feature/bp-pilot-sections`, not merged to `main`.
+- 2026-07-22 — **Pilot 4: redefined mid-flight, on explicit instruction, into a full-system operational-
+  stability test.** Original design (deliberate two-pass QA on Section 10) preserved intact as one
+  component; primary deliverable became `vault/Validation/Pilot4_System_Stability_Report.md`. A
+  pre-execution integrity audit of Pilots 1–3's output found and fixed 2 real defects (3 graph orphans;
+  2 stale Validation-report frontmatter fields) and correctly identified 1 false positive. Section 10
+  (Risk Analysis) was drafted as a deliberate cross-subsystem integration test — re-reading Section 9's
+  Forecast Layer confidence tags as financial-risk input, referencing Section 3's Threats rather than
+  re-deriving them — and underwent the most rigorous verification of any section: this project's first
+  **citation-audit FAIL** (3 hard failures, fixed and re-verified), then two genuinely independent QA
+  passes that both failed and — critically — **diverged**: both caught a missing algorithm-bias risk and
+  a confidence/probability conflation, but only Pass 2 caught a real internal MECE contradiction (claimed
+  five categories, proved four, used five in the matrix) that Pass 1 read past. This is the first
+  concrete evidence in this project that a second independent QA pass catches something a rigorous first
+  pass misses — see `vault/Validation/QA_Review_Section_10_Comparison.md`. All findings fixed and
+  independently re-verified a third time; Section 10 reached ✅ Done (independently verified).
+  **Stability verdict: the Agentic OS is operationally stable when every major subsystem is exercised
+  together** — 17 real `Agent` invocations this session, zero failures, zero pipeline-gate violations,
+  zero content contradictions. Findings classified against Phase 8's 8-category taxonomy: zero new
+  Architecture Issues/Implementation Bugs/Knowledge Issues, only two Process Improvements (MOC-linking
+  and frontmatter-freshness discipline, now standing conventions, not architecture changes) and four
+  Successfully Validated Design confirmations. **All four Pilot Validation Plan pilots now complete —
+  Phase 8 of the roadmap (drafting the remaining 10 sections) can begin.** Work done on branch
+  `feature/bp-pilot-sections`, not merged to `main`.
 
 ## Session log
 
@@ -259,4 +322,38 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   `vault/Validation/Lessons_Learned_Phase7.md` and `vault/Architecture/Pilot_Validation_Plan.md`
   (Pilots 2–4: Sections 2, 9, 10, each targeting one specific open question from Pilot 1 — explicitly
   not a jump to drafting the remaining Business Plan). Work done on branch `feature/agentic-os-v2`,
+  merged to `main` on explicit authorization.
+- 2026-07-22 — Session 5: ran Pilot 2 (Section 2, Business Description) — the first pipeline run using
+  genuinely top-level-invoked specialist agents throughout (Architecture v2's Change 1), confirming the
+  fix works. Produced the project's first real, human-confirmed strategic Decision (`DEC-003`, via a
+  genuine `AskUserQuestion` escalation) after `decision-steward` correctly detected it could not obtain
+  that consent from inside a subagent thread — a second real runtime finding, same constraint class as
+  Phase 7's `Agent`/`WebSearch`/`WebFetch` discovery, requiring no new architecture change. The
+  resulting genuinely-independent Stage 11 QA pass caught and drove the fix of a real cross-section
+  defect in Section 3. See `vault/Validation/Pilot2_Execution_Report_Section_02.md`. Work done on
+  branch `feature/bp-pilot-sections`, not merged to `main`.
+- 2026-07-22 — Session 6: ran Pilot 3 (Section 9, Financial Plan) — the first real test of the Forecast
+  Layer. `forecasting-agent` and `kpi-agent` both ran for the first time, building `Value_Driver_Tree.md`,
+  `Scenarios.md`, and `KPI_Tree.md` from empty scaffolds. `decision-steward` resolved two new Decisions
+  without escalation, including a genuine finding that the 2026 investment-total conflict — carried since
+  corpus ingestion as one of three "unreconcilable" discrepancies — is actually reconcilable once its
+  primary source is re-read directly. The project's first complete fail/fix/independently-re-verified
+  cycle: a genuinely separate Stage 11 QA thread issued a real FAIL (missing revenue figure, missing P&L
+  projection), both gaps were fixed from already-Approved components, and a fresh agent thread
+  independently confirmed the fix. Section 9 reached ✅ Done (independently verified). See
+  `vault/Validation/Pilot3_Execution_Report_Section_09.md`. Work done on branch
+  `feature/bp-pilot-sections`, not merged to `main`.
+- 2026-07-22 — Session 7: ran Pilot 4 (Section 10, Risk Analysis) — redefined mid-flight, on explicit
+  instruction, from a narrow two-pass-QA test into a full-system operational-stability question. A
+  pre-execution integrity audit of Pilots 1–3's output found and fixed 2 real defects and correctly
+  flagged 1 false positive. Section 10 was drafted as a deliberate cross-subsystem integration test and
+  underwent this project's first citation-audit FAIL (fixed, re-verified) plus the original two-pass QA
+  design — two independent threads both failed, converged on two findings, and diverged on a third (Pass
+  2 caught an internal MECE contradiction Pass 1 missed), the first concrete proof in this project that a
+  second independent pass adds real value beyond formality. Combined fix independently re-verified a
+  third time. Section 10 reached ✅ Done (independently verified). The pilot's primary deliverable, a
+  full-system stability report, concludes the Agentic OS is operationally stable across 17 real agent
+  invocations this session, with only a bounded, non-architectural repository-hygiene gap (now a
+  standing process convention). All four Pilot Validation Plan pilots are now complete. See
+  `vault/Validation/Pilot4_System_Stability_Report.md`. Work done on branch `feature/bp-pilot-sections`,
   not merged to `main`.

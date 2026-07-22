@@ -1,7 +1,7 @@
 ---
 section: 3
 title: Market Analysis
-status: drafted — pending citation verification and QA (pipeline stage 9/11)
+status: done — self-reviewed (Pilot 1) + independently re-verified for one corrected cross-section point (Pilot 2, 2026-07-22)
 pipeline_run: 2026-07-22
 ---
 
@@ -169,12 +169,19 @@ breakdown of talabat's actual customer base to confirm this directly.
   flagged here as potentially stale (see the citation audit).
 - An internal AI product template already exists to adapt: GEMs, talabat's AI-supported Partner-level
   tool that flags Restaurants with "low/declining customer acquisition or retention rates" for targeted
-  win-back (TLB-026, page 138), is a validated internal precedent for building an analogous
-  customer-level, AI-driven churn/win-back product for Egypt consumers.
+  win-back (TLB-026, page 138), is a validated internal precedent for extending AI-driven
+  targeting/personalisation capability from the Partner side (GEMs) to the consumer side — richer
+  recommendation formats, better-timed cross-sell offers, and deepened adtech-embedded
+  personalisation — for Egypt customers, per the governing hypothesis confirmed in
+  [[Section_02_Business_Description|Section 2]] / [[DEC-003_section2-governing-hypothesis|DEC-003]].
+  *(Corrected 2026-07-22, Pilot 2: the original wording proposed a "customer-level, AI-driven
+  churn/win-back product," which is DEC-003's unchosen Option 1 — flagged as a hard, blocking
+  cross-section inconsistency by [[QA_Review_Section_02|Section 2's independent QA review]] and
+  corrected here to match the user-confirmed Option 2 hypothesis.)*
 - **So what:** the opportunity is not "enter a new market" — it is to redirect AI capability talabat has
-  already built (demand forecasting, Partner-level GEMs) toward the customer-retention use case this
-  plan proposes, which is a lower build-cost, faster-to-deploy path than building new AI infrastructure
-  from scratch.
+  already built (demand forecasting, Partner-level GEMs) toward extending its existing
+  personalisation/targeting mechanism to Egypt consumers, which is a lower build-cost, faster-to-deploy
+  path than building new AI infrastructure from scratch.
 
 **Threats**
 - Named Egypt-specific competitors exist only in the secondary, non-primary corpus (`ASM-002`/RES-001,

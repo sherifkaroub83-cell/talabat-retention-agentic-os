@@ -85,6 +85,48 @@ Project tracker update.
 
 ## Pilot 4 — Section 10 (Risk Analysis)
 
+**Objective — redefined 2026-07-22, on explicit instruction, after Pilots 1–3 reported back:** the
+original objective (below, preserved) was narrower than what the project now needs. After three pilots
+each individually validated one subsystem — orchestration (Pilot 2), the Forecast Layer (Pilot 3), the
+two-pass QA gate (originally scoped for this pilot) — the higher-value open question is no longer
+whether any *one* subsystem works in isolation. It is: **is the Agentic OS operationally stable when
+every major subsystem is exercised together, on top of the state three prior pilots have already
+accumulated** (5 Decisions, 12 Assumptions, 4 Research Notes, a populated Forecast Layer, 3 drafted and
+QA-passed sections, and the cross-linked vault graph all of that lives inside)? Pilot 4 keeps its
+original two-pass QA test intact — it is one of the subsystems being exercised, not discarded — but the
+pilot's primary deliverable becomes a dedicated **System Stability / Integration Report**, not just a
+QA-comparison writeup. See "Redefined scope" below for the full design; the original objective and
+design are preserved immediately after it for the record, per this project's own no-silent-overwrite
+convention.
+
+### Redefined scope (governing — read this, not just the original objective below)
+
+1. **Pre-execution integrity audit** of everything Pilots 1–3 already built: broken wikilinks, orphaned
+   files, Decision/Assumption cross-reference consistency, Project tracker accuracy against the actual
+   file states, Forecast Layer internal consistency, frontmatter-status accuracy. This did not exist as
+   a check in any prior pilot — each treated the prior pilots' output as a stable foundation without
+   auditing it.
+2. **Section 10 drafted as the operational vehicle**, deliberately cross-referencing Section 9's
+   Low-confidence Forecast Layer assumptions as a genuine financial-risk category (a real
+   subsystem-to-subsystem integration point the pipeline design implies but no pilot has yet exercised)
+   and checking consistency against Sections 2 and 3's already-drafted content.
+3. **The original two-pass QA test, unchanged** (see below) — still run for real, still the mechanism
+   this pilot was originally built to validate.
+4. **A full-system stability audit** as the primary deliverable: agent reliability across all four
+   pilots taken together (not just this one), evidence-graph integrity, pipeline gate discipline, and
+   repository hygiene — answering the engineering question directly, with evidence, not simulated.
+
+**Success criteria (redefined, in addition to the original criteria below, which still apply to the
+two-pass test specifically):** the pre-execution audit either finds zero integrity defects across
+Pilots 1–3's output, or finds and fixes real ones with the same fail/fix/re-verify discipline Pilot 3
+established; the stability audit reaches an explicit, evidenced verdict (not a hedge) on whether the OS
+is operationally stable; if any defect is found that traces to an architecture gap rather than a
+one-off content error, it is classified using Phase 8's 8-category taxonomy, not left unclassified.
+
+---
+
+### Original objective (2026-07-22, superseded in emphasis but not discarded — see above)
+
 **Objective:** deliberately test the [[Agentic_OS_Architecture_v2|Change 2 two-pass verification
 protocol]] itself, by running Stage 11 twice on purpose — once in-line (Pass 1), once as a genuinely
 separate, freshly-invoked top-level call (Pass 2) — and comparing the two results directly. This is

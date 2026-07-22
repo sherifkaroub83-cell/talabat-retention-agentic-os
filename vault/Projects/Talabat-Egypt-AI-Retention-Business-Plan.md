@@ -32,26 +32,66 @@ OS structure document (3–5 pp) and a 30-slide group presentation (5 slides × 
 🟢 Charter **approved** (Dr. Hossam Daoud, 21/07/2026) · OS activated · corpus ingested and fully
 linked (154 vault notes, 0 orphans) · **Agentic OS architecture designed** (21/07/2026 —
 Decision/Research/Forecasting layers, 8 agents, 11-stage pipeline; see `vault/Architecture/`) ·
-**Drafting has begun — 1 of 14 sections drafted and QA-passed (Section 3, Market Analysis, 2026-07-22,
-first real end-to-end 11-stage pipeline run; QA pass was self-administered — see the checklist row's
-caveat).** This is still the single largest remaining task on the project (40% of the grade). Next:
-continue roadmap Phase 7 (Sections 2, 9, 10), and re-verify Section 3 with an independent QA pass once
-the orchestrator has the `Agent` tool available.
+**Architecture Version 2 shipped, evidence-based, 22/07/2026** (Phase 8; see
+[[Agentic_OS_Architecture_v2]]) · **Operational validation complete (Pilot Validation Plan, 22/07/2026):
+all four pilots done — 4 of 14 sections drafted, all now ✅ Done (independently verified). Pilot 4
+(Section 10, Risk Analysis) was redefined mid-flight, on explicit instruction, from a narrow two-pass-QA
+test into a full-system operational-stability question: is the Agentic OS stable when every major
+subsystem is exercised together? [[Pilot4_System_Stability_Report|Answer: yes]], with one bounded,
+non-architectural caveat (repository-hygiene discipline, now a standing convention) — 17 real `Agent`
+invocations this session, zero failures, zero pipeline-gate violations, zero content contradictions.
+Section 10 itself passed through the most rigorous verification cycle of any section: a citation-audit
+fail/fix/re-verify cycle, then two genuinely independent QA passes that both failed and — critically —
+diverged (Pass 2 caught a real internal MECE contradiction Pass 1 missed), then a combined fix and final
+independent re-verify. See [[QA_Review_Section_10_Comparison]] for the first concrete evidence in this
+project that a second independent QA pass catches defects a rigorous first pass can miss.** This is
+still the single largest remaining task on the project (40% of the grade). Next: with all four pilots
+retired, Phase 8 of the roadmap (drafting the remaining 10 sections) can begin — see
+[[Implementation_Roadmap]] and [[Pilot_Validation_Plan]]'s own "Sequencing and what happens after" note.
+**Phase 8 progress (2026-07-22):** Sections 4 (Value Proposition), 5 (AI Technology and Development), and
+6 (Business Model and Revenue Streams) now ✅ Done (independently verified) — 7 of 14 sections complete.
+Next: Section 7 (Marketing and Sales Strategy).
 
 ## Open decisions (needed before/while drafting)
 - [ ] Team role assignments (6 members / 5 defined roles — charter approved as-is; mapping still open)
 - [ ] MCP integration: yes/no (distinction credit vs. fragility) — undecided, past its Phase 2 deadline
-- [ ] Governing hypothesis wording for Section 2 ("We believe [AI retention intervention] will
-      [impact] because [logic]") — not yet authored; see the skill's Section 2 notes for raw material
+- [x] Governing hypothesis wording for Section 2 — **resolved 2026-07-22 via
+      [[DEC-003_section2-governing-hypothesis]]** (approved): the plan commits to **extending
+      talabat's already-announced Group AI roadmap into Egypt** (new recommendation form factors,
+      cross-sell timing/incentive optimisation, deepened adtech-embedded personalisation), not the
+      net-new churn-prediction build or the subscription-uplift-only framing also drafted as
+      candidates. `decision-steward`, running as a subagent, correctly judged this a genuine strategic
+      framing choice requiring escalation and attempted `AskUserQuestion` — which is **not available
+      inside a spawned subagent thread**, a hard tool error, not a silent skip. It refused to infer or
+      default an answer and preserved the escalation prompt verbatim for the top-level session. The
+      top-level session then ran that exact prompt via a real `AskUserQuestion` call and got a genuine
+      user answer. Confirms the same runtime constraint identified in Phase 7 (`Agent`/`WebSearch`/
+      `WebFetch` unavailable to subagents) extends to `AskUserQuestion` — see Pilot 2 execution report.
+      Assumption Register row ASM-005 is `Approved`. Sections 4, 5, 9, 12, 13 must stay consistent with
+      this intervention/causal-claim/scope per DEC-003's Impact section.
 - [ ] Egypt market-size definition to adopt (IMARC online-food-delivery vs. Mordor foodservice
       vs. talabat's own disclosed Egypt segment financials, now available for FY2025 onward)
-- [ ] How to handle the three documented internal discrepancies (Egypt category-share figure,
+- [x] How to handle the three documented internal discrepancies (Egypt category-share figure,
       the 2026 investment programme's three different totals, the Subscription revenue-line
       reclassification) — resolve against primary sources or footnote explicitly; do not pick
       silently (see the skill's "Known evidence gaps" section). **Egypt category-share leg: ✅
       resolved for Section 3 via [[DEC-001_egypt-category-share-figure]] (2026-07-22, approved —
-      present both figures footnoted, use 4x+ for qualitative framing). The 2026 investment total
-      and Subscription-line discrepancies remain open (belong to Sections 9/6).**
+      present both figures footnoted, use 4x+ for qualitative framing). 2026 investment-total leg:
+      ✅ resolved for Section 9 via [[DEC-004_2026-investment-total]] (2026-07-22, approved) — this
+      one turned out to be genuinely reconcilable, not a true three-way conflict: TLB-020 itself
+      decomposes its Board-approved USD175mn total into ~USD120mn Everyday App + ~USD55mn
+      Food-leadership (55+120=175, exact match, disclosed by the source), with TLB-019's earlier
+      ">USD100mn" treated as an earlier, lower-precision cut of the Everyday App component (a stated,
+      Medium-confidence inference, kept separate from the High-confidence arithmetic). The
+      Subscription-line reclassification remains open (belongs to Section 6, not yet piloted).**
+- [x] Section 9's headline scenario framing (base/upside/downside) — **resolved 2026-07-22 via
+      [[DEC-005_section9-headline-scenario]]** (approved): base case is the headline financial
+      baseline (no intervention credit), the upside case is presented as the DEC-003 investment's
+      projected return/delta (not a competing central estimate, Low confidence retained), downside is
+      a named risk case, not implied equally likely to the base case. Judged a data-presentation/
+      methodology call within `decision-steward`'s own authority (same class as DEC-001/002/004) —
+      independently reviewed and concurred with by a separately-invoked `qa-review-agent` thread
+      during Section 9's Stage 11 QA.
 - [x] Egypt market-size definition to adopt for Section 3 — **resolved 2026-07-22 via
       [[DEC-002_egypt-market-size-definition]]** (approved): bottom-up = talabat's own disclosed
       Egypt segment revenue; top-down ceiling = Mordor total foodservice; IMARC's online-food-
@@ -64,15 +104,15 @@ the orchestrator has the `Agent` tool available.
 | # | Section | Status | Primary vault sources (see skill for full mapping) |
 |---|---|---|---|
 | 1 | Executive Summary (SCQA) | ⬜ Not started | Write last — depends on 2–13 |
-| 2 | Business Description | ⬜ Not started | `Strategic/Current Pain Points.md`, `Strategic/How Talabat Creates Value.md` |
-| 3 | Market Analysis | ✅ Done (self-reviewed) | `Topics/Egypt.md`, `Strategic/Competitive Advantages.md`, `Strategic/Competitive Weaknesses.md`, `Topics/Competition.md`, `Topics/UAE.md`, `Entities/Competitors.md`, `Facts/Competition_Facts.md`. Draft: [[Section_03_Market_Analysis]]. Pipeline artifacts: [[DEC-001_egypt-category-share-figure]], [[DEC-002_egypt-market-size-definition]], [[RES-001_egypt-named-competitors]]–[[RES-004_egypt-official-newsroom-operational-datapoints]], [[Citation_Audit_Section_03]], [[QA_Review_Section_03]]. Passed Stage 11 QA (Pass 1 only — self-administered by `bp-orchestrator`, no `Agent` tool available this session to invoke an independent `qa-review-agent` thread; see [[Agentic_OS_Architecture_v2]] Change 2). **Pass 2 (independent verification) required before submission-final** — a fresh, separately-invoked QA pass. Also pending: re-check hypothesis-traceability once Section 2 exists (QA Finding 2). |
-| 4 | Value Proposition | ⬜ Not started | `Strategic/Customer Retention Drivers.md` |
-| 5 | AI Technology and Development | ⬜ Not started | `Topics/AI.md`, `Entities/Technology_Platforms.md` |
-| 6 | Business Model and Revenue Streams | ⬜ Not started | `Strategic/Revenue Model.md`, `Facts/Revenue.md` |
+| 2 | Business Description | ✅ Done (independently verified) | `Strategic/Current Pain Points.md`, `Strategic/How Talabat Creates Value.md`, `Strategic/AI Opportunities.md`, `Strategic/Future AI Opportunities.md`, `Topics/Growth Strategy.md`, `MOC/Market Intelligence MOC.md`. Draft: [[Section_02_Business_Description]]. Pipeline artifacts: [[DEC-003_section2-governing-hypothesis]] (governing hypothesis, user-confirmed via a real top-level `AskUserQuestion` call), [[Citation_Audit_Section_02]], [[QA_Review_Section_02]]. First section drafted entirely under Architecture v2's top-level-invoked-specialist pattern (Pilot 2, [[Pilot_Validation_Plan]]) — `decision-steward`, `evidence-citation-agent`, and `qa-review-agent` were each invoked directly, not nested in `bp-orchestrator`. Passed Stage 11 QA by a **genuinely separately-invoked** `qa-review-agent` thread with no access to the drafting session's reasoning — the first true Pass 2-equivalent independent review in this project. That review also caught and drove the fix of a real cross-section inconsistency in Section 3 (see row 3). |
+| 3 | Market Analysis | ✅ Done (self-reviewed + independently re-verified on one point) | `Topics/Egypt.md`, `Strategic/Competitive Advantages.md`, `Strategic/Competitive Weaknesses.md`, `Topics/Competition.md`, `Topics/UAE.md`, `Entities/Competitors.md`, `Facts/Competition_Facts.md`. Draft: [[Section_03_Market_Analysis]]. Pipeline artifacts: [[DEC-001_egypt-category-share-figure]], [[DEC-002_egypt-market-size-definition]], [[RES-001_egypt-named-competitors]]–[[RES-004_egypt-official-newsroom-operational-datapoints]], [[Citation_Audit_Section_03]], [[QA_Review_Section_03]]. Original Stage 11 QA (Pilot 1) was self-administered by `bp-orchestrator` — see [[Agentic_OS_Architecture_v2]] Change 2. **Pilot 2 update (2026-07-22):** Section 2's independent QA review resolved the prior review's own open Finding 2 and caught a real, hard-blocking defect — §3.3's GEMs-analogy bullet had drifted into DEC-003's *unchosen* churn/win-back framing (Option 1) instead of the user-confirmed roadmap-extension framing (Option 2). Fixed, then independently re-verified by a fresh `qa-review-agent` thread (addendum in [[QA_Review_Section_03]]) — PASS, no remaining churn/win-back framing anywhere in the section. This is the pilot's key proof point: independent review caught something self-review structurally could not have (Section 2 didn't exist yet when Section 3 was first reviewed). |
+| 4 | Value Proposition | ✅ Done (independently verified) | `Strategic/Customer Retention Drivers.md`. Draft: [[Section_04_Value_Proposition]]. Built around the template's Value Driver Tree/KPI Tree backbone (mechanisms trace to `ASM-008`/`ASM-011` and `KPI_Tree.md`'s K6/K7/K8/K13/K14/K16) and the template's 5-category value-creation taxonomy (efficiency, cost savings, revenue lift, risk reduction, insight) — each category genuinely quantified or explicitly, honestly labeled deliberately unquantified rather than silently dropped. Pipeline artifacts: [[Citation_Audit_Section_04]] (FAIL, 3 hard failures — fixed, independently re-verified PASS), [[QA_Review_Section_04]] (FAIL — missing cost-savings category, unjustified MECE claim, K16 uncited in body — fixed; independent re-review found one residual mechanical error (fourth vs. fifth category), fixed; final closeout check PASS). Two full fail/fix/re-verify cycles, the second catching a defect the first re-verify introduced — same "independent review catches what self-correction misses" pattern established in Sections 3 and 9. |
+| 5 | AI Technology and Development | ✅ Done (independently verified) | `Topics/AI.md`, `Entities/Technology_Platforms.md`. Draft: [[Section_05_AI_Technology_and_Development]]. Frames the build/buy/partner decision as the direct technical consequence of `DEC-003` (redeploy existing owned capability to Egypt vs. build vs. license), and maps its R&D roadmap items 1:1 to [[Section_04_Value_Proposition|Section 4]]'s three value mechanisms. Pipeline artifacts: [[Citation_Audit_Section_05]] (FAIL, 3 hard failures concentrated in the §5.2 build/buy/partner table and one absence-claim citation gap — fixed, then independently re-verified PASS by a fresh `evidence-citation-agent` thread), [[QA_Review_Section_05]] (independently invoked `qa-review-agent` thread — PASS, no blocking issues). |
+| 6 | Business Model and Revenue Streams | ✅ Done (independently verified) | `Strategic/Revenue Model.md`, `Facts/Revenue.md`. Draft: [[Section_06_Business_Model_and_Revenue_Streams]]. Unblocked by [[DEC-006_subscription-revenue-line-reclassification]]. Uses the four-line MECE revenue structure with the Subscription line's decomposition, explicitly traces each stream to [[Value_Driver_Tree]] branches (naming the gap where Commission/Delivery & Service share one blended proxy node), and states unit economics on both the earns and costs sides (Egypt's disclosed ~22%-of-revenue delivery cost). Pipeline artifacts: [[Citation_Audit_Section_06]] (FAIL, 2 hard failures — fixed; a relocated duplicate of one claim was then caught by re-audit and fixed again; fully PASS after two re-verification rounds), [[QA_Review_Section_06]] (FAIL, 2 completeness gaps against the template's Section 6 Lens — fixed, independently re-verified PASS). The most citation-audit iterations of any section so far — a real test of the fail/fix/re-verify discipline holding up under repeated findings. |
 | 7 | Marketing and Sales Strategy | ⬜ Not started | `Topics/Customer Journey.md`, `Topics/Promotions.md` (funnel data is a known gap) |
 | 8 | Operations Plan | ⬜ Not started | `Strategic/Decision-Making Process.md` (7S check is net-new synthesis) |
-| 9 | Financial Plan | ⬜ Not started | `Topics/Financial Performance.md`, `Topics/Segment Reporting.md` |
-| 10 | Risk Analysis | ⬜ Not started | `Strategic/Strategic Risks.md`, `Strategic/Competitive Weaknesses.md` |
+| 9 | Financial Plan | ✅ Done (independently verified) | `Topics/Financial Performance.md`, `Topics/Segment Reporting.md`, `Strategic/Cost Structure.md`, `Strategic/Growth Drivers.md`, `Strategic/Customer Retention Drivers.md`. Draft: [[Section_09_Financial_Plan]]. First section built on the Forecast Layer — [[Value_Driver_Tree]] and [[Scenarios]] (`forecasting-agent`, first real use) and [[KPI_Tree]] (`kpi-agent`, first real use), all invoked top-level. Pipeline artifacts: [[DEC-004_2026-investment-total]] (2026-investment-total reconciliation), [[DEC-005_section9-headline-scenario]] (scenario framing), `ASM-006`–`ASM-012`, [[Citation_Audit_Section_09]], [[QA_Review_Section_09]]. **Genuinely independent Stage 11 QA issued a real FAIL on first pass** (two template-completeness gaps: no forecasted revenue figure, no P&L projection) — fixed from Approved-tier components already on hand, then independently re-verified by a fresh `qa-review-agent` thread (addendum in [[QA_Review_Section_09]]) — PASS. The project's first fail/fix/re-verify cycle, proving independent QA catches real gaps rather than rubber-stamping. |
+| 10 | Risk Analysis | ✅ Done (independently verified) | `Strategic/Strategic Risks.md`, `Strategic/Competitive Weaknesses.md`, plus cross-section evidence from [[Section_03_Market_Analysis|Section 3]] and [[Section_09_Financial_Plan|Section 9]]. Draft: [[Section_10_Risk_Analysis]]. Deliberately built as a cross-subsystem integration test — re-reads Section 9's Forecast Layer confidence tags as financial-risk input, references Section 3's Threats rather than re-deriving them. Pipeline artifacts: [[Citation_Audit_Section_10]] (FAIL→fix→PASS, this project's first citation-audit failure), [[QA_Review_Section_10_Pass1]] / [[QA_Review_Section_10_Pass2]] / [[QA_Review_Section_10_Comparison]] (two genuinely independent QA passes, both FAIL, converged on two findings, diverged on a third that Pass 2 alone caught), [[QA_Review_Section_10_Final]] (combined fix, independently re-verified PASS). The most rigorously verified section in the plan so far — see [[Pilot4_System_Stability_Report]] for the full-system stability conclusion this section's drafting was used to test. |
 | 11 | CSR & Responsible AI | ⬜ Not started | Thinnest vault coverage — mostly net-new authoring |
 | 12 | Implementation Plan (Three Horizons) | ⬜ Not started | `Strategic/AI Opportunities.md` (H1) vs. `Strategic/Future AI Opportunities.md` (H2/H3) |
 | 13 | Monitoring and Evaluation (KPIs) | ⬜ Not started | `Strategic/Customer Retention Drivers.md` (no churn baseline exists — known gap) |
@@ -89,10 +129,11 @@ the orchestrator has the `Agent` tool available.
 3. ~~Collect + ingest corpus~~ ✅ Done — 29 docs, fully linked knowledge base
 4. ~~Design the Agentic OS architecture~~ ✅ Done 21/07/2026 (OS Architecture Design Phase) — Decision/Research/Forecast
    layers, 8 agents, 11-stage pipeline; see `vault/Architecture/`
-5. **Phase 7 (next):** run the pipeline on Sections 2, 3, 9, 10 first (hypothesis, market,
-   financials, risk — the sections everything else depends on) via `bp-orchestrator`, on branch
-   `feature/bp-pilot-sections`
-6. Phase 8: draft the remaining sections (4–8, 11, 12, 14)
+5. ~~Phase 7: run the pipeline on Sections 2, 3, 9, 10 first (hypothesis, market, financials,
+   risk — the sections everything else depends on)~~ ✅ Done 22/07/2026 — all four Pilot
+   Validation Plan pilots complete, all four sections ✅ Done (independently verified), branch
+   `feature/bp-pilot-sections`, not yet merged to `main`
+6. **Phase 8 (next):** draft the remaining sections (4–8, 11, 12, 14)
 7. Phase 9: write the Executive Summary last (gated on all 13 others); whole-plan McKinsey Lens
    pressure test against `AI_Business_Plan_Template.md`; compile the traceability note
 8. Phase 10: export to `Outputs/`; write the OS structure document; build the presentation deck;
