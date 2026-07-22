@@ -6,6 +6,62 @@ writes these entries for you.
 
 ---
 
+## Session 4 — 2026-07-22 (Phase 8: evidence-based Agentic OS Version 2)
+
+**Focus:** evolve the architecture using only Phase 7's execution evidence — no redesign, no design
+preference, every change traced. Branch `feature/agentic-os-v2`, off `feature/bp-pilot-sections`.
+
+**Done:**
+- Classified all 12 distinct findings from the Section 3 pilot into 8 categories (Architecture
+  Issue, Runtime Limitation, Implementation Bug, Knowledge Issue, Repository Issue, Process
+  Improvement, Expected Behaviour, Successfully Validated Design) — 4 instances of Successfully
+  Validated Design vs. 1 real Architecture Issue: the pilot confirmed more of the design than it
+  contradicted.
+- Validated all 12 major architectural components individually (Validated / Partially validated /
+  Invalidated / Did not exercise), distinguishing design correctness from runtime behavior
+  throughout — the recurring pattern: every "partially validated" component traces to the same root
+  cause (no agent-thread isolation), not to 7 independent problems.
+- Produced **Agentic OS Architecture Version 2**
+  (`vault/Architecture/Agentic_OS_Architecture_v2.md`): 4 evidence-traced changes (orchestration
+  invocation pattern, a two-pass self-reviewed/independently-verified QA protocol, a
+  `sourcing_method` field on Research Notes, an explicit wikilink-scope convention for drafting
+  agents), each with Previous Design → Execution Evidence → Reason for Change → New Design →
+  Expected Benefit. Version 1 (`Agentic_OS_Architecture.md`) kept intact as the historical
+  pre-execution record, not rewritten — a banner now points forward to v2.
+- Explicitly recorded **"No change recommended"** for every component execution validated as
+  designed: the Decision Layer schema, the five-tier evidence hierarchy, the 11-stage pipeline
+  sequence and gate rules, and the `business-plan-drafting` content map.
+- Recalculated readiness metrics with reasoning for every delta: structural maturity 90%→92%,
+  operational maturity 30%→45%, Business Plan generation readiness 35%→42%, skill validation
+  coverage 12.5%→75% (6 of 8 skills' procedures exercised), agent validation coverage reported as two
+  separate numbers (procedure-level 62.5%, thread-isolation level still 12.5% — deliberately not
+  conflated, since Phase 7 invalidated thread isolation rather than proving it).
+- Updated only the documents the evidence actually touched: `Business_Plan_Generation_Pipeline.md`
+  (invocation pattern, two-pass protocol, wikilink-scope note), `External_Research_Layer.md`
+  (`sourcing_method` field + confidence cap rule), the Research template and register (backfilled
+  for all 5 existing entries), `.claude/agents/bp-orchestrator.md` (a runtime-constraint fallback
+  procedure), and the Project tracker's legend (now distinguishes ✅ Done (self-reviewed) from ✅ Done
+  (independently verified) — Section 3's row updated to the former).
+- Wrote `vault/Validation/Lessons_Learned_Phase7.md` (what worked/failed/surprised us, which
+  assumptions proved right/wrong, what should never change vs. what should evolve, engineering and
+  business recommendations).
+- Wrote `vault/Architecture/Pilot_Validation_Plan.md`: Pilots 2–4 (Sections 2, 9, 10), each designed
+  to close one specific open question from Pilot 1 — Pilot 2 tests whether the orchestration fix
+  actually restores agent-thread isolation and exercises `AskUserQuestion` for real; Pilot 3 is the
+  first test of the completely unexercised Forecast Layer and its two untested agents
+  (`forecasting-agent`, `kpi-agent`); Pilot 4 deliberately runs Stage 11 twice to test whether the
+  two-pass protocol catches anything a self-review misses. Explicitly does **not** jump to drafting
+  the remaining Business Plan.
+- Full-repo re-validation: 186 notes, 0 collisions, 0 genuinely broken links, 0 orphans among the 3
+  new architecture notes.
+
+**Explicitly not done:** no successful component was redesigned; no new capabilities were added
+beyond what the evidence justified; the remaining 13 Business Plan sections were not touched.
+
+**Next:** run Pilot 2 per `Pilot_Validation_Plan.md`.
+
+---
+
 ## Session 3 — 2026-07-22 (Phase 7: first real pipeline execution, Section 3 pilot)
 
 **Focus:** stop designing, start proving. Per explicit instruction, ran the first real, non-simulated

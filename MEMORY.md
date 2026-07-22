@@ -210,6 +210,13 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   a recommendation for the next pilot to test, not applied preemptively. Full report:
   `vault/Validation/Phase7_Pilot_Execution_Report_Section_03.md`. Work done on branch
   `feature/bp-pilot-sections`, not merged to `main`.
+- 2026-07-22 — **Phase 8: evolved the architecture into Version 2, using only Phase 7's execution
+  evidence** (`vault/Architecture/Agentic_OS_Architecture_v2.md`) — 4 traced changes (orchestration
+  invocation pattern; two-pass self-reviewed/independently-verified QA; a `sourcing_method` field on
+  Research Notes; a wikilink-scope convention for drafting agents), explicit "No change recommended"
+  for every component execution validated as designed, and recalculated readiness metrics. Version 1
+  kept intact, not rewritten. See the Session log entry below for full detail. Work done on branch
+  `feature/agentic-os-v2`, not merged to `main`.
 
 ## Session log
 
@@ -232,3 +239,24 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   gap (the orchestrator cannot delegate to isolated agent threads once spawned as a subagent in this
   runtime), while proving the content-generation logic itself works, including catching a real
   analytical error. See `vault/Validation/Phase7_Pilot_Execution_Report_Section_03.md`.
+- 2026-07-22 — Session 4 (Phase 8): evolved the architecture into **Version 2**, using only Session
+  3's execution evidence — no redesign, no design preference. Classified all 12 pilot findings into
+  8 categories (more confirmed the design than contradicted it: 4 Successfully Validated Design vs.
+  1 real Architecture Issue). Validated all 12 major components individually, tracing every
+  "partially validated" result to the same root cause (no agent-thread isolation). Produced 4
+  evidence-traced changes — orchestration invocation pattern (flat, top-level-invoked specialists,
+  not nested delegation), a two-pass QA/citation protocol (✅ Done (self-reviewed) vs. ✅ Done
+  (independently verified) as distinct, trackable states), a `sourcing_method` field on Research
+  Notes, and an explicit wikilink-scope convention for drafting agents — each documented as Previous
+  Design → Execution Evidence → Reason for Change → New Design → Expected Benefit in
+  `vault/Architecture/Agentic_OS_Architecture_v2.md`. Explicitly recorded "No change recommended"
+  for every component execution validated as designed (Decision Layer schema, five-tier evidence
+  hierarchy, 11-stage pipeline sequence/gate rules, the `business-plan-drafting` content map) —
+  Version 1 (`Agentic_OS_Architecture.md`) kept intact as the historical record, not rewritten.
+  Recalculated readiness metrics with reasoning for each delta (structural 90%→92%, operational
+  30%→45%, skill validation coverage 12.5%→75%, agent validation coverage reported as two honestly
+  separate numbers rather than one conflated figure). Wrote
+  `vault/Validation/Lessons_Learned_Phase7.md` and `vault/Architecture/Pilot_Validation_Plan.md`
+  (Pilots 2–4: Sections 2, 9, 10, each targeting one specific open question from Pilot 1 — explicitly
+  not a jump to drafting the remaining Business Plan). Work done on branch `feature/agentic-os-v2`,
+  not merged to `main`.
