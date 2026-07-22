@@ -49,11 +49,15 @@ building an equivalent capability from zero (`DEC-003`).
   4]]'s 80/20 finding — a Group-level ~25% of MAUs (talabat pro subscribers/multi-vertical customers)
   already accounts for roughly half of platform GMV (TLB-019, page 7; TLB-014, page 14; TLB-020, page 8)
   — means the highest-ROI marketing spend is deepening engagement with customers talabat has already
-  acquired, not spending to acquire net-new ones. Foodservice penetration in Egypt is already
-  meaningfully built (~20-25%, `Topics/Marketplace.md`), which is a further reason acquisition is not
-  this plan's primary lever, though it is not zero (grocery/retail penetration remains "low single-digit"
-  against a large TAM, TLB-014, page 19 — a genuine, secondary acquisition opportunity Section 3 §3.4
-  already names).
+  acquired, not spending to acquire net-new ones. The ~20-25% foodservice penetration figure this section
+  might otherwise lean on as a further reason is a **Group-wide, 8-country statistic** (TLB-001, page 21;
+  `Topics/Marketplace.md`), not an Egypt-measured one — `Topics/Marketplace.md`'s own Open Questions
+  states no Egypt-specific penetration or density figure exists in the corpus, and this section does not
+  present it as if it were Egypt-proven. Acquisition is deprioritized here on the strength of the
+  Group-level 80/20 concentration finding above, not on an unverified Egypt-penetration claim. Acquisition
+  is not zero, however: grocery/retail penetration remains "low single-digit" against a large TAM
+  (TLB-014, page 19) — a genuine, secondary acquisition opportunity Section 3 §3.4 already names, and one
+  where Egypt's new q-commerce distribution centre (`ASM-004`) is purpose-built infrastructure.
 - **Not a generic loyalty-points scheme.** talabat's existing product suite (talabat Rewards, PostPaid,
   the CIB co-branded card) already exists — this plan does not propose inventing a new promotional
   product category, only sequencing and AI-timing the ones already built, consistent with `DEC-003`'s
@@ -109,7 +113,7 @@ arrangement with talabat) is the only route to replacing this table with real fi
   an existing infrastructure partnership, not a new one this plan proposes.
 - **Commercial International Bank (CIB) — Egypt-specific FinTech partnership, already live.** talabat
   launched a co-branded credit card with CIB, "Egypt's largest private-sector bank," alongside PostPaid's
-  Egypt pilot phase (`Facts/Subscription.md`; TLB-002, pages 14, 103, 168-169) — the clearest disclosed
+  Egypt pilot phase (`Facts/Subscription.md`; TLB-002, pages 14, 19) — the clearest disclosed
   example of an Egypt-specific (not just Group-level) partnership this plan can build on directly, e.g.
   by AI-timing card-linked offers the same way talabat pro offers are timed.
   ([[Section_05_AI_Technology_and_Development|Section 5]] §5.1).
