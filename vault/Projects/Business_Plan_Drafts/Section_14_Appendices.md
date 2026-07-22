@@ -1,7 +1,7 @@
 ---
 section: 14
 title: Appendices
-status: drafted — pending citation verification and QA (pipeline stage 9/11)
+status: Done — citation audit PASS (zero hard failures, first pass), QA review PASS (first pass)
 pipeline_run: 2026-07-22
 ---
 

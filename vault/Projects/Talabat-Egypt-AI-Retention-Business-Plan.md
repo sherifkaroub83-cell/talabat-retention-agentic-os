@@ -50,9 +50,9 @@ retired, Phase 8 of the roadmap (drafting the remaining 10 sections) can begin �
 [[Implementation_Roadmap]] and [[Pilot_Validation_Plan]]'s own "Sequencing and what happens after" note.
 **Phase 8 progress (2026-07-22):** Sections 4 (Value Proposition), 5 (AI Technology and Development),
 6 (Business Model and Revenue Streams), 7 (Marketing and Sales Strategy), 8 (Operations Plan), 11
-(CSR & Responsible AI), 12 (Implementation Plan), and 13 (Monitoring and Evaluation) now ✅ Done
-(independently verified) — 12 of 14
-sections complete. Section 11 went through a real citation-audit and QA fail/fix/re-verify cycle (a
+(CSR & Responsible AI), 12 (Implementation Plan), 13 (Monitoring and Evaluation), and 14 (Appendices)
+now ✅ Done (independently verified) — **13 of 14 sections complete; only Section 1 (Executive
+Summary) remains.** Section 11 went through a real citation-audit and QA fail/fix/re-verify cycle (a
 fabricated "Section 2 marketplace-flywheel framing" cross-reference, caught on independent QA review,
 fixed, then independently re-verified PASS — see [[QA_Review_Section_11]]). Section 12 went through a
 real citation-audit fail/fix/re-verify cycle (three wrong-section/misattributed cross-references, fixed,
@@ -69,8 +69,14 @@ re-verify cycle (a fastest-growing/most-under-penetrated revenue-line mischaract
 KPI-table reproduction-drift errors, fixed, independently re-verified PASS via a full 16-row
 re-comparison — see [[Citation_Audit_Section_13]]) and a QA fail/fix/re-verify cycle (two unreconciled
 kill-criteria comparison anchors for the same seven KPIs, fixed into one coherent two-role test,
-independently re-verified PASS — see [[QA_Review_Section_13]]). Next: Section 14 (Appendices), then
-Section 1 (Executive Summary, written last, gated on all 13 others).
+independently re-verified PASS — see [[QA_Review_Section_13]]). **Section 14 (Appendices) passed both
+gates cleanly** — its citation audit found 0 hard failures on first pass ([[Citation_Audit_Section_14]]),
+and its independent QA review found all five required appendix items (traceability note, team resumes,
+technical specifications, case studies/pilot results, legal/compliance documents) genuinely present and
+substantive, with the traceability note's indexing-by-reference design (rather than duplicating all
+twelve prior sections' own claim-level tables) specifically scrutinized and judged legitimate — see
+[[QA_Review_Section_14]]. Next: Section 1 (Executive Summary, written last, gated on all 13 others) —
+the only section remaining.**
 
 ## Open decisions (needed before/while drafting)
 - [ ] Team role assignments (6 members / 5 defined roles — charter approved as-is; mapping still open)
@@ -149,7 +155,7 @@ Section 1 (Executive Summary, written last, gated on all 13 others).
 | 11 | CSR & Responsible AI | ✅ Done (independently verified) | Thinnest vault coverage — mostly net-new authoring, deliberately structured as risk management/license-to-operate rather than decoration. Draft: [[Section_11_CSR_and_Responsible_AI]]. §11.1 ties every ethical-AI commitment to a named Section 10 risk (bias/fairness, model transfer, model drift) with concrete controls or explicit gap statements; §11.2 cites three real, Egypt-specific sustainability initiatives (TLB-001/TLB-002: SME academy, two years of charity partnerships, the "Electrifying Egypt" EV pilot); §11.3 proposes a standing segment-fairness review gate, explicitly labeled as this plan's own governance recommendation, not a disclosed talabat process. Pipeline artifacts: [[Citation_Audit_Section_11]] (PASS with 3 non-blocking limitations, all independently confirmed resolved), [[QA_Review_Section_11]] (FAIL on first independent pass — a fabricated "Section 2 marketplace-flywheel framing" cross-reference that does not exist anywhere in Section 2 or the plan; fixed by removing the false citation and resting the argument on the genuinely-accurate Section 7 Partner-co-funding reference; independently re-verified PASS via a fresh full-section sweep finding no other Section 2 reference anywhere in the file). |
 | 12 | Implementation Plan (Three Horizons) | ✅ Done (independently verified) | `Strategic/AI Opportunities.md` (H1) vs. `Strategic/Future AI Opportunities.md` (H2/H3). Draft: [[Section_12_Implementation_Plan]]. Three Horizons roadmap (H1 limited Egypt pilot / H2 full-cohort rollout / H3 cross-vertical extension into Grocery & Retail), each horizon explicitly gated on the prior one's evidence — H1→H2 on GCC-benchmark aggregate + segment-fairness checkpoints plus Section 10's own highest-priority Financial Risk KPI checkpoint (`KPI_Tree.md` K5–K9/K13–K14), H2→H3 on at least one full reporting cycle of the same Egypt KPI evidence — with Section-12-owned marketing-rollout sequencing across all three horizons (no customer-facing spend during H1; a reasoned internal→Partner/card→customer-facing activation order at H2, extended to tMart Partners at H3), cross-referencing Sections 4/5/7/8/10/11 rather than re-deriving them, and an explicit, reasoned exclusion of DEC-003's unchosen churn-prediction option (Option 1). Pipeline artifacts: [[Citation_Audit_Section_12]] (FAIL, 3 hard failures — all wrong-section/misattributed cross-references — fixed across two re-audit rounds, independently re-verified PASS), [[QA_Review_Section_12]] (FAIL on first independent pass — a functionally-missing marketing rollout plan, an ungated H2→H3 transition, and Section 10's own highest-priority risk mitigation not carried into Section 12's go/no-go framing; all three fixed and independently re-verified PASS on a targeted re-review that re-read the current draft and Sections 7/10/11/`KPI_Tree.md` directly rather than trusting the fix descriptions — see the addendum in [[QA_Review_Section_12]]). |
 | 13 | Monitoring and Evaluation (KPIs) | ✅ Done (independently verified) | `Strategic/Customer Retention Drivers.md` (no churn baseline exists — known gap). Draft: [[Section_13_Monitoring_and_Evaluation]]. Reproduces `KPI_Tree.md`'s 16 registered KPIs faithfully rather than re-deriving a parallel set; maps the template's named examples (CAC, MRR, churn, product usage) onto real analogs, stating honestly where MRR doesn't fit talabat's non-subscription-first revenue model. Review cadence and kill criteria resolved via [[DEC-007_section13-review-cadence-kill-criteria]] — no numeric thresholds fabricated against a corpus with 12 of 16 KPIs at zero Egypt baseline; instead operationalizes Section 10/12's already-built go/no-go checkpoints as a qualitative, trajectory-relative test. Pipeline artifacts: [[Citation_Audit_Section_13]] (FAIL, 3 hard failures — a revenue-line mischaracterization + 2 KPI-table drift errors — fixed, independently re-verified PASS via full table re-comparison), [[QA_Review_Section_13]] (FAIL, 1 finding — two unreconciled kill-criteria comparison anchors for the same seven KPIs — fixed into one coherent two-role test, then a further precision fix on the base-case/upside-case framing, both independently re-verified PASS). |
-| 14 | Appendices + traceability note | ⬜ Not started | `vault/MOC/Source Register.md` — mechanically closest to ready |
+| 14 | Appendices + traceability note | ✅ Done (independently verified) | `vault/MOC/Source Register.md`, plus all twelve prior sections' own Traceability summary tables. Draft: [[Section_14_Appendices]]. Compiles rather than re-derives: the full evidence hierarchy and master indexes (Source Register — 29 docs; Decision Log — 7 Approved; Assumptions Register — 14 Approved rows; Research Register — 4 entries; Forecast Layer — Value Driver Tree/Scenarios/KPI Tree), indexes all twelve Sections 2–13's own claim-level Traceability tables rather than duplicating them, honestly states the one genuine unresolvable gap (team-member resumes — real, named individuals, explicitly not fabricated, flagged as a required human action before `Outputs/` submission), compiles Section 5's technical specification and Section 8's legal/compliance disclosure, and honestly frames the absence of a completed Egypt pilot (no invented case-study results) around the one real internal precedent (GEMs) and the one real forward design (Section 12's H1). Pipeline artifacts: [[Citation_Audit_Section_14]] (PASS, 0 hard failures on first pass — the cleanest citation audit of any section so far), [[QA_Review_Section_14]] (PASS — all five required appendix items genuinely substantive; the traceability note's indexing-by-reference design specifically scrutinized and judged legitimate, not a deferral into a void; two non-blocking recommended enhancements noted, no required fixes). |
 
 **Legend:** ✅ Done (independently verified — Pass 2 QA by a separately-invoked agent thread) ·
 ✅ Done (self-reviewed — Pass 1 only, see [[Agentic_OS_Architecture_v2]] Change 2) ·
@@ -166,8 +172,9 @@ Section 1 (Executive Summary, written last, gated on all 13 others).
    risk — the sections everything else depends on)~~ ✅ Done 22/07/2026 — all four Pilot
    Validation Plan pilots complete, all four sections ✅ Done (independently verified), branch
    `feature/bp-pilot-sections`, not yet merged to `main`
-6. **Phase 8 (in progress):** draft the remaining sections (4–8, 11, 12 done; 13, 14 remain; 1 last)
-7. Phase 9: write the Executive Summary last (gated on all 13 others); whole-plan McKinsey Lens
+6. ~~Phase 8: draft the remaining sections~~ ✅ Done 22/07/2026 — Sections 4–8, 11, 12, 13, and 14
+   all ✅ Done (independently verified); 13 of 14 sections complete, only Section 1 remains
+7. Phase 9 (next): write the Executive Summary last (gated on all 13 others); whole-plan McKinsey Lens
    pressure test against `AI_Business_Plan_Template.md`; compile the traceability note
 8. Phase 10: export to `Outputs/`; write the OS structure document; build the presentation deck;
    upload to Moodle
