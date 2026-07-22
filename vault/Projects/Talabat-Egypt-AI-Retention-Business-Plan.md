@@ -32,11 +32,16 @@ OS structure document (3–5 pp) and a 30-slide group presentation (5 slides × 
 🟢 Charter **approved** (Dr. Hossam Daoud, 21/07/2026) · OS activated · corpus ingested and fully
 linked (154 vault notes, 0 orphans) · **Agentic OS architecture designed** (21/07/2026 —
 Decision/Research/Forecasting layers, 8 agents, 11-stage pipeline; see `vault/Architecture/`) ·
-**Drafting has begun — 1 of 14 sections drafted and QA-passed (Section 3, Market Analysis, 2026-07-22,
-first real end-to-end 11-stage pipeline run; QA pass was self-administered — see the checklist row's
-caveat).** This is still the single largest remaining task on the project (40% of the grade). Next:
-continue roadmap Phase 7 (Sections 2, 9, 10), and re-verify Section 3 with an independent QA pass once
-the orchestrator has the `Agent` tool available.
+**Architecture Version 2 shipped, evidence-based, 22/07/2026** (Phase 8; see
+[[Agentic_OS_Architecture_v2]]) · **Operational validation ongoing (Pilot Validation Plan, 22/07/2026):
+Pilot 1 (Section 3) and Pilot 2 (Section 2) complete — 2 of 14 sections drafted and both now Done
+(independently verified where a real agent thread was available: Section 2 fully, Section 3 on the one
+point re-checked). Pilot 2 confirmed Architecture v2's top-level-invocation fix works and produced a
+second real architecture finding: `AskUserQuestion`, like `Agent`/`WebSearch`/`WebFetch`, is
+unavailable inside a spawned subagent thread.** This is still the single largest remaining task on the
+project (40% of the grade). Next: Pilot 3 (Section 9, Financial Plan — first real test of
+`forecasting-agent`/`kpi-agent` and the Forecast Layer) and Pilot 4 (Section 10, Risk Analysis —
+deliberate two-pass comparison), per [[Pilot_Validation_Plan]].
 
 ## Open decisions (needed before/while drafting)
 - [ ] Team role assignments (6 members / 5 defined roles — charter approved as-is; mapping still open)
@@ -76,8 +81,8 @@ the orchestrator has the `Agent` tool available.
 | # | Section | Status | Primary vault sources (see skill for full mapping) |
 |---|---|---|---|
 | 1 | Executive Summary (SCQA) | ⬜ Not started | Write last — depends on 2–13 |
-| 2 | Business Description | ⬜ Not started | `Strategic/Current Pain Points.md`, `Strategic/How Talabat Creates Value.md` |
-| 3 | Market Analysis | ✅ Done (self-reviewed) | `Topics/Egypt.md`, `Strategic/Competitive Advantages.md`, `Strategic/Competitive Weaknesses.md`, `Topics/Competition.md`, `Topics/UAE.md`, `Entities/Competitors.md`, `Facts/Competition_Facts.md`. Draft: [[Section_03_Market_Analysis]]. Pipeline artifacts: [[DEC-001_egypt-category-share-figure]], [[DEC-002_egypt-market-size-definition]], [[RES-001_egypt-named-competitors]]–[[RES-004_egypt-official-newsroom-operational-datapoints]], [[Citation_Audit_Section_03]], [[QA_Review_Section_03]]. Passed Stage 11 QA (Pass 1 only — self-administered by `bp-orchestrator`, no `Agent` tool available this session to invoke an independent `qa-review-agent` thread; see [[Agentic_OS_Architecture_v2]] Change 2). **Pass 2 (independent verification) required before submission-final** — a fresh, separately-invoked QA pass. Also pending: re-check hypothesis-traceability once Section 2 exists (QA Finding 2). |
+| 2 | Business Description | ✅ Done (independently verified) | `Strategic/Current Pain Points.md`, `Strategic/How Talabat Creates Value.md`, `Strategic/AI Opportunities.md`, `Strategic/Future AI Opportunities.md`, `Topics/Growth Strategy.md`, `MOC/Market Intelligence MOC.md`. Draft: [[Section_02_Business_Description]]. Pipeline artifacts: [[DEC-003_section2-governing-hypothesis]] (governing hypothesis, user-confirmed via a real top-level `AskUserQuestion` call), [[Citation_Audit_Section_02]], [[QA_Review_Section_02]]. First section drafted entirely under Architecture v2's top-level-invoked-specialist pattern (Pilot 2, [[Pilot_Validation_Plan]]) — `decision-steward`, `evidence-citation-agent`, and `qa-review-agent` were each invoked directly, not nested in `bp-orchestrator`. Passed Stage 11 QA by a **genuinely separately-invoked** `qa-review-agent` thread with no access to the drafting session's reasoning — the first true Pass 2-equivalent independent review in this project. That review also caught and drove the fix of a real cross-section inconsistency in Section 3 (see row 3). |
+| 3 | Market Analysis | ✅ Done (self-reviewed + independently re-verified on one point) | `Topics/Egypt.md`, `Strategic/Competitive Advantages.md`, `Strategic/Competitive Weaknesses.md`, `Topics/Competition.md`, `Topics/UAE.md`, `Entities/Competitors.md`, `Facts/Competition_Facts.md`. Draft: [[Section_03_Market_Analysis]]. Pipeline artifacts: [[DEC-001_egypt-category-share-figure]], [[DEC-002_egypt-market-size-definition]], [[RES-001_egypt-named-competitors]]–[[RES-004_egypt-official-newsroom-operational-datapoints]], [[Citation_Audit_Section_03]], [[QA_Review_Section_03]]. Original Stage 11 QA (Pilot 1) was self-administered by `bp-orchestrator` — see [[Agentic_OS_Architecture_v2]] Change 2. **Pilot 2 update (2026-07-22):** Section 2's independent QA review resolved the prior review's own open Finding 2 and caught a real, hard-blocking defect — §3.3's GEMs-analogy bullet had drifted into DEC-003's *unchosen* churn/win-back framing (Option 1) instead of the user-confirmed roadmap-extension framing (Option 2). Fixed, then independently re-verified by a fresh `qa-review-agent` thread (addendum in [[QA_Review_Section_03]]) — PASS, no remaining churn/win-back framing anywhere in the section. This is the pilot's key proof point: independent review caught something self-review structurally could not have (Section 2 didn't exist yet when Section 3 was first reviewed). |
 | 4 | Value Proposition | ⬜ Not started | `Strategic/Customer Retention Drivers.md` |
 | 5 | AI Technology and Development | ⬜ Not started | `Topics/AI.md`, `Entities/Technology_Platforms.md` |
 | 6 | Business Model and Revenue Streams | ⬜ Not started | `Strategic/Revenue Model.md`, `Facts/Revenue.md` |

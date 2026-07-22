@@ -6,6 +6,55 @@ writes these entries for you.
 
 ---
 
+## Session 5 — 2026-07-22 (Pilot 2: Section 2, testing the orchestration fix for real)
+
+**Focus:** execute Pilot 2 per `vault/Architecture/Pilot_Validation_Plan.md` — draft Section 2
+(Business Description) using genuinely top-level-invoked specialist agents (Architecture v2's Change
+1), and test the `AskUserQuestion` human-escalation path for the first time. Branch
+`feature/bp-pilot-sections` (fast-forwarded to include all of Version 2 first).
+
+**Done:**
+- Readiness check: confirmed all five Section 2 source notes present and usable.
+- Invoked `decision-steward` as a genuine top-level `Agent` call for the governing-hypothesis
+  decision. It correctly judged this a strategic framing choice requiring escalation, attempted
+  `AskUserQuestion` from inside its own subagent thread, hit a hard tool-unavailability error
+  (`AskUserQuestion` is not available to spawned subagents — the same constraint class as
+  `Agent`/`WebSearch`/`WebFetch` from Phase 7), and correctly refused to infer or default an answer —
+  it preserved the exact escalation prompt for the top-level session instead of self-approving.
+- Ran that preserved prompt for real via a top-level `AskUserQuestion` call. The user chose: extend
+  talabat's already-announced Group AI roadmap into Egypt (new recommendation form factors, cross-sell
+  timing/incentive optimisation, deepened adtech-embedded personalisation) — not the net-new
+  churn-prediction option, not the subscription-uplift-only option. Recorded in
+  `DEC-003_section2-governing-hypothesis.md` (approved) and `ASM-005` (Approved).
+- Drafted Section 2 in full against the confirmed hypothesis: industry overview, a 3-leg MECE problem
+  decomposition (product/experience vs. economic vs. competitive retention-risk drivers), core
+  features/benefits, business model, and a three-level business-stage read (Group/Egypt segment/the
+  initiative itself).
+- Invoked `evidence-citation-agent` as a genuine top-level `Agent` call (not nested) for Stage 9 —
+  PASS, 0 hard failures, 5 acknowledged non-blocking limitations, independently re-confirmed DEC-003's
+  approval was genuine, not a leftover draft state.
+- Invoked `qa-review-agent` as a genuine top-level `Agent` call for Stage 11 — the first genuinely
+  independent QA pass in this project's history (confirmed: only `Read`/`Grep`/`Write`, no memory of
+  the drafting session). PASS on Section 2 itself, and it resolved Section 3's own previously-open
+  Finding 2 by cross-checking Section 3 against Section 2's now-confirmed hypothesis — finding a real,
+  hard-blocking defect: Section 3's GEMs-analogy Opportunities bullet had drifted into the *unchosen*
+  churn-prediction/win-back framing.
+- Fixed the Section 3 bullet to match the confirmed hypothesis, then ran a second, fresh top-level
+  `qa-review-agent` call to independently re-verify the fix (not self-verified) — PASS, appended as an
+  addendum to `QA_Review_Section_03.md` (original content preserved, not overwritten).
+- Updated the Project tracker: Section 2 → ✅ Done (independently verified); Section 3 → ✅ Done
+  (self-reviewed + independently re-verified on one point); Open Decisions list; Status line.
+- Wrote `vault/Validation/Pilot2_Execution_Report_Section_02.md` — full execution log, success-criteria
+  evaluation (all three met), and the central architecture finding (`AskUserQuestion` unavailable to
+  subagents) with no new architecture change required, since Change 1's existing fix already covers it.
+- Updated `Validation and Audit.md` and `Project Administration.md` MOCs.
+
+**Explicitly not done:** no architecture redesign (the one new finding is covered by the existing
+Change 1 fix); Pilots 3–4 not started; the remaining 12 Business Plan sections not touched; branch not
+merged to `main`.
+
+---
+
 ## Session 4 — 2026-07-22 (Phase 8: evidence-based Agentic OS Version 2)
 
 **Focus:** evolve the architecture using only Phase 7's execution evidence — no redesign, no design

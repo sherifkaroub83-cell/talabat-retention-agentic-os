@@ -216,7 +216,27 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   Research Notes; a wikilink-scope convention for drafting agents), explicit "No change recommended"
   for every component execution validated as designed, and recalculated readiness metrics. Version 1
   kept intact, not rewritten. See the Session log entry below for full detail. Work done on branch
-  `feature/agentic-os-v2`, not merged to `main`.
+  `feature/agentic-os-v2`, merged to `main` on explicit authorization.
+- 2026-07-22 — **Pilot 2: tested Architecture v2's Change 1 (top-level-invoked specialists) for the
+  first time**, drafting Section 2 (Business Description). All four specialist agent invocations
+  (`decision-steward`, `evidence-citation-agent`, `qa-review-agent` ×2) were genuine, separate
+  top-level `Agent` calls, not nested inside `bp-orchestrator` — the fix worked. **Second real
+  architecture finding:** `AskUserQuestion` is also unavailable inside a spawned subagent thread
+  (same constraint class as `Agent`/`WebSearch`/`WebFetch`). `decision-steward` self-detected this
+  correctly when escalating the Section 2 governing-hypothesis decision (a genuine strategic framing
+  choice, unlike Pilot 1's two data-presentation calls) and preserved the exact escalation prompt for
+  the top-level session, which ran it for real and got a genuine user decision: extend talabat's
+  Group AI roadmap into Egypt, not build a net-new churn-prediction capability or optimize
+  subscription-uplift alone (`DEC-003_section2-governing-hypothesis.md`, approved; `ASM-005`,
+  Approved). The resulting genuinely-independent Stage 11 QA pass — the first in this project's
+  history — caught a real, hard-blocking cross-section defect: Section 3's GEMs-analogy Opportunities
+  bullet had drifted into the governing hypothesis's *unchosen* option. Fixed and independently
+  re-verified (addendum to `QA_Review_Section_03.md`, original preserved). No architecture redesign
+  was needed — the new finding is covered by the existing Change 1 fix. Section 2 reached ✅ Done
+  (independently verified) on the first real attempt; Section 3 reached ✅ Done (self-reviewed +
+  independently re-verified on one point). Full report:
+  `vault/Validation/Pilot2_Execution_Report_Section_02.md`. Work done on branch
+  `feature/bp-pilot-sections`, not merged to `main`.
 
 ## Session log
 
@@ -259,4 +279,13 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   `vault/Validation/Lessons_Learned_Phase7.md` and `vault/Architecture/Pilot_Validation_Plan.md`
   (Pilots 2–4: Sections 2, 9, 10, each targeting one specific open question from Pilot 1 — explicitly
   not a jump to drafting the remaining Business Plan). Work done on branch `feature/agentic-os-v2`,
-  not merged to `main`.
+  merged to `main` on explicit authorization.
+- 2026-07-22 — Session 5: ran Pilot 2 (Section 2, Business Description) — the first pipeline run using
+  genuinely top-level-invoked specialist agents throughout (Architecture v2's Change 1), confirming the
+  fix works. Produced the project's first real, human-confirmed strategic Decision (`DEC-003`, via a
+  genuine `AskUserQuestion` escalation) after `decision-steward` correctly detected it could not obtain
+  that consent from inside a subagent thread — a second real runtime finding, same constraint class as
+  Phase 7's `Agent`/`WebSearch`/`WebFetch` discovery, requiring no new architecture change. The
+  resulting genuinely-independent Stage 11 QA pass caught and drove the fix of a real cross-section
+  defect in Section 3. See `vault/Validation/Pilot2_Execution_Report_Section_02.md`. Work done on
+  branch `feature/bp-pilot-sections`, not merged to `main`.

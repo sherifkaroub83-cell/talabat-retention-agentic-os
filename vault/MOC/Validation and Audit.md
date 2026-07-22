@@ -30,6 +30,11 @@ Every quality-control checkpoint produced while building this vault, in chronolo
 - [[Agentic_OS_Architecture_v2]] — every architecture change traced to specific Phase 7 execution evidence (Previous Design → Evidence → Reason → New Design → Benefit); components execution validated unchanged are explicitly marked "No change recommended," not silently left as-is
 - [[Pilot_Validation_Plan]] — Pilots 2–4: the next three planned operational tests, not a jump to drafting the remaining Business Plan
 
+## Pilot 2 — Section 2, first genuinely top-level-invoked pipeline run (22/07/2026)
+- [[Pilot2_Execution_Report_Section_02]] — tests Architecture v2's Change 1 (top-level-invoked specialists) for real; all four specialist agents (`decision-steward`, `evidence-citation-agent`, `qa-review-agent` ×2) ran as genuinely separate top-level `Agent` calls for the first time. Headline finding: the Change 1 fix works — the first genuinely independent Stage 11 QA pass in this project's history, which caught and drove the fix of a real cross-section defect in Section 3. Second finding: `AskUserQuestion`, like `Agent`/`WebSearch`/`WebFetch`, is unavailable inside a spawned subagent thread — `decision-steward` self-detected this correctly and escalated back to the top-level session rather than guessing
+- [[Citation_Audit_Section_02]] · [[QA_Review_Section_02]] — Section 2's Stage 9/11 artifacts, both genuinely top-level-invoked
+- [[QA_Review_Section_03]] — now carries an addendum: an independent re-verification of the Section 3 fix Pilot 2's QA review drove
+
 ## Independent compliance audits (external-examiner perspective, not self-reported)
 - [[Independent_Project_Compliance_Report]] — v2, re-run against the merged main-equivalent state: requirements traceability, per-section Business Plan readiness, 12-area OS evaluation, architecture review, grading simulation (~33/100 as of this pass), and remaining roadmap. v1 (pre-merge) findings are marked RESOLVED in place rather than deleted, so the audit trail stays legible across passes.
 
