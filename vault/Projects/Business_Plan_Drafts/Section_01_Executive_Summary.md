@@ -1,7 +1,7 @@
 ---
 section: 1
 title: Executive Summary
-status: drafted — pending citation verification and QA (pipeline stage 9/11)
+status: drafted — citation audit PASS (three fix rounds, independently re-verified); QA review in progress
 pipeline_run: 2026-07-22
 ---
 
@@ -22,6 +22,21 @@ pipeline_run: 2026-07-22
 > proceeds without an inconsistency escalation to the Orchestrator. This is a working draft in
 > `vault/Projects/`, not yet promoted to `Outputs/` — promotion requires a passed Stage 11 QA review by a
 > separately-invoked `qa-review-agent` thread and a full citation audit, exactly as for Sections 2–14.
+
+## Bottom Line
+
+**Recommendation:** extend talabat's already-announced Group AI roadmap into Egypt — richer recommendation
+form factors, cross-sell timing/incentive optimisation, and deepened adtech-embedded personalisation — not
+a new churn-prediction build and not a subscription-uplift-only strategy
+([[DEC-003_section2-governing-hypothesis|DEC-003]]). **Investment:** an illustrative **≈USD 13.2m**,
+entirely a prioritization within talabat's already Board-approved USD 175mn 2026 envelope, not new capital
+([[DEC-004_2026-investment-total|DEC-004]]). **Expected impact:** against a base case of **≈USD 581–597m**
+FY2026 Egypt revenue taking no intervention credit, the investment needs to generate only **≈USD 53.9m**
+(**≈10.6%**) in incremental revenue to pay for itself — well below the 20–28% uplift these same mechanisms
+have already produced at Group level ([[Section_09_Financial_Plan|Section 9]]). This upside is carried at
+Low confidence throughout, and this plan's own Risk Analysis independently names the upside underperforming
+the base case as its single highest-severity risk ([[Section_10_Risk_Analysis|Section 10]] §10.2) — full
+detail in the Answer section below.
 
 ## Situation
 
