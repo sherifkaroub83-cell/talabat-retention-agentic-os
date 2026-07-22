@@ -1,7 +1,7 @@
 ---
 section: 10
 title: Risk Analysis
-status: drafted — pending citation verification and two-pass QA (pipeline stage 9/11, run twice)
+status: Done — citation audit PASS ([[Citation_Audit_Section_10]], FAIL→fix→PASS), QA review PASS ([[QA_Review_Section_10_Final]], two independent passes [[QA_Review_Section_10_Pass1]]/[[QA_Review_Section_10_Pass2]], both FAIL, combined fix independently re-verified); frontmatter corrected 22/07/2026 to match the project tracker's long-standing ✅ Done (independently verified) status, which this field had never been synced to
 pipeline_run: 2026-07-22
 ---
 
