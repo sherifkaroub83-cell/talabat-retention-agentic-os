@@ -673,3 +673,24 @@ covers which clause.**
   spot-check, verified accurate)
 - `vault/Decisions/Decision_Log/DEC-003_section2-governing-hypothesis.md` (status/Approval sections —
   `AskUserQuestion` provenance claim spot-check, verified accurate)
+
+---
+
+## Final closeout check (2026-07-22)
+
+**Note on provenance:** the subagent originally dispatched for this final closeout check was terminated
+mid-run by a session usage-limit error, not a content finding. The top-level session performed this check
+directly instead, reading the source itself rather than deferring the verification.
+
+**Verification performed:** re-read `vault/Projects/Business_Plan_Drafts/Section_03_Market_Analysis.md`
+§3.2 directly (lines 102-111). It states: "Multi-vertical customers separately 'show significantly higher
+order frequency and retention' than mono-vertical customers (TLB-002, pages 7–8, 12)" — an exact match,
+citation and wording, for what Section 1's corrected sentence now attributes to that clause. The sentence
+in `Section_01_Executive_Summary.md` now reads two properly-scoped citations — "(TLB-019, page 7)" for the
+"one-third of the base" clause and "(TLB-002, pages 7-8, 12; see also Section 3 §3.2)" for the "higher
+order frequency and retention" clause — rather than one clause borrowing the other's source.
+
+**Verdict: PASS.** This closes out the last open item across three rounds of re-audit. Section 1's citation
+audit is now fully closed out. This is the final section in the entire 14-section Business Plan to clear
+Stage 9 (citation verification) — Sections 2 through 14 were already independently verified PASS. Section
+1 is ready for Stage 11 (QA review).
