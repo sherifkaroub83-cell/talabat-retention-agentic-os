@@ -43,8 +43,11 @@ risk *facts* have been ready for since Pilot 1, per the drafting skill's own not
 ## 10.1 MECE Risk Categories
 
 Five categories, matching the template's own naming exactly — every risk this plan can name falls into
-exactly one of these (a risk is either about the technology, the market, the money, or people/process/
-regulation; there is no sixth kind of risk this framework would need to invent a bucket for):
+exactly one of these: **technical** (the technology itself), **market** (competitors and demand),
+**financial** (the money), **organizational** (talabat's own people, process, and governance), or
+**regulatory** (external rules and authorities). A risk is never about more than one of these five at
+once, and the corpus's own risk language (technology, competition, cost, internal governance, and
+external regulation) does not suggest a sixth kind this framework would need to invent a bucket for.
 
 ### Technical Risks
 
@@ -66,6 +69,18 @@ regulation; there is no sixth kind of risk this framework would need to invent a
   models per market — if Egypt's rapidly growing, still-immature customer base shifts behavior faster
   than a shared, Group-wide model retraining cadence accounts for, recommendation relevance could
   degrade over the plan's multi-year horizon without a dedicated Egypt monitoring signal.
+- **Algorithmic bias/fairness risk (labeled explicitly synthetic — no source in the corpus discusses
+  talabat's AI bias/fairness posture; this bullet is this plan's own reasoned extension of an
+  already-evidenced gap, not a corpus citation).** A recommendation/cross-sell/adtech model trained
+  predominantly on GCC behavioral data, then extended to Egypt, carries a real risk of systematically
+  under-serving or mis-ranking Egyptian customer segments the training population does not represent —
+  most plausibly the price-sensitive, non-high-value, or newly-onboarded segments this plan's own Market
+  Risks category already documents as under macro pressure (food inflation, EGP devaluation). This is a
+  distinct failure mode from Model Transfer Risk above: transfer risk is about whether the model performs
+  as well in Egypt (an accuracy/performance question); bias risk is about whether it performs *unevenly
+  across* Egyptian customer segments even if its aggregate performance looks acceptable (a fairness/
+  equity question) — the template names these as separate risks for exactly this reason, and this section
+  does not collapse them into one bullet.
 
 ### Market Risks
 
@@ -118,7 +133,7 @@ as risk inputs:**
   Egypt-specific risk statement in the entire corpus (`Strategic/Strategic Risks.md`, TLB-020 p.14). The
   magnitude of further depreciation is not quantified anywhere.
 
-### Organizational and Regulatory Risks
+### Organizational Risks
 
 - **Governance/sponsorship continuity risk.** An unexplained CEO transition (Rodriguez → Gyssels) and
   board-seat change (Al Jbori → Al-Halabi) both occur in the corpus's timeline without narration
@@ -136,17 +151,23 @@ as risk inputs:**
   not fully control — and cannot yet be confirmed or ruled out as more or less acute in Egypt
   specifically — is a real organizational risk to the retention thesis, independent of whether the AI
   capability itself works.
+- **AI-capability ownership ambiguity.** Because the corpus never confirms whether Egypt-specific AI
+  deployment is owned by a dedicated Egypt team or the shared Group Tech hub, this plan cannot state
+  with confidence who inside talabat would actually execute the recommended roadmap extension — an
+  organizational-clarity gap, not a technical one.
+
+### Regulatory Risks
+
 - **Regulatory exposure precedent.** talabat's scale has already triggered antitrust/regulatory action
   in five of its eight markets (Kuwait, UAE, Iraq investigations; a Qatar commission-rate cap; Oman
   licensing disputes — `Strategic/Competitive Weaknesses.md`). No Egypt-specific action is disclosed,
   but the corpus's own language ties this scrutiny explicitly to market dominance — and
   [[Section_03_Market_Analysis|Section 3]] already establishes talabat holds a leading Egypt category
   position (4x+ conservative framing per `DEC-001`). This is a plausible, not confirmed, future Egypt
-  risk worth naming rather than assuming won't happen because it hasn't yet.
-- **AI-capability ownership ambiguity.** Because the corpus never confirms whether Egypt-specific AI
-  deployment is owned by a dedicated Egypt team or the shared Group Tech hub, this plan cannot state
-  with confidence who inside talabat would actually execute the recommended roadmap extension — an
-  organizational-clarity gap, not a technical one.
+  risk worth naming rather than assuming won't happen because it hasn't yet. Kept as its own category,
+  distinct from Organizational Risks above, because it originates externally (regulators) rather than
+  from talabat's own people, process, or governance — the same technology/market/money/people/rules
+  distinction §10.1 opens with.
 
 ## 10.2 Probability–Impact Matrix
 
@@ -157,8 +178,9 @@ Process.md`'s own honesty about undisclosed internal governance mechanics).
 
 | Risk | Category | Probability | Impact | Rationale for the rating |
 |---|---|---|---|---|
-| Upside case underperforms base case (intervention effect weaker than Group pattern in Egypt) | Financial | **High** | **High** | Every quantified input is Low-confidence, Group-extrapolated evidence explicitly excluding Egypt at time of measurement — the single most-evidenced risk in this table, not a hypothetical |
+| Upside case underperforms base case (intervention effect weaker than Group pattern in Egypt) | Financial | **High** | **High** | "Low confidence" (`ASM-008`/`ASM-011`) is a statement about *estimate uncertainty*, not by itself about the *direction* of the likely error — uncertainty alone would justify only a Medium, two-sided rating. This row is rated High specifically because §10.1's own Market Risks category supplies a *directional* argument beyond the confidence tag alone: Egyptian customers under active food-inflation/EGP-devaluation pressure (§10.1; `ASM-003`) are plausibly *more* price-sensitive and *less* responsive to AI-personalised recommendations than the GCC population the uplift figures were measured on, which skews the uncertainty toward underperformance rather than treating it as symmetric. This is the plan's own reasoned judgment, not a disclosed fact — stated explicitly here rather than left implicit in the confidence tag alone |
 | Model transfer risk (Egypt behavior diverges from GCC training population) | Technical | Medium | High | Plausible given Egypt's distinct macro/behavioral profile (food inflation, EGP devaluation pressuring price sensitivity — §10.1, `Strategic Risks.md`), but no disclosed evidence either confirms or rules out whether this actually degrades AI-model performance |
+| Algorithmic bias/fairness risk (GCC-trained model under-serves specific Egyptian segments) | Technical | Medium | Medium | No disclosed evidence of this occurring; rated above zero because the same price-sensitive/newly-onboarded segments §10.1 already flags as under macro pressure are the most plausible candidates to be under-represented in GCC training data — a plausible, not confirmed, extension of the Model Transfer Risk logic to a fairness-specific failure mode |
 | Local competitor erosion (Breadfast/Rabbit/elmenus) | Market | Medium | Medium | Real, named, but from secondary/non-primary corpus evidence only (`ASM-002`), and no source quantifies actual share loss to any of them |
 | Macro/inflation demand compression | Market | High | Medium | Already observed and quantified at the market level (Mordor: −3.8pp CAGR impact from inflation/devaluation), independent of this plan's execution |
 | FX/currency depreciation beyond guidance | Financial | Medium | Medium | Named explicitly by management as a risk already "incorporated in guidance" — meaning some depreciation is expected and priced in; risk is specifically *further* depreciation beyond that |
@@ -223,6 +245,7 @@ with how Section 9 labeled its own illustrative constructions.
 |---|---|---|
 | Upside case underperforms base case | Instrument the newly-baseline KPIs (`KPI_Tree.md`) from day one of rollout, with an explicit go/no-go checkpoint against the base-case trajectory before scaling investment further — do not wait for a full fiscal year to find out the upside case didn't materialize | Egypt Country GM, with Group FP&A |
 | Model transfer risk | Run a limited Egypt pilot (a subset of the customer base) before full rollout, instrumented specifically to detect whether recommendation relevance/cross-sell response differs from the GCC benchmark, before committing the full ≈USD13.2m estimate | Group AI/Data Science, in coordination with Egypt Country GM |
+| Algorithmic bias/fairness risk | Include segment-level (not just aggregate) performance monitoring in the same limited Egypt pilot above — specifically checking whether price-sensitive/newly-onboarded segments see materially worse recommendation relevance than the overall Egypt cohort, before full rollout | Group AI/Data Science, in coordination with Egypt Country GM |
 | Local competitor erosion | Track named-competitor signals (pricing, feature parity, funding announcements) as a standing input to the Egypt retention roadmap, not a one-time competitive scan — Section 3's competitor table is a starting point, not a static artifact | Egypt Country GM / Strategy |
 | Macro/inflation demand compression | Frame the financial case's downside scenario (Section 9 §9.3) as a standing planning assumption, not a tail risk — build the retention pitch explicitly on "cheaper to retain than acquire under inflation" logic already established in Section 2, so the mitigation is built into the plan's own framing, not bolted on | Group FP&A / Egypt Country GM |
 | FX/currency depreciation | Model the investment case's return in a way that is robust to further EGP depreciation, consistent with management's own stated inflation-hedge logic — do not present illustrative USD figures without a currency-sensitivity note | Group FP&A |
