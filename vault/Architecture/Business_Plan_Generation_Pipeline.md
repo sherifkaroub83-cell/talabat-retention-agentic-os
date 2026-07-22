@@ -87,4 +87,4 @@ validated cleanly; the invocation pattern above was adapted as a direct result. 
 remain untouched. See [[Implementation_Roadmap]] for what's next.
 
 ## See also
-[[Agentic_OS_Architecture]] · [[Agentic_OS_Architecture_v2]] · [[Phase7_Pilot_Execution_Report_Section_03]] · [[Project Administration]] · [[Publication_Layer|Publication Layer]] (the plan-level formatting/export step downstream of this pipeline — not one of the 11 stages above, and does not change them)
+[[Agentic_OS_Architecture]] · [[Agentic_OS_Architecture_v2]] · [[Phase7_Pilot_Execution_Report_Section_03]] · [[Project Administration]] · [[Publication_Layer|Publication Layer]] (the plan-level formatting/export step downstream of this pipeline — not one of the 11 stages above, and does not change them) · `.claude/skills/template-compliance-gate/SKILL.md` (validates, immediately before Publication, that the section structure this pipeline produced — count, numbering, titles, order — is still intact in whatever document is about to be exported)
