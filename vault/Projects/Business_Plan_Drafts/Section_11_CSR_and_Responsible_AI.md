@@ -32,11 +32,17 @@ describing a talabat process that does not exist in the evidence.
 
 ## 11.1 Ethical AI: Bias, Transparency, Fairness — Tied to Concrete Controls
 
+Model transfer risk and model drift are, strictly, performance risks rather than fairness risks in the
+narrow sense — they are included in this table because both are the direct precondition for, and cannot
+be cleanly separated from, the algorithmic bias/fairness risk immediately below: an AI system whose
+performance is unvalidated or drifting on Egypt's population is also a system whose fairness properties
+cannot be trusted, per this plan's own risk-management framing.
+
 | Section 10 risk this ties to | Ethical-AI commitment | Concrete control (cross-referenced from Section 10 §10.4 where one exists; stated as an open gap where it does not) | Owner |
 |---|---|---|---|
 | **Algorithmic bias/fairness risk** — explicitly labeled synthetic in Section 10 (no corpus source discusses talabat's AI bias/fairness posture); this plan's own reasoned extension of the model-transfer gap to a fairness-specific failure mode | No full-scale Egypt rollout without segment-level (not just aggregate) fairness monitoring, specifically checking whether price-sensitive or newly-onboarded Egyptian segments see materially worse recommendation relevance than the overall Egypt cohort | Segment-level performance monitoring built into the limited Egypt pilot [[Section_10_Risk_Analysis|Section 10]]'s mitigation table already specifies for Model Transfer Risk — this section does not add a second, separate pilot; it extends the same one to carry a fairness lens, not only a performance lens | Group AI/Data Science, in coordination with Egypt Country GM |
 | **Model transfer risk** — the corpus does not confirm whether Egypt runs the same models as the GCC or a less mature version | No commitment to full-scale deployment ahead of validated in-market evidence that Group-trained models perform acceptably on Egypt's specific customer behavior | The limited Egypt pilot itself, instrumented to detect recommendation-relevance/cross-sell-response divergence from the GCC benchmark, before committing the full ≈USD13.2m Egypt-attributable investment estimate (`ASM-012`) | Group AI/Data Science, in coordination with Egypt Country GM |
-| **Model drift** — no document discloses a per-market retraining or monitoring cadence | A standing Egypt-specific monitoring signal, not reliance on a shared Group-wide retraining schedule the corpus never confirms exists or would catch Egypt-specific behavioral shift | Not yet a specified control anywhere in the corpus or in Section 10 — this plan names it as an open governance gap [[Section_12_Implementation_Plan|Section 12]] must resolve as an implementation prerequisite, not a control this section can point to as already existing | Group AI/Data Science |
+| **Model drift** — no document discloses a per-market retraining or monitoring cadence | A standing Egypt-specific monitoring signal, not reliance on a shared Group-wide retraining schedule the corpus never confirms exists or would catch Egypt-specific behavioral shift | Not yet a specified control anywhere in the corpus or in Section 10 — this plan names it as an open governance gap [[Section_12_Implementation_Plan|Section 12]] must resolve as an implementation prerequisite, not a control this section can point to as already existing | Group AI/Data Science (this plan's own proposed assignment, not a disclosed talabat role — no owner exists in the corpus for a control that itself does not yet exist) |
 
 **Transparency — stated as a gap, not filled.** No document in the corpus describes an AI-explainability
 practice, a customer-facing disclosure of algorithmic recommendation/ranking logic, or an internal AI
@@ -74,9 +80,8 @@ rather than inventing a CSR programme this plan is not proposing to create:
 
 **This plan's own contribution is not a new sustainability programme** — it is naming that these
 initiatives already establish talabat's Egypt "license to operate" with Partners, riders, and communities,
-the same stakeholder trust base [[Section_02_Business_Description|Section 2]]'s marketplace-flywheel
-framing and [[Section_07_Marketing_and_Sales_Strategy|Section 7]]'s Partner-co-funding discussion both
-depend on. An AI-driven retention strategy that erodes Partner or rider trust (e.g., through opaque
+the same stakeholder trust base [[Section_07_Marketing_and_Sales_Strategy|Section 7]]'s Partner-co-funding
+discussion depends on. An AI-driven retention strategy that erodes Partner or rider trust (e.g., through opaque
 algorithmic decisions) would work against this existing CSR footprint, not merely fail to build on it —
 which is precisely why §11.1's ethical-AI controls are framed as risk management rather than a separate,
 disconnected virtue statement.
@@ -115,6 +120,6 @@ once at the pilot stage and left unrevisited.
 
 ## Links
 - [[Talabat-Egypt-AI-Retention-Business-Plan|Project tracker]]
-- [[Section_02_Business_Description]] · [[Section_07_Marketing_and_Sales_Strategy]] · [[Section_08_Operations_Plan]] · [[Section_10_Risk_Analysis]]
+- [[Section_07_Marketing_and_Sales_Strategy]] · [[Section_08_Operations_Plan]] · [[Section_10_Risk_Analysis]]
 - [[DEC-003_section2-governing-hypothesis]]
 - [[Business_Plan_Generation_Pipeline]]
