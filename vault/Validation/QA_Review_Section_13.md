@@ -415,3 +415,37 @@ Section 13 is ready to be marked ✅ Done in the Project tracker.
 - [[Section_09_Financial_Plan]] §9.3 — re-read in full to independently confirm R1's base-case/upside-case treatment
 - [[Value_Driver_Tree]] — re-read in full to independently confirm `ASM-008`/`ASM-011`'s directional-only status
 - [[DEC-007_section13-review-cadence-kill-criteria]] · [[DEC-005_section9-headline-scenario]]
+
+---
+
+# Final closeout check (2026-07-22)
+
+Bounded verification of the one post-PASS precision tweak flagged as an optional, non-blocking nuance in
+the addendum above (§1: R1's upside case is directional, not a separate dollar figure). Re-read
+`Section_09_Financial_Plan.md` §9.3 directly. Confirmed: the base case's "Illustrative FY2026 revenue:
+≈USD 581–597m" figure is unchanged and correctly cited; §9.3 still explicitly states "This plan does not
+state a numeric upside-case revenue figure"; and the Scenarios table's Upside row states, word for word,
+"The intervention's projected return, not a competing central estimate" (Role column) and "... on top of,
+not instead of, the base case" (Growth logic column) — the exact source of the quoted phrase now used in
+the reworded §13.4 sentence.
+
+The current §13.4 text now reads: R1 is read against "Section 9's quantified base case (≈USD581–597m; the
+upside case is not itself a separate dollar figure, only 'the intervention's projected return... on top
+of, not instead of, the base case,' per DEC-005's framing)," with the kill-criterion trigger restated as
+"R1 tracking at or below the quantified base case rather than showing the incremental lift the upside case
+describes." This is an accurate, directly-sourced quote (spanning two cells of the same Section 9 table
+row, joined with an ellipsis, not fabricated or misattributed), and it resolves exactly the precision
+nuance this addendum flagged as non-blocking: it no longer implies the upside case is itself a quantified
+trajectory, stating plainly that only the base case is a dollar figure and the upside case is a
+directional/delta framing. The sentence reads coherently in context — the kill-criterion test remains
+executable exactly as before (compare R1 against the ≈581–597m floor), now with no residual ambiguity
+about what the "upside case" term means.
+
+**Verdict: PASS.** This is a precision tightening, not a substantive change, and it is accurate against
+Section 9's own text. Section 13 has now cleared both the citation audit (PASS, per §3 above) and QA
+review (PASS, per the addendum above, with this closeout confirming the one remaining nuance is now
+resolved) — it is ready to be marked ✅ Done in the Project tracker.
+
+## Links (closeout)
+- [[Section_13_Monitoring_and_Evaluation|vault/Projects/Business_Plan_Drafts/Section_13_Monitoring_and_Evaluation.md]] §13.4 — the re-worded sentence verified in this closeout
+- [[Section_09_Financial_Plan]] §9.3 — re-read directly to confirm the ≈USD581–597m base case and the exact Upside-row quoted language

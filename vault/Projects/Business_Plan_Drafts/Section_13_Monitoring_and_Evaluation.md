@@ -1,7 +1,7 @@
 ---
 section: 13
 title: Monitoring and Evaluation
-status: drafted — pending citation verification and QA (pipeline stage 9/11)
+status: Done — citation audit PASS (one fix round, independently re-verified), QA review PASS (one fix round + one precision fix, independently re-verified)
 pipeline_run: 2026-07-22
 ---
 
