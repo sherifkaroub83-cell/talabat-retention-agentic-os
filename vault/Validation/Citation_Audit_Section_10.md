@@ -45,7 +45,7 @@ trusting Section 10's own citations at face value.
 | 5 | Antitrust/regulatory precedent (Kuwait, UAE, Iraq investigations; Qatar commission-rate cap; Oman licensing disputes — 5 of 8 markets) | `Strategic/Competitive Weaknesses.md`, verified verbatim — all five markets and mechanisms match; "No Egypt-specific action is disclosed" is stated inline in Section 10, correctly scoped | PASS |
 | 6 | AdTech 3.4–3.5%-of-GMV-vs-7%-benchmark figure | Not found anywhere in Section 10 | **N/A — figure is not actually cited in the draft**, despite being named in the task brief's checklist (it appears only in Section 9 §9.6). Not a citation failure (nothing to trace), but noted — see Limitations |
 | 7 | "Regional conflict" (Q1 2026) disclosure | Not found anywhere in Section 10 | **N/A — not cited in the draft.** Its absence is arguably the *safer* choice: `Strategic Risks.md` itself cautions that attributing this event to Egypt specifically "is an inference this note flags rather than a confirmed fact," and Section 10 avoids that inference entirely rather than risk misattributing it |
-| 8 | Financial Risks — ASM-008/ASM-011 Low confidence re-read as risk input | `vault/Forecasts/Value_Driver_Tree.md` and `Assumptions_Register.md`, read directly — both rows confirmed `Status: Approved`, `Confidence: Low`, matching Section 10's characterization exactly; the reasoning given ("extrapolate Group/GCC evidence to an Egypt population explicitly excluded from the original measurement") matches `Value_Driver_Tree.md`'s own node 1b/3b logic verbatim in substance | PASS — see dedicated cross-section accuracy check below |
+| 8 | Financial Risks — ASM-008/ASM-011 Low confidence re-read as risk input | `vault/Forecasts/Value_Driver_Tree.md` and `Assumptions_Register.md`, read directly — both rows confirmed `Status: Approved`, `Confidence: Low`, matching Section 10's characterization exactly; the reasoning given ("extrapolate Group/GCC evidence to an Egypt population explicitly excluding the original measurement") matches `Value_Driver_Tree.md`'s own node 1b/3b logic verbatim in substance | PASS — see dedicated cross-section accuracy check below |
 | 9 | "≈USD53.9m break-even threshold... will not be met" / "sits closer to the base case than the upside case" / "the exact gap DEC-005's framing was designed to keep visible" | `Section_09_Financial_Plan.md` §9.4 and `DEC-005_section9-headline-scenario.md`, both read directly — the USD53.9m figure and the base/upside role framing match Section 9 exactly; DEC-005's own Rationale states its framing "does not hide the Low confidence of the upside case... forces the reader to see exactly what claim is riding on that Low-confidence number," which is an accurate characterization of what Section 10 attributes to it | PASS |
 | 10 | Cost-overrun / capital-envelope risk (ASM-012's ≈USD13.2m, no bottom-up cost model; ≈USD120mn Everyday App inside the USD175mn Board-approved total) | `Section_09_Financial_Plan.md` §9.2 and `DEC-004_2026-investment-total.md`, both read directly — matches verbatim | PASS |
 | 11 | Market Risks category (competitors, macro pressure, UAE/Kuwait/Qatar erosion pattern) — "fully detailed in Section 3 §3.3 and §3.1, referenced not re-derived" | `Section_03_Market_Analysis.md` §3.1 and §3.3, both read directly | PASS — see dedicated cross-section accuracy check below |
@@ -269,3 +269,108 @@ re-run.
   `vault/Knowledge/Topics/AI.md`
 - [[Citation_Audit_Section_09|Citation Audit — Section 9]]
 - [[Pilot_Validation_Plan]]
+
+---
+
+## Targeted re-audit — fix verification (2026-07-22, Pilot 4)
+
+**Scope note.** This is a narrow, targeted re-check of exactly the four fixes the top-level session made in
+response to the three hard failures and one non-blocking defect above — not a full re-run of the original
+16-item citation audit. Performed as a fresh, independently-invoked thread with no memory of the original
+audit thread; findings below were derived by re-reading source material directly, not by trusting the
+top-level session's description of what it changed.
+
+**Method.** Read `Section_10_Risk_Analysis.md` in full (current state), re-read this file's original
+findings above for exact wording of what was required, re-checked `Section_03_Market_Analysis.md` §3.1/§3.3
+directly (`Grep` for `1,500`, `74%`, `30%`, `Shared Services`, `ASM-004`, then read the surrounding
+paragraphs), and re-read `vault/Knowledge/Strategic/Competitive Weaknesses.md` in full, with particular
+attention to its Open Questions section.
+
+### Fix 1 — Scalability bullet citation (was: misattributed to Section 2 §2.1)
+Section 10's Technical Risks "Scalability" bullet now reads "...`ASM-004`, cited in [[Section_03_Market_Analysis|
+Section 3]] §3.1/§3.3." Independently re-verified against `Section_03_Market_Analysis.md`:
+- §3.1 ("AI adoption trend, in-sector," lines 74–76) states verbatim: "Egypt also hosts a 1,500-person
+  Global Tech and Shared Services hub delivering 74% of talabat's Group-wide shared services and developing
+  30% of its app features (same source)" — attributed to `ASM-004`/RES-004.
+- §3.3 (Strengths quadrant, line 140) restates it: "1,500-person Global Tech & Shared Services hub —
+  `ASM-004`, labeled non-primary."
+Both sub-locations genuinely contain the statistic with the `ASM-004` tag attached. A full-file `Grep` of
+Section 10 found no remaining "Section 2 §2.1" reference anywhere. **Fix verified — PASS.**
+
+### Fix 2 — Rider/3PL inline scoping label (was: zero-tolerance anti-pattern failure, no label)
+The Delivery-reliability dependency risk bullet now reads: "**This is a Group-wide figure; no
+Egypt-specific rider-sourcing breakdown is disclosed, and the corpus does not state whether Egypt's model
+differs from the GCC's**" — citing `Strategic/Competitive Weaknesses.md`'s Open Questions. Independently
+re-read `Competitive Weaknesses.md`'s Open Questions section, which states verbatim: "Whether talabat's
+rider-sourcing model (3PL/freelance share) differs materially in Egypt versus the GCC is not stated
+anywhere in the corpus." The new inline label is an accurate paraphrase of this exact sentence, not an
+invented or softened gloss — it names both the absence of an Egypt breakdown and the absence of a
+same-vs-different-from-GCC determination, matching the source's own two-part framing. The label now sits
+inline, immediately following the figure, consistent in placement and directness with how the Margin-
+compression and Regulatory-precedent bullets already handle their own Group-wide scoping (items 1 and 2 in
+the original anti-pattern check above). **Fix verified — PASS.**
+
+### Fix 3 — Model transfer risk matrix row Rationale (was: invented "newer digital-payment adoption" gloss)
+Row 2's Rationale now reads: "...Plausible given Egypt's distinct macro/behavioral profile (food inflation,
+EGP devaluation pressuring price sensitivity — §10.1, `Strategic Risks.md`), but no disclosed evidence
+either confirms or rules out whether this actually degrades AI-model performance." Checked against §10.1's
+own Model Transfer Risk bullet, which uses near-identical language ("Egypt-specific user behavior (order
+patterns, price sensitivity under EGP inflation) differs enough from the GCC training population"). The new
+Rationale text is now a direct restatement of content already present in the section itself, not an
+imported outside claim — the digital-payment-adoption fabrication is fully removed, and a targeted `Grep`
+of the current Section 10 text for "digital-payment" returned no matches. The `Strategic Risks.md` citation
+is also defensible on its own terms: that note is the source for the EGP-devaluation/FX-risk framing used
+elsewhere in §10.1 (the FX/currency risk bullet). This is exactly the fix the original audit suggested
+("replace it with a grounded characterization... citing the actual EGP-inflation/price-sensitivity language
+§10.1 already uses"). **Fix verified — PASS.**
+
+### Fix 4 — "Two High/Medium market risks" miscount (non-blocking, but re-checked for completeness)
+§10.2's "So what" now reads: "the top three cells by severity — the High/High financial risk, the
+Market-category High/Medium macro-pressure risk, and the Technical-category Medium/High model-transfer
+risk." Checked against the matrix table directly: Macro/inflation demand compression is indeed the sole
+Market-category High/Medium row, and Model transfer risk is indeed the sole Technical-category
+Medium/High row — no double-counting, no category conflation. §10.3's mitigation-ranking paragraph was
+independently re-checked and now anchors on "the single highest-severity matrix cell (the High/High
+financial risk)" when explaining why narratives 1 and 2 converge on the KPI-instrumentation mitigation —
+this is now internally consistent with the table (there is exactly one High/High cell) and with the
+narrative-to-cell traces stated earlier in §10.3 (narrative 1 traces to upside-underperformance [High/High]
+and model-transfer [Medium/High]; narrative 2 traces to upside-underperformance and capital-envelope-trim
+[Low/High]; their shared root cause is indeed the upside-underperformance risk, i.e. the single High/High
+cell). A full-file `Grep` for "two High/Medium" and "two highest-severity" found no remaining occurrences
+of the old miscounted phrasing anywhere in the document. **Fix verified — PASS.**
+
+### Consistency check against the rest of the document
+Read Section 10 in full (not just the four edited passages) to confirm none of the fixes introduced a new
+internal inconsistency. No contradictions found: the Traceability summary's row for "Organizational/
+regulatory risks" still correctly points to `Strategic/Competitive Weaknesses.md` among its sources (now
+truthfully, since that note is where the rider/3PL scoping label's citation resolves); the "Market risks"
+Traceability row is unaffected by any of the four fixes; the pre-mortem narratives (§10.3, items 1–4) were
+re-checked against their stated matrix-cell traces and remain accurate independent of the "two
+highest-severity" wording fix. No other passage in the document references the old "Section 2 §2.1"
+pointer, the old unlabeled rider figure, or the old digital-payment-adoption gloss.
+
+### Result
+
+**PASS.** All four fixes are verified as genuinely resolving the findings they were meant to address, on
+independent re-reading of the underlying source files, not merely on the top-level session's description of
+its own edits:
+1. The Scalability bullet's citation is now accurate — the statistic genuinely lives in Section 3 §3.1 and
+   is restated in §3.3.
+2. The rider/3PL bullet now carries an inline scoping label that accurately paraphrases `Competitive
+   Weaknesses.md`'s own Open Questions wording.
+3. The Model transfer risk matrix row's Rationale no longer contains the invented digital-payment-adoption
+   claim and now traces cleanly to §10.1's own language and `Strategic Risks.md`.
+4. The "two High/Medium market risks" miscount has been corrected in both §10.2 and §10.3, and the
+   corrected wording is internally consistent with the matrix table and the pre-mortem's own narrative-to-
+   cell traces.
+
+No new citation or internal-consistency defects were introduced by these edits. Per the citation-audit
+skill's 0%-tolerance rule, since no open citation-audit failure remains, **Section 10 can proceed to Stage
+10/11.** This targeted re-audit did not re-check the other claim groups (the Section 9 cross-reference, the
+Section 2 governance citation, the FX quote, margin figures, CEO/board transition, antitrust precedent,
+etc.) — those were independently verified accurate in the original audit above and remain valid; nothing in
+this re-audit's scope touched or could have affected them.
+
+**Links (this entry):** [[Section_10_Risk_Analysis|vault/Projects/Business_Plan_Drafts/Section_10_Risk_Analysis.md]]
+(current state) · `vault/Projects/Business_Plan_Drafts/Section_03_Market_Analysis.md` §3.1/§3.3 ·
+`vault/Knowledge/Strategic/Competitive Weaknesses.md` (Open Questions)
