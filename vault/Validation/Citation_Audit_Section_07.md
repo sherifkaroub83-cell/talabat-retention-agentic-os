@@ -674,3 +674,194 @@ check), is sufficient before Section 7 can be marked citation-audit-closed and p
 - [[Section_04_Value_Proposition]] (§4.1 lines 70, 86-93; §4.3 lines 150-156) — the correctly-labeled precedent Section 7 cross-references but does not itself follow for this fact
 - [[Section_05_AI_Technology_and_Development]] §5.1 — cross-checked for the six-order-threshold and journey mechanism treatment, found consistent (no violation)
 - `vault/Knowledge/Facts/_raw/TLB-001_facts.md`, `vault/Knowledge/Facts/_raw/TLB-002_facts.md` — re-checked for the six-order-threshold and q-commerce-lever citations, both found accurate and appropriately (if minimally) scoped
+
+---
+
+# Third targeted re-audit — exhaustive sweep (2026-07-22)
+
+## Scope and method
+Two-part re-audit per the Orchestrator's brief, run specifically because three prior fix rounds have each
+found one new instance of the same anti-pattern in this section, and the brief warned against stopping at
+the first clean pass. Part 1: independently verify the fourth fix (the "Food → Grocery & Retail → talabat
+pro" journey qualifier, applied at the two locations identified by the second addendum above) against
+`vault/Knowledge/Topics/Customer Journey.md`'s actual text, not the section's paraphrase of it. Part 2: a
+deliberately harder, full-section, line-by-line sweep for the same anti-pattern class — unlabeled
+Group-level/non-Egypt-specific statistics, especially ones sitting next to or blending into Egypt-specific
+claims — across Positioning, Customer Acquisition, Partnerships, Retention, and the traceability table.
+
+Read directly for this pass: the full current text of
+`vault/Projects/Business_Plan_Drafts/Section_07_Marketing_and_Sales_Strategy.md`;
+`vault/Knowledge/Topics/Customer Journey.md` (full file, all sections, re-read directly — not taken from
+either prior addendum's quotation of it); `vault/Knowledge/Topics/Marketplace.md` (full file, including
+Overview, Open Questions, and Business Implications); `vault/Knowledge/Topics/Egypt.md` (full file,
+including Open Questions and Business Implications); and `vault/Knowledge/Facts/_raw/TLB-014_facts.md`
+(spot-check, category-leadership lines).
+
+## Part 1 — Verification of Fix 4 (the customer-journey qualifier)
+
+**Both edited locations are present and the core qualifier is accurate.** Location 1 ("Answer, stated
+first") now reads: "...**AI-driven marketing spend should concentrate on moving already-acquired Egypt
+customers along the disclosed Food → Grocery & Retail → talabat pro journey** — a Group-level narrative,
+not yet Egypt-proven, per `Topics/Customer Journey.md`'s own instruction to present it as an extrapolation
+rather than an Egypt-verified funnel — using the same personalisation/timing mechanisms..." Location 2
+(§7.2 opening) now reads: "...(`Topics/Customer Journey.md`; TLB-013, page 6) — **Group-level, not yet
+Egypt-proven**: `Topics/Customer Journey.md`'s own Business Implications state the vault does not disclose
+a formal, quantified Egypt journey/funnel model, and that any Egypt journey map is necessarily an
+extrapolation from Group-wide patterns, not an Egypt-verified funnel — a qualifier this section carries
+throughout rather than stating only once." Both insertions are present exactly where the second addendum
+specified, and the "central organizing claim" is no longer stated as unqualified fact at either point.
+
+**One minor, non-blocking precision gap found on direct comparison with the source note's actual text**
+(`vault/Knowledge/Topics/Customer Journey.md`, read in full for this pass, not taken from either prior
+addendum's paraphrase):
+
+- The note's **Business Implications** section (line 40) states, verbatim: "Because Egypt-specific
+  journey-stage data doesn't yet exist, the capstone's Egypt journey map will necessarily be an
+  extrapolation from group-wide patterns and should be presented as such rather than as an Egypt-verified
+  funnel." This supports the "extrapolation from Group-wide patterns, not an Egypt-verified funnel" half
+  of Location 2's qualifier precisely.
+- However, Location 2 also attributes to "Business Implications" the clause "the vault does not disclose a
+  formal, quantified Egypt journey/funnel model." That specific wording is not from Business Implications —
+  it is a paraphrase of the note's **Open Questions** section (line 33): "The vault does not disclose a
+  formal, quantified journey/funnel model (e.g., what percentage of food-only customers progress to
+  multi-vertical, or from multi-vertical to talabat pro, within what time frame)" — which, notably, does
+  **not** say "Egypt" in that clause at all; it is a general statement that no quantified funnel model of
+  any kind (Group or Egypt) exists in the corpus. The Egypt-specific version of the gap is a separate,
+  adjacent Open Questions bullet (line 34): "No Egypt-specific journey or conversion data exists in the
+  corpus; talabat pro's Egypt launch (February 2025) is too recent for the corpus's cohort-based journey
+  metrics to have matured there."
+- Net effect: Location 2 blends two different bullets from two different subsections of the same,
+  correctly-identified note (Open Questions lines 33–34, and Business Implications line 40) into one
+  sentence attributed solely to "Business Implications," and in doing so inserts the word "Egypt" into a
+  clause (the "formal, quantified... funnel model" clause) that does not carry that qualifier in the
+  original. The resulting combined claim is still **substantively true** — the note as a whole does
+  establish that no formal, quantified, Egypt-specific journey/funnel model exists — but the specific
+  attribution to "Business Implications" and the specific wording are not a verbatim or fully precise
+  match to what that subsection says.
+
+This is the same class of non-blocking citation-precision gap already logged twice earlier in this same
+audit file (Limitation #2, the inherited PostPaid page-citation gap; and the Location-2 misattribution just
+described) — a correct document, an accurate overall claim, but an imprecise pointer to which internal
+subsection of that document supports which specific clause. It does not misstate what the vault contains,
+does not misattribute the claim to the wrong source document, and does not understate or overstate Egypt's
+evidentiary basis — the substantive Group-level/not-Egypt-proven labeling this fix exists to add is present
+and correct in both locations. **Recommended fix (non-blocking, optional tightening):** split the citation
+so the "no formal, quantified... funnel model" clause is attributed to `Topics/Customer Journey.md`'s Open
+Questions (where it actually lives) and only the "extrapolation... should be presented as such" clause is
+attributed to Business Implications — but this is not required to close the citation audit, for the reasons
+below.
+
+**Fix 4 verdict: correctly and substantively applied at both locations, with one minor non-blocking
+citation-precision note (subsection misattribution within the correct source document), consistent with
+this audit's existing treatment of non-blocking limitations.**
+
+## Part 2 — Exhaustive full-section sweep, deliberately extended beyond the prior three passes
+
+Every numeric or named-fact claim in the current section text was re-checked line by line against whether
+it is (a) genuinely Egypt-specific, (b) Group-level but explicitly labeled as such wherever it does
+argumentative work, or (c) Group-level and unlabeled. Two claims not previously scrutinized in this depth
+were examined in detail; both were cleared, with reasoning recorded below rather than silently passed over.
+
+**Candidate 1 — "talabat already holds category leadership in Egypt with a large, broad-reach marketplace
+(`Topics/Marketplace.md`)" (Answer paragraph, opening sentence).** Checked directly against
+`Topics/Marketplace.md` and `Topics/Egypt.md`:
+- "Category leadership in Egypt" is genuinely Egypt-specific, not a Group-aggregate mislabeled as Egypt's.
+  `Topics/Marketplace.md`'s Overview states talabat holds "the #1 category position in every one" of the 8
+  MENA countries (TLB-014, page 4) — a claim that, unlike a single pooled statistic (e.g. "20-25% Group-wide
+  penetration"), decomposes into a per-country assertion that necessarily includes Egypt. `Topics/Egypt.md`
+  independently confirms Egypt-specific category-share figures exist in the corpus (10x+ per TLB-001/
+  TLB-002; a differently-measured 1x+ rising to 4x+ per TLB-014) — Egypt.md flags an unresolved
+  reconciliation question between these two figures (a pre-existing, separately-tracked data-quality note,
+  not a geographic-scope violation), but does not dispute that Egypt-specific leadership is disclosed.
+  Section 7 does not cite either specific figure or number here — it states the qualitative fact of
+  category leadership, which is supported at the Egypt level, not merely inferred from a Group aggregate.
+  **No violation.**
+- "With a large, broad-reach marketplace" is a closer call, since the only quantified marketplace-breadth
+  figures in the corpus (93,000+ Active Partners, ~20-25%/~1-2% penetration) are explicitly Group-wide, and
+  `Topics/Marketplace.md`'s own Open Questions state "the vault does not disclose an Egypt-specific Partner
+  or restaurant count broken out from the platform-wide totals." However, this phrase is not doing the same
+  kind of load-bearing argumentative work the four confirmed violations did — it is not a standalone
+  statistic substituting for an Egypt figure, and `Topics/Marketplace.md`'s own **Business Implications**
+  section explicitly authorizes exactly this framing: "Any Egypt retention strategy inherits the
+  marketplace's underlying scale advantage (category leadership, broad Partner selection) as a starting
+  asset" — i.e., the cited note itself instructs that this Group-level structural advantage should be
+  treated as inherited by the Egypt strategy, without demanding the same "extrapolation, not proven"
+  caveat that `Topics/Customer Journey.md`'s Business Implications explicitly demanded for the journey
+  claim. This is a materially different instruction from the source note than the one governing the four
+  confirmed violations, so treating it identically would not be applying the same standard — it would be
+  over-applying a caveat the cited note itself does not call for. **Considered and cleared, not a
+  violation** — flagged here explicitly, per this audit's practice of documenting close calls rather than
+  silently passing over them, rather than left unexamined.
+
+**Candidate 2 — the Channels paragraph's "Partner-side reach (93,000+ Active Partners platform-wide...)
+that itself functions as a distribution channel (Partner listings drive organic discovery)."** The
+"platform-wide" qualifier is present and correctly placed directly on the statistic itself (not deferred or
+omitted), and the sentence does not assert that this distribution-channel effect has been measured or
+proven specifically for Egypt — it describes a general structural mechanism of three-sided marketplaces.
+Consistent with the second addendum's prior finding on the adjacent "store density"/"affordability" sentence
+in the same paragraph (considered and cleared there for the same reason: no Egypt-specific effect is
+asserted). **No violation.**
+
+**All other claims re-checked and re-confirmed clean, consistent with the three prior passes:** the 80/20
+finding, the corrected 20-25% foodservice-penetration sentence, the corrected "low single-digit"
+grocery/retail sentence, the ~6-order threshold, the 3.8-vs-13.0 and 73%-of-GMV journey-stage statistics
+(both already explicitly labeled "neither is Egypt-specific"), the synthetic funnel table, the TLB-020 p.16
+GCC-playbook quote, the CIB co-branded card facts (genuinely Egypt-specific, correctly labeled), the
+Partner-funded-savings figures (labeled "Group-wide" with an explicit "no Egypt-specific... figure is
+disclosed" caveat), the talabat Rewards/PostPaid uplift figures (labeled "Group-wide"/"not Egypt-specific"
+with the causality caveat preserved), and the Regular-updates paragraph's "Group-disclosed,
+not-yet-Egypt-attributed" R&D items. The traceability summary table was re-read row by row and contains no
+statistic of its own (it only points to source notes/sections), so it carries no independent anti-pattern
+risk.
+
+**No further unlabeled Group-level-statistic-doing-Egypt-specific-argumentative-work instance was found
+anywhere in the current section text.** This sweep specifically re-examined the two subsections least
+scrutinized by the three prior passes (the opening "Answer, stated first" paragraph's full text beyond the
+journey clause already fixed, and the Channels paragraph) and found both clean on independent, documented
+reasoning rather than a cursory pass.
+
+## Overall verdict for Section 7
+
+**PASS.**
+
+Part 1: Fix 4 (the customer-journey Group-level/not-yet-Egypt-proven qualifier) is verified correctly and
+substantively applied at both locations identified by the second addendum. One minor, non-blocking
+citation-precision note is recorded — Location 2's citation blends two different subsections
+(Open Questions and Business Implications) of the correctly-identified source note under a single
+"Business Implications" attribution, and inserts "Egypt" into a clause that in the original Open Questions
+bullet does not carry that qualifier — but the combined claim remains substantively true and correctly
+sourced to the right document, and this is the same class of non-blocking gap (correct source, imprecise
+internal pointer) already logged and not treated as blocking elsewhere in this same audit (the inherited
+PostPaid page-citation gap, the two absence-claim traceability gaps).
+
+Part 2: the deliberately harder, full-section, line-by-line sweep — extended specifically to the two
+subsections least scrutinized by the three prior rounds — found **no fifth instance** of the Group-level/
+Egypt-unproven anti-pattern. Two close calls (the "large, broad-reach marketplace" framing and the
+"platform-wide" Partner-reach/distribution-channel sentence) were examined in detail and cleared with
+documented reasoning, not silently passed over: in both cases either the underlying fact is genuinely
+Egypt-specific (category leadership, confirmed via `Topics/Egypt.md`'s own category-share data) or the
+cited source note's own Business Implications explicitly authorizes the framing used without demanding the
+stricter "extrapolation, not proven" caveat that governed the four confirmed violations, or no
+Egypt-specific effect is actually asserted by the sentence in question.
+
+**Section 7's citation audit is now fully closed out across all four fix rounds.** All four confirmed
+instances of the Group-level-statistic-presented-as-Egypt-proven anti-pattern (the 20-25% foodservice-
+penetration figure; the "low single-digit" grocery/retail-penetration sentence; the CIB citation-accuracy
+failure, a related but distinct defect class, also fixed; and the Food → Grocery & Retail → talabat pro
+journey claim at its two points of first statement) have been independently verified as correctly and
+durably fixed, and this fourth, deliberately-exhaustive sweep found no further instance of the pattern
+anywhere in the current section text. The one remaining item on record — the non-blocking citation-
+precision note above — does not meet this project's bar for a hard failure (it does not misstate a fact,
+does not misattribute a claim to the wrong source document, and does not present a Group-level statistic as
+Egypt-proven); it is recorded for optional future tightening only, consistent with how the two other
+non-blocking limitations already on record in this file have been handled throughout.
+
+**Section 7 is ready for Stage 11 QA review.** No open citation-audit failure remains.
+
+## Links (third addendum)
+- [[Section_07_Marketing_and_Sales_Strategy|vault/Projects/Business_Plan_Drafts/Section_07_Marketing_and_Sales_Strategy.md]] — current (post-Fix-4) draft, re-read in full for this third addendum
+- `vault/Knowledge/Topics/Customer Journey.md` (Open Questions lines 33–34, Business Implications line 40, all re-read directly) — source of the Fix 4 verification and the minor subsection-attribution note
+- `vault/Knowledge/Topics/Marketplace.md` (Overview, Open Questions, Business Implications, all re-read directly) — source of the Candidate 1 ("category leadership"/"broad-reach marketplace") clearance reasoning
+- `vault/Knowledge/Topics/Egypt.md` (Open Questions, Business Implications, all re-read directly) — independently confirms Egypt-specific category-share data exists, supporting Candidate 1's clearance
+- `vault/Knowledge/Facts/_raw/TLB-014_facts.md` (category-share lines) — spot-checked in support of Candidate 1
+- [[Section_04_Value_Proposition]] §4.1/§4.3 — the labeling precedent Section 7's Fix 4 now matches
