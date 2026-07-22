@@ -31,10 +31,10 @@ states that plainly rather than inventing one.
 
 | # | KPI | Driver-tree node | Leading/Lagging | Baseline |
 |---|---|---|---|---|
-| R1 | Egypt segment revenue (USD) | Root Fact | Lagging | Exists (TLB-002 p.111; TLB-010 p.20) |
-| R2 | Egypt gross margin % | Root Fact | Lagging | Exists |
-| R3 | Egypt profit before tax | Root Fact | Lagging | Exists |
-| R4 | Delivery cost as % of Egypt revenue | Root Fact | Lagging | Exists (~22%) |
+| R1 | Egypt segment revenue (USD) | Root | Lagging | Exists (TLB-002 p.111; TLB-010 p.20) |
+| R2 | Egypt gross margin % | Root | Lagging | Exists |
+| R3 | Egypt profit before tax | Root | Lagging | Exists |
+| R4 | Delivery cost as % of Egypt revenue | Root | Lagging | Exists (~22%) |
 | K5 | Active customers in Egypt + growth rate | ASM-007 | Leading | None |
 | K6 | Orders per active customer per month (Egypt) | ASM-008 | Leading | None |
 | K7 | talabat pro adoption rate (Egypt) | ASM-008 | Leading | None |
@@ -46,7 +46,7 @@ states that plainly rather than inventing one.
 | K13 | Egypt advertising revenue, % of segment revenue | ASM-011 | Leading | None |
 | K14 | Active/paying advertisers (Egypt) | ASM-011 | Leading | None |
 | K15 | Actual Egypt AI-roadmap investment spend | ASM-012 | Lagging | None |
-| K16 | Incremental Egypt revenue from DEC-003 intervention | ASM-008+ASM-011+Root | Leading | None |
+| K16 | Incremental Egypt revenue from DEC-003 intervention (upside delta) | ASM-008+ASM-011+Root | Leading | None |
 
 This section reproduces `KPI_Tree.md`'s registered set rather than re-deriving a parallel list — a second,
 independently-invented KPI set here would violate the same cross-section-consistency discipline
@@ -71,8 +71,11 @@ independent QA has already enforced elsewhere in this plan (`QA_Review_Section_1
   ([[Section_06_Business_Model_and_Revenue_Streams|Section 6]]), not a subscription-first business — only
   one of four lines (Subscription fees, narrowly) is a true recurring fee. This section does not force an
   MRR metric onto a business model it doesn't fit; the closest genuine analog is **K13** (Egypt
-  advertising revenue as % of segment revenue) for the fastest-growing, most under-penetrated line, and
-  the Subscription-fees component of R1 for the recurring-revenue-adjacent figure.
+  advertising revenue, % of segment revenue) for the most under-penetrated relative to talabat's own
+  stated benchmark (per [[Section_06_Business_Model_and_Revenue_Streams|Section 6]] §6.2) — Subscription
+  fee & Other Income is actually the fastest-*growing* Group-level line (+44%→+47%, Section 6 §6.1), not
+  Advertising (+27%→+32%) — and the Subscription-fees component of R1 for the recurring-revenue-adjacent
+  figure.
 
 ## 13.2 Leading vs. Lagging Indicator Split
 
