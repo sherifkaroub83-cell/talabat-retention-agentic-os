@@ -39,7 +39,7 @@ TLB-001, page 10, 13, 22–23; TLB-002, page 15–16. The corpus does not name s
 AI application is a machine-learning / recommendation-ranking system, and this section does not overstate
 the corpus by inventing model-architecture detail it does not disclose.
 
-**Data scale:** talabat processes over 235 terabytes of data daily as of FY2025 (TLB-002, page 16), up
+**Data scale:** talabat processes over 235 terabytes of data daily as of FY2025 (TLB-002, page 15), up
 from ~13 terabytes/day as of mid-2024 (TLB-015) — an order-of-magnitude growth in the underlying data
 pipeline in roughly a year, the clearest disclosed evidence of the platform's technical scaling
 trajectory.

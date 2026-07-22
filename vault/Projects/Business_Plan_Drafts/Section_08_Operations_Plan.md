@@ -32,7 +32,7 @@ filling them silently.
 
 Cross-referencing rather than re-deriving [[Section_05_AI_Technology_and_Development|Section 5]] §5.4: the
 corpus does not name a specific cloud platform (no disclosed reference to AWS, Azure, or GCP) — only the
-scale of data processed (235TB/day, TLB-002, page 16) and the shared Delivery Hero technology stack it
+scale of data processed (235TB/day, TLB-002, page 15) and the shared Delivery Hero technology stack it
 runs on. Egypt-specific infrastructure already in place, directly relevant to this plan's redeployment
 premise: the largest quick-commerce distribution centre in MENA (Cairo–Suez Road, ~27,000 sqm, running
 in-house AI demand forecasting, `ASM-004`) and a 1,500-person Global Tech & Shared Services hub delivering
@@ -91,7 +91,7 @@ talabat's Annual Report 2025 discloses a Group-wide data-protection and cybersec
 Egypt-specific one: a specialised information security team overseeing "incident response, application
 security and compliance with data protection regulations" (TLB-002, page 27); a stated commitment to
 "international standards for privacy and security in our FinTech initiatives and e-commerce operations"
-(TLB-002, page 24); and an explicitly named compliance risk — "non-compliance with data protection laws"
+(TLB-002, page 25); and an explicitly named compliance risk — "non-compliance with data protection laws"
 — citing the **Data Protection Regulation 2021 in the ADGM** (Abu Dhabi Global Market, where Talabat
 Holding PLC is incorporated) as the specific named example, alongside a stated practice of maintaining
 "regional data protection professionals who oversee adherence to jurisdiction-specific legal requirements"
