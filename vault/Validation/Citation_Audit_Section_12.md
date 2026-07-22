@@ -49,7 +49,7 @@ correction precedent (see Hard Failure 1).
 | 9 | Explicit exclusion of churn-prediction — `Future AI Opportunities.md`'s Strategic Implications really does propose an Egypt-specific AI-driven churn-prediction/early-tenure-retention capability as its own recommendation | `Strategic/Future AI Opportunities.md`, Strategic Implications, verbatim: "This note is the direct evidentiary bridge into the business plan's core recommendation: propose an Egypt-specific AI-driven churn-prediction and early-tenure retention capability..." | PASS — accurately characterized |
 | 10 | Explicit exclusion of churn-prediction — `DEC-003` confirms this framing is the rejected "Option 1," Option 2 (roadmap extension) is what was chosen | `DEC-003_section2-governing-hypothesis.md`: Option 1 = "Churn-prediction and early-tenure intervention... (Source: `Knowledge/Strategic/Future AI Opportunities.md`.)"; Decision = "**Option 2** — extend talabat's already-stated Group AI roadmap into Egypt," user-confirmed, approved | PASS — accurately characterized |
 | 11 | Explicit exclusion of churn-prediction — Section 3's GEMs bullet required this same kind of correction previously, precedent for naming-not-silently-omitting | `Section_03_Market_Analysis.md`'s current §3.3 GEMs bullet carries an inline correction note: "(Corrected 2026-07-22, Pilot 2: the original wording proposed a 'customer-level, AI-driven churn/win-back product,' which is DEC-003's unchosen Option 1 — flagged... by Section 2's independent QA review and corrected here...)"; `QA_Review_Section_02.md` confirms this was **a Section 3 defect only** ("Section 2's own use of the same GEMs analogy... stays correctly inside Option 2's boundary... this is a Section 3 problem, not a Section 2 defect") | PASS on the specific H3-bullet claim (which cites only Section 3) — **but see Hard Failure 1**, where this same precedent is misstated elsewhere in Section 12 to also implicate Section 2 |
-| 12 | Provenance note — "the same correction `Section_02_Business_Description.md`/`Section_03_Market_Analysis.md`'s GEMs bullet already required in Pilot 2" | `QA_Review_Section_02.md`, Cross-section consistency check: explicitly and repeatedly states the GEMs-bullet defect was Section 3's alone and that Section 2 was clean ("Section 2 is internally consistent with itself and with DEC-003 throughout — this is a Section 3 problem, not a Section 2 defect") | **FAIL — Hard Failure 1, see below** |
+| 12 | Provenance note — "the same correction `Section_02_Business_Description.md`/`Section_03_Market_Analysis.md`'s GEMs bullet already required in Pilot 2" | `QA_Review_Section_02.md`, Cross-section consistency check: explicitly and repeatedly states the GEMs-bullet defect was Section 3's alone and that Section 2 was clean ("Section 2 is internally consistent with itself and with DEC-003 throughout... this is a Section 3 problem, not a Section 2 defect") | **FAIL — Hard Failure 1, see below** |
 
 ## Hard Failures (must be fixed before Section 12 proceeds to Stage 10)
 
@@ -313,3 +313,20 @@ summary table's "H1 organizational prerequisite (AI-capability ownership)" row t
 `Section_08_Operations_Plan.md` (as the non-originating cross-reference), consistent with the already-fixed
 body text. No other re-drafting is required — Fixes 1 and 3 need no further action, and the full-section
 sweep found no other instances of this defect class.
+
+---
+
+## Final closeout check (2026-07-22)
+
+Re-read the H1 milestone body text (lines 54–60) and the Traceability summary table's "H1 organizational
+prerequisite (AI-capability ownership)" row (line 128) directly in the current draft. The row now reads:
+"`Section_10_Risk_Analysis.md` §10.1/§10.4 (originating finding and the 'before Section 12' recommendation),
+`Section_08_Operations_Plan.md` (non-originating cross-reference to the same finding)." This matches the
+precise fix requested in the targeted re-audit above and is fully consistent with the body text three
+sections earlier, which likewise credits Section 10 §10.4 as the origin of the "before Section 12's
+implementation roadmap is drafted" phrase and Section 8 as a non-originating cross-reference that "credits
+Section 10 as the source of the underlying finding, not the other way round." No remaining discrepancy
+between prose and table.
+
+**Verdict: PASS.** All three original hard failures are now fully fixed and verified. Section 12's citation
+audit is now fully closed out and the section is ready for Stage 11 QA review.
