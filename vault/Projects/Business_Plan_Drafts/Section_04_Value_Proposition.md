@@ -46,11 +46,22 @@ section does not restate DEC-003, it quantifies the value that hypothesis create
 
 ## 4.2 Value Creation Mechanisms — Each Quantified
 
-Per [[Value_Driver_Tree|the Value Driver Tree]]'s three intervention-driven branches, each mechanism
-below traces to a named driver-tree node and a named KPI — not a mechanism invented fresh for this
-section.
+Per [[Value_Driver_Tree|the Value Driver Tree]]'s three intervention-driven branches, the three
+mechanisms below are MECE at the level of distinct **causal levers**: Mechanism 1 acts on what a
+customer sees (recommendation quality), Mechanism 2 acts on when an offer reaches them (cross-sell/
+loyalty timing), and Mechanism 3 acts on the Partner-facing advertising layer — no fourth lever exists
+in DEC-003's confirmed scope, and no two of these three levers describe the same causal action. **This
+MECE claim is explicit about one precision point, not silent on it:** Mechanisms 1 and 2 are not yet
+financially distinct in `Value_Driver_Tree.md` — both trace to the same combined Assumption node
+(`ASM-008`), because the corpus's evidence for them (the AI/personalisation EBITDA trail and talabat
+pro's uplift figures) is not separable into two independent financial effects. The two mechanisms are
+MECE as causal levers, and separately trackable at the KPI level (K6 for Mechanism 1, K7/K8 for
+Mechanism 2 — confirmed distinct in `KPI_Tree.md`), but not yet separable in the driver-tree's own
+financial estimate. A future Value Driver Tree revision that splits `ASM-008` into two sub-nodes, once
+Egypt-specific data exists to support the split, would resolve this precisely — flagged here as an open
+item, not silently smoothed over.
 
-### Mechanism 1 — Richer recommendation formats (efficiency + insight)
+### Mechanism 1 — Richer recommendation formats (revenue lift)
 
 **What it is:** extending talabat's already-shipped cuisine-to-item-level recommendation ranking
 upgrade (TLB-002, page 15) and the stated "new form factors" roadmap item (TLB-015, page 89) into
@@ -89,7 +100,18 @@ non-subscribers, rising to +20pp for multi-vertical subscribers (TLB-019, page 1
   the delta between the base case (no intervention credit) and the upside case is *this* mechanism's
   projected effect, not a generic AI uplift.
 
-### Mechanism 3 — Deepened adtech-embedded personalisation (revenue lift + insight)
+**Cost savings (labeled directional, not separately quantified for Egypt — no Egypt-specific CARC
+figure is disclosed, per `Strategic/Cost Structure.md`):** the same ML-timed offer-surfacing mechanism
+is the vehicle for [[Section_09_Financial_Plan|Section 9]] §9.2's cost-efficiency argument — AI-targeted,
+personalised incentives replacing blanket vouchering within talabat's Customer Acquisition and
+Retention Costs (CARC), which rose Group-wide from 1.5% of GMV (2023) to 1.6% (2025) with composition
+shifting toward vouchering (`Strategic/Cost Structure.md`, TLB-001 p.28, TLB-002 p.21). This mechanism's
+value is not "spend more on retention" — it is "spend the existing CARC envelope more precisely,"
+because the same offer-timing capability that drives Mechanism 2's revenue lift is what makes targeted
+incentives a substitute for, not an addition to, blanket vouchering. No Egypt-specific cost-savings
+dollar figure is asserted, since no Egypt CARC baseline exists to measure a reduction against.
+
+### Mechanism 3 — Deepened adtech-embedded personalisation (revenue lift)
 
 **What it is:** extending the Group's stated 2026 ambition to deepen AI "particularly within our
 rapidly growing adtech business" (TLB-002, page 10) to Egypt's Partner base, echoing GEMs — talabat's
@@ -110,9 +132,13 @@ implying real headroom even before considering Egypt's own unmeasured baseline.
   line than Mechanisms 1–2, correctly treated in [[Section_09_Financial_Plan|Section 9]] §9.6 as the
   slowest-maturing of the three monetization channels.
 
-### Risk reduction (the fourth "so what" the template asks value creation to cover)
+### Risk reduction (the fifth value-creation category the template names, explicitly not quantified)
 
-None of the three mechanisms above is a risk-reduction play on its own — but their *combined effect*,
+**Labeled deliberately unquantified, not omitted:** no corpus figure exists to attach a specific
+risk-reduction dollar or percentage value to, so this category is stated qualitatively rather than
+forced into a fabricated number — consistent with this plan's "quantify or delete" discipline read the
+honest way (delete the number, not the category, when no defensible number exists). None of the three
+mechanisms above is a risk-reduction play on its own — but their *combined effect*,
 successfully deployed, is this plan's answer to the risk [[Section_10_Risk_Analysis|Section 10]] scores
 as the single highest-severity item in the entire risk register: the upside case underperforming the
 base case (High probability, High impact, `ASM-008`/`ASM-011`). Value creation and risk reduction are
@@ -143,7 +169,11 @@ This section's contribution is naming *which* value mechanisms this ROI depends 
 above), not recomputing the ROI itself — the number lives in Section 9, the mechanism-to-number linkage
 lives here, and [[KPI_Tree|Section 13's KPI Tree]] is what will make the linkage measurable once Egypt
 data exists (all three mechanisms' KPIs are tagged newly-instrumented, per `KPI_Tree.md`'s own honest
-baseline-exists/newly-instrumented split).
+baseline-exists/newly-instrumented split). **`KPI_Tree.md`'s K16** — "Incremental Egypt revenue
+attributable to the DEC-003 AI-roadmap-extension intervention (upside-case revenue delta vs. base-case
+revenue)" — is the KPI built specifically to make this ROI paragraph's concept measurable once Egypt
+data exists: it is a named composite of `ASM-008` + `ASM-011` + the Root Fact node, i.e. the same three
+mechanisms this section describes, expressed as a single trackable metric.
 
 ---
 
@@ -154,8 +184,9 @@ baseline-exists/newly-instrumented split).
 | USP (redeployment, not invention) | [[DEC-003_section2-governing-hypothesis]] / [[Section_02_Business_Description|Section 2]] | Inherited, not restated |
 | Mechanism 1 (recommendation formats) | `ASM-008` / `KPI_Tree.md` K6; TLB-001 p.23, TLB-002 p.15 | Direct citation |
 | Mechanism 2 (cross-sell timing) | `ASM-008` / `KPI_Tree.md` K7, K8; `Strategic/Customer Retention Drivers.md` | Direct citation, Group-level labeled |
+| Mechanism 2's cost-savings sub-point (CARC efficiency) | [[Section_09_Financial_Plan|Section 9]] §9.2; `Strategic/Cost Structure.md`, TLB-001 p.28, TLB-002 p.21 | Direct citation, labeled directional (no Egypt CARC baseline) |
 | Mechanism 3 (adtech personalisation) | `ASM-011` / `KPI_Tree.md` K13, K14; TLB-002 p.10/p.20 | Direct citation |
-| ROI calculation | [[Section_09_Financial_Plan|Section 9]] §9.4 — referenced, not re-derived | No new arithmetic introduced |
+| ROI calculation | [[Section_09_Financial_Plan|Section 9]] §9.4 — referenced, not re-derived; `KPI_Tree.md` K16 | No new arithmetic introduced |
 | Risk-reduction linkage | [[Section_10_Risk_Analysis|Section 10]] §10.2's High/High cell | Direct citation |
 
 ## Links
