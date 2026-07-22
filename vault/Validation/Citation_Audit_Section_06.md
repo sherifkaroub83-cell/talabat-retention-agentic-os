@@ -229,3 +229,160 @@ re-run.
 - [[Citation_Audit_Section_05|Citation Audit — Section 5]] — precedent for the "number attributed to the
   wrong source document when content is restructured/merged" defect class, and for treating inherited
   Knowledge-layer citation imprecisions as non-blocking limitations rather than hard failures
+
+---
+
+# Targeted re-audit — fix verification (2026-07-22)
+
+## Scope
+Independent re-verification of the two hard-failure fixes claimed applied to
+`vault/Projects/Business_Plan_Drafts/Section_06_Business_Model_and_Revenue_Streams.md` since the FAIL
+report above, plus a sanity sweep for any new uncited/overclaiming defect introduced by the edits. Read
+fresh (no reliance on the fix description's own framing): the current section file in full,
+`vault/Knowledge/Facts/Revenue.md` in full (TLB-002 and TLB-008 entries specifically), the full
+`vault/Decisions/Assumptions_Register.md` (ASM-004 row), `vault/Research/Notes/RES-004_egypt-official-
+newsroom-operational-datapoints.md` in full, `vault/Knowledge/Entities/Countries.md` (Egypt reporting-
+treatment section), and `vault/Projects/Business_Plan_Drafts/Section_03_Market_Analysis.md`'s
+competitor table (to re-confirm the "same labeling discipline Section 3 already uses" claim the fix
+makes about itself). A `Grep` sweep was run across the current section file for
+`does not disclose|No document|no document|not disclosed|only as labeled` to independently surface any
+remaining or new absence-style claims, rather than trusting the fix's own description of what changed.
+
+## Fix #1 — Egypt segment-revenue citation split (§6.1)
+
+**Verified correct.** The section now reads: "Egypt's only disclosed figures are total segment revenue
+(USD 509.9mn FY2025, audited, TLB-002, page 111; TLB-008, page 61; USD 145.3mn Q1 2026, ~81% YoY growth,
+TLB-010, page 20; `Topics/Segment Reporting.md`)."
+
+Independently re-checked against `Facts/Revenue.md`:
+- **TLB-002, page 111** literally states: "Revenue by country (audited, since-inception period): ...
+  Egypt USD 509,936,177..." and "Egypt segment external revenue (audited): USD 509,936,177..." — both at
+  page 111. Confirmed.
+- **TLB-008, page 61** literally states: "Segment revenue (external, since inception): GCC
+  USD 3,795,385,553; Egypt USD 509,936,177..." and "Revenue by country (material countries, since
+  inception): ... Egypt USD 509,936,177..." — both at page 61. Confirmed.
+- **TLB-010, page 20** literally states: "Egypt segment revenue Q1 2026: USD 145,343,355... Q1 2025
+  (restated): USD 80,346,126... approx. 81% y/y growth in segment revenue" — confirmed to support only
+  the Q1 2026 figure, exactly as the original audit found.
+
+The fix now matches each number to a source page that actually contains it. This closes hard failure #2
+from the original report. **PASS.**
+
+**One pre-existing, non-blocking observation surfaced during re-verification (not a new defect, not
+attributable to this fix):** both TLB-002 p.111 and TLB-008 p.61 describe the USD 509,936,177 figure as a
+"since-inception" cumulative audited figure (the entity's audited life runs 3 Sept 2024–31 Dec 2025 per
+TLB-002 p.78 / TLB-008 p.10), not a strict calendar-year-2025-only figure — the stub period 3 Sept–31 Dec
+2024 is technically included, and no document in the corpus separately discloses an Egypt figure for a
+"calendar FY2025 only" window. However, this "FY2025" label for this exact figure is an established,
+already-approved vault-wide convention independently observed in `Entities/Countries.md` ("Disclosed
+FY2025 Egypt figures: external revenue USD 509.9m...") and in `ASM-003` ("Bottom-up: USD 509.9m (FY2025
+Egypt segment revenue, TLB-002/TLB-008)") — it predates this fix and was already implicitly accepted by
+the original audit (Claim #12 above did not flag it). Re-litigating this labeling convention is out of
+scope for this targeted re-audit; noted here only so it isn't silently passed over, consistent with this
+project's non-blocking-limitations discipline.
+
+## Fix #2 — EGP 79/month false-absence-claim fix (§6.2)
+
+**Independently re-verified as accurate where applied — but incompletely applied.**
+
+**a) The specific fix (closing paragraph, lines ~112–118) is correct.** It now reads: "No primary
+TLB-XXX corpus document discloses Egypt-specific pricing for Egypt commission rates or Egypt AdTech CPC
+rates. One Egypt price point is available, but only as labeled External Research, not from the audited
+primary corpus: talabat pro's Egypt price is EGP 79/month, per `ASM-004` (`RES-004_egypt-official-
+newsroom-operational-datapoints`, sourced from talabat's official newsroom, explicitly outside the
+audited TLB-XXX regime — the same figure and same labeling discipline Section 3 already uses)."
+
+Checked directly against source:
+- `Assumptions_Register.md` row **ASM-004**: `status: Approved`, `Tier: External Research`, Source
+  `[[RES-004_egypt-official-newsroom-operational-datapoints]]`, Value includes "t pro EGP 79/month,"
+  Confidence Medium-High. Confirmed exactly as cited.
+- `RES-004_egypt-official-newsroom-operational-datapoints.md` Finding item 2 confirms: "talabat Egypt
+  launches 't pro' (18 Feb 2025): EGP 79/month or EGP 799/year..." — first-party talabat corporate
+  newsroom source, explicitly labeled outside the audited `TLB-XXX` regime in its own Limitations
+  section ("Not part of the vault's audited primary citation regime — must be cited separately and
+  explicitly labeled"). The section's rewrite matches this labeling discipline precisely and does not
+  overclaim — notably, it cites only "EGP 79/month" (matching `ASM-004`'s own Value field verbatim) and
+  does not additionally assert the EGP 799/year annual figure that `RES-004` also discloses but `ASM-004`
+  does not carry forward into its Value field — a conservative, not an inflated, restatement.
+- `Section_03_Market_Analysis.md`'s competitor table independently confirmed to already state "t pro:
+  EGP 79/month or EGP 799/year... Primary (TLB-XXX) + labeled secondary (RES-004)" — the "same labeling
+  discipline Section 3 already uses" claim the fix makes about itself is accurate.
+- The narrowed claim about commission and AdTech rates ("No primary TLB-XXX corpus document discloses
+  Egypt-specific pricing for Egypt commission rates or Egypt AdTech CPC rates") is re-confirmed accurate
+  — no `ASM-###` row, `RES-###` note, or Facts/Sources citation anywhere in the vault covers either.
+
+This specific instance closes the false-absence-claim defect from the original audit. Considered in
+isolation: **PASS.**
+
+**b) A second, unfixed instance of the identical false-absence claim was found elsewhere in the same
+subsection, one bullet above the fix.** The Subscription-pricing bullet (§6.2, third sentence of the
+"Subscription (tiered, recurring membership fee)" bullet) still reads, unchanged: "Pricing is value-based
+against the delivery-fee savings and discount value a frequent orderer would otherwise pay
+per-transaction — **the corpus does not disclose Egypt's specific pro price point, only that it exists
+market-by-market**."
+
+This is the exact same false claim the original audit flagged and the fix was supposed to resolve — it
+was simply never touched in this location. The `Grep` sweep for absence-style language
+(`does not disclose|No document|no document|not disclosed`) surfaced exactly three hits in the current
+file: the §6.1 "no document in the corpus breaks out Egypt's revenue by these four fee-type lines"
+(accurate, unrelated to pricing), this unfixed Subscription-bullet sentence, and the corrected §6.2
+closing paragraph. The section as it now stands **directly contradicts itself within the same
+subsection**: the Subscription bullet tells the reader Egypt's pro price point is not disclosed anywhere
+in the corpus, and two paragraphs later the closing paragraph correctly tells the reader it *is*
+disclosed, at EGP 79/month, via `ASM-004`. A reader working through §6.2 top to bottom encounters the
+false version first and the corrected version second, with no cross-reference reconciling them.
+
+This is not a new defect introduced by the edit (the sentence itself predates the fix and simply wasn't
+touched by it), but it means **the false-absence-claim hard failure from the original audit is only
+partially closed** — the specific sentence flagged in the original Claim #11 excerpt (the closing
+paragraph) is fixed, but the same underlying false claim persists, unaddressed, in a second location in
+the same section, which the fix's own change-description did not mention checking for.
+
+**Fix needed:** edit the Subscription bullet's trailing clause to remove or correct the false absence
+claim, consistent with the closing paragraph's now-accurate framing — e.g. replace "the corpus does not
+disclose Egypt's specific pro price point, only that it exists market-by-market" with something like
+"Egypt's specific pro price point is not in the audited primary corpus, but is disclosed as labeled
+External Research at EGP 79/month (`ASM-004`/`RES-004`; see below)" or simply delete the clause and let
+the closing paragraph carry the qualification once, without duplicating (and this time contradicting) it
+earlier in the same subsection.
+
+## Sanity check — no new uncited claims introduced by the edits
+
+Re-read the full section end to end against the diff implied by the two fix descriptions. No new numeric
+or named-fact claim was introduced by either edit beyond the citations already checked above (the split
+TLB-002/TLB-008 citation, and the ASM-004/RES-004 citation). No other sentence in the section was found
+altered in a way that changes its truth-value or citation target. The only outstanding issue found by
+this re-audit is the unfixed duplicate sentence in the Subscription bullet documented above — not a new
+claim, but a stale one the fix should have caught and did not.
+
+## Result of re-audit
+
+**FAIL.** One of the two original hard failures is fully and correctly fixed (Fix #1, the Egypt
+segment-revenue citation split — TLB-002 page 111 and TLB-008 page 61 both independently confirmed to
+state the USD 509,936,177 FY2025 Egypt figure; TLB-010 page 20 independently confirmed to support only
+the Q1 2026 figure). The second (Fix #2, the EGP 79/month false-absence claim) is correctly fixed **where
+applied** — the ASM-004/RES-004 citation in §6.2's closing paragraph is accurate, properly tier-labeled,
+and consistent with Section 3's own precedent — but the fix was **incomplete**: an identical false
+statement ("the corpus does not disclose Egypt's specific pro price point") remains live in the
+Subscription-pricing bullet immediately above it, now creating a direct internal self-contradiction
+within §6.2 rather than a single clean false claim. Per this skill's 0%-tolerance rule for untraceable or
+false numeric/named-fact claims, this remaining instance is itself a hard failure — the same defect class
+as the original Claim #11, merely relocated rather than resolved.
+
+**Section 6 still cannot proceed to Stage 10.** One targeted fix remains: correct or remove the
+Subscription bullet's "the corpus does not disclose Egypt's specific pro price point, only that it exists
+market-by-market" clause so it is consistent with (and ideally simply defers to, rather than duplicates)
+the now-accurate closing paragraph. No other issue was found; once this single sentence is corrected, this
+audit should be re-run to confirm before Stage 10 proceeds. The three non-blocking limitations from the
+original report (AdTech citation completeness, the 39.8%/40% precision gap, and the 136%-uplift
+sub-section pointer) remain open as previously characterized — none is a hard failure, but none should be
+silently dropped either.
+
+## Links (addendum)
+- `vault/Knowledge/Facts/Revenue.md` (TLB-002 p.111, TLB-008 p.61, TLB-010 p.20 — re-verified directly)
+- `vault/Decisions/Assumptions_Register.md` (ASM-004 row — re-verified directly)
+- `vault/Research/Notes/RES-004_egypt-official-newsroom-operational-datapoints.md` (re-verified directly)
+- `vault/Knowledge/Entities/Countries.md` (Egypt reporting-treatment section — cross-check for the
+  "since-inception vs. FY2025" observation)
+- [[Section_03_Market_Analysis]] (competitor table — re-confirmed as the labeling-discipline precedent)
+- [[Section_06_Business_Model_and_Revenue_Streams|vault/Projects/Business_Plan_Drafts/Section_06_Business_Model_and_Revenue_Streams.md]] — specifically the Subscription-pricing bullet in §6.2, still containing the unfixed clause

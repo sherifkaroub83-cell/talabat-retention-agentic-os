@@ -95,8 +95,9 @@ one uniform pricing approach:
   (free delivery above a minimum basket plus exclusive discounts), rolled out market-by-market since March
   2022, reaching Egypt in February 2025 (`Topics/Talabat Pro.md`; TLB-001, page 19; TLB-002, page 14).
   Pricing is value-based against the delivery-fee savings and discount value a frequent orderer would
-  otherwise pay per-transaction — the corpus does not disclose Egypt's specific pro price point, only that
-  it exists market-by-market.
+  otherwise pay per-transaction. Egypt's price point is EGP 79/month (`ASM-004`, official-newsroom
+  source, explicitly outside the audited TLB-XXX regime — see the closing paragraph of this subsection
+  for the full citation and labeling discipline).
 - **Principal/owned-inventory pricing (Q-commerce):** tMart, talabat's dark-store grocery arm, prices as a
   retailer (owns inventory, sets shelf prices) rather than a marketplace commission-taker, yielding a
   near-95% take rate on tMart GMV — structurally different economics from the agent-model Commission line,
