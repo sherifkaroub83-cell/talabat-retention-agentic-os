@@ -51,6 +51,22 @@ already specify, not a new workstream this section invents.
   before any customer sees a changed experience.
 - Pilot launch, with go/no-go checkpoints against the GCC benchmark on both aggregate performance and
   segment-level fairness — not a single end-of-pilot review.
+- **The single highest-priority checkpoint, carried directly from Section 10's own pre-mortem ranking:**
+  [[Section_10_Risk_Analysis|Section 10]] §10.3/§10.4 names instrumenting the newly-baseline KPIs
+  (`KPI_Tree.md`'s K5–K9, K13–K14) "as early as possible" as its single highest-priority mitigation,
+  because it is the only action that converts the upside case's Low-confidence, unproven assumption into
+  a measured one before further capital commits. H1 adopts this as its own primary go/no-go gate, not a
+  secondary one alongside the model-transfer/fairness checks above: **H1 does not exit, and H2 does not
+  begin, without an explicit go/no-go read against the base-case trajectory** — the exact checkpoint
+  Section 10 §10.4 specifies for the Financial Risk row, operationalized here rather than left as a Section
+  10 recommendation this section never implements.
+- Marketing rollout (H1 scope): no acquisition-channel activity — [[Section_07_Marketing_and_Sales_Strategy
+  |Section 7]]'s positioning explicitly deprioritizes acquisition spend, and H1's pilot is retention-
+  mechanism validation on an already-acquired customer subset, not a market-facing launch. The one
+  H1-scoped marketing action is internal: briefing the Partner-facing teams already engaged via
+  [[Section_07_Marketing_and_Sales_Strategy|Section 7]]'s CIB-card and Partner-co-funding relationships
+  that a limited pilot is running, so no Partner-facing surprise occurs when H2's rollout later touches
+  those same relationships at scale.
 - **Organizational prerequisite, not a technology one:** [[Section_08_Operations_Plan|Section 8]]'s
   "AI-capability ownership ambiguity" finding — the corpus never confirms whether Egypt AI deployment
   would be owned by a dedicated Egypt function or the shared Group Tech hub — must be resolved before H1
@@ -80,10 +96,23 @@ its go/no-go checkpoints**; this section does not commit to H2 unconditionally.
 - Standing segment-fairness review cadence, per [[Section_11_CSR_and_Responsible_AI|Section 11]] §11.3's
   proposed governance gate, scheduled explicitly at this horizon transition (not a one-time H1 check that
   goes unrevisited).
-- Marketing rollout: this section does not re-derive [[Section_07_Marketing_and_Sales_Strategy|Section
-  7]]'s positioning and channel strategy — H2 is where Section 7's retention-over-acquisition positioning
-  and its Partner/CIB-card-anchored channel mix become operational at Egypt scale, cross-referenced not
-  restated.
+- **Marketing rollout (H2 scope, sequenced not restated):** this section does not re-derive
+  [[Section_07_Marketing_and_Sales_Strategy|Section 7]]'s positioning and channel strategy, but it does
+  sequence when each piece of it activates. Order of activation: (1) internal Partner/rider communication
+  first — extending H1's limited pilot briefing to the full Partner base before customers see any change,
+  consistent with [[Section_11_CSR_and_Responsible_AI|Section 11]] §11.2's point that eroding Partner
+  trust would work against talabat's existing Egypt CSR footprint; (2) CIB co-branded card and
+  Partner-co-funded offer messaging next, since these are already-live Egypt relationships ([[Section_07_
+  Marketing_and_Sales_Strategy|Section 7]]'s Partnerships subsection) that need no new channel build; (3)
+  broader retention-messaging rollout (talabat pro/Rewards timing changes visible to customers) last,
+  once (1) and (2) are live — deliberately the slowest-to-activate piece, since it is the one most exposed
+  to the fairness/performance risk H1's checkpoints were built to catch.
+- **H2→H3 gate, not an unconditional progression:** H3 does not begin on a fixed calendar date. It begins
+  only once H2's full-cohort rollout has produced at least one full reporting cycle of Egypt-specific
+  evidence against the same KPIs (`KPI_Tree.md`'s K5–K9, K13–K14) H1's checkpoint used — i.e., H3 requires
+  proof the mechanisms work at Egypt scale, not only in a limited pilot, before extending them to a second
+  vertical. This mirrors the template's own instruction that "each horizon should generate the evidence
+  that justifies the next," applied to the H2→H3 transition with the same rigor H1→H2 already has.
 - Development timelines: the corpus discloses no SDLC, release cadence, or model-retraining schedule at
   either Group or Egypt level ([[Section_08_Operations_Plan|Section 8]]'s explicit gap statement) — this
   section does not fabricate one; H2's own milestone is establishing that cadence for the first time,
@@ -101,6 +130,11 @@ already-evidenced next option, rather than an invented one.
   orders, building on the same customer base H2 already onboarded, not a new acquisition effort
   ([[Section_07_Marketing_and_Sales_Strategy|Section 7]]'s positioning already deprioritizes new
   acquisition as the primary lever).
+- **Marketing rollout (H3 scope):** extends H2's activation order (Partner/rider communication →
+  co-funded/card-linked messaging → customer-facing retention messaging) into the Grocery & Retail
+  vertical, reusing the same sequence rather than inventing a new one — the one H3-specific addition is
+  timing the extension to when tMart-side Partners, not only Food-vertical Partners, have received the
+  same internal briefing H1/H2 gave Food-side Partners.
 - Team expansion: the corpus discloses no Egypt-specific AI/data-science headcount figure — this section
   does not invent a hiring plan the corpus cannot support; the concrete, evidenced recruitment-adjacent
   fact is the existing 1,500-person Global Tech & Shared Services hub (`ASM-004`), and H3's team-expansion
@@ -127,6 +161,8 @@ already-evidenced next option, rather than an invented one.
 | H1 pilot scope and controls | `Section_05_AI_Technology_and_Development.md` §5.2, `Section_10_Risk_Analysis.md` §10.4, `Section_11_CSR_and_Responsible_AI.md` §11.1, `ASM-012` | Cross-referenced, not re-derived |
 | H1 organizational prerequisite (AI-capability ownership) | `Section_10_Risk_Analysis.md` §10.1/§10.4 (originating finding and the "before Section 12" recommendation), `Section_08_Operations_Plan.md` (non-originating cross-reference to the same finding) | Cross-referenced, not re-derived |
 | H2 mechanisms and sequencing | `Section_04_Value_Proposition.md` §4.2 (`ASM-008`), `Section_07_Marketing_and_Sales_Strategy.md` | Cross-referenced, not re-derived |
+| Financial Risk go/no-go checkpoint (H1 primary gate, also H2->H3 gate) | `Section_10_Risk_Analysis.md` §10.3/§10.4 (pre-mortem-derived "single highest-priority mitigation"), `KPI_Tree.md` K5-K9/K13-K14 | Cross-referenced, operationalized not re-derived |
+| Marketing rollout sequencing (H1/H2/H3-scoped, building on Section 7) | `Section_07_Marketing_and_Sales_Strategy.md` (positioning/channels), `Section_11_CSR_and_Responsible_AI.md` §11.2 (Partner-trust rationale for sequencing order) | Section-12-owned sequencing logic, cross-referencing not restating the underlying content |
 | H2 development-timeline gap | `Section_08_Operations_Plan.md` (development/maintenance workflow gap) | Cross-referenced, explicit gap statement |
 | H3 cross-vertical extension | `Section_03_Market_Analysis.md` §3.4, TLB-014 p.19 | Cross-referenced, not re-derived |
 | H3 explicit exclusion of churn-prediction option | `Strategic/Future AI Opportunities.md`, `DEC-003_section2-governing-hypothesis`, `Section_03_Market_Analysis.md`'s corrected GEMs bullet | Direct citation, explicit divergence stated and reasoned |
