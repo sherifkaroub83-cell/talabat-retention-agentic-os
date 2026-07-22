@@ -283,3 +283,142 @@ to Stage 10 until all three hard failures are fixed and this audit is re-run.
 - [[Citation_Audit_Section_03|Citation Audit — Section 3]] · [[Citation_Audit_Section_04|Citation Audit — Section 4]] ·
   [[Citation_Audit_Section_10|Citation Audit — Section 10]]
 - [[Pilot_Validation_Plan]]
+
+---
+
+# Targeted re-audit — fix verification (2026-07-22)
+
+## Scope and method
+This addendum independently re-verifies the three fixes reportedly applied by direct edit to
+`vault/Projects/Business_Plan_Drafts/Section_05_AI_Technology_and_Development.md` in response to the three
+hard failures recorded above. Nothing in the section's own citation text was taken on trust — each
+underlying source was re-read directly: `vault/Knowledge/Facts/AI_Facts.md`, `vault/Knowledge/Topics/AI.md`,
+`vault/Knowledge/Topics/Profitability.md`, and `vault/Decisions/Decision_Log/DEC-004_2026-investment-total.md`
+in full, plus a fresh vault-wide `Grep` of `vault/Knowledge/` (including `_source_text/`) for
+`MCP`/"Model Context Protocol"/`agentic`/`LLM`/"large language model"/`GPT`/`Claude`/`copilot`/`ChatGPT`,
+independent of and not reusing the prior sweep's cached conclusions. The current section text was also
+read in full to sanity-check that no new uncited claims were introduced by the edits.
+
+## Fix 1 — §5.2 Option A Capability cell (EBITDA figures + superlative)
+
+**Verified accurate.** The cell now reads "...the only directly quantified AI-EBITDA trail in the corpus,
+$14mn+→$30mn+ FY24→FY25, TLB-001, page 23; TLB-002, page 15; `Topics/Profitability.md`)."
+- `Facts/AI_Facts.md`, TLB-001 section: "Proprietary personalisation and ranking algorithm estimated to
+  generate USD 14mn+ incremental EBITDA p.a. (TLB-001, page 23)" — exact match.
+- `Facts/AI_Facts.md`, TLB-002 section: "Personalisation algorithm estimated to contribute USD 30mn+
+  incremental EBITDA p.a. (2025 estimate). (TLB-002, page 15)" — exact match.
+- `Topics/Profitability.md` independently states the superlative: "the corpus's only directly quantified AI
+  financial-impact figures (USD 14mn+ to USD 30mn+ incremental EBITDA) are profitability, not revenue or
+  GMV, figures." `Topics/AI.md`'s own "Why It Matters" section states the same superlative with the same
+  citation pair ("AI is the only lever in the corpus with a directly quantified, multi-year EBITDA trail...
+  USD 14mn+ p.a. (FY2024) to USD 30mn+ p.a. (FY2025) (TLB-001, page 23; TLB-002, page 15)").
+
+The figures, the citation, and the superlative all check out against the source layer exactly as claimed.
+**Fix 1: verified, closes Claim #7.**
+
+## Fix 2 — §5.2 Option A Cost cell (DEC-004 attribution)
+
+**Verified accurate.** `DEC-004_2026-investment-total.md`, read in full, states in its Decision section:
+the ~USD120mn Everyday App component funds "talabat mart dark-store scaling, the talabat pro loyalty
+programme, and new-vertical expansion" (TLB-020, page 12, page 16) — and nowhere names "the personalisation
+algorithm, dispatch logic, and adtech targeting" as funded by that envelope. This is the exact
+misattribution the original audit flagged.
+
+The reworded cell now reads: "...this section's own inference (not a DEC-004-stated equivalence) is that
+the personalisation algorithm, dispatch logic, and adtech targeting ride on capability DEC-004's disclosed
+~USD120mn Everyday App envelope already funds — DEC-004 itself names the envelope's disclosed uses as
+talabat mart dark-store scaling, the talabat pro loyalty programme, and new-vertical expansion, not these
+three AI mechanisms by name (`DEC-004`)." Both elements the failure required are now present: (a) the
+personalisation/dispatch/adtech-funding link is explicitly flagged as this section's own inference, not
+DEC-004's stated content, and (b) DEC-004's actual disclosed uses are stated alongside it, verbatim-matching
+the Decision record. **No remaining misattribution — DEC-004 is no longer cited for a claim it doesn't make.**
+
+Minor, non-blocking style note: the sentence is grammatically rough ("...ride on capability DEC-004's
+disclosed ~USD120mn Everyday App envelope already funds" appears to be missing a connective, e.g. "capability
+*that* DEC-004's envelope already funds") — worth a copy-edit pass before this section is promoted to
+`Outputs/`, but it does not change the substance of what is being claimed or cited, and does not affect the
+citation-audit verdict. **Fix 2: verified, closes Claim #8.**
+
+## Fix 3 — §5.4 MCP/agentic/LLM absence claim
+
+**Underlying absence claim independently re-confirmed true.** A fresh `Grep` of `vault/Knowledge/`
+(Facts, Strategic, Topics, Entities, Sources, `_source_text/`) for `MCP`, "Model Context Protocol",
+`agentic`, `LLM`, "large language model", `GPT`, `Claude`, `copilot`, `ChatGPT` returns only the same two
+false positives the original audit identified — "LLM" as a Master-of-Laws law degree in two board-member
+bios (`20250404_Talabat-Annual-Report-2024-En.txt`, `Talabat-Holding-plc_International-Offering-Memorandum.txt`)
+and "ChatGPT" once, in the Offering Memorandum's risk-factors section, as an external
+competitive-discovery-channel risk to talabat's own customer acquisition, not a disclosure of talabat's own
+tooling. No hit for MCP, "Model Context Protocol," "agentic," "GPT" beyond ChatGPT, "Claude," or "copilot"
+anywhere in the Knowledge layer. The claim survives this independent re-check exactly as before.
+
+**Citation directly checked against its targets.** `Facts/AI_Facts.md` and `Topics/AI.md` were both read in
+full: neither contains any reference to MCP, agentic frameworks, LLMs, GPT, Claude, or copilot — the cited
+notes genuinely do not mention these terms, so the citation is not misrepresenting what the notes contain.
+
+**One residual, non-blocking gap, flagged rather than silently passed over.** The citation added —
+`(Facts/AI_Facts.md, Topics/AI.md — no MCP/agentic/LLM reference in either consolidated note; independently
+verified by a vault-wide grep sweep during this section's citation audit)` — is the exact wording the
+original audit itself proposed as the "Fix needed" example text for this claim, and the original hard
+failure (zero citation of any kind) is cured by it. However, on independent re-reading, this citation traces
+to notes that are silent-by-omission on MCP/agentic/LLM, not notes that affirmatively document the absence
+as a stated finding. I checked `Topics/AI.md`'s Open Questions section directly: its three items cover
+Egypt-specific model tuning, country-level EBITDA attribution, and Egypt AI headcount/R&D — none of them is
+the MCP/agentic/LLM absence. This is a materially weaker evidentiary status than the Section 3 precedent
+this same audit invoked at its own top (`Citation_Audit_Section_03.md` item #19), which passed specifically
+because the cited notes' own Open Questions sections state the absence as an explicit finding, not merely
+omit mention of it. The original audit itself flagged this exact gap and recommended, as a non-blocking,
+out-of-scope-for-Section-5 action, adding a line to `Topics/AI.md`'s Open Questions section — that
+Knowledge-layer update has **not** been made; the gap the original audit anticipated remains open. Because
+the applied fix matches the remedy the original audit explicitly prescribed as sufficient to close the hard
+failure, and because the underlying claim is independently re-verified true, this is recorded here as a
+non-blocking limitation rather than a re-opened hard failure — but it should not be treated as fully closed
+in the durable sense; a future section citing the same absence will still have to re-run a Grep sweep rather
+than point to a documented finding. **Recommended closing action (non-blocking, carried forward):** add a
+line to `Topics/AI.md`'s Open Questions section explicitly logging "no MCP/agentic-framework/LLM-based
+tooling is disclosed anywhere in talabat's own technology stack (vault-wide Grep sweep, `Citation_Audit_Section_05.md`,
+2026-07-22)," so the trace target becomes a genuine documented finding rather than a citation to two notes'
+silence plus a pointer back to this audit. **Fix 3: verified sufficient to close Claim #14 as a hard
+failure, with one residual documentation-quality limitation carried forward (non-blocking).**
+
+## New-claims sanity check
+
+Compared the current section text against the prior FAIL report's quoted cell/paragraph text line by line.
+The only changes are: (a) the citation appended to the Capability cell, (b) the reworded Cost cell
+distinguishing inference from DEC-004's stated content and stating DEC-004's actual uses, and (c) the
+citation appended to the MCP/agentic paragraph. No new numeric figures, named facts, or superlatives were
+introduced anywhere in these edits — each change either adds a citation to a pre-existing claim or narrows
+an existing claim's scope (the Cost cell). **No new uncited claims found.**
+
+One downstream consequence of the fixes is worth noting: the Traceability summary table's Build/buy/partner
+row ("Structural analysis, cited per-cell above") — flagged in the original audit's Limitation 6 as
+overstating the table's actual state — is **now accurate**, since both previously-uncited cells carry
+citations. No further edit is needed there.
+
+## Result
+
+**PASS.** All three hard failures independently re-verified as cured against the underlying source layer,
+not merely against the section's own citation text:
+1. The `$14mn+→$30mn+` EBITDA-trail figures and the "only directly quantified AI-EBITDA trail" superlative
+   are now cited, and both are independently confirmed accurate against `Facts/AI_Facts.md` (TLB-001 p.23,
+   TLB-002 p.15) and `Topics/Profitability.md`.
+2. The Cost cell's DEC-004 attribution no longer asserts as settled fact something DEC-004's own Decision
+   text does not state; it is explicitly flagged as this section's own inference, and DEC-004's actual
+   disclosed uses (tMart dark-store scaling, talabat pro, new-vertical expansion) are stated alongside it,
+   independently verified verbatim against `DEC-004_2026-investment-total.md`.
+3. The MCP/agentic/LLM absence claim now carries a citation, matching exactly the remedy the original audit
+   prescribed; the underlying absence is independently re-confirmed true by a fresh vault-wide Grep sweep
+   run for this re-audit. One non-blocking documentation-quality gap remains (the cited notes are silent on
+   the topic rather than affirmatively documenting the absence, unlike the Section 3 precedent this audit
+   invoked) — flagged above and carried forward as a recommended Knowledge-layer housekeeping action, not a
+   re-opened hard failure, since the applied fix satisfies the standard the original audit itself set as
+   sufficient.
+
+No new uncited claims were introduced by the edits. Section 5 has no open hard citation-audit failures as of
+this re-audit and may proceed to Stage 10, subject to the standing non-blocking limitations already recorded
+in the original FAIL report above (unchanged by this re-audit) and the one residual item noted under Fix 3.
+
+## Links (addendum)
+- [[Section_05_AI_Technology_and_Development|vault/Projects/Business_Plan_Drafts/Section_05_AI_Technology_and_Development.md]] — re-read in full for this addendum
+- [[DEC-004_2026-investment-total]] — re-read in full to verify Fix 2
+- `vault/Knowledge/Facts/AI_Facts.md` · `vault/Knowledge/Topics/AI.md` · `vault/Knowledge/Topics/Profitability.md` — re-read in full to verify Fixes 1 and 3
+- [[Citation_Audit_Section_03|Citation Audit — Section 3]] — precedent standard for absence-claim citations (item #19), referenced in the Fix 3 residual-gap discussion
