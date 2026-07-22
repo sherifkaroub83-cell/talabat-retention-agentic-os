@@ -26,7 +26,8 @@ personalisation/timing mechanisms [[Section_04_Value_Proposition|
 Section 4]] and [[Section_05_AI_Technology_and_Development|Section 5]] describe, rather than on broad
 new-customer discount acquisition. Positioning explicitly deprioritizes price-only acquisition
 competition against Egypt's local low-cost specialists in favor of retention-of-existing-base economics,
-which Section 4's 80/20 finding shows is where the value already concentrates.
+which [[Section_03_Market_Analysis|Section 3]]'s 80/20 finding shows is where the value already
+concentrates.
 
 ---
 
@@ -47,8 +48,8 @@ building an equivalent capability from zero (`DEC-003`).
   loyalty/CVP investment "rather than matching competitor discounts/vouchers" (TLB-020, page 16) — this
   plan extends that playbook to Egypt rather than proposing talabat compete on blanket discounting, a
   fight Section 3 already flags as a threat, not an opportunity, for talabat's margin structure.
-- **Not new-customer mass acquisition as the primary lever.** [[Section_04_Value_Proposition|Section
-  4]]'s 80/20 finding — a Group-level ~25% of MAUs (talabat pro subscribers/multi-vertical customers)
+- **Not new-customer mass acquisition as the primary lever.** [[Section_03_Market_Analysis|Section
+  3]] §3.4's 80/20 finding — a Group-level ~25% of MAUs (talabat pro subscribers/multi-vertical customers)
   already accounts for roughly half of platform GMV (TLB-019, page 7; TLB-014, page 14; TLB-020, page 8)
   — means the highest-ROI marketing spend is deepening engagement with customers talabat has already
   acquired, not spending to acquire net-new ones. The ~20-25% foodservice penetration figure this section
@@ -103,7 +104,7 @@ the ~25%-of-MAU/~50%-of-GMV subscriber concentration) and interpolating plausibl
 
 | Stage | Illustrative conversion (synthetic) | Anchor, if any |
 |---|---|---|
-| App install / registration → first order | *not modeled — outside this plan's scope (acquisition, not retention)* | — |
+| App install / registration → first order | *deliberately not modeled — this is the acquisition stage the Positioning subsection above explicitly deprioritizes as this plan's primary lever; a number here would misstate this plan's own scope, not fill a gap* | — |
 | First order → sixth order (personalisation threshold reached) | **Illustrative: ~35-45%** of new Egypt customers reach this threshold within a plausible early window | Anchored to the real ~6-order threshold (TLB-001, page 22-23); the 35-45% figure itself is invented, not disclosed |
 | Sixth order → multi-vertical adoption (Food + Grocery & Retail) | **Illustrative: ~20-30%** | Directionally consistent with Group multi-vertical GMV share (73%, TLB-019) but not derived from it arithmetically — invented |
 | Multi-vertical adoption → talabat pro subscription | **Illustrative: ~30-40%** | Directionally consistent with the ~25%-of-MAU subscriber base (TLB-019/TLB-014/TLB-020) but not derived arithmetically — invented |
