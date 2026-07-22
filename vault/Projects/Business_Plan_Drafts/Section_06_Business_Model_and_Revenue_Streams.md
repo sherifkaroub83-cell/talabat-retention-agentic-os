@@ -1,7 +1,7 @@
 ---
 section: 6
 title: Business Model and Revenue Streams
-status: drafted — pending citation verification and QA (pipeline stage 9/11)
+status: Done — citation audit PASS (two fix cycles, independently re-verified), QA review PASS (one fix cycle, independently re-verified)
 pipeline_run: 2026-07-22
 ---
 

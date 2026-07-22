@@ -471,3 +471,158 @@ this citation-audit re-check).
 - [[Section_06_Business_Model_and_Revenue_Streams|vault/Projects/Business_Plan_Drafts/Section_06_Business_Model_and_Revenue_Streams.md]] — §6.2, both the Subscription bullet and the closing paragraph, re-read in full and confirmed consistent
 - `vault/Decisions/Assumptions_Register.md` (ASM-004 row) and `vault/Research/Notes/RES-004_egypt-official-newsroom-operational-datapoints.md` — underlying sourcing, verified in the first re-audit pass and not re-litigated here
 - [[Section_03_Market_Analysis]] — the labeling-discipline precedent both §6.2 passages reference
+
+---
+
+# Post-QA-fix citation check (2026-07-22)
+
+## Scope
+
+Targeted, independent citation verification (not a full re-audit) of two new pieces of content added to
+`vault/Projects/Business_Plan_Drafts/Section_06_Business_Model_and_Revenue_Streams.md` to close the two
+Stage 11 QA findings recorded in `vault/Validation/QA_Review_Section_06.md`: (1) the new "Tracing each
+stream to the Value Driver Tree" table and paragraph in §6.1, and (2) the new "What it costs, not only
+what it earns" paragraph in §6.3. Both were checked directly against their trace targets, not accepted on
+the section's own framing. Read fresh, in full: the current section file, `vault/Forecasts/
+Value_Driver_Tree.md` (in full — every branch, node ID, and node description), `vault/Forecasts/
+KPI_Tree.md` (in full, specifically the Root-node table and KPI R4's row), `vault/Knowledge/Strategic/
+Cost Structure.md` (in full), `vault/Knowledge/Facts/Revenue.md` and `vault/Knowledge/Facts/_raw/
+TLB-002_facts.md`/`TLB-008_facts.md` (for the raw TLB-002 p.111 / TLB-008 p.61 delivery-cost figures), and
+`vault/Projects/Business_Plan_Drafts/Section_09_Financial_Plan.md` (full heading structure and the §9.2
+body text specifically). `Grep` sweeps were run for `113.13`/`113,13`/`Delivery cost`/`delivery cost`
+across `vault/Knowledge/Facts/` and `vault/Knowledge/Strategic/Cost Structure.md`, and for the §9.2/§9.3
+heading boundaries in Section 9, to independently confirm page attribution and cross-reference placement
+rather than trusting the new prose's own citation text.
+
+## Addition 1 — "Tracing each stream to the Value Driver Tree" (§6.1)
+
+Checked each of the four table rows directly against `vault/Forecasts/Value_Driver_Tree.md`'s actual
+branch structure and node descriptions:
+
+- **Branch numbering/naming.** `Value_Driver_Tree.md` names its branches exactly as the section's table
+  cites them: "### 1b. Order Frequency uplift (Egypt) — the DEC-003 intervention channel" `[ASSUMPTION →
+  ASM-008]`; "## Branch 3 — Take Rate / Commission (Egypt)" → "### 3a. Take rate proxy" `[FACT + ASSUMPTION
+  → ASM-010]`; "### 3b. Advertising penetration (Egypt) — the DEC-003 adtech channel" `[ASSUMPTION →
+  ASM-011]`. All three branch IDs, titles, and `ASM-###` tags the section cites match verbatim. **Confirmed.**
+- **Subscription fee & Other Income → Branch 1b (`ASM-008`).** Branch 1b's own Logic paragraph is about the
+  DEC-003 order-frequency-uplift mechanism (talabat pro's Group/GCC 20-28% frequency uplift extrapolated to
+  Egypt) — not directly about subscription-fee revenue as a P&L line. The trace is legitimate only via the
+  "monetized twice" mechanism Section 6 itself already establishes in §6.1's MECE paragraph (subscription
+  driving order-frequency uplift, which is exactly what Branch 1b models) — the section's table is explicit
+  that this is a mechanism-level connection, not a claim that Branch 1b directly represents subscription
+  *revenue*. This is the same connection `QA_Review_Section_06.md` itself independently drew ("Subscription
+  fee & Other Income → connects to Branch 1b... via exactly the 'monetized twice' mechanism"), so the
+  section is not inventing a new interpretation — it is executing the QA finding's own suggested mapping,
+  accurately labeled "Direct" in the sense of "the line the plan's own retention thesis targets," which is
+  true and does not overclaim numeric identity between the two. **Accurate as stated.**
+- **Advertising & listing fees → Branch 3b (`ASM-011`).** Branch 3b is explicitly named "the DEC-003 adtech
+  channel," built directly on Advertising & listing fees revenue growth (USD246m FY2024 → USD323m FY2025,
+  the same figures already in Section 6's own §6.1 table). This is a clean, direct 1:1 match. **Confirmed
+  accurate.**
+- **Commission fees → Branch 3a (`ASM-010`), "partial only," "blended take-rate proxy covering all four
+  lines."** Independently re-verified against Branch 3a's own text: the take-rate proxy is built by
+  "applying the Group's disclosed FY2025 revenue-to-GMV conversion ratio (41% of GMV, pro forma Management
+  Revenue basis...) to Egypt's disclosed revenue (USD 509.9m)" — i.e., Egypt's **total** segment revenue
+  (all four lines combined), not a Commission-specific figure. The branch's own heading even says "Take Rate
+  / Commission (Egypt)" while its built content is a whole-revenue proxy — exactly the "branch title implies
+  a cleaner match than its content supports" gap `QA_Review_Section_06.md` flagged and asked the section to
+  state honestly. Section 6's table does so accurately, without silently implying Branch 3a isolates
+  Commission's dollars. **Confirmed accurate.**
+- **Delivery & Service fees → "no dedicated branch," "sits inside the same blended Branch 3a proxy as
+  Commission."** Independently confirmed: no branch, node, or sub-node anywhere in `Value_Driver_Tree.md`
+  isolates delivery/service-fee *revenue*. Branch 2 ("AOV/Pricing") is about order value, not delivery-fee
+  revenue. The tree's only delivery-related figure is delivery *cost* (USD113.13m), a Root-node companion
+  Fact, not a revenue-line branch — and since Branch 3a's take-rate proxy is derived from Egypt's *total*
+  segment revenue (which necessarily includes the Delivery & Service fees dollars alongside Commission's),
+  the claim that Delivery & Service "sits inside the same blended proxy as Commission" is arithmetically and
+  structurally accurate, not an approximation. **Confirmed accurate.**
+- **Overall table verdict:** all four mappings, including the two explicitly-qualified "partial"/"not
+  traced" rows, independently verified against the Value Driver Tree's actual branch structure and node
+  content — no branch/claim mapping found overstated, understated, or fabricated. **PASS.**
+
+## Addition 2 — "What it costs, not only what it earns" (§6.3)
+
+**Core figure verified.** `vault/Knowledge/Strategic/Cost Structure.md`'s Synthesis section states
+verbatim: "the Egypt segment's FY2025 audited financials disclose a delivery cost of USD 113.13mn and D&A
+of USD 6.21mn against Egypt segment revenue of USD 509.94mn and gross profit of USD 124.996mn (TLB-002,
+page 111...). This means Egypt's delivery cost ran at roughly 22% of Egypt segment revenue in FY2025." This
+matches Section 6's claim ("USD 113.13mn for FY2025, ~22% of Egypt segment revenue") exactly, including the
+percentage (113.13 ÷ 509.94 ≈ 22.2%, correctly rounded to "~22%").
+
+**TLB-002 page 111 citation independently re-verified against the raw extraction**, not merely against
+`Strategic/Cost Structure.md`'s own restatement: `Facts/_raw/TLB-002_facts.md` (and identically,
+`Facts/Marketplace_Facts.md`) states: "Egypt segment (audited): revenue USD 509.94mn; gross profit
+USD 124.996mn; profit before tax USD 39.73mn; net profit USD 44.35mn; **delivery cost USD 113.13mn**; D&A
+USD 6.21mn. (TLB-002, page 111)." Cross-confirmed independently by `Facts/Logistics_Facts.md` /
+`Facts/_raw/TLB-008_facts.md`: "Segment delivery cost: GCC USD (1,523,248,572); **Egypt USD
+(113,128,547)**; Non-GCC USD (167,545,960) (TLB-008, page 61)" — the same figure (113.13mn ≈ 113,128,547),
+independently disclosed at a second source page. Both the figure and its TLB-002 page 111 attribution are
+**confirmed accurate**, not merely inherited from an intermediate note without checking the primary layer.
+
+**Cross-reference to `Value_Driver_Tree.md` and `KPI_Tree.md` independently confirmed, not assumed from
+the new paragraph's own framing.** `Value_Driver_Tree.md`'s Root node lists as a companion Fact: "Delivery
+cost: USD 113.13m (~22% of segment revenue) `[FACT → Strategic/Cost Structure.md, sourcing TLB-002
+p.111]`" — the identical figure, percentage, and citation Section 6 now uses, confirming Section 6's new
+paragraph is consistent with (not diverging from) the Forecast-tier tree. `KPI_Tree.md`'s Root-node table
+row **R4** reads exactly: "Delivery cost as % of Egypt revenue (~22%) | Lagging | Baseline-exists |
+`[FACT → Strategic/Cost Structure.md]`, sourcing TLB-002 p.111 (delivery cost USD113.13m)" — Section 6's
+claim that this figure is "tracked as `KPI_Tree.md`'s KPI R4 ('Delivery cost as % of Egypt revenue')" is
+**verbatim accurate**, both the KPI ID and its name.
+
+**Section 9 §9.2 cross-reference independently located and confirmed, not taken on trust.** A heading sweep
+of `Section_09_Financial_Plan.md` confirms `## 9.2 Initial Investment and Operational Costs` runs from line
+72 to line 93 (immediately before `## 9.3 Revenue Forecasts`). The delivery-cost text Section 6 references
+sits within that range: "**Operational cost context:** Egypt's disclosed FY2025 delivery cost (USD
+113.13mn, ~22% of segment revenue) is the only granular Egypt cost-line figure in the corpus (`Strategic/
+Cost Structure.md`) — no Egypt-specific CARC, order-processing, or 'other direct costs' line exists"
+(Section 9, lines 84-86, inside §9.2). Section 6's claim that this figure is "already used as Section 9
+§9.2's operational-cost context" is **confirmed accurate** — correct section number, correct figure, correct
+placement.
+
+**No overclaim found.** The new paragraph explicitly states it is *not* a full per-customer P&L ("this is
+not a full per-customer P&L... this section does not construct one; it states the one cost figure the
+corpus does disclose"), matching `Strategic/Cost Structure.md`'s own Open Questions ("no Egypt-specific
+CARC, no Egypt order-processing/handling cost, no Egypt 'other direct costs' line... only revenue, gross
+profit, profit before tax, and net profit are disclosed at the Egypt-segment level"). The paragraph does
+not assert a number the corpus doesn't support and does not blend the Egypt-specific delivery-cost figure
+with any Group-level cost figure without labeling it as such.
+
+**One pre-existing, non-blocking observation, not attributable to this addition:** as already noted in the
+first targeted re-audit above for the revenue-side USD 509.9mn figure, the "FY2025" label applied to the
+TLB-002 p.111 segment figures (including delivery cost) is technically a "since-inception" cumulative
+figure (per that same page's audited-period framing), not a strict calendar-year-2025-only figure. This is
+the same already-accepted, vault-wide labeling convention previously ruled non-blocking (independently used
+by `Value_Driver_Tree.md`'s Root node and `KPI_Tree.md`'s R4 for the identical delivery-cost figure) — not
+a new defect introduced by this addition, and out of scope to re-litigate here.
+
+**PASS.**
+
+## Overall verdict
+
+**PASS.** Both additions independently verified against their trace targets:
+1. The Value-Driver-Tree mapping table in §6.1 accurately reflects `Value_Driver_Tree.md`'s actual branch
+   IDs, titles, and node content for all four revenue lines, including both explicitly-qualified partial/
+   not-traced rows — no branch or claim mapping found overstated, understated, or fabricated.
+2. The USD 113.13mn / ~22% Egypt delivery-cost figure in §6.3 is independently confirmed against
+   `Strategic/Cost Structure.md`, the raw TLB-002 page 111 extraction, and a second independent source
+   (TLB-008 page 61) — the TLB-002 page 111 citation is accurate. Both cross-references (Section 9 §9.2 and
+   `KPI_Tree.md` KPI R4) are independently confirmed accurate as to figure, naming, and placement.
+
+No hard failure found in either addition. **Section 6 is now fully cleared on both citation and QA
+fronts** — the citation audit has no open hard failure across all three prior audit passes plus this
+targeted post-QA-fix check, and the two Stage 11 QA findings this check was scoped to verify are both
+independently confirmed resolved with accurate sourcing. Section 6 is ready to proceed to Stage 10
+promotion per the pipeline, subject to the Orchestrator's own disposition (this audit assesses citation
+accuracy only, not template-completeness or promotion authority). The three non-blocking limitations
+carried since the original audit (AdTech citation completeness, the 39.8%/40% precision gap, and the
+136%-uplift citation pointing to the wrong sub-section of the right note) remain open as previously
+characterized — recommended tightenings, not hard failures, unaffected by and unrelated to this check.
+
+## Links (post-QA-fix addendum)
+- [[Section_06_Business_Model_and_Revenue_Streams|vault/Projects/Business_Plan_Drafts/Section_06_Business_Model_and_Revenue_Streams.md]] — §6.1 "Tracing each stream to the Value Driver Tree" and §6.3 "What it costs, not only what it earns," both re-read in full
+- [[Value_Driver_Tree]] — Branches 1b, 3a, 3b and the Root-node delivery-cost companion Fact, all independently re-verified
+- [[KPI_Tree]] — Root-node table, KPI R4, independently re-verified
+- `vault/Knowledge/Strategic/Cost Structure.md` — Synthesis section, delivery-cost figure and TLB-002 p.111 citation, independently re-verified
+- `vault/Knowledge/Facts/_raw/TLB-002_facts.md`, `vault/Knowledge/Facts/_raw/TLB-008_facts.md`, `vault/Knowledge/Facts/Marketplace_Facts.md`, `vault/Knowledge/Facts/Logistics_Facts.md` — raw-layer cross-confirmation of the USD113.13mn / USD113,128,547 delivery-cost figure at two independent source pages
+- [[Section_09_Financial_Plan]] — §9.2 (lines 72-93), independently located and confirmed to contain the referenced operational-cost context
+- [[QA_Review_Section_06]] — the Stage 11 findings both additions were drafted to close
