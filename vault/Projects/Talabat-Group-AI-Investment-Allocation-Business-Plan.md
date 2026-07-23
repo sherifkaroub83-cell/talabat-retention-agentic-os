@@ -30,8 +30,10 @@ against the old problem).
   layers, now extended with the Investment Option/Portfolio structures
   (`vault/Decisions/Investment_Options_Register.md`, `vault/Decisions/Investment_Portfolio_Register.md`)
   and the Geographic Evidence Rules (`vault/Architecture/Geographic_Evidence_Rules.md`)
-- **Process:** the same 11-stage `vault/Architecture/Business_Plan_Generation_Pipeline.md`, to be
-  extended with the pivot's additional stages/gates (Phase 7 of the pivot roadmap)
+- **Process:** `vault/Architecture/Business_Plan_Generation_Pipeline.md`, redesigned 2026-07-23 into
+  19 stages (Phase 7 of the pivot) — Part A plan-level setup, Part B the original per-section
+  11-sub-stage loop, Part C whole-plan Problem Consistency / Financial Integrity / Geographic
+  Evidence gates
 
 ## New foundational artifacts this tracker's drafting will draw on
 - `vault/Knowledge/Investment_Relationship_Map.md` — the Investment → capability → behaviour → GMV →
@@ -49,7 +51,7 @@ against the old problem).
 
 ## Status
 
-🟡 **Architecture pivot in progress (Phases 1–5 of 9 complete as of 2026-07-23)** — see
+🟡 **Architecture pivot in progress (Phases 1–7 of 9 complete as of 2026-07-23)** — see
 `vault/Architecture/Repository_Impact_Assessment.md` for the full phase plan. **No Business Plan
 drafting has occurred yet against this new problem** — the 14 section drafts under
 `vault/Projects/Business_Plan_Drafts/` still reflect the old Egypt-retention problem and are not valid

@@ -134,7 +134,9 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
 ## Standing instructions
 
 - **Goal:** see CLAUDE.md — AI Business Plan + OS structure doc + deck; McKinsey standards
-  (SCQA, Pyramid, MECE, hypothesis-driven, value driver tree); MENA-grounded figures.
+  (SCQA, Pyramid, MECE, hypothesis-driven, value driver tree); figures grounded at the level talabat
+  actually discloses them (Group, GCC, non-GCC, or a named country) — never "MENA" as a stand-in,
+  per the 2026-07-23 pivot's Geographic Evidence Rules (`vault/Architecture/Geographic_Evidence_Rules.md`).
 - **Ground claims in the sources** and cite which document each point comes from.
 - **Extract before reading** — convert binaries to text/Markdown first; never read them raw.
 - **Write artifacts to `Outputs/`**, never into `Input_Data/` (read-only).

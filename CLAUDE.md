@@ -14,7 +14,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 > draft against it using the `business-plan-drafting` skill (`.claude/skills/business-plan-drafting/`).
 > **Before drafting any section**, read `vault/Architecture/Agentic_OS_Architecture.md` — the
 > capstone's primary product is the Agentic OS itself, not the plan (the plan is one execution of
-> it). Drafting runs through an 11-stage pipeline (`vault/Architecture/Business_Plan_Generation_Pipeline.md`)
+> it). Drafting runs through a 19-stage pipeline (`vault/Architecture/Business_Plan_Generation_Pipeline.md`)
 > via the `bp-orchestrator` agent, not free-form writing, and must pass the Problem Consistency,
 > Financial Integrity, and Geographic Evidence gates (specified in `vault/Architecture/Business_Plan_Generation_Pipeline.md`;
 > the geography rules themselves are formalized in `vault/Architecture/Geographic_Evidence_Rules.md`)
@@ -80,7 +80,7 @@ These persist across sessions — follow them unless the user says otherwise:
   primary research (surveys/interviews) may be used to illustrate a framework — but must
   be explicitly labeled as such wherever it appears, and never presented as, or blended with, real
   disclosed company data. (Decision recorded 21/07/2026, revised problem charter.)
-- **Scope: talabat Group across its eight operating markets, evidence used at the level it's actually reported.** Egypt remains a genuine worked example (the corpus's richest single-country data point) but is not the boundary of the analysis. Never use "MENA" as a stand-in for talabat's own market set where a more precise label (Group, GCC, non-GCC, or a named country) is available — see the Geographic Evidence Rules in `vault/Architecture/Agentic_OS_Architecture.md`.
+- **Scope: talabat Group across its eight operating markets, evidence used at the level it's actually reported.** Egypt remains a genuine worked example (the corpus's richest single-country data point) but is not the boundary of the analysis. Never use "MENA" as a stand-in for talabat's own market set where a more precise label (Group, GCC, non-GCC, or a named country) is available — see `vault/Architecture/Geographic_Evidence_Rules.md`.
 - **Write generated artifacts to `Outputs/`**, never into `Input_Data/`. Create `Outputs/` if absent.
 - **Extract before reading** — get text/Markdown first; never read the binaries as raw text.
 - **Propose, don't execute, on destructive vault work** — hand the user a changelist to approve
