@@ -1,6 +1,6 @@
 ---
 name: external-research
-description: Procedure for sourcing, citing, and confidence-scoring external data the Input_Data corpus doesn't contain (AI/retention market sizing, funnel-conversion benchmarks, Egypt-specific competitor detail, CSR/AI-ethics benchmarks). Trigger when the research-agent resolves a Research Register item, or the user says "research", "/research".
+description: Procedure for sourcing, citing, and confidence-scoring external data the Input_Data corpus doesn't contain (market sizing across talabat's markets, funnel-conversion benchmarks, competitor capital-allocation/investment-ROI benchmarks, Egypt-specific competitor detail, CSR/AI-ethics benchmarks). Trigger when the research-agent resolves a Research Register item, or the user says "research", "/research".
 trigger: /research
 ---
 
