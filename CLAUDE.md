@@ -16,7 +16,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 > capstone's primary product is the Agentic OS itself, not the plan (the plan is one execution of
 > it). Drafting runs through an 11-stage pipeline (`vault/Architecture/Business_Plan_Generation_Pipeline.md`)
 > via the `bp-orchestrator` agent, not free-form writing, and must pass the Problem Consistency,
-> Financial Integrity, and Geographic Evidence gates (see `vault/Architecture/Agentic_OS_Architecture.md`)
+> Financial Integrity, and Geographic Evidence gates (specified in `vault/Architecture/Business_Plan_Generation_Pipeline.md`;
+> the geography rules themselves are formalized in `vault/Architecture/Geographic_Evidence_Rules.md`)
 > plus the Template Compliance Gate before any publication step.
 
 ## What this project is
