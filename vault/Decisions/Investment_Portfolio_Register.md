@@ -36,14 +36,41 @@ disclosed.
 
 ## Base / downside / upside allocation ranges
 
-**Not yet set.** The disclosed USD175mn/120mn/55mn figures are point figures from talabat's own
-Board approval, not scenario ranges — they need no "base case" because they are already the
-approved case. What this OS still needs to build (Phase 5, Forecasting layer) is: (a) scenario
-ranges for the *expected financial return* of that already-approved envelope (GMV/revenue/EBITDA
-impact under base/upside/downside assumptions), and (b) if this OS ultimately recommends a
-different intra-programme allocation than talabat's own, ranges for that recommendation specifically.
-Neither exists yet. Populating this section with placeholder numbers now would be the exact
-false-precision error the pivot's standing instructions forbid.
+**Proposed 2026-07-23 by `decision-steward`, pending
+[[DEC-009_investment-options-ranking-and-allocation-priority|DEC-009]] (status: `proposed`, not yet
+approved).** The disclosed USD175mn/120mn/55mn figures themselves remain point figures from talabat's
+own Board approval, unchanged by this section — they need no "base case" because they are already the
+approved case. What follows is **this OS's own proposed sub-bucket allocation logic** for five
+evidence-grounded candidate Investment Options (`OPT-001`–`OPT-005`, registered in
+`Investment_Options_Register.md`, compared in `DEC-009`), not a disclosed talabat allocation at this
+granularity. Every range below is sourced to a Decision-tier, Low-confidence Assumption Register row
+(`ASM-029`–`ASM-033`) and stays `Proposed`, not `Approved`, until `DEC-009` is resolved.
+
+| Option | Bucket | Base | Upside | Downside | Basis |
+|---|---|---|---|---|---|
+| OPT-001 — talabat mart dark-store densification | Everyday App | USD 45-55mn | USD 55-70mn | USD 30-40mn | `ASM-029` |
+| OPT-002 — talabat pro acceleration (Egypt, Iraq) | Everyday App (opex) | USD 8-12mn | USD 12-20mn | USD 3-6mn | `ASM-030` |
+| OPT-003 — Food-leadership CVP/partner-retention (UAE, Kuwait, Qatar) | Food-leadership | USD 25-32mn | USD 32-40mn | USD 15-22mn | `ASM-031` |
+| OPT-004 — Advertising monetization gap closure | Enabling capability (cross-cutting, drawn from Everyday App opex) | USD 8-12mn | USD 12-18mn | USD 3-6mn | `ASM-032` |
+| OPT-005 — AI/personalisation capability scaling | Enabling capability (cross-cutting, drawn from Everyday App opex) | USD 10-15mn | USD 15-22mn | USD 5-8mn | `ASM-033` |
+
+**Read this table with two explicit caveats, both required to avoid a Financial Integrity Gate failure:**
+1. **Non-additive across the envelope.** OPT-004 and OPT-005 are cross-cutting Enabling-capability
+   options that may overlap with, rather than add on top of, the Everyday App figures already implied
+   by OPT-001/OPT-002 — the corpus itself states AI/personalisation is "not named as a discrete dollar
+   line within either bucket... an embedded capability, not a separate budget line" (N-06). Summing all
+   five ranges' upper bounds would overstate the disclosed USD175mn envelope if read as strictly
+   additive; it is not intended to be read that way.
+2. **Partial coverage, not a full allocation.** These five options do not claim to allocate 100% of
+   either bucket — Everyday App's disclosed "new verticals" component and Food-leadership's spend
+   outside UAE/Kuwait/Qatar are real, funded parts of the envelope this table does not attempt to size,
+   since no evidence-grounded candidate option exists yet for them.
+
+This still leaves genuinely unset: (a) scenario ranges for the *expected financial return* of the full
+envelope (GMV/revenue/EBITDA impact) — see `vault/Forecasts/Scenarios_v2.md`'s top-level base/upside/
+downside scenarios for that, resolved separately by `DEC-008` (Section 9's headline case is base-case-
+only); and (b) whether the table above should be shown in the Business Plan as a headline recommendation
+at all — the second open question `DEC-009` escalates.
 
 ## Pilot funding / reserve / reallocation pool
 
@@ -81,12 +108,16 @@ in the agent/skill definitions).
 
 ## Review date
 
-To be set once Phase 5 (Forecasting) produces the first scenario-based return estimates this
-register's "expected outcomes" section currently lacks.
+The "Base / downside / upside allocation ranges" section above: alongside `DEC-009`'s resolution
+(target — before Section 9/12 drafting begins under the Phase 9 pilot). The "Expected outcomes"
+section below: to be set once a scenario-based return estimate exists for the *return* side of the
+envelope specifically (distinct from the sub-bucket allocation-range proposal above), which remains
+unset.
 
 ## See also
 - `Topics/2026 Investment Programme.md` — full evidence trace for the USD175mn/120mn/55mn figures
 - `Topics/Capital Allocation and Investment Governance.md` — what talabat does and doesn't disclose about its own allocation process
 - `vault/Knowledge/Investment_Relationship_Map.md` — the value-driver chain this envelope is expected to move
-- `vault/Decisions/Investment_Options_Register.md` — candidate sub-initiatives within this envelope
+- `vault/Decisions/Investment_Options_Register.md` — the five candidate sub-initiatives (`OPT-001`–`OPT-005`) within this envelope
+- [[DEC-009_investment-options-ranking-and-allocation-priority|DEC-009]] — the ranking/allocation-priority decision (status: `proposed`) this register's ranges table implements
 - `vault/Architecture/Geographic_Evidence_Rules.md` — governs any future market-level breakdown proposed for this register

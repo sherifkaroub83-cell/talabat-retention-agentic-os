@@ -14,26 +14,36 @@ between two or more of them.
 
 ## Current status
 
-**Scaffolded, empty of candidate options.** This is an architecture-phase deliverable (Phase 4 of
-the 2026-07-23 pivot) — populating it with actual candidate initiatives (e.g. "accelerate talabat
-pro adoption in a specific market" or "expand dark-store density in a specific market") is content
-work that belongs to Business Plan drafting (Sections 9/12, Phase 9's pilot run), not architecture
-design. Inventing candidate options now, before the Forecasting layer (Phase 5) and a real drafting
-pass exist to evidence them, would risk exactly the false-precision and unlabeled-assumption
-problems the pivot's standing instructions warn against.
+**Populated — 5 candidate options, 2026-07-23.** Per Phase 9 of the pivot roadmap (the limited
+Section 2/4/5/9/12/13 pilot) and Stages 3/10/11 of `Business_Plan_Generation_Pipeline.md` Part A,
+`decision-steward` has drawn five genuinely evidence-grounded candidate options from the Phase 3
+Topic Notes and Phase 5 Forecasting layer (`Investment_Relationship_Map.md`, `Value_Driver_Tree_v2.md`,
+`Scenarios_v2.md`) — not invented from nothing. Each is scored against the 11-criterion framework and
+compared in `DEC-009` (status: `proposed`, pending user/instructor confirmation on funding sequence and
+headline-presentation questions). Every option's cost range is this OS's own proposed judgment
+(`ASM-029`–`ASM-033`, Decision tier, Low confidence, `Proposed` status), never a disclosed
+initiative-level figure — see each `OPT-` record's own "Cost" section.
 
-What *is* already evidenced, and belongs here structurally rather than as an `OPT-` record, is the
-two disclosed top-level buckets themselves — see `Investment_Portfolio_Register.md`'s "Disclosed
-components" table. Those are not candidates to be scored against each other (talabat has already
-allocated between them); the open decision this OS exists to support is allocation *within* and
-*across markets inside* each bucket, which is where genuine `OPT-` candidates will be registered
-once drafting begins.
+The two disclosed top-level buckets themselves (Everyday App ~USD120mn, Food-leadership ~USD55mn)
+remain structural entries in `Investment_Portfolio_Register.md`'s "Disclosed components" table, not
+`OPT-` records — talabat has already allocated between them. The five options below are candidates
+for allocation *within* and *across markets inside* each bucket, plus two cross-cutting Enabling-
+capability candidates that do not map cleanly to either bucket alone.
 
-## Register (populate as options are proposed)
+## Register
 
 | Option ID | Name | Category | Geography | Status | Confidence | Owner | Review date |
 |---|---|---|---|---|---|---|---|
-| *(none yet)* | | | | | | | |
+| OPT-001 | Continue/moderately accelerate talabat mart dark-store densification | Everyday App | Group | candidate | Medium | decision-steward | Q3 2026 |
+| OPT-002 | Accelerate talabat pro adoption in Egypt and Iraq | Everyday App | inferred-applicability (Group/GCC → Egypt, Iraq) | candidate | Low | decision-steward | 2 quarters post-pilot |
+| OPT-003 | Target Food-leadership CVP/partner-retention investment at UAE, Kuwait, Qatar | Food-leadership | country-specific/market-comparison (UAE, Kuwait, Qatar) | candidate | Medium | decision-steward | Q4 2026 |
+| OPT-004 | Close the advertising monetization gap vs. the UAE benchmark | Enabling capability | Group (benchmark itself country-specific, UAE) | candidate | Medium | decision-steward | Q1 2027 |
+| OPT-005 | Scale the AI/personalisation embedded capability | Enabling capability | Group (inferred-applicability caveat, non-GCC/Egypt) | candidate | Medium | decision-steward | Q1 2027 |
+
+**Ranking and comparison:** see [[DEC-009_investment-options-ranking-and-allocation-priority|DEC-009]]
+for the full 11-criterion High/Medium/Low comparison table and written tiering — status `proposed`,
+not yet approved; the funding-sequence and headline-presentation questions require real user/
+instructor confirmation before this register's ranking can be cited as settled.
 
 ## See also
 - `vault/Architecture/Decision_Management_Layer.md` — schema and scoring framework
