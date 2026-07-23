@@ -107,10 +107,16 @@ document. This skill has no write access to section content and must not simulat
 
 ## 2. Required inputs (read before formatting)
 
-- All 14 `vault/Projects/Business_Plan_Drafts/Section_01_Executive_Summary.md` through
-  `Section_14_Appendices.md` — **every one must carry `status: ... Done (independently verified)`
-  in its frontmatter**; if any section is missing this exact status, stop and report which
-  section(s) block the run rather than formatting a partial or self-reviewed plan.
+- All 14 `vault/Projects/Business_Plan_Drafts_v2/Section_01_Executive_Summary.md` through
+  `Section_14_Appendices.md` — **the active drafting location as of the 2026-07-23 pivot.** Every one
+  must carry `status: ... Done (independently verified)` in its frontmatter; if any section is missing
+  this exact status, stop and report which section(s) block the run rather than formatting a partial
+  or self-reviewed plan. **Never read from `vault/Projects/Business_Plan_Drafts/` (no `_v2` suffix)** —
+  that folder holds the 14 sections drafted against the superseded Egypt-retention problem, each
+  explicitly marked `superseded: true` in frontmatter; formatting from there would export the wrong
+  plan. As of this update, only 6 of 14 `_v2` sections exist (2, 4, 5, 9, 12, 13, all Pass 1/
+  self-reviewed) — this skill cannot run a full export until all 14 exist and pass independent
+  verification.
 - `vault/Projects/Talabat-Group-AI-Investment-Allocation-Business-Plan.md` — the active master tracker
   as of the 2026-07-23 pivot (`Talabat-Egypt-AI-Retention-Business-Plan.md` is its superseded
   predecessor, historical reference only), to confirm the same 14/14 status and to pull the

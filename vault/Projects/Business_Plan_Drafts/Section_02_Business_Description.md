@@ -3,7 +3,16 @@ section: 2
 title: Business Description
 status: Done — citation audit PASS ([[Citation_Audit_Section_02]]), QA review PASS ([[QA_Review_Section_02]], independently invoked per Pilot 2 — [[Pilot2_Execution_Report_Section_02]]); frontmatter corrected 22/07/2026 to match the project tracker's own long-standing ✅ Done (independently verified) status, which this field had never been synced to. One additional wording fix 22/07/2026 per Whole_Plan_McKinsey_Lens_Pressure_Test.md (§2.5's "four-layer" heading now matches four separately-itemized bullets, split from three; no revenue-line count, figure, or argument changed)
 pipeline_run: 2026-07-22
+superseded: true
+superseded_date: "2026-07-23"
+superseded_reason: "Built for the original Egypt-retention problem, superseded by the 2026-07-23 pivot to talabat Group-wide capital allocation — see Problem_Charter.md and vault/Architecture/Repository_Impact_Assessment.md"
 ---
+
+> **SUPERSEDED 2026-07-23.** This section draft was built against the original Egypt-retention
+> problem, itself superseded by the 2026-07-23 pivot to talabat Group-wide capital allocation (see
+> `Problem_Charter.md`). Preserved unchanged below as historical record (see the frontmatter `status` field for the
+> original citation-audit/QA outcome under the old problem). Not a valid input to any new drafting —
+> active drafting for the current problem lives under `vault/Projects/Business_Plan_Drafts_v2/`.
 
 # 2. Business Description
 

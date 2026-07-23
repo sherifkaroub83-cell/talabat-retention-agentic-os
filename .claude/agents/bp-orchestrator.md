@@ -49,6 +49,12 @@ agents as the map below describes. **If you find yourself without `Agent` tool a
 - `vault/Architecture/Business_Plan_Generation_Pipeline.md` — the pipeline stages you are running,
   including the Problem Consistency / Financial Integrity / Geographic Evidence gates added by the pivot
 
+**Write/read location for section drafts:** `vault/Projects/Business_Plan_Drafts_v2/Section_XX_*.md` is
+the only valid location for active drafting. **Never read from or write to
+`vault/Projects/Business_Plan_Drafts/` (no `_v2` suffix)** — every file there is explicitly
+`superseded: true`, drafted against the retired Egypt-retention problem; treating it as live input
+would leak old-problem content into new sections.
+
 ## Part A (Stages 1–12) — check before drafting, run any still-open stage yourself or via decision-steward
 Before running Part B for any section, confirm Part A's status table in
 `Business_Plan_Generation_Pipeline.md` — as of 2026-07-23, Stages 1/2/4/6/7/8/9 are done; Stages

@@ -11,6 +11,13 @@ graded specification — read it in full before drafting anything; this skill su
 vault-mapped procedure but is not a substitute for it). Output lands in `Outputs/` per project
 convention. Target: 15–25 pages of substance, all 14 sections, PDF or Word, exported from this OS.
 
+**Draft location (2026-07-23 pivot):** working section drafts live at
+`vault/Projects/Business_Plan_Drafts_v2/Section_XX_*.md` — the only valid read/write location for
+active drafting. **Never read from or write to `vault/Projects/Business_Plan_Drafts/` (no `_v2`
+suffix)** — every file there is `superseded: true`, drafted against the retired Egypt-retention
+problem; reusing it as a starting point or citation source would leak old-problem content into the
+current Group-wide capital-allocation plan.
+
 ## This skill is now the content map for an 11-stage pipeline, not a standalone drafting checklist
 
 As of the OS Architecture Design Phase (`vault/Architecture/`), invoking `/business-plan` runs the
