@@ -17,7 +17,7 @@ Drafted by `decision-steward` from `forecasting-agent`'s escalation flag at the 
 2026-07-23 pivot to the Group-wide talabat capital-allocation problem (`Problem_Charter.md`). This
 session's available tools are `Read`, `Write`, `Edit`, `Glob` — `AskUserQuestion` is not available
 inside this subagent thread (the same runtime constraint documented at DEC-003 and DEC-005). This
-decision is judged, on its own merits below, to cross the bar that requires real user/instructor
+decision is judged, on its own merits below, to cross the bar that requires real user/team
 confirmation, not just OS-owner data-presentation discretion — so it is logged here `status: proposed`,
 fully evidenced, with the options ready for a real `AskUserQuestion` call (or equivalent direct
 confirmation) to be run **from the top-level session**. No drafting has yet occurred against the new
@@ -34,7 +34,7 @@ investment buckets, proportional to their investment shares. Should the plan's h
 show only the Group-level base case, or should it also show the Everyday-App/Food-leadership bucket
 split as a labeled, Low-confidence sub-case alongside it? This directly affects how forcefully the plan's
 central recommendation — the ~2.2:1 Everyday App : Food-leadership allocation itself — gets argued in the
-plan's own numbers, so it needs your (or the instructor/team's) confirmation before Decision Steward can
+plan's own numbers, so it needs your (or the team's) confirmation before Decision Steward can
 mark this approved."
 - **Option 1 — Base case only.** Headline financial case shows only the Group-level base/upside/downside
   scenarios (per `Scenarios_v2.md`'s top-level section); the Everyday App vs. Food-leadership split is
@@ -53,7 +53,7 @@ mark this approved."
   middle path: the primary Section 9 narrative and exhibits use only the base case (as Option 1), but the
   bucket-split construction is fully shown, with its illustrative/Low-confidence caveats, in an appendix
   or footnoted sensitivity discussion rather than omitted entirely or promoted to headline status.
-- **Option 4 — Other:** user/instructor proposes a different structure or splits the decision by section
+- **Option 4 — Other:** user/team proposes a different structure or splits the decision by section
   (e.g., different treatment for Section 9's exhibits vs. Section 12/13's KPI framing).
 
 ## Question
@@ -82,7 +82,7 @@ Food-leadership (and, per the charter, across markets). Whether Section 9's own 
 quantified 2.2:1 bucket-split sub-case, or withhold it and argue the allocation case only narratively,
 directly changes how forcefully the plan's own numbers argue for its own central recommendation — which is
 exactly the "strategic framing choice that materially affects the plan's headline recommendation" bar
-`.claude/skills/decision-log/SKILL.md` reserves for user/instructor escalation, not OS-owner discretion.
+`.claude/skills/decision-log/SKILL.md` reserves for user/team escalation, not OS-owner discretion.
 Layered onto that: the input to any such sub-case (`ASM-018`) is explicitly Low confidence and
 self-labeled as "not a disclosed or measured causal split" — so Option 2 above carries a live risk of the
 kind of false-precision error the project's standing instructions forbid ("never... present an assumption
@@ -90,7 +90,7 @@ as a fact") if the labeling discipline is not perfectly maintained through Secti
 citation audit, and QA review. Judging how much of that risk is acceptable, for a graded capstone's
 headline financial exhibit, in exchange for how much more directly the plan argues its own central
 recommendation, is a judgment call about risk tolerance and framing ambition that this agent judges
-belongs to the user/instructor, not to `decision-steward` acting alone.
+belongs to the user/team, not to `decision-steward` acting alone.
 
 ## Options considered
 See "Escalation prompt" above (Options 1-4) — reproduced there verbatim as the prompt to be delivered,

@@ -10,7 +10,7 @@ Daoud**. The team stands up an Agentic OS around one business problem and uses i
 Business Plan (GSB 14-section template v2.0, McKinsey Edition, 15–25 pages), an OS structure document
 (3–5 pages), and a group presentation (5 slides per member).
 
-**Current problem (pivoted 23/07/2026 — status: proposed, pending instructor re-approval):** how
+**Current problem (pivoted 23/07/2026 — status: Active, governing problem for the Agentic OS):** how
 should talabat allocate its 2026 USD 175 million investment programme (≈USD 120m Everyday App +
 ≈USD 55m Food-leadership) across initiatives and markets to maximise profitable growth, customer
 lifetime value, retention, and long-term platform economics across its eight operating markets?
@@ -38,7 +38,7 @@ rewritten.
 | Ahmed Abd Elhakam Abd Elfattah Zaian | 24224008 | TBD |
 | Abdallah Mahmoud Abdo Ahmed | 24220430 | TBD |
 
-Guide specifies 4–5 members / 5 roles; team size of 6 is now instructor-approved (with a 30-slide,
+Guide specifies 4–5 members / 5 roles; team size of 6 is confirmed (with a 30-slide,
 5-slides-per-member presentation confirmed to match). **Still open:** how the 6 members map onto
 the guide's 5 defined roles (e.g., co-leads on one role, or a 6th custom role) — not yet assigned.
 
@@ -314,8 +314,9 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   most Topics, most skills/agents) confirmed problem-agnostic, unchanged; ~50 files (all Decisions,
   Assumptions, Research Notes, Business Plan drafts, Validation records, both Output pairs) marked
   Superseded, preserved as historical record, not deleted or rewritten. **New charter status:
-  Proposed, not instructor-approved** — this is the single open item requiring the user's/team's
-  decision before final submission (original submission date on file: 26/07/2026). Architecture
+  Active — governing problem for the Agentic OS.** Course-administration submission logistics
+  (original submission date on file: 26/07/2026) are tracked separately by the team, not as an OS
+  gate. Architecture
   Phases 3–9 (knowledge reorientation, Decision/Portfolio layer, Forecast/KPI layer, agents/skills,
   pipeline/QA gates, consistency audit, pilot run) are tracked as remaining work, not yet complete.
 

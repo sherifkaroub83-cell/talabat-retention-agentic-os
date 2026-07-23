@@ -101,10 +101,10 @@ in any *return* figure: not applicable — none is disclosed to have a confidenc
 ## Owner
 
 This register is owned by the Decision Steward Agent, with capital-allocation recommendations
-ultimately requiring human (instructor/team) approval before being presented as a Business Plan
+ultimately requiring human/team approval before being presented as a Business Plan
 recommendation — per the Responsible-AI principle that this OS may recommend allocation, it must
-not represent that recommendation as an automatic management decision (Phase 6 will formalize this
-in the agent/skill definitions).
+not represent that recommendation as an automatic management decision (formalized in the
+agent/skill definitions, Phase 6 of the 2026-07-23 pivot).
 
 ## Review date
 

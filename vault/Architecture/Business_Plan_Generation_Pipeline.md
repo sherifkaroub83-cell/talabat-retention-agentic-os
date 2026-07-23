@@ -33,7 +33,7 @@ same runtime constraint documented below), delegating to the named specialist pe
 
 | # | Stage | Owner | Reads | Writes | Status as of 2026-07-23 |
 |---|---|---|---|---|---|
-| 1 | **Confirm business question** | Orchestrator | `Problem_Charter.md` | Confirms active problem, scope, envelope | ✅ Done — `Problem_Charter.md` rewritten 2026-07-23 (status: proposed, pending instructor re-approval) |
+| 1 | **Confirm business question** | Orchestrator | `Problem_Charter.md` | Confirms active problem, scope, envelope | ✅ Done — `Problem_Charter.md` rewritten 2026-07-23 (status: Active — governing problem for the Agentic OS) |
 | 2 | **Assemble investment evidence** | Orchestrator | `vault/Knowledge/Topics/`, `Facts/`, `Investment_Relationship_Map.md` | A working Group-wide evidence base | ✅ Done — Phase 3 of the pivot (13 new Topic Notes, Investment Relationship Map) |
 | 3 | **Identify candidate investment options** | `decision-steward` | `Investment_Portfolio_Register.md`, drafting-stage findings | `vault/Decisions/Investment_Options_Register.md` (`OPT-XXX` records) | ⬜ Scaffolded, empty by design — candidate options get proposed during Section 9/12 drafting (Stage 13), not invented in advance; see the register's own "Current status" note |
 | 4 | **Detect evidence gaps/conflicts** | Orchestrator | Topic Notes' Open Questions, `Repository_Impact_Assessment.md` | Typed gap list (external / forecast / decision) | ✅ Done — every Phase 3 Topic Note documents its own gaps explicitly (e.g. `Capital Allocation and Investment Governance.md`'s governance-mechanics gap) |

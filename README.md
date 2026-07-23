@@ -6,10 +6,10 @@ around one problem: **how talabat should allocate its 2026 USD 175 million inves
 across Everyday App and Food-leadership initiatives to maximise profitable growth, customer lifetime
 value, retention, and long-term platform economics across its eight operating markets.** The
 repository name (`talabat-retention-agentic-os`) is now historical — it reflects the project's
-original, narrower Egypt-retention framing (approved by Dr. Hossam Daoud, 21/07/2026) before the
+original, narrower Egypt-retention framing (its own problem charter approved 21/07/2026) before the
 2026-07-23 pivot to this broader, better-evidenced capital-allocation problem; the repository itself
 was not renamed. Current problem statement: [`Problem_Charter.md`](Problem_Charter.md) (**status:
-proposed, pending instructor re-approval**). Why the pivot happened and what it touched:
+Active — governing problem for the Agentic OS**). Why the pivot happened and what it touched:
 [`vault/Architecture/Repository_Impact_Assessment.md`](vault/Architecture/Repository_Impact_Assessment.md).
 Project facts and current status: [`MEMORY.md`](MEMORY.md) · [`PROJECT_PROGRESS.md`](PROJECT_PROGRESS.md).
 Start browsing the knowledge base at [`vault/MOC/Talabat MOC.md`](vault/MOC/Talabat%20MOC.md).
@@ -148,7 +148,7 @@ interviews, or course material — the flow is identical.
 | `template_Activate.md` | Activation interview + setup runbook (for Claude) |
 | `CLAUDE.md` | Auto-loaded project instructions |
 | `MEMORY.md` / `PROJECT_PROGRESS.md` / `SESSION_LOG.md` | Memory · milestones · session log |
-| `Problem_Charter.md` | G02's current problem statement (proposed, pending instructor re-approval — see the charter) |
+| `Problem_Charter.md` | G02's current problem statement (Active — governing problem for the Agentic OS) |
 | `AI_Business_Plan_Template.md` | The graded 14-section GSB v2.0 (McKinsey Edition) plan specification |
 | `vault/` | The Obsidian second brain |
 | `vault/Architecture/` | Agentic OS design docs — agent/skill roster, Decision/Research/Forecasting layers, the 19-stage drafting pipeline, the implementation roadmap |

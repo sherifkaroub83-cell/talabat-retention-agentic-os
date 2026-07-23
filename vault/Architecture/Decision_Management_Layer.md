@@ -25,7 +25,7 @@ implements it.
 1. Repository Facts        vault/Knowledge/Facts/, Sources/   — disclosed, cited, immutable
 2. External Research        vault/Research/                    — sourced this project, dated, confidence-scored
 3. Forecasts                 vault/Forecasts/                   — derived, method-stated, scenario-tagged
-4. Management Decisions      vault/Decisions/Decision_Log/       — team/instructor judgment calls, dated, owned
+4. Management Decisions      vault/Decisions/Decision_Log/       — user/team judgment calls, dated, owned
 5. Business Plan              Outputs/                            — the only tier allowed to read from all four above
 ```
 
@@ -107,7 +107,7 @@ Why this option over the others.
 Which Assumption Register row(s) this creates/updates; which Business Plan section(s) it unblocks.
 
 ## Approval
-Team decisions may be marked `approved` by the OS owner. Decisions requiring instructor/team
+Team decisions may be marked `approved` by the OS owner. Decisions requiring user/team
 judgment beyond the OS owner's authority stay `proposed` until confirmed by the user — mirrors the
 vault's existing propose-then-approve convention for destructive edits.
 ```

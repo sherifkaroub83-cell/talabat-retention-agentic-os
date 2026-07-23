@@ -70,7 +70,7 @@ for the 12 newly-instrumented KPIs).
 > **ASM-015–028 appended 2026-07-23**, registered by `decision-steward` from `forecasting-agent`'s
 > Group-wide pass (`vault/Forecasts/Value_Driver_Tree_v2.md`, `vault/Forecasts/Scenarios_v2.md`) per
 > the forecast-builder skill's Step 5 hand-off. All fourteen rows are `Proposed`, not `Approved` — per
-> this register's own rule, none may be cited in new Business Plan content until an instructor/human
+> this register's own rule, none may be cited in new Business Plan content until a human/team
 > approval pass moves them to `Approved`. No drafting has yet run against the new capital-allocation
 > problem, so `Used in (BP sections)` is `TBD — Phase 9 pilot` for all fourteen.
 
@@ -80,7 +80,7 @@ for the 12 newly-instrumented KPIs).
 > [[DEC-009_investment-options-ranking-and-allocation-priority|DEC-009]] (status: `proposed`). All five
 > rows are `Proposed`, blocked from citation as `Approved` per this register's own rule that a
 > `proposed` Decision blocks any Assumption Register row it produced from being cited as `Approved`,
-> until `DEC-009` is resolved by the user/instructor.
+> until `DEC-009` is resolved by the user/team.
 
 ---
 

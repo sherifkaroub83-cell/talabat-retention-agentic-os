@@ -63,8 +63,9 @@ content, only their governing problem.
 ## 5. New Problem Charter
 
 `Problem_Charter.md` — talabat Group capital allocation across 8 markets, USD175mn 2026 programme.
-**Status: 🟡 Proposed, pending instructor re-approval** — this remains the single most important open
-item for the team (original charter submission was 26/07/2026; pivot occurred 23/07/2026).
+**Status: 🟢 Active — governing problem for the Agentic OS** (pivot occurred 23/07/2026;
+course-administration submission logistics, original date on file 26/07/2026, are tracked
+separately by the team and are not an OS gate).
 
 ## 6. Updated OS architecture summary
 
@@ -165,7 +166,7 @@ geography level. No disclosed AOV/basket-value figure at any geography level.
   Investment Options, and should the constructed allocation ranges be shown as a headline exhibit or
   held back as internal analysis (mirrors `DEC-008`'s resolution pattern)? Currently defaulted to the
   conservative treatment (narrative only) pending explicit direction.
-- **`ASM-015`–`033`** (19 rows, all Proposed): require an instructor/human approval pass before any
+- **`ASM-015`–`033`** (19 rows, all Proposed): require a human/team approval pass before any
   can be cited as settled in drafted content.
 - **Independent Pass 2 verification** of all 6 pilot sections (citation audit + QA incl. the 3 new
   gates) — not yet run; Section 2's Pass 1 self-check already found and fixed 3 real defects, which is
@@ -173,8 +174,6 @@ geography level. No disclosed AOV/basket-value figure at any geography level.
 - **Whether/when to resume full 14-section drafting** — this pivot's mandate was explicitly the
   6-section pilot only ("do not draft the entire Business Plan immediately"); resuming the other 8
   sections is a decision for the user, not this session.
-- **Instructor re-approval of the pivoted `Problem_Charter.md` itself** — still the single most
-  consequential open item, unresolved since the pivot began.
 
 ## See also
 `Problem_Charter.md` · `vault/Architecture/Repository_Impact_Assessment.md` ·

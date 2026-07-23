@@ -7,8 +7,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 > performance management for the 2026 USD 175 million investment programme* (Everyday App +
 > Food-leadership initiatives, across talabat's eight operating markets, Egypt included as a worked
 > example). Owner: Sherif Samy Karoub. See `MEMORY.md` for project facts, `Problem_Charter.md` for
-> the current problem statement (**status: proposed, pending instructor re-approval — see the charter
-> itself**), `vault/Architecture/Repository_Impact_Assessment.md` for why the pivot happened and what
+> the current problem statement (**status: Active — governing problem for the Agentic OS**),
+> `vault/Architecture/Repository_Impact_Assessment.md` for why the pivot happened and what
 > it touched, and `AI_Business_Plan_Template.md` for the graded 14-section GSB v2.0 (McKinsey
 > Edition) specification the final deliverable must follow — unchanged and immutable by this pivot;
 > draft against it using the `business-plan-drafting` skill (`.claude/skills/business-plan-drafting/`).
@@ -70,7 +70,7 @@ If you set up working directories, follow this convention:
 
 These persist across sessions — follow them unless the user says otherwise:
 
-- **Goal:** an instructor-approved **AI Business Plan** (GSB 14-section template v2.0, McKinsey Edition; 15–25 pages) recommending how talabat should allocate its 2026 USD 175 million investment programme across Everyday App and Food-leadership initiatives, plus the **OS structure document** (3–5 pages) and the **group presentation deck** (5 slides per member × 6). All exported to `Outputs/`. Due per course calendar; original charter submission 26/07/2026 to Dr. Hossam Daoud — **the pivoted charter's re-approval status is not yet resolved, see `Problem_Charter.md`.**
+- **Goal:** an **AI Business Plan** (GSB 14-section template v2.0, McKinsey Edition; 15–25 pages) recommending how talabat should allocate its 2026 USD 175 million investment programme across Everyday App and Food-leadership initiatives, plus the **OS structure document** (3–5 pages) and the **group presentation deck** (5 slides per member × 6). All exported to `Outputs/`. Due per course calendar; original charter submission 26/07/2026 — see `Problem_Charter.md` for the current governing problem statement.
 - **Write to McKinsey standards:** SCQA executive summary, Pyramid Principle, MECE breakdowns, hypothesis-driven analysis, value-driver-tree financials, figures grounded at the level talabat actually discloses them (Group, GCC, non-GCC, or country).
 - **Ground claims in the sources.** When synthesizing or writing deliverables, cite which source
   document(s) a point comes from; don't introduce outside facts as if they came from the corpus.

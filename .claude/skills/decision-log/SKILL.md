@@ -31,7 +31,7 @@ Used exclusively by `decision-steward`. Full design: `vault/Architecture/Decisio
    - **OS-owner-approvable** (a data-presentation call, e.g. "show both figures with a footnote"):
      may be marked `approved` directly — state that you're doing this and why it doesn't need
      escalation.
-   - **Needs user/instructor judgment** (a strategic framing choice, a prioritization among
+   - **Needs user/team judgment** (a strategic framing choice, a prioritization among
      candidate interventions, anything that changes the plan's actual recommendation): use
      AskUserQuestion before marking `approved`. Stays `proposed` until then.
 5. Register the resulting Assumptions Register row(s), tier = Decision, status matching the decision's

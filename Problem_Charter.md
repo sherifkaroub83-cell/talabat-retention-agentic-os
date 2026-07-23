@@ -1,14 +1,13 @@
 # Capstone Problem Charter — Group G02
 
-**Status:** 🟡 **PROPOSED — pivot pending instructor re-approval.** The problem statement below
-replaces the previously-approved Egypt-retention charter (see "Historical record" at the end of this
-document). Dr. Hossam Daoud approved the *prior* problem statement on 21/07/2026; that approval does
-not extend to this revised problem, and this charter must not be represented to the instructor, in any
-deliverable, as already approved. **Submission date on file: 26/07/2026** — re-approval, if sought,
-needs to happen before then or the submission timeline needs to be revisited with the instructor
-directly. This status line is the single most important thing for the team to resolve before final
-submission.
-**Instructor:** Dr. Hossam Daoud
+**Status:** 🟢 **Active — governing problem for the Agentic OS.** The problem statement below replaces
+the earlier Egypt-retention charter (see "Historical record" at the end of this document), which
+described a narrower, single-country framing. This charter is the current, operative scope for every
+active OS component — Decisions, Forecasts, KPIs, and the Business Plan content map all run against it.
+**Submission date on file: 26/07/2026.** Course-administration matters (formal submission packaging,
+grading, and any programme-level sign-off) are tracked separately by the team and are out of scope for
+the Agentic OS itself — the OS does not gate its own operation on them.
+**Course/programme:** AASTMT MBA, AI for Business Organizations Track — Dr. Hossam Daoud
 **Company:** Talabat Holding plc — Group level, across its eight operating markets (UAE, Kuwait,
 Qatar, Bahrain, Oman, Jordan, Iraq, Egypt); Egypt remains a relevant market and worked example, not
 the fixed scope of the whole plan.
@@ -23,10 +22,10 @@ the fixed scope of the whole plan.
 | Abdallah Mahmoud Abdo Ahmed | 24220430 | [assign] |
 
 *Roles per the project guide: OS Architect, Data & Research Lead, Business Plan Lead, Strategy & Risk
-Lead, Integration & Delivery Lead. Team size of 6 and the 30-slide (5×6) presentation format were
-instructor-approved for the prior problem statement (21/07/2026) — carried forward as an
-administrative fact, not re-litigated by this pivot; role assignment among the 6 members remains the
-one open Phase 1 item regardless of which problem statement is active.*
+Lead, Integration & Delivery Lead. Team size of 6 and the 30-slide (5×6) presentation format were set
+for the prior problem statement (21/07/2026) and carried forward as an administrative fact, unaffected
+by this pivot; role assignment among the 6 members remains the one open Phase 1 item regardless of
+which problem statement is active.*
 
 ---
 

@@ -18,7 +18,7 @@ into a Business Plan sentence.
    for a scenario choice, or the user directly for a strategic framing choice like build/buy/partner).
 3. Draft `vault/Decisions/Decision_Log/DEC-XXX_<slug>.md` from `_TEMPLATE-decision.md`, status
    `proposed`.
-4. If the decision requires judgment beyond the OS owner's authority (e.g. anything the instructor or
+4. If the decision requires judgment beyond the OS owner's authority (e.g. anything the user or
    team should weigh in on, not just a data-resolution call), use AskUserQuestion before marking it
    `approved`. Data-resolution calls the OS owner can make directly (e.g. "present both category-share
    figures with a footnote") may be marked `approved` without escalation — use judgment, and say

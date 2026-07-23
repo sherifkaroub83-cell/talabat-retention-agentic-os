@@ -13,7 +13,7 @@ Drafted by `decision-steward` as Stage 10-11 of `vault/Architecture/Business_Pla
 Part A (identify, rank, and range candidate investment options), per the Phase 9 pilot task brief. This
 session's available tools are `Read`, `Write`, `Edit`, `Glob` — `AskUserQuestion` is not available inside
 this subagent thread (the same runtime constraint documented at `DEC-003`, `DEC-005`, and `DEC-008`).
-Per the reasoning below, this decision is judged to cross the bar requiring real user/instructor
+Per the reasoning below, this decision is judged to cross the bar requiring real user/team
 confirmation for its core allocation-priority question, not just OS-owner data-presentation discretion —
 so it is logged here `status: proposed`, fully evidenced, with the options below ready for a real
 `AskUserQuestion` call (or equivalent direct confirmation) from the top-level session. Several **sub-parts
@@ -114,7 +114,7 @@ presentation calls within `decision-steward`'s own authority, and are marked `ap
 **Question:** "Five evidence-grounded candidate Investment Options now exist for the USD175mn 2026
 programme (`OPT-001`–`OPT-005`, compared in `DEC-009`). None of them are disclosed by talabat at this
 granularity — every allocation range attached to them is this OS's own constructed judgment. Two things
-need your (or the instructor/team's) confirmation before Decision Steward can mark this approved: (1)
+need your (or the team's) confirmation before Decision Steward can mark this approved: (1)
 should the plan actually commit to a funding sequence among these five options for the limited Section
 9/12 pilot draft, or should it present the ranked comparison without committing to a specific sequence;
 and (2) should the OS-constructed allocation ranges be shown in the Business Plan as a headline
@@ -135,7 +135,7 @@ recommendation, or held back as internal working analysis only (as `DEC-008` dec
 - **Option 3 — Middle path: show ranges as a labeled sensitivity/scenario exhibit, not the headline case.**
   Mirrors `DEC-008`'s Option 3 — the primary narrative stays qualitative/ranked, but the full
   five-option, base/upside/downside range table is shown in an appendix or footnoted sensitivity section.
-- **Option 4 — Other:** user/instructor proposes a different structure, or resolves the two sub-questions
+- **Option 4 — Other:** user/team proposes a different structure, or resolves the two sub-questions
   differently from each other (e.g., commit to a sequence but don't show ranges as headline numbers).
 
 ## Options considered
@@ -143,7 +143,7 @@ See "Escalation prompt" above (Options 1-4) — reproduced there as the prompt t
 restated separately, per `DEC-008`'s own precedent for preserving the escalation prompt verbatim.
 
 ## Decision
-**Not yet resolved.** Pending a real `AskUserQuestion` call (or equivalent direct user/instructor
+**Not yet resolved.** Pending a real `AskUserQuestion` call (or equivalent direct user/team
 confirmation) from the top-level session. The four sub-decisions listed under "Sub-decisions resolved
 directly" above are approved now, within `decision-steward`'s own authority; the funding-sequence and
 headline-presentation questions stay open.
@@ -173,7 +173,7 @@ before Section 9/12 drafting under the Phase 9 pilot begins, since Section 9/12'
 foundational choice this decision directly governs.
 
 ## Approval
-**Not approved.** Stays `proposed` pending real user/instructor confirmation via `AskUserQuestion` (or
+**Not approved.** Stays `proposed` pending real user/team confirmation via `AskUserQuestion` (or
 equivalent) from the top-level session, per the reasoning above. The four sub-decisions under
 "Sub-decisions resolved directly" are approved within this same file, marked individually — this is a
 split-authority record, not a single approved/unapproved decision, following `DEC-008`'s own precedent

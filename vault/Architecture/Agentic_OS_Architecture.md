@@ -115,7 +115,7 @@ section).
 - **Outputs:** a new `vault/Decisions/Decision_Log/DEC-XXX_<slug>.md`; an updated `vault/Decisions/Assumptions_Register.md` row; updates to the "Open decisions" list in the Project tracker.
 - **Skills used:** `decision-log` (new).
 - **Knowledge sources:** all four evidence tiers (Facts, Research Notes, Forecasts, prior Decisions).
-- **Interacts with:** every agent that surfaces an open question; the human user (decisions requiring instructor/team judgment are drafted as *proposed*, not *approved*, until the user confirms — mirrors the existing "propose-then-approve" vault convention).
+- **Interacts with:** every agent that surfaces an open question; the human user (decisions requiring user/team judgment are drafted as *proposed*, not *approved*, until the user confirms — mirrors the existing "propose-then-approve" vault convention).
 - **Success criteria:** every one of the plan's known open items (role assignment aside) has exactly one Decision record; no assumption enters a forecast or a plan section without an Assumption Register ID.
 
 ### 3.5 Evidence & Citation Agent (`evidence-citation-agent`)

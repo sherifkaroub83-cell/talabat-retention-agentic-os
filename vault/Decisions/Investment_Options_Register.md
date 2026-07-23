@@ -19,7 +19,7 @@ Section 2/4/5/9/12/13 pilot) and Stages 3/10/11 of `Business_Plan_Generation_Pip
 `decision-steward` has drawn five genuinely evidence-grounded candidate options from the Phase 3
 Topic Notes and Phase 5 Forecasting layer (`Investment_Relationship_Map.md`, `Value_Driver_Tree_v2.md`,
 `Scenarios_v2.md`) — not invented from nothing. Each is scored against the 11-criterion framework and
-compared in `DEC-009` (status: `proposed`, pending user/instructor confirmation on funding sequence and
+compared in `DEC-009` (status: `proposed`, pending user/team confirmation on funding sequence and
 headline-presentation questions). Every option's cost range is this OS's own proposed judgment
 (`ASM-029`–`ASM-033`, Decision tier, Low confidence, `Proposed` status), never a disclosed
 initiative-level figure — see each `OPT-` record's own "Cost" section.
@@ -43,7 +43,7 @@ capability candidates that do not map cleanly to either bucket alone.
 **Ranking and comparison:** see [[DEC-009_investment-options-ranking-and-allocation-priority|DEC-009]]
 for the full 11-criterion High/Medium/Low comparison table and written tiering — status `proposed`,
 not yet approved; the funding-sequence and headline-presentation questions require real user/
-instructor confirmation before this register's ranking can be cited as settled.
+team confirmation before this register's ranking can be cited as settled.
 
 ## See also
 - `vault/Architecture/Decision_Management_Layer.md` — schema and scoring framework

@@ -14,7 +14,7 @@ should allocate its 2026 USD175mn investment programme across Everyday App (~USD
 Food-leadership (~USD55mn) initiatives, Group-wide across its 8 operating markets (Egypt as a worked
 example, not the sole scope), written to the same GSB 14-section template v2.0 (McKinsey Edition),
 grounded claim-by-claim in `vault/Knowledge/`. See `Problem_Charter.md` for the full problem statement
-(**status: proposed, pending instructor re-approval**) and
+(**status: Active — governing problem for the Agentic OS**) and
 `vault/Architecture/Repository_Impact_Assessment.md` for why this tracker replaces
 `vault/Projects/Talabat-Egypt-AI-Retention-Business-Plan.md`, which is preserved, not deleted, as the
 historical record that the pipeline mechanics work end to end (all 14 of its sections reached ✅ Done
@@ -83,7 +83,7 @@ discipline, allocation logic, and template structure before any full-plan redraf
 
 ## Open decisions (needed before/while drafting)
 - `DEC-008` (approved 2026-07-23) — Section 9 headline case is base-case-only.
-- `ASM-015`–`ASM-028` remain `Proposed` — need an approval pass (instructor/team or documented
+- `ASM-015`–`ASM-028` remain `Proposed` — need an approval pass (human/team or documented
   OS-owner data-resolution, per `Decision_Management_Layer.md`) before any section cites them.
 - No `OPT-` Investment Options exist yet in `vault/Decisions/Investment_Options_Register.md` — these
   need to be proposed during drafting (Sections 9/12), not invented in advance.

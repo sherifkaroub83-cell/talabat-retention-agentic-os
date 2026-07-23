@@ -222,7 +222,7 @@ This skill's own procedure, run in full each invocation:
 - Footer: page number, "Draft — AASTMT MBA Capstone, Group G02" classification line, document date
 
 ### 4.12 Document control block (on the cover or a dedicated page 2)
-- Document title, version, status ("Draft — pending instructor submission" until the user says
+- Document title, version, status ("Draft — internal working copy" until the user says
   otherwise), prepared by/for, date, distribution note
 
 ### 4.13 Table of contents
