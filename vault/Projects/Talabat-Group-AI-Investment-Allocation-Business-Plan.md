@@ -71,7 +71,7 @@ old Egypt-retention problem and remain historical, not valid inputs to this trac
 | 3 | Market Analysis | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_03...` — 2 real issues (chained order-frequency figures, TAC/GMV arithmetic) found and fixed self-review; independent Pass 2 still required |
 | 4 | Value Proposition | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_04...` |
 | 5 | AI Technology and Development | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_05...` |
-| 6 | Business Model and Revenue Streams | ⬜ Not started | |
+| 6 | Business Model and Revenue Streams | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_06...` — flags a new Facts/Revenue.md reconciliation candidate (TLB-019 p.13 fee-mix range vs. TLB-011/advertising figures), not used, not force-reconciled; independent Pass 2 still required |
 | 7 | Marketing and Sales Strategy | ⬜ Not started | |
 | 8 | Operations Plan | ⬜ Not started | |
 | 9 | Financial Plan | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_09...` — headline case resolved by [[DEC-008_section9-headline-bucket-split-presentation\|DEC-008]]: base case only; funding sequence per [[DEC-009_investment-options-ranking-and-allocation-priority\|DEC-009]] |
