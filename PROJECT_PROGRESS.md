@@ -3,17 +3,25 @@
 Living status of the project. Update whenever a milestone moves. `SESSION_LOG.md` captures the
 day-to-day detail; this file is the high-level snapshot.
 
-**Last updated:** 2026-07-22
-**Overall status:** 🟢 Phase 1 — charter **approved** by Dr. Hossam Daoud (team of 6, 30-slide presentation confirmed); role assignment among the 6 members is the one remaining Phase 1 item. Phase 3 data ingestion and semantic knowledge layer complete. **OS Architecture Version 2 live and operationally confirmed across all four planned pilots — Pilot Validation Plan complete.** Pilot 1 (Section 3) validated most of the Version 1 design and surfaced the agent-delegation finding that produced v2's Change 1 fix; Pilot 2 (Section 2) confirmed Change 1 works and found a second runtime constraint (`AskUserQuestion` unavailable to subagents); Pilot 3 (Section 9) exercised the Forecast Layer for the first time and produced the project's first fail/fix/independently-re-verified cycle. **Pilot 4 was redefined mid-flight, on explicit instruction, from a narrow two-pass-QA test into a full-system operational-stability question — the OS was found stable** (see `vault/Validation/Pilot4_System_Stability_Report.md`): 17 real `Agent` invocations this session, zero failures, zero pipeline-gate violations, zero content contradictions; the one recurring gap (repository-hygiene discipline) is process, not architecture. Section 10 (Risk Analysis) itself went through the most rigorous verification of any section — a citation-audit fail/fix/re-verify cycle, then two genuinely independent QA passes that both failed and diverged (Pass 2 caught an internal MECE contradiction Pass 1 missed), then a combined fix and final re-verify. **4 of 14 Business Plan sections drafted, all four ✅ Done (independently verified except Section 3, which is self-reviewed + independently re-verified on one point).** With all four pilots retired, Phase 8 of the roadmap (drafting the remaining 10 sections) can now begin.
+**Last updated:** 2026-07-23
+**Overall status:** 🟡 **Strategic pivot in progress.** All 14 Business Plan sections were completed, verified, and published under the original Egypt-retention problem (see the milestone table and artifacts below — that work is preserved as historical record, not discarded). On 2026-07-23, the governing problem was pivoted to Group-wide 2026 investment-programme capital allocation, per direct evidence that the corpus supports Group-level analysis far better than Egypt-specific analysis (every Egypt forecast node was capped at Low confidence). **New Problem Charter status: proposed, pending instructor re-approval** — see `Problem_Charter.md`. Architecture pivot Phase 1 (impact assessment) and Phase 2 (charter/identity/memory) are done; Phases 3–9 (knowledge reorientation, Decision/Investment Portfolio layer, Forecast/KPI layer rebuild, agent/skill updates, pipeline/QA gates, consistency audit, pilot run) are tracked as remaining work. See `vault/Architecture/Repository_Impact_Assessment.md` for the full map.
 
 ---
 
 ## Goal
 
 Produce an instructor-approved **AI Business Plan** (GSB 14-section, McKinsey Edition, 15–25 pages)
-recommending AI-driven customer retention for talabat Egypt, grounded in the `Input_Data/` corpus —
-plus the OS structure document (3–5 pages) and the group presentation (5 slides × 6 members).
-Group G02 · Dr. Hossam Daoud · charter submission 26/07/2026.
+recommending how talabat should allocate its 2026 USD 175 million investment programme across
+Everyday App and Food-leadership initiatives, grounded in the `Input_Data/` corpus — plus the OS
+structure document (3–5 pages) and the group presentation (5 slides × 6 members).
+Group G02 · Dr. Hossam Daoud · original charter submission 26/07/2026 (re-approval status for the
+pivoted problem not yet resolved — see `Problem_Charter.md`).
+
+**Note on the milestone table below:** it narrates how the Agentic OS was built and proven
+operationally stable under the *original* problem — that history is accurate and preserved
+unchanged. The problem those milestones served has since been superseded; see the pivot note above
+and `vault/Architecture/Repository_Impact_Assessment.md` for what carries forward unchanged (the OS
+mechanics) versus what is now historical (the Egypt-retention content itself).
 
 ## Milestones (mapped to the capstone's five phases)
 

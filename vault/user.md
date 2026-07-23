@@ -18,8 +18,10 @@ source: "Activation interview, 20 July 2026"
 ## Professional identity
 MBA student at the Arab Academy for Science, Technology & Maritime Transport (AASTMT), Graduate
 School of Business. Running the full capstone project — OS build, corpus, business plan, and
-delivery — for Group G02's Talabat Egypt retention engagement, with five teammates whose formal
-roles are being finalized.
+delivery — for Group G02's talabat capital-allocation engagement (2026 investment-programme
+allocation across talabat's eight operating markets; originally scoped as an Egypt-retention
+engagement, pivoted 23/07/2026 — see `Problem_Charter.md`), with five teammates whose formal roles
+are being finalized.
 
 ## Core expertise
 - Track coursework: AI concepts & prompt engineering (AIB901), analytics & data-driven decisions

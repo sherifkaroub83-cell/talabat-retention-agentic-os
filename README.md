@@ -1,11 +1,18 @@
 # talabat-retention-agentic-os
 
-**MBA Agentic OS Capstone Project** (AASTMT, AI for Business Organizations track, Group G02) — an
-AI-driven Agentic Operating System built around one problem: **customer retention and Customer
-Lifetime Value for talabat Egypt.** Problem statement approved by Dr. Hossam Daoud, 21/07/2026 —
-see [`Problem_Charter.md`](Problem_Charter.md). Project facts and current status:
-[`MEMORY.md`](MEMORY.md) · [`PROJECT_PROGRESS.md`](PROJECT_PROGRESS.md). Start browsing the
-knowledge base at [`vault/MOC/Talabat MOC.md`](vault/MOC/Talabat%20MOC.md).
+**MBA Agentic OS Capstone Project** (AASTMT, AI for Business Organizations track, Group G02) — a
+**talabat AI-Enabled Investment Allocation Agentic OS**: an AI-driven Agentic Operating System built
+around one problem: **how talabat should allocate its 2026 USD 175 million investment programme
+across Everyday App and Food-leadership initiatives to maximise profitable growth, customer lifetime
+value, retention, and long-term platform economics across its eight operating markets.** The
+repository name (`talabat-retention-agentic-os`) is now historical — it reflects the project's
+original, narrower Egypt-retention framing (approved by Dr. Hossam Daoud, 21/07/2026) before the
+2026-07-23 pivot to this broader, better-evidenced capital-allocation problem; the repository itself
+was not renamed. Current problem statement: [`Problem_Charter.md`](Problem_Charter.md) (**status:
+proposed, pending instructor re-approval**). Why the pivot happened and what it touched:
+[`vault/Architecture/Repository_Impact_Assessment.md`](vault/Architecture/Repository_Impact_Assessment.md).
+Project facts and current status: [`MEMORY.md`](MEMORY.md) · [`PROJECT_PROGRESS.md`](PROJECT_PROGRESS.md).
+Start browsing the knowledge base at [`vault/MOC/Talabat MOC.md`](vault/MOC/Talabat%20MOC.md).
 
 This repository is built on the **Agentic Second-Brain OS** template (below): a Claude-Code-native
 scaffold that turns a document corpus into a cross-linked knowledge vault and carries the work to a
@@ -141,7 +148,7 @@ interviews, or course material — the flow is identical.
 | `template_Activate.md` | Activation interview + setup runbook (for Claude) |
 | `CLAUDE.md` | Auto-loaded project instructions |
 | `MEMORY.md` / `PROJECT_PROGRESS.md` / `SESSION_LOG.md` | Memory · milestones · session log |
-| `Problem_Charter.md` | The approved G02 problem statement |
+| `Problem_Charter.md` | G02's current problem statement (proposed, pending instructor re-approval — see the charter) |
 | `AI_Business_Plan_Template.md` | The graded 14-section GSB v2.0 (McKinsey Edition) plan specification |
 | `vault/` | The Obsidian second brain |
 | `vault/Architecture/` | Agentic OS design docs — agent/skill roster, Decision/Research/Forecasting layers, the 11-stage drafting pipeline, the implementation roadmap |

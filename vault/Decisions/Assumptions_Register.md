@@ -1,10 +1,19 @@
 ---
 type: register
 status: active
+note: "All 14 rows below (ASM-001 through ASM-014) are Superseded as of 2026-07-23 — see the row-level note. The register mechanism itself remains active for the new capital-allocation problem's assumptions."
 created: "2026-07-21"
+updated: "2026-07-23"
 ---
 
 # Assumptions Register
+
+> **All 14 existing rows Superseded, 2026-07-23.** Every row below was built for the original
+> Egypt-retention problem (most depend directly on `DEC-003`'s governing hypothesis, itself
+> superseded). Preserved in place as historical record, not deleted — do not cite any `ASM-001`–`014`
+> row in new capital-allocation content. New assumption rows for the new problem will be appended
+> below the existing table with fresh IDs (`ASM-015` onward), not mixed into rows describing the old
+> problem. See `Problem_Charter.md` and `vault/Architecture/Repository_Impact_Assessment.md`.
 
 Single source of truth for every assumption used anywhere downstream of the raw corpus (a forecast
 growth rate, an adopted market-size figure, a funnel-conversion estimate, a resolved-conflict

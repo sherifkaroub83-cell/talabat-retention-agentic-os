@@ -2,15 +2,22 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-> **Activated 20 July 2026** for the AASTMT MBA capstone, Group G02: *Talabat Egypt — AI-driven
-> customer retention*. Owner: Sherif Samy Karoub. See `MEMORY.md` for project facts,
-> `Problem_Charter.md` for the approved problem statement, and `AI_Business_Plan_Template.md` for
-> the graded 14-section GSB v2.0 (McKinsey Edition) specification the final deliverable must follow
-> — draft against it using the `business-plan-drafting` skill (`.claude/skills/business-plan-drafting/`).
+> **Activated 20 July 2026** for the AASTMT MBA capstone, Group G02. **Pivoted 23 July 2026** from
+> the original Egypt-only retention problem to: *talabat Group — AI-enabled capital allocation and
+> performance management for the 2026 USD 175 million investment programme* (Everyday App +
+> Food-leadership initiatives, across talabat's eight operating markets, Egypt included as a worked
+> example). Owner: Sherif Samy Karoub. See `MEMORY.md` for project facts, `Problem_Charter.md` for
+> the current problem statement (**status: proposed, pending instructor re-approval — see the charter
+> itself**), `vault/Architecture/Repository_Impact_Assessment.md` for why the pivot happened and what
+> it touched, and `AI_Business_Plan_Template.md` for the graded 14-section GSB v2.0 (McKinsey
+> Edition) specification the final deliverable must follow — unchanged and immutable by this pivot;
+> draft against it using the `business-plan-drafting` skill (`.claude/skills/business-plan-drafting/`).
 > **Before drafting any section**, read `vault/Architecture/Agentic_OS_Architecture.md` — the
 > capstone's primary product is the Agentic OS itself, not the plan (the plan is one execution of
 > it). Drafting runs through an 11-stage pipeline (`vault/Architecture/Business_Plan_Generation_Pipeline.md`)
-> via the `bp-orchestrator` agent, not free-form writing.
+> via the `bp-orchestrator` agent, not free-form writing, and must pass the Problem Consistency,
+> Financial Integrity, and Geographic Evidence gates (see `vault/Architecture/Agentic_OS_Architecture.md`)
+> plus the Template Compliance Gate before any publication step.
 
 ## What this project is
 
@@ -62,23 +69,22 @@ If you set up working directories, follow this convention:
 
 These persist across sessions — follow them unless the user says otherwise:
 
-- **Goal:** an instructor-approved **AI Business Plan** (GSB 14-section template v2.0, McKinsey Edition; 15–25 pages) recommending an AI-driven customer-retention strategy for talabat Egypt, plus the **OS structure document** (3–5 pages) and the **group presentation deck** (5 slides per member × 6). All exported to `Outputs/`. Due per course calendar; charter submission 26/07/2026 to Dr. Hossam Daoud.
-- **Write to McKinsey standards:** SCQA executive summary, Pyramid Principle, MECE breakdowns, hypothesis-driven analysis, value-driver-tree financials, MENA-grounded market figures.
+- **Goal:** an instructor-approved **AI Business Plan** (GSB 14-section template v2.0, McKinsey Edition; 15–25 pages) recommending how talabat should allocate its 2026 USD 175 million investment programme across Everyday App and Food-leadership initiatives, plus the **OS structure document** (3–5 pages) and the **group presentation deck** (5 slides per member × 6). All exported to `Outputs/`. Due per course calendar; original charter submission 26/07/2026 to Dr. Hossam Daoud — **the pivoted charter's re-approval status is not yet resolved, see `Problem_Charter.md`.**
+- **Write to McKinsey standards:** SCQA executive summary, Pyramid Principle, MECE breakdowns, hypothesis-driven analysis, value-driver-tree financials, figures grounded at the level talabat actually discloses them (Group, GCC, non-GCC, or country).
 - **Ground claims in the sources.** When synthesizing or writing deliverables, cite which source
   document(s) a point comes from; don't introduce outside facts as if they came from the corpus.
+- **Never mix evidence categories.** Facts (disclosed), analytical inferences (reasoned from facts), decisions (approved strategic choices), assumptions (undisclosed planning inputs), forecasts (scenario outputs), and synthetic examples (illustrative only) are distinct and must never be blended or presented as one another — never a Group-level metric as country-specific, never an assumption as a fact, never a historical uplift as a guaranteed future result.
 - **Synthetic data is allowed only as a clearly-labeled last resort.** Where proprietary operational
-  data is genuinely unavailable (e.g. individual-customer churn/feedback records), synthetic data or
-  primary research (surveys/interviews) may be used to illustrate the retention framework — but must
+  data is genuinely unavailable (e.g. individual-customer-level data), synthetic data or
+  primary research (surveys/interviews) may be used to illustrate a framework — but must
   be explicitly labeled as such wherever it appears, and never presented as, or blended with, real
   disclosed company data. (Decision recorded 21/07/2026, revised problem charter.)
-- **Scope: Egypt is the target market; MENA is backdrop context only.** The Agentic OS integrates
-  information at the MENA-company level (talabat operates across 8 countries), but the deliverable
-  analysis, retention strategy, and business plan stay scoped to talabat Egypt. Don't broaden the
-  actual recommendation beyond Egypt without an explicit instruction to do so.
+- **Scope: talabat Group across its eight operating markets, evidence used at the level it's actually reported.** Egypt remains a genuine worked example (the corpus's richest single-country data point) but is not the boundary of the analysis. Never use "MENA" as a stand-in for talabat's own market set where a more precise label (Group, GCC, non-GCC, or a named country) is available — see the Geographic Evidence Rules in `vault/Architecture/Agentic_OS_Architecture.md`.
 - **Write generated artifacts to `Outputs/`**, never into `Input_Data/`. Create `Outputs/` if absent.
 - **Extract before reading** — get text/Markdown first; never read the binaries as raw text.
 - **Propose, don't execute, on destructive vault work** — hand the user a changelist to approve
-  before merges/deletes/rewrites of their notes.
+  before merges/deletes/rewrites of their notes. Superseded content (see the 2026-07-23 pivot) is
+  marked, never deleted.
 - This file is project-scoped memory: when a durable project decision or convention is established,
   record it here so future sessions inherit it.
 

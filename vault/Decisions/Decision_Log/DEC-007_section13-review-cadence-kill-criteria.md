@@ -1,6 +1,8 @@
 ---
 id: DEC-007
-status: approved
+status: superseded
+superseded_date: "2026-07-23"
+superseded_reason: "Pivot to Group-wide capital-allocation problem — see Problem_Charter.md and vault/Architecture/Repository_Impact_Assessment.md"
 date: "2026-07-22"
 owner: decision-steward (agent) — monitoring/evaluation-methodology call, approved without user escalation
 supersedes: none

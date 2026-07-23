@@ -1,12 +1,19 @@
 ---
 type: project
-status: active
+status: superseded
+superseded_by: "Problem_Charter.md (pivoted 2026-07-23) — new project tracker to be created under the capital-allocation problem"
 owner: "Sherif Samy Karoub (G02)"
 started: "2026-07-20"
-updated: "2026-07-22"
+updated: "2026-07-23"
 ---
 
-# Project — Talabat Egypt AI Retention Business Plan
+> **SUPERSEDED 2026-07-23.** This tracker, and all 14 section drafts it tracks, were built against
+> the original Egypt-retention problem — superseded per `Problem_Charter.md`'s pivot to Group-wide
+> capital allocation. Preserved in full below as the historical record that all 14 sections reached
+> ✅ Done (independently verified) at least once, proving the pipeline mechanics work end to end. Not
+> an active input to the new pipeline. See `vault/Architecture/Repository_Impact_Assessment.md`.
+
+# Project — Talabat Egypt AI Retention Business Plan (historical — superseded 2026-07-23)
 
 The G02 capstone deliverable: a 15–25 page **AI Business Plan** recommending AI-driven customer
 retention for talabat Egypt, written to the GSB 14-section template v2.0 (McKinsey Edition),

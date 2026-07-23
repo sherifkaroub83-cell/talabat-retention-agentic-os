@@ -6,14 +6,26 @@ decision, convention, or fact is established.
 ## What this project is
 
 AASTMT MBA capstone (AI for Business Organizations track), **Group G02**, instructor **Dr. Hossam
-Daoud**. The team stands up an Agentic OS around one business problem — **customer retention for
-talabat Egypt** — and uses it to produce an AI Business Plan (GSB 14-section template v2.0,
-McKinsey Edition, 15–25 pages), an OS structure document (3–5 pages), and a group presentation
-(5 slides per member). Problem: talabat Egypt's price-crushed, low-switching-cost customers (71.9%
-food inflation, 38% devaluation) are exposed to Breadfast, Rabbit, and elmenus; the plan argues for
-AI-driven retention — churn prediction, personalized offers, t pro subscription targeting — in
-Greater Cairo. Charter: `Problem_Charter.md` — **✅ approved by Dr. Hossam Daoud, 21/07/2026**
-(team of 6 and a 30-slide group presentation approved alongside the problem statement).
+Daoud**. The team stands up an Agentic OS around one business problem and uses it to produce an AI
+Business Plan (GSB 14-section template v2.0, McKinsey Edition, 15–25 pages), an OS structure document
+(3–5 pages), and a group presentation (5 slides per member).
+
+**Current problem (pivoted 23/07/2026 — status: proposed, pending instructor re-approval):** how
+should talabat allocate its 2026 USD 175 million investment programme (≈USD 120m Everyday App +
+≈USD 55m Food-leadership) across initiatives and markets to maximise profitable growth, customer
+lifetime value, retention, and long-term platform economics across its eight operating markets?
+Egypt remains a genuine worked example (the corpus's richest single-country data point) but is no
+longer the fixed scope. Charter: `Problem_Charter.md`. Why the pivot happened and what it touched:
+`vault/Architecture/Repository_Impact_Assessment.md`.
+
+**Original problem (approved by Dr. Hossam Daoud, 21/07/2026, team of 6 and a 30-slide group
+presentation approved alongside it — administrative approvals carried forward unchanged by the
+pivot):** AI-driven customer retention for talabat Egypt specifically — churn prediction,
+personalized offers, t pro subscription targeting, in a market of price-crushed, low-switching-cost
+customers (71.9% food inflation, 38% devaluation) exposed to Breadfast, Rabbit, and elmenus. Superseded
+23/07/2026 because the corpus disclosed far weaker Egypt-specific evidence than Group-level evidence —
+see the Repository Impact Assessment for the full finding. Preserved below as historical record, not
+rewritten.
 
 ## Team (Group G02)
 
@@ -280,6 +292,30 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
   Successfully Validated Design confirmations. **All four Pilot Validation Plan pilots now complete —
   Phase 8 of the roadmap (drafting the remaining 10 sections) can begin.** Work done on branch
   `feature/bp-pilot-sections`, not merged to `main`.
+
+- 2026-07-22/23 — **Sections 4–14 and 1 drafted, citation-audited, and QA-reviewed to ✅ Done
+  (independently verified)** — all 14 Business Plan sections complete under the original Egypt-
+  retention problem. A whole-plan McKinsey Lens pressure test passed (PASS WITH MINOR FIXES, both
+  fixes applied). Published to `Outputs/` twice: the full 82-page citation-complete edition, then a
+  23-page board-ready executive edition. A real structural-compliance gap was found in the executive
+  edition (14 template sections collapsed to 12) — corrected by introducing the **Template Compliance
+  Gate** (`.claude/skills/template-compliance-gate/SKILL.md`), a validation-only gate now required
+  before any Publication Layer activity. See `vault/Validation/` for the full audit trail and
+  `vault/Architecture/Publication_Layer.md` for the gate's design and retrospective.
+- 2026-07-23 — **Strategic pivot, Phase 1–2: repository-wide impact assessment and Problem Charter
+  rewrite.** Direct inspection of `vault/Forecasts/Value_Driver_Tree.md` found every Egypt-specific
+  forecast node capped at Low confidence — the corpus has almost no disclosed Egypt-specific customer/
+  GMV/order data, while Group-level and market-comparison evidence is extensive and disclosed. Per
+  explicit instruction, pivoted the governing problem to Group-wide 2026 USD175m investment-programme
+  capital allocation (see the new "Current problem" note above and `Problem_Charter.md`). Impact map:
+  `vault/Architecture/Repository_Impact_Assessment.md` — ~220+ files (raw ingestion, Facts, Entities,
+  most Topics, most skills/agents) confirmed problem-agnostic, unchanged; ~50 files (all Decisions,
+  Assumptions, Research Notes, Business Plan drafts, Validation records, both Output pairs) marked
+  Superseded, preserved as historical record, not deleted or rewritten. **New charter status:
+  Proposed, not instructor-approved** — this is the single open item requiring the user's/team's
+  decision before final submission (original submission date on file: 26/07/2026). Architecture
+  Phases 3–9 (knowledge reorientation, Decision/Portfolio layer, Forecast/KPI layer, agents/skills,
+  pipeline/QA gates, consistency audit, pilot run) are tracked as remaining work, not yet complete.
 
 ## Session log
 
