@@ -24,12 +24,18 @@ into a Business Plan sentence.
    figures with a footnote") may be marked `approved` without escalation — use judgment, and say
    which you're doing.
 5. Register the resulting Assumptions Register row(s) with the correct tier and confidence.
-6. Update the "Open decisions" list in `vault/Projects/Talabat-Egypt-AI-Retention-Business-Plan.md`.
+6. Update the "Open decisions" list in
+   `vault/Projects/Talabat-Group-AI-Investment-Allocation-Business-Plan.md` (the active tracker as of
+   the 2026-07-23 pivot — the old `Talabat-Egypt-AI-Retention-Business-Plan.md` tracker is superseded).
+7. **(Added 2026-07-23)** If the question concerns a candidate capital-allocation choice rather than a
+   one-off judgment call, use the Investment Option schema instead (or in addition) —
+   `vault/Architecture/Decision_Management_Layer.md`'s "Investment Option" section — and register it
+   in `vault/Decisions/Investment_Options_Register.md`, not just the Decision Log.
 
 ## Rules
-- Never resolve a documented internal discrepancy (Egypt category-share, the 2026 investment total,
-  the Subscription-line reclassification) by silently picking a number — every resolution gets a
-  Decision record, even if the resolution is "present both, footnoted."
+- Never resolve a documented internal discrepancy (a market-size or category-share figure, a
+  disclosed-total reconciliation, a revenue-line reclassification) by silently picking a number —
+  every resolution gets a Decision record, even if the resolution is "present both, footnoted."
 - A Decision's `status: proposed` blocks any Assumption Register row it produced from being cited as
   `Approved` — the Evidence & Citation Agent checks this.
 - One decision per file; if a later decision changes an earlier one, create a new file and set

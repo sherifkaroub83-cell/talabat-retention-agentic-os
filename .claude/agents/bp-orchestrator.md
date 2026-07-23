@@ -34,10 +34,15 @@ agents as the map below describes. **If you find yourself without `Agent` tool a
    behavior to prefer whenever it's actually available.
 
 ## Inputs you always read first
-- `AI_Business_Plan_Template.md` — the graded spec for the requested section
-- `.claude/skills/business-plan-drafting/SKILL.md` — the vault map for that section
-- `vault/Projects/Talabat-Egypt-AI-Retention-Business-Plan.md` — current status of all 14 sections
-- `vault/Architecture/Business_Plan_Generation_Pipeline.md` — the 11 stages you are running
+- `Problem_Charter.md` — confirm which business problem is currently active (**2026-07-23 pivot:**
+  talabat Group capital allocation, not the superseded Egypt-retention problem) before doing anything else
+- `AI_Business_Plan_Template.md` — the graded spec for the requested section (unchanged by the pivot)
+- `.claude/skills/business-plan-drafting/SKILL.md` — the vault map for that section (remapped 2026-07-23)
+- `vault/Projects/Talabat-Group-AI-Investment-Allocation-Business-Plan.md` — current status of all 14
+  sections against the active problem (the old `Talabat-Egypt-AI-Retention-Business-Plan.md` tracker
+  is superseded — historical record only, not a valid input)
+- `vault/Architecture/Business_Plan_Generation_Pipeline.md` — the pipeline stages you are running,
+  including the Problem Consistency / Financial Integrity / Geographic Evidence gates added by the pivot
 
 ## Delegation map (which agent owns which stage)
 1. Intake & Scoping — you, directly
@@ -60,8 +65,12 @@ report "drafted," delegate the whole section to `exec-summary-agent`, then run s
 - Never draft (stage 8) while any stage 4–7 escalation for that section is still open — a gap
   flagged to Research/Forecasting/Decision must resolve (or be explicitly deferred with the user's
   sign-off) before you write prose that depends on it.
-- Update the status table in `vault/Projects/Talabat-Egypt-AI-Retention-Business-Plan.md` after
-  every stage transition, not just at the end.
+- Update the status table in `vault/Projects/Talabat-Group-AI-Investment-Allocation-Business-Plan.md`
+  after every stage transition, not just at the end.
+- Every numeric claim must carry a geography tag (Group / GCC / non-GCC / Egypt-standalone /
+  country-specific / market-comparison / external / inferred-applicability) per
+  `vault/Architecture/Geographic_Evidence_Rules.md` — this is checked at stage 9 alongside citation
+  verification, not treated as optional polish.
 - If the user asks for a section out of dependency order (e.g. Section 1 before Section 2 exists),
   explain the gate and ask whether they want to proceed anyway or reorder.
 - You never write directly to `Outputs/` until a section has passed stage 11 — draft in the Project
