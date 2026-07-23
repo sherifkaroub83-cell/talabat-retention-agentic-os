@@ -45,51 +45,53 @@ against the old problem).
   Leadership, Multi-Verticality, Grocery and Retail, Customer Economics, FinTech, GCC vs non-GCC,
   EBITDA, Cash Generation, Capital Allocation and Investment Governance, plus the pre-existing
   Customer Lifetime Value)
-- `ASM-015`–`ASM-028` in `vault/Decisions/Assumptions_Register.md` (all `Proposed`, pending approval
-  before citation) and `DEC-008` (approved 2026-07-23 — Section 9's headline case is base-case-only,
-  the Everyday App/Food-leadership split argued narratively, not as a quantified sub-case)
+- `ASM-015`–`ASM-033` in `vault/Decisions/Assumptions_Register.md` (all `Approved` as of 2026-07-23),
+  `DEC-008` (approved 2026-07-23 — Section 9's headline case is base-case-only, the Everyday App/
+  Food-leadership split argued narratively, not as a quantified sub-case), `DEC-009` (approved
+  2026-07-23, middle path — recommended funding sequence stated narratively; `OPT-001`–`005` allocation
+  ranges shown only as a labeled sensitivity/appendix exhibit, never a headline financial commitment)
 
 ## Status
 
-🟡 **Architecture pivot in progress (Phases 1–7 of 9 complete as of 2026-07-23)** — see
-`vault/Architecture/Repository_Impact_Assessment.md` for the full phase plan. **No Business Plan
-drafting has occurred yet against this new problem** — the 14 section drafts under
-`vault/Projects/Business_Plan_Drafts/` still reflect the old Egypt-retention problem and are not valid
-inputs to this tracker (they are historical, not superseded-and-updated). Per the pivot's own
-instructions, drafting will not resume broadly — it will first run a **limited pilot** on Sections 2,
-4, 5, 9, 12, and 13 only (Phase 9 of the pivot roadmap), to validate problem framing, evidence
-discipline, allocation logic, and template structure before any full-plan redraft.
+🟡 **Pivot architecture complete; Business Plan drafting partially underway (updated 2026-07-23,
+Final Execution Readiness pass — this section had gone stale after the Phase 9 pilot actually ran and
+was not previously updated to reflect it).** **6 of 14 sections are drafted** under
+`vault/Projects/Business_Plan_Drafts_v2/` (Sections 2, 4, 5, 9, 12, 13 — the Phase 9 pilot), each
+`status: Drafted — self-reviewed, not yet independently verified` in its own frontmatter; none has
+passed independent Pass 2 QA or the Problem Consistency/Financial Integrity/Geographic Evidence gates
+yet. The 14 section drafts under `vault/Projects/Business_Plan_Drafts/` (no `_v2` suffix) reflect the
+old Egypt-retention problem and remain historical, not valid inputs to this tracker.
 
 ## 14-section checklist (GSB Template v2.0 — status against the new problem)
 
 | # | Section | Status | Notes |
 |---|---|---|---|
 | 1 | Executive Summary (SCQA) | ⬜ Not started | Gated on all other 13 per template convention |
-| 2 | Business Description | ⬜ Not started | Pilot section (Phase 9 of pivot roadmap) |
+| 2 | Business Description | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_02...` — citation audit found 3 hard failures, fixed and self-verified; independent Pass 2 still required |
 | 3 | Market Analysis | ⬜ Not started | |
-| 4 | Value Proposition | ⬜ Not started | Pilot section |
-| 5 | AI Technology and Development | ⬜ Not started | Pilot section |
+| 4 | Value Proposition | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_04...` |
+| 5 | AI Technology and Development | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_05...` |
 | 6 | Business Model and Revenue Streams | ⬜ Not started | |
 | 7 | Marketing and Sales Strategy | ⬜ Not started | |
 | 8 | Operations Plan | ⬜ Not started | |
-| 9 | Financial Plan | ⬜ Not started | Pilot section — headline case resolved by [[DEC-008_section9-headline-bucket-split-presentation\|DEC-008]]: base case only |
+| 9 | Financial Plan | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_09...` — headline case resolved by [[DEC-008_section9-headline-bucket-split-presentation\|DEC-008]]: base case only; funding sequence per [[DEC-009_investment-options-ranking-and-allocation-priority\|DEC-009]] |
 | 10 | Risk Analysis | ⬜ Not started | |
 | 11 | CSR & Responsible AI | ⬜ Not started | Must incorporate the Responsible-AI principle that capital-allocation recommendations require human approval, never presented as an automatic management decision |
-| 12 | Implementation Plan (Three Horizons) | ⬜ Not started | Pilot section |
-| 13 | Monitoring and Evaluation (KPIs) | ⬜ Not started | Pilot section — sourced from `KPI_Tree_v2.md`'s 50 KPIs |
-| 14 | Appendices + traceability note | ⬜ Not started | |
+| 12 | Implementation Plan (Three Horizons) | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_12...` |
+| 13 | Monitoring and Evaluation (KPIs) | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_13...` — sourced from `KPI_Tree_v2.md`'s 50 KPIs |
+| 14 | Appendices + traceability note | ⬜ Not started | Designated home for `DEC-009`'s allocation-range sensitivity exhibit once written |
 
 **Legend:** ✅ Done (independently verified) · 🟡 Drafted, needs verification · ⬜ Not started
 
 ## Open decisions (needed before/while drafting)
-- `DEC-008` (approved 2026-07-23) — Section 9 headline case is base-case-only.
-- `ASM-015`–`ASM-028` remain `Proposed` — need an approval pass (human/team or documented
-  OS-owner data-resolution, per `Decision_Management_Layer.md`) before any section cites them.
-- No `OPT-` Investment Options exist yet in `vault/Decisions/Investment_Options_Register.md` — these
-  need to be proposed during drafting (Sections 9/12), not invented in advance.
-- Whether the Business Plan's headline recommendation should present a specific allocation split
-  within each bucket, or stay at the bucket level with market-level ranges — an open framing question
-  for Section 9/12 drafting, not yet decided.
+- `DEC-008` (approved 2026-07-23) — Section 9 headline case is base-case-only. **Resolved.**
+- `DEC-009` (approved 2026-07-23, middle path) — funding sequence stated narratively; allocation ranges
+  never a headline exhibit. **Resolved.**
+- `ASM-015`–`ASM-033` — all `Approved` as of 2026-07-23. **Resolved.**
+- `OPT-001`–`005` exist in `vault/Decisions/Investment_Options_Register.md`. **Resolved.**
+- **No open decisions currently block continued drafting.** Next actions: (1) draft the 8 remaining
+  sections (1, 3, 6, 7, 8, 10, 11, 14); (2) run independent Pass 2 citation audit + QA review (incl. the
+  three new gates) on all 6 existing sections, none of which has passed it yet.
 
 ## Links
 - [[Agentic_OS_Architecture]] · [[Business_Plan_Generation_Pipeline]] · [[Investment_Relationship_Map]] ·

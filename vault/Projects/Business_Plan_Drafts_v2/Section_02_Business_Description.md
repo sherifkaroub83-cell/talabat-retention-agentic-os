@@ -15,14 +15,22 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > `vault/Knowledge/Topics/Capital Allocation and Investment Governance.md`, and
 > `vault/Knowledge/Topics/2026 Investment Programme.md`, per
 > `.claude/skills/business-plan-drafting/SKILL.md`'s remapped Section 2 entry. The governing hypothesis
-> below draws on `vault/Decisions/Investment_Options/OPT-001`–`005` and `DEC-009` (status: `proposed`)
-> — per `DEC-009`'s still-open funding-sequence/headline-presentation questions and this session's
-> working default (matching `DEC-008`'s conservative resolution until told otherwise), this section
-> presents the five options and their ranking **narratively**, not as a committed, headline funding
-> sequence. This is a **Pass 1, self-reviewed draft** — a genuinely independent citation audit and QA
-> review (including the Problem Consistency, Financial Integrity, and Geographic Evidence gates) are
-> still required before this section could be marked ✅ Done, per
+> below draws on `vault/Decisions/Investment_Options/OPT-001`–`005` and, at drafting time, `DEC-009`
+> (status: `proposed`) — per `DEC-009`'s then-open funding-sequence/headline-presentation questions and
+> this session's working default (matching `DEC-008`'s conservative resolution until told otherwise),
+> this section presents the five options and their ranking **narratively**, not as a committed, headline
+> funding sequence. This is a **Pass 1, self-reviewed draft** — a genuinely independent citation audit
+> and QA review (including the Problem Consistency, Financial Integrity, and Geographic Evidence gates)
+> are still required before this section could be marked ✅ Done, per
 > `vault/Architecture/Business_Plan_Generation_Pipeline.md` Part B's gate rules.
+>
+> **Addendum, 2026-07-23 (Final Execution Readiness pass):** `DEC-009` is now `status: approved`
+> (middle path) — the plan should now state a recommended funding sequence narratively (which this
+> section's ranking-and-tiering discussion already substantively supports) while keeping the
+> `ASM-029`–`033` dollar ranges out of any headline exhibit here, per the resolved decision's mandatory
+> disclosure rule. The narrative-only framing above therefore stays directionally correct; a future
+> drafting/QA pass should confirm this section explicitly commits to the sequence rather than only
+> presenting the ranking neutrally, and should not treat DEC-009 as still-open in future revisions.
 
 ## Answer, stated first
 

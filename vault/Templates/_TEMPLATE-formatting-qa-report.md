@@ -79,13 +79,15 @@ Anything content-shaped noticed while formatting but deliberately left untouched
 
 ## 6. Export record
 
-(Left as "Not applicable — no export performed this run" until an authorized export actually happens.)
+(Left as "Not applicable — no export performed this run" until an authorized export actually happens.
+As of the 2026-07-23 pivot, the active output paths are the Group plan's — never write to the
+`Talabat_Egypt_*` filenames, which are reserved for the superseded plan's existing export.)
 
-- `Outputs/Talabat_Egypt_AI_Retention_Business_Plan.docx` — written? path, size, page count
-- `Outputs/Talabat_Egypt_AI_Retention_Business_Plan.pdf` — written? path, size, page count
+- `Outputs/Talabat_Group_AI_Investment_Allocation_Business_Plan.docx` — written? path, size, page count
+- `Outputs/Talabat_Group_AI_Investment_Allocation_Business_Plan.pdf` — written? path, size, page count
 
 ## See also
-- [[Talabat-Egypt-AI-Retention-Business-Plan|Project tracker]]
+- [[Talabat-Group-AI-Investment-Allocation-Business-Plan|Project tracker]]
 - `.claude/skills/executive-document-formatting/SKILL.md`
 - [[Publication_Layer]]
 ```

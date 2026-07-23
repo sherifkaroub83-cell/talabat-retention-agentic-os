@@ -1,0 +1,13 @@
+# Publication/export toolchain dependencies — added 2026-07-23 (Final Execution Readiness pass).
+# Install with: pip3 install -r scripts/requirements.txt
+#
+# PDF is produced via headless Chromium (Playwright), not LibreOffice: soffice is present on PATH in
+# this environment but was directly tested during this pass and fails to load *any* document
+# ("Error: source file could not be loaded", reproduced on a trivial single-paragraph file, with a
+# fresh profile, outside the sandbox) — do not re-attempt the soffice path without re-verifying it
+# first. Chromium is this repo's pre-installed browser (PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers) —
+# scripts/export_business_plan.py's find_chromium() locates it automatically; no browser download
+# should be triggered (PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 is already set repo-wide).
+python-docx>=1.1
+matplotlib>=3.8
+playwright>=1.40

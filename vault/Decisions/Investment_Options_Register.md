@@ -19,10 +19,12 @@ Section 2/4/5/9/12/13 pilot) and Stages 3/10/11 of `Business_Plan_Generation_Pip
 `decision-steward` has drawn five genuinely evidence-grounded candidate options from the Phase 3
 Topic Notes and Phase 5 Forecasting layer (`Investment_Relationship_Map.md`, `Value_Driver_Tree_v2.md`,
 `Scenarios_v2.md`) — not invented from nothing. Each is scored against the 11-criterion framework and
-compared in `DEC-009` (status: `proposed`, pending user/team confirmation on funding sequence and
-headline-presentation questions). Every option's cost range is this OS's own proposed judgment
-(`ASM-029`–`ASM-033`, Decision tier, Low confidence, `Proposed` status), never a disclosed
-initiative-level figure — see each `OPT-` record's own "Cost" section.
+compared in `DEC-009` (status: `approved`, 2026-07-23 — middle path: a recommended funding sequence is
+committed to narratively, allocation ranges shown only as a labeled sensitivity/appendix exhibit).
+Every option's cost range is this OS's own analytical judgment (`ASM-029`–`ASM-033`, Decision tier, Low
+confidence, now `Approved` per `DEC-009`), never a disclosed initiative-level figure, and — per
+`DEC-009` — must carry the sentence "This is an Agentic OS analytical recommendation, not a disclosed
+talabat allocation" wherever shown — see each `OPT-` record's own "Cost" section.
 
 The two disclosed top-level buckets themselves (Everyday App ~USD120mn, Food-leadership ~USD55mn)
 remain structural entries in `Investment_Portfolio_Register.md`'s "Disclosed components" table, not
@@ -41,9 +43,10 @@ capability candidates that do not map cleanly to either bucket alone.
 | OPT-005 | Scale the AI/personalisation embedded capability | Enabling capability | Group (inferred-applicability caveat, non-GCC/Egypt) | candidate | Medium | decision-steward | Q1 2027 |
 
 **Ranking and comparison:** see [[DEC-009_investment-options-ranking-and-allocation-priority|DEC-009]]
-for the full 11-criterion High/Medium/Low comparison table and written tiering — status `proposed`,
-not yet approved; the funding-sequence and headline-presentation questions require real user/
-team confirmation before this register's ranking can be cited as settled.
+for the full 11-criterion High/Medium/Low comparison table and written tiering — status `approved`
+(resolved 2026-07-23, middle path); the tiering (OPT-002/OPT-003 near-term priority, OPT-001/OPT-005
+continue-at-pace, OPT-004 longer-horizon) is now the plan's citable recommended funding sequence,
+subject to the mandatory disclosure sentence wherever dollar ranges appear.
 
 ## See also
 - `vault/Architecture/Decision_Management_Layer.md` — schema and scoring framework

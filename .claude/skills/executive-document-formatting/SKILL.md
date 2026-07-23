@@ -216,6 +216,18 @@ This skill's own procedure, run in full each invocation:
 ### 4.8 Figures/exhibits
 - Sequential caption numbering "Figure N." with the existing McKinsey-Lens action title preserved
   verbatim (never rewritten to a formatter's preferred phrasing)
+- **(Added 2026-07-23)** This skill never invents a chart, graph, or exhibit the drafts don't already
+  contain — that discipline is unchanged. What's new: a real, in-repo generation path now exists.
+  `scripts/generate_exhibits.py` (matplotlib, verified working in this environment) renders numbered,
+  sourced PNG exhibits from `vault/Projects/Business_Plan_Drafts_v2/Exhibits/`, per
+  `vault/Templates/_TEMPLATE-visual-exhibit-standard.md`. A Section_XX draft embeds one by placing
+  `<!-- FIGURE: Figure_NN_<slug> -->` at the point in its prose where the exhibit belongs — this skill
+  (and `scripts/export_business_plan.py`) resolves that marker to the actual image, assigns the final
+  sequential figure number based on the marker's position in the assembled 14-section document (not
+  its filename or generation order), and reproduces its manifest caption verbatim, including the
+  DEC-009 mandatory disclosure sentence where applicable. Still never generates a figure ad hoc during
+  a formatting pass — if a draft's marker doesn't resolve to a real file in the Exhibits manifest, that
+  is a content gap to flag back to the orchestrating session, not something this skill fills in.
 
 ### 4.9 Numbers
 - Consistent thousands separators, currency symbol placement (USD/EGP as already used in the draft),
@@ -259,10 +271,19 @@ This skill's own procedure, run in full each invocation:
 
 ## 6. PDF technical requirements
 
-- Exported from the finished DOCX (not independently recreated) so DOCX and PDF never diverge
+- **Preferred:** exported from the finished DOCX (not independently recreated) so DOCX and PDF never
+  diverge. **Disclosed deviation, both real runs to date:** this environment's LibreOffice cannot load
+  any document via the intended DOCX→PDF path (confirmed twice — 22/07/2026's original export, and
+  re-tested independently during the 2026-07-23 Final Execution Readiness pass, same failure both
+  times). `scripts/export_business_plan.py` instead builds the PDF from an independently-rendered HTML
+  version of the same parsed Markdown source (same content, same figures, same table data) via headless
+  Chromium — not from the DOCX file itself. This keeps DOCX and PDF *content-identical* (same source
+  parse, same data) without being byte-derived from one another; re-verify whether LibreOffice works
+  before assuming this deviation still applies to a future run.
 - Fonts embedded (no reliance on viewer-side font substitution)
 - Bookmarks/outline generated from the same Heading 1/2/3 structure, matching the TOC
-- Tagged/accessible PDF where the export toolchain supports it
+- Tagged/accessible PDF where the export toolchain supports it — not yet verified for the
+  Chromium-print path specifically; flag as an open item on the next real (non-smoke-test) export
 
 ## Required output paths (documented now for future use — **not produced by this task**)
 
