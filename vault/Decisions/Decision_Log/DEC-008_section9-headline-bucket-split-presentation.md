@@ -1,8 +1,11 @@
 ---
 id: DEC-008
-status: proposed
+status: approved
 date: "2026-07-23"
-owner: decision-steward (agent) — flagged for escalation, not resolved within OS owner's unilateral authority (see Rationale)
+resolved_date: "2026-07-23"
+resolved_by: user (via AskUserQuestion, top-level session)
+resolution: "Option 1 — Base case only"
+owner: decision-steward (agent) — drafted and escalated; resolved by the user, not the OS owner (see Approval)
 supersedes: none
 ---
 
@@ -95,12 +98,17 @@ not re-stated separately here, per this file's own commitment to preserve the es
 as drafted.
 
 ## Decision
-**Not resolved.** This file remains `status: proposed` pending a real `AskUserQuestion` call (or
-equivalent direct user/instructor confirmation) run from the top-level session, where that tool is
-available. No option has been pre-selected by this agent. Per this project's standing rule, no agent
-message is ever the user's consent — this subagent has no path to obtain real confirmation on its own,
-and marking this `approved` from within this invocation would substitute the agent's judgment for the
-user's on a call this file itself argues is outside the OS owner's unilateral authority.
+**Resolved 2026-07-23 via a real `AskUserQuestion` call from the top-level session.** The user selected
+**Option 1 — Base case only.** Section 9's (and by extension Section 12/13's) headline financial
+exhibits will show only the Group-level base/upside/downside scenario set from `Scenarios_v2.md`'s
+top-level section, anchored to talabat's own disclosed FY2026 guidance range. The Everyday App vs.
+Food-leadership ~2.2:1 allocation case is to be argued **narratively** (Section 2/4's rationale,
+consistent with the qualitative evidence in `Topics/Everyday App.md`, `Topics/Food Leadership.md`, and
+`vault/Knowledge/Investment_Relationship_Map.md`), not shown as a quantified financial sub-case in
+Section 9's own exhibits. `ASM-018` (the Low-confidence, self-labeled ~2.2:1 illustrative split) is
+**not** to be surfaced as a headline number in Section 9/12/13 under this resolution — it may still be
+referenced narratively or in an internal working note, but never presented as, or adjacent to, a
+quantified financial exhibit that could read as a measured or disclosed breakdown.
 
 ## Rationale
 See "Question" above for the full reasoning distinguishing this decision from the DEC-001/002/004/005
@@ -127,13 +135,14 @@ rule that a `Proposed` Decision blocks any Assumption Register row it produced f
 `Approved`.
 
 ## Approval
-**Not approved.** This is judged a strategic framing choice under the decision-log skill's escalation
-criteria — it materially affects how the plan's own headline recommendation (the Everyday App :
-Food-leadership allocation) is argued in Section 9's own financial exhibits, and its more ambitious
-options carry a real false-precision risk against a Low-confidence, self-labeled illustrative input
-(`ASM-018`). It does not qualify for the OS-owner data-resolution discretion that closed DEC-001, DEC-002,
-DEC-004, and DEC-005 without escalation. Remains `proposed` until the user or instructor confirms an
-option via a real `AskUserQuestion` call (or equivalent) run from the top-level session, per the same
+**Approved 2026-07-23**, by the user, via a real `AskUserQuestion` call from the top-level session —
+Option 1 (Base case only) selected. This was correctly judged a strategic framing choice under the
+decision-log skill's escalation criteria — it materially affects how the plan's own headline
+recommendation (the Everyday App : Food-leadership allocation) would be argued in Section 9's own
+financial exhibits, and its more ambitious options carried a real false-precision risk against a
+Low-confidence, self-labeled illustrative input (`ASM-018`). It did not qualify for the OS-owner
+data-resolution discretion that closed DEC-001, DEC-002, DEC-004, and DEC-005 without escalation. Resolved
+by the correct authority (the user), via a real `AskUserQuestion` call, per the same escalation
 constraint and resolution path documented at DEC-003.
 
 ## Links
