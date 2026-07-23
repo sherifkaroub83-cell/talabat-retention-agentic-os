@@ -26,7 +26,7 @@ Why this option over the others.
 Which Assumption Register row(s) this creates/updates; which Business Plan section(s) it unblocks.
 
 ## Approval
-Team decisions may be marked `approved` by the OS owner. Decisions requiring instructor/team
+Team decisions may be marked `approved` by the OS owner. Decisions requiring user/team
 judgment beyond the OS owner's authority stay `proposed` until the user confirms.
 
 ## Links

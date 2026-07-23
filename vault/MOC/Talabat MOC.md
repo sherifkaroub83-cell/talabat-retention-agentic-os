@@ -32,6 +32,7 @@ The top-level entry point into everything the vault knows about talabat, built f
 ## Foundational synthesis
 - [[Relationship_Map]] — how Customers/Restaurants/Riders/Talabat Pro/Marketplace/Q-Commerce/Advertising/Logistics/AI/Revenue/GMV/Orders connect, with a Mermaid diagram
 - [[Business_Relationships]] — explicit causal reasoning chains (Retention → CLV → Revenue → Profitability; Competition → Pricing → Promotions → Retention), also with Mermaid diagrams
+- [[Investment_Relationship_Map]] — **(added in the 2026-07-23 pivot)** the Investment → capability → behaviour → GMV → revenue → gross profit → EBITDA → cash-flow chain for the 2026 USD175mn programme; retention/frequency/multi-verticality are intermediate drivers in this chain, not the endpoint
 
 ## Raw evidence layers (cited, not synthesized)
 - `Knowledge/Sources/` — 29 source knowledge notes, one per document (TLB-001–TLB-029)

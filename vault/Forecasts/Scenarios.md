@@ -1,6 +1,8 @@
 ---
 type: forecast
-status: draft
+status: superseded
+superseded_date: "2026-07-23"
+superseded_reason: "Built entirely for the Egypt-retention problem (DEC-003-dependent) — pivot to Group-wide capital allocation requires a structurally different tree. See Problem_Charter.md and vault/Architecture/Repository_Impact_Assessment.md"
 created: "2026-07-21"
 updated: "2026-07-22"
 built_by: forecasting-agent (Pilot 3, vault/Architecture/Pilot_Validation_Plan.md)

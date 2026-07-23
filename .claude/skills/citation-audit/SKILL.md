@@ -26,4 +26,7 @@ Full design: `vault/Architecture/Decision_Management_Layer.md`, `Agentic_OS_Arch
 - A citation to a note that itself has an unresolved internal discrepancy (flagged in that note's
   Open Questions) is not automatically a failure, but the audit must note that the discrepancy
   wasn't independently re-resolved here — cross-check it was already handled by a `DEC-XXX` record.
-- Group/GCC-level statistics cited as if Egypt-specific are a failure, not a style note.
+- Any geography transfer without a stated inference qualifier (Group/GCC statistics cited as if
+  Egypt-specific, an Egypt figure cited as Group-representative, or a pre/post-FY2025 non-GCC figure
+  used interchangeably) is a failure, not a style note — check against
+  `vault/Architecture/Geographic_Evidence_Rules.md`.

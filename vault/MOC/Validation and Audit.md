@@ -62,16 +62,38 @@ Every quality-control checkpoint produced while building this vault, in chronolo
   operationally stable with every major subsystem (Decision, Research, Forecast, Citation, two-pass QA
   layers) exercised together, on top of everything Pilots 1–3 already built
 
-## Publication Layer (formatting, not content — added 22/07/2026)
+## Publication Layer (formatting, not content — added 22/07/2026, exercised 22/07/2026)
 - [[Publication_Layer]] — narrow architecture extension: how a fully-drafted, independently-verified
   Business Plan becomes a submission-ready DOCX/PDF. Not Architecture Version 3 — does not revisit
   the content pipeline, the eight content agents, or the evidence model
 - `.claude/skills/executive-document-formatting/SKILL.md` — the layer's only operative procedure;
   strict content/formatting separation, "flag, don't fix" discipline
 - [[_TEMPLATE-formatting-qa-report]] — the reusable QA-verdict template this layer produces on each run
-- **Status:** capability built, not yet exercised — no `Formatting_QA_Report.md` exists yet, no
-  Business Plan section has been formatted, and no DOCX/PDF has been exported. `Outputs/` remains
-  empty pending explicit authorization to run this layer.
+- [[Formatting_QA_Report]] — the first real run's verdict record: **PASS WITH MINOR FIXES**. Several
+  formatting-pipeline bugs (wikilinks leaking raw `[[...]]` syntax inside table cells, bold spans, and
+  code spans; missing single-asterisk italic support; a doubled table-caption counter; cover-page
+  header/footer bleed) were found via a systematic corpus-wide integrity scan and fixed before export —
+  zero business content, number, claim, or citation changed. Discloses one environment limitation
+  (LibreOffice non-functional here; PDF produced via a headless-Chromium pipeline instead) as a Content
+  Flag, not silently worked around.
+- **Status:** exercised for real on explicit user authorization. `Outputs/Talabat_Egypt_AI_Retention_
+  Business_Plan.docx` (136 KB) and `.pdf` (772 KB, 82 pages) both exist, built from all 14
+  independently-verified section drafts plus the passed whole-plan pressure test.
+
+## Template Compliance Gate (architecture correction — added 22/07/2026)
+- `.claude/skills/template-compliance-gate/SKILL.md` — validation-only gate, required immediately
+  before any Publication Layer activity: verifies a candidate document has exactly 14 sections,
+  correctly numbered/titled/ordered per `AI_Business_Plan_Template.md`, with every required subsection
+  represented. Never edits content. A FAIL blocks export outright.
+- [[_TEMPLATE-template-compliance-checklist]] — the reusable checklist this gate produces on each run
+  (`vault/Validation/Template_Compliance_Checklist.md`)
+- **Why it exists:** introduced directly in response to the Executive publication entry below —
+  structural compliance was not checked as a property distinct from content correctness before that
+  document was produced. See `vault/Architecture/Publication_Layer.md`'s 22/07/2026 retrospective
+  entry for the full root-cause account. This is an architecture correction; it does not modify,
+  regenerate, or re-export the executive document that prompted it.
+- **Status:** designed, not yet exercised — no `Template_Compliance_Checklist.md` run exists yet; the
+  gate applies to the next candidate document produced for publication.
 
 ## Whole-plan pressure test (22/07/2026, after all 14 sections reached Done)
 - [[Whole_Plan_McKinsey_Lens_Pressure_Test]] — cross-section check that no single-section QA review
@@ -81,6 +103,21 @@ Every quality-control checkpoint produced while building this vault, in chronolo
   (Section 4 §4.2's branch count, Section 2 §2.5's revenue-layer labeling); no numeric, financial, or
   recommendation-level defect found. Does not reopen or supersede any section's own ✅ Done
   (independently verified) status.
+
+## Executive publication (board-ready edition — 22/07/2026)
+- [[Publication_QA_Report]] — verdict **PASS on content-accuracy and executive-quality grounds**.
+  `Executive_Business_Plan.md` rewrites the 14 audited sections into a 23-page, McKinsey-style board
+  document (12-part structure) for the CEO/CFO/Board — no new content, no changed figures, all internal
+  engineering terminology and repository references removed. `Outputs/Talabat_Egypt_Executive_
+  Business_Plan.docx`/`.pdf` are the deliverables; the prior 82-page full-citation export remains in
+  `Outputs/` as the source-traceable internal record.
+- **Retrospective structural finding (22/07/2026, same day):** this document does not satisfy
+  `AI_Business_Plan_Template.md`'s structural contract — the 14 sections were merged/renamed/reordered
+  into 12. Nothing that existed at the time checked for this distinct failure mode; the Template
+  Compliance Gate above was introduced specifically because of this finding. The document itself is
+  unmodified by this finding — it remains a real, content-accurate deliverable, just not a structural
+  substitute for the template-compliant Business Plan. See `vault/Architecture/Publication_Layer.md`
+  for the full account.
 
 ## Independent compliance audits (external-examiner perspective, not self-reported)
 - [[Independent_Project_Compliance_Report]] — v2, re-run against the merged main-equivalent state: requirements traceability, per-section Business Plan readiness, 12-area OS evaluation, architecture review, grading simulation (~33/100 as of this pass), and remaining roadmap. v1 (pre-merge) findings are marked RESOLVED in place rather than deleted, so the audit trail stays legible across passes.

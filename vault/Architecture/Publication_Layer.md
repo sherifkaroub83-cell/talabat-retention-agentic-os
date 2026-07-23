@@ -30,22 +30,34 @@ Per-section content pipeline (11 stages, unchanged)
 Whole-plan McKinsey Lens pressure test  ← a separate deliverable, not part of this layer;
         │                                  this layer checks for its record, does not perform it
         ▼
+Template Compliance Gate  ← validation only; verifies the candidate document (direct
+        │                    assembly, or any executive-edited version of it) still has
+        │                    exactly 14 sections, correctly numbered/titled/ordered, per
+        │                    AI_Business_Plan_Template.md. FAIL blocks everything below.
+        ▼
 Publication Layer
   ├── executive-document-formatting skill  → applies presentation standards, produces
   │                                            Formatting QA Report
   └── Export                                → Outputs/*.docx, Outputs/*.pdf
 ```
 
-The distinction this layer exists to protect: **content correctness and presentation correctness are
-different questions, verified by different means, and must stay separable.** The 11-stage pipeline
-(citation audit, QA review, decision escalation) already owns content correctness exhaustively. This
-layer owns only whether the *already-approved* content is legible, consistent, and submission-grade
-in its final document form.
+The distinction this layer exists to protect: **content correctness, structural compliance, and
+presentation correctness are three different questions, verified by three different mechanisms, and
+must stay separable.** The 11-stage pipeline (citation audit, QA review, decision escalation) owns
+content correctness. The Template Compliance Gate owns structural compliance with
+`AI_Business_Plan_Template.md` — a distinct property a content-correct, well-argued document can still
+violate (see the retrospective note at the end of this document). This layer itself owns only whether
+already-approved, structurally-compliant content is legible, consistent, and submission-grade in its
+final document form.
+
+> **The Publication Layer's contract, stated explicitly:** the Publication Layer owns presentation
+> only. It does not own document structure. Document structure is defined exclusively by
+> `AI_Business_Plan_Template.md`. The Publication Layer is prohibited from modifying that structure.
 
 ## 2. Input gate
 
-The Publication Layer will not run against a partial or unverified plan. Its gate condition, checked
-by the `executive-document-formatting` skill itself before anything else:
+The Publication Layer will not run against a partial, unverified, or structurally non-compliant plan.
+Its gate conditions, checked before anything else:
 
 - All 14 `Section_XX_*.md` drafts in `vault/Projects/Business_Plan_Drafts/` carry `status: ... Done
   (independently verified)` in frontmatter — not merely `Done (self-reviewed)`, and not `🟡 drafted`.
@@ -54,9 +66,22 @@ by the `executive-document-formatting` skill itself before anything else:
   not block a formatting run (formatting and the pressure test are independent, both prerequisites to
   final submission, not sequentially dependent on each other), but the Formatting QA Report records
   whether it was found.
+- **The Template Compliance Gate (`.claude/skills/template-compliance-gate/SKILL.md`) has run against
+  the specific candidate document about to be exported and returned PASS.** This is a hard block, not
+  a noted-but-non-blocking condition like the pressure test above — a FAIL here means the candidate
+  document does not have fourteen correctly numbered, titled, and ordered sections, and nothing
+  downstream may format or export it until that is fixed and the gate re-run.
 
-If any section fails the gate, the skill stops and reports which section(s) block the run, rather
-than formatting a document with an unverified section silently included.
+If any section fails the gate, or the Template Compliance Gate returns FAIL, the process stops and
+reports exactly what blocks the run, rather than formatting a document with an unverified section or a
+structural violation silently included.
+
+**This gate applies to every candidate document, not only the direct 14-draft assembly.** If a
+publication task asks for an executive edit, a page-compressed version, or any other rewritten form of
+the plan, that candidate must also pass the Template Compliance Gate before export — "the content is
+accurate and reads well" is not a substitute for "the structure still matches
+`AI_Business_Plan_Template.md`." See the retrospective note at the end of this document for why this
+sentence exists.
 
 ## 3. The formatting skill
 
@@ -122,18 +147,60 @@ authorized export — per this project's standing "propose, don't execute" disci
 final deliverables. This document does not itself authorize any export; it specifies the mechanism
 that will run once authorized.
 
+## 8. Assembly logic
+
+The Business Plan is assembled strictly section-by-section, in the exact order
+`AI_Business_Plan_Template.md` defines:
+
+```
+Section 1 → Section 2 → Section 3 → ... → Section 14
+```
+
+The assembler (`executive-document-formatting`, or any future publication procedure) may compress
+prose, improve transitions, improve narrative flow, and improve executive readability *within and
+between* sections that keep their template identity. It may not alter the template hierarchy: it may
+not merge two sections into one, split one section into two, reorder sections, or substitute a
+section's required title with a paraphrase. The Template Compliance Gate (§1, §2) is the mechanism
+that checks this held true for whatever document assembly actually produced.
+
 ## Explicit scope boundary
 
 **This is not Architecture Version 3.** It does not revisit, validate, or change anything in
 `Agentic_OS_Architecture.md` or `Agentic_OS_Architecture_v2.md` — the eight content-pipeline agents,
 the four-tier evidence model, the 11-stage pipeline, and the two-pass verification protocol are all
 unchanged and out of scope here. This document adds exactly one new layer, downstream of all of them,
-that turns their already-verified output into a submission-ready file. No Business Plan section has
-been formatted or exported as a result of authoring this document — see
-`vault/Validation/Formatting_QA_Report.md`'s absence (not yet created) and `Outputs/`'s contents
-(unchanged) as of this commit.
+that turns their already-verified output into a submission-ready file.
+
+**Update, 22/07/2026 — first real export.** On explicit user authorization, this layer ran for real:
+[[Whole_Plan_McKinsey_Lens_Pressure_Test]] passed (PASS WITH MINOR FIXES, both fixes applied first),
+the input gate passed 14/14, and `Outputs/Talabat_Egypt_AI_Retention_Business_Plan.docx`/`.pdf` were
+produced with [[Formatting_QA_Report]] recording the run (verdict: PASS WITH MINOR FIXES — several
+formatting-pipeline bugs found via systematic integrity scan and fixed; zero content, number, or
+citation changed). One disclosed deviation from §4/§6 above: the PDF was produced via a headless-
+Chromium print pipeline rather than DOCX→LibreOffice conversion, because LibreOffice does not function
+in this execution environment (confirmed independent of this document) — see the Formatting QA
+Report's Content Flags for full disclosure. This does not change this layer's design, only how this
+one run's PDF technical requirement was satisfied.
+
+**Update, 22/07/2026 (later the same day) — structural drift finding and corrective gate.** A
+follow-on publication task asked for a "board-ready" edition of the plan. It was executed by writing a
+new, 12-section document in a consulting structure — sections merged, renamed, and reordered relative
+to `AI_Business_Plan_Template.md` — rather than by formatting the existing, template-compliant
+14-section assembly. The resulting document (`Executive_Business_Plan.md`,
+`Outputs/Talabat_Egypt_Executive_Business_Plan.docx`/`.pdf`) is content-accurate — every figure and
+conclusion traces to the audited plan, nothing was fabricated — but it does not satisfy the graded
+specification's structure, and nothing in this layer's design at the time checked for that distinct
+failure mode. **Root cause:** every gate that existed (citation audit, QA review, the whole-plan
+pressure test, the Formatting QA Report) checks whether content is *true and well-argued* or
+*correctly presented*; none checked whether the document's *shape* still matched the template. **Fix:**
+the Template Compliance Gate (§1, §2), added the same day, closes exactly this gap — see
+`.claude/skills/template-compliance-gate/SKILL.md` for the full design and its own account of this
+incident. This entry is a permanent record, not a correction of the executive document itself, which
+this update does not modify, regenerate, or re-export.
 
 ## See also
 [[Agentic_OS_Architecture]] · [[Agentic_OS_Architecture_v2]] · [[Business_Plan_Generation_Pipeline]] ·
 [[Decision_Management_Layer]] · [[Talabat-Egypt-AI-Retention-Business-Plan|Project tracker]] ·
-[[Project Administration]]
+[[Project Administration]] · `.claude/skills/template-compliance-gate/SKILL.md` ·
+`vault/Validation/Template_Compliance_Checklist.md` (produced on the gate's first real run, not yet
+created — see [[_TEMPLATE-template-compliance-checklist]] for the template it will follow)

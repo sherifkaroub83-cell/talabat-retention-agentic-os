@@ -1,6 +1,8 @@
 ---
 id: RES-003
-status: found
+status: superseded
+superseded_date: "2026-07-23"
+superseded_reason: "Egypt-specific evidence, no longer the primary decision input after the pivot to Group-wide capital allocation; remains legitimate country-level evidence, not deleted. See Problem_Charter.md."
 retrieved: "2026-07-22"
 publisher: Mordor Intelligence
 url: https://www.mordorintelligence.com/industry-reports/egypt-foodservice-market

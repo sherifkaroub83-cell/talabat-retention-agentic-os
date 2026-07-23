@@ -19,6 +19,9 @@ Reusable scaffolding and process documentation — how notes get created, not wh
 - [[_TEMPLATE-formatting-qa-report]] — Formatting QA Report template (`vault/Validation/
   Formatting_QA_Report.md` on each run), added with the Publication Layer — see [[Publication_Layer|
   Publication Layer]]
+- [[_TEMPLATE-template-compliance-checklist]] — Business Plan Template Compliance Checklist template
+  (`vault/Validation/Template_Compliance_Checklist.md` on each run), added 22/07/2026 with the
+  Template Compliance Gate — see `.claude/skills/template-compliance-gate/SKILL.md`
 
 ## Ingestion / synthesis methodology (process record, one-time use — kept for methodological transparency, not further action)
 - [[_INGESTION_BRIEFING]] — the spec given to the 8 parallel agents that built the 29 Source notes + raw facts fragments

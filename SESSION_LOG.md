@@ -6,6 +6,26 @@ writes these entries for you.
 
 ---
 
+## Session 8 — 2026-07-22/23 (all 14 sections completed and published; strategic pivot Phases 1–2)
+
+**Focus:** completed the remaining Business Plan sections to ✅ Done (independently verified),
+passed a whole-plan McKinsey Lens pressure test, published both a full citation-complete edition and
+a 23-page board-ready executive edition to `Outputs/`. Found a real structural-compliance defect in
+the executive edition (14 template sections collapsed to 12) and corrected the architecture with a
+new **Template Compliance Gate**, required before any future Publication Layer activity. Then, on
+explicit instruction, began a **controlled strategic pivot**: repository-wide impact assessment
+(`vault/Architecture/Repository_Impact_Assessment.md`) found every Egypt-specific forecast node
+capped at Low confidence for lack of disclosed Egypt data, while Group-level evidence is extensive —
+pivoted the governing problem to Group-wide 2026 USD175m investment-programme capital allocation.
+Rewrote `Problem_Charter.md` (status: **proposed, pending instructor re-approval** — the one item
+needing the team's/instructor's attention before the original 26/07/2026 submission date), `CLAUDE.md`,
+`README.md`, `MEMORY.md`/`PROJECT_PROGRESS.md` headers, and vault identity files. All superseded
+content (old Decisions, Assumptions, Research Notes, Business Plan drafts, both Outputs pairs) marked
+Superseded, preserved as historical record — nothing deleted. **Next:** architecture pivot Phases
+3–9 (knowledge reorientation, Decision/Investment Portfolio layer, Forecast/KPI layer rebuild, agent/
+skill updates, pipeline/QA gates, consistency audit, pilot run on Sections 2/4/5/9/12/13) remain to be
+done before any new Business Plan drafting begins.
+
 ## Session 7 — 2026-07-22 (Pilot 4: redefined mid-flight into a full-system operational-stability test)
 
 **Focus:** execute Pilot 4 per `vault/Architecture/Pilot_Validation_Plan.md` — but redefined on

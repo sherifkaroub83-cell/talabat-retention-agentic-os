@@ -1,7 +1,7 @@
 ---
 section: 9
 title: Financial Plan
-status: drafted — pending citation verification and QA (pipeline stage 9/11)
+status: Done — citation audit PASS ([[Citation_Audit_Section_09]]), QA review PASS ([[QA_Review_Section_09]], FAIL on first independent pass — two template-completeness gaps, fixed, independently re-verified); frontmatter corrected 22/07/2026 to match the project tracker's long-standing ✅ Done (independently verified) status, which this field had never been synced to
 pipeline_run: 2026-07-22
 ---
 

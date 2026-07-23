@@ -27,7 +27,10 @@ The earlier 9-document secondary corpus (`Input_Data/01_Company_Filings/` throug
 regime — see [[Competition]]'s Open Questions for why that boundary is kept deliberate.
 
 ## Active work
-- [[Talabat-Egypt-AI-Retention-Business-Plan]] — the capstone deliverable tracker
+- [[Talabat-Group-AI-Investment-Allocation-Business-Plan]] — the active capstone deliverable tracker
+  (post-2026-07-23 pivot; see `Problem_Charter.md`)
+- [[Talabat-Egypt-AI-Retention-Business-Plan]] — the superseded predecessor tracker, preserved as
+  historical record (all 14 sections reached ✅ Done against the original problem)
 - [[Project Administration]] — team, milestones, decisions, and links to the repo-root tracking files
 
 ## Reading arc

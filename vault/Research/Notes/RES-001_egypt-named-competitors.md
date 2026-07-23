@@ -1,6 +1,8 @@
 ---
 id: RES-001
-status: found
+status: superseded
+superseded_date: "2026-07-23"
+superseded_reason: "Egypt-specific evidence, no longer the primary decision input after the pivot to Group-wide capital allocation; remains legitimate country-level evidence, not deleted. See Problem_Charter.md."
 retrieved: "2026-07-22"
 publisher: multiple (KrASIA, Sacra, Forbes Middle East, MenaBytes, Wamda, Disrupt Africa, Tech In Africa, Mordor Intelligence — see Source detail)
 url: see per-claim links in Source detail

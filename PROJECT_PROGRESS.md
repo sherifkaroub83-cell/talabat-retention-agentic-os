@@ -3,17 +3,25 @@
 Living status of the project. Update whenever a milestone moves. `SESSION_LOG.md` captures the
 day-to-day detail; this file is the high-level snapshot.
 
-**Last updated:** 2026-07-22
-**Overall status:** 🟢 Phase 1 — charter **approved** by Dr. Hossam Daoud (team of 6, 30-slide presentation confirmed); role assignment among the 6 members is the one remaining Phase 1 item. Phase 3 data ingestion and semantic knowledge layer complete. **OS Architecture Version 2 live and operationally confirmed across all four planned pilots — Pilot Validation Plan complete.** Pilot 1 (Section 3) validated most of the Version 1 design and surfaced the agent-delegation finding that produced v2's Change 1 fix; Pilot 2 (Section 2) confirmed Change 1 works and found a second runtime constraint (`AskUserQuestion` unavailable to subagents); Pilot 3 (Section 9) exercised the Forecast Layer for the first time and produced the project's first fail/fix/independently-re-verified cycle. **Pilot 4 was redefined mid-flight, on explicit instruction, from a narrow two-pass-QA test into a full-system operational-stability question — the OS was found stable** (see `vault/Validation/Pilot4_System_Stability_Report.md`): 17 real `Agent` invocations this session, zero failures, zero pipeline-gate violations, zero content contradictions; the one recurring gap (repository-hygiene discipline) is process, not architecture. Section 10 (Risk Analysis) itself went through the most rigorous verification of any section — a citation-audit fail/fix/re-verify cycle, then two genuinely independent QA passes that both failed and diverged (Pass 2 caught an internal MECE contradiction Pass 1 missed), then a combined fix and final re-verify. **4 of 14 Business Plan sections drafted, all four ✅ Done (independently verified except Section 3, which is self-reviewed + independently re-verified on one point).** With all four pilots retired, Phase 8 of the roadmap (drafting the remaining 10 sections) can now begin.
+**Last updated:** 2026-07-23
+**Overall status:** 🟢 **Strategic pivot complete (Phases 1-9); Section 2/4/5/9/12/13 pilot drafted.** All 14 Business Plan sections were completed, verified, and published under the original Egypt-retention problem (see the milestone table and artifacts below — that work is preserved as historical record, not discarded). On 2026-07-23, the governing problem was pivoted to Group-wide 2026 investment-programme capital allocation, per direct evidence that the corpus supports Group-level analysis far better than Egypt-specific analysis (every Egypt forecast node was capped at Low confidence). **Problem Charter status: Active — governing problem for the Agentic OS** — see `Problem_Charter.md`. All 9 architecture-pivot phases (impact assessment, charter/identity/memory, knowledge reorientation, Decision/Investment Portfolio layer, Forecast/KPI layer rebuild, agent/skill updates, pipeline/QA gates, consistency audit, pilot run) are done — see `vault/Validation/Strategic_Pivot_Final_Report_2026-07-23.md`. Remaining work: independent Pass 2 verification of the 6 pilot sections, and resolving `DEC-009`'s open funding-sequence/presentation questions (a team decision, not an instructor-approval matter).
 
 ---
 
 ## Goal
 
-Produce an instructor-approved **AI Business Plan** (GSB 14-section, McKinsey Edition, 15–25 pages)
-recommending AI-driven customer retention for talabat Egypt, grounded in the `Input_Data/` corpus —
-plus the OS structure document (3–5 pages) and the group presentation (5 slides × 6 members).
-Group G02 · Dr. Hossam Daoud · charter submission 26/07/2026.
+Produce an **AI Business Plan** (GSB 14-section, McKinsey Edition, 15–25 pages)
+recommending how talabat should allocate its 2026 USD 175 million investment programme across
+Everyday App and Food-leadership initiatives, grounded in the `Input_Data/` corpus — plus the OS
+structure document (3–5 pages) and the group presentation (5 slides × 6 members).
+Group G02 · AASTMT MBA, AI for Business Organizations Track · original charter submission
+26/07/2026 — see `Problem_Charter.md` for the current governing problem statement.
+
+**Note on the milestone table below:** it narrates how the Agentic OS was built and proven
+operationally stable under the *original* problem — that history is accurate and preserved
+unchanged. The problem those milestones served has since been superseded; see the pivot note above
+and `vault/Architecture/Repository_Impact_Assessment.md` for what carries forward unchanged (the OS
+mechanics) versus what is now historical (the Egypt-retention content itself).
 
 ## Milestones (mapped to the capstone's five phases)
 
@@ -92,8 +100,9 @@ remaining 10 Business Plan sections — per `vault/Architecture/Implementation_R
 
 ## Blockers / open questions
 
-- ~~Instructor approval of charter~~ — ✅ **Resolved 21/07/2026**: approved, team of 6 and
-  30-slide presentation confirmed by Dr. Hossam Daoud.
+- ~~Charter confirmation~~ — ✅ **Resolved 21/07/2026** (original charter): team of 6 and
+  30-slide presentation confirmed. Historical — see `Problem_Charter.md` for the current, pivoted
+  charter, which is the OS's active governing problem regardless of course-administration status.
 - Role assignment: map the 6 members onto the guide's 5 defined roles (e.g., co-leads on one role,
   or a 6th custom role) — still open, needed for both Phase 1 closure and individual-contribution
   visibility.
@@ -101,7 +110,7 @@ remaining 10 Business Plan sections — per `vault/Architecture/Implementation_R
 
 ## Artifacts produced
 
-- `Problem_Charter.md` (2026-07-20; approved by Dr. Hossam Daoud 2026-07-21)
+- `Problem_Charter.md` (original version 2026-07-20; rewritten for the capital-allocation pivot 2026-07-23 — current status: Active)
 - `Input_Data/` — 9-doc Markdown corpus + manifest (2026-07-20); 29-doc native-PDF/XLSX corpus,
   organized into 7 category folders + `CORPUS_INDEX.md` (2026-07-21)
 - Activated OS: CLAUDE.md, MEMORY.md, vault identity files, project tracker (2026-07-20)

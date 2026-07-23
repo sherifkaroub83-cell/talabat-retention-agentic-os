@@ -1,6 +1,6 @@
 ---
 name: executive-document-formatting
-description: Formats and paginates the already-approved, fully-drafted 14-section Business Plan into submission-ready DOCX and PDF deliverables. Presentation and layout only — never touches business content, numbers, claims, citations, decisions, or conclusions. Use only after all 14 Section_XX drafts are Done (independently verified) and, ideally, after the whole-plan McKinsey Lens pressure test.
+description: Formats and paginates the already-approved, fully-drafted 14-section Business Plan into submission-ready DOCX and PDF deliverables. Presentation and layout only — never touches business content, numbers, claims, citations, decisions, or conclusions, and never changes section count, numbering, titles, or order. Requires a PASS from the Template Compliance Gate before running. Use only after all 14 Section_XX drafts are Done (independently verified) and, ideally, after the whole-plan McKinsey Lens pressure test.
 trigger: /format-business-plan
 ---
 
@@ -21,6 +21,28 @@ specific document element; when a new formatting question arises that isn't cove
 against this rule first, not against convenience.
 
 ---
+
+## 0. Structural boundary — a second, distinct rule from §1's content boundary
+
+**`AI_Business_Plan_Template.md`'s fourteen sections — count, numbering, titles, order — are an
+architectural contract, not a writing suggestion.** This skill may compress, tighten, and improve the
+prose inside and between sections. It may **never** rename a section, merge two sections, delete a
+section, reorder sections, or replace the template's structure with an alternative one (a shorter
+consulting format, a different section count, a different heading scheme) — no matter how much better
+the alternative reads. If a request asks for a document that is not a faithful, fourteen-section,
+correctly-ordered export of the template, that request is for a different deliverable, not a
+Business Plan export, and must be named and stored as such rather than produced under this skill.
+
+**Gate requirement:** this skill does not run — and does not produce a DOCX/PDF — until
+`.claude/skills/template-compliance-gate/SKILL.md` has validated the specific candidate document and
+returned PASS. See `vault/Architecture/Publication_Layer.md` §2. This is a hard block, not an
+advisory check.
+
+This distinction exists because it was violated once already: see
+`vault/Architecture/Publication_Layer.md`'s 22/07/2026 retrospective entry, where a "board-ready"
+request was fulfilled by writing a new 12-section document instead of formatting the template-
+compliant 14-section one. The content was accurate; the structure was not compliant. §1 below governs
+*what this skill may say*; this section governs *what shape the result must keep*. Both must hold.
 
 ## 1. Scope boundary — read this section twice before touching anything
 
@@ -89,8 +111,10 @@ document. This skill has no write access to section content and must not simulat
   `Section_14_Appendices.md` — **every one must carry `status: ... Done (independently verified)`
   in its frontmatter**; if any section is missing this exact status, stop and report which
   section(s) block the run rather than formatting a partial or self-reviewed plan.
-- `vault/Projects/Talabat-Egypt-AI-Retention-Business-Plan.md` — the master tracker, to confirm the
-  same 14/14 status and to pull the document-control metadata (project name, owner, date, course).
+- `vault/Projects/Talabat-Group-AI-Investment-Allocation-Business-Plan.md` — the active master tracker
+  as of the 2026-07-23 pivot (`Talabat-Egypt-AI-Retention-Business-Plan.md` is its superseded
+  predecessor, historical reference only), to confirm the same 14/14 status and to pull the
+  document-control metadata (project name, owner, date, course).
 - `AI_Business_Plan_Template.md` — the verbatim graded specification. This skill checks the formatted
   output preserves the template's own required structure (14 sections, McKinsey Lens callouts where
   the drafts already carry them) — it does not re-check content completeness, which is
@@ -198,7 +222,7 @@ This skill's own procedure, run in full each invocation:
 - Footer: page number, "Draft — AASTMT MBA Capstone, Group G02" classification line, document date
 
 ### 4.12 Document control block (on the cover or a dedicated page 2)
-- Document title, version, status ("Draft — pending instructor submission" until the user says
+- Document title, version, status ("Draft — internal working copy" until the user says
   otherwise), prepared by/for, date, distribution note
 
 ### 4.13 Table of contents
@@ -291,4 +315,5 @@ exact schema):
 ## See also
 `vault/Architecture/Publication_Layer.md` · `vault/Architecture/Business_Plan_Generation_Pipeline.md`
 · `.claude/skills/business-plan-drafting/SKILL.md` · `.claude/skills/qa-review/SKILL.md` ·
+`.claude/skills/template-compliance-gate/SKILL.md` ·
 `vault/Templates/_TEMPLATE-formatting-qa-report.md`

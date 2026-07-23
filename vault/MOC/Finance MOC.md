@@ -22,6 +22,13 @@ The financial-performance side of the knowledge base — scale metrics, profitab
 - [[IPO]] — the November 2024 Dubai Financial Market listing (fully secondary offering, USD 2bn raised)
 - [[Investor Relations]] — the disclosure cadence (annual reports, quarterly financials, earnings decks) that produced this entire corpus
 
+## Capital allocation (added in the 2026-07-23 pivot)
+- [[2026 Investment Programme]] — the USD175mn Board-approved 2026 programme (Food-leadership ~USD55mn / Everyday App ~USD120mn) this pivot's business question is about
+- [[EBITDA]] — the disclosed Adjusted EBITDA figures and the guided margin step-down (6.0% → 4.6% of GMV) behind the programme's cost side
+- [[Cash Generation]] — what the corpus discloses (and doesn't) about free cash flow / cash conversion, relevant since the programme is "fully funded by internal cash"
+- [[GCC vs non-GCC]] — the canonical note for what's disclosed at Group / GCC / non-GCC / Egypt-standalone level; see also `vault/Architecture/Geographic_Evidence_Rules.md` for the enforcement rules
+- `vault/Knowledge/Investment_Relationship_Map.md` — the Investment → capability → behaviour → GMV → revenue → gross profit → EBITDA → cash-flow chain
+
 ## Raw data
 - `Knowledge/Facts/Revenue.md`, `Knowledge/Facts/GMV.md`, `Knowledge/Facts/Orders.md` — the cited figures underlying the topics above
 - `Knowledge/Entities/Business_Units.md`, `Knowledge/Entities/Countries.md` — segment and geography detail

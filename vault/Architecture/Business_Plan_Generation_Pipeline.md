@@ -2,89 +2,134 @@
 type: architecture
 status: approved
 created: "2026-07-21"
+updated: "2026-07-23"
 ---
 
-# Business Plan Generation Pipeline — 11 Stages
+# Business Plan Generation Pipeline — 19 Stages (post-pivot)
 
-Task 8 of the OS Architecture Design Phase. This redesigns the *process* the `business-plan-drafting`
-skill runs — the skill's 14-section content map (which vault notes feed which section) is unchanged
-and still the reference for *what* goes in each section; this document defines *how* a section moves
-from "requested" to "Done," closing the old flow's core weakness: it went straight from "gap
-identified" to "write it anyway, labeled," with no resolution step in between.
+Task 8 of the OS Architecture Design Phase; extended 2026-07-23 as Phase 7 of the strategic pivot to
+the Group-wide capital-allocation problem (`Problem_Charter.md`). This document defines *how* the
+Business Plan moves from "problem confirmed" to "handed to Publication" — the `business-plan-drafting`
+skill's 14-section content map (remapped 2026-07-23) still defines *what* goes in each section.
 
-Run per section, per `Agentic_OS_Architecture.md` §3.1's delegation map.
+> **2026-07-23 pivot note:** the original design was an 11-stage **per-section** loop only — it had no
+> explicit plan-level setup phase and no whole-plan consistency gates, because the original
+> Egypt-retention problem didn't need to compare *multiple candidate investment options* against a
+> shared envelope before drafting could begin. The Group-wide capital-allocation problem does. This
+> redesign wraps the original 11-stage loop (now **Stage 13** below, otherwise unchanged and still
+> validated by real execution — see "Status") with a new 12-step **plan-level setup phase** (Stages
+> 1–12, run once, not per section) and three new whole-plan **consistency gates** (Stages 14–16)
+> before the existing citation audit / Template Compliance Gate / Publication handoff (Stages 17–19).
+> Nineteen stages total, matching the sequence specified for this pivot. **The 14-section structure
+> itself, and the "never jump straight from evidence to a recommendation" discipline the original
+> design already enforced, are both unchanged — this redesign never skips directly from descriptive
+> evidence to an allocation recommendation without decision criteria, assumptions, scenarios, risks,
+> confidence level, and stage gates in between, which is exactly what Stages 6–12 exist to force.**
 
-> **Invocation pattern, updated post-Phase-7 (see [[Agentic_OS_Architecture_v2]], Change 1):** the
-> original design had `bp-orchestrator` invoke each specialist agent itself, via its own nested `Agent`
-> tool calls. Phase 7's pilot run found that a spawned `bp-orchestrator` subagent has no `Agent`/
-> `WebSearch`/`WebFetch` tools available to it in this runtime, so that delegation cannot occur.
-> **Current practice: the top-level session invokes each specialist agent directly**, following the
-> stage table below as its own checklist — `bp-orchestrator`'s specification remains authoritative for
-> *what* happens at each stage; only *who* executes it changed. Re-test if the runtime constraint is
-> ever confirmed lifted.
+## Part A — Plan-Level Setup (Stages 1–12, run once per active problem, not per section)
 
-## The 11 stages
+Run before any section enters Stage 13. Owner: `bp-orchestrator` (or the top-level session under the
+same runtime constraint documented below), delegating to the named specialist per stage.
 
-| # | Stage | Owner | Reads | Writes |
+| # | Stage | Owner | Reads | Writes | Status as of 2026-07-23 |
+|---|---|---|---|---|---|
+| 1 | **Confirm business question** | Orchestrator | `Problem_Charter.md` | Confirms active problem, scope, envelope | ✅ Done — `Problem_Charter.md` rewritten 2026-07-23 (status: Active — governing problem for the Agentic OS) |
+| 2 | **Assemble investment evidence** | Orchestrator | `vault/Knowledge/Topics/`, `Facts/`, `Investment_Relationship_Map.md` | A working Group-wide evidence base | ✅ Done — Phase 3 of the pivot (13 new Topic Notes, Investment Relationship Map) |
+| 3 | **Identify candidate investment options** | `decision-steward` | `Investment_Portfolio_Register.md`, drafting-stage findings | `vault/Decisions/Investment_Options_Register.md` (`OPT-XXX` records) | ⬜ Scaffolded, empty by design — candidate options get proposed during Section 9/12 drafting (Stage 13), not invented in advance; see the register's own "Current status" note |
+| 4 | **Detect evidence gaps/conflicts** | Orchestrator | Topic Notes' Open Questions, `Repository_Impact_Assessment.md` | Typed gap list (external / forecast / decision) | ✅ Done — every Phase 3 Topic Note documents its own gaps explicitly (e.g. `Capital Allocation and Investment Governance.md`'s governance-mechanics gap) |
+| 5 | **Targeted research** | `research-agent` | `Research_Register.md` | Research Notes, register updates | ⬜ Not yet run against the new problem — the 4 pre-pivot Research Notes are marked superseded (legitimate country-level evidence, not the primary decision input) |
+| 6 | **Define decision criteria** | `decision-steward` | — | The 11-criterion comparison framework in `Decision_Management_Layer.md`'s "Investment Option" section | ✅ Done — Phase 4 of the pivot |
+| 7 | **Build value-driver trees** | `forecasting-agent` | `Investment_Relationship_Map.md`, `Facts/` | `vault/Forecasts/Value_Driver_Tree_v2.md` | ✅ Done — Phase 5 of the pivot (45 nodes) |
+| 8 | **Register assumptions** | `decision-steward` | Forecasting-agent's proposed assumptions | `Assumptions_Register.md` rows | ✅ Done — `ASM-015`–`028` registered, `Status: Proposed` pending human approval before citation |
+| 9 | **Build scenarios** | `forecasting-agent` | `Value_Driver_Tree_v2.md` | `vault/Forecasts/Scenarios_v2.md` (base/upside/downside + 8 modules) | ✅ Done — Phase 5 of the pivot |
+| 10 | **Rank investment options** | `decision-steward` | `Investment_Options_Register.md`, the Stage 6 comparison framework | Ranked options with High/Medium/Low ratings per criterion (never a single blended score) | ⬜ Not yet run — no `OPT-` candidates exist yet to rank (see Stage 3) |
+| 11 | **Define allocation ranges / pilot sequencing** | `decision-steward` | Ranked options, `Investment_Portfolio_Register.md` | Updated Portfolio Register base/upside/downside ranges, pilot-funding recommendation | ⬜ Not yet run — the register currently holds only the two disclosed envelope components (Everyday App/Food-leadership); ranges are explicitly marked "not yet set" rather than invented |
+| 12 | **Define KPIs / stage gates** | `kpi-agent` | `Value_Driver_Tree_v2.md`, ranked options | `vault/Forecasts/KPI_Tree_v2.md`; per-option stage gates in each `OPT-` record | 🟡 Partial — `KPI_Tree_v2.md` done (50 KPIs, Phase 5); per-*option* stage gates await Stage 3/10 |
+
+**Stages 3, 5, 10, 11, and 12's option-level piece remain open** — not oversights, but the correct
+consequence of this being architecture work, not drafting. Per the pivot's own Phase 9 scope, these
+resolve as real candidate options and their comparisons surface during the limited Section 9/12 pilot
+draft, not before it. Fabricating them now to make this table look more complete would itself be the
+false-precision error this pivot exists to prevent.
+
+## Part B — Per-Section Drafting (Stage 13, the original 11-stage loop, unchanged)
+
+> **Invocation pattern, updated post-Phase-7 pilot (see [[Agentic_OS_Architecture_v2]], Change 1):**
+> the original design had `bp-orchestrator` invoke each specialist agent itself, via its own nested
+> `Agent` tool calls. Phase 7's pilot run found that a spawned `bp-orchestrator` subagent has no
+> `Agent`/`WebSearch`/`WebFetch` tools available to it in this runtime, so that delegation cannot
+> occur. **Current practice: the top-level session invokes each specialist agent directly**, following
+> the stage table below as its own checklist — `bp-orchestrator`'s specification remains authoritative
+> for *what* happens at each stage; only *who* executes it changed.
+
+Run once per section, drawing on Part A's outputs instead of raw Facts alone.
+
+| # | Sub-stage | Owner | Reads | Writes |
 |---|---|---|---|---|
-| 1 | **Intake & Scoping** | Orchestrator | `AI_Business_Plan_Template.md`, `business-plan-drafting` skill | Confirms section, required sub-bullets |
-| 2 | **Evidence Assembly** | Orchestrator | `Knowledge/Facts`, `Topics`, `Strategic` per the skill's vault map | A working evidence list for the section |
-| 3 | **Gap Detection** | Orchestrator | The assembled evidence vs. the template's required sub-bullets | Gap list, typed: external / forecast / decision |
-| 4 | **External Research Resolution** | `research-agent` | `Research_Register.md` | Research Notes, register updates |
-| 5 | **Forecast & Assumption Generation** | `forecasting-agent` | `Facts/`, `Strategic/Revenue Model.md` etc. | `Value_Driver_Tree.md`, `Scenarios.md` updates |
-| 6 | **Decision Escalation** | `decision-steward` | All evidence tiers, open questions from stages 4–5 or 7 | `Decision_Log/DEC-XXX.md`, Assumptions Register rows |
-| 7 | **Evidence Ranking & Conflict Resolution** | `evidence-citation-agent` | Competing evidence found in stages 2–5 | Ranked evidence set; escalations to stage 6 where needed |
-| 8 | **Drafting (McKinsey Lens)** | Orchestrator | The resolved evidence + registered assumptions only | Section prose |
-| 9 | **Citation Verification** | `evidence-citation-agent` | The draft | `Citation_Audit_Section_N.md` |
-| 10 | **Cross-Section Consistency & KPI Alignment** | `kpi-agent` (financial/KPI sections) or Orchestrator (others) | Value Driver Tree, other section drafts | Consistency notes; `KPI_Tree.md` updates |
-| 11 | **QA & Final Review** | `qa-review-agent` | The draft, the citation audit, the template | `QA_Review_Section_N.md`; flips status to ✅ |
+| 13.1 | Intake & Scoping | Orchestrator | `AI_Business_Plan_Template.md`, `business-plan-drafting` skill (remapped 2026-07-23) | Confirms section, required sub-bullets |
+| 13.2 | Evidence Assembly | Orchestrator | Part A's assembled evidence + `Knowledge/Facts`, `Topics`, `Strategic` | A working evidence list for the section |
+| 13.3 | Gap Detection | Orchestrator | The assembled evidence vs. the template's required sub-bullets | Gap list, typed: external / forecast / decision |
+| 13.4 | External Research Resolution | `research-agent` | `Research_Register.md` | Research Notes, register updates |
+| 13.5 | Forecast & Assumption Generation | `forecasting-agent` | `Value_Driver_Tree_v2.md`, `Facts/` | `Value_Driver_Tree_v2.md`, `Scenarios_v2.md` updates |
+| 13.6 | Decision Escalation | `decision-steward` | All evidence tiers, open questions from 13.4–13.5 or 13.7 | `Decision_Log/DEC-XXX.md`, `Investment_Options/OPT-XXX.md`, Assumptions Register rows |
+| 13.7 | Evidence Ranking & Conflict Resolution | `evidence-citation-agent` | Competing evidence found in 13.2–13.5 | Ranked evidence set; escalations to 13.6 where needed |
+| 13.8 | Drafting (McKinsey Lens) | Orchestrator | The resolved evidence + registered (`Approved`) assumptions only | Section prose |
+| 13.9 | Citation Verification | `evidence-citation-agent` | The draft | `Citation_Audit_Section_N.md` |
+| 13.10 | Cross-Section Consistency & KPI Alignment | `kpi-agent` (financial/KPI sections) or Orchestrator (others) | `Value_Driver_Tree_v2.md`, other section drafts | Consistency notes; `KPI_Tree_v2.md` updates |
+| 13.11 | QA & Final Review | `qa-review-agent` | The draft, citation audit, template, **plus the three new gates (Problem Consistency / Financial Integrity / Geographic Evidence)** | `QA_Review_Section_N.md`; flips status to ✅ |
 
-## Gate rules
+### Gate rules (unchanged from the original design)
 
-- **Stage 8 cannot start** while any gap typed in stage 3 as external/forecast/decision is still
-  unresolved for that specific claim — a section may draft the parts it *can* fully evidence while a
-  narrower gap is still in flight, but the specific claim depending on an open gap must wait.
-- **Stage 11 is the only stage that can move a section to ✅ Done.** Stage 9 passing alone only
-  earns 🟡 (drafted, needs verification) — matching the legend already defined in the Project
-  tracker.
-- **Two-pass verification, added post-Phase-7 (see [[Agentic_OS_Architecture_v2]], Change 2):**
-  Stage 9 and Stage 11 assume independence — a separate agent thread with no stake in the draft
-  passing. When Stages 9/11 are performed in-line by the same context that drafted the section (e.g.
-  because the invocation-pattern constraint above applies), that is **Pass 1 only**, and the section
-  may be marked **✅ Done (self-reviewed)**, not the unqualified ✅ Done. **Pass 2** — a freshly
-  invoked, separate top-level `Agent` call to `evidence-citation-agent`/`qa-review-agent`, with no
-  access to the drafting context's reasoning — is required before a section is marked **✅ Done
-  (independently verified)** and treated as submission-final.
-- **Section 1 (Executive Summary) skips stages 2–7 and 10** — it runs stage 1 (scoping: "have all 13
-  other sections reached at least 🟡?"), then hands straight to `exec-summary-agent` for stage 8-
-  equivalent synthesis, then stages 9 and 11 as normal.
-- **A stage may report "not applicable"** for a given section (e.g. stage 5 Forecast Generation is
-  not applicable to Section 11 CSR) — the Orchestrator records this explicitly rather than silently
-  skipping, so the pipeline log shows every section actually passed through 11 stages, not that some
-  were shortcut.
-- **Wikilink scope, added post-Phase-7:** skills and agents (`.claude/skills/`, `.claude/agents/`) are
-  not vault graph nodes — reference them as plain backtick paths at Stages 8/9/11, never as
-  `[[wikilinks]]`. Phase 7's pilot produced two broken wikilinks doing exactly this; see
-  [[Agentic_OS_Architecture_v2]], Change 4.
+- **13.8 cannot start** while any gap typed in 13.3 as external/forecast/decision is still unresolved
+  for that specific claim.
+- **13.11 is the only sub-stage that can move a section to ✅ Done.** 13.9 passing alone only earns 🟡.
+- **Two-pass verification** (see [[Agentic_OS_Architecture_v2]], Change 2): 13.9 and 13.11 assume
+  independence. When performed in-line by the same context that drafted the section, mark **✅ Done
+  (self-reviewed)**; a fresh, separately-invoked Pass 2 is required for **✅ Done (independently
+  verified)**, submission-final status.
+- **Section 1 (Executive Summary) skips 13.2–13.7 and 13.10** — runs 13.1 (has all 13 other sections
+  reached 🟡?), then `exec-summary-agent` for 13.8-equivalent synthesis, then 13.9 and 13.11 as normal.
+- **A sub-stage may report "not applicable"** — recorded explicitly, never silently skipped.
+- **Wikilink scope:** skills and agents are referenced as plain backtick paths, never `[[wikilinks]]`.
+
+## Part C — Whole-Plan Gates (Stages 14–19, run once, after all 14 sections reach 🟡 or better)
+
+| # | Stage | Owner | What it checks | Writes |
+|---|---|---|---|---|
+| 14 | **Cross-section consistency review** | `qa-review-agent` | The **Problem Consistency Gate** run at whole-plan scope (not just per-section): do all 14 sections, taken together, reflect one coherent business problem, scope, and decision question — no section still arguing the old Egypt-retention framing while another argues the new capital-allocation one | `vault/Validation/Problem_Consistency_Gate.md` (`scope: whole plan`) |
+| 15 | **Financial consistency review** | `qa-review-agent` | The **Financial Integrity Gate** at whole-plan scope: do Sections 6/9/12/13's figures reconcile with each other, not just internally — no section citing a different USD175mn sub-split, a different EBITDA-margin trajectory, or a different headline scenario than another | `vault/Validation/Financial_Integrity_Gate.md` (`scope: whole plan`) |
+| 16 | **Geographic evidence review** | `qa-review-agent` | The **Geographic Evidence Gate** at whole-plan scope: no section applying a geography tag inconsistently with how another section tagged the same underlying evidence | `vault/Validation/Geographic_Evidence_Gate.md` (`scope: whole plan`) |
+| 17 | **Citation audit** (whole-plan) | `evidence-citation-agent` | Every claim in the assembled plan, re-checked together (catches duplicated/relocated claims individual section audits could miss) — mirrors the precedent set by the pre-pivot "whole-plan McKinsey Lens pressure test" | Whole-plan citation audit note |
+| 18 | **Template Compliance Gate** | `.claude/skills/template-compliance-gate/SKILL.md` | Section count/numbering/titles/order intact; no structural drift from any prior stage (including any executive-editing pass) | `vault/Validation/Template_Compliance_Checklist.md` |
+| 19 | **Hand off to Publication Layer** | Orchestrator | Stages 14–18 all PASS | Formal handoff to `.claude/skills/executive-document-formatting/SKILL.md` per `[[Publication_Layer]]`'s contract |
+
+**Stage 19 cannot begin unless Stages 14, 15, 16, and 18 all show PASS**, and Stage 17 shows zero open
+citation failures. A FAIL at any of 14–18 routes back to the specific section(s) and stage(s)
+responsible — per each gate template's "If FAIL" section — not a blanket re-draft.
 
 ## Relationship to the old flow
 
-The prior `business-plan-drafting` skill (pre-redesign) had, in effect, only stages 1, 2, 8-lite (draft
-with inline "Caution:" flags), and a manual reread. It never had a mechanism to *resolve* a flagged
-gap — only to flag it in prose and proceed. This pipeline doesn't remove that honesty (flagged gaps
-are still flagged, in the Assumption Register's confidence column and in Decision records) — it adds
-the four missing stages (4, 5, 6, 7) that let a flagged gap actually get resolved, ranked, or
-escalated before the section is written, and two verification stages (9, 11) that didn't exist at
-all before.
+The pre-pivot pipeline was already a real improvement over the original (pre-architecture) flow — see
+the prior version of this document for that history. This redesign's own improvement is structural:
+it stops the plan-level judgment calls (which investment options exist, how they compare, what ranges
+and stage gates apply) from being implicitly made *inside* individual section drafts, where they'd be
+invisible to cross-section consistency checking. Those calls now happen once, explicitly, in Part A,
+before Part B's per-section loop runs — and Part C checks that Part B's 14 outputs stayed consistent
+with each other and with Part A's decisions.
 
 ## Status
 
-**Executed once, for real.** Section 3 (Market Analysis) ran through 9 of 11 stages substantively (2
-correctly marked not-applicable) on 2026-07-22 — see
-[[Phase7_Pilot_Execution_Report_Section_03|the execution report]] and
-[[Agentic_OS_Architecture_v2|the resulting architecture evolution]]. The stage sequence and gate rules
-validated cleanly; the invocation pattern above was adapted as a direct result. 13 of 14 sections
-remain untouched. See [[Implementation_Roadmap]] for what's next.
+**Part A: partially executed** (Stages 1, 2, 4, 6, 7, 8, 9 done as Phases 1–5 of the 2026-07-23 pivot;
+Stages 3, 5, 10, 11, 12 open, correctly deferred to the Phase 9 pilot). **Part B: executed once for
+real against the old problem** (Section 3, Market Analysis, 2026-07-22 — see
+[[Phase7_Pilot_Execution_Report_Section_03]]; not yet re-run against the new problem). **Part C: never
+executed** — the closest precedent is the pre-pivot whole-plan McKinsey Lens pressure test, which
+predates these three named gates and should not be treated as having satisfied them. See
+`vault/Architecture/Implementation_Roadmap.md` and the pivot's own Phase 9 pilot plan for what's next.
 
 ## See also
-[[Agentic_OS_Architecture]] · [[Agentic_OS_Architecture_v2]] · [[Phase7_Pilot_Execution_Report_Section_03]] · [[Project Administration]] · [[Publication_Layer|Publication Layer]] (the plan-level formatting/export step downstream of this pipeline — not one of the 11 stages above, and does not change them)
+[[Agentic_OS_Architecture]] · [[Agentic_OS_Architecture_v2]] · [[Phase7_Pilot_Execution_Report_Section_03]] ·
+[[Project Administration]] · [[Publication_Layer|Publication Layer]] (downstream of Stage 19, unchanged
+by this redesign) · `.claude/skills/template-compliance-gate/SKILL.md` · `Problem_Charter.md` ·
+`vault/Architecture/Decision_Management_Layer.md` · `vault/Architecture/Geographic_Evidence_Rules.md` ·
+`vault/Decisions/Investment_Portfolio_Register.md`, `vault/Decisions/Investment_Options_Register.md`

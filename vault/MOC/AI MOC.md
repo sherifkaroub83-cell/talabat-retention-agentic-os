@@ -6,7 +6,7 @@ updated: "2026-07-21"
 
 # 🗺️ AI MOC
 
-talabat's AI/ML use cases specifically — this is likely the single most important domain MOC for the capstone's "AI-driven retention" thesis, since it's where the technology and customer-retention threads meet.
+talabat's AI/ML use cases specifically — relevant to the capstone's current capital-allocation problem (`Problem_Charter.md`) as one of the embedded capabilities the 2026 investment programme deploys (see `vault/Knowledge/Investment_Relationship_Map.md` N-06), and still central to the pre-pivot retention thesis this vault also preserves as historical record (`vault/Projects/Talabat-Egypt-AI-Retention-Business-Plan.md`).
 
 ## AI topics
 - [[AI]] — the umbrella note: personalization, logistics dispatch optimization, fraud detection, ad-targeting, internal ops automation. Quantified impact grew from USD 14mn+ to USD 30mn+ incremental EBITDA/year across the corpus's timeline.
@@ -24,7 +24,7 @@ talabat's AI/ML use cases specifically — this is likely the single most import
 - [[Future AI Opportunities]] — the capstone's own recommendation-space, explicitly labeled as synthesis rather than reported fact
 
 ## Known gap (flagged across every AI-related Topic Note)
-Nearly every AI/personalization figure in the corpus is Group-level or explicitly **excludes Egypt** — there is no Egypt-specific AI deployment, personalization uplift, or recommendation-engine data anywhere in the primary corpus. This is one of the most important open questions for the capstone's Egypt-scoped business plan: the retention mechanism the plan wants to recommend (AI-driven personalization) is the same mechanism the evidence base says least about, for Egypt specifically.
+Nearly every AI/personalization figure in the corpus is Group-level or explicitly **excludes Egypt** — there is no Egypt-specific AI deployment, personalization uplift, or recommendation-engine data anywhere in the primary corpus. Per `vault/Architecture/Geographic_Evidence_Rules.md`, any Egypt-specific claim about AI/personalization impact is an inference, not a disclosed figure — relevant wherever the current capital-allocation plan reasons about AI as an embedded capability inside the Everyday App or Food-leadership buckets (`vault/Knowledge/Investment_Relationship_Map.md` N-06).
 
 ## See also
 - [[Technology MOC]] — the broader engineering context AI sits within

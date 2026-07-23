@@ -20,6 +20,16 @@ agreeing by omission.
 base; Task 3 (runtime adaptation) and Task 4 (the actual version-2 changes) are what that evidence
 justifies changing; Task 6 (recalculated readiness) is the resulting scorecard.
 
+> **2026-07-23 pivot note:** the runtime/delegation mechanics below (agent-thread isolation, two-pass
+> QA, fallback behavior) are problem-agnostic and unaffected by the pivot to a Group-wide
+> capital-allocation problem — see `Problem_Charter.md` and `vault/Architecture/Repository_Impact_Assessment.md`.
+> One roster question the pivot raised was whether a 9th specialist agent (e.g.
+> `investment-portfolio-agent`) was needed for the new Investment Option/Portfolio structures — decided
+> **no**: ownership was folded into `decision-steward` (see `.claude/agents/decision-steward.md`'s
+> added Investment Option responsibility and `vault/Architecture/Decision_Management_Layer.md`'s new
+> "Investment Option" section), since no genuinely distinct responsibility existed that the existing
+> 8-agent roster couldn't absorb. The roster stays at 8.
+
 ---
 
 ## Task 1 — Engineering Review: Classifying Every Execution Finding

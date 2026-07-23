@@ -1,7 +1,7 @@
 ---
 section: 1
 title: Executive Summary
-status: drafted — citation audit PASS (three fix rounds, independently re-verified); QA review PASS (targeted re-review, 2026-07-22, addendum in QA_Review_Section_01.md) — both gates closed
+status: Done — citation audit PASS (three fix rounds, independently re-verified); QA review PASS (targeted re-review, 2026-07-22, addendum in QA_Review_Section_01.md) — both gates closed; frontmatter "drafted" prefix corrected 22/07/2026 to "Done" to match the project tracker's long-standing ✅ Done (independently verified) status
 pipeline_run: 2026-07-22
 ---
 

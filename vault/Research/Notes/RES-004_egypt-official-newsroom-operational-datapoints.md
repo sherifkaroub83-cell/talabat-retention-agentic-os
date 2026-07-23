@@ -1,6 +1,8 @@
 ---
 id: RES-004
-status: found
+status: superseded
+superseded_date: "2026-07-23"
+superseded_reason: "Egypt-specific evidence, no longer the primary decision input after the pivot to Group-wide capital allocation; remains legitimate country-level evidence, not deleted. See Problem_Charter.md."
 retrieved: "2026-07-22"
 publisher: talabat corporate newsroom (official press releases)
 url: https://corporate.talabat.com/news/ (see per-item links below)

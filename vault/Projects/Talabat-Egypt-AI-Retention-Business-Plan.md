@@ -1,12 +1,19 @@
 ---
 type: project
-status: active
+status: superseded
+superseded_by: "Problem_Charter.md (pivoted 2026-07-23) — new project tracker to be created under the capital-allocation problem"
 owner: "Sherif Samy Karoub (G02)"
 started: "2026-07-20"
-updated: "2026-07-22"
+updated: "2026-07-23"
 ---
 
-# Project — Talabat Egypt AI Retention Business Plan
+> **SUPERSEDED 2026-07-23.** This tracker, and all 14 section drafts it tracks, were built against
+> the original Egypt-retention problem — superseded per `Problem_Charter.md`'s pivot to Group-wide
+> capital allocation. Preserved in full below as the historical record that all 14 sections reached
+> ✅ Done (independently verified) at least once, proving the pipeline mechanics work end to end. Not
+> an active input to the new pipeline. See `vault/Architecture/Repository_Impact_Assessment.md`.
+
+# Project — Talabat Egypt AI Retention Business Plan (historical — superseded 2026-07-23)
 
 The G02 capstone deliverable: a 15–25 page **AI Business Plan** recommending AI-driven customer
 retention for talabat Egypt, written to the GSB 14-section template v2.0 (McKinsey Edition),
@@ -193,16 +200,17 @@ complete for the entire Business Plan as of 2026-07-22.
    22/07/2026 — Section 1 drafted last as required, citation audit PASS, QA review PASS (one
    fail/fix/re-verify cycle on the template's "first half page" Answer-placement requirement) — see
    [[QA_Review_Section_01]]. **All fourteen sections complete and independently verified.**
-8. Phase 10 (next): export to `Outputs/`; write the OS structure document; build the presentation deck;
+8. Phase 10: export to `Outputs/`; write the OS structure document; build the presentation deck;
    upload to Moodle. **Publication Layer built 22/07/2026** — `.claude/skills/
    executive-document-formatting/SKILL.md`, [[Publication_Layer]], and
-   [[_TEMPLATE-formatting-qa-report]] now exist (formatting/export capability only, per explicit
-   scope). Not yet exercised: no `Formatting_QA_Report.md`, no DOCX/PDF export, `Outputs/` still
-   empty — awaits separate authorization. **Whole-plan McKinsey Lens pressure test: complete
+   [[_TEMPLATE-formatting-qa-report]]. **Whole-plan McKinsey Lens pressure test: complete
    22/07/2026** — [[Whole_Plan_McKinsey_Lens_Pressure_Test]], verdict PASS WITH MINOR FIXES; the two
    identified single-sentence fixes (Section 4 §4.2 branch count, Section 2 §2.5 revenue-line
-   labeling) were applied and directly re-verified the same day — no outstanding items remain from
-   this test.
+   labeling) were applied and directly re-verified the same day. **Export executed 22/07/2026** on
+   explicit user authorization — [[Formatting_QA_Report]] (verdict PASS WITH MINOR FIXES; several
+   formatting-pipeline defects found by systematic scan and fixed pre-export, zero content changed).
+   `Outputs/Talabat_Egypt_AI_Retention_Business_Plan.docx` (136 KB) and `.pdf` (772 KB, 82 pages) now
+   exist. Remaining Phase 10 items: OS structure document, presentation deck, Moodle upload.
 
 ## Links
 - [[MOC-Second-Brain]] · [[Talabat MOC]] · [[Project Administration]] · [[user]] · [[identity]] ·

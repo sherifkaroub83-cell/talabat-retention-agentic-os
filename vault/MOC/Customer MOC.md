@@ -6,7 +6,7 @@ updated: "2026-07-21"
 
 # 🗺️ Customer MOC
 
-The customer-facing side of the business — this is the domain closest to the capstone's actual deliverable (an AI-driven retention strategy for talabat Egypt).
+The customer-facing side of the business — customer behaviour (frequency, multi-vertical adoption, retention) is now the *intermediate* layer of the capstone's active capital-allocation problem's value chain (`vault/Knowledge/Investment_Relationship_Map.md`), not its final deliverable; it remains the direct subject of the pre-pivot Egypt-retention plan preserved as historical record (`vault/Projects/Talabat-Egypt-AI-Retention-Business-Plan.md`).
 
 ## Core customer topics
 - [[Customer Retention]] — talabat's named strategic pillar, with quantified frequency/loyalty uplift evidence

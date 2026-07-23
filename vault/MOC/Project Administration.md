@@ -9,7 +9,9 @@ updated: "2026-07-21"
 Capstone project-management content — team, milestones, decisions. Distinct from [[Talabat MOC]] (the business knowledge itself).
 
 ## Inside the vault
-- [[Talabat-Egypt-AI-Retention-Business-Plan]] — the capstone deliverable tracker (open decisions, plan of attack)
+- [[Talabat-Group-AI-Investment-Allocation-Business-Plan]] — the active capstone deliverable tracker
+  (post-2026-07-23 pivot; open decisions, plan of attack)
+- [[Talabat-Egypt-AI-Retention-Business-Plan]] — the superseded predecessor tracker, historical record
 - [[MOC-Second-Brain]] — the whole-vault root index
 
 ## Agentic OS architecture (OS Architecture Design Phase, 21/07/2026 — design only; reviewed and merged to main)
@@ -17,7 +19,8 @@ Capstone project-management content — team, milestones, decisions. Distinct fr
   capabilities, 8 agent designs, 6 skill designs, workflow diagram, gap analysis
 - [[Decision_Management_Layer]] · [[External_Research_Layer]] · [[Forecasting_Layer]] — the three
   new evidence layers designed between the corpus and the plan
-- [[Business_Plan_Generation_Pipeline]] — the redesigned 11-stage drafting process
+- [[Business_Plan_Generation_Pipeline]] — the 19-stage drafting process (redesigned 2026-07-23:
+  plan-level setup + the original 11-sub-stage per-section loop + whole-plan consistency gates)
 - [[Implementation_Roadmap]] — phased rollout with git branches, dependencies, completion criteria
 - [[OS_Architecture_Design_Phase_Validation_Report|OS Architecture Design Phase Validation Report]] — validation report confirming design-only scope
 - [[Decisions_README|Decisions layer]] · [[Research_README|Research layer]] · [[Forecasts_README|Forecasts layer]]
@@ -36,7 +39,7 @@ Capstone project-management content — team, milestones, decisions. Distinct fr
 - `../SESSION_LOG.md` — chronological session record
 - `../MEMORY.md` — project-scoped facts and standing decisions
 - `../CLAUDE.md` — project instructions for Claude Code sessions
-- `../Problem_Charter.md` — the G02 capstone charter (✅ approved by Dr. Hossam Daoud, 21/07/2026)
+- `../Problem_Charter.md` — the G02 capstone charter (Status: Active — governing problem for the Agentic OS)
 
 These five files live at the repository root, one level above `vault/`, so they are **not** Obsidian graph nodes and can't carry `[[wiki-links]]` to/from vault notes — that's a structural fact about this project's folder layout, not a gap to fix. This MOC is the closest thing to a bridge between them and the vault.
 

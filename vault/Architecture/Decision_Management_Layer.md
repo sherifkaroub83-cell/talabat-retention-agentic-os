@@ -2,6 +2,7 @@
 type: architecture
 status: approved
 created: "2026-07-21"
+updated: "2026-07-23"
 ---
 
 # Decision Management Layer
@@ -10,13 +11,21 @@ Task 5 of the OS Architecture Design Phase. Defines the evidence hierarchy that 
 future Business Plan must be traceable through, and the version-controlled repository that
 implements it.
 
+> **2026-07-23 pivot note:** the five-tier evidence model, the Assumptions Register schema, the
+> Decision Log schema, and the superseded-decision workflow below are all problem-agnostic and
+> remain unchanged. What's new is the **Investment Option** section below, added because the
+> governing business problem changed from a single retention question to a capital-allocation
+> question across multiple candidate investment options — see `Problem_Charter.md`. All 7
+> pre-pivot Decision Log entries were marked `superseded` on 2026-07-23 (content preserved, not
+> deleted); this layer starts logging fresh `DEC-` and `OPT-` records against the new problem.
+
 ## The five-tier evidence model
 
 ```
 1. Repository Facts        vault/Knowledge/Facts/, Sources/   — disclosed, cited, immutable
 2. External Research        vault/Research/                    — sourced this project, dated, confidence-scored
 3. Forecasts                 vault/Forecasts/                   — derived, method-stated, scenario-tagged
-4. Management Decisions      vault/Decisions/Decision_Log/       — team/instructor judgment calls, dated, owned
+4. Management Decisions      vault/Decisions/Decision_Log/       — user/team judgment calls, dated, owned
 5. Business Plan              Outputs/                            — the only tier allowed to read from all four above
 ```
 
@@ -98,10 +107,136 @@ Why this option over the others.
 Which Assumption Register row(s) this creates/updates; which Business Plan section(s) it unblocks.
 
 ## Approval
-Team decisions may be marked `approved` by the OS owner. Decisions requiring instructor/team
+Team decisions may be marked `approved` by the OS owner. Decisions requiring user/team
 judgment beyond the OS owner's authority stay `proposed` until confirmed by the user — mirrors the
 vault's existing propose-then-approve convention for destructive edits.
 ```
+
+## Investment Option — the primary decision unit (added 2026-07-23)
+
+The pre-pivot Decision Log treated every judgment call as a one-off (a market-size definition, a
+governing hypothesis). The capital-allocation problem is structurally different: the plan must
+compare **multiple candidate uses of the same USD175mn envelope** against each other, not just
+resolve isolated conflicts. An **Investment Option** is a candidate capital-allocation choice —
+either one of the two disclosed top-level buckets (Everyday App, Food-leadership) or a specific
+initiative/market allocation proposed *within* one of them — carried through the same
+propose → evidence → decide → track lifecycle as a Decision Log entry, but with a richer schema
+built for comparison.
+
+**Where Investment Options live:** `vault/Decisions/Investment_Options/OPT-XXX_<slug>.md`, indexed
+in `vault/Decisions/Investment_Options_Register.md` (parallel structure to `Decision_Log/` and
+`Assumptions_Register.md`). An Investment Option is not a replacement for a Decision Log entry —
+"which option did we choose and why" is still recorded as a `DEC-` decision that cites the
+compared `OPT-` records; the `OPT-` record is the candidate itself, the `DEC-` record is the
+resolution.
+
+### Investment Option — schema (`_TEMPLATE-investment-option.md`)
+
+```markdown
+---
+id: OPT-XXX
+status: candidate   # candidate | scored | recommended | approved | rejected | superseded
+category: <Everyday App | Food-leadership | Enabling capability>
+date: YYYY-MM-DD
+owner: <name>
+---
+
+# OPT-XXX — <one-line option name>
+
+## Rationale
+Why this option exists as a candidate — what problem or opportunity it addresses.
+
+## Evidence
+Citations (DocID, page N) or links to Topic Notes / Facts supporting this option's premise.
+Tier-tagged per the five-tier model above.
+
+## Geography
+Group / GCC / non-GCC / Egypt-standalone / a named country / market-comparison — per
+`vault/Architecture/Geographic_Evidence_Rules.md`. State explicitly if the option is proposed for
+one market, a group of markets, or Group-wide.
+
+## Value drivers
+Which node(s) of `vault/Knowledge/Investment_Relationship_Map.md`'s chain this option is expected
+to move (e.g. "partner selection depth," "order frequency," "multi-vertical adoption") — not a
+revenue number, a mechanism.
+
+## Required capabilities
+What has to be built/scaled/operated for this option to work (e.g. dark-store density, a
+subscription-tier feature, a commission-rate change).
+
+## Cost
+Dollar estimate or range, and which bucket/sub-bucket of the USD175mn envelope it draws from.
+State explicitly if this is a disclosed figure or an assumption (cite the Assumption ID if so).
+
+## Time to impact
+Rough horizon (e.g. "quarters" vs. "1-2 years") — not a false-precision date, unless the corpus
+discloses one.
+
+## Complexity
+Qualitative: Low / Medium / High, with the one or two reasons why.
+
+## Dependencies
+Other options, capabilities, or Decisions this one requires or blocks.
+
+## Risks
+What could make this option fail to deliver its value drivers, or produce an unintended effect
+elsewhere in the chain.
+
+## Confidence
+High / Medium / Low, per the tier definitions above — reflects evidence strength, not desirability.
+
+## Recommended allocation range
+A range (e.g. "USD 10-20mn"), never a single point estimate, unless the corpus discloses an exact
+figure for this specific option. State the range's basis (assumption ID, forecast scenario, or
+explicitly "team judgment, unvalidated").
+
+## Pilot recommendation
+Whether this option should be piloted/staged before full-scale funding, and what the pilot would
+test.
+
+## Stage gates
+The specific evidence or KPI threshold that would justify moving from pilot to scale, or from
+scale to reallocation.
+
+## KPIs
+Which KPI Tree node(s) (see `vault/Forecasts/KPI_Tree.md`, once rebuilt in Phase 5) would show
+whether this option is working.
+
+## Status
+See frontmatter. Track transitions here with dates.
+
+## Review date
+When this option should be revisited.
+```
+
+### Comparison and scoring framework
+
+When multiple Investment Options compete for the same finite envelope (or the same sub-bucket),
+the Decision Steward Agent scores them across the following criteria — **the score supports
+judgment, it does not replace it.** No single blended numeric score should be presented as if it
+were a precise ranking; use the scores to structure a written recommendation, not to auto-select
+a "winner."
+
+| Criterion | What it captures |
+|---|---|
+| Evidence strength | How well the option's premise is supported — tier + confidence per the five-tier model |
+| Strategic alignment | Fit with the disclosed Everyday App / Food-leadership framing (TLB-020, TLB-014) |
+| Expected CLV/GMV/margin impact | Directional, not a point estimate, unless a disclosed figure exists |
+| Time to value | Per the option's "Time to impact" field |
+| Scalability | Whether the mechanism plausibly extends beyond its initial scope (market, segment) |
+| Market applicability | How many of the 8 markets it plausibly applies to, and whether that's evidenced or inferred (Geographic Evidence Rules apply) |
+| Execution feasibility | Organizational/operational difficulty, independent of cost |
+| Implementation risk | Per the option's "Risks" field |
+| Data readiness | Whether the KPIs needed to monitor this option are currently measurable, or require new instrumentation |
+| Reversibility | How easily the investment could be scaled back if early signals are poor |
+| Measurement quality | Whether success/failure will be cleanly attributable to this option, or confounded with other concurrent investments |
+
+**Scoring convention:** each criterion is rated High / Medium / Low (never a 1-10 number — a
+false-precision numeric scale would misrepresent how uncertain most of these judgments are, given
+the corpus's disclosed-evidence gaps documented throughout Phase 3's topic notes, especially
+`Capital Allocation and Investment Governance.md`). The comparison table in a `DEC-` record that
+resolves between multiple `OPT-` records should show all eleven ratings side by side, plus a
+written rationale — never a summed/averaged score standing alone as the justification.
 
 ## Worked example — applying this to an already-known conflict
 
@@ -153,6 +288,13 @@ to improvise it the first time a real conflict resolution changes mid-drafting.
   (Decision Escalation) and Stage 8 (Drafting — every number cited must resolve to an Assumption ID).
 - Validated by: Evidence & Citation Agent (citation-audit skill checks that every Assumption ID
   referenced in a draft actually exists and is `Approved`, not `Proposed`).
+- **(Added 2026-07-23)** Investment Options (`vault/Decisions/Investment_Options/`) are written to
+  by Decision Steward Agent, proposed by any agent surfacing a candidate allocation, and rolled up
+  into `vault/Decisions/Investment_Portfolio_Register.md`, which the Financial Integrity Gate
+  (Phase 7) checks for arithmetic consistency against the disclosed USD175mn envelope.
 
 ## See also
 [[Agentic_OS_Architecture]] · [[Project Administration]]
+- `vault/Decisions/Investment_Options_Register.md` — the Investment Option index this layer now maintains
+- `vault/Decisions/Investment_Portfolio_Register.md` — the envelope-level rollup
+- `vault/Knowledge/Investment_Relationship_Map.md` — the value-driver chain Investment Options are scored against
