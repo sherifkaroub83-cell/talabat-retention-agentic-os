@@ -27,6 +27,8 @@ The financial-performance side of the knowledge base — scale metrics, profitab
 - [[EBITDA]] — the disclosed Adjusted EBITDA figures and the guided margin step-down (6.0% → 4.6% of GMV) behind the programme's cost side
 - [[Cash Generation]] — what the corpus discloses (and doesn't) about free cash flow / cash conversion, relevant since the programme is "fully funded by internal cash"
 - [[GCC vs non-GCC]] — the canonical note for what's disclosed at Group / GCC / non-GCC / Egypt-standalone level; see also `vault/Architecture/Geographic_Evidence_Rules.md` for the enforcement rules
+- [[Capital Allocation and Investment Governance]] — how the USD175mn programme is being decided and
+  governed, distinct from what it's being spent on
 - `vault/Knowledge/Investment_Relationship_Map.md` — the Investment → capability → behaviour → GMV → revenue → gross profit → EBITDA → cash-flow chain
 
 ## Raw data

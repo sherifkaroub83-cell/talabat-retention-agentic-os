@@ -19,6 +19,9 @@ The customer-facing side of the business — customer behaviour (frequency, mult
 - [[Promotions]] — vouchers, rewards points, DineOut Deals, PostPaid, the Family Plan
 - [[Pricing]] — commission/take-rate pressure and its downstream effect on customer-facing pricing
 - [[Personalization]] — the customer-experience angle on AI (recommendation timing, cross-sell)
+- [[Customer Economics]] — **(added in the 2026-07-23 pivot)** the per-customer unit-economics view
+  (frequency, multi-vertical uplift, CLV proxies) that connects customer behaviour to the Investment
+  Relationship Map's downstream GMV/EBITDA nodes
 
 ## Strategic synthesis
 - [[Customer Retention Drivers]] — the corpus's retention mechanisms ranked by evidence strength (talabat pro > multi-vertical > Rewards > PostPaid > Family Plan)

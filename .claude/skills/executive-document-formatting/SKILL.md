@@ -168,8 +168,11 @@ This skill's own procedure, run in full each invocation:
 ## 4. Formatting standards
 
 ### 4.1 Cover page
-- Title: "AI-Driven Customer Retention Strategy for talabat Egypt" (or the plan's actual working
-  title as it appears in the tracker — copied verbatim, not composed fresh)
+- Title: the plan's actual working title as it appears in the active tracker
+  (`vault/Projects/Talabat-Group-AI-Investment-Allocation-Business-Plan.md`) — copied verbatim, not
+  composed fresh. As of the 2026-07-23 pivot this is the talabat Group capital-allocation plan, not
+  the superseded "AI-Driven Customer Retention Strategy for talabat Egypt" title (that title belongs
+  only to the historical export already sitting in `Outputs/`, and must never be reused for a new run)
 - Subtitle: "AI Business Plan — GSB Template v2.0 (McKinsey Edition)"
 - Course/programme line, team designation (Group G02), submission date, instructor name — pulled from
   `CLAUDE.md`/the tracker, not invented
@@ -263,8 +266,11 @@ This skill's own procedure, run in full each invocation:
 
 ## Required output paths (documented now for future use — **not produced by this task**)
 
-- `Outputs/Talabat_Egypt_AI_Retention_Business_Plan.docx`
-- `Outputs/Talabat_Egypt_AI_Retention_Business_Plan.pdf`
+- `Outputs/Talabat_Group_AI_Investment_Allocation_Business_Plan.docx` — the active plan's output path
+  as of the 2026-07-23 pivot; **never** write to `Outputs/Talabat_Egypt_AI_Retention_Business_Plan.docx`
+  or `.pdf` — those filenames are reserved for the superseded Egypt-retention export already present in
+  `Outputs/` and must not be overwritten or reused
+- `Outputs/Talabat_Group_AI_Investment_Allocation_Business_Plan.pdf`
 - `vault/Validation/Formatting_QA_Report.md` — mirrors the existing `Citation_Audit_Section_N.md` /
   `QA_Review_Section_N.md` convention of living in `vault/Validation/` as this project's audit trail,
   rather than in `Outputs/` alongside the deliverables themselves

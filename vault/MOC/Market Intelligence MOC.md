@@ -9,7 +9,10 @@ updated: "2026-07-21"
 Geography and competitive context — where talabat operates and who it competes against, per the primary corpus.
 
 ## Geography
-- [[Egypt]] — **the capstone's target market.** The central topic in this domain: reporting-treatment history (undisclosed → bundled non-GCC → standalone FY2025 segment), talabat pro's Feb 2025 launch, now the 3rd-largest market by GMV and largest user base
+- [[Egypt]] — **a genuine worked example within talabat's Group-wide, eight-market scope** (not the
+  capstone's target-market boundary — see `Problem_Charter.md`). The corpus's richest single-country
+  data point: reporting-treatment history (undisclosed → bundled non-GCC → standalone FY2025 segment),
+  talabat pro's Feb 2025 launch, now the 3rd-largest market by GMV and largest user base
 - [[UAE]] — the founding/largest GCC market, talabat pro's original March 2022 launch market, corporate HQ location
 
 ## Competitive landscape

@@ -20,6 +20,14 @@ How talabat actually makes money and structures its operations — the four mone
 - [[Pricing]] — commission rates, regulatory caps, take-rate structure
 - [[Promotions]] — vouchers, CARC economics, loyalty benefit stacking
 
+## 2026 investment-allocation topics (added in the 2026-07-23 pivot)
+- [[Everyday App]] — the Group-wide multi-vertical super-app thesis the ~USD120mn Everyday App bucket funds
+- [[Food Leadership]] — the ~USD55mn Food-leadership bucket's competitive-defence thesis
+- [[Grocery and Retail]] — the quick-commerce/tMart growth engine as it relates to both investment buckets
+- [[FinTech]] — PostPaid, co-branded cards, and the Everyday App's financial-services layer
+- [[Multi-Verticality]] — the cross-vertical usage evidence (13.0x vs 3.8x order frequency) underpinning
+  both buckets' investment logic
+
 ## Strategic synthesis
 - [[How Talabat Creates Value]] — the umbrella argument connecting all four monetization layers
 - [[Revenue Model]] — the logic linking the four revenue streams to volume/pricing drivers

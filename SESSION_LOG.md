@@ -6,6 +6,38 @@ writes these entries for you.
 
 ---
 
+## Session 9 — 2026-07-23 (pivot Phases 3–9 completed; instructor-approval cleanup; merged to main; leakage-gap fixes; final comprehensive readiness review)
+
+**Focus:** completed the strategic pivot begun in Session 8, then ran three further, separately
+requested passes: removing instructor-approval dependencies from the active OS, reconciling the
+feature branch with `main`, and a full repository-wide readiness review.
+
+**Done:**
+- Pivot Phases 3–9: knowledge reorientation (`Geographic_Evidence_Rules.md`, `Investment_Relationship_Map.md`,
+  13 topic notes), Decision/Investment Portfolio layer (`Investment_Options_Register.md`,
+  `Investment_Portfolio_Register.md`, `DEC-008`/`DEC-009`), Forecast/KPI rebuild (`Value_Driver_Tree_v2.md`,
+  `Scenarios_v2.md`, `KPI_Tree_v2.md`), all 8 agents + 10 skills remapped to the new problem, the
+  19-stage `Business_Plan_Generation_Pipeline.md` with 3 new QA gates, a repository consistency audit,
+  and a pilot draft of Sections 2/4/5/9/12/13 (self-reviewed, Pass 1 only).
+- Removed instructor-approval-as-OS-gate language repo-wide (`Approval_Language_Cleanup_2026-07-23.md`);
+  `Problem_Charter.md` status moved from proposed to **Active**.
+- Dry-run merged `origin/main` into the feature branch (18/18 semantic checks PASS,
+  `Main_Merge_Readiness_Report_2026-07-23.md`), then committed the merge — no conflicts, `origin/main`'s
+  only new content was one empty teammate test file.
+- Opened and merged PR #1 (the full pivot) into `main`.
+- Found and fixed 3 old-problem-leakage gaps (old section drafts missing supersession markers,
+  formatting/orchestrator skills not naming `Business_Plan_Drafts_v2/` as canonical) — PR #2, merged.
+- Ran a 16-phase Final Comprehensive Readiness Review (`vault/Validation/Final_Comprehensive_Readiness_Review_2026-07-23.md`)
+  covering governing-problem consistency, Second Brain alignment, memory/identity, agents/skills,
+  Decision/Forecast layers, active-section status, template/visual/publication readiness, and a
+  40+-claim traceability sample. Found and fixed 2 further Category-A blockers the leakage-gap PR had
+  missed (`MOC-Second-Brain.md`'s opening description, `Implementation_Roadmap.md` never marked
+  superseded) plus several MOC-navigation and register-metadata hygiene issues; see the report for the
+  full list and verdict.
+
+**Next:** the readiness review's own "Human decisions required" and "Next action sequence" sections
+govern what comes next — see that report rather than restating it here.
+
 ## Session 8 — 2026-07-22/23 (all 14 sections completed and published; strategic pivot Phases 1–2)
 
 **Focus:** completed the remaining Business Plan sections to ✅ Done (independently verified),

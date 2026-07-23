@@ -1,3 +1,17 @@
+---
+superseded: true
+superseded_date: "2026-07-23"
+superseded_reason: "Assembled rollup of the original Egypt-retention Business Plan, superseded by the 2026-07-23 pivot to talabat Group-wide capital allocation — see Problem_Charter.md and vault/Architecture/Repository_Impact_Assessment.md"
+---
+
+> **SUPERSEDED 2026-07-23.** This assembled executive rollup was built against the original
+> Egypt-retention problem, itself superseded by the 2026-07-23 pivot to talabat Group-wide capital
+> allocation (see `Problem_Charter.md`). Preserved unchanged below as historical record — the specific
+> Board recommendation below (fund an Egypt-specific retention initiative) is **not** the current
+> governing recommendation. Not a valid input to any new drafting or export — active drafting for the
+> current problem lives under `vault/Projects/Business_Plan_Drafts_v2/`, and no new-problem export has
+> been produced yet.
+
 # AI-Driven Customer Retention Strategy for talabat Egypt
 
 ## 1. Executive Summary
