@@ -43,13 +43,18 @@ over").
 
 **Disclosed, not decided by this plan:** USD175mn total, Board-approved February 2026, fully funded by
 internal cash — ~USD120mn Everyday App (~USD75mn opex + ~USD45mn capex) + ~USD55mn Food-leadership
-(`vault/Decisions/Investment_Portfolio_Register.md`). **This plan's own proposed sub-allocation**
-(`OPT-001`–`005`, ranged in the Portfolio Register, ranked in `DEC-009`) remains `status: proposed` —
-`DEC-009`'s funding-sequence and headline-presentation questions are unresolved, so per this session's
-working default (matching `DEC-008`'s conservative resolution), those constructed ranges are referenced
-here narratively, not shown as a financial exhibit: the five options span both buckets plus two
-cross-cutting enabling-capability candidates, are explicitly non-additive against the USD175mn total, and
-do not claim to allocate 100% of either bucket (`Investment_Portfolio_Register.md`'s stated caveats).
+(`vault/Decisions/Investment_Portfolio_Register.md`). **This plan's own analytical sub-allocation**
+(`OPT-001`–`005`, ranged in the Portfolio Register, ranked and sequenced in `DEC-009`, `status: approved`
+2026-07-23 — middle path) is referenced here narratively, not shown as a headline financial exhibit, per
+`DEC-009`'s own mandatory placement rule (the constructed dollar ranges belong in a Section 14
+appendix/sensitivity exhibit, each carrying the sentence "This is an Agentic OS analytical
+recommendation, not a disclosed talabat allocation," never here): the five options span both buckets
+plus two cross-cutting enabling-capability candidates, are explicitly non-additive against the USD175mn
+total, and do not claim to allocate 100% of either bucket (`Investment_Portfolio_Register.md`'s stated
+caveats). **Recommended funding sequence (per `DEC-009`):** near-term priority to OPT-002 (talabat pro
+Egypt/Iraq — cheap, fast, reversible) and OPT-003 (Food-leadership GCC-3 — tightly evidenced); OPT-001
+(dark-store densification) and OPT-005 (AI/personalisation) continue at pace; OPT-004 (advertising gap)
+is a longer-horizon build.
 
 ## 9.3 Revenue Forecasts — Base, Upside, Downside (FY2026)
 

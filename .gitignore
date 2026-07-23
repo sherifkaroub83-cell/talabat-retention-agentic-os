@@ -236,3 +236,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Business Plan export capability-verification runs (never a real submission — see
+# scripts/export_business_plan.py --smoke-test and Publication_Layer.md)
+vault/Validation/_export_smoke_test/

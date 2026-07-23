@@ -21,7 +21,11 @@ Capstone project-management content — team, milestones, decisions. Distinct fr
   new evidence layers designed between the corpus and the plan
 - [[Business_Plan_Generation_Pipeline]] — the 19-stage drafting process (redesigned 2026-07-23:
   plan-level setup + the original 11-sub-stage per-section loop + whole-plan consistency gates)
-- [[Implementation_Roadmap]] — phased rollout with git branches, dependencies, completion criteria
+- [[Implementation_Roadmap]] — **superseded 2026-07-23** — phased rollout with git branches, dependencies,
+  and completion criteria, built for the original Egypt-retention problem's 14-section drafting
+  sequence; preserved as historical record only, see its banner. Active drafting now follows the
+  19-stage `Business_Plan_Generation_Pipeline.md` and `Talabat-Group-AI-Investment-Allocation-Business-Plan.md`'s
+  own status table
 - [[OS_Architecture_Design_Phase_Validation_Report|OS Architecture Design Phase Validation Report]] — validation report confirming design-only scope
 - [[Decisions_README|Decisions layer]] · [[Research_README|Research layer]] · [[Forecasts_README|Forecasts layer]]
   — the three layers' own folder-index notes; Decisions and Research now hold real content (Phase 7), Forecasts still empty

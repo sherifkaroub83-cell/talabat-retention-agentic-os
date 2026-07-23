@@ -3,7 +3,16 @@ section: 9
 title: Financial Plan
 status: Done — citation audit PASS ([[Citation_Audit_Section_09]]), QA review PASS ([[QA_Review_Section_09]], FAIL on first independent pass — two template-completeness gaps, fixed, independently re-verified); frontmatter corrected 22/07/2026 to match the project tracker's long-standing ✅ Done (independently verified) status, which this field had never been synced to
 pipeline_run: 2026-07-22
+superseded: true
+superseded_date: "2026-07-23"
+superseded_reason: "Built for the original Egypt-retention problem, superseded by the 2026-07-23 pivot to talabat Group-wide capital allocation — see Problem_Charter.md and vault/Architecture/Repository_Impact_Assessment.md"
 ---
+
+> **SUPERSEDED 2026-07-23.** This section draft was built against the original Egypt-retention
+> problem, itself superseded by the 2026-07-23 pivot to talabat Group-wide capital allocation (see
+> `Problem_Charter.md`). Preserved unchanged below as historical record (see the frontmatter `status` field for the
+> original citation-audit/QA outcome under the old problem). Not a valid input to any new drafting —
+> active drafting for the current problem lives under `vault/Projects/Business_Plan_Drafts_v2/`.
 
 # 9. Financial Plan
 

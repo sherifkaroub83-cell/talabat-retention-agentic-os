@@ -107,10 +107,16 @@ document. This skill has no write access to section content and must not simulat
 
 ## 2. Required inputs (read before formatting)
 
-- All 14 `vault/Projects/Business_Plan_Drafts/Section_01_Executive_Summary.md` through
-  `Section_14_Appendices.md` — **every one must carry `status: ... Done (independently verified)`
-  in its frontmatter**; if any section is missing this exact status, stop and report which
-  section(s) block the run rather than formatting a partial or self-reviewed plan.
+- All 14 `vault/Projects/Business_Plan_Drafts_v2/Section_01_Executive_Summary.md` through
+  `Section_14_Appendices.md` — **the active drafting location as of the 2026-07-23 pivot.** Every one
+  must carry `status: ... Done (independently verified)` in its frontmatter; if any section is missing
+  this exact status, stop and report which section(s) block the run rather than formatting a partial
+  or self-reviewed plan. **Never read from `vault/Projects/Business_Plan_Drafts/` (no `_v2` suffix)** —
+  that folder holds the 14 sections drafted against the superseded Egypt-retention problem, each
+  explicitly marked `superseded: true` in frontmatter; formatting from there would export the wrong
+  plan. As of this update, only 6 of 14 `_v2` sections exist (2, 4, 5, 9, 12, 13, all Pass 1/
+  self-reviewed) — this skill cannot run a full export until all 14 exist and pass independent
+  verification.
 - `vault/Projects/Talabat-Group-AI-Investment-Allocation-Business-Plan.md` — the active master tracker
   as of the 2026-07-23 pivot (`Talabat-Egypt-AI-Retention-Business-Plan.md` is its superseded
   predecessor, historical reference only), to confirm the same 14/14 status and to pull the
@@ -162,8 +168,11 @@ This skill's own procedure, run in full each invocation:
 ## 4. Formatting standards
 
 ### 4.1 Cover page
-- Title: "AI-Driven Customer Retention Strategy for talabat Egypt" (or the plan's actual working
-  title as it appears in the tracker — copied verbatim, not composed fresh)
+- Title: the plan's actual working title as it appears in the active tracker
+  (`vault/Projects/Talabat-Group-AI-Investment-Allocation-Business-Plan.md`) — copied verbatim, not
+  composed fresh. As of the 2026-07-23 pivot this is the talabat Group capital-allocation plan, not
+  the superseded "AI-Driven Customer Retention Strategy for talabat Egypt" title (that title belongs
+  only to the historical export already sitting in `Outputs/`, and must never be reused for a new run)
 - Subtitle: "AI Business Plan — GSB Template v2.0 (McKinsey Edition)"
 - Course/programme line, team designation (Group G02), submission date, instructor name — pulled from
   `CLAUDE.md`/the tracker, not invented
@@ -207,6 +216,18 @@ This skill's own procedure, run in full each invocation:
 ### 4.8 Figures/exhibits
 - Sequential caption numbering "Figure N." with the existing McKinsey-Lens action title preserved
   verbatim (never rewritten to a formatter's preferred phrasing)
+- **(Added 2026-07-23)** This skill never invents a chart, graph, or exhibit the drafts don't already
+  contain — that discipline is unchanged. What's new: a real, in-repo generation path now exists.
+  `scripts/generate_exhibits.py` (matplotlib, verified working in this environment) renders numbered,
+  sourced PNG exhibits from `vault/Projects/Business_Plan_Drafts_v2/Exhibits/`, per
+  `vault/Templates/_TEMPLATE-visual-exhibit-standard.md`. A Section_XX draft embeds one by placing
+  `<!-- FIGURE: Figure_NN_<slug> -->` at the point in its prose where the exhibit belongs — this skill
+  (and `scripts/export_business_plan.py`) resolves that marker to the actual image, assigns the final
+  sequential figure number based on the marker's position in the assembled 14-section document (not
+  its filename or generation order), and reproduces its manifest caption verbatim, including the
+  DEC-009 mandatory disclosure sentence where applicable. Still never generates a figure ad hoc during
+  a formatting pass — if a draft's marker doesn't resolve to a real file in the Exhibits manifest, that
+  is a content gap to flag back to the orchestrating session, not something this skill fills in.
 
 ### 4.9 Numbers
 - Consistent thousands separators, currency symbol placement (USD/EGP as already used in the draft),
@@ -250,15 +271,27 @@ This skill's own procedure, run in full each invocation:
 
 ## 6. PDF technical requirements
 
-- Exported from the finished DOCX (not independently recreated) so DOCX and PDF never diverge
+- **Preferred:** exported from the finished DOCX (not independently recreated) so DOCX and PDF never
+  diverge. **Disclosed deviation, both real runs to date:** this environment's LibreOffice cannot load
+  any document via the intended DOCX→PDF path (confirmed twice — 22/07/2026's original export, and
+  re-tested independently during the 2026-07-23 Final Execution Readiness pass, same failure both
+  times). `scripts/export_business_plan.py` instead builds the PDF from an independently-rendered HTML
+  version of the same parsed Markdown source (same content, same figures, same table data) via headless
+  Chromium — not from the DOCX file itself. This keeps DOCX and PDF *content-identical* (same source
+  parse, same data) without being byte-derived from one another; re-verify whether LibreOffice works
+  before assuming this deviation still applies to a future run.
 - Fonts embedded (no reliance on viewer-side font substitution)
 - Bookmarks/outline generated from the same Heading 1/2/3 structure, matching the TOC
-- Tagged/accessible PDF where the export toolchain supports it
+- Tagged/accessible PDF where the export toolchain supports it — not yet verified for the
+  Chromium-print path specifically; flag as an open item on the next real (non-smoke-test) export
 
 ## Required output paths (documented now for future use — **not produced by this task**)
 
-- `Outputs/Talabat_Egypt_AI_Retention_Business_Plan.docx`
-- `Outputs/Talabat_Egypt_AI_Retention_Business_Plan.pdf`
+- `Outputs/Talabat_Group_AI_Investment_Allocation_Business_Plan.docx` — the active plan's output path
+  as of the 2026-07-23 pivot; **never** write to `Outputs/Talabat_Egypt_AI_Retention_Business_Plan.docx`
+  or `.pdf` — those filenames are reserved for the superseded Egypt-retention export already present in
+  `Outputs/` and must not be overwritten or reused
+- `Outputs/Talabat_Group_AI_Investment_Allocation_Business_Plan.pdf`
 - `vault/Validation/Formatting_QA_Report.md` — mirrors the existing `Citation_Audit_Section_N.md` /
   `QA_Review_Section_N.md` convention of living in `vault/Validation/` as this project's audit trail,
   rather than in `Outputs/` alongside the deliverables themselves

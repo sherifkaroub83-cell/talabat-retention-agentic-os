@@ -36,15 +36,23 @@ disclosed.
 
 ## Base / downside / upside allocation ranges
 
-**Proposed 2026-07-23 by `decision-steward`, pending
-[[DEC-009_investment-options-ranking-and-allocation-priority|DEC-009]] (status: `proposed`, not yet
-approved).** The disclosed USD175mn/120mn/55mn figures themselves remain point figures from talabat's
-own Board approval, unchanged by this section — they need no "base case" because they are already the
-approved case. What follows is **this OS's own proposed sub-bucket allocation logic** for five
-evidence-grounded candidate Investment Options (`OPT-001`–`OPT-005`, registered in
+**Resolved 2026-07-23 by [[DEC-009_investment-options-ranking-and-allocation-priority|DEC-009]]
+(status: `approved` — middle path).** The disclosed USD175mn/120mn/55mn figures themselves remain point
+figures from talabat's own Board approval, unchanged by this section — they need no "base case" because
+they are already the approved case. What follows is **this OS's own analytical sub-bucket allocation
+logic** for five evidence-grounded candidate Investment Options (`OPT-001`–`OPT-005`, registered in
 `Investment_Options_Register.md`, compared in `DEC-009`), not a disclosed talabat allocation at this
 granularity. Every range below is sourced to a Decision-tier, Low-confidence Assumption Register row
-(`ASM-029`–`ASM-033`) and stays `Proposed`, not `Approved`, until `DEC-009` is resolved.
+(`ASM-029`–`ASM-033`), now `Approved` per `DEC-009`'s resolution.
+
+**Mandatory placement/labeling rule (DEC-009):** the Business Plan shall make a clear recommended
+funding sequence, argued narratively on the 11-criterion comparison in `DEC-009` — that is the plan's
+actual recommendation. The dollar ranges below shall **never** be presented as a headline financial
+commitment; they may appear only as a clearly labeled illustrative sensitivity/appendix exhibit
+(Section 14 Appendix, or a footnoted supporting exhibit in Section 9/12), and every appearance must
+carry the sentence: **"This is an Agentic OS analytical recommendation, not a disclosed talabat
+allocation."** This rule applies identically to Business Plan drafting, forecasting outputs, and the
+Publication Layer.
 
 | Option | Bucket | Base | Upside | Downside | Basis |
 |---|---|---|---|---|---|
@@ -66,11 +74,11 @@ granularity. Every range below is sourced to a Decision-tier, Low-confidence Ass
    outside UAE/Kuwait/Qatar are real, funded parts of the envelope this table does not attempt to size,
    since no evidence-grounded candidate option exists yet for them.
 
-This still leaves genuinely unset: (a) scenario ranges for the *expected financial return* of the full
+This still leaves genuinely unset only: scenario ranges for the *expected financial return* of the full
 envelope (GMV/revenue/EBITDA impact) — see `vault/Forecasts/Scenarios_v2.md`'s top-level base/upside/
 downside scenarios for that, resolved separately by `DEC-008` (Section 9's headline case is base-case-
-only); and (b) whether the table above should be shown in the Business Plan as a headline recommendation
-at all — the second open question `DEC-009` escalates.
+only). Whether this table is shown in the Business Plan, and how, is now resolved by `DEC-009` — see the
+mandatory placement/labeling rule above.
 
 ## Pilot funding / reserve / reallocation pool
 
@@ -108,16 +116,15 @@ agent/skill definitions, Phase 6 of the 2026-07-23 pivot).
 
 ## Review date
 
-The "Base / downside / upside allocation ranges" section above: alongside `DEC-009`'s resolution
-(target — before Section 9/12 drafting begins under the Phase 9 pilot). The "Expected outcomes"
-section below: to be set once a scenario-based return estimate exists for the *return* side of the
-envelope specifically (distinct from the sub-bucket allocation-range proposal above), which remains
-unset.
+The "Base / downside / upside allocation ranges" section above: resolved 2026-07-23 alongside
+`DEC-009`. The "Expected outcomes" section below: to be set once a scenario-based return estimate
+exists for the *return* side of the envelope specifically (distinct from the sub-bucket allocation-range
+proposal above), which remains unset.
 
 ## See also
 - `Topics/2026 Investment Programme.md` — full evidence trace for the USD175mn/120mn/55mn figures
 - `Topics/Capital Allocation and Investment Governance.md` — what talabat does and doesn't disclose about its own allocation process
 - `vault/Knowledge/Investment_Relationship_Map.md` — the value-driver chain this envelope is expected to move
 - `vault/Decisions/Investment_Options_Register.md` — the five candidate sub-initiatives (`OPT-001`–`OPT-005`) within this envelope
-- [[DEC-009_investment-options-ranking-and-allocation-priority|DEC-009]] — the ranking/allocation-priority decision (status: `proposed`) this register's ranges table implements
+- [[DEC-009_investment-options-ranking-and-allocation-priority|DEC-009]] — the ranking/allocation-priority decision (status: `approved`, resolved 2026-07-23) this register's ranges table implements
 - `vault/Architecture/Geographic_Evidence_Rules.md` — governs any future market-level breakdown proposed for this register

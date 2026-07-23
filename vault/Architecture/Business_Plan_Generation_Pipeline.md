@@ -35,16 +35,16 @@ same runtime constraint documented below), delegating to the named specialist pe
 |---|---|---|---|---|---|
 | 1 | **Confirm business question** | Orchestrator | `Problem_Charter.md` | Confirms active problem, scope, envelope | ✅ Done — `Problem_Charter.md` rewritten 2026-07-23 (status: Active — governing problem for the Agentic OS) |
 | 2 | **Assemble investment evidence** | Orchestrator | `vault/Knowledge/Topics/`, `Facts/`, `Investment_Relationship_Map.md` | A working Group-wide evidence base | ✅ Done — Phase 3 of the pivot (13 new Topic Notes, Investment Relationship Map) |
-| 3 | **Identify candidate investment options** | `decision-steward` | `Investment_Portfolio_Register.md`, drafting-stage findings | `vault/Decisions/Investment_Options_Register.md` (`OPT-XXX` records) | ⬜ Scaffolded, empty by design — candidate options get proposed during Section 9/12 drafting (Stage 13), not invented in advance; see the register's own "Current status" note |
+| 3 | **Identify candidate investment options** | `decision-steward` | `Investment_Portfolio_Register.md`, drafting-stage findings | `vault/Decisions/Investment_Options_Register.md` (`OPT-XXX` records) | ✅ Done — 5 candidates (`OPT-001`–`005`) populated 2026-07-23 during the Phase 9 pilot's Section 9/12 drafting |
 | 4 | **Detect evidence gaps/conflicts** | Orchestrator | Topic Notes' Open Questions, `Repository_Impact_Assessment.md` | Typed gap list (external / forecast / decision) | ✅ Done — every Phase 3 Topic Note documents its own gaps explicitly (e.g. `Capital Allocation and Investment Governance.md`'s governance-mechanics gap) |
 | 5 | **Targeted research** | `research-agent` | `Research_Register.md` | Research Notes, register updates | ⬜ Not yet run against the new problem — the 4 pre-pivot Research Notes are marked superseded (legitimate country-level evidence, not the primary decision input) |
 | 6 | **Define decision criteria** | `decision-steward` | — | The 11-criterion comparison framework in `Decision_Management_Layer.md`'s "Investment Option" section | ✅ Done — Phase 4 of the pivot |
 | 7 | **Build value-driver trees** | `forecasting-agent` | `Investment_Relationship_Map.md`, `Facts/` | `vault/Forecasts/Value_Driver_Tree_v2.md` | ✅ Done — Phase 5 of the pivot (45 nodes) |
-| 8 | **Register assumptions** | `decision-steward` | Forecasting-agent's proposed assumptions | `Assumptions_Register.md` rows | ✅ Done — `ASM-015`–`028` registered, `Status: Proposed` pending human approval before citation |
+| 8 | **Register assumptions** | `decision-steward` | Forecasting-agent's proposed assumptions | `Assumptions_Register.md` rows | ✅ Done — `ASM-015`–`033` registered; all `Status: Approved` as of 2026-07-23 (the Final Execution Readiness pass's human-instructed classification, plus `DEC-009`'s resolution unblocking `ASM-029`–`033`) |
 | 9 | **Build scenarios** | `forecasting-agent` | `Value_Driver_Tree_v2.md` | `vault/Forecasts/Scenarios_v2.md` (base/upside/downside + 8 modules) | ✅ Done — Phase 5 of the pivot |
-| 10 | **Rank investment options** | `decision-steward` | `Investment_Options_Register.md`, the Stage 6 comparison framework | Ranked options with High/Medium/Low ratings per criterion (never a single blended score) | ⬜ Not yet run — no `OPT-` candidates exist yet to rank (see Stage 3) |
-| 11 | **Define allocation ranges / pilot sequencing** | `decision-steward` | Ranked options, `Investment_Portfolio_Register.md` | Updated Portfolio Register base/upside/downside ranges, pilot-funding recommendation | ⬜ Not yet run — the register currently holds only the two disclosed envelope components (Everyday App/Food-leadership); ranges are explicitly marked "not yet set" rather than invented |
-| 12 | **Define KPIs / stage gates** | `kpi-agent` | `Value_Driver_Tree_v2.md`, ranked options | `vault/Forecasts/KPI_Tree_v2.md`; per-option stage gates in each `OPT-` record | 🟡 Partial — `KPI_Tree_v2.md` done (50 KPIs, Phase 5); per-*option* stage gates await Stage 3/10 |
+| 10 | **Rank investment options** | `decision-steward` | `Investment_Options_Register.md`, the Stage 6 comparison framework | Ranked options with High/Medium/Low ratings per criterion (never a single blended score) | ✅ Done — the 11-criterion comparison and descriptive tiering in `DEC-009` (`status: approved`, 2026-07-23, middle path) |
+| 11 | **Define allocation ranges / pilot sequencing** | `decision-steward` | Ranked options, `Investment_Portfolio_Register.md` | Updated Portfolio Register base/upside/downside ranges, pilot-funding recommendation | ✅ Done — `Investment_Portfolio_Register.md`'s allocation-ranges table populated (`ASM-029`–`033`) and `DEC-009`'s recommended funding sequence resolved 2026-07-23; per that same decision, ranges are never a headline exhibit, only a labeled sensitivity/appendix one |
+| 12 | **Define KPIs / stage gates** | `kpi-agent` | `Value_Driver_Tree_v2.md`, ranked options | `vault/Forecasts/KPI_Tree_v2.md`; per-option stage gates in each `OPT-` record | 🟡 Partial — `KPI_Tree_v2.md` done (50 KPIs, Phase 5); per-option stage gates now unblocked by Stage 3/10's completion but not yet individually re-verified against each `OPT-` record |
 
 **Stages 3, 5, 10, 11, and 12's option-level piece remain open** — not oversights, but the correct
 consequence of this being architecture work, not drafting. Per the pivot's own Phase 9 scope, these
@@ -106,6 +106,23 @@ Run once per section, drawing on Part A's outputs instead of raw Facts alone.
 **Stage 19 cannot begin unless Stages 14, 15, 16, and 18 all show PASS**, and Stage 17 shows zero open
 citation failures. A FAIL at any of 14–18 routes back to the specific section(s) and stage(s)
 responsible — per each gate template's "If FAIL" section — not a blanket re-draft.
+
+**Why the Template Compliance Gate (Stage 18) sits outside `qa-review-agent`'s per-section Stage 11,
+not inside it (reviewed 2026-07-23, kept as designed):** this was flagged as an open question in the
+Final Comprehensive Readiness Review. On review, the current placement is correct and was not changed.
+Stage 11's per-section QA (and Stages 14-16's whole-plan gates) all check *content* properties — is
+this section's argument true, well-evidenced, MECE, geography-tagged correctly, financially consistent
+— which are meaningful to assess one section at a time or across all 14 together. The Template
+Compliance Gate checks a fundamentally different, *structural* property — exactly 14 sections, in the
+template's exact order, with no merge/rename/reorder — that is **undefined at single-section scope**:
+"is this section correctly numbered relative to the other thirteen" cannot be answered by reading one
+section in isolation, only by inspecting the assembled candidate document. It must also re-run after
+any later executive-editing or compression pass, which happens downstream of Stage 11 entirely (at
+Publication Layer time, per `Publication_Layer.md` §2) — folding it into Stage 11 would not even cover
+the failure mode it exists to catch (the 2026-07-22 incident it was built from was a *post-drafting*
+structural rewrite, not a per-section drafting defect). Keeping it as its own Stage 18, immediately
+before Stage 19's handoff to Publication, is the only placement that can actually check the property it
+owns.
 
 ## Relationship to the old flow
 

@@ -1,7 +1,10 @@
 ---
 id: DEC-009
-status: proposed
+status: approved
 date: "2026-07-23"
+resolved_date: "2026-07-23"
+resolved_by: "user (direct instruction, top-level session, Final Execution Readiness Report task)"
+resolution: "Middle path (a specific variant of Option 3): commit to a recommended funding sequence, presented narratively and argued on the 11-criterion comparison; allocation ranges remain OS-generated analytical estimates, never a headline financial commitment, and appear only as clearly labeled illustrative sensitivity/appendix exhibits, each explicitly stating it is an Agentic OS analytical recommendation, not a disclosed talabat allocation."
 owner: decision-steward
 supersedes: none
 ---
@@ -143,10 +146,27 @@ See "Escalation prompt" above (Options 1-4) — reproduced there as the prompt t
 restated separately, per `DEC-008`'s own precedent for preserving the escalation prompt verbatim.
 
 ## Decision
-**Not yet resolved.** Pending a real `AskUserQuestion` call (or equivalent direct user/team
-confirmation) from the top-level session. The four sub-decisions listed under "Sub-decisions resolved
-directly" above are approved now, within `decision-steward`'s own authority; the funding-sequence and
-headline-presentation questions stay open.
+**Resolved 2026-07-23, by direct user/team instruction (middle path).** Both open questions are now
+settled:
+
+1. **Funding sequence: YES, commit to one — narratively, not as a dollar-denominated headline.** The
+   Business Plan shall make a clear strategic recommendation on funding priority among the five options,
+   argued on the 11-criterion comparison above (evidence strength, strategic alignment, expected
+   value-creation impact, execution feasibility/risk, scalability, reversibility, measurement quality —
+   the tiering in "Options considered" below already provides the substance of this sequence: OPT-002 and
+   OPT-003 as the near-term, low-risk/high-fit priority; OPT-001 and OPT-005 continue-at-pace; OPT-004 as
+   the longer-horizon build). This is the plan's actual recommendation, not a footnote.
+2. **Allocation ranges: shown only as a labeled illustrative sensitivity/appendix exhibit, never a
+   headline financial commitment.** The `ASM-029`–`033` dollar ranges (and any table built from them,
+   e.g. `Investment_Portfolio_Register.md`'s allocation-ranges table) may appear in the Business Plan —
+   in an appendix or a clearly-separated supporting exhibit, whenever useful for illustrating the
+   sequencing recommendation — but every such appearance must carry an explicit statement that it is
+   **"an Agentic OS analytical recommendation, not a disclosed talabat allocation,"** and must never be
+   presented adjacent to, or formatted as, a headline financial commitment. This governs Section 9,
+   Section 12, the Appendix (Section 14), any Executive Summary reference (Section 1), Forecasting
+   outputs, and the Publication Layer equally — see "Impact" below for the specific files this updates.
+
+The four sub-decisions under "Sub-decisions resolved directly" remain approved as recorded.
 
 ## Rationale
 This decision differs from the four sub-decisions resolved directly above in the same way `DEC-003` and
@@ -158,26 +178,36 @@ five separate ranges rather than the single ratio `DEC-008` considered. `DEC-008
 (Option 1, base case only, bucket-split argued narratively not as a headline exhibit) is a directly
 relevant precedent pointing toward caution — but this decision is not identical to `DEC-008`'s, since it
 concerns option-level piloting and sequencing (a Stage 10-11 pipeline question) rather than Section 9's
-top-level scenario structure (Stage 9's question), so it is logged separately rather than treated as
+top-level scenario structure (Stage 9's question), so it was logged separately rather than treated as
 already resolved by `DEC-008`.
 
+The resolution adopted (middle path) is a specific variant of the escalation prompt's **Option 3**: it
+keeps ranges out of the headline case (avoiding Option 1's compounded false-precision risk across five
+ranges) while going further than Option 2's fully qualitative treatment by requiring the plan to still
+commit to an actual recommended sequence — because a capital-allocation plan that refuses to sequence
+its own central recommendation risks under-delivering on the governing problem's own question. The
+mandatory disclosure sentence ("Agentic OS analytical recommendation, not a disclosed talabat
+allocation") on every range is the discipline that makes this safe: the plan can be genuinely useful
+without ever letting a constructed number be mistaken for a talabat-disclosed figure.
+
 ## Impact
-Creates `ASM-029` through `ASM-033` in `vault/Decisions/Assumptions_Register.md` (tier: Decision,
-confidence: Low, status: Proposed — blocked from citation as Approved per this decision's own `proposed`
-status, consistent with the register's standing rule). Populates
-`vault/Decisions/Investment_Portfolio_Register.md`'s "Base / downside / upside allocation ranges" section
-(previously "Not yet set") with these five options' ranges, explicitly labeled as proposed-pending-DEC-009
-content, not an approved recommendation. Unblocks Stage 12 (KPI/stage-gate definition at the option level,
-already partially populated in each `OPT-` record's own Stage gates/KPIs sections). Should be resolved
-before Section 9/12 drafting under the Phase 9 pilot begins, since Section 9/12's exhibit structure is a
-foundational choice this decision directly governs.
+`ASM-029` through `ASM-033` in `vault/Decisions/Assumptions_Register.md` move from `Proposed` to
+`Approved` (tier: Decision, confidence: Low), each with the mandatory disclosure sentence from the
+Decision above added to its Statement/Used-in text — see the 2026-07-23 Final Execution Readiness pass
+for the exact wording applied. `vault/Decisions/Investment_Portfolio_Register.md`'s "Base / downside /
+upside allocation ranges" section is updated from "proposed, pending DEC-009" to the resolved
+placement/labeling rule. `business-plan-drafting/SKILL.md`, `forecast-builder/SKILL.md`,
+`executive-document-formatting/SKILL.md`, and `vault/Architecture/Publication_Layer.md` are each updated
+with a short, consistent statement of this decision's rule, so Sections 9/12/14, the Forecast Layer, and
+the Publication Layer all present the funding sequence and the allocation ranges the same way. Unblocks
+Stage 12 (KPI/stage-gate definition at the option level).
 
 ## Approval
-**Not approved.** Stays `proposed` pending real user/team confirmation via `AskUserQuestion` (or
-equivalent) from the top-level session, per the reasoning above. The four sub-decisions under
-"Sub-decisions resolved directly" are approved within this same file, marked individually — this is a
-split-authority record, not a single approved/unapproved decision, following `DEC-008`'s own precedent
-for distinguishing OS-owner-approvable structuring calls from genuine strategic escalation.
+**Approved 2026-07-23**, by direct user/team instruction (not an `AskUserQuestion` call — the user
+supplied the resolution directly in the top-level session, which satisfies this decision's own
+requirement for real user/team confirmation of the funding-sequence and headline-presentation
+questions). The four sub-decisions under "Sub-decisions resolved directly" remain approved within this
+same file, as originally recorded.
 
 ## Links
 - [[Decision_Management_Layer|Decision Management Layer]]

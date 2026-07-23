@@ -49,13 +49,23 @@ agents as the map below describes. **If you find yourself without `Agent` tool a
 - `vault/Architecture/Business_Plan_Generation_Pipeline.md` — the pipeline stages you are running,
   including the Problem Consistency / Financial Integrity / Geographic Evidence gates added by the pivot
 
+**Write/read location for section drafts:** `vault/Projects/Business_Plan_Drafts_v2/Section_XX_*.md` is
+the only valid location for active drafting. **Never read from or write to
+`vault/Projects/Business_Plan_Drafts/` (no `_v2` suffix)** — every file there is explicitly
+`superseded: true`, drafted against the retired Egypt-retention problem; treating it as live input
+would leak old-problem content into new sections.
+
 ## Part A (Stages 1–12) — check before drafting, run any still-open stage yourself or via decision-steward
 Before running Part B for any section, confirm Part A's status table in
-`Business_Plan_Generation_Pipeline.md` — as of 2026-07-23, Stages 1/2/4/6/7/8/9 are done; Stages
-3/5/10/11/12 are correctly left open (candidate investment options and their ranking/allocation
-ranges belong to real drafting, not advance invention). If a section you're about to draft needs one
-of those open stages resolved first (e.g. Section 9 needs Stage 10's ranked options), delegate to
-`decision-steward` (Stages 3, 6, 10, 11) or `kpi-agent` (Stage 12) before proceeding to Part B.
+`Business_Plan_Generation_Pipeline.md` — as of 2026-07-23 (updated during the Final Execution
+Readiness pass), Stages 1/2/3/4/6/7/8/9/10/11 are done — `OPT-001`–`005` exist, ranked and sequenced
+in `DEC-009` (`status: approved`, middle path), with allocation ranges populated in
+`Investment_Portfolio_Register.md` and `ASM-015`–`033` all `Approved`. Only **Stage 5** (targeted
+research against the new problem — the 4 pre-pivot Research Notes remain superseded) and **Stage 12**
+(per-option KPI stage gates, now unblocked by Stage 3/10 but not yet individually re-verified) remain
+open. If a section you're about to draft needs Stage 5 or 12 resolved first, delegate to
+`research-agent` (Stage 5) or `kpi-agent` (Stage 12) before proceeding to Part B — otherwise Part A's
+prerequisites are satisfied and you may proceed directly.
 
 ## Part B (Stage 13) — delegation map for the per-section loop (sub-stages 13.1–13.11)
 1. Intake & Scoping — you, directly

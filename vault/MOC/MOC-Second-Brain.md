@@ -6,9 +6,14 @@ updated: "2026-07-20"
 
 # 🗺️ MOC — Second Brain
 
-The index for this vault. Start here. This brain is built from a public-source corpus on **Talabat
-(Egypt focus)** — official IR filings, market research, competitor coverage, strategy news — and is
-oriented toward the **G02 AI Business Plan on AI-driven customer retention for talabat Egypt**.
+The index for this vault. Start here. This brain is built from a public-source corpus on **talabat
+Group** — official IR filings, market research, competitor coverage, strategy news, spanning all
+eight of talabat's operating markets — and is oriented toward the **G02 AI Business Plan on talabat
+Group's AI-enabled capital allocation and performance management for the 2026 USD175 million
+investment programme** (see `Problem_Charter.md`). Egypt remains the corpus's richest single-country
+data point and a genuine worked example throughout, but is not the boundary of the analysis. The
+vault's original scope (AI-driven customer retention for talabat Egypt only) was superseded by the
+2026-07-23 pivot — see [[Talabat-Egypt-AI-Retention-Business-Plan]] for that historical record.
 
 ## Identity
 - [[user]] — who I am

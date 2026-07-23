@@ -2,7 +2,18 @@
 type: architecture
 status: approved
 created: "2026-07-21"
+superseded: true
+superseded_date: "2026-07-23"
+superseded_reason: "Phased rollout was built for the original Egypt-retention problem's 14-section drafting sequence (old Business_Plan_Drafts/ folder, old tracker). Superseded by the 2026-07-23 pivot to talabat Group-wide capital allocation — active drafting now follows the 19-stage Business_Plan_Generation_Pipeline.md and Talabat-Group-AI-Investment-Allocation-Business-Plan.md's own status table, not the phase table below."
 ---
+
+> **SUPERSEDED 2026-07-23.** This roadmap was built for the original Egypt-retention problem and its
+> 14-section drafting sequence under `vault/Projects/Business_Plan_Drafts/` (no `_v2` suffix), itself
+> superseded by the pivot to talabat Group-wide capital allocation (see `Problem_Charter.md`).
+> Preserved unchanged below as historical record of how Phases 6-10 were originally sequenced. **Not a
+> valid input to active drafting** — the current pipeline is `vault/Architecture/Business_Plan_Generation_Pipeline.md`
+> (19 stages), and current section-by-section status lives in
+> `vault/Projects/Talabat-Group-AI-Investment-Allocation-Business-Plan.md`, not the phase table below.
 
 # Implementation Roadmap — OS Architecture Design Phase → Finished Business Plan
 

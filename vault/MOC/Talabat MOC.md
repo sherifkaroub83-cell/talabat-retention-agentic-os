@@ -20,7 +20,8 @@ The top-level entry point into everything the vault knows about talabat, built f
 ## Company-level orientation
 - [[Corporate Structure]] — the Talabat Holding PLC / Delivery Hero group structure
 - [[IPO]] — the November 2024 Dubai Financial Market listing
-- [[Egypt]] — the capstone's target market; start here for anything Egypt-specific
+- [[Egypt]] — a genuine worked example within talabat's eight-market Group scope (not the capstone's
+  target-market boundary — see `Problem_Charter.md`); start here for anything Egypt-specific
 
 ## Strategic knowledge (cross-cutting synthesis)
 - [[How Talabat Creates Value]] · [[Revenue Model]] · [[Cost Structure]] — the business model, argued

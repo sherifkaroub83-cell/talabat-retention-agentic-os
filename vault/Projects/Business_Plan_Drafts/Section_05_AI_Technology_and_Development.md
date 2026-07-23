@@ -3,7 +3,16 @@ section: 5
 title: AI Technology and Development
 status: Done — citation audit PASS (independently re-verified), QA review PASS (independently verified)
 pipeline_run: 2026-07-22
+superseded: true
+superseded_date: "2026-07-23"
+superseded_reason: "Built for the original Egypt-retention problem, superseded by the 2026-07-23 pivot to talabat Group-wide capital allocation — see Problem_Charter.md and vault/Architecture/Repository_Impact_Assessment.md"
 ---
+
+> **SUPERSEDED 2026-07-23.** This section draft was built against the original Egypt-retention
+> problem, itself superseded by the 2026-07-23 pivot to talabat Group-wide capital allocation (see
+> `Problem_Charter.md`). Preserved unchanged below as historical record (see the frontmatter `status` field for the
+> original citation-audit/QA outcome under the old problem). Not a valid input to any new drafting —
+> active drafting for the current problem lives under `vault/Projects/Business_Plan_Drafts_v2/`.
 
 # 5. AI Technology and Development
 
