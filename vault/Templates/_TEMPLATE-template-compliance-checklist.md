@@ -53,7 +53,7 @@ This gate does not fix the violation itself — it reports it back to whichever 
 candidate document.
 
 ## See also
-- [[Talabat-Egypt-AI-Retention-Business-Plan|Project tracker]]
+- [[Talabat-Group-AI-Investment-Allocation-Business-Plan|Project tracker]]
 - `.claude/skills/template-compliance-gate/SKILL.md`
 - [[Publication_Layer]]
 ```
