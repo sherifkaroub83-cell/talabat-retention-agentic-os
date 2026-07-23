@@ -10,12 +10,14 @@ Used exclusively by `decision-steward`. Full design: `vault/Architecture/Decisio
 
 ## When a Decision record is required (not optional)
 
-- Two same-tier sources disagree (e.g. the Egypt category-share figure, the three 2026 investment
-  totals) and someone must choose how to present it.
+- Two same-tier sources disagree (e.g. a market-size or category-share figure reported two ways) and
+  someone must choose how to present it.
 - A forecast scenario choice materially affects the plan's headline recommendation.
 - A strategic framing choice with no single correct answer from data alone (build/buy/partner for
-  Section 5, which AI intervention to prioritize among the candidates in
-  `Strategic/Future AI Opportunities.md`, the market-size definition to adopt for Section 3).
+  Section 5, which Investment Option to prioritize when comparing candidates registered in
+  `vault/Decisions/Investment_Options_Register.md`, the market-size definition to adopt for
+  Section 3, or how a scenario/headline financial case should be presented — see `DEC-008` for a
+  worked example of this last category).
 - Any instance where the drafting skill's Anti-patterns list would otherwise be violated by silence
   (e.g. "silently resolving a discrepancy by picking a number").
 

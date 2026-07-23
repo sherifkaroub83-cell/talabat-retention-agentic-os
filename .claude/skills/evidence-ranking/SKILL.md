@@ -23,8 +23,8 @@ Full design: `vault/Architecture/Decision_Management_Layer.md`'s five-tier evide
    as much a violation as silently picking the wrong one.
 3. **Same tier:** do not resolve it yourself. Escalate to `decision-steward` with both values, their
    full citations, and your own assessment of why they might diverge (different reporting period,
-   different denominator, restated figures, etc. — the corpus already has three examples of this:
-   Egypt category-share, the 2026 investment total, the Subscription-line reclassification).
+   different denominator, restated figures, etc. — see `vault/Decisions/Decision_Log/` for worked
+   examples of this pattern, e.g. `DEC-004`'s 2026-investment-total reconciliation).
 
 ## Anti-patterns
 

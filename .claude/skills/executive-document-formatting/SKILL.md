@@ -111,8 +111,10 @@ document. This skill has no write access to section content and must not simulat
   `Section_14_Appendices.md` — **every one must carry `status: ... Done (independently verified)`
   in its frontmatter**; if any section is missing this exact status, stop and report which
   section(s) block the run rather than formatting a partial or self-reviewed plan.
-- `vault/Projects/Talabat-Egypt-AI-Retention-Business-Plan.md` — the master tracker, to confirm the
-  same 14/14 status and to pull the document-control metadata (project name, owner, date, course).
+- `vault/Projects/Talabat-Group-AI-Investment-Allocation-Business-Plan.md` — the active master tracker
+  as of the 2026-07-23 pivot (`Talabat-Egypt-AI-Retention-Business-Plan.md` is its superseded
+  predecessor, historical reference only), to confirm the same 14/14 status and to pull the
+  document-control metadata (project name, owner, date, course).
 - `AI_Business_Plan_Template.md` — the verbatim graded specification. This skill checks the formatted
   output preserves the template's own required structure (14 sections, McKinsey Lens callouts where
   the drafts already carry them) — it does not re-check content completeness, which is

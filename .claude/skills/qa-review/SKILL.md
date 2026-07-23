@@ -29,7 +29,8 @@ Full design: `vault/Architecture/Agentic_OS_Architecture.md` §3.8, `Business_Pl
 
 Write `vault/Validation/QA_Review_Section_N.md`: pass, or fail with a specific, actionable list of
 what must change (not a vague "needs work"). On pass, the section's status cell in
-`vault/Projects/Talabat-Egypt-AI-Retention-Business-Plan.md` flips to ✅ Done.
+`vault/Projects/Talabat-Group-AI-Investment-Allocation-Business-Plan.md` (the active tracker as of
+the 2026-07-23 pivot) flips to ✅ Done.
 
 ## Rules
 
