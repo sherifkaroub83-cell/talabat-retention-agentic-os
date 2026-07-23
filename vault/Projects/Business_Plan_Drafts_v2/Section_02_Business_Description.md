@@ -1,7 +1,7 @@
 ---
 section: 2
 title: Business Description
-status: Drafted — self-reviewed, not yet independently verified
+status: Drafted — self-reviewed; citation audit found 3 hard failures, fixed and self-verified ([[Citation_Audit_Section_02_v2]]); independent Pass 2 citation re-check and QA review (incl. the three new gates) still required
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_02_Business_Description.md, which was drafted for the superseded Egypt-retention problem and stays untouched as historical record. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem."
 ---
@@ -45,9 +45,10 @@ scalability, and reversibility profiles that an unranked allocation would not di
 ## 2.1 Industry Overview and Opportunities for AI Adoption
 
 talabat operates a three-sided marketplace across eight countries (UAE, Kuwait, Qatar, Bahrain, Oman,
-Jordan, Iraq, Egypt), generating GMV of USD 7,428mn in FY2024 (+23% YoY) across food delivery, grocery
-and quick-commerce (talabat mart), and a growing set of adjacent services (subscription, advertising,
-FinTech) (`Topics/GMV.md`; `Topics/2026 Investment Programme.md`). Since IPO (November 2024), management
+Jordan, Iraq, Egypt — `Entities/Countries.md`), generating GMV of USD 7,428mn in FY2024 (+23% YoY)
+across food delivery, grocery and quick-commerce (talabat mart), and a growing set of adjacent services
+(subscription, advertising, FinTech) (`Topics/GMV.md`; `Topics/2026 Investment Programme.md`). Since
+its Dubai Financial Market listing (November 2024, TLB-025) management
 has repeatedly framed the company's strategic trajectory as a transition "from a multi-vertical
 food-delivery platform to the region's Everyday App" (TLB-020, page 16) — a framing management itself
 calls "a deliberate strategic choice, made from a position of strength." The 2026 investment programme is
@@ -58,7 +59,7 @@ verticals) and ~USD55mn for defending Food-leadership against "both new entrants
 (`Topics/2026 Investment Programme.md`).
 
 The opportunity for AI in this specific problem is not primarily customer-facing personalisation (though
-that remains a real, embedded capability inside the programme — `vault/Knowledge/Investment_Relationship_Map.md`
+that remains a real, embedded capability inside the programme — `vault/Forecasts/Value_Driver_Tree_v2.md`
 N-06) — it is **decision-support for the capital allocation itself**. talabat's own disclosure pattern
 is a genuine, documented gap: `Topics/Capital Allocation and Investment Governance.md` finds that the
 corpus discloses the programme's headline figures and one qualitative rationale ("these are investments
@@ -155,10 +156,13 @@ discipline the top-level commitment itself lacks a disclosed version of.
 ## 2.5 Business Model
 
 The AI-enabled decision-support system is proposed as an **internal capability**, not a licensed or
-externally-sold product — consistent with talabat's own disclosed pattern of building AI/ML capability
-in-house and embedding it across functions rather than treating it as a discrete product line
-(`Topics/AI.md`; `vault/Knowledge/Investment_Relationship_Map.md` N-06 notes AI/personalisation is "not
-named as a discrete dollar line within either bucket... an embedded capability"). Consistent with that
+externally-sold product — consistent with talabat's own disclosed pattern of embedding AI/ML capability
+across functions rather than treating it as a discrete product line. talabat's own AI/ML capability is
+itself inherited from parent Delivery Hero SE's shared technology stack rather than built standalone
+(`Topics/AI.md`; `Entities/Technology_Platforms.md`) — this plan's proposed decision-support layer
+follows the same embedded-capability pattern, not the same build-vs-partner arrangement (see Section 5.2
+for that distinction). `vault/Forecasts/Value_Driver_Tree_v2.md` N-06 notes AI/personalisation is "not
+named as a discrete dollar line within either bucket... an embedded capability." Consistent with that
 pattern, the capital-allocation decision-support layer proposed here is structured the same way: embedded
 into how the USD175mn programme (and any future programme like it) gets planned, monitored, and adjusted
 — not a standalone software product with its own revenue line. This is a deliberate, evidenced framing
@@ -193,6 +197,10 @@ premature full-scale rollout recommendation.
 | Geography tagging discipline | `vault/Architecture/Geographic_Evidence_Rules.md` |
 | FY2024 GMV USD7,428mn (+23% YoY) | TLB-001, page 6/26; `Topics/GMV.md` |
 | FY2025 Adjusted EBITDA margin ~6.5% of GMV | `Facts/Marketplace_Facts.md` |
+| Eight operating markets | `Entities/Countries.md` |
+| Dubai Financial Market listing, November 2024 | TLB-025 |
+| talabat's AI/ML capability inherited from Delivery Hero's shared stack | `Topics/AI.md`; `Entities/Technology_Platforms.md` |
+| AI/personalisation not a discrete dollar line (N-06) | `vault/Forecasts/Value_Driver_Tree_v2.md` |
 
 ## See also
 [[Investment_Relationship_Map]] · [[DEC-009_investment-options-ranking-and-allocation-priority]] ·
