@@ -90,14 +90,14 @@ export const DATA = {
         { n: 2,  name: "Assemble investment evidence",        owner: "bp-orchestrator",   status: "done",    note: "13 new Topic Notes + Investment Relationship Map." },
         { n: 3,  name: "Identify candidate investment options", owner: "decision-steward", status: "done",   note: "5 candidates OPT-001–005 populated." },
         { n: 4,  name: "Detect evidence gaps / conflicts",    owner: "bp-orchestrator",   status: "done",    note: "Every Topic Note documents its own gaps explicitly." },
-        { n: 5,  name: "Targeted research",                   owner: "research-agent",    status: "todo",    note: "Not yet run against the new problem; 4 pre-pivot Research Notes superseded." },
+        { n: 5,  name: "Targeted research",                   owner: "research-agent",    status: "done",    note: "First post-pivot run 2026-07-24: RES-005/006/007 (parent disclosure benchmark, GCC q-commerce outlook, ads monetization)." },
         { n: 6,  name: "Define decision criteria",            owner: "decision-steward",  status: "done",    note: "11-criterion comparison framework." },
         { n: 7,  name: "Build value-driver trees",            owner: "forecasting-agent", status: "done",    note: "Value_Driver_Tree_v2.md — 45 nodes." },
         { n: 8,  name: "Register assumptions",                owner: "decision-steward",  status: "done",    note: "ASM-015–033 registered, all Approved." },
         { n: 9,  name: "Build scenarios",                     owner: "forecasting-agent", status: "done",    note: "Scenarios_v2.md — base/upside/downside + 8 modules." },
         { n: 10, name: "Rank investment options",             owner: "decision-steward",  status: "done",    note: "DEC-009 — descriptive tiering, never a single blended score." },
         { n: 11, name: "Allocation ranges / pilot sequencing", owner: "decision-steward", status: "done",    note: "Portfolio Register ranges (ASM-029–033); ranges never a headline exhibit." },
-        { n: 12, name: "Define KPIs / stage gates",           owner: "kpi-agent",         status: "partial", note: "KPI_Tree_v2 done (50 KPIs); per-option stage gates not yet re-verified." },
+        { n: 12, name: "Define KPIs / stage gates",           owner: "kpi-agent",         status: "done",    note: "Per-option gates verified 2026-07-24 — all 5 OPT records carry full gates; 3 KPI-tree gaps flagged for disposition." },
       ],
     },
     partB: {
@@ -207,7 +207,7 @@ export const DATA = {
 
   evidenceTiers: [
     { n: 1, name: "Repository Facts",     path: "vault/Knowledge/Facts", desc: "Disclosed, cited figures extracted from the 37-document corpus. The only tier that touches source documents directly.", count: "103-note knowledge graph" },
-    { n: 2, name: "External Research",    path: "vault/Research", desc: "Named-gap findings from outside the corpus — publisher, URL, retrieval date, and confidence on every note.", count: "5 research notes (4 superseded by pivot)" },
+    { n: 2, name: "External Research",    path: "vault/Research", desc: "Named-gap findings from outside the corpus — publisher, URL, retrieval date, and confidence on every note.", count: "8 research notes (3 post-pivot, 4 superseded)" },
     { n: 3, name: "Forecasts",            path: "vault/Forecasts", desc: "Method-transparent projections anchored to Facts: value driver tree, scenarios, KPI tree.", count: "45 VDT nodes · 50 KPIs · 3 scenarios" },
     { n: 4, name: "Management Decisions", path: "vault/Decisions", desc: "Structured, dated, owned judgment calls with an auditable evidence trail and assumption register.", count: "10 decisions · 47 assumptions · 5 options" },
     { n: 5, name: "Business Plan",        path: "Outputs/", desc: "The deliverable itself. No number reaches this tier without resolving to a Facts citation or an Approved assumption.", count: "14 sections drafted (v2)" },
@@ -242,6 +242,7 @@ export const DATA = {
     { id: "DEC-008", title: "Section 9 headline bucket-split presentation", status: "approved", note: "Base case presented with the $120m/$55m bucket split." },
     { id: "DEC-009", title: "Investment-options ranking & allocation priority", status: "approved", note: "Middle path — funding sequence stated narratively; allocation ranges never a headline exhibit." },
     { id: "DEC-010", title: "2026 investment-total reissuance", status: "approved", note: "" },
+    { id: "DEC-011", title: "MCP layer — pursue (vault-mcp)", status: "approved", note: "Read-only MCP server built and registered; closes the Phase-2 open question and the OS's missing tools layer." },
   ],
 
   options: [
@@ -253,10 +254,10 @@ export const DATA = {
   ],
 
   registers: [
-    { name: "Assumptions Register", count: 47, status: "All post-pivot rows (ASM-015–033) Approved", icon: "≔" },
-    { name: "Decision Log", count: 10, status: "DEC-001–010, all approved", icon: "◆" },
-    { name: "Investment Options", count: 5, status: "OPT-001–005, ranked under DEC-009", icon: "▤" },
-    { name: "Research Register", count: 5, status: "4 pre-pivot notes superseded; Stage 5 re-run pending", icon: "◈" },
+    { name: "Assumptions Register", count: 47, status: "All post-pivot rows Approved; 4 new ASM candidates from RES-005..007 await disposition", icon: "≔" },
+    { name: "Decision Log", count: 11, status: "DEC-001–011, all approved", icon: "◆" },
+    { name: "Investment Options", count: 5, status: "OPT-001–005 with verified stage gates (2026-07-24)", icon: "▤" },
+    { name: "Research Register", count: 8, status: "RES-005..007 resolved 2026-07-24 (first post-pivot run); 4 pre-pivot notes superseded", icon: "◈" },
   ],
 
   forecasts: {
@@ -299,17 +300,20 @@ export const DATA = {
     { t: "07-23", kind: "decision",  who: "decision-steward",        text: "DEC-009 approved — investment-option ranking and allocation priority (middle path)." },
     { t: "07-23", kind: "run",       who: "bp-orchestrator",         text: "All 14 v2 sections drafted against the pivoted problem (Pass 1, self-reviewed)." },
     { t: "07-24", kind: "milestone", who: "OS",                      text: "Agentic OS Console shipped — PWA + native packaging for all platforms." },
+    { t: "07-24", kind: "decision",  who: "decision-steward",        text: "DEC-011 approved — MCP layer pursued: vault-mcp server built, 9 tools, registered in .mcp.json." },
+    { t: "07-24", kind: "run",       who: "research-agent",          text: "Stage 5 first post-pivot run — RES-005/006/007 resolved (parent disclosure, GCC q-commerce, ads benchmarks)." },
+    { t: "07-24", kind: "pass",      who: "kpi-agent",               text: "Stage 12 verified — full stage gates on all 5 investment options; 3 KPI-tree gaps flagged honestly." },
   ],
 
   /* Six-layer structural completeness scorecard.
      Mirrors vault/Architecture/Agentic_OS_Completeness_Assessment.md — keep in sync. */
   structure: [
-    { layer: "Agents",              pct: 90, note: "8 durable agents, execution-validated across 4 pilots. Missing: publication/deck agent, per-agent model policy." },
-    { layer: "Skills",              pct: 85, note: "12 skills incl. 4 gates. Missing: deck-builder, OS-structure-doc, console data-refresh skill." },
-    { layer: "MCP · Agentic Tools", pct: 15, note: "Undecided since Phase 2. No MCP server; console reads a static snapshot, not live repo state." },
-    { layer: "Memory",              pct: 90, note: "All 4 memory files current + /session-end + nightly maintenance. Missing: automated staleness checks." },
-    { layer: "Brain (Second Brain)", pct: 80, note: "103-note cited graph, 5-tier evidence model. Missing: post-pivot research re-run, Pass 2 on all 14 sections." },
-    { layer: "LLMs",                pct: 40, note: "Runs on Claude subscription only. Missing: model-routing policy, API/local fallback, cost governance." },
+    { layer: "Agents",              pct: 95,  note: "9 durable agents (publication-agent added 07-24) with per-agent model policy. Open: human role mapping (6 members ↔ 5 roles)." },
+    { layer: "Skills",              pct: 100, note: "15 skills — deck-builder, os-structure-doc, and console-data-refresh added 07-24." },
+    { layer: "MCP · Agentic Tools", pct: 90,  note: "DEC-011: vault-mcp built and registered (9 read-only tools, selftest passing). Remaining: live console bridge." },
+    { layer: "Memory",              pct: 100, note: "check_freshness.py automation added 07-24 — first run found and fixed 44 unlinked Validation notes." },
+    { layer: "Brain (Second Brain)", pct: 85, note: "Stage 5 research re-run + Stage 12 gates done 07-24. Remaining bulk: Pass 2 verification on all 14 sections." },
+    { layer: "LLMs",                pct: 85,  note: "LLM_Layer.md policy + model routing on all agents. Local-model fallback documented, not installed." },
   ],
 };
 

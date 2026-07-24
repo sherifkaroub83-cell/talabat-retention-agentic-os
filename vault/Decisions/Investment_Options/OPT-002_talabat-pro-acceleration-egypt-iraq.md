@@ -3,6 +3,7 @@ id: OPT-002
 status: candidate
 category: Everyday App
 date: "2026-07-23"
+updated: "2026-07-24"
 owner: decision-steward
 ---
 
@@ -83,9 +84,50 @@ existing data point in the corpus) with a defined instrumentation plan for KPI C
 zero-baseline) before any Iraq scale-up decision.
 
 ## Stage gates
+*(Original 2026-07-23 sketch — retained for the record, formalized and superseded by the verified
+section below.)*
 Egypt pro subscriber-GMV-share and order-frequency trend (C10) showing at least directional uplift,
 even if smaller in magnitude than the GCC+Jordan benchmark, before scaling beyond the pilot budget or
 extending to Iraq.
+
+## Stage gates (verified 2026-07-24)
+Verification pass per Pipeline Stage 12. The sketch above named the right KPI (C10) but lacked a
+review point, an instrumentation precondition, and funding consequences. Review-cadence and
+threshold discipline follows the carried-forward methodology of `DEC-007` (superseded pre-pivot
+record; its method — quarterly review cadence, qualitative trajectory-relative criteria for
+zero-baseline metrics, numeric thresholds only via a future Decision Log entry once a first real
+baseline reading exists — remains this OS's standing monitoring discipline). Funding consequences
+follow `DEC-009`'s approved sequence: OPT-002 is a **near-term priority specifically as a bounded
+pilot** — its Low-evidence/High-reversibility profile means the gates below are cheap to fail and
+must actually be allowed to fail.
+
+1. **Gate 1 — Instrumentation precondition (measurement before money).** KPI: **C10**
+   (Egypt/non-GCC talabat pro order-frequency and retention uplift — **newly-instrumented**,
+   zero corpus baseline). Threshold: qualitative — C10 instrumentation is live and producing
+   Egypt-specific readings within the pilot's first quarter; **threshold to be set at first
+   baseline reading** via a dedicated Decision Log entry, never invented in advance. Review: first
+   quarterly review after pilot launch. Consequence: not instrumented → **hold** all further pilot
+   spend beyond the committed first tranche until instrumentation exists.
+2. **Gate 2 — Directional uplift.** KPI: **C10**, with **C5** and **C6** (GCC+Jordan frequency and
+   retention uplifts — baseline-exists, but for a *different geography*) used strictly as labeled
+   comparators, never as Egypt targets (Geographic Evidence Rules Failure Pattern #1). Threshold:
+   qualitative/directional — Egypt pro cohorts show at least directional frequency/retention uplift
+   vs. non-subscriber comparison, even if smaller in magnitude than the GCC+Jordan benchmark; no
+   numeric uplift target exists or is set here. Review: end of pilot quarter 2 (the record's own
+   bounded 2-quarter pilot). Consequence: directional uplift present → **continue**; Egypt
+   scale-up and/or Iraq extension become eligible via a new Decision Log entry. Flat or negative →
+   **stop the pilot and reallocate** the remaining `ASM-030` budget within the Everyday App bucket
+   per `DEC-009`'s sequence — high reversibility is precisely why this option was prioritized for
+   piloting, and the consequence must be exercised, not waived.
+3. **Gate 3 — Bucket containment.** KPI: **P2** (Everyday App bucket spend-to-plan —
+   baseline-exists, Group). Threshold: pilot spend remains within the Everyday App bucket plan and
+   within the `ASM-030` pilot range (itself an OS construction, labeled as such). Review: quarterly,
+   alongside P2's normal tracking. Consequence: breach → **hold** further pilot disbursement pending
+   a reallocation decision.
+
+**Flagged KPI gaps: none.** C10 exists in KPI_Tree_v2 precisely to govern this option; no new KPI is
+needed. (Iraq-specific instrumentation is a geographic extension of C10's stated scope, noted here
+rather than added as a new tree node.)
 
 ## KPIs
 C1, C5 (comparator only), C6 (comparator only), C10, P2 (`vault/Forecasts/KPI_Tree_v2.md`).
@@ -100,3 +142,4 @@ C1, C5 (comparator only), C6 (comparator only), C10, P2 (`vault/Forecasts/KPI_Tr
 - [[Investment_Relationship_Map]] · [[Value_Driver_Tree_v2]] · [[Scenarios_v2]] · [[KPI_Tree_v2]]
 - `vault/Knowledge/Topics/Everyday App.md` · `vault/Knowledge/Topics/Multi-Verticality.md`
 - [[Decision_Management_Layer|Decision Management Layer]]
+- [[DEC-009_investment-options-ranking-and-allocation-priority]] · `DEC-007` (superseded; methodology carried forward)

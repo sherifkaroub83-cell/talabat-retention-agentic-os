@@ -3,6 +3,7 @@ id: OPT-005
 status: candidate
 category: Enabling capability
 date: "2026-07-23"
+updated: "2026-07-24"
 owner: decision-steward
 ---
 
@@ -88,9 +89,65 @@ the richest existing data point) against the current shared-model baseline, dire
 option's own named data-readiness gap.
 
 ## Stage gates
+*(Original 2026-07-23 sketch — retained for the record, formalized and superseded by the verified
+section below. Note: both sketch gates referenced metrics that carry no KPI_Tree_v2 ID — the
+AI-attributable EBITDA contribution and a non-GCC effectiveness metric — flagged as gaps below.)*
 AI/personalisation EBITDA contribution (currently Group-level baseline-exists) continuing its
 moderating-growth trend; a non-GCC-specific effectiveness metric (currently non-existent anywhere in
 the corpus) established before any further non-GCC-targeted scaling is funded.
+
+## Stage gates (verified 2026-07-24)
+Verification pass per Pipeline Stage 12. This option's sketch gates were the weakest of the five
+against the "named KPI_Tree_v2 KPI" rule: both referenced metrics with no tree ID. That is
+consistent with `DEC-009`'s own finding that OPT-005 has the weakest measurement quality of the five
+options ("hardest to cleanly stage-gate"), and the verified gates below make the measurement
+preconditions explicit rather than assuming trackability. Review-cadence and threshold discipline
+follows the carried-forward methodology of `DEC-007` (superseded pre-pivot record; quarterly/
+disclosure-cadence reviews, qualitative trajectory-relative criteria for zero-baseline metrics,
+numeric thresholds only via a future Decision Log entry at first real baseline reading). Funding
+consequences follow `DEC-009`'s approved sequence: OPT-005 is **continue-at-pace**.
+
+1. **Gate 1 — Attribution precondition (the option's own weakest criterion).** KPI: **P6**
+   (AI/personalisation embedded-capability investment tracked as a discrete line item —
+   **newly-instrumented**; AI is explicitly not a discrete budget line anywhere in the corpus).
+   Threshold: qualitative — AI/personalisation spend is established as a discrete, tracked line
+   before any funding above continue-at-pace; **threshold/target to be set at first baseline
+   reading**. Review: at each funding tranche, and quarterly alongside P6 tracking. Consequence: no
+   discrete line → **continue-at-pace only**; no upside scaling is fundable, because its return
+   could not be attributed even in principle.
+2. **Gate 2 — Return-trend confirmation (flagged-gap metric, proxied).** Metric: the disclosed
+   AI-attributable EBITDA contribution trail (USD14mn+ FY2024 → USD30mn+ FY2025, N-09) — **no
+   KPI_Tree_v2 ID exists for this metric** (gap flagged below). Nearest named KPIs, used strictly
+   as directional proxies and never as clean AI attribution: **F9** (Group Adjusted EBITDA margin —
+   baseline-exists) and **F10** (programme-attributable incremental GMV — newly-instrumented and
+   itself an explicitly illustrative construction, never reportable as measured programme ROI).
+   Threshold: qualitative trajectory-relative — the disclosed contribution trend continues at its
+   moderating growth rate at the next annual disclosure; no numeric contribution target is set.
+   Review: annually at FY results (approx. Q1 2027, this record's review date), with quarterly F9
+   context reads. Consequence: disclosed trend reversal → **hold** — reassess the continue-at-pace
+   level via a Decision Log entry; continued trend → **continue**.
+3. **Gate 3 — Non-GCC effectiveness instrumentation (flagged-gap metric).** Metric: a
+   non-GCC/Egypt-specific personalisation-effectiveness measure — **non-existent in the corpus and
+   carrying no KPI_Tree_v2 ID** (gap flagged below; the closest tree KPIs, C10 and O9, are
+   respectively pro-programme-scoped and throughput-scoped, neither an effectiveness measure).
+   Threshold: qualitative — the Egypt per-market model-tuning pilot (this record's Pilot
+   recommendation) produces a defined effectiveness metric with a first baseline reading before any
+   further non-GCC-targeted scaling is funded; **threshold to be set at first baseline reading**.
+   Review: at pilot conclusion (2 quarters after pilot launch). Consequence: not instrumented →
+   **hold** all non-GCC-targeted scaling (Group-level continue-at-pace unaffected); instrumented
+   and directionally positive → non-GCC scaling becomes eligible via a new Decision Log entry.
+4. **Gate 4 — Infrastructure pacing (supporting indicator).** KPI: **O9** (data-infrastructure
+   throughput — baseline-exists, 235TB/day). Threshold: qualitative — throughput capacity continues
+   scaling with demand rather than becoming the binding constraint. Review: quarterly. Consequence:
+   supporting signal only — informs, never solely triggers, the hold/continue calls in Gates 1-3.
+
+**Flagged KPI gaps (two, unresolved — recorded for `kpi-agent`/`decision-steward` disposition, not
+patched here):**
+1. AI-attributable EBITDA contribution (the disclosed N-09 trail) has no KPI_Tree_v2 ID — the
+   corpus's only quantified AI return metric is not itself in the tree; F9/F10 are directional
+   proxies only.
+2. Non-GCC/Egypt personalisation-effectiveness metric — non-existent in corpus and tree alike; this
+   option cannot be geography-gated until the programme instruments it from zero.
 
 ## KPIs
 P6, O9, and (as a directional proxy only, not a clean attribution) F9/F10
@@ -107,3 +164,4 @@ results).
 - [[Investment_Relationship_Map]] · [[Value_Driver_Tree_v2]] · [[Scenarios_v2]] · [[KPI_Tree_v2]]
 - `vault/Knowledge/Topics/AI.md` · `vault/Knowledge/Topics/Personalization.md`
 - [[Decision_Management_Layer|Decision Management Layer]]
+- [[DEC-009_investment-options-ranking-and-allocation-priority]] · `DEC-007` (superseded; methodology carried forward)

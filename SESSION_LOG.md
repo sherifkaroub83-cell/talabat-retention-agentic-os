@@ -44,8 +44,38 @@ read-only command console over the repository's governing documents — delivera
   (Agents 90 · Skills 85 · MCP 15 · Memory 90 · Brain 80 · LLMs 40 → ≈67% overall) with a
   9-step, ~8–9-session plan to 100%; scorecard mirrored on the console's OS Map view.
 
-**Next:** decide DEC-011 (MCP pursue/skip) and follow the assessment's step plan; host the PWA
-for the team; Pass 2 verification of the 14 v2 sections remains the next pipeline step.
+**Continued (same day) — completeness plan executed ("proceed all"), steps 1–4, 7(infra), 8:**
+- **DEC-011 approved** (user instruction): pursue the MCP layer. Built `vault-mcp` — read-only,
+  zero-dependency Python MCP server (9 tools: pipeline/section status, DEC/ASM/OPT lookups,
+  facts search, forecasts, allocation), registered in `.mcp.json`, selftest + protocol
+  handshake passing. MCP blocker (open since Phase 2) closed.
+- **LLM layer formalized**: `vault/Architecture/LLM_Layer.md` (execution paths, fallback order,
+  cost-governance line) + `model:` frontmatter on all 9 agents.
+- **Phase 5 delivery infrastructure**: new `publication-agent` + `deck-builder`,
+  `os-structure-doc`, `console-data-refresh` skills.
+- **Memory automation**: `scripts/check_freshness.py` (MOC links, stale frontmatter, console
+  snapshot age) wired into nightly maintenance — first run found 44 unlinked Validation notes,
+  fixed via an auto-maintained index in the Validation and Audit MOC.
+- **Stage 5 done** (research-agent, first post-pivot run): RES-005 Delivery Hero parent
+  investment-disclosure benchmark (Medium-High; key negative finding — nobody discloses
+  stage-gate mechanics, the plan's governance framework is legitimately its own construction);
+  RES-006 GCC quick-commerce outlook (Medium; KSA-exclusion caveat — headline "GCC" sizings are
+  54.76% Saudi, never talabat-addressable); RES-007 ads-monetization benchmarks (Medium; 2–4%
+  of GMV reference band). WebFetch was egress-blocked (403) — findings are WebSearch-corroborated,
+  page-level verification flagged for evidence-citation-agent; 4 proposed ASM candidates await
+  decision-steward.
+- **Stage 12 done** (kpi-agent): all five OPT records upgraded from sketch gates to full
+  verified gates (named KPI ID + threshold direction + review point + funding consequence,
+  DEC-009-consistent); ungrounded "~40%" floor withdrawn; 3 KPI-tree gaps flagged (1× OPT-003,
+  2× OPT-005) for disposition, not silently patched. Verification note:
+  `Stage12_Per_Option_Gates_Verification_2026-07-24.md`.
+- Structural completeness: **≈67% → ≈93%** (assessment scorecard updated in place).
+- Session scale: ~2 specialist agent invocations (research-agent, kpi-agent) + top-level work.
+
+**Next:** Step 5 — independent Pass 2 verification × 14 sections (citation audit + QA + three
+gates per section, fresh threads), then whole-plan gates 14–18 → publication (19) → deck + OS
+structure doc. Step 9 (role mapping) needs the team. decision-steward should also disposition
+the 4 proposed ASM candidates from RES-005..007 and the 3 flagged KPI gaps.
 
 ## Session 9 — 2026-07-23 (pivot Phases 3–9 completed; instructor-approval cleanup; merged to main; leakage-gap fixes; final comprehensive readiness review)
 

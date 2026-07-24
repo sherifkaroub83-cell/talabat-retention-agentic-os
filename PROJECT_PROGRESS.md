@@ -117,7 +117,12 @@ remaining 10 Business Plan sections — per `vault/Architecture/Implementation_R
   Command Center, Pipeline, Plan Sections, Quality Gates, Agents, Evidence, Decisions,
   Forecasts), shipped as an installable PWA for Windows/Android/macOS/iOS plus a Tauri 2
   scaffold for native desktop and mobile builds (`BUILD.md` has per-platform instructions).
-  Data layer is a dated repository snapshot (`src/js/data.js`, 2026-07-24). **v2 (same day):**
+  Data layer is a dated repository snapshot (`src/js/data.js`, 2026-07-24). **Completeness-plan
+  execution (2026-07-24, "proceed all"):** DEC-011 + `vault-mcp` MCP server (`scripts/vault_mcp/`,
+  `.mcp.json`), `LLM_Layer.md` + per-agent model routing, `publication-agent` + 3 delivery/refresh
+  skills, `check_freshness.py` memory automation (44 MOC-link fixes), pipeline Stage 5 done
+  (RES-005..007, first post-pivot research run) and Stage 12 done (per-option gates verified,
+  3 KPI gaps flagged). Structural completeness ≈67% → ≈93%. **v2 (same day):**
   smart-interface layer — command palette, interactive OS Map with the six-layer structural
   scorecard, activity replay, readiness ring, "Ask the OS" assistant — plus
   `vault/Architecture/Agentic_OS_Completeness_Assessment.md` (≈67% structural completeness;

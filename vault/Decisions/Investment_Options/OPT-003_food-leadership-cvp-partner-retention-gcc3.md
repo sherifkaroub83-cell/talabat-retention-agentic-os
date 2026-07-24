@@ -3,6 +3,7 @@ id: OPT-003
 status: candidate
 category: Food-leadership
 date: "2026-07-23"
+updated: "2026-07-24"
 owner: decision-steward
 ---
 
@@ -90,9 +91,55 @@ existing bucket, plus a formally documented dry-powder deployment trigger (curre
 than an open-ended reserve.
 
 ## Stage gates
+*(Original 2026-07-23 sketch — retained for the record, formalized and superseded by the verified
+section below.)*
 Non-high-value M1 retention trend in UAE/Kuwait/Qatar (currently -4% y/y) stabilizing or improving
 within 2-3 quarters of targeted spend; a documented dry-powder trigger threshold established before
 any reserve deployment.
+
+## Stage gates (verified 2026-07-24)
+Verification pass per Pipeline Stage 12. The sketch above stated the right substance but its primary
+outcome metric has **no KPI_Tree_v2 ID** (gap re-confirmed below), and it lacked review points and
+funding consequences. Review-cadence and threshold discipline follows the carried-forward
+methodology of `DEC-007` (superseded pre-pivot record; quarterly review cadence, qualitative
+trajectory-relative criteria where no baseline series exists, numeric thresholds only via a future
+Decision Log entry at first real baseline reading). Funding consequences follow `DEC-009`'s approved
+sequence: OPT-003 is a **near-term priority** alongside OPT-002.
+
+1. **Gate 1 — Retention-trend stabilization (flagged-gap metric).** Metric: country-level
+   non-high-value M1 retention for UAE/Kuwait/Qatar — **no KPI_Tree_v2 ID exists for this metric**
+   (genuine KPI gap, flagged below; not added to the tree by this verification pass). Threshold:
+   qualitative/directional against the single disclosed anchor (-4% y/y, TLB-019 p.9) — trend
+   stabilizing or improving within 2-3 quarters of targeted spend. The disclosed -4% is a one-off
+   anchor, not a baseline series; **threshold to be set at first recurring baseline reading** via a
+   Decision Log entry. Review: quarterly from first targeted-spend quarter; decisive read at
+   quarter 3 (approx. Q4 2026 per this record's review date). Consequence: stabilizing/improving →
+   **continue** targeted GCC-3 weighting; continued deterioration through quarter 3 → **hold** the
+   weighting and escalate a reassessment (targeted-weighting vs. 8-market-spread) as a new Decision
+   Log entry — do not silently expand spend against a failing disclosed trend.
+2. **Gate 2 — Dry-powder governance precondition.** KPIs: **G5** (ROI/payback hurdle-rate
+   compliance) and **G1** (% of spend passing a documented stage-gate) — both **newly-instrumented**
+   Governance-family KPIs with no corpus baseline (talabat discloses almost no allocation-governance
+   mechanics; this is a mechanism the programme must start measuring, not improve against a known
+   number). Threshold: qualitative — a documented dry-powder deployment trigger and hurdle logic
+   exists *before* any reserve deployment; no numeric trigger is invented here. Review: ad hoc,
+   before any reserve release, plus quarterly G1/G5 tracking. Consequence: no documented trigger →
+   **hold** — zero dry-powder deployment regardless of competitive conditions (the upside range's
+   "dry powder deployed" case stays unfunded).
+3. **Gate 3 — Bucket reallocation transparency and Food-GMV confirmation.** KPIs: **G2** (intra-year
+   reallocation amount/frequency between buckets — newly-instrumented) and **F3** (Food vs. G&R GMV
+   split and growth — baseline-exists, Food +20% y/y FY2025). Threshold: qualitative — any
+   GCC-3-weighting reallocation is documented via G2; Food GMV growth shows no material sustained
+   deceleration below the disclosed trend (lagging confirmation, trajectory-relative, no invented
+   floor). Review: quarterly at results disclosures. Consequence: undocumented reallocation or
+   sustained Food-GMV deterioration despite spend → **hold** further weighting increases and
+   escalate.
+
+**Flagged KPI gap (re-confirmed, unresolved):** country-level non-high-value M1 retention for
+UAE/Kuwait/Qatar — the single quantified Fact motivating this option — is governed by no existing
+KPI_Tree_v2 ID (the C-family retention KPIs C6/C7/C10 are pro-subscriber- or Egypt-scoped, not
+GCC-3 non-high-value-cohort-scoped). Per Stage 12 rules this is recorded as a gap for `kpi-agent` /
+`decision-steward` disposition, not patched by inventing a tree node inside an OPT record.
 
 ## KPIs
 F3, G2, G5 (`vault/Forecasts/KPI_Tree_v2.md`) — note: no existing KPI Tree ID directly tracks
@@ -109,3 +156,4 @@ Alongside talabat's next quarterly results disclosure following implementation (
 - [[Investment_Relationship_Map]] · [[Value_Driver_Tree_v2]] · [[Scenarios_v2]] · [[KPI_Tree_v2]]
 - `vault/Knowledge/Topics/Food Leadership.md` · `vault/Knowledge/Topics/Competition.md`
 - [[Decision_Management_Layer|Decision Management Layer]]
+- [[DEC-009_investment-options-ranking-and-allocation-priority]] · `DEC-007` (superseded; methodology carried forward)

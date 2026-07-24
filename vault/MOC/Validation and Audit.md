@@ -182,6 +182,7 @@ Every quality-control checkpoint produced while building this vault, in chronolo
 - [[QA_Review_Section_14_v2]]
 
 ### Readiness, pivot & other reports
+- [[Stage12_Per_Option_Gates_Verification_2026-07-24]]
 - [[Approval_Language_Cleanup_2026-07-23]]
 - [[Consistency_Audit_2026-07-23]]
 - [[Final_Comprehensive_Readiness_Review_2026-07-23]]

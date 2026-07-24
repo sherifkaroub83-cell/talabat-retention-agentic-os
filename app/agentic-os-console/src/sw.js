@@ -1,6 +1,6 @@
 /* talabat Agentic OS Console — offline cache (PWA).
    Bump CACHE version whenever any shipped file changes. */
-const CACHE = "aos-console-v2";
+const CACHE = "aos-console-v3";
 const ASSETS = [
   "./",
   "./index.html",
