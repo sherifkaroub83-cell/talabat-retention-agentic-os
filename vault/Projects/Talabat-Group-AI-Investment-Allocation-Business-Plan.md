@@ -53,21 +53,23 @@ against the old problem).
 
 ## Status
 
-🟡 **All 14 sections drafted; Pass 2 independent review complete for 10 of 14 sections, still pending
-for 4 (updated 2026-07-24).** All 14 sections exist under `vault/Projects/Business_Plan_Drafts_v2/`. Of
+🟡 **All 14 sections drafted; Pass 2 independent review complete for 12 of 14 sections, still pending
+for 2 (updated 2026-07-24).** All 14 sections exist under `vault/Projects/Business_Plan_Drafts_v2/`. Of
 the original Phase 9 pilot (Sections 2, 4, 5, 9, 12, 13), all 6 have now been through independent Pass 2
 citation audit + QA review: Sections 2 and 13 passed with minor fixes (✅ Done); Sections 4, 5, 9, and 12
 failed on real defects, all of which were found, fixed, and cross-verified against primary sources
 2026-07-24 (🟡 Fixed, re-verification pending — not marked Done until Stage 17's whole-plan citation
-audit re-clears them). Sections 1, 3, 6, and 7, drafted after the pilot, have now also been through
-independent Pass 2: **Section 1 passed with 0 defects (✅ Done)**; **Section 3 passed with 1 minor fix
-(a time-period-blending defect in a non-GCC GMV-share figure, fixed 2026-07-24; ✅ Done)**; **Section 6
-passed with 0 defects (✅ Done)**; **Section 7 passed with 1 minor fix (§7.5 mischaracterized DEC-009's
-resolved OPT-002/OPT-003 sequencing, fixed 2026-07-24; 🟡 Fixed, re-verification pending)**. The
-remaining 4 sections drafted after the pilot (8, 10, 11, 14) still have only Pass 1 self-review;
-independent Pass 2 review for these is the next task. No whole-plan gate (Problem Consistency, Financial
-Integrity, Geographic Evidence, whole-plan Citation Audit, Template Compliance) has run yet — those
-require all 14 sections individually cleared first. The 14 section drafts under
+audit re-clears them). Sections 1, 3, 6, 7, 8, and 10, drafted after the pilot, have now also been
+through independent Pass 2: **Section 1 passed with 0 defects (✅ Done)**; **Section 3 passed with 1
+minor fix (a time-period-blending defect in a non-GCC GMV-share figure, fixed 2026-07-24; ✅ Done)**;
+**Section 6 passed with 0 defects (✅ Done)**; **Section 7 passed with 1 minor fix (§7.5
+mischaracterized DEC-009's resolved OPT-002/OPT-003 sequencing, fixed 2026-07-24; 🟡 Fixed,
+re-verification pending)**; **Section 8 passed with 1 minor fix (a store-count figure misattributed to
+the wrong source document, fixed 2026-07-24; 🟡 Fixed, re-verification pending)**; **Section 10 passed
+with 0 defects (✅ Done)**. The remaining 2 sections drafted after the pilot (11, 14) still have only
+Pass 1 self-review; independent Pass 2 review for these is the next task. No whole-plan gate (Problem
+Consistency, Financial Integrity, Geographic Evidence, whole-plan Citation Audit, Template Compliance)
+has run yet — those require all 14 sections individually cleared first. The 14 section drafts under
 `vault/Projects/Business_Plan_Drafts/` (no `_v2` suffix) reflect the old Egypt-retention problem and
 remain historical, not valid inputs to this tracker.
 
@@ -82,9 +84,9 @@ remain historical, not valid inputs to this tracker.
 | 5 | AI Technology and Development | 🟡 Fixed, re-verification pending | `Business_Plan_Drafts_v2/Section_05...` — Pass 2 verdict FAIL (N-06/N-09 node mix-up; wrong node-ID document; "7/8 countries" should be 6/8); all fixed 2026-07-24 |
 | 6 | Business Model and Revenue Streams | ✅ Done (independently verified) | `Business_Plan_Drafts_v2/Section_06...` — Pass 2 verdict PASS, 0 defects; the Facts/Revenue.md TLB-019 p.13 reconciliation candidate was independently re-derived and confirmed correctly flagged, not force-reconciled |
 | 7 | Marketing and Sales Strategy | 🟡 Fixed, re-verification pending | `Business_Plan_Drafts_v2/Section_07...` — Pass 2 verdict PASS WITH MINOR FIXES (§7.5 mischaracterized DEC-009's resolved near-term-priority-pair sequencing as its earlier superseded "Tier 2/3" tiering, wrongly implying OPT-003 needs a pilot), fixed 2026-07-24, cross-checked against DEC-009's Decision text and OPT-003's own record; synthetic funnel-conversion labeling discipline independently confirmed intact |
-| 8 | Operations Plan | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_08...` — fresh 7S synthesis; surfaced new primary-source citations (TLB-026 pp.46-49, 152-157: GLSA/CQCA/Kitchens agreements, Dec-2022 data-breach disclosure, DH inter-company DTA) not yet in any Topic Note, flagged for Pass 2 priority re-check; independent Pass 2 still required |
+| 8 | Operations Plan | 🟡 Fixed, re-verification pending | `Business_Plan_Drafts_v2/Section_08...` — Pass 2 verdict PASS WITH MINOR FIXES (the "130 stores end-2024" figure misattributed to TLB-002 instead of TLB-001 p.17), fixed 2026-07-24; the new raw-primary-source citations (GLSA/CQCA/Kitchens/DTA/Dec-2022 breach) were independently re-located and re-verified directly against TLB-026's source text |
 | 9 | Financial Plan | 🟡 Fixed, re-verification pending | `Business_Plan_Drafts_v2/Section_09...` — headline case resolved by [[DEC-008_section9-headline-bucket-split-presentation\|DEC-008]]: base case only; funding sequence per [[DEC-009_investment-options-ranking-and-allocation-priority\|DEC-009]]; Pass 2 verdict FAIL (pp-vs-% unit mixing in downside cell), fixed 2026-07-24; USD175mn=120+55 reconciliation, DEC-008/DEC-009 compliance all independently verified clean |
-| 10 | Risk Analysis | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_10...` — 17 risks with named owners, High×High quadrant: FIN-01 (margin step-down), MKT-01 (Food-leadership competitive pressure), ORG-01 (no disclosed stage-gate mechanism); independent Pass 2 still required |
+| 10 | Risk Analysis | ✅ Done (independently verified) | `Business_Plan_Drafts_v2/Section_10...` — 17 risks with named owners, High×High quadrant: FIN-01 (margin step-down), MKT-01 (Food-leadership competitive pressure), ORG-01 (no disclosed stage-gate mechanism); Pass 2 verdict PASS, 0 defects, all 26 traceable claims independently re-verified 2026-07-24 |
 | 11 | CSR & Responsible AI | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_11...` — ties every control to a named Section 10 risk (ORG-01/02/03), cites DEC-008/DEC-009 as real executed precedent for the no-false-precision control; independent Pass 2 still required |
 | 12 | Implementation Plan (Three Horizons) | 🟡 Fixed, re-verification pending | `Business_Plan_Drafts_v2/Section_12...` — Pass 2 verdict FAIL (stale "DEC-009 unresolved" claim; OPT-003 mis-sequenced as H2-gated monitoring-only instead of DEC-009's actual near-term-priority placement alongside OPT-002); both fixed 2026-07-24, cross-verified against DEC-009, Investment_Options_Register.md, and OPT-003's own record; ancillary repo-wide date-label fix also applied to `OPT-002_talabat-pro-acceleration-egypt-iraq.md` |
 | 13 | Monitoring and Evaluation (KPIs) | ✅ Done (independently verified) | `Business_Plan_Drafts_v2/Section_13...` — sourced from `KPI_Tree_v2.md`'s 50 KPIs; Pass 2 verdict PASS WITH MINOR FIXES (missing Review Cadence section; imprecise KPI baseline periods; overbroad churn-scope claim), all fixed 2026-07-24 |
@@ -99,8 +101,8 @@ remain historical, not valid inputs to this tracker.
 - `ASM-015`–`ASM-033` — all `Approved` as of 2026-07-23. **Resolved.**
 - `OPT-001`–`005` exist in `vault/Decisions/Investment_Options_Register.md`. **Resolved.**
 - **No open decisions currently block continued drafting.** Next actions: (1) run independent Pass 2
-  citation audit + QA review on the remaining 4 sections that still have only Pass 1 self-review (8, 10,
-  11, 14) — Sections 1, 2, 3, 4, 5, 6, 7, 9, 12, and 13 have all now been through Pass 2; (2) once
+  citation audit + QA review on the remaining 2 sections that still have only Pass 1 self-review (11,
+  14) — Sections 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, and 13 have all now been through Pass 2; (2) once
   all 14 individually clear, run the Part C whole-plan gates (Problem Consistency, Financial Integrity,
   Geographic Evidence, whole-plan Citation Audit, Template Compliance); (3) execute Publication and
   export the final DOCX/PDF.

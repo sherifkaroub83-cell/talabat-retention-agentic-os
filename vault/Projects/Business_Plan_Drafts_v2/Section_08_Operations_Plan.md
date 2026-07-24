@@ -1,7 +1,7 @@
 ---
 section: 8
 title: Operations Plan
-status: Drafted — self-reviewed (Pass 1); citation audit run in-session ([[Citation_Audit_Section_08_v2]]); independent Pass 2 citation re-check and QA review (incl. the three new gates) still required before ✅ Done
+status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_08_v2_Pass2]], [[QA_Review_Section_08_v2_Pass2]]), verdict PASS WITH MINOR FIXES; the one finding (the "130 stores end-2024" figure misattributed to TLB-002 instead of TLB-001, page 17) fixed 2026-07-24, cross-checked directly against the raw TLB-001/TLB-002 source text via Facts/Q-Commerce.md — not yet reconfirmed by a fresh independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
 pipeline_run: 2026-07-24
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_08_Operations_Plan.md, which was drafted for the superseded Egypt-retention problem and stays untouched as historical record — not read as an input to this draft, per the standing instruction never to read from the non-_v2 drafts directory. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem (Problem_Charter.md)."
 ---
@@ -92,6 +92,16 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > **"Drafted — self-reviewed," not the unqualified "✅ Done."** A genuinely independent Pass 2 (a fresh,
 > separately-invoked citation audit and QA review) is still required before this section is
 > submission-final.
+>
+> **Addendum, 2026-07-24 (independent Pass 2 review).** An independent citation audit and QA review
+> ([[Citation_Audit_Section_08_v2_Pass2]], [[QA_Review_Section_08_v2_Pass2]]) re-verified every citation
+> in this section, with particular depth on the raw-primary-source pulls this section introduced for the
+> first time (GLSA, CQCA, Kitchens Services Agreement, Inter-Company DTA, the December 2022 breach — all
+> independently re-located and re-read directly in `Talabat-Holding-plc_International-Offering-
+> Memorandum.txt`, not merely trusted). **One defect found and fixed:** the "130 stores end-2024" figure
+> in §8.1 was misattributed to TLB-002; it is TLB-001, page 17 (only the "~160, 2025" figure is TLB-002).
+> Corrected in §8.1's body text and the traceability table. All other citations, the 7S rating
+> justifications, and the executive-roster claims independently re-verified clean.
 
 ---
 
@@ -152,7 +162,8 @@ means Egypt is not a purely consuming market for this infrastructure but one of 
 **Dark-store/inventory infrastructure (OPT-001-specific).** talabat mart's principal-model operation
 requires dark-store real-estate build-out and staffing across up to eight markets, plus inventory/
 replenishment systems structurally distinct from the commission-based Local Shops model (`OPT-001`'s own
-"Required capabilities"; Group; store count 130 end-2024 → 160, 2025, TLB-002 page 12,14). The CQCA
+"Required capabilities"; Group; store count almost 130 end-2024 (TLB-001, page 17) → ~160, 2025 (TLB-002,
+pages 12, 14)). The CQCA
 (a category-specific GLSA variant) is the disclosed contractual mechanism through which tMart-specific
 tools (catalogue/assortment intelligence, purchase management, supplier portal, store management) are
 actually delivered to the operating entities *(Group; TLB-026, page 156)*.
@@ -362,7 +373,7 @@ belongs to Section 9/12/14, where the ranges themselves are shown). No contradic
 | CEO transition (Rodriguez → Gyssels) and board-seat change (Al Jbori → Al-Halabi), unnarrated | `Corporate Structure.md`; `Entities/Executives.md` |
 | Named executive roles (Alfakesh, Assadi, Makarem, Vecchio, Abu Amara, El Kadri, AlGhrawi) | `Entities/Executives.md` |
 | ~90-95% 3PL/freelance rider sourcing | `Strategic/Competitive Weaknesses.md`; `Facts/Logistics_Facts.md` |
-| tMart store count 130 → 160 (2024→2025) | TLB-002, pages 12, 14 |
+| tMart store count almost 130 (end-2024) → ~160 (2025) | TLB-001, page 17; TLB-002, pages 12, 14 |
 | "Investments rather than costs" / CVP-over-discounting framing | TLB-020, page 16 |
 | Decision-Making Process "venue pattern" (CMD / Annual Report / quarterly results) | `Strategic/Decision-Making Process.md` |
 | KPI Tree Governance family (G1-G7), all newly-instrumented | `vault/Forecasts/KPI_Tree_v2.md` |
