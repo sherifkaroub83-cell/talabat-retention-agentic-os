@@ -1,0 +1,18 @@
+[package]
+name = "agentic-os-console"
+version = "1.0.0"
+description = "talabat Agentic OS Console"
+authors = ["AASTMT MBA Capstone Group G02"]
+edition = "2021"
+
+[lib]
+name = "agentic_os_console_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

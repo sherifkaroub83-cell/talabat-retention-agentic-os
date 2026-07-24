@@ -30,6 +30,15 @@ document analysis, extraction, synthesis, and deliverable authoring rather than 
 If code is later added (scripts, notebooks, a web app), update this file with the real build/lint/test
 commands at that time. Do not assume any toolchain exists today.
 
+**Exception — the Agentic OS Console (added 2026-07-24):** `app/agentic-os-console/` is a
+dependency-free static web app (no framework, no build step) that visualizes the OS — pipeline,
+agents, sections, gates, evidence tiers, decisions, forecasts. Run locally with
+`cd app/agentic-os-console && npm run dev` (serves `src/` on :8123). It ships as a PWA
+(installable on Windows/Android/macOS/iOS from the browser) and carries a Tauri 2 scaffold
+(`src-tauri/`) for native desktop/mobile builds — see `app/agentic-os-console/BUILD.md`.
+Its data layer (`src/js/data.js`) is a **dated snapshot** of the governing documents, not live
+reads — when repo state moves, update it and bump `CACHE` in `sw.js`.
+
 ## Source corpus
 
 `Input_Data/` is the dropzone for the project's source material.

@@ -110,6 +110,13 @@ remaining 10 Business Plan sections — per `vault/Architecture/Implementation_R
 
 ## Artifacts produced
 
+- **Agentic OS Console** (2026-07-24, branch `claude/talabat-agentic-os-ui-1nemuv`):
+  `app/agentic-os-console/` — a professional, dependency-free UI for the OS itself (8 views:
+  Command Center, Pipeline, Plan Sections, Quality Gates, Agents, Evidence, Decisions,
+  Forecasts), shipped as an installable PWA for Windows/Android/macOS/iOS plus a Tauri 2
+  scaffold for native desktop and mobile builds (`BUILD.md` has per-platform instructions).
+  Data layer is a dated repository snapshot (`src/js/data.js`, 2026-07-24).
+
 - `Problem_Charter.md` (original version 2026-07-20; rewritten for the capital-allocation pivot 2026-07-23 — current status: Active)
 - `Input_Data/` — 9-doc Markdown corpus + manifest (2026-07-20); 29-doc native-PDF/XLSX corpus,
   organized into 7 category folders + `CORPUS_INDEX.md` (2026-07-21)

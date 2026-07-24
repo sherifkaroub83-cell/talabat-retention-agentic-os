@@ -1,0 +1,297 @@
+/* ============================================================================
+   talabat Agentic OS Console — repository state snapshot
+   Generated from the repository's governing documents on 2026-07-24:
+   Problem_Charter.md, PROJECT_PROGRESS.md, vault/Architecture/*,
+   vault/Decisions/*, vault/Forecasts/*, vault/Projects/*.
+   This file is the single data source for the UI. To refresh the console,
+   re-generate this snapshot from the repo (see README.md).
+   ========================================================================== */
+
+export const DATA = {
+  meta: {
+    appName: "talabat Agentic OS",
+    subtitle: "Capital Allocation Command Console",
+    problem:
+      "How should talabat allocate its 2026 USD 175 million investment programme across Everyday App and Food-leadership initiatives — and within them, across markets and initiative categories — to maximise profitable growth, CLV, retention, and long-term platform economics?",
+    charterStatus: "Active — governing problem for the Agentic OS",
+    pivotDate: "2026-07-23",
+    snapshotDate: "2026-07-24",
+    group: "AASTMT MBA Capstone — Group G02",
+    course: "AI for Business Organizations Track — Dr. Hossam Daoud",
+    owner: "Sherif Samy Karoub",
+    markets: ["UAE", "Kuwait", "Qatar", "Bahrain", "Oman", "Jordan", "Iraq", "Egypt"],
+  },
+
+  companyKpis: [
+    { label: "FY2025 GMV", value: "$9.5bn", delta: "+28% cFX", tone: "up" },
+    { label: "FY2025 Revenue", value: "$3.9bn", delta: "Group, 8 markets", tone: "flat" },
+    { label: "Adj. EBITDA FY2025", value: "$615m", delta: "6.5% margin", tone: "up" },
+    { label: "Active customers", value: "7.5m", delta: "Group-wide", tone: "flat" },
+    { label: "Q1 2026 EBITDA margin", value: "4.8%", delta: "vs 6.3% Q1 2025", tone: "down" },
+  ],
+
+  allocation: {
+    total: 175,
+    unit: "USD million · Board-approved 2026 investment programme",
+    parts: [
+      {
+        name: "Everyday App initiatives",
+        amount: 120,
+        color: "cat1",
+        detail: "talabat pro · AI personalisation · multi-vertical cross-sell · grocery/retail expansion · new ventures",
+      },
+      {
+        name: "Food-leadership initiatives",
+        amount: 55,
+        color: "cat2",
+        detail: "Restaurant-partner growth · food customer value proposition · delivery reliability",
+      },
+    ],
+  },
+
+  milestones: [
+    { n: 1, name: "Problem & Charter", weeks: "wk 1–2", status: "done", note: "Charter approved; pivoted 23/07 to Group capital allocation. Open: map 6 members to 5 roles." },
+    { n: 2, name: "OS Activation", weeks: "wk 2–3", status: "active", note: "Template + skills live. Remaining: agent-role documentation, MCP decision, team walkthrough." },
+    { n: 3, name: "Data Collection & Ingestion", weeks: "wk 3–5", status: "done", note: "9-doc Markdown + 29-doc PDF corpus → 103-note connected knowledge graph, 0 orphans." },
+    { n: 4, name: "Analysis & Business Plan", weeks: "wk 5–8", status: "active", note: "All 14 sections drafted under the pivoted problem (v2); independent Pass 2 verification pending." },
+    { n: 5, name: "Finalize & Present", weeks: "wk 8–9", status: "todo", note: "Whole-plan gates → publication layer → OS structure doc + 30-slide deck → Moodle." },
+  ],
+
+  sections: [
+    { n: 1,  name: "Executive Summary (SCQA)",            status: "drafted", note: "Drafted last, gated on all 13 others; SCQA Answer spot-checked against Sections 2–14." },
+    { n: 2,  name: "Business Description",                status: "drafted", note: "Citation audit found 3 hard failures — fixed, self-verified. Independent Pass 2 required." },
+    { n: 3,  name: "Market Analysis",                     status: "drafted", note: "2 real issues (chained order-frequency figures, TAC/GMV arithmetic) found and fixed." },
+    { n: 4,  name: "Value Proposition",                   status: "drafted", note: "Pivot pilot section." },
+    { n: 5,  name: "AI Technology & Development",         status: "drafted", note: "Pivot pilot section." },
+    { n: 6,  name: "Business Model & Revenue Streams",    status: "drafted", note: "Flags a new Facts/Revenue.md reconciliation candidate (TLB-019 p.13 fee-mix)." },
+    { n: 7,  name: "Marketing & Sales Strategy",          status: "drafted", note: "Funnel-conversion figures explicitly labeled [SYNTHETIC — illustrative estimate]." },
+    { n: 8,  name: "Operations Plan",                     status: "drafted", note: "Fresh 7S synthesis; surfaced new primary-source citations (TLB-026)." },
+    { n: 9,  name: "Financial Plan",                      status: "drafted", note: "Headline case resolved by DEC-008: base case with bucket split." },
+    { n: 10, name: "Risk Analysis",                       status: "drafted", note: "17 risks with named owners; High×High: FIN-01 margin step-down, MKT-01." },
+    { n: 11, name: "CSR & Responsible AI",                status: "drafted", note: "Every control tied to a named Section 10 risk; cites DEC-008/DEC-009." },
+    { n: 12, name: "Implementation Plan (Three Horizons)", status: "drafted", note: "Pivot pilot section." },
+    { n: 13, name: "Monitoring & Evaluation (KPIs)",      status: "drafted", note: "Sourced from KPI_Tree_v2.md's 50 KPIs." },
+    { n: 14, name: "Appendices + Traceability",           status: "drafted", note: "40-row traceability table; DEC-009 allocation-range sensitivity exhibit." },
+  ],
+  sectionStatusLegend: {
+    done_iv: "Done — independently verified",
+    done_sr: "Done — self-reviewed",
+    drafted: "Drafted — needs verification",
+    progress: "In progress",
+    todo: "Not started",
+  },
+
+  pipeline: {
+    partA: {
+      title: "Part A — Plan-Level Setup",
+      subtitle: "Stages 1–12 · run once per active problem",
+      stages: [
+        { n: 1,  name: "Confirm business question",           owner: "bp-orchestrator",   status: "done",    note: "Problem_Charter.md rewritten 2026-07-23 — Active." },
+        { n: 2,  name: "Assemble investment evidence",        owner: "bp-orchestrator",   status: "done",    note: "13 new Topic Notes + Investment Relationship Map." },
+        { n: 3,  name: "Identify candidate investment options", owner: "decision-steward", status: "done",   note: "5 candidates OPT-001–005 populated." },
+        { n: 4,  name: "Detect evidence gaps / conflicts",    owner: "bp-orchestrator",   status: "done",    note: "Every Topic Note documents its own gaps explicitly." },
+        { n: 5,  name: "Targeted research",                   owner: "research-agent",    status: "todo",    note: "Not yet run against the new problem; 4 pre-pivot Research Notes superseded." },
+        { n: 6,  name: "Define decision criteria",            owner: "decision-steward",  status: "done",    note: "11-criterion comparison framework." },
+        { n: 7,  name: "Build value-driver trees",            owner: "forecasting-agent", status: "done",    note: "Value_Driver_Tree_v2.md — 45 nodes." },
+        { n: 8,  name: "Register assumptions",                owner: "decision-steward",  status: "done",    note: "ASM-015–033 registered, all Approved." },
+        { n: 9,  name: "Build scenarios",                     owner: "forecasting-agent", status: "done",    note: "Scenarios_v2.md — base/upside/downside + 8 modules." },
+        { n: 10, name: "Rank investment options",             owner: "decision-steward",  status: "done",    note: "DEC-009 — descriptive tiering, never a single blended score." },
+        { n: 11, name: "Allocation ranges / pilot sequencing", owner: "decision-steward", status: "done",    note: "Portfolio Register ranges (ASM-029–033); ranges never a headline exhibit." },
+        { n: 12, name: "Define KPIs / stage gates",           owner: "kpi-agent",         status: "partial", note: "KPI_Tree_v2 done (50 KPIs); per-option stage gates not yet re-verified." },
+      ],
+    },
+    partB: {
+      title: "Part B — Per-Section Drafting Loop",
+      subtitle: "Stage 13 · the original 11-stage loop, run once per section",
+      stages: [
+        { n: "13.1",  name: "Intake & Scoping",                          owner: "bp-orchestrator" },
+        { n: "13.2",  name: "Evidence Assembly",                         owner: "bp-orchestrator" },
+        { n: "13.3",  name: "Gap Detection",                             owner: "bp-orchestrator" },
+        { n: "13.4",  name: "External Research Resolution",              owner: "research-agent" },
+        { n: "13.5",  name: "Forecast & Assumption Generation",          owner: "forecasting-agent" },
+        { n: "13.6",  name: "Decision Escalation",                       owner: "decision-steward" },
+        { n: "13.7",  name: "Evidence Ranking & Conflict Resolution",    owner: "evidence-citation-agent" },
+        { n: "13.8",  name: "Drafting (McKinsey Lens)",                  owner: "bp-orchestrator" },
+        { n: "13.9",  name: "Citation Verification",                     owner: "evidence-citation-agent" },
+        { n: "13.10", name: "Cross-Section Consistency & KPI Alignment", owner: "kpi-agent" },
+        { n: "13.11", name: "QA & Final Review",                         owner: "qa-review-agent" },
+      ],
+      gateRules: [
+        "13.8 cannot start while any gap typed in 13.3 (external / forecast / decision) is unresolved for that claim.",
+        "13.11 is the only sub-stage that can move a section to Done. 13.9 passing alone only earns Drafted.",
+        "Two-pass verification: same-context review = Done (self-reviewed); a fresh, separately-invoked Pass 2 is required for Done (independently verified) — submission-final status.",
+        "Section 1 skips 13.2–13.7 and 13.10 — gated until all 13 other sections reach Drafted.",
+        "A sub-stage may report 'not applicable' — recorded explicitly, never silently skipped.",
+      ],
+    },
+    partC: {
+      title: "Part C — Whole-Plan Gates",
+      subtitle: "Stages 14–19 · run once, after all 14 sections reach Drafted or better",
+      stages: [
+        { n: 14, name: "Cross-section consistency review", owner: "qa-review-agent",         status: "todo", note: "Problem Consistency Gate at whole-plan scope." },
+        { n: 15, name: "Financial consistency review",     owner: "qa-review-agent",         status: "todo", note: "Financial Integrity Gate — Sections 6/9/12/13 reconcile with each other." },
+        { n: 16, name: "Geographic evidence review",       owner: "qa-review-agent",         status: "todo", note: "Geographic Evidence Gate — no inconsistent geography tags." },
+        { n: 17, name: "Whole-plan citation audit",        owner: "evidence-citation-agent", status: "todo", note: "Every claim in the assembled plan re-checked together." },
+        { n: 18, name: "Template Compliance Gate",         owner: "template-compliance-gate", status: "todo", note: "Section count / numbering / titles / order intact." },
+        { n: 19, name: "Hand off to Publication Layer",    owner: "bp-orchestrator",         status: "todo", note: "Formal handoff to executive-document-formatting." },
+      ],
+    },
+  },
+
+  agents: [
+    {
+      id: "bp-orchestrator", name: "Orchestrator", icon: "◉",
+      mission: "Runs the 19-stage Business Plan Generation Pipeline; sequences the other seven agents; holds pipeline state in the Project tracker.",
+      skills: ["business-plan-drafting"],
+      stages: "All — pipeline owner",
+      interacts: ["All seven specialist agents"],
+      success: "No section reaches Drafted while an upstream stage is still open; every stage transition is logged.",
+    },
+    {
+      id: "research-agent", name: "Research Agent", icon: "◈",
+      mission: "Resolves a named external-evidence gap the corpus cannot fill, using web research, and registers the finding with publisher, date, and confidence level.",
+      skills: ["external-research"],
+      stages: "5 · 13.4",
+      interacts: ["bp-orchestrator", "decision-steward", "evidence-citation-agent"],
+      success: "Zero external figures enter the plan without a Research Note stating publisher + date + confidence.",
+    },
+    {
+      id: "forecasting-agent", name: "Forecasting Agent", icon: "◮",
+      mission: "Turns a historical Fact into a method-transparent forecast (base/upside/downside) and maintains the Value Driver Tree.",
+      skills: ["forecast-builder"],
+      stages: "7 · 9 · 13.5",
+      interacts: ["decision-steward", "kpi-agent", "bp-orchestrator"],
+      success: "Every forecast has a named historical anchor, stated growth logic, three scenarios, and an assumption ID.",
+    },
+    {
+      id: "decision-steward", name: "Decision Steward", icon: "◆",
+      mission: "Owns the Decision Log and Assumptions Register; converts open questions into structured, dated, owned Decision records.",
+      skills: ["decision-log"],
+      stages: "3 · 6 · 8 · 10 · 11 · 13.6",
+      interacts: ["Every agent that surfaces an open question", "the human user"],
+      success: "Every open item has exactly one Decision record; no assumption enters a forecast or section without a register ID.",
+    },
+    {
+      id: "evidence-citation-agent", name: "Evidence & Citation Agent", icon: "❖",
+      mission: "Ranks competing evidence, resolves or footnotes conflicts, and verifies every claim traces to a real vault note or registered assumption.",
+      skills: ["evidence-ranking", "citation-audit"],
+      stages: "13.7 · 13.9 · 17",
+      interacts: ["bp-orchestrator", "decision-steward", "qa-review-agent"],
+      success: "100% of numeric claims have a resolvable citation chain; zero silently-picked numbers.",
+    },
+    {
+      id: "kpi-agent", name: "KPI & Metrics Agent", icon: "◫",
+      mission: "Builds the monitored KPI tree from the Value Driver Tree and Section 4's value mechanisms, splitting leading vs lagging indicators.",
+      skills: [],
+      stages: "12 · 13.10",
+      interacts: ["forecasting-agent", "bp-orchestrator"],
+      success: "Every KPI traces to a value-driver-tree node and is tagged baseline-exists / newly-instrumented.",
+    },
+    {
+      id: "exec-summary-agent", name: "Executive Summary Agent", icon: "◎",
+      mission: "Synthesizes finished Sections 2–13 into the SCQA Executive Summary. Gated — blocked until all other sections are drafted.",
+      skills: ["business-plan-drafting"],
+      stages: "13.8 for Section 1 only",
+      interacts: ["bp-orchestrator (gated dependency)"],
+      success: "Section 1's Answer matches the plan's actual recommendation; no claim absent from Sections 2–13.",
+    },
+    {
+      id: "qa-review-agent", name: "QA / Final Review Agent", icon: "✓",
+      mission: "Final gate on every section: McKinsey Lens pressure test, template completeness, anti-patterns checklist, plus the Problem Consistency, Financial Integrity, and Geographic Evidence gates.",
+      skills: ["qa-review"],
+      stages: "13.11 · 14 · 15 · 16",
+      interacts: ["bp-orchestrator", "evidence-citation-agent"],
+      success: "No section is marked Done without a passed QA review on file.",
+    },
+  ],
+
+  evidenceTiers: [
+    { n: 1, name: "Repository Facts",     path: "vault/Knowledge/Facts", desc: "Disclosed, cited figures extracted from the 37-document corpus. The only tier that touches source documents directly.", count: "103-note knowledge graph" },
+    { n: 2, name: "External Research",    path: "vault/Research", desc: "Named-gap findings from outside the corpus — publisher, URL, retrieval date, and confidence on every note.", count: "5 research notes (4 superseded by pivot)" },
+    { n: 3, name: "Forecasts",            path: "vault/Forecasts", desc: "Method-transparent projections anchored to Facts: value driver tree, scenarios, KPI tree.", count: "45 VDT nodes · 50 KPIs · 3 scenarios" },
+    { n: 4, name: "Management Decisions", path: "vault/Decisions", desc: "Structured, dated, owned judgment calls with an auditable evidence trail and assumption register.", count: "10 decisions · 47 assumptions · 5 options" },
+    { n: 5, name: "Business Plan",        path: "Outputs/", desc: "The deliverable itself. No number reaches this tier without resolving to a Facts citation or an Approved assumption.", count: "14 sections drafted (v2)" },
+  ],
+
+  corpus: {
+    total: 37,
+    note: "Native PDFs + Markdown extracts in Input_Data/ (read-only). Primary sources (official talabat IR/newsroom) outrank secondary.",
+    categories: [
+      { name: "Annual Reports", count: 2, kind: "primary" },
+      { name: "Company Filings (press releases)", count: 2, kind: "primary" },
+      { name: "Quarterly Financial Statements", count: 9, kind: "primary" },
+      { name: "Investor Presentations", count: 4, kind: "primary" },
+      { name: "Earnings Call Presentations", count: 5, kind: "primary" },
+      { name: "Regulatory & IPO", count: 6, kind: "primary" },
+      { name: "Consensus Reports", count: 2, kind: "primary" },
+      { name: "Supplementary Data (XLSX)", count: 1, kind: "primary" },
+      { name: "Market Research", count: 2, kind: "secondary" },
+      { name: "Competitors", count: 1, kind: "secondary" },
+      { name: "Strategy News", count: 3, kind: "secondary" },
+    ],
+  },
+
+  decisions: [
+    { id: "DEC-001", title: "Egypt category-share figure", status: "approved", note: "Two footnoted values, not blended; conservative figure leads." },
+    { id: "DEC-002", title: "Egypt market-size definition", status: "approved", note: "Three explicitly-labeled market-size framings, never force-reconciled." },
+    { id: "DEC-003", title: "Section 2 governing hypothesis", status: "approved", note: "First human-confirmed strategic decision (via AskUserQuestion escalation)." },
+    { id: "DEC-004", title: "2026 investment total", status: "approved", note: "Reconciled the USD 175m discrepancy previously assumed irreconcilable." },
+    { id: "DEC-005", title: "Section 9 headline scenario", status: "approved", note: "Base case as headline; upside/downside as labeled sensitivities." },
+    { id: "DEC-006", title: "Subscription revenue-line reclassification", status: "approved", note: "" },
+    { id: "DEC-007", title: "Section 13 review cadence & kill criteria", status: "approved", note: "" },
+    { id: "DEC-008", title: "Section 9 headline bucket-split presentation", status: "approved", note: "Base case presented with the $120m/$55m bucket split." },
+    { id: "DEC-009", title: "Investment-options ranking & allocation priority", status: "approved", note: "Middle path — funding sequence stated narratively; allocation ranges never a headline exhibit." },
+    { id: "DEC-010", title: "2026 investment-total reissuance", status: "approved", note: "" },
+  ],
+
+  options: [
+    { id: "OPT-001", title: "talabat mart dark-store densification", bucket: "Everyday App" },
+    { id: "OPT-002", title: "talabat pro acceleration — Egypt & Iraq", bucket: "Everyday App" },
+    { id: "OPT-003", title: "Food-leadership CVP & partner retention — GCC-3", bucket: "Food-leadership" },
+    { id: "OPT-004", title: "Advertising monetization gap closure", bucket: "Everyday App" },
+    { id: "OPT-005", title: "AI personalisation capability scaling", bucket: "Everyday App" },
+  ],
+
+  registers: [
+    { name: "Assumptions Register", count: 47, status: "All post-pivot rows (ASM-015–033) Approved", icon: "≔" },
+    { name: "Decision Log", count: 10, status: "DEC-001–010, all approved", icon: "◆" },
+    { name: "Investment Options", count: 5, status: "OPT-001–005, ranked under DEC-009", icon: "▤" },
+    { name: "Research Register", count: 5, status: "4 pre-pivot notes superseded; Stage 5 re-run pending", icon: "◈" },
+  ],
+
+  forecasts: {
+    vdt: { name: "Value Driver Tree v2", nodes: 45, desc: "Group-wide driver decomposition from GMV → revenue → EBITDA, mapped to the two investment buckets." },
+    scenarios: {
+      name: "Scenarios v2", modules: 8,
+      cases: [
+        { name: "Base",     desc: "Headline case (per DEC-005 / DEC-008) — disclosed trajectory with the $120m/$55m split." },
+        { name: "Upside",   desc: "Labeled sensitivity — faster Everyday App adoption and adtech scaling." },
+        { name: "Downside", desc: "Labeled sensitivity — margin compression persists; competitive intensity rises." },
+      ],
+    },
+    kpis: { name: "KPI Tree v2", count: 50, desc: "Leading vs lagging split; every KPI traces to a VDT node and is tagged baseline-exists / newly-instrumented." },
+  },
+
+  gates: [
+    { name: "Problem Consistency Gate", stage: 14, status: "pending", desc: "All 14 sections argue one coherent problem — no section still on the old Egypt-retention framing." },
+    { name: "Financial Integrity Gate", stage: 15, status: "pending", desc: "Sections 6/9/12/13 reconcile: one USD 175m split, one EBITDA trajectory, one headline scenario." },
+    { name: "Geographic Evidence Gate", stage: 16, status: "pending", desc: "Evidence used at the level talabat discloses it — Group, GCC, non-GCC, or named country. Never 'MENA' as a stand-in." },
+    { name: "Template Compliance Gate", stage: 18, status: "pending", desc: "GSB v2.0 structural contract intact: 14 sections, numbering, titles, order, subsection coverage." },
+  ],
+
+  deliverables: [
+    { name: "AI Business Plan", spec: "GSB 14-section template v2.0, McKinsey Edition · 15–25 pages", status: "drafted", note: "All 14 sections drafted (v2); Pass 2 verification + whole-plan gates pending." },
+    { name: "OS Structure Document", spec: "3–5 pages", status: "todo", note: "Phase 5." },
+    { name: "Group Presentation", spec: "30 slides — 5 per member × 6", status: "todo", note: "Phase 5." },
+  ],
+};
+
+export const STATUS = {
+  done:    { label: "Done",        cls: "s-done",    icon: "●" },
+  active:  { label: "In progress", cls: "s-active",  icon: "◐" },
+  partial: { label: "Partial",     cls: "s-active",  icon: "◐" },
+  drafted: { label: "Drafted — needs verification", cls: "s-drafted", icon: "◑" },
+  pending: { label: "Pending",     cls: "s-todo",    icon: "○" },
+  todo:    { label: "Not started", cls: "s-todo",    icon: "○" },
+  approved:{ label: "Approved",    cls: "s-done",    icon: "●" },
+};
