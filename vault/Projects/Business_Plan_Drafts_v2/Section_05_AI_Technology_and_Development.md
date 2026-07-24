@@ -1,7 +1,7 @@
 ---
 section: 5
 title: AI Technology and Development
-status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_05_v2_Pass2]], [[QA_Review_Section_05_v2_Pass2]]), verdict FAIL on 3 defects (N-06/N-09 node mix-up; Value_Driver_Tree_v2.md-vs-Investment_Relationship_Map.md attribution error; "7 of 8 countries" overstated, actually 6/8 excluding Egypt and Iraq); all three fixed 2026-07-24 and cross-checked against primary sources — not yet reconfirmed by a fresh independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
+status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_05_v2_Pass2]], [[QA_Review_Section_05_v2_Pass2]]), Pass 2's 3 defects fixed and independently reconfirmed by Pass 3 ([[Citation_Audit_Section_05_v2_Pass3]]), which found 1 new hard failure (§5.6 mischaracterized DEC-009 as governing the open cross-market allocation question, when DEC-009 is resolved and covers a different question — initiative-level funding sequence) and 1 new moderate finding (EBITDA figure mis-cited to `Topics/EBITDA.md` instead of `Topics/AI.md`); both fixed 2026-07-24 — not yet reconfirmed by a fourth independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_05_AI_Technology_and_Development.md (superseded Egypt-retention draft, untouched). Fresh draft for the 2026-07-23 pivot."
 ---
@@ -93,7 +93,8 @@ talabat's embedded AI capability has already demonstrated multi-market scalabili
 countries for talabat pro personalisation by end-2024, excluding Egypt and Iraq — TLB-012, TLB-013,
 TLB-015, TLB-016, TLB-026; `Value_Driver_Tree_v2.md` N-08/N-13) — the investment programme's opex
 allocation extends this further, not builds new scalability. This plan's own decision-support system is currently
-scoped to five candidate Investment Options and six pilot Business Plan sections — genuinely narrow. Its
+scoped to five candidate Investment Options and, as of this drafting round, all 14 Business Plan
+sections — genuinely narrow relative to a future multi-programme or multi-year scope. Its
 adaptability is structural, not yet demonstrated at scale: the same Investment Option schema, 11-criterion
 comparison, and Geographic Evidence Rules discipline would extend to additional candidate initiatives or
 future investment programmes without a redesign, but this has not been tested against a larger option set.
@@ -103,8 +104,10 @@ future investment programmes without a redesign, but this has not been tested ag
 For talabat's embedded AI: `Strategic/AI Opportunities.md` names talabat's own stated Group roadmap items
 (evidenced intent) — this plan does not add new customer-facing AI R&D beyond what talabat has already
 disclosed, since the programme's opex allocation is described as scaling, not inventing, capability. For
-this plan's decision-support system: the two largest open R&D items are (1) resolving `DEC-009`'s
-cross-market allocation question (problem 3 in Section 2.2) as better country-level evidence becomes
+this plan's decision-support system: the two largest open R&D items are (1) resolving the cross-market
+allocation question (problem 3 in Section 2.2 — a disclosure gap in the corpus itself, distinct from
+`DEC-009`, which is already resolved and settles a different question: initiative-level funding sequence
+and allocation-range presentation within each bucket, problem 2) as better country-level evidence becomes
 available, and (2) instrumenting the KPI Tree's Governance family (currently 7/7 newly-instrumented KPIs
 with no baseline) so future allocation rounds can be evaluated against real performance data rather than
 constructed ranges alone.
@@ -117,7 +120,7 @@ constructed ranges alone.
 |---|---|
 | AI-driven logistics improvements credited with delivery-time/cost gains | TLB-001, page 10 |
 | talabat's stack licensed from Delivery Hero SE | `Entities/Technology_Platforms.md` |
-| AI/personalisation EBITDA contribution USD14mn+→30mn+ | `Topics/EBITDA.md`; `Value_Driver_Tree_v2.md` N-09 |
+| AI/personalisation EBITDA contribution USD14mn+→30mn+ | `Topics/AI.md`; `Value_Driver_Tree_v2.md` N-09 |
 | N-06 not a discrete dollar line in either bucket | `Value_Driver_Tree_v2.md` N-06 |
 | talabat pro live in 6/8 countries by end-2024 (excl. Egypt, Iraq) | TLB-012, TLB-013, TLB-015, TLB-016, TLB-026; `Value_Driver_Tree_v2.md` N-08/N-13 |
 | MCP decision undecided | `MEMORY.md` |

@@ -1,7 +1,7 @@
 ---
 section: 14
 title: Appendices
-status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_14_v2_Pass2]], [[QA_Review_Section_14_v2_Pass2]]), verdict PASS WITH MINOR FIXES on 3 defects (stale pre-Pass-2-fix content inherited from Sections 4, 5, and 12 — wrong Value_Driver_Tree_v2 node IDs, "7/8" vs. correct "6/8" countries, stale DEC-009 Tier 2/3 tiering language misreading OPT-003's resolved near-term-priority placement); all fixed 2026-07-24, cross-checked against each source section's current text — not yet reconfirmed by a fresh independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
+status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_14_v2_Pass2]], [[QA_Review_Section_14_v2_Pass2]]), Pass 2's 3 defects fixed and independently reconfirmed by Pass 3 ([[Citation_Audit_Section_14_v2_Pass3]], all 60 traceability rows checked), which found 1 new hard-ish finding (a stale claim, in §13.3's provenance note and §14.8, that Section 9 "still describes ASM-015–028 as Proposed" and "DEC-009 as open" — now false, since Section 9 was independently corrected 2026-07-24); fixed with a dated addendum in both locations — not yet reconfirmed by a fourth independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
 pipeline_run: 2026-07-24
 supersedes_note: "A prior vault/Projects/Business_Plan_Drafts/Section_14_Appendices.md exists (no _v2 suffix), drafted for the superseded Egypt-retention problem. Per the standing instruction never to read from or write to that directory, it was not read or reused as an input to this draft — this file is written fresh against the 2026-07-23 pivot's Group-wide capital-allocation problem (Problem_Charter.md) and the 12 companion _v2 section drafts (Sections 2-13) that now exist."
 ---
@@ -44,6 +44,12 @@ supersedes_note: "A prior vault/Projects/Business_Plan_Drafts/Section_14_Appendi
 >   Readiness pass. This section does not silently inherit that stale framing (the traceability table
 >   below cites the *current* `Approved` status), and does not edit Section 9 itself, which is outside
 >   this task's scope — flagged here for the next Pass 2/re-draft pass on Section 9.
+>
+>   **Addendum, 2026-07-24 (independent Pass 3 review).** This flag is now historical, not a live gap:
+>   Section 9 underwent its own independent Pass 2 citation audit and QA review on 2026-07-24
+>   ([[Citation_Audit_Section_09_v2_Pass2]]), which fixed this exact staleness — `Section_09_Financial_Plan.md`
+>   now correctly states `ASM-015`–`028` as `Approved` and `DEC-009` as resolved throughout, independently
+>   reconfirmed by a further Pass 3 ([[Citation_Audit_Section_09_v2_Pass3]]) with no remaining defects.
 > - **13.4 External Research Resolution (`research-agent` role)** — determined **not applicable**: this
 >   section compiles and cross-references claims already drafted and cited elsewhere; it introduces no new
 >   external-research claim.
@@ -387,8 +393,13 @@ carried forward rather than silently fixed: `Section_09_Financial_Plan.md`'s own
 `ASM-015`–`028` as `Proposed` and `DEC-009` as open, both now stale relative to `Assumptions_Register.md`'s
 and `DEC-009`'s current `Approved`/resolved status (see the Gap Detection note above) — this section does
 not restate that stale framing, but flags it explicitly for whoever runs Section 9's own next revision
-pass, rather than editing Section 9 directly, which is outside this task's scope. No other contradiction
-found.
+pass, rather than editing Section 9 directly, which is outside this task's scope.
+
+**Addendum, 2026-07-24 (independent Pass 3 review):** this flag is now resolved — Section 9 has since
+been independently corrected and re-verified ([[Citation_Audit_Section_09_v2_Pass2]],
+[[Citation_Audit_Section_09_v2_Pass3]]), and now correctly states `ASM-015`–`028` as `Approved` and
+`DEC-009` as resolved throughout, matching `Assumptions_Register.md` and `DEC-009`'s current status. No
+other contradiction found.
 
 ---
 
@@ -403,7 +414,7 @@ found.
 | No talabat-side pilot exists for the allocation recommendation | `Investment_Options_Register.md` (all five `status: candidate`) |
 | Phase 7-9 pipeline pilot history | `vault/MOC/Validation and Audit.md` |
 | Source Register / 29-document corpus index | `vault/MOC/Source Register.md` |
-| Section 9 staleness (ASM-015-028/DEC-009 framing) flagged, not fixed here | `Section_09_Financial_Plan.md` vs. `Assumptions_Register.md`, `DEC-009` |
+| Section 9 staleness (ASM-015-028/DEC-009 framing), flagged 2026-07-24, since independently fixed and re-verified in Section 9's own Pass 2/Pass 3 | `Citation_Audit_Section_09_v2_Pass2.md`, `Citation_Audit_Section_09_v2_Pass3.md` |
 
 ## See also
 [[Section_02_Business_Description]] · [[Section_09_Financial_Plan]] · [[Section_12_Implementation_Plan]] ·

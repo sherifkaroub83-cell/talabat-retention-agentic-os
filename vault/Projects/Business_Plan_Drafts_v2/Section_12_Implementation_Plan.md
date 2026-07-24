@@ -1,7 +1,7 @@
 ---
 section: 12
 title: Implementation Plan (Three Horizons)
-status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_12_v2_Pass2]], [[QA_Review_Section_12_v2_Pass2]]), verdict FAIL on 2 defects (stale "DEC-009 unresolved" claim; OPT-003 mis-sequenced as H2-gated monitoring-only when DEC-009's own resolution names it a near-term priority alongside OPT-002); both fixed 2026-07-24, cross-checked against DEC-009's resolved text, Investment_Options_Register.md, and OPT-003's own option record — not yet reconfirmed by a fresh independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
+status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_12_v2_Pass2]], [[QA_Review_Section_12_v2_Pass2]]), Pass 2's 2 defects fixed and independently reconfirmed by Pass 3 ([[Citation_Audit_Section_12_v2_Pass3]]), which found 1 new hard failure (an H2 bullet claimed Food-leadership spend "beyond the disclosed ~USD55mn" might be proposed, contradicted by OPT-003's own record showing its upside case stays within the ~USD55mn bucket); fixed 2026-07-24, reworded to match OPT-003's own allocation-range language — not yet reconfirmed by a fourth independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_12_Implementation_Plan.md (superseded Egypt-retention draft, untouched). Fresh draft for the 2026-07-23 pivot."
 ---
@@ -68,8 +68,10 @@ assumed Egypt-first default or a re-derivation of the evidence tiering alone.
   optimism.
 - **`OPT-003` review:** using H1's budget-weighting and dry-powder-trigger baseline, assess whether the
   -4% y/y non-high-value retention decline in UAE/Kuwait/Qatar is stabilizing; if not, this is the point
-  at which a Decision Log entry proposing incremental Food-leadership spend (beyond the disclosed
-  ~USD55mn) would need to be raised — not assumed here.
+  at which a Decision Log entry proposing a shift toward the upside end of `OPT-003`'s own recommended
+  allocation range (dry powder deployed, still within the existing ~USD55mn Food-leadership bucket) would
+  need to be raised — not assumed here. Nothing in the corpus or in `OPT-003`'s own record supports
+  funding beyond the disclosed ~USD55mn envelope; that is not a scenario this plan proposes.
 - **`OPT-004` (advertising monetization gap):** begin, given its longer disclosed time-to-value
   (`DEC-009`) — the ~7%-of-GMV UAE benchmark is a multi-period target, not a quick win.
 
@@ -78,7 +80,7 @@ assumed Egypt-first default or a re-derivation of the evidence tiering alone.
 - **`OPT-002`:** scale if H2's go/no-go supported it; hold or reassess if it did not clear its evidence
   bar. **`OPT-003`:** already funded from H1 (not evidence-gated the same way `OPT-002` is, since it is
   an already-operating mechanism, not a pilot) — H3 confirms whether the H2 review's stabilization
-  assessment held and whether the incremental-spend question it may have raised was resolved.
+  assessment held and whether the upside-allocation-range question it may have raised was resolved.
 - Revisit the largest remaining open question from Section 2.2 (problem 3: cross-market allocation) —
   by H3, two full evidence cycles (H1 pilot, H2 evaluation) should exist for at least `OPT-002`,
   materially improving on the public-corpus-only evidence base this plan currently has for Egypt/Iraq

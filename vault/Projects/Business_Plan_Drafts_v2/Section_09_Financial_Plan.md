@@ -1,7 +1,7 @@
 ---
 section: 9
 title: Financial Plan
-status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_09_v2_Pass2]], [[QA_Review_Section_09_v2_Pass2]]), verdict FAIL on 1 defect (Financial Integrity Gate: "-9pp y/y" mixed percentage-points with the actual disclosed "-9% y/y" absolute-dollar decline in the downside-scenario cell); fixed 2026-07-24 — not yet reconfirmed by a fresh independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
+status: ✅ Done (independently verified) — independent Pass 2 review ([[Citation_Audit_Section_09_v2_Pass2]], [[QA_Review_Section_09_v2_Pass2]]) found 1 defect (Financial Integrity Gate: "-9pp y/y" mixed percentage-points with the actual disclosed "-9% y/y" absolute-dollar decline in the downside-scenario cell), fixed 2026-07-24; Pass 3 ([[Citation_Audit_Section_09_v2_Pass3]]) independently re-verified the fix by recomputing directly from the raw Q1 2026 press release, reconfirmed DEC-008/DEC-009 compliance and the USD175mn=120+55 reconciliation, and found no new hard or moderate failures — PASS, 0 new defects
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_09_Financial_Plan.md (superseded Egypt-retention draft, untouched). Fresh draft for the 2026-07-23 pivot."
 ---
