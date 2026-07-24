@@ -1,7 +1,7 @@
 ---
 section: 11
 title: Corporate Social Responsibility & Responsible AI
-status: Drafted — self-reviewed (Pass 1); citation audit run in-session ([[Citation_Audit_Section_11_v2]]); independent Pass 2 citation re-check and QA review (incl. the three new gates) still required before ✅ Done
+status: Done (independently verified) — Pass 2 citation audit + QA review complete ([[Citation_Audit_Section_11_v2_Pass2]], [[QA_Review_Section_11_v2_Pass2]]), verdict PASS (0 defects found); specifically re-checked and confirmed it did not inherit any of the stale pre-Pass-2-fix content found in Section 14's own Pass 2 review (Sections 4/5/12) — all EV/emissions/tips/tcamp/SME-partnership figures independently re-verified 2026-07-24
 pipeline_run: 2026-07-24
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_11_CSR_and_Responsible_AI.md, which was drafted for the superseded Egypt-retention problem and stays untouched as historical record — not read as an input to this draft, per the standing instruction never to read from the non-_v2 drafts directory. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem (Problem_Charter.md)."
 ---
@@ -75,6 +75,15 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > **"Drafted — self-reviewed," not the unqualified "✅ Done."** A genuinely independent Pass 2 (a fresh,
 > separately-invoked citation audit and QA review) is still required before this section is
 > submission-final.
+>
+> **Addendum, 2026-07-24 (independent Pass 2 review).** An independent citation audit and QA review
+> ([[Citation_Audit_Section_11_v2_Pass2]], [[QA_Review_Section_11_v2_Pass2]]) re-verified every citation
+> in this section, with specific attention to whether it inherited any of the stale pre-Pass-2-fix content
+> found in three places in `Section_14_Appendices.md`'s own Pass 2 review (Sections 4, 5, and 12) — it did
+> not: this section correctly describes `DEC-009`'s general funding-sequence-commitment mechanism without
+> restating per-option Horizon placement, avoiding the exact DEC-009-tiering trap that caught Sections 7,
+> 12, and 14. **0 defects found.** All EV fleet, emissions, tips, tcamp, and SME-partnership figures were
+> independently re-located directly in the raw primary source text and confirmed exact.
 
 ---
 
