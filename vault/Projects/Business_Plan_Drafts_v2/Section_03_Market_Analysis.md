@@ -429,3 +429,31 @@ DEC-009 headline-exhibit restrictions therefore do not apply here and are not vi
 `vault/Knowledge/Strategic/Competitive Weaknesses.md` · `vault/Decisions/Investment_Options_Register.md` ·
 [[DEC-009_investment-options-ranking-and-allocation-priority]] · `vault/Architecture/Geographic_Evidence_Rules.md` ·
 `Problem_Charter.md`
+
+---
+
+## Fix record (2026-07-24, post-Pass 2)
+
+Fixes applied against [[QA_Review_Section_03_v2_pass2]] (B1–B4 blocking + non-blocking) and
+[[Citation_Audit_Section_03_v2_pass2]] (H1–H3 hard + S1–S7 soft). Relabel/qualify only — no figure
+was invented, softened, or removed.
+
+| Finding | Fix applied |
+|---|---|
+| B1 (= citation-audit geography finding) | §3.2 MECE paragraph restated: IFRS 8 revenue-segment basis vs. GMV-by-geography basis (Egypt embedded in non-GCC, TLB-019 p.14 + Source Note) explicitly distinguished. §3.2 table: +57% removed from the Jordan+Iraq-only row; replaced with an explicit note that no Jordan+Iraq-only growth figure is disclosed and that the +57%/USD1,719mn/18% figure includes Egypt. Every +57% / 18% / 21% usage (Answer, §3.3 Opportunities, §3.4) re-tagged "non-GCC incl. Egypt, GMV-by-geography basis" with TLB-019 p.14 / TLB-011 p.2 citations. |
+| B2 | §3.2 P&L columns relabeled: audited segment figures for the **since-inception 485-day period, 3 Sep 2024 – 31 Dec 2025, not FY2025** (TLB-002 p.111; TLB-008 p.61); caption adds FY2025 calendar Group revenue (USD 3,876mn management / USD 3,756mn IFRS, TLB-002 p.20) so the two periods cannot be read as one. Traceability row updated to match. |
+| B3 | Answer restated: grocery/retail is the bucket's *disclosed* component; the non-GCC-market weighting is now an **explicitly-labeled analytical inference** with its reasoning (disclosed component list + pro's 2025 Egypt/Iraq launches) and the statement that no market-level bucket weighting is disclosed anywhere in the corpus. |
+| B4 | Answer corrected to **four** options (`OPT-001`, `OPT-002`, `OPT-003`, `OPT-004`) mapping to opportunity/threat pairs, with `OPT-005` noted as additionally invoked (with `OPT-002`) under Strengths — now matches §3.3/§3.5. |
+| H1 | Pro GMV share restated "32% (Q1 2025) → 49% (Q1 2026)" *(Group, talabat-only excl. instashop; TLB-020 p.8; TLB-014 p.14)* in §3.2 and Traceability; explicit note that no FY2024 baseline is disclosed. Cites the corrected form only — `ASM-021`'s own mislabel is being corrected separately by decision-steward. |
+| H2 | §3.4: inline composition qualifier added — 2023 0.13x uses the pre-FY2025 non-GCC definition (Egypt+Jordan+Iraq, TLB-026 p.41), matching the Egypt-inclusive composition of the +57%/18–21% figures but distinct from §3.2's Jordan+Iraq-only revenue segment; application to Jordan+Iraq specifically flagged as an `inferred-applicability` claim this section does not make. Traceability row qualified. |
+| H3 | §3.4 GEMs restated per the disclosure (advertising win-back product, TLB-026 p.138); "AI-supported" removed as a disclosed attribute; AI link carried as a **stated analytical inference** resting on TLB-001 p.13 (AI-driven targeting/automated ad-buying) and TLB-026 pp.132–133 (ad-placement algorithms, audience segmentation). Traceability row updated. |
+| S1 | TLB-019 p.7's 25% (Q4'25) pro figure flagged in §3.2 as an unexplained same-tier tension with the 32%→49% series; presented, not resolved. |
+| S2 / QA non-blocking #2 | Egypt growth-signal cell rephrased "PBT USD 0.5mn (Q1 2025, restated) → USD 9.4mn (Q1 2026) — near-breakeven to solidly profitable" with TLB-010 p.20 cited; caption footnote added noting the growth-signal column mixes metric types/periods with per-cell basis labels; Traceability row added. |
+| S3 | Margin trio pages added: TLB-020 pp.12/14; guidance origin TLB-019 pp.18–19 (§3.3 Threats + Traceability). |
+| S4 | AI/personalisation EBITDA re-pointed to `Facts/AI_Facts.md` (TLB-001 p.23; TLB-002 p.15) and rephrased "management-estimated" (§3.3 Strengths, §3.3 Opportunities, Traceability). |
+| S5 | Qatar item tightened to "ban on delivery **registration** fees" (TLB-026 p.46), no longer a general delivery-fee ban (§3.3 Weaknesses + Traceability). |
+| S6 | 21% endpoint now cited inline at first numeric use (TLB-011, p.2) and at each recurrence. |
+| S7 | Page corrections: rider workforce → TLB-026 p.138 (provider concentration p.51; p.131 dropped); AdTech → TLB-002 pp.11/14/19 (p.10 dropped). |
+| QA non-blocking #1 | **Not fixable in this file:** the AI-market-sub-bullet reframing decision record requires a `DEC-` entry via decision-steward (out of scope for this draft-only edit pass); flagged for escalation before Stage 18. |
+| QA non-blocking #3 | No prose change required per the report; the suggested `Topics/GMV.md` Open Questions annotation is a vault-side edit outside this pass's single-file scope. |
+| H3 escalation (upstream) | The unsupported "AI-supported" attribute in `Strategic/Competitive Advantages.md` / `Topics/Advertising.md` is flagged for a separate vault-side correction (outside this pass's single-file scope). |
