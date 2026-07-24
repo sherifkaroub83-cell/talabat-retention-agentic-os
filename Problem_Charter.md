@@ -31,7 +31,7 @@ which problem statement is active.*
 
 ## Strategic problem
 
-talabat is a publicly listed (Dubai Financial Market, IPO priced December 2024), Group-wide on-demand
+talabat is a publicly listed (Dubai Financial Market, IPO priced 29 November 2024), Group-wide on-demand
 delivery platform operating across eight markets, with FY2025 GMV of USD 9.5 billion (+28% cFX),
 revenue of USD 3.9 billion, Adjusted EBITDA of USD 615 million (6.5% margin), and 7.5 million active
 customers. For 2026, talabat's Board approved a USD 175 million investment programme, split into two

@@ -13,8 +13,8 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > scenario section only, per `DEC-008`'s hard constraint (approved 2026-07-23, Option 1): headline
 > exhibits show the Group base/upside/downside case only; the Everyday App/Food-leadership ~2.2:1
 > split (`ASM-018`) is **not** shown here as a quantified sub-case, per Section 4's narrative-only
-> treatment. All cited assumptions (`ASM-015`–`028`) carry `status: Proposed`, not `Approved`, in
-> `Assumptions_Register.md` — stated explicitly below, not silently assumed settled. **Pass 1,
+> treatment. All cited assumptions (`ASM-015`–`033`) are `status: Approved` in `Assumptions_Register.md`
+> as of 2026-07-23 (`DEC-009` resolved the same day, middle path — see below). **Pass 1,
 > self-reviewed** — independent citation audit and QA (including the Financial Integrity Gate)
 > still required.
 
@@ -81,9 +81,9 @@ evidence cannot support.
 
 ## 9.5 Key Assumptions Register (the numbers this case depends on)
 
-All fourteen listed are `status: Proposed` in `vault/Decisions/Assumptions_Register.md` as of this draft
-— **not yet Approved**, and therefore not yet citable as settled inputs per the register's own rule.
-Listed here for transparency, exactly as the pipeline requires:
+All fourteen listed are `status: Approved` in `vault/Decisions/Assumptions_Register.md` (resolved
+2026-07-23, alongside `DEC-009`) — citable as settled inputs per the register's own rule. Listed here
+for transparency, exactly as the pipeline requires:
 
 | ID | Statement (compressed) | Confidence |
 |---|---|---|
@@ -101,8 +101,12 @@ Listed here for transparency, exactly as the pipeline requires:
 **Funding requirement:** none beyond what talabat has already committed — the USD175mn programme is
 fully funded from internal cash (TLB-020, page 16); this plan does not request incremental capital
 beyond the disclosed envelope. **Allocation:** governed by the disclosed ~120mn:55mn bucket split
-(fixed) and, within it, the five candidate options this plan has ranked but not yet committed to a
-funding sequence for (`DEC-009`, open). **Monetization:** not applicable in the conventional sense — this
+(fixed) and, within it, the five candidate options this plan has ranked and sequenced per `DEC-009`
+(approved 2026-07-23, middle path): OPT-002 and OPT-003 as near-term priority, OPT-001 and OPT-005
+continuing at pace, OPT-004 as the longer-horizon build — stated narratively as the plan's actual
+recommendation; the underlying `ASM-029`–`033` dollar ranges are never a headline figure here, and
+appear only in Section 14's labeled sensitivity exhibit. **Monetization:** not applicable in the
+conventional sense — this
 is a capital-allocation decision-support exercise, not a revenue-generating product; its "monetization"
 is the incremental GMV/EBITDA the better-allocated USD175mn is expected to generate relative to an
 unranked baseline, a claim this section deliberately does not quantify, per §9.1's evidence-gap finding.
@@ -117,8 +121,9 @@ unranked baseline, a claim this section deliberately does not quantify, per §9.
 | USD175mn = ~120mn + ~55mn, fully internally funded | `Investment_Portfolio_Register.md`; TLB-020 p.16 |
 | Q1 2026 EBITDA margin 4.8%, -9% y/y | `Scenarios_v2.md` downside case |
 | No disclosed return/ROI/payback figure | `Investment_Relationship_Map.md`; `EBITDA.md` |
-| ASM-015–028 all Proposed, not Approved | `Assumptions_Register.md` |
+| ASM-015–033 all Approved (resolved 2026-07-23) | `Assumptions_Register.md` |
 | DEC-008 base-case-only constraint | `DEC-008` |
+| DEC-009 funding-sequence recommendation; allocation-range placement rule | `DEC-009` |
 
 ## See also
 [[Section_02_Business_Description]] · [[Section_04_Value_Proposition]] ·
