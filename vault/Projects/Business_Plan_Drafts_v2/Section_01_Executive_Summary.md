@@ -1,7 +1,7 @@
 ---
 section: 1
 title: Executive Summary
-status: Drafted — self-reviewed (Pass 1); citation audit run in-session ([[Citation_Audit_Section_01_v2]]); independent Pass 2 citation re-check and QA review (incl. the three new gates) still required before ✅ Done
+status: Done (independently verified) — Pass 2 citation audit + QA review complete ([[Citation_Audit_Section_01_v2_Pass2]], [[QA_Review_Section_01_v2_Pass2]]), verdict PASS (0 defects found); independently re-checked 2026-07-24 against the current (post-Pass-2-fix) content of Sections 2, 4, 5, 9, 10, 12, 13 — confirmed no stale figure or superseded framing was inherited
 pipeline_run: 2026-07-24
 supersedes_note: "No prior Section 1 draft exists under vault/Projects/Business_Plan_Drafts/ (no _v2 suffix) — per the pipeline's own hard gate, Section 1 (SCQA Executive Summary) is written last, after all other 13 sections exist. This is the first drafting pass on Section 1 under either the old or new problem framing for this v2 draft set. It is drafted fresh against the 2026-07-23 pivot's Group-wide capital-allocation problem (Problem_Charter.md), synthesizing the actual finished content of Sections 2-14 (all now drafted, self-reviewed), not a guess made in advance of that content."
 ---
@@ -61,6 +61,25 @@ supersedes_note: "No prior Section 1 draft exists under vault/Projects/Business_
 > **"Drafted — self-reviewed," not the unqualified "✅ Done."** A genuinely independent Pass 2 (a fresh,
 > separately-invoked citation audit and QA review) is still required before this section — and, per Part
 > C, the whole plan — is submission-final.
+>
+> **Addendum, 2026-07-24 (independent Pass 2 review).** A fresh, independently-invoked citation audit and
+> QA review re-checked every claim in this section against the *current* content of its cited source
+> sections — important because Sections 4, 5, 9, and 12 were each independently found to have defects and
+> fixed during their own Pass 2 reviews, after this section was first drafted. Specifically re-verified:
+> (1) the talabat pro GMV-share figure is not restated in this section at all, so Section 4's since-fixed
+> "32%→49%, Q1 2025→Q1 2026" time-period correction could not have been inherited stale here; (2) `OPT-003`
+> is described in this section's Answer as a **near-term priority alongside `OPT-002`**, which matches
+> Section 12's current (post-Pass-2-fix) Three Horizons placement, not the earlier, since-corrected
+> "H2-gated monitoring-only" framing; (3) the DFM listing date ("29 November 2024") matches the current,
+> corrected `Problem_Charter.md`; (4) Section 9's Q1 2026 downside-case framing ("-9% y/y," not "-9pp
+> y/y") is not itself restated in this section, so Section 9's own since-fixed unit-mixing defect has no
+> effect here. **Zero defects found.** Every figure independently re-cross-checked directly against
+> `Problem_Charter.md`, `vault/Knowledge/Facts/GMV_Facts.md`, `vault/Knowledge/Facts/Marketplace_Facts.md`,
+> `Section_09_Financial_Plan.md`, `Section_10_Risk_Analysis.md`, `Section_11_CSR_and_Responsible_AI.md`,
+> `Section_12_Implementation_Plan.md`, `DEC-008`, and `DEC-009` — no drift, no stale inheritance, no
+> DEC-008/DEC-009-restricted figure leaked into the headline. See [[Citation_Audit_Section_01_v2_Pass2]]
+> and [[QA_Review_Section_01_v2_Pass2]] for the full independent review. This section is now **✅ Done
+> (independently verified)**.
 
 ---
 

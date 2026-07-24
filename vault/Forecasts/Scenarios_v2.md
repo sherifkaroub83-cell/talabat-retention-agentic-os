@@ -94,7 +94,7 @@ directly quantified retention lever in the corpus.
 
 - **Base:** pro subscriber GMV share continues its rising trajectory from ~49% (Q1 2026) at a
   moderating pace as GCC penetration approaches saturation, landing in an illustrative 50-55% range by
-  FY2026-end. **Logic:** continuation of the disclosed 32%→49% (FY2024→Q1 2026) trend, moderated for
+  FY2026-end. **Logic:** continuation of the disclosed 32%→49% (Q1 2025→Q1 2026) trend, moderated for
   the fact that a share metric approaching 50% has structurally less room to grow at the same absolute
   pace as it did from a lower base. `[ASSUMPTION → ASM-021]`. **Depends on:** N-08. **Geography:
   Group.** **Confidence: Medium** — three-ish data points at reasonably consistent intervals, but the
@@ -374,7 +374,7 @@ Numbering continues from the pre-pivot register (`ASM-001`–`014`, all supersed
 | ASM-018 | Everyday App's and Food-leadership's respective shares of any incremental GMV effect are assumed, for scenario-modeling purposes only, to be proportional to their investment shares (~120mn:55mn, ≈2.2:1) — an illustrative construction, not a disclosed or measured causal split | Group | Low | Value_Driver_Tree_v2.md, N-43; Scenarios_v2.md escalation flag |
 | ASM-019 | FY2026's guided EBITDA margin step-down is assumed to see a directional partial recovery in FY2027+ toward, but not necessarily reaching, the pre-programme 6.0-6.5% range, with timing and magnitude explicitly unstated, based on management's own "temporary step-down" framing | Group | Low | Value_Driver_Tree_v2.md, N-37; Scenarios_v2.md top-level upside scenario |
 | ASM-020 | Egypt's (worked-example) bottom-up exposure to the full USD175mn 2026 programme is estimated at ≈USD19.3m by applying Egypt's ~11.0% share of FY2025 disclosed Group revenue to the full programme total — an illustrative pro-rata proxy, not a disclosed or approved Egypt budget line | inferred-applicability (Group → Egypt) | Low | Value_Driver_Tree_v2.md, N-44 |
-| ASM-021 | talabat pro subscriber GMV share is projected to reach an illustrative 50-55% of platform GMV by FY2026-end, continuing the disclosed 32%→49% (FY2024→Q1 2026) trend at a moderating pace | Group | Medium | Scenarios_v2.md, talabat pro/loyalty module |
+| ASM-021 | talabat pro subscriber GMV share is projected to reach an illustrative 50-55% of platform GMV by FY2026-end, continuing the disclosed 32%→49% (Q1 2025→Q1 2026) trend at a moderating pace | Group | Medium | Scenarios_v2.md, talabat pro/loyalty module |
 | ASM-022 | Multi-vertical customer GMV share is projected to reach an illustrative 78-80% by FY2026-end, continuing the disclosed 68%→73%→76% (Dec'24→Dec'25→Mar'26) trend at a moderating pace | Group | Medium | Scenarios_v2.md, multi-vertical adoption module |
 | ASM-023 | AI/personalisation's estimated EBITDA contribution is projected to reach an illustrative USD35-45mn range for FY2026, continuing the disclosed USD14mn+→USD30mn+ (FY2024→FY2025) trajectory at a moderating rate | Group | Medium | Scenarios_v2.md, AI personalisation module |
 | ASM-024 | talabat Rewards' and PostPaid's disclosed order-frequency uplift figures (>15% and ~14% respectively) are assumed to hold at broadly similar magnitude through FY2026, funded by CARC continuing its disclosed rising trajectory (USD89mn→103mn→155mn, 2023-2025) at a similar or modestly higher share of GMV | Group | Medium | Scenarios_v2.md, targeted incentives module |

@@ -1,7 +1,7 @@
 ---
 section: 2
 title: Business Description
-status: Drafted — self-reviewed; citation audit found 3 hard failures, fixed and self-verified ([[Citation_Audit_Section_02_v2]]); independent Pass 2 citation re-check and QA review (incl. the three new gates) still required
+status: Done (independently verified) — Pass 2 citation audit + QA review complete ([[Citation_Audit_Section_02_v2_Pass2]], [[QA_Review_Section_02_v2_Pass2]]), verdict PASS WITH MINOR FIXES; the one finding (stale ASM-015-028 Proposed reference) fixed 2026-07-24
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_02_Business_Description.md, which was drafted for the superseded Egypt-retention problem and stays untouched as historical record. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem."
 ---
@@ -147,8 +147,9 @@ artifact this analysis produced, not a hypothetical capability:
   precision score — demonstrated on five real candidate initiatives (`DEC-009`).
 - **Scenario-based, range-bound forecasting** — a 45-node Value Driver Tree and base/upside/downside
   scenarios anchored to talabat's own disclosed FY2026 guidance, with genuinely new assumptions
-  (`ASM-015`–`028`) tagged, confidence-rated, and held to `Proposed` status pending human approval before
-  any number is cited as settled (`vault/Forecasts/Value_Driver_Tree_v2.md`, `Scenarios_v2.md`).
+  (`ASM-015`–`028`, `Approved` as of 2026-07-23 following a documented human-instructed classification
+  pass — see `Assumptions_Register.md`) tagged and confidence-rated throughout
+  (`vault/Forecasts/Value_Driver_Tree_v2.md`, `Scenarios_v2.md`).
 - **KPI and stage-gate infrastructure** — 50 KPIs across five families (Portfolio, Customer & growth,
   Financial, Operational, Governance), with the entire Governance family explicitly flagged as
   newly-instrumented rather than falsely presented as an existing talabat baseline

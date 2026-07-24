@@ -9,7 +9,7 @@ owner: decision-steward
 # OPT-002 — Accelerate talabat pro adoption specifically in Egypt and Iraq
 
 ## Rationale
-talabat pro subscriber GMV share rose from ~32% to ~49% of platform GMV (FY2024→Q1 2026, Group), and
+talabat pro subscriber GMV share rose from ~32% to ~49% of platform GMV (Q1 2025→Q1 2026, Group), and
 loyalty-programme scaling is one of the three named Everyday App recipients. But that trend, and the
 strongest quantified uplift statistics behind it (order frequency +20-28%, retention +26-32%,
 gross-profit-per-customer +136% 30 days post-subscription), are all measured on the six GCC/Jordan
@@ -20,7 +20,7 @@ newly-launched cohorts typically show the steepest early growth — a real oppor
 OS can only support by labeled inference, not direct Egypt/Iraq evidence.
 
 ## Evidence
-- **Fact (Group):** pro subscriber GMV share 32% → 49% (FY2024 → Q1 2026) (TLB-020 p.8).
+- **Fact (Group):** pro subscriber GMV share 32% → 49% (Q1 2025 → Q1 2026) (TLB-020 p.8).
 - **Fact (Group):** full 8-market rollout complete 2025 (Egypt Feb 2025, Iraq Sept 2025) (N-08).
 - **Fact (GCC + Jordan only, excludes Egypt/Iraq by name):** 20-28% order-frequency uplift; 26-32%
   retention uplift (TLB-001 p.18, TLB-015 p.78, TLB-019 p.11); 136% gross-profit-per-customer uplift,

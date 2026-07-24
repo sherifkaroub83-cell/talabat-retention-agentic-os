@@ -1,7 +1,7 @@
 ---
 section: 7
 title: Marketing and Sales Strategy
-status: Drafted — self-reviewed (Pass 1); citation audit run in-session ([[Citation_Audit_Section_07_v2]]); independent Pass 2 citation re-check and QA review (incl. the three new gates) still required before ✅ Done
+status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_07_v2_Pass2]], [[QA_Review_Section_07_v2_Pass2]]), Pass 2's one finding fixed and independently reconfirmed correct by Pass 3 ([[Citation_Audit_Section_07_v2_Pass3]]), which found 1 new moderate finding (§7.6 pointed to the wrong Section 6 subsection — §6.1, not §6.4 — for the vouchers contra-revenue figure, and silently asserted "no contradiction" between two different, unreconciled same-tier disclosed figures rather than flagging the discrepancy per the evidence-ranking skill's rule); fixed 2026-07-24 — not yet reconfirmed by a fourth independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
 pipeline_run: 2026-07-23
 supersedes_note: "No prior Section 7 draft exists under vault/Projects/Business_Plan_Drafts/ (no _v2 suffix) — this is the first drafting pass on Section 7 under either the old or new problem. It is drafted fresh against the 2026-07-23 pivot's Group-wide capital-allocation problem, per Problem_Charter.md, and is not a companion revision of any earlier file."
 ---
@@ -74,6 +74,22 @@ supersedes_note: "No prior Section 7 draft exists under vault/Projects/Business_
 > **"Drafted — self-reviewed," not the unqualified "✅ Done."** A genuinely independent Pass 2 (a fresh,
 > separately-invoked citation audit and QA review) is still required before this section is
 > submission-final.
+>
+> **Addendum, 2026-07-24 (independent Pass 2 review).** An independent citation audit and QA review
+> ([[Citation_Audit_Section_07_v2_Pass2]], [[QA_Review_Section_07_v2_Pass2]]) re-verified all 25 Pass-1
+> citations directly against the underlying vault files and found one real defect, now fixed: §7.5's
+> closing paragraph described `OPT-002` and `OPT-003` as "Tier 2/3" per `DEC-009`'s earlier, purely
+> descriptive 11-criterion tiering, and characterized both as candidates that should "pilot before
+> scaling" — but `DEC-009`'s actual **resolved Decision text** (2026-07-23) supersedes that earlier
+> tiering language: it names `OPT-002` **and** `OPT-003` jointly as the **near-term priority pair**, and
+> `OPT-003`'s own option record explicitly states it is "**not a pilot**... recommend a targeted budget
+> weighting toward these three markets within the existing bucket." Describing `OPT-003` as something
+> that should "pilot before scaling" therefore mischaracterized both `DEC-009`'s resolution and OPT-003's
+> own record. §7.5 is corrected below to state the resolved sequence accurately, matching the phrasing
+> already independently corrected in `Section_12_Implementation_Plan.md`'s own Pass 2 fix for the
+> identical underlying misreading of `DEC-009`. All other citations, node references, geography tags, and
+> the synthetic-funnel labeling discipline were independently re-verified clean — see the Pass 2 files for
+> the full per-claim re-check.
 
 ---
 
@@ -304,17 +320,27 @@ retention tactic ranking (pro > multi-vertical > Rewards/PostPaid > Family Plan,
 not new claims invented for this section — they are the marketing-and-sales-strategy expression of the
 same evidence base `DEC-009` already used to rank `OPT-001`–`OPT-005`. Specifically: `OPT-002` (pro
 acceleration, Egypt/Iraq) and `OPT-003` (Food-leadership CVP, UAE/Kuwait/Qatar) are this section's two
-most directly relevant candidates — both are Tier 2/3 in `DEC-009`'s tiering (near-term, high-feasibility
-or high-reversibility priorities), consistent with a marketing strategy that should pilot before scaling,
-per Section 12's Three Horizons framing.
+most directly relevant candidates — `DEC-009`'s **resolved funding-sequence recommendation** (not merely
+its earlier, purely descriptive 11-criterion tiering) names both jointly as the **near-term priority
+pair**, precisely because their profiles are complementary: `OPT-002` is the higher-uncertainty,
+highest-reversibility candidate this section's own Egypt-first-then-Iraq sequencing (§7.2) is built
+around, best suited to a bounded pilot; `OPT-003`, by contrast, is an already-evidenced, already-operating
+mechanism that `DEC-009` and OPT-003's own option record recommend funding **now**, as a targeted budget
+weighting within the existing Food-leadership bucket — explicitly **"not a pilot."** Section 12's Three
+Horizons framing places both in Horizon 1 on this basis (one piloted, one funded directly), not because
+every near-term option must be piloted before scaling.
 
 ## 7.6 Cross-section consistency check (Stage 13.10, self-performed)
 
-Checked against `Section_06_Business_Model_and_Revenue_Streams.md`: the CARC figures cited here (USD 89mn
-→ USD 155mn, 2023→2025) and the vouchers-as-contra-revenue figure (USD 120mn, FY2025) are the same figures
-Section 6 cites in its unit-economics discussion (§6.4) — no contradiction, no double-counting; this
-section discusses CARC as an acquisition/retention *strategy* input, Section 6 discusses it as a *cost
-line against revenue*, and neither restates the other's number differently. Checked against
+Checked against `Section_06_Business_Model_and_Revenue_Streams.md`: this section's CARC figures (USD 89mn
+→ USD 155mn, 2023→2025; USD 89mn of the 2025 total was talabat-funded vouchering, TLB-002 page 21) and
+Section 6's "less: Vouchers and other discounts" contra-revenue line (USD (120)mn, FY2025, §6.1's
+Management Revenue table, TLB-001 page 27/TLB-002 page 20) are two different, same-tier, same-period,
+Group-level disclosed figures that the corpus itself does not reconcile — no source shows these are the
+same number viewed two ways, nor that they are additive. Per the evidence-ranking skill's rule for
+same-tier disagreements, this section states that plainly rather than asserting "no contradiction": this
+is an open reconciliation gap in the corpus, not a claim this section resolves or needs to resolve, since
+neither figure is itself used here to derive a recommendation. Checked against
 `Strategic/Customer Retention Drivers.md` and `Section_04_Value_Proposition.md`'s value-mechanism ranking
 (if drafted): the same five-mechanism ranking (pro > multi-vertical > Rewards/PostPaid > Family Plan) is
 used here as in Section 4's value-driver-tree anchor, preserving the "same 3-5 mechanisms end to end"
@@ -353,7 +379,7 @@ are shown). No contradiction found.
 | ADCB co-branded card (UAE) — cashback, free delivery, tailored pro | TLB-001, pp.9,13 |
 | AI/personalisation EBITDA contribution USD14mn+ (FY24) → USD30mn+ (FY25) | TLB-001, p.23; TLB-002, p.15 |
 | ASM-016 (Group/GCC+Jordan uplift figures applied to Egypt/non-GCC by inference) | `Assumptions_Register.md` ASM-016, Approved |
-| OPT-002 / OPT-003 rationale and dependencies | `vault/Decisions/Investment_Options/OPT-002...md`, `OPT-003...md`; `DEC-009` |
+| OPT-002 / OPT-003 rationale, dependencies, and DEC-009's resolved near-term-priority-pair sequencing | `vault/Decisions/Investment_Options/OPT-002...md`, `OPT-003...md`; `DEC-009` (Decision section) |
 | talabat's AI/ML stack inherited from Delivery Hero, not a separate vendor partnership | `Topics/AI.md`; `Entities/Technology_Platforms.md` |
 
 ## See also

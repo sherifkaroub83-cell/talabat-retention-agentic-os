@@ -1,7 +1,7 @@
 ---
 section: 6
 title: Business Model and Revenue Streams
-status: Drafted — self-reviewed (Pass 1); citation audit run in-session ([[Citation_Audit_Section_06_v2]]); independent Pass 2 citation re-check and QA review (incl. the three new gates) still required before ✅ Done
+status: Done (independently verified) — Pass 2 citation audit + QA review complete ([[Citation_Audit_Section_06_v2_Pass2]], [[QA_Review_Section_06_v2_Pass2]]), verdict PASS (0 defects found); every citation, Value_Driver_Tree_v2 node mapping (N-05 through N-30), and time-period label (incl. the Q1 2025→Q1 2026 pro GMV-share figure) independently re-verified 2026-07-24 against primary sources and the underlying vault files
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_06_Business_Model_and_Revenue_Streams.md, which was drafted for the superseded Egypt-retention problem and stays untouched as historical record. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem; it reuses the same underlying vault evidence where the evidence itself is Group-level and unaffected by the pivot, but reframes every conclusion around the new decision question."
 ---
@@ -66,6 +66,21 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > **"Drafted — self-reviewed," not the unqualified "✅ Done."** A genuinely independent Pass 2 (a fresh,
 > separately-invoked citation audit and QA review) is still required before this section is
 > submission-final.
+>
+> **Addendum, 2026-07-24 (independent Pass 2 review).** An independent citation audit and QA review
+> ([[Citation_Audit_Section_06_v2_Pass2]], [[QA_Review_Section_06_v2_Pass2]]) re-verified every numeric
+> claim in this section directly against `Facts/Revenue.md`, `vault/Forecasts/Value_Driver_Tree_v2.md`,
+> `vault/Decisions/Assumptions_Register.md`, and the relevant Topic Notes — including a specific check
+> that every `Value_Driver_Tree_v2.md` node ID cited (N-05 through N-30) matches that file's actual node
+> definitions (this session's specific brief, given wrong-node-ID defects found in other sections' Pass 2
+> reviews), and a specific check that the pro subscriber GMV-share figure correctly reads "Q1 2025→Q1
+> 2026" throughout, not the "FY2024→Q1 2026" mislabeling found and fixed elsewhere in the repo this
+> session. **0 defects found.** The §6.1 TLB-019 p.13 discrepancy this section already flags (rather than
+> force-reconciling) was independently re-derived and confirmed correct: the Q1 2026 mix table sums to
+> the section's own stated 39% take rate, while TLB-019 p.13's separate FY'25 range is materially
+> inconsistent with it and with the corroborated 3.4-3.5% Advertising figure — the section's decision not
+> to use the TLB-019 p.13 range is the correct handling, not an unresolved defect. This section is now
+> **Done (independently verified)**.
 
 ---
 
@@ -103,7 +118,7 @@ page 20)*:
 |---|---|---|---|---|---|
 | **Commission fees** | USD 1,062mn | USD 1,297mn | +25% → +22% | Food-vertical order volume (agent-model marketplace transaction — talabat earns commission without owning inventory); rate under some disclosed downward pressure | N-05, N-10 (Food-leadership capability), N-14/N-16 (order frequency), N-26 (Food GMV) |
 | **Delivery & Service fees** | USD 696mn | USD 859mn | +29% → +24% | Order count and basket composition; structurally eroded per-order by talabat pro's free-delivery-above-threshold benefit even as pro raises order frequency | N-08 (pro adoption), N-14/N-16 |
-| **Subscription fee & Other Income** *(combined line — see decomposition below)* | USD 952mn | USD 1,397mn | +44% → +47% | talabat pro subscriber-penetration (GMV share 32%→49%, FY2024→Q1 2026) **plus** tMart's near-95%-take-rate owned-inventory "other income" component | N-07 (G&R product-mix shift), N-08, N-20/N-21/N-22 (retention/CLV uplift) |
+| **Subscription fee & Other Income** *(combined line — see decomposition below)* | USD 952mn | USD 1,397mn | +44% → +47% | talabat pro subscriber-penetration (GMV share 32%→49%, Q1 2025→Q1 2026) **plus** tMart's near-95%-take-rate owned-inventory "other income" component | N-07 (G&R product-mix shift), N-08, N-20/N-21/N-22 (retention/CLV uplift) |
 | **Advertising & listing fees** | USD 246mn | USD 323mn | +27% → +32% | Partner demand for visibility — a lagging function of how engaged/frequently-ordering the customer base is, not an independent driver | N-09 (AI/personalisation), N-29, N-11/N-17 (multi-vertical usage), `OPT-004` |
 | **less: Vouchers and other discounts** *(contra-revenue)* | — | USD (120)mn | — | Funded promotional/incentive spend | N-12 (targeted incentives) |
 
@@ -211,7 +226,7 @@ category the corpus does not support. The MECE distinction talabat's own disclos
 - **No disclosed one-time revenue category exists anywhere in the corpus**, at any geography level.
 
 **So what for the P&L.** Because subscription is talabat's only contractually recurring line, and because
-subscriber GMV share has risen from 32% to 49% of platform GMV (FY2024→Q1 2026) *(Group;
+subscriber GMV share has risen from 32% (Q1 2025) to 49% (Q1 2026) of platform GMV *(Group;
 `Topics/Talabat Pro.md`)*, the revenue model is structurally shifting toward a larger share of demand
 sitting behind a recurring commitment even though the dollar-denominated subscription fee line itself
 remains the smallest of the four — the leverage comes from what a subscribed customer does downstream
@@ -291,7 +306,7 @@ found.
 | G&R product-mix EBITDA drag (0.5)-(0.7)pp | TLB-014, p.6/p.8 |
 | CPG advertising investment ratio 8% vs. 2% benchmark | TLB-015, p.108 |
 | Advertising ~7% of GMV benchmark reached in UAE tMart vs. 3.4-3.5% Group | TLB-001 p.21; TLB-002 p.10; TLB-014 p.19 |
-| talabat pro subscriber GMV share 32%→49% (FY2024→Q1 2026) | `Topics/Talabat Pro.md` |
+| talabat pro subscriber GMV share 32%→49% (Q1 2025→Q1 2026) | `Topics/Talabat Pro.md` |
 | Food-only vs. multi-vertical monthly spend/frequency (AED194/3.8 vs. AED814/12.8, Sept 2024) | TLB-026, pp.91, 122 |
 | Net delivery cost 6.0%→6.3% of GMV; gross profit 12.3%→11.9% of GMV (FY24→FY25) | TLB-002, pp.17, 20 |
 | CARC USD89mn (1.5% of GMV, 2023) → USD155mn (1.6% of GMV, 2025) | TLB-001, p.28; TLB-002, p.21 |
