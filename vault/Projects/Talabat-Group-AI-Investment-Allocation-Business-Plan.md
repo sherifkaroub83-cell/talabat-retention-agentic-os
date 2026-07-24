@@ -66,7 +66,7 @@ old Egypt-retention problem and remain historical, not valid inputs to this trac
 
 | # | Section | Status | Notes |
 |---|---|---|---|
-| 1 | Executive Summary (SCQA) | ⬜ Not started | Gated on all other 13 per template convention |
+| 1 | Executive Summary (SCQA) | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_01...` — drafted last, gated on all 13 others; SCQA Answer spot-checked against Sections 2-14's actual content; no DEC-008/DEC-009-restricted dollar figure leaks into the headline; independent Pass 2 still required |
 | 2 | Business Description | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_02...` — citation audit found 3 hard failures, fixed and self-verified; independent Pass 2 still required |
 | 3 | Market Analysis | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_03...` — 2 real issues (chained order-frequency figures, TAC/GMV arithmetic) found and fixed self-review; independent Pass 2 still required |
 | 4 | Value Proposition | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_04...` |
