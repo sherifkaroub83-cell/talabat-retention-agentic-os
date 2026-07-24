@@ -1,7 +1,7 @@
 ---
 type: moc
 title: Project Administration
-updated: "2026-07-21"
+updated: "2026-07-25"
 ---
 
 # 🗺️ Project Administration
@@ -28,15 +28,25 @@ Capstone project-management content — team, milestones, decisions. Distinct fr
   own status table
 - [[OS_Architecture_Design_Phase_Validation_Report|OS Architecture Design Phase Validation Report]] — validation report confirming design-only scope
 - [[Decisions_README|Decisions layer]] · [[Research_README|Research layer]] · [[Forecasts_README|Forecasts layer]]
-  — the three layers' own folder-index notes; Decisions and Research now hold real content (Phase 7), Forecasts still empty
+  — the three layers' own folder-index notes; all three now hold real content, including the active v2
+  investment, forecast, scenario, and KPI records
 - Operative, not vault graph nodes: `.claude/agents/` (8 files), `.claude/skills/` (6 new + 1 redesigned)
 
 ## Phase 7/8 — Operational execution and evidence-based evolution (22/07/2026)
 - [[Phase7_Pilot_Execution_Report_Section_03]] — the first real, non-simulated pipeline execution
 - [[Agentic_OS_Architecture_v2]] — the evidence-based Version 2 architecture evolution: every change traced to specific execution evidence, everything execution validated left unchanged
-- [[Lessons_Learned_Phase7]] · [[Pilot_Validation_Plan]] — formal lessons-learned record and the next three planned pilots (Sections 2, 9, 10)
+- [[Lessons_Learned_Phase7]] · [[Pilot_Validation_Plan]] — formal lessons-learned record and the now-completed historical pilot plan (Sections 2, 9, 10)
 - [[Pilot2_Execution_Report_Section_02]] — Pilot 2 (Section 2, Business Description): confirms the Change 1 top-level-invocation fix works; produces the project's first real human-confirmed strategic Decision ([[DEC-003_section2-governing-hypothesis]]) and first genuinely independent Stage 11 QA pass, which caught a real cross-section defect in Section 3
 - [[Pilot3_Execution_Report_Section_09]] — Pilot 3 (Section 9, Financial Plan): first real test of the Forecast Layer (`forecasting-agent`, `kpi-agent`); produces this project's first real fail/fix/re-verify cycle — independent QA issued a genuine FAIL, caught two template-completeness gaps, both fixed and independently re-verified
+
+## Final Business Plan publication (24–25/07/2026)
+- [[Talabat-Group-AI-Investment-Allocation-Business-Plan]] — 14/14 active v2 sections Done
+  (independently verified); targeted Pass 4 and all whole-plan gates passed
+- `../Outputs/Business_Plan_Final.docx` · `../Outputs/Business_Plan_Final.pdf` — final publication
+  package; PDF is 25 pages and both formats contain all 14 required section headings
+- `../Outputs/Formatting_QA_Report.md` · `../Outputs/Publication_QA_Report.md` — final QA evidence
+- PR #6 on `codex/final-business-plan-publication` contains the completed package and remains open,
+  pending review and explicit approval to merge
 
 ## Outside the vault (repo root — not part of the Obsidian graph, linked here as plain paths for navigation only)
 - `../PROJECT_PROGRESS.md` — milestone status snapshot
