@@ -1,7 +1,7 @@
 ---
 section: 3
 title: Market Analysis
-status: Drafted — self-reviewed (Pass 1); citation audit run and open items fixed in-session ([[Citation_Audit_Section_03_v2]]); independent Pass 2 citation re-check and QA review (incl. the three new gates) still required before ✅ Done
+status: Done (independently verified) — Pass 2 citation audit + QA review complete ([[Citation_Audit_Section_03_v2_Pass2]], [[QA_Review_Section_03_v2_Pass2]]), verdict PASS WITH MINOR FIXES; the one finding (non-GCC "18-21% of Group GMV" figure silently blended a FY2025 full-year data point (18%, TLB-019 p.14) with a Q1 2026 quarterly data point (21%, TLB-011 p.2) as one range) fixed 2026-07-24, cross-checked directly against `Facts/GMV_Facts.md` and `Topics/GCC vs non-GCC.md`
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_03_Market_Analysis.md, which was drafted for the superseded Egypt-retention problem (the Phase 7 pilot, 2026-07-22 — see vault/Validation/Phase7_Pilot_Execution_Report_Section_03.md) and stays untouched as historical record. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem; it reuses the same underlying vault evidence where the evidence itself is Group/GCC-level and unaffected by the pivot, but reframes every conclusion around the new decision question."
 ---
@@ -67,6 +67,20 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > **"Drafted — self-reviewed," not the unqualified "✅ Done."** A genuinely independent Pass 2 (a fresh,
 > separately-invoked citation audit and QA review) is still required before this section is
 > submission-final.
+>
+> **Addendum, 2026-07-24 (independent Pass 2 review — complete).** A fresh, independently-invoked citation
+> audit and QA review found and fixed one defect: the non-GCC "18–21% of Group GMV" figure (Answer, §3.3
+> Opportunities, §3.4) silently blended two different time periods — 18% is the FY2025 full-year
+> non-GCC GMV contribution (TLB-019, page 14) and 21% is the Q1 2026 quarterly figure (TLB-011, page 2,
+> up from 16% a year earlier) — presented as if it were one internally consistent range rather than two
+> dated data points bracketing a trend. This is now stated explicitly at each occurrence below, consistent
+> with this section's own stated discipline (already applied correctly elsewhere in this section, e.g. the
+> order-frequency and GCC-share-table discussions) of never silently blending different measurement
+> periods. See [[Citation_Audit_Section_03_v2_Pass2]] and [[QA_Review_Section_03_v2_Pass2]] for the full
+> independent review. All other claims independently re-verified against `Facts/GMV_Facts.md`,
+> `Facts/Marketplace_Facts.md`, `Facts/Competition_Facts.md`, `Facts/Orders_Facts.md`, `Facts/Q-Commerce.md`,
+> `Entities/Countries.md`, `Topics/GCC vs non-GCC.md`, and `vault/Forecasts/Value_Driver_Tree_v2.md` — no
+> other defect found. This section is now **✅ Done (independently verified)**.
 
 ---
 
@@ -78,7 +92,8 @@ the 2026 investment programme's existing shape already reflects that gap more th
 scale advantage. Reconciling top-down category penetration against talabat's own realized bottom-up
 scale shows the largest unrealized headroom sits in grocery/retail (penetrated at low single digits of
 a USD 104–150bn+ addressable category) and in the faster-growing but still-minority non-GCC segment
-(+57% GMV growth y/y against GCC's +22%, yet only 18–21% of Group GMV) — precisely the two areas the
+(+57% GMV growth y/y against GCC's +22% in FY2025, non-GCC rising from 18% of Group GMV in FY2025 to
+21% of Group GMV by Q1 2026 — two dated data points, not a blended range) — precisely the two areas the
 ~USD 120mn Everyday App bucket is weighted toward. At the same time, talabat's own evidence shows
 category leadership alone has already failed to prevent a measured retention decline among
 non-high-value customers in three of its most mature markets, which is the direct, disclosed rationale
@@ -233,8 +248,9 @@ and a reason the plan treats "more capital toward category-share defense" as an 
 own.
 
 **Opportunities.** Grocery/retail penetration of only ~1–3% against a USD 104–150bn+ addressable
-category (§3.1); non-GCC's premium GMV growth rate (+57% y/y vs. GCC's +22%, TLB-019 p.14) while still
-representing only 18–21% of Group GMV; the disclosed AdTech monetization gap versus talabat's own ~7%
+category (§3.1); non-GCC's premium GMV growth rate (+57% y/y vs. GCC's +22%, FY2025, TLB-019 p.14) while
+still representing only 18% of Group GMV in FY2025, rising to 21% by Q1 2026 (TLB-011, p.2 — two dated
+data points, not a single blended figure); the disclosed AdTech monetization gap versus talabat's own ~7%
 benchmark; and the AI/personalisation capability's still-rising EBITDA trajectory. **So what:** three of
 these four opportunity threads map directly onto ranked candidate Investment Options already identified
 in this plan's Part A work — grocery/retail headroom to `OPT-001` (talabat mart densification),
@@ -309,11 +325,12 @@ vertical growing fastest by GMV (+47% y/y FY2025) despite carrying a structurall
 rate/margin than Food — an explicit, disclosed (0.5)–(0.7)pp Adjusted EBITDA margin drag from the
 product-mix shift (`Topics/Grocery and Retail.md`; TLB-014, page 6). This is a genuine growth-versus-margin
 trade-off the plan engages with directly (consistent with `OPT-001`'s framing) rather than presenting
-grocery GMV growth as equivalent in value to Food GMV growth. Non-GCC (+57% y/y GMV growth, still only
-18–21% of Group GMV) is the second clear underserved-market opportunity by the same logic — a genuinely
-higher-growth segment that remains structurally under-penetrated relative to its GCC counterpart's
-maturity (2023 monthly orders per capita: GCC 1.28x vs. non-GCC 0.13x, a ~10x gap, TLB-026, page 121;
-`GCC vs non-GCC.md`).
+grocery GMV growth as equivalent in value to Food GMV growth. Non-GCC (+57% y/y GMV growth in FY2025,
+still only 18% of Group GMV that year, rising to 21% by Q1 2026 — TLB-019, p.14; TLB-011, p.2, two dated
+data points presented separately, not blended) is the second clear underserved-market opportunity by the
+same logic — a genuinely higher-growth segment that remains structurally under-penetrated relative to
+its GCC counterpart's maturity (2023 monthly orders per capita: GCC 1.28x vs. non-GCC 0.13x, a ~10x gap,
+TLB-026, page 121; `GCC vs non-GCC.md`).
 
 **Technological advancements enabling differentiation.** The GEMs product — an AI-supported tool that
 helps Partners win back customers with declining acquisition/retention rates — is a concrete, already-
@@ -357,6 +374,7 @@ DEC-009 headline-exhibit restrictions therefore do not apply here and are not vi
 | GCC >75% of Group revenue/assets (IFRS8 threshold) | TLB-004, p.37 |
 | GCC 82% of pro-forma FY2025 GMV (USD6,332mn) — flagged tension vs. TLB-019's 81%/USD7,702mn table | `GCC vs non-GCC.md`; TLB-002, p.18; TLB-019, p.14 |
 | Non-GCC GMV +57% y/y vs. GCC +22% y/y (FY2025) | TLB-019, p.14 |
+| Non-GCC 18% of Group GMV (FY2025) rising to 21% (Q1 2026, up from 16% a year earlier) — two dated data points, not a blended range | TLB-019, p.14; TLB-011, p.2 |
 | Food USD6,652mn (+20%) vs. G&R USD2,768mn (+47%), FY2025 GMV | TLB-002, p.18 |
 | G&R/"Groceries" FY2025 GMV shown two ways: USD2.77bn (TLB-002 vertical table) vs. USD3.5bn ("Groceries," TLB-014) — presented as unreconciled, not blended | TLB-002, p.18; TLB-014, p.5 |
 | talabat pro GMV share 32%→49% (Q1'25→Q1'26) | `Topics/Talabat Pro.md` |
