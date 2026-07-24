@@ -1,7 +1,7 @@
 ---
 section: 2
 title: Business Description
-status: Drafted — self-reviewed; citation audit found 3 hard failures, fixed and self-verified ([[Citation_Audit_Section_02_v2]]); independent Pass 2 citation re-check and QA review (incl. the three new gates) still required
+status: Drafted — independent Pass 2 citation audit PASS ([[Citation_Audit_Section_02_v2_pass2]], 0 hard failures); independent Pass 2 QA review FAIL ([[QA_Review_Section_02_v2_pass2]], B1–B3 blocking); all Pass 2 findings (B1–B3, N1–N4, S-1–S-6) addressed in the 2026-07-24 fix cycle below — QA re-verification pending before any status change
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_02_Business_Description.md, which was drafted for the superseded Egypt-retention problem and stays untouched as historical record. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem."
 ---
@@ -18,8 +18,9 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > below draws on `vault/Decisions/Investment_Options/OPT-001`–`005` and, at drafting time, `DEC-009`
 > (status: `proposed`) — per `DEC-009`'s then-open funding-sequence/headline-presentation questions and
 > this session's working default (matching `DEC-008`'s conservative resolution until told otherwise),
-> this section presents the five options and their ranking **narratively**, not as a committed, headline
-> funding sequence. This is a **Pass 1, self-reviewed draft** — a genuinely independent citation audit
+> the initial draft presented the five options and their ranking **narratively**, not as a committed,
+> headline funding sequence — a framing that applied only while `DEC-009` remained open (see the
+> 2026-07-24 addendum below: the body now commits to the approved sequence). This is a **Pass 1, self-reviewed draft** — a genuinely independent citation audit
 > and QA review (including the Problem Consistency, Financial Integrity, and Geographic Evidence gates)
 > are still required before this section could be marked ✅ Done, per
 > `vault/Architecture/Business_Plan_Generation_Pipeline.md` Part B's gate rules.
@@ -31,6 +32,13 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > disclosure rule. The narrative-only framing above therefore stays directionally correct; a future
 > drafting/QA pass should confirm this section explicitly commits to the sequence rather than only
 > presenting the ranking neutrally, and should not treat DEC-009 as still-open in future revisions.
+>
+> **Addendum, 2026-07-24 (post-Pass 2 fix cycle):** that confirmation pass has now run. Per QA Pass 2
+> finding B2, the body (Answer block, §2.2, §2.3, §2.6) now states `DEC-009`'s approved recommended
+> funding sequence narratively — OPT-002 and OPT-003 as near-term priorities, OPT-001 and OPT-005
+> continue-at-pace, OPT-004 as the longer-horizon build — with the `ASM-029`–`033` allocation ranges
+> kept out of all headline exhibits per the decision's mandatory disclosure rule. `DEC-009` is treated
+> as approved (2026-07-23, middle path) throughout; the neutral framing above is historical only.
 
 ## Answer, stated first
 
@@ -46,17 +54,24 @@ spend line — will raise the realized GMV, EBITDA, and customer-lifetime-value 
 programme relative to an unranked allocation, because the programme's own disclosed structure already
 separates a quantified *cost* (the FY2026 Adjusted EBITDA margin bridge) from an entirely undisclosed
 *return*, and because the candidate initiatives within it show materially different evidence strength,
-scalability, and reversibility profiles that an unranked allocation would not distinguish.
+scalability, and reversibility profiles that an unranked allocation would not distinguish. That
+framework's first committed output already exists: `DEC-009` (approved 2026-07-23, middle path)
+sequences the five candidate initiatives — near-term priority for OPT-002 and OPT-003,
+continue-at-pace for OPT-001 and OPT-005, and a longer-horizon build for OPT-004 — a recommendation
+this plan states narratively, not as a dollar-denominated headline.
 
 ---
 
 ## 2.1 Industry Overview and Opportunities for AI Adoption
 
-talabat operates a three-sided marketplace across eight countries (UAE, Kuwait, Qatar, Bahrain, Oman,
+talabat operates a three-sided marketplace (`Strategic/How Talabat Creates Value.md`;
+`Facts/Marketplace_Facts.md`) across eight countries (UAE, Kuwait, Qatar, Bahrain, Oman,
 Jordan, Iraq, Egypt — `Entities/Countries.md`), generating GMV of USD 7,428mn in FY2024 (+23% YoY)
-across food delivery, grocery and quick-commerce (talabat mart), and a growing set of adjacent services
-(subscription, advertising, FinTech) (`Topics/GMV.md`; `Topics/2026 Investment Programme.md`). Since
-its Dubai Financial Market listing (November 2024, TLB-025) management
+across its transacting verticals — food delivery, and groceries & retail including talabat mart
+quick-commerce (`Topics/GMV.md`) — complemented by a growing set of adjacent revenue and strategy
+pillars (subscription, advertising, FinTech) that sit outside that GMV figure (`Topics/IPO.md`;
+GMV excludes subscription fees per TLB-001, page 27). Since
+its Dubai Financial Market IPO (priced November 2024, TLB-025) management
 has repeatedly framed the company's strategic trajectory as a transition "from a multi-vertical
 food-delivery platform to the region's Everyday App" (TLB-020, page 16) — a framing management itself
 calls "a deliberate strategic choice, made from a position of strength." The 2026 investment programme is
@@ -94,7 +109,9 @@ discloses:
    bucket is disclosed at the initiative level. Five evidence-grounded candidate initiatives have been
    identified and compared (`OPT-001`–`005`, ranked in `DEC-009`), spanning both buckets plus two
    cross-cutting enabling capabilities (advertising monetization, AI/personalisation infrastructure) that
-   do not map cleanly to either bucket alone.
+   do not map cleanly to either bucket alone. `DEC-009` (approved 2026-07-23) commits the plan to a
+   recommended funding sequence across them: OPT-002 and OPT-003 as near-term priorities, OPT-001 and
+   OPT-005 continue-at-pace, and OPT-004 as a longer-horizon build.
 3. **Cross-market allocation (open — the largest disclosed gap).** No document in the corpus breaks
    either bucket out by country, GCC/non-GCC, or Egypt-standalone (`Topics/GCC vs non-GCC.md`,
    `Capital Allocation and Investment Governance.md` Open Questions). This plan cannot resolve this gap
@@ -108,8 +125,10 @@ This decomposition is MECE because every dollar of the USD175mn falls into exact
 1), every candidate use of that dollar within a bucket is either one of the identified initiatives or
 outside this plan's current evidence base (problem 2), every dollar is spent in exactly one of the eight
 markets or at Group level (problem 3), and every initiative is at exactly one stage of its funding
-lifecycle at any given time (problem 4) — no allocation decision falls outside these four categories, and
-no decision belongs to more than one.
+lifecycle at any given time (problem 4) — no aspect of the allocation decision falls outside these four
+dimensions, and no two dimensions resolve the same aspect. The dimensions are orthogonal rather than
+the decisions themselves: a single initiative-in-market funding decision will engage dimensions 2–4
+simultaneously, but each dimension answers a distinct question about it.
 
 ## 2.3 Governing Hypothesis
 
@@ -117,7 +136,8 @@ no decision belongs to more than one.
 framework to talabat's disclosed USD175 million 2026 investment programme — rather than leaving its
 within-bucket and cross-market allocation undifferentiated — will raise the programme's realized GMV,
 EBITDA, and customer-lifetime-value contribution, because (a) the programme's own disclosure already
-separates a quantified cost (the FY2026 Adjusted EBITDA margin bridge, 6.0%→4.6% of GMV guided) from an
+separates a quantified cost (the FY2026 Adjusted EBITDA margin bridge, 6.0%→~4.6% of GMV — the guided
+mid-range of the 4.4–4.8% band; TLB-014, pages 6 and 19, `Topics/2026 Investment Programme.md`) from an
 entirely undisclosed return, meaning no evidence currently exists to confirm the programme is being spent
 optimally even on its own terms, and (b) the five identified candidate initiatives show materially
 different confidence, scalability, and reversibility profiles (`DEC-009`'s 11-criterion comparison) that
@@ -127,7 +147,15 @@ This hypothesis does **not** claim to have reverse-engineered talabat's actual i
 logic — `Capital Allocation and Investment Governance.md` establishes plainly that no such logic is
 disclosed. It claims that a disciplined, evidence-ranked framework — built transparently from what *is*
 disclosed, with every gap and assumption labeled — is a defensible, higher-value-of-information way to
-propose how the remaining allocation questions should be resolved than an unranked default. The rest of
+propose how the remaining allocation questions should be resolved than an unranked default. The
+framework has already produced its first committed recommendation: `DEC-009` (approved 2026-07-23,
+middle path) sequences the five options — near-term priority for OPT-002 (talabat pro acceleration,
+Egypt/Iraq) and OPT-003 (Food-leadership CVP and partner retention, GCC-3), continue-at-pace for
+OPT-001 (talabat mart dark-store densification) and OPT-005 (AI/personalisation capability scaling),
+and a longer-horizon build for OPT-004 (advertising monetization gap closure). This plan commits to
+that sequence narratively; the `ASM-029`–`033` allocation ranges appear only in clearly-labeled
+sensitivity/appendix exhibits, never as headline figures, per the decision's mandatory disclosure
+rule. The rest of
 this plan exists to prove or refine that sentence: Section 4 shows the value mechanisms; Section 9 shows
 the financial case (bounded by `DEC-008`'s constraint that the headline financial exhibit stays at the
 Group base-case level, not a constructed sub-allocation); Section 12 shows the staged implementation;
@@ -147,8 +175,9 @@ artifact this analysis produced, not a hypothetical capability:
   precision score — demonstrated on five real candidate initiatives (`DEC-009`).
 - **Scenario-based, range-bound forecasting** — a 45-node Value Driver Tree and base/upside/downside
   scenarios anchored to talabat's own disclosed FY2026 guidance, with genuinely new assumptions
-  (`ASM-015`–`028`) tagged, confidence-rated, and held to `Proposed` status pending human approval before
-  any number is cited as settled (`vault/Forecasts/Value_Driver_Tree_v2.md`, `Scenarios_v2.md`).
+  (`ASM-015`–`028`) tagged, confidence-rated, registered `Proposed`, and individually reviewed to
+  `Approved` status (2026-07-23) before any number is cited as settled
+  (`vault/Forecasts/Value_Driver_Tree_v2.md`, `Scenarios_v2.md`; `Assumptions_Register.md`).
 - **KPI and stage-gate infrastructure** — 50 KPIs across five families (Portfolio, Customer & growth,
   Financial, Operational, Governance), with the entire Governance family explicitly flagged as
   newly-instrumented rather than falsely presented as an existing talabat baseline
@@ -169,7 +198,9 @@ across functions rather than treating it as a discrete product line. talabat's o
 itself inherited from parent Delivery Hero SE's shared technology stack rather than built standalone
 (`Topics/AI.md`; `Entities/Technology_Platforms.md`) — this plan's proposed decision-support layer
 follows the same embedded-capability pattern, not the same build-vs-partner arrangement (see Section 5.2
-for that distinction). `vault/Forecasts/Value_Driver_Tree_v2.md` N-06 notes AI/personalisation is "not
+for that distinction). (`Topics/AI.md` has been flagged for a Group-wide refresh of its pre-pivot
+framing prose; the specific shared-stack claim cited here is independently verified and pivot-neutral —
+TLB-002, page 7.) `vault/Forecasts/Value_Driver_Tree_v2.md` N-06 notes AI/personalisation is "not
 named as a discrete dollar line within either bucket... an embedded capability." Consistent with that
 pattern, the capital-allocation decision-support layer proposed here is structured the same way: embedded
 into how the USD175mn programme (and any future programme like it) gets planned, monitored, and adjusted
@@ -180,11 +211,14 @@ better-allocated USD175mn it supports.
 
 ## 2.6 Current Business Stage
 
-The underlying business (talabat) is public, mature, and profitable at Group level (IPO November 2024;
-FY2025 Adjusted EBITDA margin ~6.5% of GMV) — not a startup. The specific capability this plan proposes
+The underlying business (talabat) is public, mature, and profitable at Group level (IPO priced
+November 2024, TLB-025; FY2025 Adjusted EBITDA margin ~6.5% of GMV — `Facts/Marketplace_Facts.md`,
+TLB-002, pages 17 and 21) — not a startup. The specific capability this plan proposes
 — an evidence-ranked, stage-gated capital-allocation framework applied to the 2026 investment programme —
-is at an early, **pilot-appropriate stage**: five candidate initiatives have been identified and ranked
-(`DEC-009`), but zero have yet moved past `status: candidate` to `approved` or `scaled`, and the
+is at an early, **pilot-appropriate stage**: five candidate initiatives have been identified, ranked,
+and sequenced into a recommended funding order (`DEC-009`, approved 2026-07-23: OPT-002/OPT-003
+near-term priority, OPT-001/OPT-005 continue-at-pace, OPT-004 longer-horizon), but zero have yet moved
+past `status: candidate` to `approved` or `scaled`, and the
 cross-market allocation question (problem 3 in §2.2) remains open pending better evidence than the public
 corpus alone provides. This is the correct, honest stage to be at for a plan whose own charter states that
 "exact optimal allocations cannot be proven from public data alone" (`Problem_Charter.md`) — Section 12
@@ -200,16 +234,37 @@ premature full-scale rollout recommendation.
 | USD175mn = ~120mn Everyday App + ~55mn Food-leadership | TLB-020 p.12, p.16; TLB-014 p.6, p.19; `Topics/2026 Investment Programme.md` |
 | "Investments rather than costs... offset the margin impact over time" | TLB-020, page 16 |
 | No disclosed internal governance mechanics | `Topics/Capital Allocation and Investment Governance.md` |
-| FY2026 EBITDA margin bridge 6.0%→4.6% guided | TLB-020, page 16; `Topics/EBITDA.md` |
+| FY2026 EBITDA margin bridge 6.0%→~4.6% guided mid-range (4.4–4.8% band) | TLB-014, pages 6, 19; `Topics/2026 Investment Programme.md` |
 | Five candidate Investment Options and their ranking | `OPT-001`–`005`; `DEC-009` |
+| Recommended funding sequence (OPT-002/003 near-term; OPT-001/005 at pace; OPT-004 longer-horizon) | `DEC-009` (approved 2026-07-23, middle path) |
 | Geography tagging discipline | `vault/Architecture/Geographic_Evidence_Rules.md` |
-| FY2024 GMV USD7,428mn (+23% YoY) | TLB-001, page 6/26; `Topics/GMV.md` |
-| FY2025 Adjusted EBITDA margin ~6.5% of GMV | `Facts/Marketplace_Facts.md` |
+| FY2024 GMV USD7,428mn (+23% YoY), transacting verticals only | TLB-001, page 6/26; `Topics/GMV.md` (GMV excludes subscription fees — TLB-001, page 27) |
+| Three-sided marketplace | `Strategic/How Talabat Creates Value.md`; `Facts/Marketplace_Facts.md` |
+| Adjacent revenue/strategy pillars (subscription, advertising, FinTech) outside GMV | `Topics/IPO.md`; `Topics/GMV.md` |
+| FY2025 Adjusted EBITDA margin ~6.5% of GMV | `Facts/Marketplace_Facts.md` (TLB-002, pages 17, 21) |
 | Eight operating markets | `Entities/Countries.md` |
-| Dubai Financial Market listing, November 2024 | TLB-025 |
+| Dubai Financial Market IPO, priced November 2024 | TLB-025; `Topics/IPO.md` ("November–December 2024" listing window) |
 | talabat's AI/ML capability inherited from Delivery Hero's shared stack | `Topics/AI.md`; `Entities/Technology_Platforms.md` |
 | AI/personalisation not a discrete dollar line (N-06) | `vault/Forecasts/Value_Driver_Tree_v2.md` |
 
 ## See also
 [[Investment_Relationship_Map]] · [[DEC-009_investment-options-ranking-and-allocation-priority]] ·
 `vault/Decisions/Investment_Portfolio_Register.md` · `Problem_Charter.md`
+
+---
+
+## Fix record (2026-07-24, post-Pass 2)
+
+Findings from [[QA_Review_Section_02_v2_pass2]] (FAIL: B1–B3, N1–N4) and
+[[Citation_Audit_Section_02_v2_pass2]] (PASS: S-1–S-6), one line each:
+
+- **B1 / S-1** → §2.4 assumption-status claim corrected: `ASM-015`–`028` now stated as registered `Proposed` and individually reviewed to `Approved` (2026-07-23), citing `Assumptions_Register.md`.
+- **B2** → body now commits to `DEC-009`'s approved sequence narratively (Answer block, §2.2 problem 2, §2.3, §2.6: OPT-002/OPT-003 near-term; OPT-001/OPT-005 continue-at-pace; OPT-004 longer-horizon); provenance note's neutral framing date-stamped as historical with a 2026-07-24 addendum; `ASM-029`–`033` ranges kept out of all headline exhibits per the decision's disclosure rule.
+- **B3** → independent Pass 2 citation audit now on file ([[Citation_Audit_Section_02_v2_pass2]], PASS); the missing §2.6 inline TLB-025 cite for the IPO claim added; frontmatter status corrected to reflect the true verification state.
+- **N1** → §2.5 now carries an explicit note that `Topics/AI.md` is flagged for a Group-wide refresh; the cited shared-stack claim (TLB-002, page 7) is verified and pivot-neutral. Refresh itself remains owed upstream (`research-agent`) before whole-plan publication — not resolvable by editing this section.
+- **N2 / S-2** → bridge restated as "6.0%→~4.6% of GMV, guided mid-range of the 4.4–4.8% band" in §2.3 and the traceability table; citation repointed from `Topics/EBITDA.md` to `Topics/2026 Investment Programme.md` (TLB-014, pages 6, 19).
+- **N3** → §2.2 MECE closing softened: orthogonality claimed of the four decision *dimensions*, with explicit acknowledgment that a single initiative-in-market decision engages dimensions 2–4 simultaneously.
+- **N4 / S-6** → no Section 2 edit (upstream `Value_Driver_Tree_v2.md` node-arithmetic footnote, already forwarded to forecasting-agent/decision-steward; out of this section's scope).
+- **S-3** → inline cite added for "three-sided marketplace" (`Strategic/How Talabat Creates Value.md`; `Facts/Marketplace_Facts.md`) plus a traceability row.
+- **S-4** → §2.1 GMV sentence restructured: USD 7,428mn attached to the transacting verticals (food delivery; groceries & retail incl. talabat mart) only; subscription/advertising/FinTech reframed as adjacent revenue/strategy pillars outside GMV (`Topics/IPO.md`; TLB-001, page 27).
+- **S-5** → IPO wording corrected to "priced November 2024" in §2.1 and §2.6 (TLB-025 is the pricing announcement); traceability row notes `Topics/IPO.md`'s November–December 2024 listing window. The `Problem_Charter.md` "December 2024" discrepancy remains a charter-side item for `decision-steward`, not fixed here.
