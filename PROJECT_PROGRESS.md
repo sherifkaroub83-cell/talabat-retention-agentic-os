@@ -115,7 +115,11 @@ remaining 10 Business Plan sections — per `vault/Architecture/Implementation_R
   Command Center, Pipeline, Plan Sections, Quality Gates, Agents, Evidence, Decisions,
   Forecasts), shipped as an installable PWA for Windows/Android/macOS/iOS plus a Tauri 2
   scaffold for native desktop and mobile builds (`BUILD.md` has per-platform instructions).
-  Data layer is a dated repository snapshot (`src/js/data.js`, 2026-07-24).
+  Data layer is a dated repository snapshot (`src/js/data.js`, 2026-07-24). **v2 (same day):**
+  smart-interface layer — command palette, interactive OS Map with the six-layer structural
+  scorecard, activity replay, readiness ring, "Ask the OS" assistant — plus
+  `vault/Architecture/Agentic_OS_Completeness_Assessment.md` (≈67% structural completeness;
+  9-step plan to 100%, MCP layer identified as the critical gap).
 
 - `Problem_Charter.md` (original version 2026-07-20; rewritten for the capital-allocation pivot 2026-07-23 — current status: Active)
 - `Input_Data/` — 9-doc Markdown corpus + manifest (2026-07-20); 29-doc native-PDF/XLSX corpus,

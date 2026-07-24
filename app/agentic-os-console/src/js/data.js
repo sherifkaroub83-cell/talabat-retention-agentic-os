@@ -284,6 +284,33 @@ export const DATA = {
     { name: "OS Structure Document", spec: "3–5 pages", status: "todo", note: "Phase 5." },
     { name: "Group Presentation", spec: "30 slides — 5 per member × 6", status: "todo", note: "Phase 5." },
   ],
+
+  /* Real OS event history, distilled from SESSION_LOG.md and the validation reports.
+     Rendered as the Command Center activity replay. */
+  activity: [
+    { t: "07-20", kind: "milestone", who: "OS",                      text: "Agentic OS activated — identity, memory, tracking files, vault scaffold." },
+    { t: "07-21", kind: "run",       who: "ingestion",               text: "37-document corpus ingested → 103-note connected knowledge graph, 0 orphans." },
+    { t: "07-21", kind: "milestone", who: "architecture",            text: "OS Architecture v1 designed: 8 agents, 6 new skills, 3 decision-support layers." },
+    { t: "07-22", kind: "pass",      who: "evidence-citation-agent", text: "Pilot 1 — Section 3 drafted, cited, QA-passed: first real pipeline run." },
+    { t: "07-22", kind: "decision",  who: "decision-steward",        text: "DEC-003 — first human-confirmed strategic decision via AskUserQuestion escalation." },
+    { t: "07-22", kind: "fail",      who: "qa-review-agent",         text: "Pilot 3 — genuine QA FAIL on Section 9 (no P&L projection) → fixed → independently re-verified." },
+    { t: "07-22", kind: "pass",      who: "OS",                      text: "Pilot 4 — full-system stability confirmed: 17 agent invocations, zero failures, zero gate violations." },
+    { t: "07-23", kind: "milestone", who: "OS",                      text: "STRATEGIC PIVOT — governing problem rewritten to Group-wide $175m capital allocation." },
+    { t: "07-23", kind: "decision",  who: "decision-steward",        text: "DEC-009 approved — investment-option ranking and allocation priority (middle path)." },
+    { t: "07-23", kind: "run",       who: "bp-orchestrator",         text: "All 14 v2 sections drafted against the pivoted problem (Pass 1, self-reviewed)." },
+    { t: "07-24", kind: "milestone", who: "OS",                      text: "Agentic OS Console shipped — PWA + native packaging for all platforms." },
+  ],
+
+  /* Six-layer structural completeness scorecard.
+     Mirrors vault/Architecture/Agentic_OS_Completeness_Assessment.md — keep in sync. */
+  structure: [
+    { layer: "Agents",              pct: 90, note: "8 durable agents, execution-validated across 4 pilots. Missing: publication/deck agent, per-agent model policy." },
+    { layer: "Skills",              pct: 85, note: "12 skills incl. 4 gates. Missing: deck-builder, OS-structure-doc, console data-refresh skill." },
+    { layer: "MCP · Agentic Tools", pct: 15, note: "Undecided since Phase 2. No MCP server; console reads a static snapshot, not live repo state." },
+    { layer: "Memory",              pct: 90, note: "All 4 memory files current + /session-end + nightly maintenance. Missing: automated staleness checks." },
+    { layer: "Brain (Second Brain)", pct: 80, note: "103-note cited graph, 5-tier evidence model. Missing: post-pivot research re-run, Pass 2 on all 14 sections." },
+    { layer: "LLMs",                pct: 40, note: "Runs on Claude subscription only. Missing: model-routing policy, API/local fallback, cost governance." },
+  ],
 };
 
 export const STATUS = {

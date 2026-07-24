@@ -32,9 +32,20 @@ read-only command console over the repository's governing documents — delivera
 - Data source: `src/js/data.js` is a dated snapshot (2026-07-24) of the governing documents;
   refresh procedure documented in the app README.
 
-**Next:** host `src/` (e.g. GitHub Pages) so the team can install the PWA; native binaries
-require building on their target platforms per `BUILD.md`. OS work otherwise unchanged —
-Pass 2 verification of the 14 v2 sections remains the next pipeline step.
+**Continued (same day) — smart-interface upgrade + structural completeness assessment:**
+- Console v2 "smart OS" layer: command palette (Ctrl/⌘-K fuzzy jump across sections, agents,
+  decisions, stages, gates), new **OS Map** view (interactive SVG orchestration map with
+  hover-tracing + the six-layer structural scorecard), Command Center **activity replay** (real
+  events from the session log), animated **readiness ring** (55% of 32 pipeline stage-units),
+  and a rule-based **"Ask the OS" assistant** answering from the data snapshot (sections,
+  DEC/OPT ids, stages, allocation, next steps). Demo mode via `?palette` / `?ask=<question>`.
+  All verified by headless-Chromium screenshots, incl. the open palette and a live Q&A.
+- Wrote `vault/Architecture/Agentic_OS_Completeness_Assessment.md` — six-layer evaluation
+  (Agents 90 · Skills 85 · MCP 15 · Memory 90 · Brain 80 · LLMs 40 → ≈67% overall) with a
+  9-step, ~8–9-session plan to 100%; scorecard mirrored on the console's OS Map view.
+
+**Next:** decide DEC-011 (MCP pursue/skip) and follow the assessment's step plan; host the PWA
+for the team; Pass 2 verification of the 14 v2 sections remains the next pipeline step.
 
 ## Session 9 — 2026-07-23 (pivot Phases 3–9 completed; instructor-approval cleanup; merged to main; leakage-gap fixes; final comprehensive readiness review)
 
