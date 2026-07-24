@@ -1,7 +1,7 @@
 ---
 section: 9
 title: Financial Plan
-status: Drafted — self-reviewed, not yet independently verified
+status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_09_v2_Pass2]], [[QA_Review_Section_09_v2_Pass2]]), verdict FAIL on 1 defect (Financial Integrity Gate: "-9pp y/y" mixed percentage-points with the actual disclosed "-9% y/y" absolute-dollar decline in the downside-scenario cell); fixed 2026-07-24 — not yet reconfirmed by a fresh independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_09_Financial_Plan.md (superseded Egypt-retention draft, untouched). Fresh draft for the 2026-07-23 pivot."
 ---
@@ -62,7 +62,7 @@ is a longer-horizon build.
 |---|---|---|---|---|---|
 | **Base** | 11-14% | 14-17% | 4.4-4.8% of GMV | 3.2-3.6% of GMV | talabat's own disclosed FY2026 guidance (TLB-020, TLB-014) |
 | **Upside** | Toward/above 14% | Toward/above 17% | Toward 4.8%+ | Toward/above 3.6% | Everyday App/Food-leadership mechanisms (multi-vertical, pro, advertising) compound faster than guidance embeds — `Scenarios_v2.md` upside case |
-| **Downside** | Toward/below 11% | Toward/below 14% | Toward/below 4.4% (Q1 2026 actual already 4.8%, -9pp y/y) | Toward/below 3.2% | Margin compression deepens, behaviour-change trends moderate faster than guidance assumes — `Scenarios_v2.md` downside case |
+| **Downside** | Toward/below 11% | Toward/below 14% | Toward/below 4.4% (Q1 2026 actual already 4.8%, -9% y/y in absolute EBITDA dollars) | Toward/below 3.2% | Margin compression deepens, behaviour-change trends moderate faster than guidance assumes — `Scenarios_v2.md` downside case |
 
 All three rows are Group-level, per `DEC-008`. **No bucket-level, market-level, or initiative-level
 breakout of these figures is shown here** — none is disclosed, and constructing one would be exactly the
