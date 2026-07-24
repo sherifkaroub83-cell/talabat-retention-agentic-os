@@ -10,7 +10,7 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 
 > **Pipeline provenance note:** Phase 9 pilot draft. Evidence from `Topics/AI.md`,
 > `Topics/Recommendation Systems.md`, `Entities/Technology_Platforms.md`, `Strategic/AI
-> Opportunities.md`, and `vault/Knowledge/Investment_Relationship_Map.md` N-06, per
+> Opportunities.md`, and `vault/Forecasts/Value_Driver_Tree_v2.md` N-06, per
 > `.claude/skills/business-plan-drafting/SKILL.md`'s remapped Section 5 entry. Two distinct AI
 > technologies are in scope here and kept explicitly separate throughout: (1) talabat's own embedded
 > AI/personalisation capability, which the 2026 investment programme scales, and (2) the AI-enabled
@@ -23,7 +23,7 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 
 talabat does not need to build a new AI capability to execute this plan's core recommendation — the
 customer-facing AI capability (recommendation ranking, offer timing, dispatch optimisation) it will
-scale via the 2026 investment programme is already built, licensed, and generating a disclosed,
+scale via the 2026 investment programme is already built, licensed, and generating an estimated,
 growing EBITDA contribution (>USD14mn FY2024 → >USD30mn FY2025). What this plan adds is a second,
 distinct AI-enabled capability that talabat does *not* yet disclose having: a structured
 decision-support layer for ranking and monitoring how the investment programme itself gets allocated.
@@ -37,7 +37,9 @@ either that the corpus doesn't disclose.
 and Rewards offers), and logistics dispatch optimisation — described in the corpus as producing
 "AI-driven logistics improvements" credited with delivery-time and cost-efficiency gains (TLB-001, page
 10) and personalisation credited with timing loyalty offers "at the right time for customers"
-(`Topics/AI.md`; `Topics/Recommendation Systems.md`).
+(`Topics/AI.md`; `Topics/Recommendation Systems.md`). This is the direct evidence base for `OPT-005`
+(AI/personalisation scaling), which `DEC-009` places in Tier 1 — strongest evidence, broadest market
+applicability, continue-at-pace — alongside `OPT-001`.
 
 **This plan's decision-support AI (the Agentic OS):** a structured, multi-agent system that assembles
 disclosed evidence, ranks candidate Investment Options against explicit criteria
@@ -86,9 +88,15 @@ the pipeline in `Business_Plan_Generation_Pipeline.md`) honestly, without fabric
 
 ## 5.5 Scalability and Adaptability
 
-talabat's embedded AI capability has already demonstrated multi-market scalability (live across 7 of 8
-countries for talabat pro personalisation by end-2024) — the investment programme's opex allocation
-extends this further, not builds new scalability. This plan's own decision-support system is currently
+talabat's embedded AI capability's multi-market reach is evidenced through talabat pro's own product
+rollout, not through a disclosed AI/ML deployment-by-market figure: six markets (GCC+Jordan) were live
+before December 2024, Egypt launched February 2025, and Iraq September 2025, completing the full
+8-market rollout (`Value_Driver_Tree_v2.md` N-08). **Using this product-rollout milestone as evidence of
+AI-model scalability specifically is a labeled inference (source: talabat pro's market rollout; target:
+AI/ML model deployment uniformity), not a disclosed fact** — no source states whether talabat's AI/ML
+models are trained, tuned, or deployed uniformly across markets (`Topics/AI.md` Open Questions;
+`Topics/Recommendation Systems.md` Open Questions) — the investment programme's opex allocation extends
+the *product's* reach further, not a demonstrated AI-model scalability claim. This plan's own decision-support system is currently
 scoped to five candidate Investment Options and six pilot Business Plan sections — genuinely narrow. Its
 adaptability is structural, not yet demonstrated at scale: the same Investment Option schema, 11-criterion
 comparison, and Geographic Evidence Rules discipline would extend to additional candidate initiatives or
@@ -99,9 +107,10 @@ future investment programmes without a redesign, but this has not been tested ag
 For talabat's embedded AI: `Strategic/AI Opportunities.md` names talabat's own stated Group roadmap items
 (evidenced intent) — this plan does not add new customer-facing AI R&D beyond what talabat has already
 disclosed, since the programme's opex allocation is described as scaling, not inventing, capability. For
-this plan's decision-support system: the two largest open R&D items are (1) resolving `DEC-009`'s
-cross-market allocation question (problem 3 in Section 2.2) as better country-level evidence becomes
-available, and (2) instrumenting the KPI Tree's Governance family (currently 7/7 newly-instrumented KPIs
+this plan's decision-support system: the two largest open R&D items are (1) resolving the still-open
+cross-market allocation question (Section 2.2, problem 3) — a distinct, standing corpus gap, not part
+of `DEC-009`'s scope (`DEC-009` resolved the funding-*sequence* question among the five options, not
+cross-market allocation) — as better country-level evidence becomes available, and (2) instrumenting the KPI Tree's Governance family (currently 7/7 newly-instrumented KPIs
 with no baseline) so future allocation rounds can be evaluated against real performance data rather than
 constructed ranges alone.
 
@@ -113,9 +122,9 @@ constructed ranges alone.
 |---|---|
 | AI-driven logistics improvements credited with delivery-time/cost gains | TLB-001, page 10 |
 | talabat's stack licensed from Delivery Hero SE | `Entities/Technology_Platforms.md` |
-| AI/personalisation EBITDA contribution USD14mn+→30mn+ | `Topics/EBITDA.md`; N-06 |
-| N-06 not a discrete dollar line in either bucket | `Investment_Relationship_Map.md` |
-| talabat pro live in 7/8 countries by end-2024 | TLB-001, page 11-12 |
+| AI/personalisation EBITDA contribution USD14mn+→30mn+ | `Topics/AI.md`; `Value_Driver_Tree_v2.md` N-09 |
+| N-06 not a discrete dollar line in either bucket | `Value_Driver_Tree_v2.md` |
+| talabat pro full 8-market rollout: 6 markets (GCC+Jordan) before Dec 2024, Egypt Feb 2025, Iraq Sept 2025 | `Value_Driver_Tree_v2.md` N-08; TLB-020 p.8 |
 | MCP decision undecided | `MEMORY.md` |
 
 ## See also

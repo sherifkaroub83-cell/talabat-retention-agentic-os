@@ -10,12 +10,14 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 
 > **Pipeline provenance note:** Phase 9 pilot draft. Sequencing draws on `DEC-009`'s tiering of the
 > five candidate Investment Options (`OPT-001`–`005`) by evidence strength, scalability, and
-> reversibility, and `Scenarios_v2.md`'s eight scenario modules' own confidence levels. **`DEC-009`'s
-> funding-sequence question is unresolved** — the horizon placement below is this plan's own proposed
-> sequencing logic, explicitly labeled as such, not a committed or approved roadmap. Per `DEC-008`'s
+> reversibility, and `Scenarios_v2.md`'s eight scenario modules' own confidence levels. **`DEC-009` is
+> `status: approved`** (2026-07-23, middle path) — the tier-level funding sequence itself (near-term
+> priority to `OPT-002`/`OPT-003`, `OPT-001`/`OPT-005` continuing at pace, `OPT-004` as a longer-horizon
+> build) is a committed, approved recommendation, not an open question. What remains this plan's own,
+> not-yet-independently-verified construction is only the granular Horizon 1/2/3 timeline and stage-gate
+> mechanics built on top of that approved sequence — explicitly labeled as such below. Per `DEC-008`'s
 > scope (extending to Section 12), no quantified financial exhibit or the ~2.2:1 bucket split appears
-> here — sequencing is argued on evidence strength and reversibility, not dollar figures. **Pass 1,
-> self-reviewed** — independent citation audit and QA still required.
+> here — sequencing is argued on evidence strength and reversibility, not dollar figures.
 
 ## Answer, stated first
 
@@ -27,6 +29,13 @@ strong but narrowly scoped to three GCC markets. `OPT-002` (talabat pro accelera
 `OPT-004` (advertising monetization) are Tier 3 — higher uncertainty, and per `DEC-009`'s own finding,
 `OPT-002` is specifically the cheapest, most reversible, and best-suited to genuine piloting. This
 plan's Three Horizons sequencing follows that tiering directly, not an assumed Egypt-first default.
+
+**MECE check (stated explicitly, not left implicit):** the Tier 1/2/3 grouping is mutually exclusive and
+collectively exhaustive — each of the five candidate options (`OPT-001`–`005`) is assigned to exactly one
+tier per `DEC-009`'s own comparison, with no option appearing in two tiers and no option left
+unclassified. The Horizon 1/2/3 time bands (0-6, 6-18, 18+ months) are likewise mutually exclusive
+(no overlapping month ranges) and collectively exhaustive (together covering this plan's full
+implementation horizon with no gap between bands).
 
 ## Three Horizons Roadmap
 
@@ -81,10 +90,23 @@ validated talabat process.
 
 ## Marketing Rollout Plan
 
-Not primarily applicable to this plan's actual product (an internal capital-allocation decision-support
-system, per Section 5) — the "rollout" that matters is internal: to the extent H1's `OPT-002` pilot
-involves customer-facing changes (accelerated pro marketing in Egypt/Iraq), that rollout should follow
-the same evidence-gated logic as the funding decision itself, not run ahead of it.
+This plan's own product (an internal capital-allocation decision-support system, per Section 5) has no
+customer-facing rollout. What this section instead scopes, directionally, is the one genuinely
+customer-facing element any of the five options touches: `OPT-002`'s Egypt/Iraq pro-adoption pilot.
+
+**This is this plan's own proposed directional shape, not a disclosed talabat marketing plan:**
+- **Channel:** in-app promotion and existing partner-marketing precedent — talabat has an already-evidenced
+  non-GCC rollout precedent for exactly this kind of subscription/loyalty push (Egypt PostPaid + CIB
+  co-branded card, `Topics/FinTech.md`), suggesting a partner-co-marketing channel is a proven, not
+  invented, mechanism for Egypt specifically.
+- **Message:** the same frequency/retention value proposition already evidenced at GCC+Jordan scale
+  (20-28% frequency uplift, 26-32% retention uplift), explicitly framed to Egypt/Iraq customers as "new
+  to this market" rather than implying an already-proven local result, consistent with `ASM-016`'s
+  inference labeling.
+- **Timing — explicitly gated, not calendar-driven:** any rollout beyond the H1 pilot's limited,
+  evidence-generating scope is gated behind the H1→H2 go/no-go decision above (§"Horizon 2"). No
+  broader Egypt/Iraq marketing push is proposed ahead of that evidence gate clearing — this section
+  does not commit to a rollout date, only to the sequencing logic that determines whether one occurs.
 
 ## Team Expansion and Recruitment Goals
 

@@ -55,9 +55,9 @@ scalability, and reversibility profiles that an unranked allocation would not di
 talabat operates a three-sided marketplace across eight countries (UAE, Kuwait, Qatar, Bahrain, Oman,
 Jordan, Iraq, Egypt — `Entities/Countries.md`), generating GMV of USD 7,428mn in FY2024 (+23% YoY)
 across food delivery, grocery and quick-commerce (talabat mart), and a growing set of adjacent services
-(subscription, advertising, FinTech) (`Topics/GMV.md`; `Topics/2026 Investment Programme.md`). Since
-its Dubai Financial Market listing (November 2024, TLB-025) management
-has repeatedly framed the company's strategic trajectory as a transition "from a multi-vertical
+(subscription, advertising, FinTech) (`Topics/GMV.md`; `Topics/2026 Investment Programme.md`). Since its
+IPO — priced 29 November 2024, with admission to trading on the Dubai Financial Market expected around 10
+December 2024 (TLB-025; `Topics/IPO.md`) — management has repeatedly framed the company's strategic trajectory as a transition "from a multi-vertical
 food-delivery platform to the region's Everyday App" (TLB-020, page 16) — a framing management itself
 calls "a deliberate strategic choice, made from a position of strength." The 2026 investment programme is
 the financial expression of that choice: a Board-approved, internally-funded USD175 million commitment,
@@ -90,11 +90,16 @@ discloses:
    splits ~120mn:55mn between Everyday App and Food-leadership. This is a disclosed fact
    (`Investment_Portfolio_Register.md`), not an open question — the plan treats it as a constraint, not
    a variable.
-2. **Within-bucket, cross-initiative allocation (open — this plan's primary contribution).** Neither
-   bucket is disclosed at the initiative level. Five evidence-grounded candidate initiatives have been
-   identified and compared (`OPT-001`–`005`, ranked in `DEC-009`), spanning both buckets plus two
-   cross-cutting enabling capabilities (advertising monetization, AI/personalisation infrastructure) that
-   do not map cleanly to either bucket alone.
+2. **Within-bucket, cross-initiative allocation (this plan's primary contribution — sequence now
+   committed).** Neither bucket is disclosed at the initiative level. Five evidence-grounded candidate
+   initiatives have been identified and compared (`OPT-001`–`005`, ranked and sequenced in `DEC-009`,
+   `status: approved`, 2026-07-23), spanning both buckets plus two cross-cutting enabling capabilities
+   (advertising monetization, AI/personalisation infrastructure) that do not map cleanly to either bucket
+   alone. **This plan's recommended funding sequence, stated narratively per `DEC-009`'s own placement
+   rule (never as a headline dollar exhibit):** near-term priority to `OPT-002` (talabat pro Egypt/Iraq
+   acceleration) and `OPT-003` (Food-leadership GCC-3 targeting); `OPT-001` (dark-store densification) and
+   `OPT-005` (AI/personalisation scaling) continuing at pace; `OPT-004` (advertising monetization) as a
+   longer-horizon build.
 3. **Cross-market allocation (open — the largest disclosed gap).** No document in the corpus breaks
    either bucket out by country, GCC/non-GCC, or Egypt-standalone (`Topics/GCC vs non-GCC.md`,
    `Capital Allocation and Investment Governance.md` Open Questions). This plan cannot resolve this gap
@@ -147,8 +152,9 @@ artifact this analysis produced, not a hypothetical capability:
   precision score — demonstrated on five real candidate initiatives (`DEC-009`).
 - **Scenario-based, range-bound forecasting** — a 45-node Value Driver Tree and base/upside/downside
   scenarios anchored to talabat's own disclosed FY2026 guidance, with genuinely new assumptions
-  (`ASM-015`–`028`) tagged, confidence-rated, and held to `Proposed` status pending human approval before
-  any number is cited as settled (`vault/Forecasts/Value_Driver_Tree_v2.md`, `Scenarios_v2.md`).
+  (`ASM-015`–`028`) tagged, confidence-rated, and moved to `Approved` status on 2026-07-23 following
+  human review (`vault/Decisions/Assumptions_Register.md`; `vault/Forecasts/Value_Driver_Tree_v2.md`,
+  `Scenarios_v2.md`).
 - **KPI and stage-gate infrastructure** — 50 KPIs across five families (Portfolio, Customer & growth,
   Financial, Operational, Governance), with the entire Governance family explicitly flagged as
   newly-instrumented rather than falsely presented as an existing talabat baseline
@@ -180,8 +186,8 @@ better-allocated USD175mn it supports.
 
 ## 2.6 Current Business Stage
 
-The underlying business (talabat) is public, mature, and profitable at Group level (IPO November 2024;
-FY2025 Adjusted EBITDA margin ~6.5% of GMV) — not a startup. The specific capability this plan proposes
+The underlying business (talabat) is public, mature, and profitable at Group level (IPO priced November
+2024, DFM-listed December 2024; FY2025 Adjusted EBITDA margin ~6.5% of GMV) — not a startup. The specific capability this plan proposes
 — an evidence-ranked, stage-gated capital-allocation framework applied to the 2026 investment programme —
 is at an early, **pilot-appropriate stage**: five candidate initiatives have been identified and ranked
 (`DEC-009`), but zero have yet moved past `status: candidate` to `approved` or `scaled`, and the
@@ -206,7 +212,7 @@ premature full-scale rollout recommendation.
 | FY2024 GMV USD7,428mn (+23% YoY) | TLB-001, page 6/26; `Topics/GMV.md` |
 | FY2025 Adjusted EBITDA margin ~6.5% of GMV | `Facts/Marketplace_Facts.md` |
 | Eight operating markets | `Entities/Countries.md` |
-| Dubai Financial Market listing, November 2024 | TLB-025 |
+| IPO priced 29 November 2024; DFM listing (admission to trading) ~10 December 2024 | TLB-025; `Topics/IPO.md` |
 | talabat's AI/ML capability inherited from Delivery Hero's shared stack | `Topics/AI.md`; `Entities/Technology_Platforms.md` |
 | AI/personalisation not a discrete dollar line (N-06) | `vault/Forecasts/Value_Driver_Tree_v2.md` |
 

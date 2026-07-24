@@ -13,10 +13,8 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > scenario section only, per `DEC-008`'s hard constraint (approved 2026-07-23, Option 1): headline
 > exhibits show the Group base/upside/downside case only; the Everyday App/Food-leadership ~2.2:1
 > split (`ASM-018`) is **not** shown here as a quantified sub-case, per Section 4's narrative-only
-> treatment. All cited assumptions (`ASM-015`–`028`) carry `status: Proposed`, not `Approved`, in
-> `Assumptions_Register.md` — stated explicitly below, not silently assumed settled. **Pass 1,
-> self-reviewed** — independent citation audit and QA (including the Financial Integrity Gate)
-> still required.
+> treatment. All cited assumptions (`ASM-015`–`028`) carry `status: Approved` in
+> `Assumptions_Register.md` (moved from `Proposed` on 2026-07-23), stated explicitly below.
 
 ## Answer, stated first
 
@@ -62,7 +60,7 @@ is a longer-horizon build.
 |---|---|---|---|---|---|
 | **Base** | 11-14% | 14-17% | 4.4-4.8% of GMV | 3.2-3.6% of GMV | talabat's own disclosed FY2026 guidance (TLB-020, TLB-014) |
 | **Upside** | Toward/above 14% | Toward/above 17% | Toward 4.8%+ | Toward/above 3.6% | Everyday App/Food-leadership mechanisms (multi-vertical, pro, advertising) compound faster than guidance embeds — `Scenarios_v2.md` upside case |
-| **Downside** | Toward/below 11% | Toward/below 14% | Toward/below 4.4% (Q1 2026 actual already 4.8%, -9pp y/y) | Toward/below 3.2% | Margin compression deepens, behaviour-change trends moderate faster than guidance assumes — `Scenarios_v2.md` downside case |
+| **Downside** | Toward/below 11% | Toward/below 14% | Toward/below 4.4% (Q1 2026 actual already 4.8% of GMV, down -1.2pp from 6.0% in Q4 2025; the disclosed "-9% y/y" figure is the dollar Adjusted EBITDA decline, not a percentage-point margin move — N-35) | Toward/below 3.2% | Margin compression deepens, behaviour-change trends moderate faster than guidance assumes — `Scenarios_v2.md` downside case |
 
 All three rows are Group-level, per `DEC-008`. **No bucket-level, market-level, or initiative-level
 breakout of these figures is shown here** — none is disclosed, and constructing one would be exactly the
@@ -81,9 +79,8 @@ evidence cannot support.
 
 ## 9.5 Key Assumptions Register (the numbers this case depends on)
 
-All fourteen listed are `status: Proposed` in `vault/Decisions/Assumptions_Register.md` as of this draft
-— **not yet Approved**, and therefore not yet citable as settled inputs per the register's own rule.
-Listed here for transparency, exactly as the pipeline requires:
+All fourteen listed are `status: Approved` in `vault/Decisions/Assumptions_Register.md` (as of
+2026-07-23). Listed here for transparency, exactly as the pipeline requires:
 
 | ID | Statement (compressed) | Confidence |
 |---|---|---|
@@ -101,8 +98,12 @@ Listed here for transparency, exactly as the pipeline requires:
 **Funding requirement:** none beyond what talabat has already committed — the USD175mn programme is
 fully funded from internal cash (TLB-020, page 16); this plan does not request incremental capital
 beyond the disclosed envelope. **Allocation:** governed by the disclosed ~120mn:55mn bucket split
-(fixed) and, within it, the five candidate options this plan has ranked but not yet committed to a
-funding sequence for (`DEC-009`, open). **Monetization:** not applicable in the conventional sense — this
+(fixed) and, within it, the five candidate options this plan has ranked and, per `DEC-009`
+(`status: approved`, 2026-07-23 — middle path), committed to a narrative funding sequence for: near-term
+priority to OPT-002 and OPT-003, OPT-001 and OPT-005 continuing at pace, OPT-004 as a longer-horizon
+build (see §9.2) — the OS-constructed dollar ranges behind that sequence remain a labeled
+appendix/sensitivity exhibit only, never a headline commitment, per `DEC-009`'s own placement rule.
+**Monetization:** not applicable in the conventional sense — this
 is a capital-allocation decision-support exercise, not a revenue-generating product; its "monetization"
 is the incremental GMV/EBITDA the better-allocated USD175mn is expected to generate relative to an
 unranked baseline, a claim this section deliberately does not quantify, per §9.1's evidence-gap finding.
@@ -115,9 +116,9 @@ unranked baseline, a claim this section deliberately does not quantify, per §9.
 |---|---|
 | FY2026 guidance (GMV/Revenue/EBITDA/FCF ranges) | `Scenarios_v2.md` top-level scenarios; TLB-020, TLB-014 |
 | USD175mn = ~120mn + ~55mn, fully internally funded | `Investment_Portfolio_Register.md`; TLB-020 p.16 |
-| Q1 2026 EBITDA margin 4.8%, -9% y/y | `Scenarios_v2.md` downside case |
+| Q1 2026 EBITDA margin 4.8% of GMV (-1.2pp vs. 6.0% Q4'25); dollar Adjusted EBITDA -9% y/y | `Scenarios_v2.md` downside case; N-35 |
 | No disclosed return/ROI/payback figure | `Investment_Relationship_Map.md`; `EBITDA.md` |
-| ASM-015–028 all Proposed, not Approved | `Assumptions_Register.md` |
+| ASM-015–028 all Approved (2026-07-23) | `Assumptions_Register.md` |
 | DEC-008 base-case-only constraint | `DEC-008` |
 
 ## See also

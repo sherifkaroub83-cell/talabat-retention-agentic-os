@@ -6,6 +6,41 @@ writes these entries for you.
 
 ---
 
+## Session 10 — 2026-07-24 (independent Pass 2 verification of the 6 pilot sections; defect fixes)
+
+**Focus:** ran the independent Pass 2 citation-audit + QA-review verification that Session 9's pilot
+draft (Sections 2/4/5/9/12/13, `Business_Plan_Drafts_v2/`) had flagged as still required — a prior
+attempt at this had been lost to a laptop restart with no output ever saved. Then fixed every defect
+the verification surfaced.
+
+**Done:**
+- Confirmed nothing was actually lost in the earlier restart: no citation-audit/QA-review file for any
+  of the 6 sections had ever been produced against the `_v2` (post-pivot) drafts — the only prior
+  Validation files on disk audited the superseded pre-pivot drafts.
+- Ran 6 independent citation audits + 6 independent QA reviews (Sections 2, 4, 5, 9, 12, 13). **All 6
+  sections initially FAILED** — zero clean passes. Consolidated the three shared, concurrently-overwritten
+  gate files (`Problem_Consistency_Gate.md`, `Financial_Integrity_Gate.md`, `Geographic_Evidence_Gate.md`)
+  into single multi-section records so no section's result was lost to the write race.
+- Fixed two cross-cutting defects found in multiple sections: `DEC-009`'s approved status/sequence
+  being misstated as still-open (Sections 9 and 12, including a self-contradiction within Section 9
+  itself), and an EBITDA/N-06 mis-citation pattern (the AI/personalisation EBITDA figure wrongly
+  attributed to `Topics/EBITDA.md`/node N-06 instead of `Topics/AI.md`/node N-09) in both Sections 4 and 5.
+- Fixed all remaining section-specific defects: Section 9's margin-compression figure (miscited as
+  -9pp when the source means -9%, a ~6-7x overstatement) and stale ASM-015–028 status; Section 4's
+  CARC mis-citation, wrong ASM artifact attribution, UAE/global benchmark conflation, wrong node IDs,
+  an overbroad geography disclaimer, and a missing "cost savings" mechanism; Section 5's rollout-date
+  misstatement, an unqualified geography inference, and a DEC-009 misattribution; Section 12's missing
+  MECE statement and underdeveloped Marketing Rollout Plan; Section 13's missing CAC/MRR KPI mapping,
+  missing Leading/Lagging MECE statement, and a Portfolio-KPI baseline misattribution; Section 2's DFM
+  listing-date/source mismatch, stale assumption status, and missing explicit funding-sequence statement.
+- Along the way, hit and resolved an iCloud Drive sync conflict on Section 13's file (renamed to
+  "... 2.md" mid-edit, original showing as deleted in git) — confirmed via `git status` it was a
+  harmless sync artifact with all edits intact, then renamed back to the canonical filename.
+
+**Next:** a fresh, genuinely independent re-verification pass (citation audit + QA review) on all 6
+sections is required to confirm the fixes actually landed correctly before any section can move to
+✅ Done — per this project's own two-pass discipline, self-applied fixes are not self-certifying.
+
 ## Session 9 — 2026-07-23 (pivot Phases 3–9 completed; instructor-approval cleanup; merged to main; leakage-gap fixes; final comprehensive readiness review)
 
 **Focus:** completed the strategic pivot begun in Session 8, then ran three further, separately
