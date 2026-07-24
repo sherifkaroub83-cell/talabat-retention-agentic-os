@@ -103,7 +103,7 @@ page 20)*:
 |---|---|---|---|---|---|
 | **Commission fees** | USD 1,062mn | USD 1,297mn | +25% → +22% | Food-vertical order volume (agent-model marketplace transaction — talabat earns commission without owning inventory); rate under some disclosed downward pressure | N-05, N-10 (Food-leadership capability), N-14/N-16 (order frequency), N-26 (Food GMV) |
 | **Delivery & Service fees** | USD 696mn | USD 859mn | +29% → +24% | Order count and basket composition; structurally eroded per-order by talabat pro's free-delivery-above-threshold benefit even as pro raises order frequency | N-08 (pro adoption), N-14/N-16 |
-| **Subscription fee & Other Income** *(combined line — see decomposition below)* | USD 952mn | USD 1,397mn | +44% → +47% | talabat pro subscriber-penetration (GMV share 32%→49%, FY2024→Q1 2026) **plus** tMart's near-95%-take-rate owned-inventory "other income" component | N-07 (G&R product-mix shift), N-08, N-20/N-21/N-22 (retention/CLV uplift) |
+| **Subscription fee & Other Income** *(combined line — see decomposition below)* | USD 952mn | USD 1,397mn | +44% → +47% | talabat pro subscriber-penetration (GMV share 32%→49%, Q1 2025→Q1 2026) **plus** tMart's near-95%-take-rate owned-inventory "other income" component | N-07 (G&R product-mix shift), N-08, N-20/N-21/N-22 (retention/CLV uplift) |
 | **Advertising & listing fees** | USD 246mn | USD 323mn | +27% → +32% | Partner demand for visibility — a lagging function of how engaged/frequently-ordering the customer base is, not an independent driver | N-09 (AI/personalisation), N-29, N-11/N-17 (multi-vertical usage), `OPT-004` |
 | **less: Vouchers and other discounts** *(contra-revenue)* | — | USD (120)mn | — | Funded promotional/incentive spend | N-12 (targeted incentives) |
 
@@ -211,7 +211,7 @@ category the corpus does not support. The MECE distinction talabat's own disclos
 - **No disclosed one-time revenue category exists anywhere in the corpus**, at any geography level.
 
 **So what for the P&L.** Because subscription is talabat's only contractually recurring line, and because
-subscriber GMV share has risen from 32% to 49% of platform GMV (FY2024→Q1 2026) *(Group;
+subscriber GMV share has risen from 32% (Q1 2025) to 49% (Q1 2026) of platform GMV *(Group;
 `Topics/Talabat Pro.md`)*, the revenue model is structurally shifting toward a larger share of demand
 sitting behind a recurring commitment even though the dollar-denominated subscription fee line itself
 remains the smallest of the four — the leverage comes from what a subscribed customer does downstream
@@ -291,7 +291,7 @@ found.
 | G&R product-mix EBITDA drag (0.5)-(0.7)pp | TLB-014, p.6/p.8 |
 | CPG advertising investment ratio 8% vs. 2% benchmark | TLB-015, p.108 |
 | Advertising ~7% of GMV benchmark reached in UAE tMart vs. 3.4-3.5% Group | TLB-001 p.21; TLB-002 p.10; TLB-014 p.19 |
-| talabat pro subscriber GMV share 32%→49% (FY2024→Q1 2026) | `Topics/Talabat Pro.md` |
+| talabat pro subscriber GMV share 32%→49% (Q1 2025→Q1 2026) | `Topics/Talabat Pro.md` |
 | Food-only vs. multi-vertical monthly spend/frequency (AED194/3.8 vs. AED814/12.8, Sept 2024) | TLB-026, pp.91, 122 |
 | Net delivery cost 6.0%→6.3% of GMV; gross profit 12.3%→11.9% of GMV (FY24→FY25) | TLB-002, pp.17, 20 |
 | CARC USD89mn (1.5% of GMV, 2023) → USD155mn (1.6% of GMV, 2025) | TLB-001, p.28; TLB-002, p.21 |

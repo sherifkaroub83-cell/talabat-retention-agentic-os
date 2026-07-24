@@ -1,7 +1,7 @@
 ---
 section: 4
 title: Value Proposition
-status: Drafted — self-reviewed, not yet independently verified
+status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_04_v2_Pass2]], [[QA_Review_Section_04_v2_Pass2]]), verdict FAIL on 2 hard citation errors (wrong Value_Driver_Tree_v2 node IDs; wrong time period on the 32%→49% pro GMV-share figure) plus 2 moderate defects (Business_Relationships.md chain mis-citation; advertising-benchmark source mismatch); all four fixed 2026-07-24 and cross-checked directly against primary source text (TLB-020, TLB-014, Value_Driver_Tree_v2.md N-11/N-14) — not yet reconfirmed by a fresh independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_04_Value_Proposition.md (superseded Egypt-retention draft, untouched). Fresh draft for the 2026-07-23 pivot."
 ---
@@ -48,21 +48,24 @@ engages with, rather than second-guesses, that top-level weighting.
 ## 4.2 Value Creation Mechanisms — Each Quantified
 
 **Revenue lift — multi-vertical engagement.** Multi-vertical customers show 13.0x order frequency vs.
-3.8x for food-only customers (`Topics/Multi-Verticality.md`), and multi-vertical GMV share has risen
-68%→73%→76% across Dec'24→Dec'25→Mar'26 (`Value_Driver_Tree_v2.md` N-19/N-20). This is the single
+3.8x for food-only customers (`Topics/Multi-Verticality.md`; `Value_Driver_Tree_v2.md` N-14), and
+multi-vertical GMV share has risen 68%→73%→76% across Dec'24→Dec'25→Mar'26 (`Value_Driver_Tree_v2.md`
+N-11). This is the single
 strongest quantified mechanism in the corpus and the direct evidence base for `OPT-001` (talabat mart
 densification, the primary lever for driving multi-vertical adoption).
 
 **Revenue lift — talabat pro.** Subscribers show a 20-28% order-frequency uplift and 26-32% retention
 uplift vs. matched non-subscribers, measured across the GCC+Jordan cohort where the programme was live
 before December 2024 (`ASM-016`, Low confidence for extension beyond that cohort). talabat pro subscriber
-GMV share has grown from 32% to 49% of platform GMV (FY2024→Q1 2026). This is the direct evidence base
+GMV share has grown from 32% (Q1 2025) to 49% (Q1 2026) of platform GMV. This is the direct evidence base
 for `OPT-002` (accelerating pro adoption in Egypt and Iraq, where the programme has not yet reached
 comparable maturity).
 
 **Revenue lift — targeted incentives.** talabat rewards redeemers show >15% order-frequency increase
-within 30 days; PostPaid adopters show a 14% frequency increase, funded by CARC rising from USD89mn
-(2023) to USD155mn (2025) as a share of GMV (`Business_Relationships.md` Chain 1). Unlike pro,
+within 30 days (`Business_Relationships.md` Chain 1; TLB-001, page 19); PostPaid adopters show a 14%
+frequency increase (`Topics/FinTech.md`; TLB-001, page 18), funded by CARC rising from USD89mn (2023)
+to USD155mn (2025) as a share of GMV (`Business_Relationships.md`'s cross-cutting evidence; TLB-001,
+page 28; TLB-002, page 21). Unlike pro,
 PostPaid has a directly evidenced non-GCC rollout precedent (Egypt PostPaid + CIB co-branded card,
 `Topics/FinTech.md`) — the strongest single Egypt-specific value-mechanism data point in this section.
 
@@ -72,9 +75,10 @@ contribution rose from >USD14mn (FY2024) to >USD30mn (FY2025) (`Topics/EBITDA.md
 `Value_Driver_Tree_v2.md` N-06). This is the direct evidence base for `OPT-005`.
 
 **Revenue lift — advertising monetization.** Advertising & listing fees revenue grew USD246mn→USD323mn
-(FY2024→FY2025, +32% y/y), against a disclosed ~7%-of-GMV UAE benchmark talabat's own Group-wide
-penetration (3.3-3.5% of GMV) has not yet closed (`Topics/Revenue Drivers.md`) — the direct evidence
-base for `OPT-004`.
+(FY2024→FY2025, +32% y/y), against a disclosed ~7%-of-GMV UAE benchmark (already reached for talabat
+mart specifically in the UAE, not yet Group-wide) talabat's own Group-wide penetration (3.3-3.5% of
+GMV) has not yet closed (`Topics/Advertising.md`; TLB-001, page 21) — the direct evidence base for
+`OPT-004`.
 
 **Risk reduction — Food-leadership CVP investment.** Non-high-value customer M1 retention declined 4%
 y/y in UAE/Kuwait/Qatar specifically, attributed to "competitive pressure" (TLB-019, page 9;
@@ -112,12 +116,14 @@ the mechanism, Section 9 shows the (appropriately bounded) financial consequence
 
 | Claim | Source |
 |---|---|
-| Multi-vertical 13.0x vs. 3.8x order frequency | `Topics/Multi-Verticality.md`; `Value_Driver_Tree_v2.md` N-19/N-20 |
+| Multi-vertical 13.0x vs. 3.8x order frequency | `Topics/Multi-Verticality.md`; `Value_Driver_Tree_v2.md` N-14 |
+| Multi-vertical GMV share 68%→73%→76% (Dec'24→Dec'25→Mar'26) | `Value_Driver_Tree_v2.md` N-11 |
 | talabat pro 20-28% frequency / 26-32% retention uplift (GCC+Jordan cohort) | `ASM-016`; `Business_Relationships.md` Chain 4 |
-| Rewards +15%, PostPaid +14% frequency uplift | `Business_Relationships.md` Chain 1; TLB-001 p.18-19 |
+| Rewards +15% frequency uplift | `Business_Relationships.md` Chain 1; TLB-001 p.19 |
+| PostPaid +14% frequency uplift; CARC USD89mn→155mn (2023-2025) | `Topics/FinTech.md` (TLB-001 p.18); `Business_Relationships.md` cross-cutting evidence (TLB-001 p.28, TLB-002 p.21) |
 | Egypt PostPaid + CIB co-branded card | `Topics/FinTech.md` |
 | AI/personalisation EBITDA contribution USD14mn→30mn+ | `Topics/EBITDA.md`; N-06 |
-| Advertising revenue USD246mn→323mn vs. ~7% UAE benchmark | `Topics/Revenue Drivers.md` |
+| Advertising revenue USD246mn→323mn vs. ~7% UAE benchmark (talabat mart specifically, not yet Group-wide) | `Topics/Advertising.md`; TLB-001 p.21 |
 | UAE/Kuwait/Qatar M1 retention -4% y/y | TLB-019, page 9; `Topics/Food Leadership.md` |
 | No disclosed programme ROI/return figure | `Investment_Relationship_Map.md` |
 

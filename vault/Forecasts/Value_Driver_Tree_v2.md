@@ -89,8 +89,8 @@ i.e. an embedded capability, not a separate budget line.
 **Geography: Group.** No country-level store count or G&R GMV split exists anywhere in the corpus,
 Egypt included.
 
-### N-08. talabat pro adoption: subscriber GMV share rises from ~32% to ~49% of platform GMV (y/y through Q1 2026)
-`[FACT → Facts/Talabat_Pro.md]` (TLB-020 p.8)
+### N-08. talabat pro adoption: subscriber GMV share rises from ~32% (Q1 2025) to ~49% (Q1 2026) of platform GMV
+`[FACT → Facts/Talabat_Pro.md]` (TLB-020 p.8; TLB-014 p.14)
 **Geography: Group.** Full 8-market rollout complete 2025 (Egypt live Feb 2025, Iraq Sept 2025).
 
 ### N-09. AI/personalisation deployment: estimated EBITDA contribution rises from USD 14mn+ (FY2024) to USD 30mn+ (FY2025)

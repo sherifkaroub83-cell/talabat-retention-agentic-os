@@ -153,7 +153,7 @@ per `Geographic_Evidence_Rules.md`.
 | 3 | Grocery/retail penetration ~1–3% of a USD104–150bn+ addressable category (two unreconciled TAM figures, both stated) | — | TLB-014, pages 5, 19; TLB-020, page 16 |
 | 3 | GCC/non-GCC/Egypt FY2025 segment revenue, gross profit, net profit (Egypt-standalone; GCC/non-GCC country-comparison) | `Topics/GCC vs non-GCC.md` | TLB-002, page 111 |
 | 3 | Non-GCC GMV +57% y/y vs. GCC +22% y/y, FY2025 (market-comparison) | — | TLB-019, page 14 |
-| 3 | talabat pro subscriber GMV share 32%→49% (FY2024→Q1 2026), Group | `Topics/Talabat Pro.md` | corpus-wide |
+| 3 | talabat pro subscriber GMV share 32%→49% (Q1 2025→Q1 2026), Group | `Topics/Talabat Pro.md` | corpus-wide |
 | 3 | Multi-vertical GMV share 68%→73%→76% (Dec'24→Dec'25→Mar'26), Group | `Topics/Multi-Verticality.md` | TLB-019 p.7; TLB-020 p.8 |
 | 3 | Egypt category-share figure inconsistent across the corpus (10x+ vs. 1x+→4x+), both stated, neither resolved | `Topics/Egypt.md`; `Topics/Competition.md` | TLB-001 p.5; TLB-002 p.5; TLB-014 p.4; TLB-026 p.114 |
 | 3 | Non-high-value M1 retention -4% y/y (market-comparison: UAE, Kuwait, Qatar only) | `Topics/Food Leadership.md` | TLB-019, page 9 |

@@ -184,7 +184,7 @@ the clearest disclosed instance of the "minority of segments carrying the majori
 McKinsey Lens asks this section to name. By vertical, Food remains the majority of GMV (>70%) despite
 G&R's faster growth. **Early adopters / primary users, stated as the "so what":** the two segments this
 plan's investment thesis is actually built on are talabat pro subscribers, whose share of platform GMV
-rose from 32% to 49% (FY2024→Q1 2026), and multi-vertical customers, whose GMV share rose 68%→73%→76%
+rose from 32% (Q1 2025) to 49% (Q1 2026), and multi-vertical customers, whose GMV share rose 68%→73%→76%
 (Dec'24→Dec'25→Mar'26) *(Group; `Topics/Multi-Verticality.md`, `Topics/Talabat Pro.md`)* — these two
 overlapping, still-growing cohorts are the disclosed "minority of customers driving a majority of the
 behavioural upside" the Everyday App bucket is funded to expand, and the natural anchor for Section 4's
@@ -359,7 +359,7 @@ DEC-009 headline-exhibit restrictions therefore do not apply here and are not vi
 | Non-GCC GMV +57% y/y vs. GCC +22% y/y (FY2025) | TLB-019, p.14 |
 | Food USD6,652mn (+20%) vs. G&R USD2,768mn (+47%), FY2025 GMV | TLB-002, p.18 |
 | G&R/"Groceries" FY2025 GMV shown two ways: USD2.77bn (TLB-002 vertical table) vs. USD3.5bn ("Groceries," TLB-014) — presented as unreconciled, not blended | TLB-002, p.18; TLB-014, p.5 |
-| talabat pro GMV share 32%→49% (FY2024→Q1'26) | `Topics/Talabat Pro.md` |
+| talabat pro GMV share 32%→49% (Q1'25→Q1'26) | `Topics/Talabat Pro.md` |
 | Multi-vertical GMV share 68%→73%→76% (Dec'24→Dec'25→Mar'26) | `Topics/Multi-Verticality.md`; TLB-019 p.7; TLB-020 p.8 |
 | Jordan/Iraq never individually disclosed | `GCC vs non-GCC.md` Open Questions |
 | AI/personalisation EBITDA contribution >USD14mn→>USD30mn (FY2024→FY2025) | `Topics/EBITDA.md` |

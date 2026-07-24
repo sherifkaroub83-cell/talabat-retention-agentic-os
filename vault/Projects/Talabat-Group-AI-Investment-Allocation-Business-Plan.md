@@ -67,9 +67,9 @@ old Egypt-retention problem and remain historical, not valid inputs to this trac
 | # | Section | Status | Notes |
 |---|---|---|---|
 | 1 | Executive Summary (SCQA) | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_01...` — drafted last, gated on all 13 others; SCQA Answer spot-checked against Sections 2-14's actual content; no DEC-008/DEC-009-restricted dollar figure leaks into the headline; independent Pass 2 still required |
-| 2 | Business Description | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_02...` — citation audit found 3 hard failures, fixed and self-verified; independent Pass 2 still required |
+| 2 | Business Description | ✅ Done (independently verified) | `Business_Plan_Drafts_v2/Section_02...` — Pass 2 verdict PASS WITH MINOR FIXES; one stale ASM status reference fixed 2026-07-24 |
 | 3 | Market Analysis | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_03...` — 2 real issues (chained order-frequency figures, TAC/GMV arithmetic) found and fixed self-review; independent Pass 2 still required |
-| 4 | Value Proposition | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_04...` |
+| 4 | Value Proposition | 🟡 Fixed, re-verification pending | `Business_Plan_Drafts_v2/Section_04...` — Pass 2 verdict FAIL (2 hard citation errors: wrong Value_Driver_Tree_v2 node IDs, wrong time period on pro GMV-share); both plus 2 moderate defects fixed 2026-07-24, cross-checked against primary sources; awaiting Stage 17 whole-plan re-confirmation |
 | 5 | AI Technology and Development | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_05...` |
 | 6 | Business Model and Revenue Streams | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_06...` — flags a new Facts/Revenue.md reconciliation candidate (TLB-019 p.13 fee-mix range vs. TLB-011/advertising figures), not used, not force-reconciled; independent Pass 2 still required |
 | 7 | Marketing and Sales Strategy | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_07...` — funnel-conversion figures explicitly labeled `[SYNTHETIC — illustrative estimate]`, not corpus-derived; independent Pass 2 still required |
