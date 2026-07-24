@@ -1,7 +1,7 @@
 ---
 section: 14
 title: Appendices
-status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_14_v2_Pass2]], [[QA_Review_Section_14_v2_Pass2]]), Pass 2's 3 defects fixed and independently reconfirmed by Pass 3 ([[Citation_Audit_Section_14_v2_Pass3]], all 60 traceability rows checked), which found 1 new hard-ish finding (a stale claim, in §13.3's provenance note and §14.8, that Section 9 "still describes ASM-015–028 as Proposed" and "DEC-009 as open" — now false, since Section 9 was independently corrected 2026-07-24); fixed with a dated addendum in both locations — not yet reconfirmed by a fourth independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
+status: Done (independently verified) — Pass 4 closure audit completed 2026-07-24; all 60 traceability rows remain intact and the Section 9/DEC-009 stale-status statements are explicitly retained only as dated historical provenance
 pipeline_run: 2026-07-24
 supersedes_note: "A prior vault/Projects/Business_Plan_Drafts/Section_14_Appendices.md exists (no _v2 suffix), drafted for the superseded Egypt-retention problem. Per the standing instruction never to read from or write to that directory, it was not read or reused as an input to this draft — this file is written fresh against the 2026-07-23 pivot's Group-wide capital-allocation problem (Problem_Charter.md) and the 12 companion _v2 section drafts (Sections 2-13) that now exist."
 ---
