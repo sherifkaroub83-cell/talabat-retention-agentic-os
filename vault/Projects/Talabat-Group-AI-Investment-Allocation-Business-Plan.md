@@ -79,7 +79,7 @@ old Egypt-retention problem and remain historical, not valid inputs to this trac
 | 11 | CSR & Responsible AI | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_11...` — ties every control to a named Section 10 risk (ORG-01/02/03), cites DEC-008/DEC-009 as real executed precedent for the no-false-precision control; independent Pass 2 still required |
 | 12 | Implementation Plan (Three Horizons) | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_12...` |
 | 13 | Monitoring and Evaluation (KPIs) | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_13...` — sourced from `KPI_Tree_v2.md`'s 50 KPIs |
-| 14 | Appendices + traceability note | ⬜ Not started | Designated home for `DEC-009`'s allocation-range sensitivity exhibit once written |
+| 14 | Appendices + traceability note | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_14...` — 40-row traceability table; DEC-009's allocation-range sensitivity exhibit built here with the mandatory disclosure sentence; independent Pass 2 still required |
 
 **Legend:** ✅ Done (independently verified) · 🟡 Drafted, needs verification · ⬜ Not started
 
