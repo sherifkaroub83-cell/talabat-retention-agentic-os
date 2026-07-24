@@ -144,7 +144,8 @@ citations: `vault/Knowledge/Entities/Countries.md` and `vault/Knowledge/Facts/*.
 - **LLM decision (documented for grading):** Claude subscription (Claude Code / Cowork). Rationale:
   native to the template; corpus is 100% public so confidentiality risk is low; team already
   licensed; predictable cost vs API. Revisit if confidential interview data is added.
-- **MCP decision:** none integrated yet; optional distinction credit — decide by end of Phase 2.
+- **MCP decision:** ✅ resolved 2026-07-24 by `DEC-011` (pursue) — read-only `vault-mcp` server
+  (`scripts/vault_mcp/`) built, registered in `.mcp.json`, 9 tools, selftest passing.
 
 ## Decisions log
 
