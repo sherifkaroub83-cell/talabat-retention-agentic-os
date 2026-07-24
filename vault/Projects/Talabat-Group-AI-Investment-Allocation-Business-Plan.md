@@ -66,20 +66,20 @@ old Egypt-retention problem and remain historical, not valid inputs to this trac
 
 | # | Section | Status | Notes |
 |---|---|---|---|
-| 1 | Executive Summary (SCQA) | ⬜ Not started | Gated on all other 13 per template convention |
+| 1 | Executive Summary (SCQA) | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_01...` — drafted last, gated on all 13 others; SCQA Answer spot-checked against Sections 2-14's actual content; no DEC-008/DEC-009-restricted dollar figure leaks into the headline; independent Pass 2 still required |
 | 2 | Business Description | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_02...` — citation audit found 3 hard failures, fixed and self-verified; independent Pass 2 still required |
-| 3 | Market Analysis | ⬜ Not started | |
+| 3 | Market Analysis | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_03...` — 2 real issues (chained order-frequency figures, TAC/GMV arithmetic) found and fixed self-review; independent Pass 2 still required |
 | 4 | Value Proposition | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_04...` |
 | 5 | AI Technology and Development | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_05...` |
-| 6 | Business Model and Revenue Streams | ⬜ Not started | |
-| 7 | Marketing and Sales Strategy | ⬜ Not started | |
-| 8 | Operations Plan | ⬜ Not started | |
+| 6 | Business Model and Revenue Streams | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_06...` — flags a new Facts/Revenue.md reconciliation candidate (TLB-019 p.13 fee-mix range vs. TLB-011/advertising figures), not used, not force-reconciled; independent Pass 2 still required |
+| 7 | Marketing and Sales Strategy | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_07...` — funnel-conversion figures explicitly labeled `[SYNTHETIC — illustrative estimate]`, not corpus-derived; independent Pass 2 still required |
+| 8 | Operations Plan | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_08...` — fresh 7S synthesis; surfaced new primary-source citations (TLB-026 pp.46-49, 152-157: GLSA/CQCA/Kitchens agreements, Dec-2022 data-breach disclosure, DH inter-company DTA) not yet in any Topic Note, flagged for Pass 2 priority re-check; independent Pass 2 still required |
 | 9 | Financial Plan | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_09...` — headline case resolved by [[DEC-008_section9-headline-bucket-split-presentation\|DEC-008]]: base case only; funding sequence per [[DEC-009_investment-options-ranking-and-allocation-priority\|DEC-009]] |
-| 10 | Risk Analysis | ⬜ Not started | |
-| 11 | CSR & Responsible AI | ⬜ Not started | Must incorporate the Responsible-AI principle that capital-allocation recommendations require human approval, never presented as an automatic management decision |
+| 10 | Risk Analysis | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_10...` — 17 risks with named owners, High×High quadrant: FIN-01 (margin step-down), MKT-01 (Food-leadership competitive pressure), ORG-01 (no disclosed stage-gate mechanism); independent Pass 2 still required |
+| 11 | CSR & Responsible AI | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_11...` — ties every control to a named Section 10 risk (ORG-01/02/03), cites DEC-008/DEC-009 as real executed precedent for the no-false-precision control; independent Pass 2 still required |
 | 12 | Implementation Plan (Three Horizons) | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_12...` |
 | 13 | Monitoring and Evaluation (KPIs) | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_13...` — sourced from `KPI_Tree_v2.md`'s 50 KPIs |
-| 14 | Appendices + traceability note | ⬜ Not started | Designated home for `DEC-009`'s allocation-range sensitivity exhibit once written |
+| 14 | Appendices + traceability note | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_14...` — 40-row traceability table; DEC-009's allocation-range sensitivity exhibit built here with the mandatory disclosure sentence; independent Pass 2 still required |
 
 **Legend:** ✅ Done (independently verified) · 🟡 Drafted, needs verification · ⬜ Not started
 
