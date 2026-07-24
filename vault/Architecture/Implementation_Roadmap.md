@@ -15,6 +15,11 @@ superseded_reason: "Phased rollout was built for the original Egypt-retention pr
 > (19 stages), and current section-by-section status lives in
 > `vault/Projects/Talabat-Group-AI-Investment-Allocation-Business-Plan.md`, not the phase table below.
 
+> **STATUS SYNCHRONIZATION 2026-07-25:** The successor Group-wide plan has now completed 14/14 active
+> v2 sections, targeted Pass 4 closure, all whole-plan gates, and final 25-page DOCX/PDF publication
+> with QA reports on PR #6. The historical phase table below remains intentionally unchanged and must
+> not be interpreted as the current repository state.
+
 # Implementation Roadmap — OS Architecture Design Phase → Finished Business Plan
 
 Task 11 of the OS Architecture Design Phase. Phases below extend the capstone's own five-phase

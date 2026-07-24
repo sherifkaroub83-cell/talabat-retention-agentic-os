@@ -14,6 +14,18 @@ Active — governing problem for the Agentic OS**). Why the pivot happened and w
 Project facts and current status: [`MEMORY.md`](MEMORY.md) · [`PROJECT_PROGRESS.md`](PROJECT_PROGRESS.md).
 Start browsing the knowledge base at [`vault/MOC/Talabat MOC.md`](vault/MOC/Talabat%20MOC.md).
 
+## Current publication status
+
+The Group-wide AI Business Plan is complete on PR #6 (`codex/final-business-plan-publication`), pending
+review and merge to `main`:
+
+- 14/14 active v2 sections are present and independently verified.
+- All whole-plan gates pass, including the whole-plan citation audit and template compliance.
+- `Outputs/Business_Plan_Final.docx` opens successfully and contains all 14 section headings.
+- `Outputs/Business_Plan_Final.pdf` opens successfully, contains all 14 section headings, and is 25 pages.
+- `Outputs/Formatting_QA_Report.md` and `Outputs/Publication_QA_Report.md` record the final QA results.
+- Historical Egypt-retention drafts and exports remain preserved as superseded artifacts.
+
 This repository is built on the **Agentic Second-Brain OS** template (below): a Claude-Code-native
 scaffold that turns a document corpus into a cross-linked knowledge vault and carries the work to a
 finished deliverable. It has been activated and populated for this project — the generic
@@ -47,7 +59,7 @@ description below documents the underlying machinery, not an unactivated startin
 | `CLAUDE.md` | Project instructions auto-loaded by Claude Code (placeholdered until activation) |
 | `MEMORY.md` · `PROJECT_PROGRESS.md` · `SESSION_LOG.md` | Project facts · milestones · session history |
 | `Input_Data/` | Drop your source documents here (read-only) |
-| `Outputs/` | Generated deliverables land here |
+| `Outputs/` | Final Business Plan DOCX/PDF, publication/formatting QA reports, and preserved historical exports |
 | `vault/` | The Obsidian second brain — `soul.md`/`identity.md`/`user.md`, `MOC/`, `Knowledge/`, `Daily/`, entity folders |
 | `vault/_maintenance/` | The nightly read-only audit prompt + dated changelists |
 | `scripts/daily-brain-maintenance.ps1` | Runs the nightly propose-only audit (vault path auto-derived) |
@@ -153,6 +165,6 @@ interviews, or course material — the flow is identical.
 | `vault/` | The Obsidian second brain |
 | `vault/Architecture/` | Agentic OS design docs — agent/skill roster, Decision/Research/Forecasting layers, the 19-stage drafting pipeline, the implementation roadmap |
 | `vault/Decisions/`, `vault/Research/`, `vault/Forecasts/` | The three evidence layers between "what the corpus says" and "what the plan claims" (scaffolded, populated once drafting begins) |
-| `scripts/` | Nightly maintenance script |
+| `scripts/` | Nightly maintenance plus the deterministic final-publication builder |
 | `.claude/agents/` | 8 named subagents that run the Business Plan pipeline (`bp-orchestrator` + 7 specialists) |
 | `.claude/skills/` | Project skills — `session-end`, `business-plan-drafting`, plus 6 pipeline-support skills (`external-research`, `forecast-builder`, `decision-log`, `evidence-ranking`, `citation-audit`, `qa-review`) |

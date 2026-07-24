@@ -18,6 +18,15 @@ Egypt remains a genuine worked example (the corpus's richest single-country data
 longer the fixed scope. Charter: `Problem_Charter.md`. Why the pivot happened and what it touched:
 `vault/Architecture/Repository_Impact_Assessment.md`.
 
+**Business Plan publication status (24/07/2026; synchronized 25/07/2026):** the active Group-wide v2
+plan is complete at 14/14 independently verified sections. Targeted Pass 4 closure and all whole-plan
+gates passed. The final deliverables are `Outputs/Business_Plan_Final.docx` and
+`Outputs/Business_Plan_Final.pdf` (25 pages), supported by `Outputs/Formatting_QA_Report.md` and
+`Outputs/Publication_QA_Report.md`. The package is isolated on
+`codex/final-business-plan-publication` in PR #6, pending review and merge to `main`. The restored
+Section 13 is the verified v2 version from commit `6e7224b`; superseded Egypt-retention drafts and
+outputs remain preserved.
+
 **Original problem (approved by Dr. Hossam Daoud, 21/07/2026, team of 6 and a 30-slide group
 presentation approved alongside it — administrative approvals carried forward unchanged by the
 pivot):** AI-driven customer retention for talabat Egypt specifically — churn prediction,
