@@ -53,14 +53,18 @@ against the old problem).
 
 ## Status
 
-🟡 **Pivot architecture complete; Business Plan drafting partially underway (updated 2026-07-23,
-Final Execution Readiness pass — this section had gone stale after the Phase 9 pilot actually ran and
-was not previously updated to reflect it).** **6 of 14 sections are drafted** under
-`vault/Projects/Business_Plan_Drafts_v2/` (Sections 2, 4, 5, 9, 12, 13 — the Phase 9 pilot), each
-`status: Drafted — self-reviewed, not yet independently verified` in its own frontmatter; none has
-passed independent Pass 2 QA or the Problem Consistency/Financial Integrity/Geographic Evidence gates
-yet. The 14 section drafts under `vault/Projects/Business_Plan_Drafts/` (no `_v2` suffix) reflect the
-old Egypt-retention problem and remain historical, not valid inputs to this tracker.
+🟡 **All 14 sections drafted; Pass 2 independent review complete for the original 6 pilot sections,
+still pending for the 8 sections drafted after the pilot (updated 2026-07-24).** All 14 sections exist
+under `vault/Projects/Business_Plan_Drafts_v2/`. Of the original Phase 9 pilot (Sections 2, 4, 5, 9, 12,
+13), all 6 have now been through independent Pass 2 citation audit + QA review: Sections 2 and 13 passed
+with minor fixes (✅ Done); Sections 4, 5, 9, and 12 failed on real defects, all of which were found,
+fixed, and cross-verified against primary sources 2026-07-24 (🟡 Fixed, re-verification pending — not
+marked Done until Stage 17's whole-plan citation audit re-clears them). The 8 sections drafted afterward
+(1, 3, 6, 7, 8, 10, 11, 14) have only Pass 1 self-review so far; independent Pass 2 review for these is
+the next task. No whole-plan gate (Problem Consistency, Financial Integrity, Geographic Evidence,
+whole-plan Citation Audit, Template Compliance) has run yet — those require all 14 sections individually
+cleared first. The 14 section drafts under `vault/Projects/Business_Plan_Drafts/` (no `_v2` suffix)
+reflect the old Egypt-retention problem and remain historical, not valid inputs to this tracker.
 
 ## 14-section checklist (GSB Template v2.0 — status against the new problem)
 
@@ -77,8 +81,8 @@ old Egypt-retention problem and remain historical, not valid inputs to this trac
 | 9 | Financial Plan | 🟡 Fixed, re-verification pending | `Business_Plan_Drafts_v2/Section_09...` — headline case resolved by [[DEC-008_section9-headline-bucket-split-presentation\|DEC-008]]: base case only; funding sequence per [[DEC-009_investment-options-ranking-and-allocation-priority\|DEC-009]]; Pass 2 verdict FAIL (pp-vs-% unit mixing in downside cell), fixed 2026-07-24; USD175mn=120+55 reconciliation, DEC-008/DEC-009 compliance all independently verified clean |
 | 10 | Risk Analysis | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_10...` — 17 risks with named owners, High×High quadrant: FIN-01 (margin step-down), MKT-01 (Food-leadership competitive pressure), ORG-01 (no disclosed stage-gate mechanism); independent Pass 2 still required |
 | 11 | CSR & Responsible AI | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_11...` — ties every control to a named Section 10 risk (ORG-01/02/03), cites DEC-008/DEC-009 as real executed precedent for the no-false-precision control; independent Pass 2 still required |
-| 12 | Implementation Plan (Three Horizons) | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_12...` |
-| 13 | Monitoring and Evaluation (KPIs) | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_13...` — sourced from `KPI_Tree_v2.md`'s 50 KPIs |
+| 12 | Implementation Plan (Three Horizons) | 🟡 Fixed, re-verification pending | `Business_Plan_Drafts_v2/Section_12...` — Pass 2 verdict FAIL (stale "DEC-009 unresolved" claim; OPT-003 mis-sequenced as H2-gated monitoring-only instead of DEC-009's actual near-term-priority placement alongside OPT-002); both fixed 2026-07-24, cross-verified against DEC-009, Investment_Options_Register.md, and OPT-003's own record; ancillary repo-wide date-label fix also applied to `OPT-002_talabat-pro-acceleration-egypt-iraq.md` |
+| 13 | Monitoring and Evaluation (KPIs) | ✅ Done (independently verified) | `Business_Plan_Drafts_v2/Section_13...` — sourced from `KPI_Tree_v2.md`'s 50 KPIs; Pass 2 verdict PASS WITH MINOR FIXES (missing Review Cadence section; imprecise KPI baseline periods; overbroad churn-scope claim), all fixed 2026-07-24 |
 | 14 | Appendices + traceability note | 🟡 Drafted, needs verification | `Business_Plan_Drafts_v2/Section_14...` — 40-row traceability table; DEC-009's allocation-range sensitivity exhibit built here with the mandatory disclosure sentence; independent Pass 2 still required |
 
 **Legend:** ✅ Done (independently verified) · 🟡 Drafted, needs verification · ⬜ Not started
@@ -89,9 +93,12 @@ old Egypt-retention problem and remain historical, not valid inputs to this trac
   never a headline exhibit. **Resolved.**
 - `ASM-015`–`ASM-033` — all `Approved` as of 2026-07-23. **Resolved.**
 - `OPT-001`–`005` exist in `vault/Decisions/Investment_Options_Register.md`. **Resolved.**
-- **No open decisions currently block continued drafting.** Next actions: (1) draft the 8 remaining
-  sections (1, 3, 6, 7, 8, 10, 11, 14); (2) run independent Pass 2 citation audit + QA review (incl. the
-  three new gates) on all 6 existing sections, none of which has passed it yet.
+- **No open decisions currently block continued drafting.** Next actions: (1) run independent Pass 2
+  citation audit + QA review on the 8 sections drafted after the Phase 9 pilot (1, 3, 6, 7, 8, 10, 11,
+  14) — the original 6 pilot sections (2, 4, 5, 9, 12, 13) have all now been through Pass 2; (2) once
+  all 14 individually clear, run the Part C whole-plan gates (Problem Consistency, Financial Integrity,
+  Geographic Evidence, whole-plan Citation Audit, Template Compliance); (3) execute Publication and
+  export the final DOCX/PDF.
 
 ## Links
 - [[Agentic_OS_Architecture]] · [[Business_Plan_Generation_Pipeline]] · [[Investment_Relationship_Map]] ·
