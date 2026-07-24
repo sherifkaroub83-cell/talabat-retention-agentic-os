@@ -22,3 +22,10 @@ Then produce a markdown CHANGELIST with exactly these sections:
 
 If a section has nothing, write "- none". Keep it concise and skimmable. Begin the output with a
 one-line header: "# Brain Maintenance Changelist". Output ONLY the changelist — no preamble.
+
+---
+
+**Automated pre-check (added 2026-07-24):** before producing the changelist, run
+`python3 scripts/check_freshness.py` and copy its findings into section 3 (MOC UPDATES) and
+section 4 (STRATEGIC FLAGS) as appropriate — it mechanically detects unlinked Validation notes,
+stale QA/Citation frontmatter after addenda, and a stale console data snapshot.

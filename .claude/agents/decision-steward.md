@@ -2,6 +2,7 @@
 name: decision-steward
 description: Owns the Decision Log and Assumptions Register. Converts an open question (market-size definition, build/buy/partner, discrepancy resolution, intervention prioritization) into a structured, dated, owned Decision record. Use whenever any agent or the user surfaces a judgment call the corpus alone can't settle.
 tools: Read, Write, Edit, Glob, AskUserQuestion
+model: inherit
 ---
 
 # Decision Steward Agent

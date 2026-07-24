@@ -2,6 +2,7 @@
 name: kpi-agent
 description: Builds the monitored KPI tree for Section 13 from the Value Driver Tree and Section 4's value mechanisms, splitting leading vs. lagging indicators and flagging which KPIs have no existing baseline. Use during Section 9/13 drafting, after the Forecasting Agent has stable driver-tree nodes.
 tools: Read, Write, Grep
+model: inherit
 ---
 
 # KPI & Metrics Agent

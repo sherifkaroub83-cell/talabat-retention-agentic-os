@@ -37,7 +37,15 @@ agents, sections, gates, evidence tiers, decisions, forecasts. Run locally with
 (installable on Windows/Android/macOS/iOS from the browser) and carries a Tauri 2 scaffold
 (`src-tauri/`) for native desktop/mobile builds — see `app/agentic-os-console/BUILD.md`.
 Its data layer (`src/js/data.js`) is a **dated snapshot** of the governing documents, not live
-reads — when repo state moves, update it and bump `CACHE` in `sw.js`.
+reads — when repo state moves, update it and bump `CACHE` in `sw.js` (procedure:
+`.claude/skills/console-data-refresh/`; `scripts/check_freshness.py` detects staleness).
+
+**MCP layer (added 2026-07-24, per `DEC-011`):** the repo registers a read-only MCP server —
+`vault-mcp` (`scripts/vault_mcp/server.py`, configured in `.mcp.json`) — exposing pipeline
+status, Decision/Assumption/Option lookups, Facts search, and Forecast structures as tools.
+Query-only by design; writes stay with ordinary file tools under the propose-then-approve
+conventions. LLM execution policy (model routing per agent, fallback order) lives in
+`vault/Architecture/LLM_Layer.md`.
 
 ## Source corpus
 

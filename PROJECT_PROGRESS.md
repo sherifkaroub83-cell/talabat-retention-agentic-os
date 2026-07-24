@@ -106,7 +106,9 @@ remaining 10 Business Plan sections — per `vault/Architecture/Implementation_R
 - Role assignment: map the 6 members onto the guide's 5 defined roles (e.g., co-leads on one role,
   or a 6th custom role) — still open, needed for both Phase 1 closure and individual-contribution
   visibility.
-- MCP integration: pursue distinction credit or skip? Still undecided, past its original Phase 2 deadline.
+- ~~MCP integration: pursue distinction credit or skip?~~ — ✅ **Resolved 24/07/2026** by `DEC-011`
+  (pursue): read-only `vault-mcp` server built (`scripts/vault_mcp/`), registered in `.mcp.json`,
+  selftest + protocol smoke test passing (9 tools).
 
 ## Artifacts produced
 

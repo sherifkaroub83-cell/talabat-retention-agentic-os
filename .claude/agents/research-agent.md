@@ -2,6 +2,7 @@
 name: research-agent
 description: Resolves a named external-evidence gap (a Research Register item) using web research, and registers the finding with publisher, date, and confidence level. Use when a Business Plan drafting stage flags a gap the vault corpus cannot fill, or when the user says "research X".
 tools: Read, Write, Edit, WebSearch, WebFetch
+model: inherit
 ---
 
 # Research Agent

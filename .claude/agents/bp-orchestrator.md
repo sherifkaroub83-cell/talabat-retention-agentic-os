@@ -2,6 +2,7 @@
 name: bp-orchestrator
 description: Runs the 19-stage Business Plan Generation Pipeline (Part A plan-level setup, Part B the original per-section 11-sub-stage loop, Part C whole-plan consistency gates) for the GSB template, sequencing the other seven capstone agents and holding pipeline state. Use when the user asks to draft, resume, or check status on any Business Plan section, or invokes /business-plan.
 tools: Read, Write, Edit, Glob, Grep, Agent
+model: inherit
 ---
 
 # Business Plan Orchestrator

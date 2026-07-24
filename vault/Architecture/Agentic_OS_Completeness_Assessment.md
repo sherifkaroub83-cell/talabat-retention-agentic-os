@@ -19,15 +19,19 @@ keep `src/js/data.js`'s `structure` array in sync with this table.
 
 ## Scorecard
 
-| # | Layer | Score | One-line verdict |
-|---|---|---|---|
-| 1 | **Agents** | **90%** | 8 durable, MECE agents, execution-validated across 4 pilots — the strongest layer |
-| 2 | **Skills** | **85%** | 12 skills incl. 4 gates; only Phase-5 output skills missing |
-| 3 | **MCP · Agentic Tools** | **15%** | The one genuinely open layer — undecided since Phase 2, no server, no live tools |
-| 4 | **Memory** | **90%** | All four memory files current + `/session-end` + nightly maintenance |
-| 5 | **Brain (Second Brain)** | **80%** | 103-note cited graph, 5-tier evidence model; post-pivot research + Pass 2 pending |
-| 6 | **LLMs** | **40%** | Works, but on a single undocumented subscription path — no policy, no fallback |
-| — | **Overall (unweighted)** | **≈67%** | Operationally stable core; completeness gaps are known and bounded |
+> **Updated 2026-07-24 (same day, after step-plan execution began on the user's "proceed all"
+> instruction).** Original scores kept in the second column as the baseline; layer sections
+> below carry an *Execution update* note where a step closed.
+
+| # | Layer | Baseline | Now | One-line verdict |
+|---|---|---|---|---|
+| 1 | **Agents** | 90% | **95%** | + `publication-agent` and per-agent `model:` policy; human role mapping still open |
+| 2 | **Skills** | 85% | **100%** | + `deck-builder`, `os-structure-doc`, `console-data-refresh` |
+| 3 | **MCP · Agentic Tools** | 15% | **90%** | `DEC-011` approved; `vault-mcp` built, registered, selftest + protocol smoke test passing (9 tools) |
+| 4 | **Memory** | 90% | **100%** | `scripts/check_freshness.py` automated staleness checks (found & fixed 44 real MOC-link gaps on first run), wired into nightly maintenance |
+| 5 | **Brain (Second Brain)** | 80% | **85%** | Stage 5 research re-run + Stage 12 gate verification executed 2026-07-24; Pass 2 × 14 remains the bulk |
+| 6 | **LLMs** | 40% | **85%** | `LLM_Layer.md` policy + `model:` frontmatter on all 9 agents; local-model path documented but not installed |
+| — | **Overall (unweighted)** | ≈67% | **≈93%** | Remaining distance is almost entirely Pass 2 verification + whole-plan gates + the two Phase-5 deliverables |
 
 ---
 
@@ -135,17 +139,17 @@ Ordered so that each step unblocks the next; effort in working sessions. Steps 1
 structural (the taxonomy's gaps); steps 4–6 are executional (the capstone's gaps); step 7 is
 delivery.
 
-| Step | Action | Layer(s) closed | Owner | Effort | Depends on |
+| Step | Action | Layer(s) closed | Owner | Effort | Status |
 |---|---|---|---|---|---|
-| **1** | Record **DEC-011: MCP layer — pursue** (or explicitly skip, with rationale) via `decision-steward` | MCP | user + decision-steward | 0.25 | — |
-| **2** | Build **`vault-mcp`** read-only server (tools table above); register in `.claude/settings`; smoke-test from a session | MCP 15→90% | dev session | 1 | 1 |
-| **3** | Write **`LLM_Layer.md`** policy note + add model/effort frontmatter to all 8 agents + env-var API fallback doc | LLMs 40→85% | dev session | 0.5 | — |
-| **4** | **Stage 5 re-run**: research-agent resolves the pivoted problem's Research Register items; **Stage 12**: kpi-agent re-verifies per-option stage gates | Brain 80→90% | research-agent, kpi-agent | 1 | — |
-| **5** | **Pass 2 verification × 14 sections** (independent citation audit + QA + three gates per section, fresh threads) | Brain 90→95% | evidence-citation-agent, qa-review-agent | 2–3 | 4 |
-| **6** | **Whole-plan gates 14–18**, then Stage 19 handoff → `executive-document-formatting` → final DOCX/PDF in `Outputs/` | Brain →100% | qa-review-agent → orchestrator | 1 | 5 |
-| **7** | Add **`deck-builder`** + **`os-structure-doc`** skills (and a `publication-agent` binding them); produce the 30-slide deck + 3–5-page OS document | Skills 85→100%, Agents 90→100% | new agent | 1–1.5 | 6 |
-| **8** | Add **staleness checks** to nightly maintenance (frontmatter dates, MOC links, console snapshot age); add **`console-data-refresh`** skill (or wire it to vault-mcp) | Memory 90→100% | dev session | 0.5 | 2 (ideal) |
-| **9** | Close admin: map 6 members ↔ 5 roles; team walkthrough of the console + OS | Agents (human side) | user/team | 0.5 | — |
+| **1** | Record **DEC-011: MCP layer — pursue** | MCP | user + session | 0.25 | ✅ **Done 2026-07-24** — approved on the user's "proceed all" instruction |
+| **2** | Build **`vault-mcp`** read-only server; register in `.mcp.json`; smoke-test | MCP 15→90% | dev session | 1 | ✅ **Done 2026-07-24** — 9 tools, selftest + protocol handshake passing |
+| **3** | Write **`LLM_Layer.md`** policy + model frontmatter on all agents + API fallback doc | LLMs 40→85% | dev session | 0.5 | ✅ **Done 2026-07-24** |
+| **4** | **Stage 5 re-run** (research-agent) + **Stage 12** per-option gates (kpi-agent) | Brain 80→85% | research-agent, kpi-agent | 1 | ✅ **Executed 2026-07-24** — see the agents' outputs in `vault/Research/` and the OPT records / Stage-12 verification note |
+| **5** | **Pass 2 verification × 14 sections** (independent citation audit + QA + three gates per section, fresh threads) | Brain →95% | evidence-citation-agent, qa-review-agent | 2–3 | ⬜ Next — the largest remaining block; run section-by-section |
+| **6** | **Whole-plan gates 14–18**, then Stage 19 → `executive-document-formatting` → final DOCX/PDF | Brain →100% | qa-review-agent → orchestrator | 1 | ⬜ Blocked on 5 |
+| **7** | ~~Add skills~~ ✅ skills + `publication-agent` created 2026-07-24; **produce** the 30-slide deck + OS structure document | Skills ✅, deliverables ⬜ | publication-agent | 1–1.5 | 🟡 Infrastructure done; production blocked on 6 (deck sources Done sections) — the OS doc can start any time |
+| **8** | Staleness checks in nightly maintenance + `console-data-refresh` skill | Memory 90→100% | dev session | 0.5 | ✅ **Done 2026-07-24** — first run found and fixed 44 unlinked Validation notes |
+| **9** | Close admin: map 6 members ↔ 5 roles; team walkthrough | Agents (human side) | user/team | 0.5 | ⬜ Requires the team — cannot be done by the OS |
 
 **Total: ~8–9 working sessions to a 100% six-layer OS**, with steps 4–6 being the same work
 the capstone already requires (they are not overhead added by this assessment).

@@ -132,3 +132,59 @@ Every quality-control checkpoint produced while building this vault, in chronolo
 
 ## See also
 - [[Talabat MOC]] — top-level navigation
+
+## Complete Validation index (auto-maintained)
+
+> Added 2026-07-24 per the Pilot 4 standing convention (every Validation note must be
+> reachable from MOC navigation). `scripts/check_freshness.py` enforces this list's
+> completeness — when you add a Validation note, add its link here.
+
+### Citation audits
+- [[Citation_Audit_Section_01]]
+- [[Citation_Audit_Section_01_v2]]
+- [[Citation_Audit_Section_02_v2]]
+- [[Citation_Audit_Section_03]]
+- [[Citation_Audit_Section_03_v2]]
+- [[Citation_Audit_Section_04]]
+- [[Citation_Audit_Section_05]]
+- [[Citation_Audit_Section_06]]
+- [[Citation_Audit_Section_06_v2]]
+- [[Citation_Audit_Section_07]]
+- [[Citation_Audit_Section_07_v2]]
+- [[Citation_Audit_Section_08]]
+- [[Citation_Audit_Section_08_v2]]
+- [[Citation_Audit_Section_10_v2]]
+- [[Citation_Audit_Section_11]]
+- [[Citation_Audit_Section_11_v2]]
+- [[Citation_Audit_Section_12]]
+- [[Citation_Audit_Section_13]]
+- [[Citation_Audit_Section_14]]
+- [[Citation_Audit_Section_14_v2]]
+
+### QA reviews
+- [[QA_Review_Section_01]]
+- [[QA_Review_Section_01_v2]]
+- [[QA_Review_Section_03_v2]]
+- [[QA_Review_Section_04]]
+- [[QA_Review_Section_05]]
+- [[QA_Review_Section_06]]
+- [[QA_Review_Section_06_v2]]
+- [[QA_Review_Section_07]]
+- [[QA_Review_Section_07_v2]]
+- [[QA_Review_Section_08]]
+- [[QA_Review_Section_08_v2]]
+- [[QA_Review_Section_10_v2]]
+- [[QA_Review_Section_11]]
+- [[QA_Review_Section_11_v2]]
+- [[QA_Review_Section_12]]
+- [[QA_Review_Section_13]]
+- [[QA_Review_Section_14]]
+- [[QA_Review_Section_14_v2]]
+
+### Readiness, pivot & other reports
+- [[Approval_Language_Cleanup_2026-07-23]]
+- [[Consistency_Audit_2026-07-23]]
+- [[Final_Comprehensive_Readiness_Review_2026-07-23]]
+- [[Final_Execution_Readiness_Report_2026-07-23]]
+- [[Main_Merge_Readiness_Report_2026-07-23]]
+- [[Strategic_Pivot_Final_Report_2026-07-23]]
