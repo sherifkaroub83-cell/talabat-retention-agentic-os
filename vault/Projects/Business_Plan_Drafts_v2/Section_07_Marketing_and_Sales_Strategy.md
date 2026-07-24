@@ -1,7 +1,7 @@
 ---
 section: 7
 title: Marketing and Sales Strategy
-status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_07_v2_Pass2]], [[QA_Review_Section_07_v2_Pass2]]), Pass 2's one finding fixed and independently reconfirmed correct by Pass 3 ([[Citation_Audit_Section_07_v2_Pass3]]), which found 1 new moderate finding (§7.6 pointed to the wrong Section 6 subsection — §6.1, not §6.4 — for the vouchers contra-revenue figure, and silently asserted "no contradiction" between two different, unreconciled same-tier disclosed figures rather than flagging the discrepancy per the evidence-ranking skill's rule); fixed 2026-07-24 — not yet reconfirmed by a fourth independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
+status: Done (independently verified) — Pass 4 closure audit completed 2026-07-24; §7.6 now points to §6.1 and explicitly preserves the unresolved same-tier voucher/contra-revenue discrepancy
 pipeline_run: 2026-07-23
 supersedes_note: "No prior Section 7 draft exists under vault/Projects/Business_Plan_Drafts/ (no _v2 suffix) — this is the first drafting pass on Section 7 under either the old or new problem. It is drafted fresh against the 2026-07-23 pivot's Group-wide capital-allocation problem, per Problem_Charter.md, and is not a companion revision of any earlier file."
 ---

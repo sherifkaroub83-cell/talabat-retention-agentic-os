@@ -1,7 +1,7 @@
 ---
 section: 8
 title: Operations Plan
-status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_08_v2_Pass2]], [[QA_Review_Section_08_v2_Pass2]]), Pass 2's one finding fixed and independently reconfirmed by Pass 3 ([[Citation_Audit_Section_08_v2_Pass3]]), which found 1 new hard failure (§8.1/§8.2 described the CQCA in the present tense as currently operative, when TLB-026 page 156 discloses it was terminated effective 31 Dec 2024 and replaced by GLSA sub-licensing from 1 Jan 2025) and 1 new moderate finding (the "all three governed by German law" claim cited only TLB-026 p.156, but GLSA's German-law clause is on p.153); both fixed 2026-07-24 — not yet reconfirmed by a fourth independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
+status: Done (independently verified) — Pass 4 closure audit completed 2026-07-24; CQCA is correctly historical, GLSA sub-licensing current from 1 January 2025, and the German-law statement cites the relevant p.153/p.156 evidence
 pipeline_run: 2026-07-24
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_08_Operations_Plan.md, which was drafted for the superseded Egypt-retention problem and stays untouched as historical record — not read as an input to this draft, per the standing instruction never to read from the non-_v2 drafts directory. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem (Problem_Charter.md)."
 ---
