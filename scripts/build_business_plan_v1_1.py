@@ -21,6 +21,15 @@ BLUE = RGBColor(31, 77, 120)
 GRAY = RGBColor(82, 82, 82)
 LIGHT = "F4F6F9"
 
+TEAM_MEMBERS = [
+    ("Omar Hassan Ali Mohamadin Mohamed", "24125108"),
+    ("Ahmed Fawzy Mohamed Rashed", "24220998"),
+    ("Mohamed Magdy Abdullah Marawan", "24224459"),
+    ("Sherif Samy Abdelhady Karoub", "24225778"),
+    ("Ahmed Abd Elhakam Abd Elfattah Zaian", "24224008"),
+    ("Abdallah Mahmoud Abdo Ahmed", "24220430"),
+]
+
 EXHIBITS = {
     1: [
         ("Exhibit_01_disclosed_programme_structure.png",
@@ -374,6 +383,27 @@ def set_table_geometry(table, widths):
                     run.font.size = Pt(8.5)
 
 
+def tighten(text, max_chars):
+    """Trim prose toward max_chars, preferring a clean sentence end in a window around the target
+    (so the Pyramid Principle's answer-first sentence survives whole, not mid-clause). This corpus
+    writes long semicolon-joined compound sentences with a single terminal period, often well past
+    any fixed cutoff — searching backward from max_chars for the *nearest* ". " can land on a
+    spurious early period (an abbreviation, or the one right after a bolded one-word lead-in like
+    "Weaknesses.") and truncate to almost nothing. Instead: look for the first sentence end in a
+    window from 60% to 140% of max_chars; only if none exists there, fall back to a hard
+    word-boundary cut, marked with an ellipsis so the trim is honest about being a trim.
+    """
+    if len(text) <= max_chars:
+        return text
+    window_start = int(max_chars * 0.6)
+    cut = text.find(". ", window_start, int(max_chars * 1.4))
+    if cut != -1:
+        return text[: cut + 1].rstrip()
+    cut = text.rfind(" ", 0, max_chars)
+    trimmed = text[:cut].rstrip() if cut != -1 else text[:max_chars].rstrip()
+    return trimmed + "…"
+
+
 def strip_inline(text):
     text = re.sub(r"\[\[([^\]|]+)\|([^\]]+)\]\]", r"\2", text)
     text = re.sub(r"\[\[([^\]]+)\]\]", r"\1", text)
@@ -450,43 +480,131 @@ def blocks(path):
     return result
 
 
+# Elements that must survive intact or only lightly trimmed regardless of the normal per-subsection
+# budget below, because silently dropping them breaks an explicit GSB template requirement (decision
+# recorded 2026-07-25, following the template-compliance audit that found SWOT, the Key Assumptions
+# Register, the Risk probability-impact/mitigation tables, Section 13's KPI table, and Section 14's
+# traceability table all silently zeroed out). Matched as a (section, substring-of-lowercased-heading)
+# pair against whichever H2/H3 is currently open. `None` cap = no row cap; an int = trimmed to that
+# many rows (still "lightly trimmed", not dropped).
+PROTECTED_PROSE = {(3, "swot")}
+PROTECTED_TABLES = {
+    (9, "key assumptions register"): None,
+    (10, "probability-impact matrix"): None,
+    (10, "mitigation strategy"): None,
+    (13, "kpis mapped to the value driver tree"): None,
+    (14, "traceability note"): 30,
+}
+# Internal QA/audit-trail headings: never required by the template, never useful to an executive
+# reader, and safe to cut outright to buy back page budget for the protected content above.
+SKIP_HEADINGS = ("see also", "cross-section consistency", "fix record", "merge note")
+
+# Section 10 only (decision recorded 2026-07-25, after visual QA on the rebuilt v1.1 found §10.1
+# "Technical Risks" contained zero actual risk): 10.1-10.5 each open with a generic MECE-methodology
+# sentence before the named risks (TECH-01, MKT-01, ...); the 1-paragraph cap was keeping that
+# methodology sentence instead of a risk. Scoped to section 10 specifically rather than generalized,
+# since no other section has this "framing sentence, then coded items" shape in its first paragraph.
+RISK_CODE_RE = re.compile(r"^(TECH|MKT|FIN|ORG|REG)-\d{1,3}\b")
+
+
+def _preferred_paragraphs(items, section):
+    """Section 10 only: pick, per subsection, the index of the first paragraph that names a specific
+    risk code, falling back to the first paragraph if none match. Returns a set of item indices."""
+    preferred = set()
+    if section != 10:
+        return preferred
+    current = []
+
+    def flush():
+        if not current:
+            return
+        for idx, text in current:
+            if RISK_CODE_RE.match(text.strip()):
+                preferred.add(idx)
+                return
+        preferred.add(current[0][0])
+
+    for i, (kind, value) in enumerate(items):
+        if kind in ("h2", "h3"):
+            flush(); current = []
+        elif kind == "p":
+            current.append((i, value))
+    flush()
+    return preferred
+
+
 def select_blocks(items, section):
-    """Executive compression: retain answer, all required subsection identities, key tables and evidence."""
+    """Executive compression: retain answer, all required subsection identities, key tables and evidence.
+
+    Compression is judgment-based, not purely mechanical: ordinary prose is capped tightly (one
+    paragraph, up to two bullets/numbers per subsection) to make room for PROTECTED_PROSE/PROTECTED_TABLES
+    above, which bypass that cap. Counters reset at each H3 (not just each H2) so a subsection's later
+    H3 children are never silently starved by an earlier sibling (e.g. Section 12's Horizon 2/3, or
+    Section 3's Competitor benchmarking after SWOT). For section 10, the kept paragraph is the first
+    one naming a specific risk code, not just whichever paragraph happens to come first (see
+    _preferred_paragraphs).
+    """
     selected = []
-    current = ""
-    prose_count = 0
-    table_count = 0
+    cur_h2 = cur_h3 = ""
+    prose_count = table_count = 0
     section_table_count = 0
     skip = False
-    for kind, value in items:
+    preferred_p = _preferred_paragraphs(items, section)
+
+    def is_protected_prose():
+        return any(sec == section and (needle in cur_h2 or needle in cur_h3) for sec, needle in PROTECTED_PROSE)
+
+    def protected_table_cap():
+        for (sec, needle), cap in PROTECTED_TABLES.items():
+            if sec == section and (needle in cur_h2 or needle in cur_h3):
+                return cap if cap is not None else float("inf")
+        return None
+
+    for i, (kind, value) in enumerate(items):
         if kind == "h1":
             selected.append((kind, value))
             continue
         if kind == "h2":
-            current = value.lower()
+            cur_h2, cur_h3 = value.lower(), ""
             prose_count = table_count = 0
-            skip = any(x in current for x in ("see also", "cross-section consistency"))
+            skip = any(x in cur_h2 for x in SKIP_HEADINGS)
             if not skip:
                 selected.append((kind, value))
             continue
         if kind == "h3":
+            cur_h3 = value.lower()
+            prose_count = table_count = 0  # fix: reset per-H3, not just per-H2 (was silently starving later H3s)
             if not skip and len(selected) < 80:
                 selected.append((kind, value))
             continue
         if skip:
             continue
+        protected = is_protected_prose()
+        table_cap = protected_table_cap()
         if kind == "p":
-            limit = 1
-            if prose_count < limit:
-                selected.append((kind, value)); prose_count += 1
+            if protected:
+                selected.append((kind, tighten(value, 550))); prose_count += 1
+            elif section == 10:
+                if i in preferred_p and prose_count < 1:
+                    selected.append((kind, tighten(value, 320))); prose_count += 1
+            elif prose_count < 1:
+                selected.append((kind, tighten(value, 320))); prose_count += 1
         elif kind == "table":
-            # Keep the first decision-useful table per subsection; cap very large appendix tables.
-            section_table_limit = 0 if section in EXHIBITS else 1
-            if table_count < 1 and section_table_count < section_table_limit and len(value) <= (18 if section == 14 else 22):
-                selected.append((kind, value)); table_count += 1; section_table_count += 1
+            if table_cap is not None:
+                # Protected table: bypasses the section-wide budget and the EXHIBITS zeroing entirely.
+                if table_count < 1:
+                    rows = value if len(value) <= table_cap else [value[0]] + value[1:int(table_cap)]
+                    selected.append((kind, rows)); table_count += 1
+            else:
+                # Keep the first decision-useful table per subsection; cap very large appendix tables.
+                section_table_limit = 0 if section in EXHIBITS else 1
+                if table_count < 1 and section_table_count < section_table_limit and len(value) <= (18 if section == 14 else 22):
+                    selected.append((kind, value)); table_count += 1; section_table_count += 1
         elif kind in {"bullet", "number"}:
-            if prose_count < 3:
-                selected.append((kind, value)); prose_count += 1
+            limit = float("inf") if protected else 2
+            if prose_count < limit:
+                cap = 400 if protected else 220
+                selected.append((kind, tighten(value, cap))); prose_count += 1
         elif kind == "figure":
             selected.append((kind, value))
     return selected
@@ -584,6 +702,14 @@ def cover(doc):
         "\nProtect Food leadership in the evidenced GCC-3 markets, pilot talabat pro in Egypt then "
         "Iraq, continue proven Everyday App investments, and release funding through human-approved KPI gates."
     )
+    doc.add_paragraph()
+    team_heading = doc.add_paragraph()
+    team_heading.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    tr = team_heading.add_run("Prepared by — Group G02")
+    tr.bold, tr.font.color.rgb = True, NAVY
+    team = add_table(doc, [["Name", "Student Registration Number"]] + [[n, i] for n, i in TEAM_MEMBERS])
+    for run in team.rows[0].cells[0].paragraphs[0].runs + team.rows[0].cells[1].paragraphs[0].runs:
+        run.bold = True
     doc.add_page_break()
 
 
@@ -712,12 +838,27 @@ def build_pdf():
         ("VALIGN",(0,0),(-1,-1),"MIDDLE"), ("LEFTPADDING",(0,0),(-1,-1),6), ("RIGHTPADDING",(0,0),(-1,-1),6),
         ("TOPPADDING",(0,0),(-1,-1),5), ("BOTTOMPADDING",(0,0),(-1,-1),5),
     ]))
+    team_rows = [["Name", "Student Registration Number"]] + [[n, i] for n, i in TEAM_MEMBERS]
+    team_t = Table([[Paragraph(f"<b>{a}</b>" if r == 0 else a, styles["BPSmall"]),
+                      Paragraph(f"<b>{b}</b>" if r == 0 else b, styles["BPSmall"])]
+                     for r, (a, b) in enumerate(team_rows)],
+                    colWidths=[3.6*inch, 2.3*inch])
+    team_t.setStyle(TableStyle([
+        ("BACKGROUND",(0,0),(-1,0),colors.HexColor("#E8EEF5")), ("GRID",(0,0),(-1,-1),0.4,colors.HexColor("#DADCE0")),
+        ("VALIGN",(0,0),(-1,-1),"MIDDLE"), ("LEFTPADDING",(0,0),(-1,-1),6), ("RIGHTPADDING",(0,0),(-1,-1),6),
+        ("TOPPADDING",(0,0),(-1,-1),4), ("BOTTOMPADDING",(0,0),(-1,-1),4),
+    ]))
+    team_t.hAlign = "CENTER"
     story += [ct, Spacer(1, 0.3*inch), Paragraph(
         "<b><font color='#FF6B00'>Recommendation in one line</font></b><br/>"
         "Protect Food leadership in the evidenced GCC-3 markets, pilot talabat pro in Egypt then Iraq, "
         "continue proven Everyday App investments, and release funding through human-approved KPI gates.",
         ParagraphStyle("rec", parent=styles["BPBody"], alignment=TA_CENTER, fontSize=10, leading=14)
-    ), PageBreak(), Paragraph("Contents", styles["BPH1"])]
+    ), Spacer(1, 0.25*inch), Paragraph(
+        "<b>Prepared by — Group G02</b>",
+        ParagraphStyle("team_h", parent=styles["BPBody"], alignment=TA_CENTER, fontSize=10, leading=14,
+                       textColor=colors.HexColor("#0B2545"))
+    ), Spacer(1, 0.08*inch), team_t, PageBreak(), Paragraph("Contents", styles["BPH1"])]
     titles = []
     for p in sorted(DRAFTS.glob("Section_*.md")):
         titles.append(next(v for k,v in blocks(p) if k=="h1"))

@@ -6,6 +6,41 @@ writes these entries for you.
 
 ---
 
+## Session 13 — 2026-07-25 — Mohamed Marawan
+
+**Focus:** Fix silent content-loss bug in compression pipeline; cover page roster; §10.1 risk-selection fix.
+
+- **Root-caused a silent data-loss bug** in `build_business_plan_v1_1.py`'s `select_blocks()`:
+  the content-selection counter reset per-H2 heading instead of per-H3 subsection, causing
+  every H3 child after the first under any heading to be silently dropped. This had zeroed
+  out SWOT (all 4 quadrants), the Key Assumptions Register, Risk probability-impact and
+  mitigation tables, the §13 KPI table, and the §14 traceability table in prior builds.
+- Ported the identical fix to `build_final_publication.py` (same underlying bug, same function).
+- Fixed a secondary bug in the prose-tightening helper that could truncate a paragraph to
+  near-nothing on a spurious mid-clause period; replaced with a sentence-boundary-aware
+  version (60-140% window search before falling back to a hard cutoff).
+- Added the full team roster (name + AASTMT student ID, all 6 members) to page 1 of the
+  v1.1 Executive Visual cover, ahead of the Executive Summary.
+- Fixed §10.1 (Technical Risks) showing only a generic methodology sentence instead of an
+  actual risk — selection now prefers a risk-coded paragraph (TECH-/MKT-/FIN-/ORG-/REG-)
+  over the default first paragraph, scoped to Section 10 only. Verified no regression in
+  §3.3 SWOT or §13 KPI, which share the same selection logic.
+- Rebuilt both editions through the real Python pipeline (not the earlier manual Word-COM
+  workaround). Page counts: `Business_Plan_Final.pdf` 24pp, `Business_Plan_v1.1_Executive_
+  Visual.pdf` 25pp — both within the 15-25 page requirement.
+- Visually verified rendered PDF pages (cover, all 4 SWOT quadrants, Risk matrix + mitigation
+  table, §13 KPI table, §14 traceability excerpt) before committing.
+
+**Open item flagged, not fixed (non-blocking):** §10.7 Pre-Mortem heading splits awkwardly
+across the heading line and its first paragraph — pre-existing in the source content, not
+introduced by this session's changes.
+
+**Files changed:** `scripts/build_business_plan_v1_1.py`, `scripts/build_final_publication.py`,
+`Outputs/Business_Plan_Final.docx`, `Outputs/Business_Plan_Final.pdf`,
+`Outputs/Business_Plan_v1.1_Executive_Visual.docx`, `Outputs/Business_Plan_v1.1_Executive_Visual.pdf`
+
+---
+
 ## Session 12 — 2026-07-25 (catch-up: PR #12 backfill; real-pipeline rebuild of Final + v1.1; worktree cleanup)
 
 **Focus:** two things. First, backfill this log for real work that landed on `main` after Session 11
