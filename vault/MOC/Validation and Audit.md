@@ -182,6 +182,7 @@ Every quality-control checkpoint produced while building this vault, in chronolo
 - [[QA_Review_Section_14_v2]]
 
 ### Pass 2 independent verification (2026-07-24 wave)
+- Re-verifications (2026-07-25): [[QA_Review_Section_02_v2_pass2_reverify]] · [[Citation_Audit_Section_03_v2_pass2_reverify]] · [[QA_Review_Section_03_v2_pass2_reverify]] · [[Citation_Audit_Section_04_v2_pass2_reverify]] · [[QA_Review_Section_04_v2_pass2_reverify]] · [[Citation_Audit_Section_05_v2_pass2_reverify]] · [[QA_Review_Section_05_v2_pass2_reverify]]
 - [[Citation_Audit_Section_02_v2_pass2]] · [[QA_Review_Section_02_v2_pass2]]
 - [[Citation_Audit_Section_03_v2_pass2]] · [[QA_Review_Section_03_v2_pass2]]
 - [[Citation_Audit_Section_04_v2_pass2]] · [[QA_Review_Section_04_v2_pass2]]
