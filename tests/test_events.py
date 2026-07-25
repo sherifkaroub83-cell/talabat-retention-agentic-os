@@ -9,11 +9,23 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-os.environ["AOS_EVENTS_PATH"] = str(Path(tempfile.mkdtemp()) / "events-test.jsonl")
 from scripts.aos import events  # noqa: E402
 
 
 class EventBusTests(unittest.TestCase):
+    # AOS_EVENTS_PATH must be scoped per-test, not set at import: a module-level
+    # os.environ write leaks into every later test's subprocesses (test_export_console
+    # once baked test events into kernel.js that way).
+    def setUp(self):
+        self._prev = os.environ.get("AOS_EVENTS_PATH")
+        os.environ["AOS_EVENTS_PATH"] = str(Path(tempfile.mkdtemp()) / "events-test.jsonl")
+
+    def tearDown(self):
+        if self._prev is None:
+            os.environ.pop("AOS_EVENTS_PATH", None)
+        else:
+            os.environ["AOS_EVENTS_PATH"] = self._prev
+
     def test_emit_and_read_roundtrip(self):
         ev = events.emit("test-suite", "note", "tests/test_events.py", "roundtrip check")
         rows = events.read(type="note", limit=5)

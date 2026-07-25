@@ -1,6 +1,7 @@
 """Tests for the kernel→console export (M4 live-bridge contract)."""
 
 import json
+import os
 import re
 import subprocess
 import sys
@@ -14,8 +15,9 @@ KERNEL_JS = ROOT / "app" / "agentic-os-console" / "src" / "js" / "kernel.js"
 class ExportConsoleTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        env = {k: v for k, v in os.environ.items() if k != "AOS_EVENTS_PATH"}
         r = subprocess.run([sys.executable, "scripts/aos/export_console.py"],
-                           cwd=ROOT, capture_output=True, text=True, timeout=120)
+                           cwd=ROOT, capture_output=True, text=True, timeout=120, env=env)
         assert r.returncode == 0, r.stderr
         text = KERNEL_JS.read_text(encoding="utf-8")
         cls.kernel = json.loads(re.search(r"export const KERNEL = (.*);\s*$", text, re.S).group(1))
