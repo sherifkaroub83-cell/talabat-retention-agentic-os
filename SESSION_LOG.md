@@ -6,6 +6,37 @@ writes these entries for you.
 
 ---
 
+## Session 11 — 2026-07-24/25 (final v2 recovery, whole-plan gates, publication, and PR #6)
+
+**Focus:** recover the missing verified v2 Section 13, close the final independent-verification and
+whole-plan gates, publish the Group-wide Business Plan, and integrate only the approved work on an
+isolated branch.
+
+**Done:**
+- Recovered `vault/Projects/Business_Plan_Drafts_v2/Section_13_Monitoring_and_Evaluation.md` from
+  commit `6e7224b`; its Git blob matches that verified v2 version exactly and includes the reviewed
+  cadence, KPI-baseline-period, and churn-scope corrections. No historical/superseded section was used.
+- Confirmed all 14 active v2 sections are present and Done (independently verified). Targeted Pass 4
+  closure and Stages 14–18 whole-plan gates passed, including zero open whole-plan citation failures.
+- Generated `Outputs/Business_Plan_Final.docx` and `Outputs/Business_Plan_Final.pdf`; verified both open,
+  all 14 section headings are present, and the PDF contains exactly 25 pages.
+- Added `Outputs/Formatting_QA_Report.md` and `Outputs/Publication_QA_Report.md`. Publication QA passed;
+  the formatting report records the limited inability to rasterize the DOCX directly while confirming
+  its OOXML structure and content.
+- Scanned final outputs for TODO, TBD, FIXME, placeholder, and drafting-note language; no residual
+  markers were found.
+- Preserved all historical outputs and added the final artifacts under distinct filenames.
+- Committed the approved publication work as `299daf4` on
+  `codex/final-business-plan-publication`, pushed the branch, and opened PR #6 against `main`.
+
+**Current state:** PR #6 is open and unmerged. The Business Plan publication work is complete; this
+documentation synchronization is being committed separately before merge review.
+
+**Next:** review PR #6 and merge only with explicit owner approval. The OS structure document, group
+presentation, team-role assignment, and submission remain separate capstone tasks.
+
+---
+
 ## Session 10 — 2026-07-24 (Pass 3 independent re-verification of the 7 Pass-2-fixed sections)
 
 **Focus:** on the `claude/talabat-inputs-directory-7azjx2` branch, run a third independent citation/

@@ -7,6 +7,12 @@ scope: "Pilots 2-4 — the next operational tests, not a jump to drafting the re
 
 # Pilot Validation Plan — Pilots 2, 3, 4
 
+> **Completion note — 2026-07-25:** Pilots 2–4 were completed successfully and their findings were
+> incorporated before the strategic pivot. The successor Group-wide v2 Business Plan is now 14/14
+> independently verified, has passed all whole-plan and publication gates, and is published as a
+> 25-page final DOCX/PDF on PR #6. This file is retained as the historical validation plan; its
+> forward-looking instructions below are no longer an active work queue.
+
 Per explicit instruction: **do not immediately generate the remaining Business Plan.** Pilot 1
 (Section 3, Market Analysis — [[Phase7_Pilot_Execution_Report_Section_03]]) validated most of the
 architecture but left specific, named questions open. Each of the next three pilots is designed to
