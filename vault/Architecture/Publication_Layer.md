@@ -7,6 +7,15 @@ scope: "Narrow extension to the validated Agentic OS: how a fully-drafted, indep
 
 # Publication Layer
 
+## Version 1.2 publication authority
+
+Every publication run must load `Business_Plan_Generation_Contract.md` and
+`vault/Architecture/Business_Plan_Editorial_Standard.md`. The layer may not generate final artifacts
+until all ten contract gates have passed. In particular, factual approval does not imply editorial
+approval: editorial readability, content completeness, decision consistency, template compliance,
+and the external-reader test require independent recorded verdicts. After generation, the DOCX must
+open and retain its required structure, and every rendered PDF page must pass visual publication QA.
+
 The Agentic OS's content pipeline (`Business_Plan_Generation_Pipeline.md`'s 19 stages, as of the
 2026-07-23 pivot) ends when a section reaches **✅ Done (independently verified)**. As of this
 document's authoring (22/07/2026), all 14 sections of the *original Egypt-retention plan* had reached
@@ -78,6 +87,9 @@ Its gate conditions, checked before anything else:
   a noted-but-non-blocking condition like the pressure test above — a FAIL here means the candidate
   document does not have fourteen correctly numbered, titled, and ordered sections, and nothing
   downstream may format or export it until that is fixed and the gate re-run.
+- The Version 1.2 editorial readability, content completeness, decision-consistency, and
+  external-reader gates have each returned PASS for the assembled candidate. Formatting may not be
+  used to disguise a failure in any of these gates.
 
 If any section fails the gate, or the Template Compliance Gate returns FAIL, the process stops and
 reports exactly what blocks the run, rather than formatting a document with an unverified section or a

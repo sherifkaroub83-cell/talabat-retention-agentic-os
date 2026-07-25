@@ -2,7 +2,7 @@
 type: architecture
 status: approved
 created: "2026-07-21"
-updated: "2026-07-23"
+updated: "2026-07-25"
 ---
 
 # Business Plan Generation Pipeline — 19 Stages (post-pivot)
@@ -11,6 +11,31 @@ Task 8 of the OS Architecture Design Phase; extended 2026-07-23 as Phase 7 of th
 the Group-wide capital-allocation problem (`Problem_Charter.md`). This document defines *how* the
 Business Plan moves from "problem confirmed" to "handed to Publication" — the `business-plan-drafting`
 skill's 14-section content map (remapped 2026-07-23) still defines *what* goes in each section.
+
+## Version 1.2 editorial enforcement overlay
+
+`Business_Plan_Generation_Contract.md` and
+`vault/Architecture/Business_Plan_Editorial_Standard.md` are mandatory pipeline inputs, not optional
+reference documents. Every run follows this order:
+
+1. Load current state
+2. Load governing problem
+3. Load active template
+4. Load evidence and geography rules
+5. Load approved decisions and assumptions
+6. Load Editorial Standard
+7. Draft section
+8. Run factual validation
+9. Run editorial validation
+10. Run template validation
+11. Approve section
+12. Assemble full plan
+13. Run whole-plan editorial validation
+14. Generate DOCX/PDF
+15. Run publication validation
+
+No stage may treat a factual PASS as an editorial PASS. A section or assembled plan remains incomplete
+until every applicable contract gate passes.
 
 > **2026-07-23 pivot note:** the original design was an 11-stage **per-section** loop only — it had no
 > explicit plan-level setup phase and no whole-plan consistency gates, because the original
@@ -66,23 +91,25 @@ Run once per section, drawing on Part A's outputs instead of raw Facts alone.
 
 | # | Sub-stage | Owner | Reads | Writes |
 |---|---|---|---|---|
-| 13.1 | Intake & Scoping | Orchestrator | `AI_Business_Plan_Template.md`, `business-plan-drafting` skill (remapped 2026-07-23) | Confirms section, required sub-bullets |
+| 13.1 | Intake & Scoping | Orchestrator | `Business_Plan_Generation_Contract.md`, `vault/Architecture/Business_Plan_Editorial_Standard.md`, `AI_Business_Plan_Template.md`, `business-plan-drafting` skill | Confirms section, required sub-bullets, editorial constraints, and gates |
 | 13.2 | Evidence Assembly | Orchestrator | Part A's assembled evidence + `Knowledge/Facts`, `Topics`, `Strategic` | A working evidence list for the section |
 | 13.3 | Gap Detection | Orchestrator | The assembled evidence vs. the template's required sub-bullets | Gap list, typed: external / forecast / decision |
 | 13.4 | External Research Resolution | `research-agent` | `Research_Register.md` | Research Notes, register updates |
 | 13.5 | Forecast & Assumption Generation | `forecasting-agent` | `Value_Driver_Tree_v2.md`, `Facts/` | `Value_Driver_Tree_v2.md`, `Scenarios_v2.md` updates |
 | 13.6 | Decision Escalation | `decision-steward` | All evidence tiers, open questions from 13.4–13.5 or 13.7 | `Decision_Log/DEC-XXX.md`, `Investment_Options/OPT-XXX.md`, Assumptions Register rows |
 | 13.7 | Evidence Ranking & Conflict Resolution | `evidence-citation-agent` | Competing evidence found in 13.2–13.5 | Ranked evidence set; escalations to 13.6 where needed |
-| 13.8 | Drafting (McKinsey Lens) | Orchestrator | The resolved evidence + registered (`Approved`) assumptions only | Section prose |
+| 13.8 | Drafting (McKinsey Lens + Editorial Standard) | Orchestrator | The resolved evidence + registered (`Approved`) assumptions + the Editorial Standard | Section prose |
 | 13.9 | Citation Verification | `evidence-citation-agent` | The draft | `Citation_Audit_Section_N.md` |
 | 13.10 | Cross-Section Consistency & KPI Alignment | `kpi-agent` (financial/KPI sections) or Orchestrator (others) | `Value_Driver_Tree_v2.md`, other section drafts | Consistency notes; `KPI_Tree_v2.md` updates |
-| 13.11 | QA & Final Review | `qa-review-agent` | The draft, citation audit, template, **plus the three new gates (Problem Consistency / Financial Integrity / Geographic Evidence)** | `QA_Review_Section_N.md`; flips status to ✅ |
+| 13.11 | QA & Final Review | `qa-review-agent` | The draft, citation audit, template, contract, Editorial Standard, and all factual/editorial gates | `QA_Review_Section_N.md`; records factual, editorial readability, completeness, decision-consistency, template, and external-reader results; flips status to ✅ only when all pass |
 
 ### Gate rules (unchanged from the original design)
 
 - **13.8 cannot start** while any gap typed in 13.3 as external/forecast/decision is still unresolved
   for that specific claim.
 - **13.11 is the only sub-stage that can move a section to ✅ Done.** 13.9 passing alone only earns 🟡.
+- **A factual PASS is not an editorial PASS.** Editorial readability, content completeness, decision
+  consistency, and the external-reader test must be assessed explicitly.
 - **Two-pass verification** (see [[Agentic_OS_Architecture_v2]], Change 2): 13.9 and 13.11 assume
   independence. When performed in-line by the same context that drafted the section, mark **✅ Done
   (self-reviewed)**; a fresh, separately-invoked Pass 2 is required for **✅ Done (independently
@@ -100,11 +127,12 @@ Run once per section, drawing on Part A's outputs instead of raw Facts alone.
 | 15 | **Financial consistency review** | `qa-review-agent` | The **Financial Integrity Gate** at whole-plan scope: do Sections 6/9/12/13's figures reconcile with each other, not just internally — no section citing a different USD175mn sub-split, a different EBITDA-margin trajectory, or a different headline scenario than another | `vault/Validation/Financial_Integrity_Gate.md` (`scope: whole plan`) |
 | 16 | **Geographic evidence review** | `qa-review-agent` | The **Geographic Evidence Gate** at whole-plan scope: no section applying a geography tag inconsistently with how another section tagged the same underlying evidence | `vault/Validation/Geographic_Evidence_Gate.md` (`scope: whole plan`) |
 | 17 | **Citation audit** (whole-plan) | `evidence-citation-agent` | Every claim in the assembled plan, re-checked together (catches duplicated/relocated claims individual section audits could miss) — mirrors the precedent set by the pre-pivot "whole-plan McKinsey Lens pressure test" | Whole-plan citation audit note |
-| 18 | **Template Compliance Gate** | `.claude/skills/template-compliance-gate/SKILL.md` | Section count/numbering/titles/order intact; no structural drift from any prior stage (including any executive-editing pass) | `vault/Validation/Template_Compliance_Checklist.md` |
-| 19 | **Hand off to Publication Layer** | Orchestrator | Stages 14–18 all PASS | Formal handoff to `.claude/skills/executive-document-formatting/SKILL.md` per `[[Publication_Layer]]`'s contract |
+| 18 | **Template + editorial publication-readiness gates** | `qa-review-agent` and `.claude/skills/template-compliance-gate/SKILL.md` | Template structure plus recorded whole-plan PASS results for editorial readability, content completeness, decision consistency, and the external-reader test | `vault/Validation/Template_Compliance_Checklist.md`, `Editorial_Readability_QA.md`, `Content_Completeness_QA.md`, `Decision_Consistency_QA.md`, `External_Reader_Test.md` |
+| 19 | **Generate and validate publication artifacts** | Orchestrator + `.claude/skills/executive-document-formatting/SKILL.md` | Stages 14–18 all PASS; then generate DOCX/PDF, open the DOCX, render and inspect every PDF page, and record publication QA | Final DOCX/PDF plus Formatting QA and Publication QA reports |
 
-**Stage 19 cannot begin unless Stages 14, 15, 16, and 18 all show PASS**, and Stage 17 shows zero open
-citation failures. A FAIL at any of 14–18 routes back to the specific section(s) and stage(s)
+**Stage 19 cannot begin unless Stages 14, 15, 16, and every Stage 18 gate show PASS**, and Stage 17
+shows zero open citation failures. Stage 19 is not complete until DOCX structural/open validation and
+page-by-page PDF validation both pass. A FAIL at any of 14–19 routes back to the specific section(s) and stage(s)
 responsible — per each gate template's "If FAIL" section — not a blanket re-draft.
 
 **Why the Template Compliance Gate (Stage 18) sits outside `qa-review-agent`'s per-section Stage 11,

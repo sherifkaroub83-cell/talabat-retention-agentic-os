@@ -1,10 +1,23 @@
 ---
 name: executive-document-formatting
-description: Formats and paginates the already-approved, fully-drafted 14-section Business Plan into submission-ready DOCX and PDF deliverables. Presentation and layout only — never touches business content, numbers, claims, citations, decisions, or conclusions, and never changes section count, numbering, titles, or order. Requires a PASS from the Template Compliance Gate before running. Use only after all 14 Section_XX drafts are Done (independently verified) and, ideally, after the whole-plan McKinsey Lens pressure test.
+description: Formats and paginates the already-approved, fully-drafted 14-section Business Plan into submission-ready DOCX and PDF deliverables. Presentation and layout only — never touches business content, numbers, claims, citations, decisions, or conclusions, and never changes section count, numbering, titles, or order. Requires every mandatory Business Plan Generation Contract gate to pass before running.
 trigger: /format-business-plan
 ---
 
 # Executive Document Formatting Skill
+
+## Mandatory Version 1.2 publication preflight
+
+Before any formatting or export, load:
+
+- `Business_Plan_Generation_Contract.md`
+- `vault/Architecture/Business_Plan_Editorial_Standard.md`
+
+Refuse export unless the candidate has recorded PASS results for factual integrity, financial
+integrity, geographic evidence, decision consistency, editorial readability, content completeness,
+template compliance, and the external-reader test. Formatting cannot conceal or compensate for an
+editorial failure. After generation, validate that the DOCX opens and retains its required structure,
+then render and inspect every PDF page before declaring publication readiness.
 
 Full architectural context: `vault/Architecture/Publication_Layer.md`. This skill is that layer's
 only operative procedure. It is modeled structurally on `.claude/skills/business-plan-drafting/

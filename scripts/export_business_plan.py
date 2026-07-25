@@ -51,11 +51,39 @@ TRACKER_PATH = os.path.join(
 )
 OUTPUTS_DIR = os.path.join(REPO_ROOT, "Outputs")
 SMOKE_TEST_DIR = os.path.join(REPO_ROOT, "vault", "Validation", "_export_smoke_test")
+GENERATION_CONTRACT_PATH = os.path.join(REPO_ROOT, "Business_Plan_Generation_Contract.md")
+EDITORIAL_STANDARD_PATH = os.path.join(
+    REPO_ROOT, "vault", "Architecture", "Business_Plan_Editorial_Standard.md"
+)
+PREPUBLICATION_GATE_PATHS = [
+    ("Factual QA", os.path.join(REPO_ROOT, "vault", "Validation", "Citation_Audit_Whole_Plan_v2_Pass4.md")),
+    ("Financial QA", os.path.join(REPO_ROOT, "vault", "Validation", "Financial_Integrity_Gate.md")),
+    ("Geographic QA", os.path.join(REPO_ROOT, "vault", "Validation", "Geographic_Evidence_Gate.md")),
+    ("Decision consistency QA", os.path.join(REPO_ROOT, "vault", "Validation", "Decision_Consistency_QA.md")),
+    ("Editorial readability QA", os.path.join(REPO_ROOT, "vault", "Validation", "Editorial_Readability_QA.md")),
+    ("Content completeness QA", os.path.join(REPO_ROOT, "vault", "Validation", "Content_Completeness_QA.md")),
+    ("Template compliance QA", os.path.join(REPO_ROOT, "vault", "Validation", "Template_Compliance_Checklist.md")),
+    ("External-reader test", os.path.join(REPO_ROOT, "vault", "Validation", "External_Reader_Test.md")),
+]
 
 ORANGE = RGBColor(0xFF, 0x6B, 0x00)
 DARK_GREY = RGBColor(0x33, 0x33, 0x33)
 
 FIGURE_MARKER_RE = re.compile(r"<!--\s*FIGURE:\s*(Figure_\d+_[A-Za-z0-9_]+)\s*-->")
+RAW_INTERNAL_REFERENCE_RE = re.compile(
+    r"(?:\bvault[/\\]|\b[\w.-]+\.md\b|\b(?:DEC|ASM)-\d{3}\b|"
+    r"\b(?:bp-orchestrator|qa-review-agent|research-agent|forecasting-agent|"
+    r"decision-steward|evidence-citation-agent|kpi-agent|exec-summary-agent|"
+    r"business-plan-drafting|executive-document-formatting)\b)",
+    re.IGNORECASE,
+)
+PROHIBITED_EXPRESSIONS = (
+    "corpus", "ghost deck", "middle path", "not re-litigated", "not one it invents",
+    "stated honestly", "not merely asserted", "does not fabricate", "does not paper over",
+    "deliberate framing choice, not an oversight", "comparative in kind, not degree",
+    "this os's own proposal", "this section's own contribution", "load-bearing claim",
+    "evidentiary anchor",
+)
 
 
 # ---------------------------------------------------------------------------
@@ -75,6 +103,68 @@ def strip_frontmatter(text):
                     meta[k.strip()] = v.strip().strip('"')
             return meta, body
     return {}, text
+
+
+def editorial_preflight(section_files):
+    """Return blocking Version 1.2 contract/editorial findings before a real export."""
+    failures = []
+    for label, path in (
+        ("Business Plan Generation Contract", GENERATION_CONTRACT_PATH),
+        ("Business Plan Editorial Standard", EDITORIAL_STANDARD_PATH),
+    ):
+        if not os.path.exists(path):
+            failures.append(f"{label}: mandatory authority file is missing")
+
+    for label, path in PREPUBLICATION_GATE_PATHS:
+        if not os.path.exists(path):
+            failures.append(f"{label}: required validation artifact is missing")
+            continue
+        report = open(path, encoding="utf-8").read()
+        if not re.search(r"\bPASS\b", report, re.IGNORECASE):
+            failures.append(f"{label}: validation artifact does not record PASS")
+
+    section_one_body = ""
+    for path in section_files:
+        section_number = int(re.search(r"Section_(\d+)", os.path.basename(path)).group(1))
+        _, body = strip_frontmatter(open(path, encoding="utf-8").read())
+        if section_number == 1:
+            section_one_body = body
+        if section_number > 13:  # Technical/internal traceability is allowed in labelled appendices.
+            continue
+
+        for line_no, line in enumerate(body.splitlines(), 1):
+            if RAW_INTERNAL_REFERENCE_RE.search(line):
+                failures.append(
+                    f"{os.path.basename(path)}:{line_no}: raw internal reference in the main body"
+                )
+            lowered = line.lower().replace("’", "'")
+            for phrase in PROHIBITED_EXPRESSIONS:
+                if phrase in lowered:
+                    failures.append(
+                        f"{os.path.basename(path)}:{line_no}: prohibited expression '{phrase}'"
+                    )
+            if re.match(r"^\s*[-*]\s+", line) and re.search(
+                r"\b(?:and|or|of|to|for|from)\s*[.;:]?\s*$", line, re.IGNORECASE
+            ):
+                failures.append(
+                    f"{os.path.basename(path)}:{line_no}: bullet appears to end mid-thought"
+                )
+
+        prose = re.sub(r"```.*?```", "", body, flags=re.DOTALL)
+        for sentence in re.split(r"(?<=[.!?])\s+", prose):
+            clean = re.sub(r"[#>*_`|[\]()-]", " ", sentence)
+            words = re.findall(r"\b[\w’'-]+\b", clean)
+            if len(words) > 35:
+                excerpt = " ".join(words[:10])
+                failures.append(
+                    f"{os.path.basename(path)}: sentence over 35 words ('{excerpt}…')"
+                )
+
+    if "Evidence Basis and Limitations" not in section_one_body:
+        failures.append(
+            "Section 1: required consolidated 'Evidence Basis and Limitations' section is missing"
+        )
+    return failures
 
 
 def parse_blocks(body):
@@ -377,6 +467,9 @@ def build(smoke_test):
         status = meta.get("status", "")
         if "Done" not in status or "independently verified" not in status:
             gate_failures.append(f"Section {i}: status is '{status[:80]}...' — not Done (independently verified)")
+
+    if not smoke_test:
+        gate_failures.extend(editorial_preflight(section_files))
 
     if gate_failures and not smoke_test:
         print("EXPORT BLOCKED — input gate failed (Publication_Layer.md §2):")

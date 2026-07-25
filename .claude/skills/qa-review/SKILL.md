@@ -1,13 +1,16 @@
 ---
 name: qa-review
-description: The final-gate checklist for a Business Plan section - template completeness, McKinsey Lens pressure test, citation-audit consumption, research staleness check, the drafting skill's Anti-patterns list, and (added 2026-07-23) the Problem Consistency, Financial Integrity, and Geographic Evidence gates. No user-facing trigger — invoked internally by the qa-review-agent at pipeline stage 11.
+description: Final gate for a Business Plan section or assembled plan - factual, financial, geographic, decision, editorial readability, completeness, template, and external-reader validation.
 ---
 
 # QA Review Skill
 
 Full design: `vault/Architecture/Agentic_OS_Architecture.md` §3.8, `Business_Plan_Generation_Pipeline.md`.
 
-## Checklist (run all eight, every section)
+Before review, load `Business_Plan_Generation_Contract.md` and
+`vault/Architecture/Business_Plan_Editorial_Standard.md`.
+
+## Checklist (run all twelve, every section)
 
 1. **Template completeness** — every required sub-bullet for this section in
    `AI_Business_Plan_Template.md` is present. List anything missing by name.
@@ -33,6 +36,14 @@ Full design: `vault/Architecture/Agentic_OS_Architecture.md` §3.8, `Business_Pl
 8. **(Added 2026-07-23) Geographic Evidence Gate** —
    `vault/Templates/_TEMPLATE-geographic-evidence-gate.md`'s 9 checks, verifying every claim is
    correctly geography-tagged per `vault/Architecture/Geographic_Evidence_Rules.md`.
+9. **Editorial Readability Gate** — test sentence length, answer-first prose, acronyms, raw body
+   references, prohibited expressions, repeated limitations, and professional executive voice.
+10. **Content Completeness Gate** — no empty heading, incomplete bullet, truncated sentence, broken
+    table row, missing answer, or body/appendix misplacement.
+11. **Decision Consistency Gate** — preserve active decisions and assumptions while keeping raw codes
+    out of the main narrative.
+12. **External Reader Test** — a reader without repository access can understand every paragraph,
+    recommendation, limitation, and management action.
 
 ## Output
 
@@ -46,3 +57,5 @@ the 2026-07-23 pivot) flips to ✅ Done.
 - You approve or reject — you do not rewrite the prose yourself. Hand fixes back to the Orchestrator.
 - A section stays 🟡 (drafted, needs verification) until it has a passed review on file, never ✅ on
   the strength of a draft alone.
+- A factual PASS is not an editorial PASS. Record editorial, completeness, and external-reader
+  results separately in every QA artifact.

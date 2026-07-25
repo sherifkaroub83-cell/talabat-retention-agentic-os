@@ -6,10 +6,23 @@ trigger: /business-plan
 
 # /business-plan — AI Business Plan Drafting Skill
 
+## Mandatory v1.2 preflight
+
+Before reading section evidence or writing prose, load `Business_Plan_Generation_Contract.md`,
+`vault/Architecture/Business_Plan_Editorial_Standard.md`, `Problem_Charter.md`,
+`AI_Business_Plan_Template.md`, `vault/Architecture/Geographic_Evidence_Rules.md`, and the approved
+decisions and assumptions relevant to the section.
+
+The Generation Contract and Editorial Standard are active pipeline inputs, not optional references.
+**A section that is factually correct but fails the Editorial Standard is incomplete.** It may not
+advance to approval, assembly, or publication.
+
 Draft the AI Business Plan section by section against `AI_Business_Plan_Template.md` (the verbatim,
 graded specification — read it in full before drafting anything; this skill summarizes it into a
 vault-mapped procedure but is not a substitute for it). Output lands in `Outputs/` per project
-convention. Target: 15–25 pages of substance, all 14 sections, PDF or Word, exported from this OS.
+convention. Produce all 14 sections in a complete, readable publication. Follow the active template's
+page guidance, but never force a page count by truncating sentences, shrinking tables, or removing
+necessary evidence and limitations.
 
 **Per-section length guidance (added 2026-07-23 — a soft budget while drafting, not a new gate):** at
 ~20 pages split across 14 sections, most sections should land around 1–1.5 pages of body prose (plus
@@ -18,7 +31,18 @@ below) may reasonably run to 2 pages; Section 1 (Executive Summary) should stay 
 construction (it's a synthesis, not a restatement). This is guidance for the drafting agent to self-pace
 against while writing, not a mechanical rule — the only **hard** page-count check remains
 `template-compliance-gate`'s check #10, run once at whole-plan scope (Stage 18), which is where a
-budget overrun actually gets caught and fixed.
+budget overrun is reviewed. The Editorial Standard controls readability and completeness.
+
+## Mandatory v1.2 drafting rules
+
+- Write for an MBA professor, senior executive, Board reader, and external reader without repository access.
+- Use the company-fact, recommendation, and methodology voices defined in the Editorial Standard.
+- Keep raw paths, filenames, DEC/ASM codes, and agent/pipeline language out of the main narrative.
+- Consolidate the evidence defence into one Evidence Basis and Limitations section.
+- Use missing-baseline pilot tables instead of synthetic funnel percentages.
+- Keep 10–15 executive KPIs in the body and the complete dictionary in Appendix C.
+- Apply the standard Appendix A–G structure.
+- Flag sentences above 35 words before sending a section to QA.
 
 **Draft location (2026-07-23 pivot):** working section drafts live at
 `vault/Projects/Business_Plan_Drafts_v2/Section_XX_*.md` — the only valid read/write location for

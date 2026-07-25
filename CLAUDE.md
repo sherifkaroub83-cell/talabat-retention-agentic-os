@@ -19,6 +19,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 > Financial Integrity, and Geographic Evidence gates (specified in `vault/Architecture/Business_Plan_Generation_Pipeline.md`;
 > the geography rules themselves are formalized in `vault/Architecture/Geographic_Evidence_Rules.md`)
 > plus the Template Compliance Gate before any publication step.
+>
+> **Permanent Version 1.2 rule (25 July 2026):** every Business Plan session must load
+> `Business_Plan_Generation_Contract.md` and
+> `vault/Architecture/Business_Plan_Editorial_Standard.md` before drafting. A factual PASS is not an
+> editorial PASS.
 
 ## What this project is
 

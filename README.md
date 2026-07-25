@@ -60,6 +60,8 @@ description below documents the underlying machinery, not an unactivated startin
 | `MEMORY.md` · `PROJECT_PROGRESS.md` · `SESSION_LOG.md` | Project facts · milestones · session history |
 | `Input_Data/` | Drop your source documents here (read-only) |
 | `Outputs/` | Final Business Plan DOCX/PDF, publication/formatting QA reports, and preserved historical exports |
+| `Business_Plan_Generation_Contract.md` | Mandatory inputs, ordered workflow, and ten publication gates for every Business Plan run |
+| `vault/Architecture/Business_Plan_Editorial_Standard.md` | Canonical Version 1.2 audience, voice, editorial, exhibit, KPI, and appendix standard |
 | `vault/` | The Obsidian second brain — `soul.md`/`identity.md`/`user.md`, `MOC/`, `Knowledge/`, `Daily/`, entity folders |
 | `vault/_maintenance/` | The nightly read-only audit prompt + dated changelists |
 | `scripts/daily-brain-maintenance.ps1` | Runs the nightly propose-only audit (vault path auto-derived) |

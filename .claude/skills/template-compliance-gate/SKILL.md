@@ -5,6 +5,10 @@ description: Validation-only gate that verifies a candidate Business Plan public
 
 # Template Compliance Gate
 
+Before running, load `Business_Plan_Generation_Contract.md` and
+`vault/Architecture/Business_Plan_Editorial_Standard.md`. This structural gate is mandatory, but it
+does not substitute for editorial readability, content completeness, or the external-reader test.
+
 Full architectural context: `vault/Architecture/Publication_Layer.md`. This gate exists because a real
 incident showed the previous design had a hole: a document that reads well can still silently violate
 the graded template's structure, and nothing checked for that before export. See "Why this gate
@@ -69,9 +73,11 @@ and the specific check re-run.
    sections reaching Done before being drafted, per `Business_Plan_Generation_Pipeline.md`'s
    Section-1-specific gate rule — written last, and, in the candidate document, physically placed
    first.
-10. **Page count is within the project requirement** (15–25 pages, per the drafting skill's own
-    "Output & submission requirements" and the Project Guide's ceiling) for whatever export format is
-    about to be produced.
+10. **Page-count guidance is assessed without corrupting the plan:** read the active template's current
+    page guidance fresh and report any variance, but never obtain a PASS by truncating necessary
+    evidence, compressing tables below legibility, reducing type below publication standards, or
+    deleting required content. Completeness and readability take precedence; an unavoidable page-count
+    exception must be disclosed, not hidden.
 11. **Executive editing, if any was applied, compressed content inside sections only** — diff the
     candidate document's section-by-section structure (not prose) against the last known-compliant
     14-section assembly; any structural difference (count, numbering, titles, order, merges, deletions)

@@ -39,6 +39,9 @@ agents as the map below describes. **If you find yourself without `Agent` tool a
    behavior to prefer whenever it's actually available.
 
 ## Inputs you always read first
+- `Business_Plan_Generation_Contract.md` — mandatory inputs, ordered execution, and ten output gates
+- `vault/Architecture/Business_Plan_Editorial_Standard.md` — canonical audience, voice, language,
+  main-body exclusions, appendix, table, KPI, and publication rules
 - `Problem_Charter.md` — confirm which business problem is currently active (**2026-07-23 pivot:**
   talabat Group capital allocation, not the superseded Egypt-retention problem) before doing anything else
 - `AI_Business_Plan_Template.md` — the graded spec for the requested section (unchanged by the pivot)
@@ -87,11 +90,19 @@ Section 1 (Executive Summary) is special: do not run sub-stages 2–10 for it. O
 sections report "drafted," delegate the whole section to `exec-summary-agent`, then run sub-stage 11
 on its output.
 
+After factual/citation checks and before approval, run editorial readability, content-completeness,
+and external-reader checks against the canonical Editorial Standard. A factual PASS cannot
+substitute for these checks.
+
 ## Part C (Stages 14–19) — once, after all 14 sections reach 🟡 or better
 Delegate Stages 14/15/16 to `qa-review-agent` at whole-plan scope (not per-section — see
 `Business_Plan_Generation_Pipeline.md` Part C), Stage 17 to `evidence-citation-agent` at whole-plan
 scope, Stage 18 to `.claude/skills/template-compliance-gate/SKILL.md`, and only then hand off to
 Publication (Stage 19) — never before Stages 14, 15, 16, and 18 all show PASS.
+
+At whole-plan scope, Stage 18 also requires recorded PASS results for editorial readability,
+content completeness, and the external-reader test. Stage 19 requires DOCX structural QA and
+page-by-page PDF QA. Follow the Generation Contract if an older stage description omits a gate.
 
 ## Rules
 - Never let a section's status flip to ✅ Done without a passed Part B QA review (sub-stage 13.11) on
