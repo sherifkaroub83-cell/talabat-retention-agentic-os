@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Aegis OS | talabat Agentic Command Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "obsidian-deep": "#050506",
+                        "charcoal": "#161B22",
+                        "surface": "#121316",
+                        "surface-elevated": "#1a1d23",
+                        "surface-card": "#1f232a",
+                        "cyan": "#00F0FF",
+                        "cyan-dim": "#00a8b3",
+                        "purple": "#9D4EDD",
+                        "purple-dim": "#6d2f9e",
+                        "green": "#00FF66",
+                        "green-dim": "#00b347",
+                        "amber": "#FFB800",
+                        "red": "#FF4444",
+                        "text-primary": "#e3e2e6",
+                        "text-secondary": "#9ca3af",
+                        "text-muted": "#6b7280",
+                        "border-subtle": "rgba(255,255,255,0.06)",
+                        "border-hover": "rgba(0,240,255,0.2)",
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Hanken Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { scrollbar-width: thin; scrollbar-color: #1f2937 #0a0e17; }
+        *::-webkit-scrollbar { width: 6px; }
+        *::-webkit-scrollbar-track { background: #0a0e17; }
+        *::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 3px; }
+
+        body {
+            background: #050506;
+            color: #e3e2e6;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: rgba(22, 27, 34, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .glass:hover {
+            border-color: rgba(0, 240, 255, 0.15);
+            background: rgba(22, 27, 34, 0.75);
+        }
+
+        .glow-cyan { box-shadow: 0 0 24px rgba(0, 240, 255, 0.08); }
+        .glow-purple { box-shadow: 0 0 24px rgba(157, 78, 221, 0.08); }
+        .glow-green { box-shadow: 0 0 24px rgba(0, 255, 102, 0.08); }
+
+        .progress-ring { transform: rotate(-90deg); transform-origin: 50% 50%; }
+        .progress-ring circle { transition: stroke-dashoffset 1s ease-in-out; }
+
+        @keyframes pulse-border {
+            0%, 100% { border-color: rgba(0, 240, 255, 0.15); }
+            50% { border-color: rgba(157, 78, 221, 0.4); }
+        }
+        .thinking { animation: pulse-border 3s infinite; }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2.5s infinite linear;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+
+        .nav-item { transition: all 0.2s ease; }
+        .nav-item:hover { background: rgba(255,255,255,0.04); }
+        .nav-item.active {
+            background: linear-gradient(90deg, rgba(157,78,221,0.15), transparent);
+            border-right: 3px solid #9D4EDD;
+            color: #e0b6ff;
+        }
+
+        .stage-bar { transition: all 0.3s ease; }
+        .stage-bar:hover { filter: brightness(1.2); }
+
+        .agent-card { transition: all 0.25s ease; }
+        .agent-card:hover { transform: translateY(-2px); }
+
+        .badge {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .chart-bar { transition: all 0.3s ease; }
+        .chart-bar:hover { filter: brightness(1.3); }
+
+        .tab-btn { transition: all 0.2s ease; }
+        .tab-btn.active {
+            color: #00F0FF;
+            border-bottom: 2px solid #00F0FF;
+        }
+
+        /* Pipeline connector line */
+        .pipeline-connector {
+            position: absolute;
+            top: 50%;
+            left: -12px;
+            width: 12px;
+            height: 2px;
+            background: rgba(0,240,255,0.2);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<base target="_blank">
+</head>
+<body class="min-h-screen flex">
+
+<!-- SIDEBAR -->
+<aside class="fixed left-0 top-0 h-full w-64 z-40 glass border-r border-border-subtle flex flex-col">
+    <!-- Logo -->
+    <div class="px-6 pt-6 pb-4">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan to-purple p-[1.5px]">
+                <div class="w-full h-full rounded-[10px] bg-obsidian-deep flex items-center justify-center">
+                    <span class="material-symbols-outlined text-cyan text-lg">hub</span>
+                </div>
+            </div>
+            <div>
+                <p class="font-display font-bold text-text-primary text-sm leading-tight">Aegis OS</p>
+                <p class="font-mono text-[10px] text-text-muted">v3.4.1 Active</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
+        <div class="px-3 pb-2 pt-2">
+            <p class="font-mono text-[10px] text-text-muted uppercase tracking-widest">Command</p>
+        </div>
+        <a href="#dashboard" class="nav-item active flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer" onclick="showSection('dashboard')">
+            <span class="material-symbols-outlined text-lg">dashboard</span>
+            <span class="font-mono text-xs">Dashboard</span>
+        </a>
+        <a href="#pipeline" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('pipeline')">
+            <span class="material-symbols-outlined text-lg">account_tree</span>
+            <span class="font-mono text-xs">Pipeline (19)</span>
+        </a>
+        <a href="#agents" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('agents')">
+            <span class="material-symbols-outlined text-lg">smart_toy</span>
+            <span class="font-mono text-xs">Agents (8)</span>
+        </a>
+        <a href="#skills" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('skills')">
+            <span class="material-symbols-outlined text-lg">construction</span>
+            <span class="font-mono text-xs">Skills (10)</span>
+        </a>
+
+        <div class="px-3 pb-2 pt-4">
+            <p class="font-mono text-[10px] text-text-muted uppercase tracking-widest">Vault</p>
+        </div>
+        <a href="#knowledge" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('knowledge')">
+            <span class="material-symbols-outlined text-lg">database</span>
+            <span class="font-mono text-xs">Knowledge</span>
+        </a>
+        <a href="#decisions" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('decisions')">
+            <span class="material-symbols-outlined text-lg">gavel</span>
+            <span class="font-mono text-xs">Decisions</span>
+        </a>
+        <a href="#research" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('research')">
+            <span class="material-symbols-outlined text-lg">travel_explore</span>
+            <span class="font-mono text-xs">Research</span>
+        </a>
+        <a href="#forecasts" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('forecasts')">
+            <span class="material-symbols-outlined text-lg">timeline</span>
+            <span class="font-mono text-xs">Forecasts</span>
+        </a>
+        <a href="#validation" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('validation')">
+            <span class="material-symbols-outlined text-lg">verified</span>
+            <span class="font-mono text-xs">Validation</span>
+        </a>
+        <a href="#projects" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('projects')">
+            <span class="material-symbols-outlined text-lg">folder_open</span>
+            <span class="font-mono text-xs">Projects</span>
+        </a>
+
+        <div class="px-3 pb-2 pt-4">
+            <p class="font-mono text-[10px] text-text-muted uppercase tracking-widest">System</p>
+        </div>
+        <a href="#memory" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('memory')">
+            <span class="material-symbols-outlined text-lg">memory</span>
+            <span class="font-mono text-xs">Memory</span>
+        </a>
+        <a href="#logs" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('logs')">
+            <span class="material-symbols-outlined text-lg">terminal</span>
+            <span class="font-mono text-xs">Session Logs</span>
+        </a>
+    </nav>
+
+    <!-- Bottom Actions -->
+    <div class="px-4 pb-6 pt-2 border-t border-border-subtle space-y-3">
+        <button onclick="triggerExport()" class="w-full bg-gradient-to-r from-cyan/20 to-purple/20 border border-cyan/30 text-cyan font-mono text-xs py-2.5 rounded-lg font-semibold hover:from-cyan/30 hover:to-purple/30 transition-all flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-sm">ios_share</span>
+            Export Control
+        </button>
+        <div class="flex items-center justify-between px-2">
+            <div class="flex items-center gap-2 text-text-muted">
+                <span class="material-symbols-outlined text-sm">emergency_home</span>
+                <span class="font-mono text-[10px]">Health</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+                <div class="w-1.5 h-1.5 rounded-full bg-green animate-pulse"></div>
+                <span class="font-mono text-[10px] text-green">OPTIMAL</span>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="ml-64 flex-1 flex flex-col min-h-screen">
+    <!-- TOP BAR -->
+    <header class="fixed top-0 right-0 left-64 z-50 h-14 glass border-b border-border-subtle flex justify-between items-center px-6">
+        <div class="flex items-center gap-4">
+            <h1 class="font-display font-bold text-xl tracking-tight text-cyan">Aegis OS</h1>
+            <div class="h-4 w-px bg-white/10"></div>
+            <span class="font-mono text-[10px] text-text-muted px-2 py-0.5 bg-white/5 rounded border border-white/5">STRATEGIC_LAYER_A1</span>
+        </div>
+        <div class="flex items-center gap-5">
+            <div class="relative">
+                <input type="text" placeholder="Query vault intelligence..." 
+                       class="bg-surface/50 border border-border-subtle focus:border-cyan/50 text-sm py-1.5 pl-3 pr-9 rounded-lg w-56 transition-all outline-none text-text-primary placeholder:text-text-muted font-mono text-xs"/>
+                <span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-text-muted text-sm">search</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <button class="relative text-text-muted hover:text-cyan transition-colors">
+                    <span class="material-symbols-outlined text-lg">notifications</span>
+                    <span class="absolute -top-0.5 -right-0.5 w-2 h-2 bg-amber rounded-full"></span>
+                </button>
+                <div class="w-7 h-7 rounded-full border border-green/40 p-[1px]">
+                    <div class="w-full h-full rounded-full bg-green/20 flex items-center justify-center">
+                        <span class="font-mono text-[9px] text-green font-bold">SK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT AREA -->
+    <div id="content-area" class="mt-14 p-6 flex-1 space-y-6 overflow-y-auto pb-24">
+        <!-- DYNAMIC CONTENT LOADED HERE -->
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="fixed bottom-0 right-0 w-[calc(100%-16rem)] z-30 glass border-t border-border-subtle flex justify-between items-center px-6 py-2">
+        <div class="flex items-center gap-4">
+            <span class="font-mono text-[10px] text-green font-semibold">READY</span>
+            <p class="font-mono text-[10px] text-text-muted">talabat Agentic OS v3.4.1  |  MBA Capstone G02</p>
+        </div>
+        <div class="flex gap-4">
+            <button onclick="exportPDF()" class="font-mono text-[10px] text-text-muted hover:text-cyan underline transition-colors">PDF Export</button>
+            <button onclick="exportDOCX()" class="font-mono text-[10px] text-text-muted hover:text-cyan underline transition-colors">DOCX Bundle</button>
+            <button onclick="archiveSession()" class="font-mono text-[10px] text-text-muted hover:text-cyan underline transition-colors">Archive</button>
+        </div>
+    </footer>
+</main>
+
+<!-- JAVASCRIPT -->
+<script>
+// ===================== DATA MODEL =====================
+const osData = {
+    meta: {
+        version: "3.4.1",
+        lastSync: "2026-07-25T18:21:00+04:00",
+        coordinator: "Sherif Karoub",
+        teamSize: 6,
+        problem: "talabat Group 2026 USD 175M Investment Allocation",
+        status: "Phase 3 - Execution"
+    },
+
+    pipeline: {
+        currentStage: 14,
+        totalStages: 19,
+        stages: [
+            { id: 1, name: "Problem Charter", status: "done", agent: "bp-orchestrator", section: "N/A" },
+            { id: 2, name: "Evidence Extraction", status: "done", agent: "research-agent", section: "N/A" },
+            { id: 3, name: "Knowledge Synthesis", status: "done", agent: "research-agent", section: "N/A" },
+            { id: 4, name: "Decision Framework", status: "done", agent: "decision-steward", section: "N/A" },
+            { id: 5, name: "Assumptions Register", status: "done", agent: "decision-steward", section: "N/A" },
+            { id: 6, name: "Value Driver Tree", status: "done", agent: "forecasting-agent", section: "N/A" },
+            { id: 7, name: "Scenario Modeling", status: "done", agent: "forecasting-agent", section: "N/A" },
+            { id: 8, name: "KPI Tree", status: "done", agent: "kpi-agent", section: "N/A" },
+            { id: 9, name: "Section 1: Executive Summary", status: "done", agent: "exec-summary-agent", section: "1" },
+            { id: 10, name: "Section 2: Problem Statement", status: "done", agent: "bp-orchestrator", section: "2" },
+            { id: 11, name: "Section 3: Market Analysis", status: "done", agent: "research-agent", section: "3" },
+            { id: 12, name: "Section 4: Competitive Landscape", status: "done", agent: "research-agent", section: "4" },
+            { id: 13, name: "Section 5: Strategic Options", status: "done", agent: "decision-steward", section: "5" },
+            { id: 14, name: "Section 6: Investment Allocation", status: "active", agent: "forecasting-agent", section: "6" },
+            { id: 15, name: "Section 7: Financial Projections", status: "pending", agent: "forecasting-agent", section: "7" },
+            { id: 16, name: "Section 8: Risk Analysis", status: "pending", agent: "decision-steward", section: "8" },
+            { id: 17, name: "Section 9: Implementation", status: "pending", agent: "bp-orchestrator", section: "9" },
+            { id: 18, name: "Section 10-14: Appendices", status: "pending", agent: "bp-orchestrator", section: "10-14" },
+            { id: 19, name: "Final QA & Export", status: "pending", agent: "qa-review-agent", section: "ALL" }
+        ]
+    },
+
+    agents: [
+        { id: "bp-orchestrator", name: "BP Orchestrator", role: "Pipeline Sequencer", status: "idle", lastRun: "2026-07-25 16:00", tasks: 47, successRate: 98 },
+        { id: "research-agent", name: "Research Agent", role: "External Gap-Filling", status: "idle", lastRun: "2026-07-25 14:30", tasks: 89, successRate: 96 },
+        { id: "forecasting-agent", name: "Forecasting Agent", role: "Forward Projections", status: "active", lastRun: "2026-07-25 18:15", tasks: 34, successRate: 94 },
+        { id: "decision-steward", name: "Decision Steward", role: "Decision Log Owner", status: "idle", lastRun: "2026-07-25 12:00", tasks: 28, successRate: 100 },
+        { id: "evidence-citation-agent", name: "Evidence Citation", role: "Fact-Checking", status: "idle", lastRun: "2026-07-24 22:00", tasks: 156, successRate: 99 },
+        { id: "kpi-agent", name: "KPI Agent", role: "KPI Tree Builder", status: "idle", lastRun: "2026-07-23 10:00", tasks: 12, successRate: 100 },
+        { id: "exec-summary-agent", name: "Exec Summary", role: "Section 1 Synthesis", status: "idle", lastRun: "2026-07-22 09:00", tasks: 8, successRate: 100 },
+        { id: "qa-review-agent", name: "QA Review", role: "Final Gatekeeper", status: "standby", lastRun: "N/A", tasks: 0, successRate: 0 }
+    ],
+
+    skills: [
+        { id: "session-end", name: "Session End", triggers: ["/session-end"], usage: 42 },
+        { id: "business-plan-drafting", name: "BP Drafting", triggers: ["/draft"], usage: 67 },
+        { id: "external-research", name: "External Research", triggers: ["/research"], usage: 31 },
+        { id: "forecast-builder", name: "Forecast Builder", triggers: ["/forecast"], usage: 18 },
+        { id: "decision-log", name: "Decision Log", triggers: ["/decide"], usage: 24 },
+        { id: "evidence-ranking", name: "Evidence Ranking", triggers: ["/rank"], usage: 56 },
+        { id: "citation-audit", name: "Citation Audit", triggers: ["/audit"], usage: 38 },
+        { id: "qa-review", name: "QA Review", triggers: ["/qa"], usage: 12 },
+        { id: "template-compliance-gate", name: "Template Gate", triggers: ["/gate"], usage: 19 },
+        { id: "executive-document-formatting", name: "Doc Formatting", triggers: ["/format"], usage: 8 }
+    ],
+
+    vault: {
+        totalNotes: 154,
+        sources: 29,
+        facts: 14,
+        entities: 9,
+        topics: 30,
+        strategic: 12,
+        mocs: 13,
+        orphans: 0,
+        semanticLinks: 937,
+        lastAudit: "2026-07-25"
+    },
+
+    decisions: {
+        total: 12,
+        approved: 10,
+        superseded: 2,
+        recent: [
+            { id: "DEC-012", title: "Pivot to Group-wide Allocation", date: "2026-07-23", status: "approved", impact: "high" },
+            { id: "DEC-011", title: "Adopt v2 Architecture", date: "2026-07-22", status: "approved", impact: "high" },
+            { id: "DEC-010", title: "Geographic Evidence Gate", date: "2026-07-21", status: "approved", impact: "medium" },
+            { id: "DEC-009", title: "Section 1 Gating Rule", date: "2026-07-20", status: "approved", impact: "medium" },
+            { id: "DEC-008", title: "Template Compliance Gate", date: "2026-07-19", status: "approved", impact: "high" },
+            { id: "DEC-007", title: "Two-Pass Verification", date: "2026-07-18", status: "approved", impact: "high" }
+        ]
+    },
+
+    research: {
+        totalNotes: 8,
+        approved: 6,
+        rejected: 1,
+        pending: 1,
+        sources: [
+            { name: "talabat 2024 Annual Report", type: "primary", confidence: "high" },
+            { name: "Delivery Hero Group FY23", type: "primary", confidence: "high" },
+            { name: "McKinsey Food Delivery Outlook", type: "secondary", confidence: "medium" },
+            { name: "Redseer MENA Report", type: "secondary", confidence: "medium" }
+        ]
+    },
+
+    forecasts: {
+        scenarios: 3,
+        valueDrivers: 12,
+        kpis: 24,
+        baselineConfidence: "medium",
+        latest: [
+            { name: "Base Case", npv: "$1.2B", irr: "18%", probability: 50 },
+            { name: "Upside", npv: "$1.8B", irr: "24%", probability: 25 },
+            { name: "Downside", npv: "$0.6B", irr: "10%", probability: 25 }
+        ]
+    },
+
+    validation: {
+        citationAudits: 6,
+        qaReviews: 4,
+        templateChecks: 3,
+        issuesFound: 7,
+        issuesResolved: 6,
+        gates: [
+            { name: "Citation Audit", status: "pass", sections: "1-5", issues: 0 },
+            { name: "McKinsey Lens QA", status: "pass", sections: "1-3", issues: 1 },
+            { name: "Template Compliance", status: "pass", sections: "ALL", issues: 0 },
+            { name: "Geographic Evidence", status: "pass", sections: "3-4", issues: 0 },
+            { name: "Financial Integrity", status: "warn", sections: "6-7", issues: 2 },
+            { name: "Problem Consistency", status: "pass", sections: "ALL", issues: 0 }
+        ]
+    },
+
+    sessions: [
+        { id: "S-047", date: "2026-07-25", duration: "3h 15m", stages: [14], outcome: "In Progress" },
+        { id: "S-046", date: "2026-07-24", duration: "2h 45m", stages: [12,13], outcome: "Complete" },
+        { id: "S-045", date: "2026-07-23", duration: "4h 00m", stages: [9,10,11], outcome: "Complete" },
+        { id: "S-044", date: "2026-07-22", duration: "3h 30m", stages: [6,7,8], outcome: "Complete" },
+        { id: "S-043", date: "2026-07-21", duration: "2h 00m", stages: [4,5], outcome: "Complete" }
+    ],
+
+    businessPlan: {
+        sections: [
+            { num: 1, title: "Executive Summary", status: "verified", confidence: "high", words: 1200 },
+            { num: 2, title: "Problem Statement", status: "verified", confidence: "high", words: 1800 },
+            { num: 3, title: "Market Analysis", status: "verified", confidence: "high", words: 3200 },
+            { num: 4, title: "Competitive Landscape", status: "verified", confidence: "medium", words: 2400 },
+            { num: 5, title: "Strategic Options", status: "verified", confidence: "medium", words: 2100 },
+            { num: 6, title: "Investment Allocation", status: "drafting", confidence: "medium", words: 800 },
+            { num: 7, title: "Financial Projections", status: "pending", confidence: "low", words: 0 },
+            { num: 8, title: "Risk Analysis", status: "pending", confidence: "low", words: 0 },
+            { num: 9, title: "Implementation Roadmap", status: "pending", confidence: "low", words: 0 },
+            { num: 10, title: "KPI Framework", status: "pending", confidence: "low", words: 0 },
+            { num: 11, title: "Governance Structure", status: "pending", confidence: "low", words: 0 },
+            { num: 12, title: "Appendix A: Methodology", status: "pending", confidence: "low", words: 0 },
+            { num: 13, title: "Appendix B: Data Sources", status: "pending", confidence: "low", words: 0 },
+            { num: 14, title: "Appendix C: Glossary", status: "pending", confidence: "low", words: 0 }
+        ]
+    }
+};
+
+// ===================== RENDER FUNCTIONS =====================
+
+function showSection(sectionId) {
+    // Update nav
+    document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.nav-item').forEach(el => {
+        if(el.getAttribute('onclick') && el.getAttribute('onclick').includes(sectionId)) {
+            el.classList.add('active');
+            el.classList.remove('text-text-secondary');
+        }
+    });
+
+    const content = document.getElementById('content-area');
+    content.innerHTML = '';
+
+    switch(sectionId) {
+        case 'dashboard': renderDashboard(content); break;
+        case 'pipeline': renderPipeline(content); break;
+        case 'agents': renderAgents(content); break;
+        case 'skills': renderSkills(content); break;
+        case 'knowledge': renderKnowledge(content); break;
+        case 'decisions': renderDecisions(content); break;
+        case 'research': renderResearch(content); break;
+        case 'forecasts': renderForecasts(content); break;
+        case 'validation': renderValidation(content); break;
+        case 'projects': renderProjects(content); break;
+        case 'memory': renderMemory(content); break;
+        case 'logs': renderLogs(content); break;
+    }
+}
+
+function renderDashboard(container) {
+    const progress = Math.round((osData.pipeline.currentStage / osData.pipeline.totalStages) * 100);
+    const circumference = 2 * Math.PI * 42;
+    const offset = circumference - (progress / 100) * circumference;
+
+    container.innerHTML = `
+        <div class="fade-in space-y-6">
+            <!-- Hero Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Main Progress Ring -->
+                <div class="lg:col-span-2 glass rounded-xl p-8 relative overflow-hidden flex flex-col items-center justify-center min-h-[420px]">
+                    <div class="absolute inset-0 opacity-5">
+                        <div class="absolute top-10 left-10 w-32 h-32 bg-cyan/20 rounded-full blur-3xl"></div>
+                        <div class="absolute bottom-10 right-10 w-40 h-40 bg-purple/20 rounded-full blur-3xl"></div>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div class="relative w-72 h-72">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="5"/>
+                                <circle class="progress-ring" cx="50" cy="50" r="42" fill="none" stroke="#00F0FF" stroke-width="5" 
+                                        stroke-dasharray="${circumference}" stroke-dashoffset="${offset}" stroke-linecap="round"
+                                        style="filter: drop-shadow(0 0 8px rgba(0,240,255,0.4));"/>
+                                <circle cx="50" cy="50" r="36" fill="none" stroke="rgba(157,78,221,0.3)" stroke-width="1" stroke-dasharray="2,4"/>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="font-display font-bold text-5xl text-white">${progress}%</span>
+                                <span class="font-mono text-[10px] text-cyan tracking-widest mt-1">PIPELINE PROGRESS</span>
+                                <span class="font-mono text-[10px] text-text-muted mt-1">Stage ${osData.pipeline.currentStage} / ${osData.pipeline.totalStages}</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex gap-10">
+                            <div class="text-center">
+                                <p class="font-mono text-[10px] text-text-muted uppercase">Pass 1</p>
+                                <div class="flex items-center gap-1.5 text-green mt-1">
+                                    <span class="material-symbols-outlined text-sm filled">check_circle</span>
+                                    <span class="font-display font-semibold text-sm">COMPLETE</span>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-mono text-[10px] text-text-muted uppercase">Pass 2</p>
+                                <div class="flex items-center gap-1.5 text-amber mt-1">
+                                    <span class="material-symbols-outlined text-sm">pending</span>
+                                    <span class="font-display font-semibold text-sm">IN PROGRESS</span>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-mono text-[10px] text-text-muted uppercase">Sync</p>
+                                <div class="flex items-center gap-1.5 text-cyan mt-1">
+                                    <span class="material-symbols-outlined text-sm">bolt</span>
+                                    <span class="font-display font-semibold text-sm">LIVE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Cards -->
+                <div class="space-y-6">
+                    <!-- Active Agent -->
+                    <div class="glass rounded-xl p-6 thinking border border-cyan/20 min-h-[200px]">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-display font-semibold text-purple">Active Agent</h3>
+                            <span class="bg-purple/20 text-purple text-[10px] px-2 py-0.5 rounded border border-purple/30 font-mono">THINKING</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-purple/20 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-purple text-sm">psychology</span>
+                                </div>
+                                <div>
+                                    <p class="font-mono text-xs text-text-primary font-semibold">Forecasting Agent</p>
+                                    <p class="font-mono text-[10px] text-text-muted">Section 6: Investment Allocation</p>
+                                </div>
+                            </div>
+                            <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                                <div class="h-full w-2/3 bg-purple shimmer rounded-full"></div>
+                            </div>
+                            <p class="font-mono text-[10px] text-text-muted italic leading-relaxed">
+                                "Building value driver tree for USD 175M allocation across KSA, UAE, Egypt, Kuwait. Anchor: talabat 2024 AR (DocID-001, p.14)."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Decision Readiness -->
+                    <div class="glass rounded-xl p-6 min-h-[200px] flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-semibold text-text-primary">Decision Readiness</h3>
+                            <p class="font-mono text-[10px] text-text-muted mt-1">CORE PROTOCOL STATUS</p>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <div>
+                                <p class="font-display font-bold text-3xl text-green">OPTIMAL</p>
+                                <div class="flex gap-1.5 mt-2">
+                                    <span class="h-1.5 w-6 rounded bg-green"></span>
+                                    <span class="h-1.5 w-6 rounded bg-green"></span>
+                                    <span class="h-1.5 w-6 rounded bg-green"></span>
+                                    <span class="h-1.5 w-6 rounded bg-white/10"></span>
+                                </div>
+                            </div>
+                            <span class="material-symbols-outlined text-green text-4xl opacity-40">verified_user</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="glass rounded-xl p-5">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 rounded-lg bg-cyan/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-cyan text-sm">smart_toy</span>
+                        </div>
+                        <span class="font-mono text-[10px] text-text-muted uppercase">Agents</span>
+                    </div>
+                    <p class="font-display font-bold text-2xl text-white">8</p>
+                    <p class="font-mono text-[10px] text-green mt-1">1 active  |  7 idle</p>
+                </div>
+                <div class="glass rounded-xl p-5">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 rounded-lg bg-purple/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-purple text-sm">construction</span>
+                        </div>
+                        <span class="font-mono text-[10px] text-text-muted uppercase">Skills</span>
+                    </div>
+                    <p class="font-display font-bold text-2xl text-white">10</p>
+                    <p class="font-mono text-[10px] text-text-muted mt-1">305 total invocations</p>
+                </div>
+                <div class="glass rounded-xl p-5">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 rounded-lg bg-green/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-green text-sm">description</span>
+                        </div>
+                        <span class="font-mono text-[10px] text-text-muted uppercase">Vault Notes</span>
+                    </div>
+                    <p class="font-display font-bold text-2xl text-white">154</p>
+                    <p class="font-mono text-[10px] text-green mt-1">0 orphans  |  937 links</p>
+                </div>
+                <div class="glass rounded-xl p-5">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 rounded-lg bg-amber/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-amber text-sm">gavel</span>
+                        </div>
+                        <span class="font-mono text-[10px] text-text-muted uppercase">Decisions</span>
+                    </div>
+                    <p class="font-display font-bold text-2xl text-white">12</p>
+                    <p class="font-mono text-[10px] text-green mt-1">10 approved  |  2 superseded</p>
+                </div>
+            </div>
+
+            <!-- Knowledge + Forecast Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Knowledge Breakdown -->
+                <div class="glass rounded-xl p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-purple/10 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-purple text-sm">database</span>
+                            </div>
+                            <h4 class="font-display font-semibold text-text-primary">Knowledge Layer</h4>
+                        </div>
+                        <span class="font-mono text-[10px] text-purple">${osData.vault.lastAudit}</span>
+                    </div>
+                    <div class="space-y-3">
+                        ${renderKnowledgeBar('Sources', osData.vault.sources, 40, 'cyan')}
+                        ${renderKnowledgeBar('Facts', osData.vault.facts, 20, 'green')}
+                        ${renderKnowledgeBar('Entities', osData.vault.entities, 15, 'purple')}
+                        ${renderKnowledgeBar('Topics', osData.vault.topics, 35, 'amber')}
+                        ${renderKnowledgeBar('Strategic', osData.vault.strategic, 15, 'red')}
+                        ${renderKnowledgeBar('MOCs', osData.vault.mocs, 15, 'text-muted')}
+                    </div>
+                </div>
+
+                <!-- Forecast Chart -->
+                <div class="glass rounded-xl p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-cyan/10 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-cyan text-sm">timeline</span>
+                            </div>
+                            <h4 class="font-display font-semibold text-text-primary">Forecast Scenarios</h4>
+                        </div>
+                        <span class="font-mono text-[10px] text-cyan">REAL-TIME</span>
+                    </div>
+                    <div class="space-y-4">
+                        ${osData.forecasts.latest.map((f, i) => `
+                            <div class="flex items-center gap-3">
+                                <span class="font-mono text-[10px] text-text-muted w-16">${f.name}</span>
+                                <div class="flex-1 h-6 bg-white/5 rounded overflow-hidden relative">
+                                    <div class="chart-bar h-full rounded" style="width: ${f.probability}%; background: ${i===0?'rgba(0,240,255,0.4)':i===1?'rgba(0,255,102,0.4)':'rgba(255,68,68,0.4)'};"></div>
+                                    <span class="absolute inset-0 flex items-center px-2 font-mono text-[10px] text-white">${f.probability}%  |  NPV ${f.npv}  |  IRR ${f.irr}</span>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-white/5 flex justify-between">
+                        <div>
+                            <p class="font-mono text-[10px] text-text-muted">Value Drivers</p>
+                            <p class="font-display font-semibold text-white">${osData.forecasts.valueDrivers}</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-mono text-[10px] text-text-muted">KPIs</p>
+                            <p class="font-display font-semibold text-white">${osData.forecasts.kpis}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Decisions -->
+                <div class="glass rounded-xl p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-amber/10 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-amber text-sm">gavel</span>
+                            </div>
+                            <h4 class="font-display font-semibold text-text-primary">Recent Decisions</h4>
+                        </div>
+                        <span class="font-mono text-[10px] text-text-muted">${osData.decisions.total} total</span>
+                    </div>
+                    <div class="space-y-3">
+                        ${osData.decisions.recent.slice(0,5).map(d => `
+                            <div class="p-3 bg-white/5 rounded-lg border border-white/5 hover:border-amber/20 transition-colors">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="font-mono text-[10px] text-amber font-semibold">${d.id}</span>
+                                    <span class="badge ${d.impact==='high'?'bg-red/20 text-red border border-red/30':'bg-amber/20 text-amber border border-amber/30'}">${d.impact}</span>
+                                </div>
+                                <p class="font-mono text-xs text-text-primary">${d.title}</p>
+                                <p class="font-mono text-[10px] text-text-muted mt-1">${d.date}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Plan Progress -->
+            <div class="glass rounded-xl p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-cyan/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-cyan text-sm">description</span>
+                        </div>
+                        <h4 class="font-display font-semibold text-text-primary">Business Plan Progress</h4>
+                    </div>
+                    <div class="flex gap-2">
+                        <span class="badge bg-green/20 text-green border border-green/30">${osData.businessPlan.sections.filter(s=>s.status==='verified').length} Verified</span>
+                        <span class="badge bg-cyan/20 text-cyan border border-cyan/30">${osData.businessPlan.sections.filter(s=>s.status==='drafting').length} Drafting</span>
+                        <span class="badge bg-white/10 text-text-muted border border-white/10">${osData.businessPlan.sections.filter(s=>s.status==='pending').length} Pending</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+                    ${osData.businessPlan.sections.map(s => `
+                        <div class="p-3 rounded-lg border ${s.status==='verified'?'bg-green/5 border-green/20':s.status==='drafting'?'bg-cyan/5 border-cyan/20':'bg-white/5 border-white/5'} hover:border-cyan/30 transition-all cursor-pointer">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-mono text-[10px] text-text-muted">Sec ${s.num}</span>
+                                ${s.status==='verified' 
+                                    ? '<span class="material-symbols-outlined text-green text-sm filled">check_circle</span>'
+                                    : s.status==='drafting'
+                                    ? '<span class="material-symbols-outlined text-cyan text-sm animate-spin">progress_activity</span>'
+                                    : '<span class="material-symbols-outlined text-text-muted text-sm">circle</span>'
+                                }
+                            </div>
+                            <p class="font-mono text-xs text-text-primary font-semibold truncate">${s.title}</p>
+                            <div class="flex items-center justify-between mt-2">
+                                <span class="font-mono text-[10px] ${s.confidence==='high'?'text-green':s.confidence==='medium'?'text-amber':'text-text-muted'}">${s.confidence}</span>
+                                <span class="font-mono text-[10px] text-text-muted">${s.words>0?s.words+' words':''}</span>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+
+            <!-- Validation Gates -->
+            <div class="glass rounded-xl p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-green/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-green text-sm">verified</span>
+                        </div>
+                        <h4 class="font-display font-semibold text-text-primary">Validation Gates</h4>
+                    </div>
+                    <span class="font-mono text-[10px] text-text-muted">${osData.validation.issuesResolved}/${osData.validation.issuesFound} issues resolved</span>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+                    ${osData.validation.gates.map(g => `
+                        <div class="p-4 rounded-lg border text-center ${g.status==='pass'?'bg-green/5 border-green/20':g.status==='warn'?'bg-amber/5 border-amber/20':'bg-red/5 border-red/20'}">
+                            <span class="material-symbols-outlined ${g.status==='pass'?'text-green':g.status==='warn'?'text-amber':'text-red'} text-2xl mb-2">
+                                ${g.status==='pass'?'check_circle':g.status==='warn'?'warning':'error'}
+                            </span>
+                            <p class="font-mono text-xs text-text-primary font-semibold">${g.name}</p>
+                            <p class="font-mono text-[10px] text-text-muted mt-1">${g.sections}</p>
+                            ${g.issues>0?`<span class="badge bg-red/20 text-red border border-red/30 mt-2 inline-block">${g.issues} issues</span>`:''}
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderKnowledgeBar(label, value, max, color) {
+    const pct = Math.round((value / max) * 100);
+    const colorMap = {
+        cyan: '#00F0FF', green: '#00FF66', purple: '#9D4EDD', 
+        amber: '#FFB800', red: '#FF4444', 'text-muted': '#6b7280'
+    };
+    return `
+        <div class="flex items-center gap-3">
+            <span class="font-mono text-[10px] text-text-muted w-20">${label}</span>
+            <div class="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                <div class="h-full rounded-full" style="width: ${pct}%; background: ${colorMap[color]}; opacity: 0.7;"></div>
+            </div>
+            <span class="font-mono text-[10px] text-text-primary w-8 text-right">${value}</span>
+        </div>
+    `;
+}
+
+function renderPipeline(container) {
+    container.innerHTML = `
+        <div class="fade-in space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="font-display font-bold text-2xl text-text-primary">Business Plan Generation Pipeline</h2>
+                <div class="flex gap-2">
+                    <span class="badge bg-green/20 text-green border border-green/30">${osData.pipeline.stages.filter(s=>s.status==='done').length} Complete</span>
+                    <span class="badge bg-cyan/20 text-cyan border border-cyan/30">1 Active</span>
+                    <span class="badge bg-white/10 text-text-muted border border-white/10">${osData.pipeline.stages.filter(s=>s.status==='pending').length} Pending</span>
+                </div>
+            </div>
+
+            <div class="glass rounded-xl p-6">
+                <div class="relative">
+                    <!-- Connector line -->
+                    <div class="absolute left-6 top-12 bottom-12 w-0.5 bg-white/5"></div>
+
+                    <div class="space-y-4">
+                        ${osData.pipeline.stages.map((stage, i) => {
+                            const isActive = stage.status === 'active';
+                            const isDone = stage.status === 'done';
+                            return `
+                                <div class="flex items-start gap-4 relative ${isActive?'opacity-100':'opacity-80'}">
+                                    <div class="relative z-10 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${isDone?'bg-green/20 border border-green/30':isActive?'bg-cyan/20 border border-cyan/30 thinking':'bg-white/5 border border-white/10'}">
+                                        <span class="font-mono text-sm font-bold ${isDone?'text-green':isActive?'text-cyan':'text-text-muted'}">${stage.id}</span>
+                                    </div>
+                                    <div class="flex-1 glass rounded-lg p-4 ${isActive?'border-cyan/30':''}">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <h4 class="font-mono text-sm text-text-primary font-semibold">${stage.name}</h4>
+                                            <div class="flex items-center gap-2">
+                                                ${stage.section !== 'N/A' ? `<span class="font-mono text-[10px] text-text-muted bg-white/5 px-2 py-0.5 rounded">Sec ${stage.section}</span>` : ''}
+                                                <span class="badge ${isDone?'bg-green/20 text-green border border-green/30':isActive?'bg-cyan/20 text-cyan border border-cyan/30':'bg-white/10 text-text-muted border border-white/10'}">${stage.status}</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <div class="flex items-center gap-1.5">
+                                                <span class="material-symbols-outlined text-[10px] text-text-muted">smart_toy</span>
+                                                <span class="font-mono text-[10px] text-text-muted">${stage.agent}</span>
+                                            </div>
+                                            ${isActive ? `
+                                                <div class="flex-1 h-1.5 bg-white/5 rounded-full overflow-hidden max-w-[200px]">
+                                                    <div class="h-full bg-cyan shimmer rounded-full" style="width: 65%;"></div>
+                                                </div>
+                                                <span class="font-mono text-[10px] text-cyan">65%</span>
+                                            ` : ''}
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderAgents(container) {
+    container.innerHTML = `
+        <div class="fade-in space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="font-display font-bold text-2xl text-text-primary">Agent Fleet</h2>
+                <span class="font-mono text-[10px] text-text-muted">8 agents  |  374 total tasks</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                ${osData.agents.map(agent => `
+                    <div class="agent-card glass rounded-xl p-5 border ${agent.status==='active'?'border-cyan/30 glow-cyan':agent.status==='standby'?'border-amber/30':'border-white/5'}">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-10 h-10 rounded-xl ${agent.status==='active'?'bg-cyan/20':agent.status==='standby'?'bg-amber/20':'bg-white/5'} flex items-center justify-center">
+                                <span class="material-symbols-outlined ${agent.status==='active'?'text-cyan':agent.status==='standby'?'text-amber':'text-text-muted'} text-lg">
+                                    ${agent.id.includes('orchestrator')?'account_tree':agent.id.includes('research')?'travel_explore':agent.id.includes('forecast')?'timeline':agent.id.includes('decision')?'gavel':agent.id.includes('citation')?'fact_check':agent.id.includes('kpi')?'analytics':agent.id.includes('exec')?'summarize':'verified'}
+                                </span>
+                            </div>
+                            <span class="badge ${agent.status==='active'?'bg-cyan/20 text-cyan border border-cyan/30':agent.status==='standby'?'bg-amber/20 text-amber border border-amber/30':'bg-white/10 text-text-muted border border-white/10'}">${agent.status}</span>
+                        </div>
+                        <h4 class="font-mono text-sm text-text-primary font-semibold">${agent.name}</h4>
+                        <p class="font-mono text-[10px] text-text-muted mt-1">${agent.role}</p>
+                        <div class="mt-4 pt-4 border-t border-white/5 grid grid-cols-2 gap-3">
+                            <div>
+                                <p class="font-mono text-[10px] text-text-muted">Tasks</p>
+                                <p class="font-display font-semibold text-white">${agent.tasks}</p>
+                            </div>
+                            <div>
+                                <p class="font-mono text-[10px] text-text-muted">Success</p>
+                                <p class="font-display font-semibold ${agent.successRate>=95?'text-green':'text-amber'}">${agent.successRate}%</p>
+                            </div>
+                        </div>
+                        <p class="font-mono text-[10px] text-text-muted mt-3">Last: ${agent.lastRun}</p>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+}
+
+function renderSkills(container) {
+    container.innerHTML = `
+        <div class="fade-in space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="font-display font-bold text-2xl text-text-primary">Skill Registry</h2>
+                <span class="font-mono text-[10px] text-text-muted">10 skills  |  305 invocations</span>
+            </div>
+            <div class="glass rounded-xl overflow-hidden">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-white/5">
+                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase tracking-wider">Skill</th>
+                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase tracking-wider">Trigger</th>
+                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase tracking-wider">Usage</th>
+                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase tracking-wider">Activity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${osData.skills.map(skill => {
+                            const maxUsage = Math.max(...osData.skills.map(s=>s.usage));
+                            const pct = Math.round((skill.usage / maxUsage) * 100);
+                            return `
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-lg bg-purple/10 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-purple text-sm">construction</span>
+                                            </div>
+                                            <span class="font-mono text-sm text-text-primary">${skill.name}</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">
+                                        ${skill.triggers.map(t => `<span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-cyan">${t}</span>`).join(' ')}
+                                    </td>
+                                    <td class="p-4">
+                                        <span class="font-mono text-sm text-text-primary font-semibold">${skill.usage}</span>
+                                    </td>
+                                    <td class="p-4">
+                                        <div class="w-24 h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                            <div class="h-full bg-purple rounded-full" style="width: ${pct}%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            `;
+                        }).join('')}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    `;
+}
+
+function renderKnowledge(container) {
+    container.innerHTML = `
+        <div class="fade-in space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="font-display font-bold text-2xl text-text-primary">Knowledge Vault</h2>
+                <div class="flex gap-2">
+                    <span class="badge bg-green/20 text-green border border-green/30">0 orphans</span>
+                    <span class="badge bg-cyan/20 text-cyan border border-cyan/30">937 links</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                ${[
+                    {label:'Sources', value:osData.vault.sources, icon:'description', color:'cyan'},
+                    {label:'Facts', value:osData.vault.facts, icon:'check_circle', color:'green'},
+                    {label:'Entities', value:osData.vault.entities, icon:'group', color:'purple'},
+                    {label:'Topics', value:osData.vault.topics, icon:'topic', color:'amber'},
+                    {label:'Strategic', value:osData.vault.strategic, icon:'strategy', color:'red'},
+                    {label:'MOCs', value:osData.vault.mocs, icon:'map', color:'text-muted'}
+                ].map(item => `
+                    <div class="glass rounded-xl p-5 text-center">
+                        <div class="w-10 h-10 rounded-xl bg-${item.color}/10 flex items-center justify-center mx-auto mb-3">
+                            <span class="material-symbols-outlined text-${item.color}">${item.icon}</span>
+                        </div>
+                        <p class="font-display font-bold text-2xl text-white">${item.value}</p>
+                        <p class="font-mono text-[10px] text-text-muted mt-1">${item.label}</p>
+                    </div>
+                `).join('')}
+            </div>
+
+            <div class="glass rounded-xl p-6">
+                <h3 class="font-display font-semibold text-text-primary mb-4">Evidence Hierarchy</h3>
+                <div class="space-y-3">
+                    ${[
+                        {tier:'Tier 1', name:'Primary Sources', desc:'talabat Annual Reports, Delivery Hero filings', count:29, color:'green'},
+                        {tier:'Tier 2', name:'Secondary Analysis', desc:'McKinsey, Redseer, industry reports', count:14, color:'cyan'},
+                        {tier:'Tier 3', name:'Synthesized Facts', desc:'Extracted claims with DocID citations', count:14, color:'purple'},
+                        {tier:'Tier 4', name:'Strategic Inferences', desc:'Topic-level synthesis and mapping', count:30, color:'amber'},
+                        {tier:'Tier 5', name:'Business Plan Claims', desc:'Final document assertions', count:12, color:'red'}
+                    ].map(t => `
+                        <div class="flex items-center gap-4 p-4 rounded-lg bg-white/5 border border-white/5">
+                            <div class="w-12 h-12 rounded-xl bg-${t.color}/20 flex items-center justify-center shrink-0">
+                                <span class="font-mono text-xs font-bold text-${t.color}">${t.tier}</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-mono text-sm text-text-primary font-semibold">${t.name}</h4>
+                                <p class="font-mono text-[10px] text-text-muted">${t.desc}</p>
+                            </div>
+                            <span class="font-display font-bold text-xl text-white">${t.count}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderDecisions(container) {
+    container.innerHTML = `
+        <div class="fade-in space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="font-display font-bold text-2xl text-text-primary">Decision Log</h2>
+                <div class="flex gap-2">
+                    <span class="badge bg-green/20 text-green border border-green/30">${osData.decisions.approved} Approved</span>
+                    <span class="badge bg-white/10 text-text-muted border border-white/10">${osData.decisions.superseded} Superseded</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Registers -->
+                <div class="lg:col-span-1 space-y-4">
+                    <div class="glass rounded-xl p-5">
+                        <h4 class="font-display font-semibold text-text-primary mb-3">Assumptions Register</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center p-2 bg-white/5 rounded">
+                                <span class="font-mono text-xs text-text-primary">Total Assumptions</span>
+                                <span class="font-mono text-sm text-white font-semibold">8</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 bg-green/5 rounded border border-green/20">
+                                <span class="font-mono text-xs text-green">Approved</span>
+                                <span class="font-mono text-sm text-green font-semibold">6</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 bg-amber/5 rounded border border-amber/20">
+                                <span class="font-mono text-xs text-amber">Pending</span>
+                                <span class="font-mono text-sm text-amber font-semibold">2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass rounded-xl p-5">
+                        <h4 class="font-display font-semibold text-text-primary mb-3">Investment Options</h4>
+                        <div class="space-y-2">
+                            ${['KSA Market Expansion','UAE Tech Stack','Egypt Retention','Kuwait Entry','M&A Pipeline'].map((opt,i) => `
+                                <div class="flex items-center gap-2 p-2 bg-white/5 rounded">
+                                    <span class="w-5 h-5 rounded bg-purple/20 flex items-center justify-center font-mono text-[10px] text-purple">${String.fromCharCode(65+i)}</span>
+                                    <span class="font-mono text-xs text-text-primary">${opt}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Decision Timeline -->
+                <div class="lg:col-span-2">
+                    <div class="glass rounded-xl p-6">
+                        <h4 class="font-display font-semibold text-text-primary mb-4">Decision Timeline</h4>
+                        <div class="space-y-4">
+                            ${osData.decisions.recent.map((d, i) => `
+                                <div class="flex gap-4 relative">
+                                    ${i < osData.decisions.recent.length - 1 ? '<div class="absolute left-3 top-8 bottom-[-16px] w-0.5 bg-white/10"></div>' : ''}
+                                    <div class="w-6 h-6 rounded-full ${d.impact==='high'?'bg-red/30 border border-red/50':'bg-amber/30 border border-amber/50'} flex items-center justify-center shrink-0 z-10">
+                                        <div class="w-2 h-2 rounded-full ${d.impact==='high'?'bg-red':'bg-amber'}"></div>
+                                    </div>
+                                    <div class="flex-1 pb-4">
+                                        <div class="flex items-center gap-2 mb-1">
+                                            <span class="font-mono text-xs text-amber font-semibold">${d.id}</span>
+                                            <span class="badge ${d.status==='approved'?'bg-green/20 text-green border border-green/30':'bg-red/20 text-red border border-red/30'}">${d.status}</span>
+                                            <span class="badge ${d.impact==='high'?'bg-red/20 text-red border border-red/30':'bg-amber/20 text-amber border border-amber/30'}">${d.impact}</span>
+                                        </div>
+                                        <p class="font-mono text-sm text-text-primary">${d.title}</p>
+                                        <p class="font-mono text-[10px] text-text-muted mt-1">${d.date}</p>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderResearch(container) {
+    container.innerHTML = `
+        <div class="fade-in space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="font-display font-bold text-2xl text-text-primary">External Research Layer</h2>
+                <span class="font-mono text-[10px] text-text-muted">${osData.research.totalNotes} notes  |  38 source documents</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="glass rounded-xl p-6">
+                    <h4 class="font-display font-semibold text-text-primary mb-4">Source Quality</h4>
+                    <div class="space-y-3">
+                        ${osData.research.sources.map(s => `
+                            <div class="flex items-center justify-between p-3 bg-white/5 rounded-lg border border-white/5">
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined ${s.type==='primary'?'text-cyan':'text-purple'} text-sm">${s.type==='primary'?'verified':'article'}</span>
+                                    <div>
+                                        <p class="font-mono text-xs text-text-primary">${s.name}</p>
+                                        <p class="font-mono text-[10px] text-text-muted">${s.type}</p>
+                                    </div>
+                                </div>
+                                <span class="badge ${s.confidence==='high'?'bg-green/20 text-green border border-green/30':'bg-amber/20 text-amber border border-amber/30'}">${s.confidence}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <div class="glass rounded-xl p-6">
+                    <h4 class="font-display font-semibold text-text-primary mb-4">Research Status</h4>
+                    <div class="grid grid-cols-3 gap-4 mb-6">
+                        <div class="text-center p-4 bg-green/5 rounded-lg border border-green/20">
+                            <p class="font-display font-bold text-2xl text-green">${osData.research.approved}</p>
+                            <p class="font-mono text-[10px] text-text-muted mt-1">Approved</p>
+                        </div>
+                        <div class="text-center p-4 bg-amber/5 rounded-lg border border-amber/20">
+                            <p class="font-display font-bold text-2xl text-amber">${osData.research.pending}</p>
+                            <p class="font-mono text-[10px] text-text-muted mt-1">Pending</p>
+                        </div>
+                        <div class="text-center p-4 bg-red/5 rounded-lg border border-red/20">
+                            <p class="font-display font-bold text-2xl text-red">${osData.research.rejected}</p>
+                            <p class="font-mono text-[10px] text-text-muted mt-1">Rejected</p>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-cyan/5 rounded-lg border border-cyan/20">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="material-symbols-outlined text-cyan text-sm">info</span>
+                            <span class="font-mono text-xs text-cyan font-semibold">Provider Filter Active</span>
+                        </div>
+                        <p class="font-mono text-[10px] text-text-muted">Acceptable: McKinsey, BCG, Bain, Redseer, Euromonitor. Rejected: Unattributed blogs, paywalled summaries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderForecasts(container) {
+    container.innerHTML = `
+        <div class="fade-in space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="font-display font-bold text-2xl text-text-primary">Forecasting Layer</h2>
+                <span class="font-mono text-[10px] text-text-muted">${osData.forecasts.scenarios} scenarios  |  ${osData.forecasts.valueDrivers} drivers  |  ${osData.forecasts.kpis} KPIs</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                ${osData.forecasts.latest.map((f, i) => `
+                    <div class="glass rounded-xl p-6 ${i===0?'border-cyan/20 glow-cyan':i===1?'border-green/20 glow-green':'border-red/20'}">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-display font-semibold text-text-primary">${f.name} Case</h4>
+                            <span class="badge ${i===0?'bg-cyan/20 text-cyan border border-cyan/30':i===1?'bg-green/20 text-green border border-green/30':'bg-red/20 text-red border border-red/30'}">${f.probability}%</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="font-mono text-[10px] text-text-muted">NPV</p>
+                                <p class="font-display font-bold text-3xl ${i===0?'text-cyan':i===1?'text-green':'text-red'}">${f.npv}</p>
+                            </div>
+                            <div>
+                                <p class="font-mono text-[10px] text-text-muted">IRR</p>
+                                <p class="font-display font-bold text-xl text-white">${f.irr}</p>
+                            </div>
+                            <div class="h-2 bg-white/5 rounded-full overflow-hidden">
+                                <div class="h-full rounded-full ${i===0?'bg-cyan':i===1?'bg-green':'bg-red'}" style="width: ${f.probability}%; opacity: 0.6;"></div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+
+            <div class="glass rounded-xl p-6">
+                <h4 class="font-display font-semibold text-text-primary mb-4">Value Driver Tree</h4>
+                <div class="flex items-center justify-center py-8">
+                    <div class="relative">
+                        <!-- Root -->
+                        <div class="w-48 p-3 bg-cyan/10 border border-cyan/30 rounded-lg text-center mx-auto">
+                            <p class="font-mono text-xs text-cyan font-semibold">Group NPV</p>
+                            <p class="font-mono text-[10px] text-text-muted">USD 1.2B (Base)</p>
+                        </div>
+                        <!-- Branches -->
+                        <div class="flex justify-center gap-8 mt-6">
+                            <div class="w-36 p-3 bg-purple/10 border border-purple/30 rounded-lg text-center">
+                                <p class="font-mono text-xs text-purple font-semibold">Revenue Growth</p>
+                                <p class="font-mono text-[10px] text-text-muted">CAGR 18%</p>
+                            </div>
+                            <div class="w-36 p-3 bg-green/10 border border-green/30 rounded-lg text-center">
+                                <p class="font-mono text-xs text-green font-semibold">Margin Expansion</p>
+                                <p class="font-mono text-[10px] text-text-muted">+400bps</p>
+                            </div>
+                            <div class="w-36 p-3 bg-amber/10 border border-amber/30 rounded-lg text-center">
+                                <p class="font-mono text-xs text-amber font-semibold">Market Share</p>
+                                <p class="font-mono text-[10px] text-text-muted">+12pp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderValidation(container) {
+    container.innerHTML = `
+        <div class="fade-in space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="font-display font-bold text-2xl text-text-primary">Validation & QA</h2>
+                <div class="flex gap-2">
+                    <span class="badge bg-green/20 text-green border border-green/30">${osData.validation.gates.filter(g=>g.status==='pass').length} Pass</span>
+                    <span class="badge bg-amber/20 text-amber border border-amber/30">${osData.validation.gates.filter(g=>g.status==='warn').length} Warn</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="glass rounded-xl p-5 text-center">
+                    <p class="font-mono text-[10px] text-text-muted uppercase">Citation Audits</p>
+                    <p class="font-display font-bold text-3xl text-cyan mt-1">${osData.validation.citationAudits}</p>
+                </div>
+                <div class="glass rounded-xl p-5 text-center">
+                    <p class="font-mono text-[10px] text-text-muted uppercase">QA Reviews</p>
+                    <p class="font-display font-bold text-3xl text-purple mt-1">${osData.validation.qaReviews}</p>
+                </div>
+                <div class="glass rounded-xl p-5 text-center">
+                    <p class="font-mono text-[10px] text-text-muted uppercase">Template Checks</p>
+                    <p class="font-display font-bold text-3xl text-green mt-1">${osData.validation.templateChecks}</p>
+                </div>
+            </div>
+
+            <div class="glass rounded-xl p-6">
+                <h4 class="font-display font-semibold text-text-primary mb-4">Quality Gates</h4>
+                <div class="space-y-3">
+                    ${osData.validation.gates.map(g => `
+                        <div class="flex items-center gap-4 p-4 rounded-lg ${g.status==='pass'?'bg-green/5 border border-green/20':g.status==='warn'?'bg-amber/5 border border-amber/20':'bg-red/5 border border-red/20'}">
+                            <span class="material-symbols-outlined ${g.status==='pass'?'text-green':g.status==='warn'?'text-amber':'text-red'} text-2xl">
+                                ${g.status==='pass'?'check_circle':g.status==='warn'?'warning':'error'}
+                            </span>
+                            <div class="flex-1">
+                                <h5 class="font-mono text-sm text-text-primary font-semibold">${g.name}</h5>
+                                <p class="font-mono text-[10px] text-text-muted">Sections: ${g.sections}</p>
+                            </div>
+                            <span class="badge ${g.status==='pass'?'bg-green/20 text-green border border-green/30':g.status==='warn'?'bg-amber/20 text-amber border border-amber/30':'bg-red/20 text-red border border-red/30'}">${g.status.toUpperCase()}</span>
+                            ${g.issues > 0 ? `<span class="font-mono text-xs text-red font-semibold">${g.issues} issues</span>` : ''}
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+
+            <div class="glass rounded-xl p-6">
+                <h4 class="font-display font-semibold text-text-primary mb-4">McKinsey Lens Checklist</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    ${['SCQA structure enforced','Pyramid Principle applied','MECE breakdown verified','Hypothesis-driven analysis','Value driver tree complete','Leading/lagging KPIs split','So-what? test passed','Action-oriented recommendations'].map(item => `
+                        <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
+                            <span class="material-symbols-outlined text-green text-sm filled">check_circle</span>
+                            <span class="font-mono text-xs text-text-primary">${item}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderProjects(container) {
+    container.innerHTML = `
+        <div class="fade-in space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="font-display font-bold text-2xl text-text-primary">Projects & Deliverables</h2>
+                <span class="font-mono text-[10px] text-text-muted">MBA Capstone G02  |  AASTMT</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="glass rounded-xl p-6">
+                    <h4 class="font-display font-semibold text-text-primary mb-4">Active Deliverables</h4>
+                    <div class="space-y-3">
+                        <div class="p-4 bg-cyan/5 rounded-lg border border-cyan/20">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-mono text-xs text-cyan font-semibold">Business Plan v2</span>
+                                <span class="badge bg-cyan/20 text-cyan border border-cyan/30">DRAFTING</span>
+                            </div>
+                            <div class="h-2 bg-white/5 rounded-full overflow-hidden">
+                                <div class="h-full bg-cyan rounded-full" style="width: 73%;"></div>
+                            </div>
+                            <p class="font-mono text-[10px] text-text-muted mt-2">14 sections  |  11,500 words  |  Stage 14/19</p>
+                        </div>
+                        <div class="p-4 bg-purple/5 rounded-lg border border-purple/20">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-mono text-xs text-purple font-semibold">OS Structure Document</span>
+                                <span class="badge bg-amber/20 text-amber border border-amber/30">PLANNED</span>
+                            </div>
+                            <p class="font-mono text-[10px] text-text-muted">Required capstone deliverable  |  Not yet started</p>
+                        </div>
+                        <div class="p-4 bg-green/5 rounded-lg border border-green/20">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-mono text-xs text-green font-semibold">Group Presentation</span>
+                                <span class="badge bg-amber/20 text-amber border border-amber/30">PLANNED</span>
+                            </div>
+                            <p class="font-mono text-[10px] text-text-muted">30 slides  |  5 min x 6 members  |  Blocked on role assignment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass rounded-xl p-6">
+                    <h4 class="font-display font-semibold text-text-primary mb-4">Export Status</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-cyan">description</span>
+                                <span class="font-mono text-xs text-text-primary">DOCX Export</span>
+                            </div>
+                            <span class="badge bg-green/20 text-green border border-green/30">READY</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-red">picture_as_pdf</span>
+                                <span class="font-mono text-xs text-text-primary">PDF Export</span>
+                            </div>
+                            <span class="badge bg-amber/20 text-amber border border-amber/30">CHROMIUM</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-purple">archive</span>
+                                <span class="font-mono text-xs text-text-primary">Vault Archive</span>
+                            </div>
+                            <span class="badge bg-green/20 text-green border border-green/30">CURRENT</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-3 bg-amber/5 rounded-lg border border-amber/20">
+                        <p class="font-mono text-[10px] text-amber">Note: PDF export uses Chromium workaround. LibreOffice unavailable in this environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderMemory(container) {
+    container.innerHTML = `
+        <div class="fade-in space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="font-display font-bold text-2xl text-text-primary">System Memory</h2>
+                <span class="font-mono text-[10px] text-text-muted">4 tracking files  |  3 identity files</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                ${[
+                    {file:'CLAUDE.md', desc:'Project instructions', size:'4.2 KB', status:'current'},
+                    {file:'MEMORY.md', desc:'Facts & decisions', size:'8.1 KB', status:'current'},
+                    {file:'PROJECT_PROGRESS.md', desc:'Milestones', size:'3.5 KB', status:'current'},
+                    {file:'SESSION_LOG.md', desc:'Session history', size:'12.3 KB', status:'current'}
+                ].map(m => `
+                    <div class="glass rounded-xl p-5">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="material-symbols-outlined text-cyan text-sm">description</span>
+                            <span class="font-mono text-xs text-text-primary font-semibold">${m.file}</span>
+                        </div>
+                        <p class="font-mono text-[10px] text-text-muted">${m.desc}</p>
+                        <div class="flex items-center justify-between mt-3 pt-3 border-t border-white/5">
+                            <span class="font-mono text-[10px] text-text-muted">${m.size}</span>
+                            <span class="badge bg-green/20 text-green border border-green/30">${m.status}</span>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+
+            <div class="glass rounded-xl p-6">
+                <h4 class="font-display font-semibold text-text-primary mb-4">Identity Configuration</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="p-4 bg-purple/5 rounded-lg border border-purple/20">
+                        <p class="font-mono text-[10px] text-purple uppercase mb-1">soul.md</p>
+                        <p class="font-mono text-xs text-text-primary">AI behavior rules and ethical constraints</p>
+                    </div>
+                    <div class="p-4 bg-cyan/5 rounded-lg border border-cyan/20">
+                        <p class="font-mono text-[10px] text-cyan uppercase mb-1">identity.md</p>
+                        <p class="font-mono text-xs text-text-primary">AI role definition and capabilities</p>
+                    </div>
+                    <div class="p-4 bg-green/5 rounded-lg border border-green/20">
+                        <p class="font-mono text-[10px] text-green uppercase mb-1">user.md</p>
+                        <p class="font-mono text-xs text-text-primary">Owner profile and preferences</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderLogs(container) {
+    container.innerHTML = `
+        <div class="fade-in space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="font-display font-bold text-2xl text-text-primary">Session Logs</h2>
+                <span class="font-mono text-[10px] text-text-muted">${osData.sessions.length} sessions  |  Newest first</span>
+            </div>
+
+            <div class="glass rounded-xl overflow-hidden">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-white/5">
+                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase">Session</th>
+                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase">Date</th>
+                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase">Duration</th>
+                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase">Stages</th>
+                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase">Outcome</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${osData.sessions.map(s => `
+                            <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                <td class="p-4">
+                                    <span class="font-mono text-xs text-cyan font-semibold">${s.id}</span>
+                                </td>
+                                <td class="p-4 font-mono text-xs text-text-primary">${s.date}</td>
+                                <td class="p-4 font-mono text-xs text-text-primary">${s.duration}</td>
+                                <td class="p-4">
+                                    ${s.stages.map(st => `<span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-text-muted mr-1">${st}</span>`).join('')}
+                                </td>
+                                <td class="p-4">
+                                    <span class="badge ${s.outcome==='Complete'?'bg-green/20 text-green border border-green/30':s.outcome==='In Progress'?'bg-cyan/20 text-cyan border border-cyan/30':'bg-amber/20 text-amber border border-amber/30'}">${s.outcome}</span>
+                                </td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    `;
+}
+
+// ===================== ACTIONS =====================
+
+function triggerExport() {
+    alert('Export Control: Select format (DOCX / PDF / Archive) from footer buttons.');
+}
+
+function exportPDF() {
+    alert('PDF Export: Using Chromium headless workaround. Ensure Playwright is installed.');
+}
+
+function exportDOCX() {
+    alert('DOCX Export: Ready via python-docx. Run scripts/export_business_plan.py');
+}
+
+function archiveSession() {
+    alert('Archive: Session snapshot saved to vault/_maintenance/changelists/');
+}
+
+// ===================== INIT =====================
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderDashboard(document.getElementById('content-area'));
+});
+</script>
+</body>
+</html>
