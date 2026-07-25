@@ -234,7 +234,7 @@ observation.
 p.5/TLB-002 p.5/TLB-014 p.4); an AI-personalised loyalty layer with a growing, **management-estimated**
 EBITDA contribution (>USD 14mn FY2024 → >USD 30mn FY2025 — worded by talabat as "estimated to
 generate/contribute," not a disclosed audited figure; `Facts/AI_Facts.md`; TLB-001, page 23; TLB-002,
-page 15); an AdTech monetization
+page 16); an AdTech monetization
 differentiator on the Partner side (an 8% CPG advertising investment ratio vs. a typical 2% industry
 benchmark, TLB-015, page 108). **So what:** talabat's durable moat is shifting from first-mover category
 share toward AI-personalised loyalty depth — harder for a well-funded entrant to replicate quickly

@@ -15,7 +15,7 @@ export const DATA = {
       "How should talabat allocate its 2026 USD 175 million investment programme across Everyday App and Food-leadership initiatives — and within them, across markets and initiative categories — to maximise profitable growth, CLV, retention, and long-term platform economics?",
     charterStatus: "Active — governing problem for the Agentic OS",
     pivotDate: "2026-07-23",
-    snapshotDate: "2026-07-24",
+    snapshotDate: "2026-07-25",
     group: "AASTMT MBA Capstone — Group G02",
     course: "AI for Business Organizations Track — Dr. Hossam Daoud",
     owner: "Sherif Samy Karoub",
@@ -59,10 +59,10 @@ export const DATA = {
 
   sections: [
     { n: 1,  name: "Executive Summary (SCQA)",            status: "drafted", note: "Drafted last, gated on all 13 others; SCQA Answer spot-checked against Sections 2–14." },
-    { n: 2,  name: "Business Description",                status: "drafted", note: "Citation audit found 3 hard failures — fixed, self-verified. Independent Pass 2 required." },
-    { n: 3,  name: "Market Analysis",                     status: "drafted", note: "2 real issues (chained order-frequency figures, TAC/GMV arithmetic) found and fixed." },
-    { n: 4,  name: "Value Proposition",                   status: "drafted", note: "Pivot pilot section." },
-    { n: 5,  name: "AI Technology & Development",         status: "drafted", note: "Pivot pilot section." },
+    { n: 2,  name: "Business Description",                status: "done_iv", note: "Pass 2 + fix cycle + re-verification PASS (2026-07-25)." },
+    { n: 3,  name: "Market Analysis",                     status: "done_iv", note: "Pass 2 caught Egypt-in-non-GCC composition defect; fixed; re-verification double-PASS (2026-07-25)." },
+    { n: 4,  name: "Value Proposition",                   status: "done_iv", note: "Pass 2 (3 hard + 6 blocking) fixed; re-verification double-PASS (2026-07-25)." },
+    { n: 5,  name: "AI Technology & Development",         status: "done_iv", note: "Pass 2 (8 hard + 6 blocking) fixed incl. skill-map root cause; re-verification double-PASS (2026-07-25)." },
     { n: 6,  name: "Business Model & Revenue Streams",    status: "drafted", note: "Flags a new Facts/Revenue.md reconciliation candidate (TLB-019 p.13 fee-mix)." },
     { n: 7,  name: "Marketing & Sales Strategy",          status: "drafted", note: "Funnel-conversion figures explicitly labeled [SYNTHETIC — illustrative estimate]." },
     { n: 8,  name: "Operations Plan",                     status: "drafted", note: "Fresh 7S synthesis; surfaced new primary-source citations (TLB-026)." },
@@ -303,6 +303,7 @@ export const DATA = {
     { t: "07-24", kind: "decision",  who: "decision-steward",        text: "DEC-011 approved — MCP layer pursued: vault-mcp server built, 9 tools, registered in .mcp.json." },
     { t: "07-24", kind: "run",       who: "research-agent",          text: "Stage 5 first post-pivot run — RES-005/006/007 resolved (parent disclosure, GCC q-commerce, ads benchmarks)." },
     { t: "07-24", kind: "pass",      who: "kpi-agent",               text: "Stage 12 verified — full stage gates on all 5 investment options; 3 KPI-tree gaps flagged honestly." },
+    { t: "07-25", kind: "pass",      who: "qa-review-agent",         text: "Pass 2 wave 1 complete — Sections 2/3/4/5 independently verified after 33-finding fix cycle." },
   ],
 
   /* Six-layer structural completeness scorecard.
