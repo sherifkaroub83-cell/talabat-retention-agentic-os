@@ -3,6 +3,20 @@
 All notable changes to the talabat Agentic OS. Format: keep-a-changelog-ish; dates are
 Africa/Cairo project dates. Governing decisions in `vault/Decisions/Decision_Log/`.
 
+## [0.6.0] — 2026-07-25 · Track B Milestone 4: Workflow-first console (phase 1)
+
+### Added
+- **Workflow view** (`#/workflow`): the Goal → Planning → Execution → Validation → Review →
+  Approval → Publish rail rendered from live kernel state — per-stage panels (Execution =
+  real planner queue with owners + wave budget; Validation = per-section citation/QA verdict
+  board incl. re-verify marks; Approval = human-decision queue; Publish = deliverable
+  blockers), event-log Execution timeline, and a docked **Inspector** panel (≥1100px; slide-over
+  below; `I` toggles, `1–7` jump stages).
+- **`scripts/aos/export_console.py`** — the kernel→console bridge: generates
+  `src/js/kernel.js` (workflow state, plan, validation verdicts, events, metrics) from the
+  governing documents; never hand-edited.
+- `tests/test_export_console.py` — suite now 44; sw cache v7 (kernel.js precached).
+
 ## [0.5.0] — 2026-07-25 · Track B Milestone 3: Event bus + validation harness (per AOS_Design_Specification_v1, approved)
 
 ### Added

@@ -4,6 +4,7 @@
    Dependency-free: plain DOM + SVG. */
 
 import { DATA, STATUS } from "./data.js";
+import { KERNEL } from "./kernel.js";
 
 const $ = (sel, el = document) => el.querySelector(sel);
 const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
@@ -275,6 +276,44 @@ const views = {
               </div>`).join("")}
           </div>
         </div>
+      </div>`;
+  },
+
+  workflow() {
+    const K = KERNEL;
+    const EV_META = { verdict: "var(--ok)", decision: "var(--cat1)", milestone: "var(--cat4)",
+                      validation: "var(--cat2)", agent_run: "var(--cat2)", fix_cycle: "var(--warn)",
+                      approval: "var(--cat1)", stage_transition: "var(--ink-3)", publish: "var(--ok)", note: "var(--ink-3)" };
+    return `
+      <h1 class="page-title">Workflow — ${esc(K.goal.name)}</h1>
+      <p class="page-sub">The Goal → Publish rail, rendered from live kernel state (generated ${esc(K.generated)} — regenerate with <code class="kbd">python3 scripts/aos/export_console.py</code>). Click a stage; click any item to inspect it. <span class="kbd">G</span>+<span class="kbd">1–7</span> jumps stages, <span class="kbd">I</span> toggles the inspector.</p>
+      <div class="wf-rail" id="wf-rail">
+        ${K.workflow.map((s, i) => `
+          <button class="wf-stage ${s.status}" data-stage="${s.id}" data-idx="${i}">
+            <span class="wf-dot"></span><span class="wf-name">${esc(s.name)}</span>
+            <span class="wf-detail">${esc(s.detail)}</span>
+          </button>${i < K.workflow.length - 1 ? '<span class="wf-arrow">›</span>' : ""}`).join("")}
+      </div>
+      <div class="wf-body">
+        <div style="min-width:0;flex:1">
+          <div class="card" id="wf-panel"></div>
+          <div class="card mt">
+            <h3 class="block-title">Execution timeline</h3>
+            <p class="block-sub">Event log (episodic memory) — newest first</p>
+            <div class="feed" style="max-height:300px">
+              ${[...K.events].reverse().map((e) => `
+                <div class="feed-item wf-item" data-insp="${esc(e.ref)}" data-insp-sub="${esc(e.ts)} · ${esc(e.type)} · ${esc(e.actor)}${e.detail ? " — " + esc(e.detail) : ""}">
+                  <span class="feed-dot" style="background:${EV_META[e.type] || "var(--ink-3)"}"></span>
+                  <div class="feed-body"><div class="feed-meta"><span class="feed-t">${esc(e.ts.slice(5, 16).replace("T", " "))}</span><span class="feed-kind" style="color:${EV_META[e.type] || "var(--ink-3)"}">${esc(e.type.toUpperCase())}</span><span class="feed-who">${esc(e.actor)}</span></div>
+                  <div class="feed-text">${esc(e.ref)}${e.detail ? " — " + esc(e.detail) : ""}</div></div>
+                </div>`).join("") || '<div class="callout">No events yet.</div>'}
+            </div>
+          </div>
+        </div>
+        <aside class="inspector" id="inspector">
+          <div class="insp-head">Inspector <button class="iconbtn" id="insp-close" aria-label="Close inspector">✕</button></div>
+          <div class="insp-body" id="insp-body"><div class="insp-empty">Select a stage, plan item, section, or event.</div></div>
+        </aside>
       </div>`;
   },
 
@@ -681,11 +720,85 @@ function mountAsk() {
   });
 }
 
+/* ---------------- workflow view wiring ---------------- */
+
+function wireWorkflow() {
+  const rail = $("#wf-rail");
+  if (!rail) return;
+  const panel = $("#wf-panel");
+  const stages = KERNEL.workflow;
+  const select = (idx) => {
+    $$(".wf-stage", rail).forEach((b) => b.classList.toggle("sel", +b.dataset.idx === idx));
+    const st = stages[idx];
+    panel.innerHTML = `<h3 class="block-title">${esc(st.name)}</h3><p class="block-sub">${esc(st.detail)}</p>` + (STAGE_PANELS[st.id] || "");
+    wireInspectorItems();
+  };
+  window.__wfSelect = select;
+  rail.addEventListener("click", (e) => {
+    const b = e.target.closest(".wf-stage");
+    if (b) select(+b.dataset.idx);
+  });
+  const activeIdx = Math.max(0, stages.findIndex((s) => s.status === "active"));
+  buildStagePanels();
+  select(activeIdx);
+  $("#insp-close")?.addEventListener("click", () => $(".wf-body").classList.remove("insp-open"));
+  wireInspectorItems();
+}
+
+let STAGE_PANELS = {};
+function buildStagePanels() {
+  const K = KERNEL;
+  STAGE_PANELS = {};
+  K.workflow.forEach((st) => {
+    if (st.id === "execution") {
+      STAGE_PANELS[st.id] = `<div class="stage-list">${K.plan.slice(0, 9).map((p) => `
+        <div class="stage wf-item" data-insp="${esc(p.action)}" data-insp-sub="owner: ${esc(p.owner)} · stage ${esc(String(p.stage))}">
+          <div class="stage-n">▶</div><div><div class="stage-name">${esc(p.action)}</div>
+          <div class="stage-owner">${esc(p.owner)}</div></div><span class="chip s-todo">queued</span></div>`).join("") ||
+        '<div class="callout">No runnable items — stage complete.</div>'}
+        <div class="block-sub" style="margin-top:8px">Wave budget: max ${K.waveBudget} concurrent agents</div></div>`;
+    } else if (st.id === "validation") {
+      STAGE_PANELS[st.id] = `<div class="table-scroll"><table class="data"><thead><tr><th>Section</th><th>Citation</th><th>QA</th></tr></thead><tbody>
+        ${K.sections.map((s) => {
+          const v = K.validation[s.n] || {};
+          const cell = (x) => x ? `<span class="chip ${x.verdict === "PASS" ? "s-done" : "s-drafted"}">${esc(x.verdict)}${x.stage === "reverify" ? " ✓✓" : ""}</span>` : '<span class="chip s-todo">—</span>';
+          return `<tr class="wf-item" data-insp="Section ${s.n} — ${esc(s.name)}" data-insp-sub="${esc((STATUS[s.status] || {}).label || s.status)}"><td>${s.n} ${esc(s.name)}</td><td>${cell(v.citation)}</td><td>${cell(v.qa)}</td></tr>`;
+        }).join("")}</tbody></table></div>`;
+    } else if (st.id === "approval") {
+      STAGE_PANELS[st.id] = `<ul class="list-plain">
+        <li><b>Open for human decision:</b> map the 6 team members onto the 5 capstone roles (Phase 1 item — no agent can decide it).</li>
+        <li><b>Approved and on file:</b> DEC-001–014 (incl. DEC-012 scoped Track B, DEC-013 re-issuance, DEC-014 Facts correction).</li>
+        <li>Approvals flow: AskUserQuestion escalation → DEC record → register update (see Decisions view).</li></ul>`;
+    } else if (st.id === "publish") {
+      STAGE_PANELS[st.id] = `<ul class="list-plain">
+        <li>Business Plan DOCX/PDF — blocked on Validation (gates 14–18) → Stage 19 handoff.</li>
+        <li>OS Structure Document — unblocked (os-structure-doc skill; source material ready).</li>
+        <li>30-slide deck — blocked on verified sections (deck-builder skill ready).</li></ul>`;
+    } else {
+      STAGE_PANELS[st.id] = `<div class="callout">${esc(st.detail)}</div>`;
+    }
+  });
+}
+
+function wireInspectorItems() {
+  $$(".wf-item").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const body = $("#insp-body");
+      if (!body) return;
+      body.innerHTML = `<div class="insp-title">${el.dataset.insp || ""}</div>
+        <div class="insp-sub">${el.dataset.inspSub || ""}</div>`;
+      $(".wf-body").classList.add("insp-open");
+    });
+  });
+}
+
 /* ---------------- shell & router ---------------- */
 
 const NAV = [
   { group: "Monitor" },
   { id: "overview",  label: "Command Center", icon: "◧" },
+  { id: "workflow",  label: "Workflow",       icon: "➤" },
   { id: "map",       label: "OS Map",         icon: "⬡" },
   { id: "pipeline",  label: "Pipeline",       icon: "⇶" },
   { id: "sections",  label: "Plan Sections",  icon: "▤" },
@@ -758,6 +871,7 @@ function route() {
   requestAnimationFrame(() => {
     const arc = $(".ring-arc");
     if (arc) requestAnimationFrame(() => { arc.style.strokeDashoffset = arc.dataset.target; });
+    wireWorkflow();
     wireMap();
     $("#replay")?.addEventListener("click", () => {
       const feed = $("#feed");
@@ -784,6 +898,10 @@ window.addEventListener("keydown", (e) => {
   if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); $("#palette") ? closePalette() : openPalette(); }
   else if (e.key === "/" && !inField && !$("#palette")) { e.preventDefault(); openPalette(); }
   else if (e.key === "Escape") { closePalette(); $("#ask")?.classList.remove("open"); }
+  else if (!inField && location.hash.includes("workflow")) {
+    if (e.key.toLowerCase() === "i") { $(".wf-body")?.classList.toggle("insp-open"); }
+    else if (/^[1-7]$/.test(e.key) && window.__wfSelect) { window.__wfSelect(+e.key - 1); }
+  }
 });
 
 /* Demo mode (for presentations & testing): ?palette opens the command palette,
