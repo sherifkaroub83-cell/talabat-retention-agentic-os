@@ -63,8 +63,8 @@ export const DATA = {
     { n: 3,  name: "Market Analysis",                     status: "done_iv", note: "Pass 2 caught Egypt-in-non-GCC composition defect; fixed; re-verification double-PASS (2026-07-25)." },
     { n: 4,  name: "Value Proposition",                   status: "done_iv", note: "Pass 2 (3 hard + 6 blocking) fixed; re-verification double-PASS (2026-07-25)." },
     { n: 5,  name: "AI Technology & Development",         status: "done_iv", note: "Pass 2 (8 hard + 6 blocking) fixed incl. skill-map root cause; re-verification double-PASS (2026-07-25)." },
-    { n: 6,  name: "Business Model & Revenue Streams",    status: "drafted", note: "Flags a new Facts/Revenue.md reconciliation candidate (TLB-019 p.13 fee-mix)." },
-    { n: 7,  name: "Marketing & Sales Strategy",          status: "drafted", note: "Funnel-conversion figures explicitly labeled [SYNTHETIC — illustrative estimate]." },
+    { n: 6,  name: "Business Model & Revenue Streams",    status: "done_iv", note: "Pass 2 fixed incl. DEC-013 container re-issuance; fee-mix conflict resolved at root (DEC-014); double-PASS (2026-07-25)." },
+    { n: 7,  name: "Marketing & Sales Strategy",          status: "done_iv", note: "Pass 2 fixed (5 hard + 3 blocking); synthetic labeling verified exemplary; double-PASS (2026-07-25)." },
     { n: 8,  name: "Operations Plan",                     status: "drafted", note: "Fresh 7S synthesis; surfaced new primary-source citations (TLB-026)." },
     { n: 9,  name: "Financial Plan",                      status: "drafted", note: "Headline case resolved by DEC-008: base case with bucket split." },
     { n: 10, name: "Risk Analysis",                       status: "drafted", note: "17 risks with named owners; High×High: FIN-01 margin step-down, MKT-01." },
@@ -245,6 +245,7 @@ export const DATA = {
     { id: "DEC-011", title: "MCP layer — pursue (vault-mcp)", status: "approved", note: "Read-only MCP server built and registered; closes the Phase-2 open question and the OS's missing tools layer." },
     { id: "DEC-012", title: "Production platform track (scoped)", status: "approved", note: "Track B approved 2026-07-25 as Option 2: incremental kernel/tests/CI evolution; enterprise stack deferred; capstone always takes precedence." },
     { id: "DEC-013", title: "Subscription-line reclassification re-issuance", status: "approved", note: "Procedural re-issuance of superseded DEC-006 (DEC-010 precedent); ASM-013 re-established." },
+    { id: "DEC-014", title: "TLB-019 fee-mix label correction", status: "approved", note: "Label-shift confirmed by 16-value arithmetic reconstruction; Facts layer corrected at root." },
   ],
 
   options: [
@@ -257,7 +258,7 @@ export const DATA = {
 
   registers: [
     { name: "Assumptions Register", count: 47, status: "All post-pivot rows Approved; 4 new ASM candidates from RES-005..007 await disposition", icon: "≔" },
-    { name: "Decision Log", count: 13, status: "DEC-001–013, all approved", icon: "◆" },
+    { name: "Decision Log", count: 14, status: "DEC-001–014, all approved", icon: "◆" },
     { name: "Investment Options", count: 5, status: "OPT-001–005 with verified stage gates (2026-07-24)", icon: "▤" },
     { name: "Research Register", count: 8, status: "RES-005..007 resolved 2026-07-24 (first post-pivot run); 4 pre-pivot notes superseded", icon: "◈" },
   ],
@@ -306,6 +307,8 @@ export const DATA = {
     { t: "07-24", kind: "run",       who: "research-agent",          text: "Stage 5 first post-pivot run — RES-005/006/007 resolved (parent disclosure, GCC q-commerce, ads benchmarks)." },
     { t: "07-24", kind: "pass",      who: "kpi-agent",               text: "Stage 12 verified — full stage gates on all 5 investment options; 3 KPI-tree gaps flagged honestly." },
     { t: "07-25", kind: "pass",      who: "qa-review-agent",         text: "Pass 2 wave 1 complete — Sections 2/3/4/5 independently verified after 33-finding fix cycle." },
+    { t: "07-25", kind: "decision",  who: "decision-steward",        text: "DEC-014 — fee-mix label-shift proven by 16-value reconstruction; Facts corrected at root." },
+    { t: "07-25", kind: "pass",      who: "OS",                      text: "Sections 6/7 verified (6/14). AOS kernel + memory layer shipped: 34 tests, CI, ranked retrieval." },
   ],
 
   /* Six-layer structural completeness scorecard.

@@ -3,6 +3,29 @@
 All notable changes to the talabat Agentic OS. Format: keep-a-changelog-ish; dates are
 Africa/Cairo project dates. Governing decisions in `vault/Decisions/Decision_Log/`.
 
+## [0.4.0] — 2026-07-25 · Track B Milestone 2: Memory layer (Phase 2)
+
+### Added
+- **`scripts/aos/memory.py`** — the memory layer: BM25-ranked hybrid retrieval over the whole
+  vault (frontmatter-type and path filters, citation-bearing snippets), the live wikilink
+  knowledge graph (neighbors, 2-hop related, orphan detection), and the context manager
+  (`context(topic)` → bounded pointer set: ranked notes + graph neighborhood + governing
+  decisions). Zero dependencies; results are pointers into the governed tiers, never a new
+  evidence tier.
+- CLI verbs: `search`, `related`, `context`, `orphans`.
+- vault-mcp tool #10: `search_ranked` — ranked retrieval exposed to every agent/session.
+- `tests/test_memory.py` — retrieval ranking/filters, graph, context boundedness (suite now
+  34 tests).
+
+### Changed
+- Console v6: Sections 6–7 verified (6/14), DEC-014 in the Decision Log, activity events.
+
+### Capstone track (parallel)
+- Sections 6 and 7 → ✅ Done (independently verified) after full Pass 2 → fix → re-verify
+  cycles; `DEC-013` (container re-issuance) and `DEC-014` (TLB-019 fee-mix label-shift proven
+  by 16-value arithmetic reconstruction, Facts layer corrected at root); ASM-016/024
+  register bookkeeping. Pass 2 for Sections 8–14/1 paused by the user mid-batch-2.
+
 ## [0.3.0] — 2026-07-25 · Track B Milestone 1: Architecture Foundation + Tests + CI
 
 Per `DEC-012` (approved, scoped Track B — incremental production-OS evolution, capstone first).

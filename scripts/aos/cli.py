@@ -8,6 +8,10 @@ Usage:
     python3 scripts/aos/cli.py skills     # skill registry
     python3 scripts/aos/cli.py mcp       # MCP registry
     python3 scripts/aos/cli.py graph      # execution graph (mermaid)
+    python3 scripts/aos/cli.py search <query>    # BM25-ranked vault retrieval
+    python3 scripts/aos/cli.py related <title>   # knowledge-graph neighborhood
+    python3 scripts/aos/cli.py context <topic>   # context set for a task
+    python3 scripts/aos/cli.py orphans           # unlinked Knowledge notes
 """
 
 import json
@@ -15,7 +19,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from scripts.aos import pipeline, registry  # noqa: E402
+from scripts.aos import memory, pipeline, registry  # noqa: E402
 
 
 def main(argv):
@@ -47,6 +51,17 @@ def main(argv):
         print(json.dumps(registry.mcp_tools(), indent=2))
     elif cmd == "graph":
         print(pipeline.mermaid())
+    elif cmd == "search":
+        q = " ".join(argv[2:]) or "talabat"
+        for h in memory.VaultIndex.get().search(q):
+            print(f"{h['score']:>6}  {h['path']}" + (f"\n        {h['snippet']}" if h["snippet"] else ""))
+    elif cmd == "related":
+        print(json.dumps(memory.VaultIndex.get().related(" ".join(argv[2:])), indent=2))
+    elif cmd == "context":
+        print(json.dumps(memory.context(" ".join(argv[2:])), indent=2))
+    elif cmd == "orphans":
+        o = memory.VaultIndex.get().orphans()
+        print("\n".join(o) if o else "No orphans in vault/Knowledge.")
     else:
         print(__doc__)
         return 1

@@ -196,6 +196,11 @@ TOOLS = {
         "description": "Fetch an Investment Option record by id (e.g. 'OPT-002').",
         "schema": {"type": "object", "properties": {"id": {"type": "string", "description": "Option id, e.g. OPT-002"}}, "required": ["id"]},
     },
+    "search_ranked": {
+        "fn": lambda args: _search_ranked(args),
+        "description": "BM25-ranked hybrid search over the whole vault (aos memory layer): returns scored note paths + citation-bearing snippets. Optional type filter (e.g. 'validation', 'architecture').",
+        "schema": {"type": "object", "properties": {"query": {"type": "string"}, "k": {"type": "integer", "default": 8}, "type": {"type": "string"}}, "required": ["query"]},
+    },
     "search_facts": {
         "fn": search_facts,
         "description": "Search the governed knowledge tiers (Knowledge/Facts, Topics, Strategic, Research/Notes) for a phrase; returns note paths + matching lines.",
@@ -217,6 +222,19 @@ TOOLS = {
         "schema": {"type": "object", "properties": {}, "required": []},
     },
 }
+
+
+def _search_ranked(args):
+    import sys
+    sys.path.insert(0, str(ROOT))
+    from scripts.aos import memory
+    hits = memory.VaultIndex.get().search(
+        args.get("query", ""), k=min(int(args.get("k", 8)), 20), type_filter=args.get("type"))
+    lines = [f"# Ranked vault search: '{args.get('query', '')}' ({len(hits)} hits)"]
+    for h in hits:
+        lines.append(f"- [{h['score']}] {h['path']}" + (f" — {h['snippet']}" if h["snippet"] else ""))
+    lines.append("\nPointers only — cite through the note to (DocID, page) or an Approved ASM.")
+    return clamp("\n".join(lines))
 
 
 # ---------------------------------------------------------------- protocol
