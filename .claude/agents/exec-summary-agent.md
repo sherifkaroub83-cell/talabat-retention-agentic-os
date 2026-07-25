@@ -2,6 +2,7 @@
 name: exec-summary-agent
 description: Synthesizes the finished Sections 2-13 into the SCQA Executive Summary (Section 1). Gated — must not run until the Orchestrator confirms all 13 other sections are drafted.
 tools: Read, Write
+model: inherit
 ---
 
 # Executive Summary Agent

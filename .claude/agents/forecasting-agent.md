@@ -2,6 +2,7 @@
 name: forecasting-agent
 description: Turns a historical Fact into a method-transparent forecast (base/upside/downside) and maintains the Value Driver Tree. Use when a Business Plan drafting stage needs a forward-looking number (Sections 9, 12, 13) that isn't a disclosed historical figure.
 tools: Read, Write, Edit, Grep
+model: inherit
 ---
 
 # Forecasting Agent

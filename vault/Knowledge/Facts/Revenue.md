@@ -170,7 +170,9 @@ Consolidated from 25 of 29 corpus documents (Phase 4 consolidation of `vault/Kno
 
 - FY2025 Management Revenue (talabat-only): USD 3.92bn (3,876mn), +33% y/y cFX; pro-forma incl. instashop USD 4.04bn, +32% y/y (TLB-019, page 5, page 13)
 - Q4'25 Management Revenue (talabat-only, cFX): USD 1.0bn (1,039mn), +26% y/y (TLB-019, page 5, page 13)
-- Revenue by fee type (% of GMV, FY'25): Commission Fees 14.2-16.2%; Delivery & Service Fees 12.8-14.8%; Advertising & Listing Fees 8.9-9.4%; Subscription Fees & Other Income 3.3-3.5% (TLB-019, page 13)
+- Revenue by fee type (% of GMV, FY'24 → FY'25): Commission Fees 14.3% → 13.8%; Subscription Fees & Other Income 12.8% → 14.8%; Delivery & Service Fees 9.4% → 9.1%; Advertising & Listing Fees 3.3% → 3.4% (total Management Revenue 40% → 41% of GMV) (TLB-019, page 13)
+- Revenue by fee type (% of GMV, Q4'24 → Q4'25): Commission Fees 14.2% → 13.3%; Subscription Fees & Other Income 13.5% → 16.2%; Delivery & Service Fees 9.3% → 8.9%; Advertising & Listing Fees 3.3% → 3.5% (total Management Revenue 40% → 42% of GMV) (TLB-019, page 13)
+  - **Correction (2026-07-25, [[DEC-014_tlb019-fee-mix-label-correction|DEC-014]], escalated by `Citation_Audit_Section_06_v2_pass2.md` SF-2):** this entry previously read "Revenue by fee type (% of GMV, FY'25): Commission Fees 14.2-16.2%; Delivery & Service Fees 12.8-14.8%; Advertising & Listing Fees 8.9-9.4%; Subscription Fees & Other Income 3.3-3.5%" — an extraction error: the slide discloses four **point values per fee line** (FY'24, FY'25, Q4'24, Q4'25), not "FY'25 ranges," and the recorded spans were assigned to shifted fee-type labels. Corrected against the verified source text (`vault/Knowledge/_source_text/20260213_talabat-Q4-FY25-Results-Presentation.txt`, PAGE 13) and arithmetically cross-verified, all 16 values, against independently disclosed dollars ÷ GMV (TLB-002 p.20; TLB-009 p.4; TLB-029). Same-tier conflict resolved in favor of verified source text, per the ASM-021 correction precedent — full reconciliation in DEC-014. The corrected FY'25 figures corroborate (no longer conflict with) TLB-011 p.4's Q1'26 mix table and the 3.4-3.5%-of-GMV Group advertising figure.
 - FY2025 revenue growth 33% actual vs. 18-20% original guidance / 29-32% revised guidance — exceeded (TLB-019, page 5)
 - FY2026 Revenue growth guidance: 14-17% cFX (USD 4.4-4.5bn); talabat to report IFRS Revenue only from 2026 onward; FY2025 IFRS Revenue for talabat+12m instashop = USD 3,870mn (TLB-019, page 18)
 
@@ -212,7 +214,7 @@ Consolidated from 25 of 29 corpus documents (Phase 4 consolidation of `vault/Kno
 
 - FY'24 Management revenue (as presented): USD 2,956.02mn (39.80% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
 - FY'24 Revenue (IFRS): USD 2,871.86mn. (TLB-029, sheet: 2024 Quarterly Historicals)
-- FY'24 Commission fees: USD 1,062.43mn (16.19% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
+- FY'24 Commission fees: USD 1,062.43mn (16.19% — source-sheet row label "Commissions (% GMV-other direct income)", i.e. a GMV-less-other-direct-income denominator, NOT % of full GMV; Commission ÷ full GMV FY'24 = 14.30%, matching TLB-019 p.13). (TLB-029, sheet: 2024 Quarterly Historicals) *(denominator qualifier added 2026-07-25 per DEC-014's follow-up flag)*
 - FY'24 Subscription fee & other income: USD 952.36mn (12.82% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
 - FY'24 Delivery & service fees: USD 695.61mn (9.36% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
 - FY'24 Advertising and listing fees: USD 245.62mn (3.31% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)

@@ -1,0 +1,14 @@
+{
+  "name": "agentic-os-console",
+  "private": true,
+  "version": "1.0.0",
+  "description": "talabat Agentic OS Console — command console for the 2026 USD 175m capital-allocation capstone. Static web app (PWA) + Tauri 2 shell for Windows/macOS/Linux/Android/iOS.",
+  "scripts": {
+    "dev": "python3 -m http.server 8123 --directory src",
+    "icons": "tauri icon src-tauri/icons/icon.png",
+    "tauri": "tauri"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  }
+}

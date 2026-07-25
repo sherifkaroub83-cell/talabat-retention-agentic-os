@@ -36,7 +36,7 @@
 
 ### Talabat Pro
 - talabat pro is talabat's subscription loyalty programme, launched March 2022 in the UAE (TLB-001, page 19).
-- By end-2024, available in all countries of operation except Iraq; per the CEO's statement, "now available in seven of the eight countries" following its Egypt launch (TLB-001, page 11-12, page 19).
+- By end-2024, available in all countries of operation except Iraq; per the CEO's statement, "now available in seven of the eight countries" following its Egypt launch (TLB-001, page 11-12, page 19). [Correction note 2026-07-24: the seven-of-eight status dates to after the February 2025 Egypt launch (TLB-001 pp.11-12); at end-2024 talabat pro was live in six of eight countries (TLB-015 p.77) — flagged by Pass 2 citation audit of Section 5.]
 - talabat pro launched in Egypt in February 2025 ("recently launched," "at the time of writing") (TLB-001, page 11, page 19).
 - 2.1x increase in talabat pro adoption rate in 2024 vs. prior year (TLB-001, page 12, page 21).
 - 24% uplift in talabat pro conversion rates attributed to the newly redesigned talabat app (Q4 2024 redesign) (TLB-001, page 12, page 23).
