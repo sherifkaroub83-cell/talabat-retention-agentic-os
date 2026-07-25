@@ -1,7 +1,7 @@
 ---
 section: 7
 title: Marketing and Sales Strategy
-status: Drafted — self-reviewed (Pass 1); citation audit run in-session ([[Citation_Audit_Section_07_v2]]); independent Pass 2 citation re-check and QA review (incl. the three new gates) still required before ✅ Done
+status: Drafted — independent Pass 2 QA review and citation audit both returned FAIL on 2026-07-25 ([[QA_Review_Section_07_v2_pass2]], [[Citation_Audit_Section_07_v2_pass2]]); all blocking (B1–B3), hard (HF-1–HF-5), soft (SF-1–SF-5) and in-draft non-blocking findings fixed 2026-07-25 (see "Fix record" at end of file); targeted Pass 2 re-check of the fixed passages still required before ✅ Done
 pipeline_run: 2026-07-23
 supersedes_note: "No prior Section 7 draft exists under vault/Projects/Business_Plan_Drafts/ (no _v2 suffix) — this is the first drafting pass on Section 7 under either the old or new problem. It is drafted fresh against the 2026-07-23 pivot's Group-wide capital-allocation problem, per Problem_Charter.md, and is not a companion revision of any earlier file."
 ---
@@ -122,7 +122,7 @@ line within Customer Acquisition and Retention Costs (CARC), not as a loyalty in
 USD 155mn 2025 CARC total (1.6% of GMV) was voucher spend *(Group; TLB-002, page 21; `Topics/Promotions.md`)*.
 The segment deliberately not pursued through discounting is **price-sensitive, low-frequency, single-
 vertical customers acquired primarily through vouchers** — the corpus's own evidence is that this is
-exactly the segment where competitive pressure is eroding retention fastest (the -4pp non-high-value M1
+exactly the segment where competitive pressure is eroding retention fastest (the -4% y/y non-high-value M1
 decline above), suggesting voucher-led acquisition of this segment is not just off-brand but evidenced to
 be a comparatively weak retention bet relative to the CVP alternative.
 
@@ -137,10 +137,12 @@ what:** this positioning directly supports the plan's own ranked options — `OP
 partner-retention targeted at UAE, Kuwait, Qatar) is this positioning statement operationalized at the
 market level where the competitive-pressure evidence actually exists, and `OPT-002` (talabat pro
 acceleration in Egypt/Iraq) extends the same CVP-over-discounting logic to the two newest, least-
-instrumented markets.
+instrumented markets. Concentrating this spend on the GCC-3 is also where `Section_03_Market_Analysis.md`'s
+80/20 analysis locates the value at stake: the five GCC markets carry 82% of pro-forma FY2025 GMV
+*(Group; TLB-002, page 18, as cited in Section 3)*.
 
 **Caution — market applicability.** The competitive-pressure evidence motivating this positioning (the
--4pp non-high-value retention decline) is disclosed only for UAE, Kuwait, and Qatar *(market-comparison;
+-4% y/y non-high-value retention decline) is disclosed only for UAE, Kuwait, and Qatar *(market-comparison;
 TLB-019, page 9)*. Applying "CVP-over-discounting" as talabat's *general* strategic posture is well-
 evidenced at Group level (the quote itself is not market-scoped), but the specific *quantified problem*
 this posture is designed to solve is not evidenced for Egypt or other non-GCC markets — an
@@ -152,11 +154,16 @@ explicitly rather than assumed (`Topics/Food Leadership.md` Open Questions).
 **Disclosed channels (Fact, Group level).** The corpus discloses acquisition and retention spend by cost
 category, not by discrete marketing channel (no disclosed breakdown of paid search, social, in-app referral,
 or offline spend exists anywhere in the corpus). What is disclosed: total Customer Acquisition and
-Retention Costs (CARC) rose from USD 89mn (1.5% of GMV, 2023) to USD 155mn (1.6% of GMV, 2025), of which
-USD 89mn (2025) was talabat-funded vouchering specifically *(Group; TLB-001, page 28; TLB-002, page 21;
-`Topics/Promotions.md`)*; separately, Partner-funded savings (not a talabat marketing-spend line, but a
-channel-adjacent customer-facing incentive) reached an all-time-high 7% of GMV in Q1 2026, totaling more
-than AED 1,567.7mn over a trailing 12-month period *(Group; TLB-020, page 7; TLB-023, page 6)*. **So what
+Retention Costs (CARC) rose in dollar terms across all three disclosed points — USD 89mn (1.5% of GMV,
+2023) → USD 103mn (1.4% of GMV, 2024) → USD 155mn (1.6% of GMV, 2025) — a monotonic dollar rise whose
+share of GMV dipped in 2024 before rising (1.5% → 1.4% → 1.6%, non-monotonic), of which USD 89mn (2025)
+was talabat-funded vouchering specifically *(Group; TLB-001, page 28; TLB-002, page 21;
+`Topics/Promotions.md`)*. Separately, two distinct savings disclosures exist — different periods,
+different funders, not one statistic: Partner-funded savings (not a talabat marketing-spend line, but a
+channel-adjacent customer-facing incentive) reached an all-time-high 7% of GMV in Q1 2026 *(Group;
+TLB-020, page 7)*; and, in an earlier disclosure at the November 2024 intention-to-float announcement,
+aggregate annual customer savings exceeded AED 1,567.7mn over a 12-month period, funded by Partners, B2B,
+and bank partnerships — not by Partners alone *(Group; TLB-023, page 6)*. **So what
 for the P&L:** because talabat's own cost taxonomy already separates "vouchering" (a discount cost) from
 the CARC total, this plan's acquisition strategy inherits that same discipline — proposing that any
 2026-programme acquisition spend be tracked and evaluated the same way, as an investment with a measurable
@@ -181,7 +188,9 @@ consecutive rising data points, the strongest behaviour-change trend disclosed a
 > first-time orderers place a 6th order; what share of 6-order customers become multi-vertical; what
 > share of multi-vertical customers convert to talabat pro), at any geography level, Group or otherwise
 > (`Topics/Customer Journey.md` Open Questions: "the vault does not disclose a formal, quantified journey/
-> funnel model"). **No number below in this box is a talabat-disclosed or corpus-derived figure.**
+> funnel model"). **No conversion percentage in the table below is a talabat-disclosed or corpus-derived figure** — the
+> table's middle "Anchor" column does cite real, separately-sourced disclosures; it is the right-hand
+> conversion column that is entirely synthetic.
 
 **Illustrative acquisition funnel — SYNTHETIC, framework-only, explicitly not corpus data.**
 
@@ -200,8 +209,9 @@ explicitly labeled and never blended with, or presented as, real disclosed compa
 are **not** registered in `Assumptions_Register.md` and **must not** be treated as forecast inputs to
 Section 9's financial case, which correctly excludes them; they exist here solely to give the qualitative
 journey sequence above a funnel *shape* for planning discussion. If the 2026 programme funds any of the
-options below, instrumenting these actual stage-to-stage conversion rates (currently entirely unmeasured,
-per KPI Tree gap, `Topics/Customer Journey.md` Open Questions) should itself be an early, low-cost
+options below, instrumenting these actual stage-to-stage conversion rates (currently entirely unmeasured —
+`KPI_Tree_v2.md` **C11**, Customer-journey conversion rate, status Newly-instrumented, node N-18;
+`Topics/Customer Journey.md` Open Questions) should itself be an early, low-cost
 deliverable — the plan cannot recommend a specific acquisition-spend allocation against this funnel today
 because the funnel's own real conversion rates are unknown, not because the concept is inapplicable.
 
@@ -223,8 +233,11 @@ OPT-002_talabat-pro-acceleration-egypt-iraq.md`).
 partner-side investment is explicit: "on the partner side, we invest in retaining, winning back, and
 acquiring high-demand food partners... reflected in commission rate investments" *(Group; TLB-020, page
 16; TLB-014, page 19; `Topics/Food Leadership.md`)* — a qualitative mechanism with no disclosed
-partner-retention percentage or count anywhere in the corpus (`vault/Forecasts/Value_Driver_Tree_v2.md`
-N-10). This is directly relevant to marketing/sales strategy because Partner economics fund a meaningful
+partner-retention percentage or count *that this investment is expected to move*
+(`vault/Forecasts/Value_Driver_Tree_v2.md` N-10). The corpus's one disclosed partner-retention statistic —
+~99% Partner retention among pro-participating vendors in 2024 *(Group; TLB-001, page 21)* — is measured
+on a different population (pro-participating vendors), not a general partner-retention series, and so
+does not baseline this investment's target metric. This is directly relevant to marketing/sales strategy because Partner economics fund a meaningful
 share of customer-facing promotional value: Partner-funded savings reached an all-time-high 7% of GMV in
 Q1 2026 *(Group; TLB-020, page 7)* — distinct from, and larger in scale than, talabat's own voucher spend.
 
@@ -258,37 +271,65 @@ this plan does not invent a separate "AI vendor partnership" the corpus does not
 Drivers.md`'s own synthesis ranks five product-embedded retention levers by strength of corpus evidence:
 (1) talabat pro — a 20-28% order-frequency uplift and 26-32% retention uplift versus matched
 non-subscribers, and a 136% gross-profit-per-customer uplift in the 30 days following subscription
-*(GCC + Jordan, six markets live before December 2024; explicitly excludes Egypt and Iraq by name; TLB-001,
-page 18; TLB-015, pages 78, 104; TLB-019, page 11)*; (2) multi-vertical engagement, which amplifies pro's
+*(GCC + Jordan cohort — talabat pro live in six of eight countries, all except Egypt and Iraq (TLB-015,
+page 77); cohort/timing scope per `ASM-016`, the register's attribution rather than TLB-019's own; TLB-001,
+page 18; TLB-015, pages 78, 104; TLB-019, page 11; TLB-023, page 8 — "over 20%", the range's lower bound)*; (2) multi-vertical engagement, which amplifies pro's
 effect rather than operating independently — mono-vertical subscribers show a +16pp M1 retention lift
-versus mono-vertical non-subscribers, multi-vertical subscribers show +20pp *(GCC + Jordan; TLB-019, page
-10)*; (3) talabat Rewards, an 18%-adoption, >15%-order-frequency-uplift-within-30-days mechanism that
+versus mono-vertical non-subscribers, multi-vertical subscribers show +20pp *(Group/GCC+Jordan cohort per
+`ASM-016` — TLB-019, page 10 itself discloses no market scope)*; (3) talabat Rewards, an 18%-adoption, >15%-order-frequency-uplift-within-30-days mechanism that
 talabat's own language links directly to "reducing churn" *(Group; TLB-026, page 134; TLB-015, page 79)*;
 (4) talabat PostPaid, a 14% order-frequency-increase-post-adoption mechanism described as "accretive to
 order frequency and customer retention" *(Group; TLB-001, pages 9, 18)*; (5) Family Plan, a >60% retention
 premium over solo-plan subscribers, on the narrowest evidence base of the five (single document, single
-household-size segment, no adoption-rate or country breakout) *(Group; TLB-018, page 6)*.
+household-size segment, no adoption-rate or country breakout) *(Group; TLB-018, page 6)*. **MECE status,
+stated explicitly:** this five-mechanism set is a ranking, not a partition — the mechanisms interact
+(multi-vertical engagement amplifies pro's effect rather than operating independently), and that overlap
+is handled by ranking them and by never summing their uplifts, not by treating them as mutually exclusive
+segments. Where this section's forward-looking recommendation relies on the Rewards and PostPaid uplifts
+persisting through FY2026, that persistence is a registered assumption, not a disclosure (`ASM-024`,
+`status: Approved`, Medium confidence).
 
-**Caution — geography, stated exactly as `Strategic/Customer Retention Drivers.md`'s own discipline
-requires.** None of the five uplift figures above are confirmed for Egypt: they are measured on the six
-GCC/Jordan markets live before talabat pro's February 2025 Egypt launch, and are applied to Egypt or
-non-GCC generally only as a labeled inference (`ASM-016`, `status: Approved`, Low confidence — Geographic
-Evidence Rules' named Failure Pattern #1). This plan's retention-strategy recommendation for `OPT-002`
-therefore rests on **the Group/GCC "what works" playbook, imported into Egypt/Iraq as a working
-hypothesis, not an Egypt-validated ranking** — stated here exactly as the source note itself requires.
+**Caution — geography, stated per figure as `Strategic/Customer Retention Drivers.md`'s own discipline
+requires.** None of the five uplift figures above is confirmed for Egypt, but for different reasons that
+must not be blended into one blanket claim: the **talabat pro** figures (1), and the pro-subscriber M1
+deltas in (2), are measured on the pre-February-2025 cohort — pro was live in six of eight countries, all
+except Egypt and Iraq *(TLB-015, page 77)* — and are applied to Egypt or non-GCC generally only as a
+labeled inference (`ASM-016`, `status: Approved`, Low confidence — Geographic Evidence Rules' named
+Failure Pattern #1). **Rewards** (3) and **PostPaid** (4) are Group-level disclosures with no
+Egypt-specific breakout (no cohort is stated for Rewards; PostPaid was disclosed live only in the five
+GCC markets at CMD 2024 — `Topics/FinTech.md`); **Family Plan** (5) is a Q2 2025 Group-level disclosure
+that post-dates the February 2025 Egypt launch, with no cohort or country breakout disclosed at all
+*(Group; TLB-018, page 6)*. Per the source note itself: "all are Group-level, GCC-cohort-based, or
+explicitly Egypt-excluded." This plan's retention-strategy recommendation for `OPT-002` therefore rests
+on **the Group/GCC "what works" playbook, imported into Egypt/Iraq as a working hypothesis, not an
+Egypt-validated ranking** — stated here exactly as the source note itself requires.
 
 **AI/personalisation as infrastructure, not a sixth lever.** The mechanism that times and targets all five
 retention levers above is the same AI/personalisation layer discussed in Section 5 — its estimated EBITDA
 contribution rose from USD 14mn+ (FY2024) to USD 30mn+ (FY2025) *(Group; TLB-001, page 23; TLB-002, page
-15)*. **So what:** the retention tactics in this section (targeted rewards timing, personalised offer
+16 — page ref per `Facts/AI_Facts.md` / `Value_Driver_Tree_v2.md` N-09, corrected 15→16 on 2026-07-24)*. **So what:** the retention tactics in this section (targeted rewards timing, personalised offer
 surfacing after the 6-order threshold, subscription-conversion nudges) are not a menu of independent
 initiatives competing for budget — they are applications of one underlying capability (`OPT-005`, AI/
 personalisation scaling), consistent with how `Strategic/Customer Retention Drivers.md` frames the
 relationship.
 
+**Customer support and training — what the corpus actually discloses.** Disclosed customer-support
+content is embedded in the product rather than described as a standalone service function: "priority
+customer support" is a named talabat pro subscription benefit *(Group; TLB-002, page 13; TLB-009, page 3;
+TLB-011, page 2)*, and customer support is one of the attributes on which surveyed users ranked talabat
+#1 in the August 2024 survey *(market-comparison: Kuwait, UAE, Egypt, Qatar, Bahrain; TLB-015, pages 39,
+44; TLB-012, page 7)*. Disclosed training is partner- and rider-facing, not customer-facing: Partner
+growth sessions including an SME academy launched in Egypt with the German Chamber of Commerce, training
+over 200 SMEs by July 2024 *(Egypt-standalone; TLB-001, page 46)*, and the "tcamp" rider-training
+platform *(five named markets: Egypt, UAE, Bahrain, Kuwait, Oman; TLB-001, page 49; TLB-026, page 138)*.
+Beyond these, the corpus discloses **no standalone customer-support metrics (contact rates, resolution
+times, satisfaction scores) and no customer-facing training programme** — that gap is stated here
+explicitly rather than left implicit under this subsection's heading.
+
 **Community-building and regular product enhancement.** The corpus discloses no dedicated customer
 community/forum product (no loyalty community, ambassador programme, or user-generated-content mechanic
-is named anywhere in the 29-document primary corpus) — this section states that gap rather than inventing
+is named anywhere in the 29-document corpus — 27 primary plus 2 secondary sell-side-consensus documents,
+TLB-027/TLB-028) — this section states that gap rather than inventing
 one. What is disclosed as a regular-enhancement cadence is talabat pro's own product evolution (Family
 Plan tiering, DineOut Deals integration bundled into the subscription) and the co-branded card
 partnerships above, both already-operating retention product lines that this plan's ranked options
@@ -311,12 +352,17 @@ per Section 12's Three Horizons framing.
 ## 7.6 Cross-section consistency check (Stage 13.10, self-performed)
 
 Checked against `Section_06_Business_Model_and_Revenue_Streams.md`: the CARC figures cited here (USD 89mn
-→ USD 155mn, 2023→2025) and the vouchers-as-contra-revenue figure (USD 120mn, FY2025) are the same figures
-Section 6 cites in its unit-economics discussion (§6.4) — no contradiction, no double-counting; this
+→ USD 103mn → USD 155mn, 2023→2025) and the vouchers-as-contra-revenue figure (USD 120mn, FY2025 *(Group;
+TLB-002, page 20)*) are the same figures Section 6 cites — CARC in its unit-economics discussion (§6.4),
+the contra-revenue figure in its §6.1 revenue-mix table — no contradiction, no double-counting; this
 section discusses CARC as an acquisition/retention *strategy* input, Section 6 discusses it as a *cost
-line against revenue*, and neither restates the other's number differently. Checked against
+line against revenue*, and neither restates the other's number differently. (Coordination note for stage
+13.10: Section 6 still presents the CARC share-of-GMV series endpoint-only — flagged by QA Pass 2 (B3
+out-of-scope flag) for fixing when Section 6 is next touched; not fixed from here, since this fix cycle
+edits Section 7 only.) Checked against
 `Strategic/Customer Retention Drivers.md` and `Section_04_Value_Proposition.md`'s value-mechanism ranking
-(if drafted): the same five-mechanism ranking (pro > multi-vertical > Rewards/PostPaid > Family Plan) is
+(Section 4 is drafted; the check was performed against it): the same five-mechanism ranking (pro >
+multi-vertical > Rewards/PostPaid > Family Plan) is
 used here as in Section 4's value-driver-tree anchor, preserving the "same 3-5 mechanisms end to end"
 McKinsey Lens requirement. Checked against `DEC-008`: no `ASM-018` (2.2:1 Everyday App:Food-leadership
 split) figure is shown anywhere in this section, headline or otherwise — not implicated. Checked against
@@ -336,8 +382,9 @@ are shown). No contradiction found.
 | Non-high-value M1 retention -4% y/y (UAE, Kuwait, Qatar) | TLB-019, page 9 |
 | "A more competitive environment (new entrants and incumbents)" FY2026 headwind | TLB-019, page 18 |
 | Brand narrative arc (2016 → 2021 → 2025) | TLB-016, page 7 |
-| CARC USD89mn (1.5% of GMV, 2023) → USD155mn (1.6% of GMV, 2025); USD89mn 2025 vouchering | TLB-001, p.28; TLB-002, p.21 |
-| Partner-funded savings 7% of GMV (Q1 2026, all-time high); >AED1,567.7mn trailing 12 months | TLB-020, p.7; TLB-023, p.6 |
+| CARC USD89mn (1.5% of GMV, 2023) → USD103mn (1.4%, 2024) → USD155mn (1.6%, 2025) — dollar rise monotonic, share of GMV non-monotonic; USD89mn 2025 vouchering | TLB-001, p.28; TLB-002, p.21 |
+| Partner-funded savings 7% of GMV (Q1 2026, all-time high) | TLB-020, p.7 |
+| Aggregate annual customer savings >AED1,567.7mn over a 12-month period (Nov 2024 ITF disclosure; funded by Partners, B2B, and bank partnerships — not Partner-funded alone) | TLB-023, p.6 |
 | Customer journey: Food → Grocery & Retail → talabat pro sign-up | TLB-013, p.6 |
 | ~6-order AI-personalisation threshold | TLB-002, p.15 |
 | Multi-vertical vs. food-only order frequency (13.0 vs. 3.8/month, July 2024) | TLB-012, p.9; TLB-013, p.6 |
@@ -345,14 +392,21 @@ are shown). No contradiction found.
 | No disclosed quantified journey/funnel conversion model anywhere in corpus | `Topics/Customer Journey.md` Open Questions |
 | Illustrative acquisition-funnel conversion percentages | **SYNTHETIC — this section's own illustrative construction, not corpus-derived; not an Approved Assumption; not cited elsewhere** |
 | talabat PostPaid GCC-only through CMD 2024; Egypt as first non-GCC expansion (PostPaid + CIB card) | TLB-015, pp.25,74,103; TLB-002, pp.14,19 |
-| talabat pro uplift figures (20-28% frequency; 26-32% retention; 136% gross-profit-per-customer) | TLB-001 p.18; TLB-015 pp.78,104; TLB-019 p.11 |
-| Mono- vs. multi-vertical M1 retention delta (+16pp/+20pp) | TLB-019, p.10 |
+| talabat pro uplift figures (20-28% frequency; 26-32% retention; 136% gross-profit-per-customer) — cohort/timing scope per ASM-016; pro live in 6 of 8 countries (all except Egypt and Iraq) | TLB-001 p.18; TLB-015 pp.77,78,104; TLB-019 p.11; TLB-023 p.8 ("over 20%" lower bound) |
+| Mono- vs. multi-vertical M1 retention delta (+16pp/+20pp) — Group/GCC+Jordan cohort per ASM-016; market scope not stated in source | TLB-019, p.10 |
 | talabat Rewards 18% adoption, >15% frequency uplift, "reducing churn" | TLB-026, p.134; TLB-015, p.79 |
 | talabat PostPaid 14% frequency increase, "accretive to... retention" | TLB-001, pp.9,18 |
 | Family Plan >60% retention premium (solo vs. 4-member) | TLB-018, p.6 |
 | ADCB co-branded card (UAE) — cashback, free delivery, tailored pro | TLB-001, pp.9,13 |
-| AI/personalisation EBITDA contribution USD14mn+ (FY24) → USD30mn+ (FY25) | TLB-001, p.23; TLB-002, p.15 |
+| AI/personalisation EBITDA contribution USD14mn+ (FY24) → USD30mn+ (FY25) | TLB-001, p.23; TLB-002, p.16 (page ref corrected 15→16, 2026-07-24; per `Facts/AI_Facts.md` / N-09) |
+| ~99% Partner retention among pro-participating vendors, 2024 (different population from the general partner-retention series N-10 flags as undisclosed) | TLB-001, p.21 |
+| "Priority customer support" as a named talabat pro benefit | TLB-002, p.13; TLB-009, p.3; TLB-011, p.2 |
+| Customer support among surveyed attributes; 80%+ ranked talabat #1 (Aug 2024, five markets) | TLB-015, pp.39,44; TLB-012, p.7 |
+| Partner SME academy (Egypt, German Chamber of Commerce, 200+ SMEs by July 2024); "tcamp" rider training (5 markets) | TLB-001, pp.46,49; TLB-026, p.138 |
+| Vouchers-as-contra-revenue USD120mn FY2025 | TLB-002, p.20 |
+| GCC (5 of 8 markets) = 82% of pro-forma FY2025 GMV (Section 3 80/20 cross-reference) | TLB-002, p.18, as cited in `Section_03_Market_Analysis.md` |
 | ASM-016 (Group/GCC+Jordan uplift figures applied to Egypt/non-GCC by inference) | `Assumptions_Register.md` ASM-016, Approved |
+| ASM-024 (Rewards >15% / PostPaid ~14% uplifts assumed to hold through FY2026) | `Assumptions_Register.md` ASM-024, Approved |
 | OPT-002 / OPT-003 rationale and dependencies | `vault/Decisions/Investment_Options/OPT-002...md`, `OPT-003...md`; `DEC-009` |
 | talabat's AI/ML stack inherited from Delivery Hero, not a separate vendor partnership | `Topics/AI.md`; `Entities/Technology_Platforms.md` |
 
