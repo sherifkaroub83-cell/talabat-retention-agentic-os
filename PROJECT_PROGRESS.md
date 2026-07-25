@@ -3,8 +3,8 @@
 Living status of the project. Update whenever a milestone moves. `SESSION_LOG.md` captures the
 day-to-day detail; this file is the high-level snapshot.
 
-**Last updated:** 2026-07-25 (Session 12)
-**Overall status:** 🟢 **Group-wide Business Plan complete, independently verified, and published — merged to `main` via PR #12** (superseding PR #6, which this file previously described as current; see `SESSION_LOG.md` Session 12 for the backfill). All 14 active v2 sections are present under `vault/Projects/Business_Plan_Drafts_v2/` and marked Done (independently verified). Stages 14–18 whole-plan gates all passed: Problem Consistency, Financial Integrity, Geographic Evidence, whole-plan Citation Audit (Stage 17: 8 hard failures found and fixed, independently re-verified), and Template Compliance. Three published editions exist in `Outputs/`: **`Business_Plan_Final`** (base, 25pp) and **`Business_Plan_v1.1_Executive_Visual`** (25pp) — both just regenerated this session directly from `vault/Projects/Business_Plan_Drafts_v2/` via their real, re-runnable pipelines (`scripts/build_final_publication.py`, `scripts/build_business_plan_v1_1.py`, now that Python is installed locally), confirmed content-clean; and **`Business_Plan_Final_v1.2_Executive`** (SWOT-enhanced, 47–51pp), which **still contains two known content defects** (a stale uncited EBITDA-margin figure; a stray "(Three Horizons)" in Section 12's title) because no build script exists for it — it was hand-assembled, not pipeline-built, in commit `6d1555b`. The only known correct fix for v1.2's output sits unmerged on branch `regenerate-executive-edition-post-stage17` (commit `fe44e70`); see Blockers below. DEC-011's page-count question (does the v1.2 "Executive" name match its 47–51pp reality?) is also still open.
+**Last updated:** 2026-07-25 (Session 13)
+**Overall status:** 🟢 **Group-wide Business Plan complete, independently verified, and published — merged to `main` via PR #12**, with a real content-integrity bug found and fixed in Session 13 (superseding PR #6, which this file previously described as current; see `SESSION_LOG.md` Sessions 12–13 for the backfill and the fix). All 14 active v2 sections are present under `vault/Projects/Business_Plan_Drafts_v2/` and marked Done (independently verified). Stages 14–18 whole-plan gates all passed: Problem Consistency, Financial Integrity, Geographic Evidence, whole-plan Citation Audit (Stage 17: 8 hard failures found and fixed, independently re-verified), and Template Compliance. Three published editions exist in `Outputs/`: **`Business_Plan_Final`** (base, **24pp**) and **`Business_Plan_v1.1_Executive_Visual`** (**25pp**) — both rebuilt in Session 13 from `vault/Projects/Business_Plan_Drafts_v2/` via their real, re-runnable pipelines (`scripts/build_final_publication.py`, `scripts/build_business_plan_v1_1.py`), after Session 13 root-caused and fixed a silent content-drop bug in both scripts' shared `select_blocks()` function: a per-H2-only counter reset had been silently zeroing out SWOT (all 4 quadrants), the Key Assumptions Register, the Risk probability-impact and mitigation tables, Section 13's KPI table, and Section 14's traceability table in every prior build of both editions, with no error or warning. Session 13 also fixed a secondary prose-tightening bug (could truncate a paragraph to near-nothing on a spurious mid-clause period), fixed §10.1 Technical Risks showing only generic methodology text instead of an actual risk, and added the 6-member team roster (name + student ID) to page 1 of the v1.1 cover. All fixes were visually verified against actual rendered PDF pages, not just text extraction, before committing (`748d9e6`, pushed to `origin/main`). And **`Business_Plan_Final_v1.2_Executive`** (SWOT-enhanced, 47–51pp) — untouched this session — **still contains two known content defects** (a stale uncited EBITDA-margin figure; a stray "(Three Horizons)" in Section 12's title) because no build script exists for it — it was hand-assembled, not pipeline-built, in commit `6d1555b`. The only known correct fix for v1.2's output sits unmerged on branch `regenerate-executive-edition-post-stage17` (commit `fe44e70`); see Blockers below. DEC-011's page-count question (does the v1.2 "Executive" name match its 47–51pp reality?) is also still open.
 
 ---
 
@@ -31,7 +31,7 @@ mechanics) versus what is now historical (the Egypt-retention content itself).
 | 2 | Phase 2 — OS Activation (wk 2–3) | 🟡 In progress | Template activated 20/07 (identity, memory, tracking). `business-plan-drafting` skill added 21/07 (maps all 14 GSB sections to vault sources); `AI_Business_Plan_Template.md` stored verbatim in-repo. Remaining: agent-role documentation, MCP decision, team walkthrough |
 | 3 | Phase 3 — Data Collection & Ingestion (wk 3–5) | ✅ Done | 9-doc Markdown corpus + 29-doc native-PDF corpus (annual reports, quarterly financials, investor decks, earnings calls, IPO/regulatory, consensus) collected and organized. Ingestion pipeline: extracted (incl. OCR) → 29 source notes → 14 topic fact files → 9 entity rosters → relationship map. **Extended with a semantic knowledge layer** (21/07): 30 synthesis Topic Notes, 8 domain MOCs, 12 Strategic Knowledge notes, an explicit-reasoning Business Relationships note, and semantic `[[wiki-links]]` added to all 52 pre-existing notes — 0 orphan notes, 1 fully-connected graph across 103 notes (was 103 isolated notes). All in `vault/Knowledge/`; see `_PHASE4_VALIDATION_REPORT.md`. |
 | 4 | Phase 4 — Analysis & Business Plan (wk 5–8) | ✅ Done | All 14 active v2 sections drafted and independently verified. Targeted Pass 4 closure audit passed; Stages 14–18 whole-plan gates passed with zero open citation failures. See `vault/Validation/Whole_Plan_Gates_v2_2026-07-24.md` and `vault/Validation/Citation_Audit_Whole_Plan_v2_Pass4.md`. |
-| 5 | Phase 5 — Finalize & Present (wk 8–9) | 🟡 Business Plan publication complete on `main`; one edition (v1.2) has a known open defect | `Business_Plan_Final` and `Business_Plan_v1.1_Executive_Visual` (25pp each) are clean and merged to `main` via PR #12, both freshly regenerated 2026-07-25 via their real build scripts. `Business_Plan_Final_v1.2_Executive` still ships a stale figure — see Overall status and Blockers. Separate capstone deliverables — the OS structure document, group presentation, and Moodle submission — remain outstanding and are not represented as complete here. |
+| 5 | Phase 5 — Finalize & Present (wk 8–9) | 🟡 Business Plan publication complete on `main`, content-integrity bug found and fixed; one edition (v1.2) has a known open defect | `Business_Plan_Final` (24pp) and `Business_Plan_v1.1_Executive_Visual` (25pp) are clean, content-verified, and merged to `main` (`748d9e6`) — Session 13 fixed a silent content-drop bug that had been zeroing out SWOT, the Assumptions Register, Risk tables, the KPI table, and the traceability table in both editions; v1.1's cover now also carries the team roster. `Business_Plan_Final_v1.2_Executive` still ships a stale figure — see Overall status and Blockers. Separate capstone deliverables — the OS structure document, group presentation, and Moodle submission — remain outstanding and are not represented as complete here. |
 
 **Legend:** ✅ Done · 🟡 In progress · ⬜ Not started · 🔴 Blocked
 
@@ -40,10 +40,30 @@ mechanics) versus what is now historical (the Egypt-retention content itself).
 Close the v1.2 edition gap: either merge branch `regenerate-executive-edition-post-stage17` (commit
 `fe44e70`, already pushed to `origin`, up to date with `main`, no conflicts — its OOXML-patched
 docx/pdf fix the two known content defects) as an interim fix, or write a real `scripts/build_v1_2.py`
-so v1.2 also comes from a re-runnable pipeline like the other two editions now do. Resolve DEC-011's
-v1.2 page-count question alongside it. The core Business Plan content itself needs no further drafting
-or architecture changes — all remaining work here is publication-tooling and capstone administration
-(team-role assignment, the OS structure document, the group presentation, final submission steps).
+so v1.2 also comes from a re-runnable pipeline like the other two editions now do — and, since Session
+13 found and fixed the same silent-content-drop bug in the two existing build scripts, any v1.2 script
+must be checked against (or built from) the now-fixed `select_blocks()` rather than the original
+buggy version. Resolve DEC-011's v1.2 page-count question alongside it. The core Business Plan content
+itself needs no further drafting or architecture changes — all remaining work here is
+publication-tooling and capstone administration (team-role assignment, the OS structure document, the
+group presentation, final submission steps).
+
+**Session 13 (2026-07-25) closed out a real content-integrity bug in the publication tooling** — full
+detail in `SESSION_LOG.md`. In short: `build_business_plan_v1_1.py`'s executive-compression logic
+(`select_blocks()`, shared verbatim by `build_final_publication.py`) reset its paragraph/table
+selection counters per H2 heading rather than per H3 subsection, which silently dropped every H3
+child after the first under any heading. This had been zeroing out required template content in both
+published editions with no error raised: SWOT (all 4 quadrants reduced to a single framing sentence,
+Competitor benchmarking reduced to zero), the Key Assumptions Register table, the Risk
+probability-impact and mitigation tables, Section 13's KPI table, and Section 14's traceability table.
+Found via a direct template-compliance audit (comparing `v1.1` section-by-section against
+`AI_Business_Plan_Template.md`), root-caused by instrumenting `select_blocks()` directly rather than
+just reading rendered output, fixed with a judgment-based compression pass (an explicit protected-list
+for the elements above, a sentence-boundary-aware prose-tightening function, and a per-H3 counter
+reset), then a secondary fix for §10.1 Technical Risks (paragraph selection now prefers a risk-coded
+paragraph over the generic first one, scoped to Section 10 only). Every fix was visually verified
+against actual rendered PDF pages before committing. Both rebuilt editions remain within the 15–25
+page requirement (24pp / 25pp).
 
 The Agentic OS is now on **Version 2**, evolved from Phase 7's real execution evidence, not from
 design preference (`vault/Architecture/Agentic_OS_Architecture_v2.md`). Every finding from Section
@@ -125,6 +145,17 @@ roadmap for the pre-pivot Egypt-retention plan and is not an active work queue.
   selftest + protocol smoke test passing (9 tools).
 
 ## Artifacts produced
+
+- **Compression-bug fix + rebuilt publications** (2026-07-25, Session 13, commit `748d9e6` on
+  `main`): fixed a silent content-drop bug in `scripts/build_business_plan_v1_1.py` and
+  `scripts/build_final_publication.py`'s shared `select_blocks()` (per-H2-only counter reset was
+  dropping every H3 child after the first); added a judgment-based protected-content list (SWOT,
+  Key Assumptions Register, Risk probability-impact/mitigation tables, §13 KPI table, §14
+  traceability table) plus a sentence-boundary-aware prose-tightening function; fixed §10.1
+  Technical Risks' paragraph selection; added the 6-member team roster to the v1.1 cover.
+  Rebuilt `Outputs/Business_Plan_Final.docx/.pdf` (24pp) and
+  `Outputs/Business_Plan_v1.1_Executive_Visual.docx/.pdf` (25pp), each visually verified page by
+  page before committing. Full detail: `SESSION_LOG.md` Session 13.
 
 - **Agentic OS Console** (2026-07-24, branch `claude/talabat-agentic-os-ui-1nemuv`):
   `app/agentic-os-console/` — a professional, dependency-free UI for the OS itself (8 views:
