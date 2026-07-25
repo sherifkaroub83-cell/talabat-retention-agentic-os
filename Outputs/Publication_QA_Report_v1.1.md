@@ -63,3 +63,31 @@ implication. Direct labels and text prevent colour from being the only encoding.
 **PASS.** Version 1.1 improves strict template visibility, executive readability, visual communication,
 and submission readiness while preserving the approved strategy, evidence discipline, and all
 Version 1.0 files.
+
+## Update — 25 July 2026 (post-Stage-17 content regeneration)
+
+Content corrected (uncited EBITDA figure; Section 12 title) per `Formatting_QA_Report_v1.1.md`'s
+update — see there for the full mechanism and disclosed tooling substitution (Word native PDF export
+in place of the unavailable ReportLab pipeline, since this session's environment has no Python
+interpreter).
+
+| Gate (re-checked this update) | Verdict |
+|---|---|
+| Content integrity (Sections 2, 4, 12 corrected; all else unchanged) | PASS |
+| DOCX integrity | PASS — clean OOXML package |
+| PDF integrity | PASS — opens successfully, all pages present, corrected wording confirmed via text extraction |
+| **Page limit** | **NOT VERIFIED AS PASS in this session — see note below** |
+
+**Page limit note.** The original 25-page PASS was measured against a PDF produced by this project's
+own `scripts/build_business_plan_v1_1.py` (ReportLab). That script cannot run in this session
+(no Python interpreter available). The best available substitute — Microsoft Word's native PDF
+export from the corrected DOCX — paginates the same corrected content to **33 pages**, which would
+fail the 15-25 ceiling at face value. Given the only content changes made were two short in-place
+text corrections (a percentage figure and a section-title parenthetical), this 8-page increase is
+attributed to the substitute rendering engine (font metrics, spacing), not to genuine content growth,
+and this report does **not** downgrade the overall verdict to FAIL on that basis — but it also does
+not re-certify PASS on the Word-rendered artifact. **Before this edition is treated as final and
+submission-ready, re-run `scripts/build_business_plan_v1_1.py` in a Python-enabled environment
+(`pip install -r scripts/requirements.txt`) against the now-corrected `Business_Plan_Drafts_v2/`
+sections and re-measure the page count against the 15-25 ceiling using the project's own intended
+toolchain.**

@@ -32,7 +32,7 @@ Recommendation in one line Protect Food leadership in the evidenced GCC-3 market
 | 9 | Financial Plan |
 | 10 | Risk Analysis |
 | 11 | Corporate Social Responsibility & Responsible AI |
-| 12 | Implementation Plan (Three Horizons) |
+| 12 | Implementation Plan |
 | 13 | Monitoring and Evaluation |
 | 14 | Appendices |
 
@@ -117,7 +117,7 @@ The business problem this business plan addresses decomposes into four mutually 
 ### 2.3 Governing Hypothesis
 
 
-We believe that applying an AI-enabled, evidence-ranked, stage-gated allocation and monitoring framework to talabat disclosed USD175 million 2026 investment programme — rather than leaving its within-bucket and cross-market allocation undifferentiated — will raise the programme's realized GMV, EBITDA, and customer-lifetime-value contribution, because (a) the programme's own disclosure already separates a quantified cost (the FY2026 Adjusted EBITDA margin bridge, 6.0%→4.6% of GMV guided) from an entirely undisclosed return, meaning no evidence currently exists to confirm the programme is being spent optimally even on its own terms, and (b) the five identified candidate initiatives show materially different confidence, scalability, and reversibility profiles (the approved funding-sequence decision's 11-criterion comparison) that an unranked, undifferentiated allocation would not distinguish or act on.
+We believe that applying an AI-enabled, evidence-ranked, stage-gated allocation and monitoring framework to talabat disclosed USD175 million 2026 investment programme — rather than leaving its within-bucket and cross-market allocation undifferentiated — will raise the programme's realized GMV, EBITDA, and customer-lifetime-value contribution, because (a) the programme's own disclosure already separates a quantified cost (the FY2026 Adjusted EBITDA margin bridge, 4.4-4.8% of GMV guided) from an entirely undisclosed return, meaning no evidence currently exists to confirm the programme is being spent optimally even on its own terms, and (b) the five identified candidate initiatives show materially different confidence, scalability, and reversibility profiles (the approved funding-sequence decision's 11-criterion comparison) that an unranked, undifferentiated allocation would not distinguish or act on.
 
 ### 2.4 Core Features and Benefits
 
@@ -534,7 +534,7 @@ The governing principle, stated at charter level and never diluted downstream. t
 
 Consistent with the discipline the rest of this business plan applies, this section states three things it explicitly does not do: (1) it does not claim talabat has adopted, or has committed to adopt, any of the governance structures proposed above — they are this business plan's recommendation, informed by Agentic OS analysis, pending human/team decision, exactly as Section 8 §8.4 the supporting evidence register state; (2) it does not claim the sustainability initiatives in §11.2 are funded by, or governed under, the USD175mn 2026 investment programme — no such linkage is disclosed; (3) it does not claim to have resolved ORG-01 or ORG-03 — both remain open risks in Section 10's probability-impact matrix even after this section's proposed mitigations, because a proposed mechanism, not yet adopted, does not retire a risk that depends on adoption.
 
-## 12. Implementation Plan (Three Horizons)
+## 12. Implementation Plan
 
 The Three Horizons sequence implements the SWOT implication directly: Horizon 1 prioritizes the reversible pro pilot and evidenced GCC-3 Food response; later releases keep dark-store, AI, and advertising actions behind the existing evidence, margin, and market-transfer gates.
 
@@ -721,13 +721,13 @@ Per AI_Business_Plan_Template.md's explicit requirement and the drafting skill's
 | 467 | 11. Corporate Social Responsibility & Responsible AI |  Section_08_Operations_Plan.md;  Section_10_Risk_Analysis.md; OPT-005 | \| No assumed-uniform AI effectiveness across markets \| AI/personalisation capability per-market model-tuning pilot, Egypt first \|  |
 | 481 | 11. Corporate Social Responsibility & Responsible AI |  Investment_Portfolio_Register.md;  stated at charter level and never diluted downstream. Problem_Charter.md | The governing principle, stated at charter level and never diluted downstream. the governing problem charter states: "The AI does  |
 | 486 | 11. Corporate Social Responsibility & Responsible AI |  both remain open risks in Section_10_Risk_Analysis.md;  exactly as Section_08_Operations_Plan.md; 8.4 and Capital Allocation and Investment Governance.md | Consistent with the discipline the rest of this business plan applies, this section states three things it explicitly does not do: |
-| 493 | 12. Implementation Plan (Three Horizons) | ASM-016; DEC-009; OPT-001; OPT-002; OPT-003; OPT-004; OPT-005 | The five candidate Investment Options this business plan has identified do not all belong at the same starting point. the approved |
-| 501 | 12. Implementation Plan (Three Horizons) | OPT-001; OPT-005 | - Continue at pace: talabat mart densification (talabat mart densification) and AI/personalisation capability (AI/personalisation |
-| 503 | 12. Implementation Plan (Three Horizons) | DEC-009; OPT-002 | - Pilot: talabat pro pilot (talabat pro acceleration in Egypt and Iraq) — the approved funding-sequence decision names this the |
-| 505 | 12. Implementation Plan (Three Horizons) | OPT-003 | - Fund now, within the existing bucket: Food-leadership action (Food-leadership, UAE/Kuwait/Qatar) — per |
-| 516 | 12. Implementation Plan (Three Horizons) | KPI_Tree_v2.md; OPT-002; OPT-003 | H2 decisions are explicitly gated on H1 evidence, not calendar time alone — per the KPI Tree's Governance family (the relevant ana |
-| 521 | 12. Implementation Plan (Three Horizons) | OPT-002 | Not primarily applicable to this business plan's actual product (an internal capital-allocation decision-support system, per Secti |
-| 526 | 12. Implementation Plan (Three Horizons) | Capital Allocation and Investment Governance.md; DEC-009 | Not disclosed anywhere in the public disclosures reviewed for either the underlying AI capability or a capital-allocation function |
+| 493 | 12. Implementation Plan | ASM-016; DEC-009; OPT-001; OPT-002; OPT-003; OPT-004; OPT-005 | The five candidate Investment Options this business plan has identified do not all belong at the same starting point. the approved |
+| 501 | 12. Implementation Plan | OPT-001; OPT-005 | - Continue at pace: talabat mart densification (talabat mart densification) and AI/personalisation capability (AI/personalisation |
+| 503 | 12. Implementation Plan | DEC-009; OPT-002 | - Pilot: talabat pro pilot (talabat pro acceleration in Egypt and Iraq) — the approved funding-sequence decision names this the |
+| 505 | 12. Implementation Plan | OPT-003 | - Fund now, within the existing bucket: Food-leadership action (Food-leadership, UAE/Kuwait/Qatar) — per |
+| 516 | 12. Implementation Plan | KPI_Tree_v2.md; OPT-002; OPT-003 | H2 decisions are explicitly gated on H1 evidence, not calendar time alone — per the KPI Tree's Governance family (the relevant ana |
+| 521 | 12. Implementation Plan | OPT-002 | Not primarily applicable to this business plan's actual product (an internal capital-allocation decision-support system, per Secti |
+| 526 | 12. Implementation Plan | Capital Allocation and Investment Governance.md; DEC-009 | Not disclosed anywhere in the public disclosures reviewed for either the underlying AI capability or a capital-allocation function |
 | 533 | 13. Monitoring and Evaluation |  it reproduces KPI_Tree_v2.md | This business plan's monitoring framework does not invent new metrics to look complete — it reproduces the relevant analytical fra |
 | 538 | 13. Monitoring and Evaluation |  KPI_Tree_v2.md | Full 50-KPI detail, leading/lagging tags, and geography tags: the relevant analytical framework. |
 | 543 | 13. Monitoring and Evaluation | Every KPI in KPI_Tree_v2.md | Every KPI in the relevant analytical framework carries this tag explicitly. The pattern that matters most for this business plan's |
