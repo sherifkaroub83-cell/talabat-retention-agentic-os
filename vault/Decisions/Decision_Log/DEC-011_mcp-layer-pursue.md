@@ -6,6 +6,12 @@ owner: Sherif Samy Karoub (user) — direct instruction "proceed all" on the com
 supersedes: none
 ---
 
+> **ID-collision note (2026-07-25).** Two parallel sessions allocated `DEC-011` the same day to two
+> different decisions: this record and `DEC-011_page-count-scope-for-template-compliance-gate`. Both are genuine, both stand approved, and
+> both are preserved unrenumbered to avoid breaking the many references each has accumulated —
+> they are disambiguated by filename slug wherever precision matters. The next Decision ID
+> continues from **DEC-015**; the register's changelog carries the same note.
+
 # DEC-011 — Pursue the MCP (Agentic Tools) layer: build the read-only `vault-mcp` server
 
 ## Tooling note (read first)

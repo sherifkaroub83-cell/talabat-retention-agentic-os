@@ -257,11 +257,17 @@ def get_validation_status(args):
         row = [f"Section {n}:"]
         for kind, label in (("Citation_Audit", "citation"), ("QA_Review", "qa")):
             best = None
-            for suffix in ("_v2_pass2_reverify", "_v2_pass2"):
+            for suffix in ("_v2_pass2_reverify", "_v2_Pass3", "_v2_pass2", "_v2_Pass2"):
                 f = VAULT / "Validation" / f"{kind}_Section_{n:02d}{suffix}.md"
                 if f.exists():
-                    m = re.search(r"^status:\s*(\S+)", f.read_text(encoding="utf-8", errors="replace")[:400], re.M)
-                    best = f"{label}={m.group(1) if m else '?'}{'(reverify)' if 'reverify' in suffix else ''}"
+                    text = f.read_text(encoding="utf-8", errors="replace")
+                    m = re.search(r"^(?:status|verdict):\s*(\S+)", text[:600], re.M)
+                    if not m:
+                        inline = re.findall(r"\*\*Verdict:\s*(PASS|FAIL|HOLD)", text)
+                        verdict = inline[-1] if inline else "?"
+                    else:
+                        verdict = m.group(1)
+                    best = f"{label}={verdict}{'(reverify)' if 'reverify' in suffix else ''}"
                     break
             row.append(best or f"{label}=none")
         out.append("  " + " ".join(row))

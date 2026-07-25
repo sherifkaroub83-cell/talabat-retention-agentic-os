@@ -1,7 +1,7 @@
 ---
 section: 8
 title: Operations Plan
-status: Drafted — self-reviewed (Pass 1); citation audit run in-session ([[Citation_Audit_Section_08_v2]]); independent Pass 2 citation re-check and QA review (incl. the three new gates) still required before ✅ Done
+status: Drafted — Pass 2 and Pass 3 findings fixed and reconfirmed ([[Citation_Audit_Section_08_v2_Pass2]], [[Citation_Audit_Section_08_v2_Pass3]]); Stage 17 whole-plan citation audit ([[Citation_Audit_WholePlan_Stage17_Sections07-08]], 2026-07-25) found 1 further hard failure Pass 2/3 missed — §8.1 and §8.2 falsely claimed the 235TB/day data-processing figure was "already established in Section 5.4," when Section 5 §5.4 explicitly states infrastructure is not itemized in the corpus; fixed 2026-07-25 (the figure remains correctly and independently cited to TLB-002 p.15, the false cross-reference removed) — not yet reconfirmed by a fresh independent pass; treat as Done only once Stage 17 fully re-clears it
 pipeline_run: 2026-07-24
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_08_Operations_Plan.md, which was drafted for the superseded Egypt-retention problem and stays untouched as historical record — not read as an input to this draft, per the standing instruction never to read from the non-_v2 drafts directory. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem (Problem_Charter.md)."
 ---
@@ -92,6 +92,16 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > **"Drafted — self-reviewed," not the unqualified "✅ Done."** A genuinely independent Pass 2 (a fresh,
 > separately-invoked citation audit and QA review) is still required before this section is
 > submission-final.
+>
+> **Addendum, 2026-07-24 (independent Pass 2 review).** An independent citation audit and QA review
+> ([[Citation_Audit_Section_08_v2_Pass2]], [[QA_Review_Section_08_v2_Pass2]]) re-verified every citation
+> in this section, with particular depth on the raw-primary-source pulls this section introduced for the
+> first time (GLSA, CQCA, Kitchens Services Agreement, Inter-Company DTA, the December 2022 breach — all
+> independently re-located and re-read directly in `Talabat-Holding-plc_International-Offering-
+> Memorandum.txt`, not merely trusted). **One defect found and fixed:** the "130 stores end-2024" figure
+> in §8.1 was misattributed to TLB-002; it is TLB-001, page 17 (only the "~160, 2025" figure is TLB-002).
+> Corrected in §8.1's body text and the traceability table. All other citations, the 7S rating
+> justifications, and the executive-roster claims independently re-verified clean.
 
 ---
 
@@ -139,10 +149,11 @@ draw on operationally (inventory-management tools for OPT-001; loyalty/subscript
 advertising/promotion tools for OPT-004; the shared data layer for OPT-005).
 
 **Data-processing scale (Group, disclosed).** talabat processes over 235 terabytes of data daily to run
-its AI/personalisation, dispatch, and ad-targeting capability *(Group; TLB-002, page 15)* — already
-established in Section 5.4 and not repeated in full here; `OPT-005`'s own record states this infrastructure
-would need to scale further to support continued AI/personalisation investment (`vault/Decisions/
-Investment_Options/OPT-005_ai-personalisation-capability-scaling.md`).
+its AI/personalisation, dispatch, and ad-targeting capability *(Group; TLB-002, page 15)* — this figure is
+not discussed in Section 5, whose own §5.4 states infrastructure is not itemized in the corpus beyond the
+Delivery Hero licensing relationship, so it is stated here in full rather than cross-referenced; `OPT-005`'s
+own record states this infrastructure would need to scale further to support continued AI/personalisation
+investment (`vault/Decisions/Investment_Options/OPT-005_ai-personalisation-capability-scaling.md`).
 
 **In-house technical capacity exists in Egypt specifically.** Cairo is named as one of talabat's two core
 technology hubs building its logistics and service-technology stack *(country-specific, Egypt; TLB-023,
@@ -152,17 +163,21 @@ means Egypt is not a purely consuming market for this infrastructure but one of 
 **Dark-store/inventory infrastructure (OPT-001-specific).** talabat mart's principal-model operation
 requires dark-store real-estate build-out and staffing across up to eight markets, plus inventory/
 replenishment systems structurally distinct from the commission-based Local Shops model (`OPT-001`'s own
-"Required capabilities"; Group; store count 130 end-2024 → 160, 2025, TLB-002 page 12,14). The CQCA
-(a category-specific GLSA variant) is the disclosed contractual mechanism through which tMart-specific
-tools (catalogue/assortment intelligence, purchase management, supplier portal, store management) are
-actually delivered to the operating entities *(Group; TLB-026, page 156)*.
+"Required capabilities"; Group; store count almost 130 end-2024 (TLB-001, page 17) → ~160, 2025 (TLB-002,
+pages 12, 14)). The CQCA
+(a category-specific GLSA variant) was the disclosed contractual mechanism through which tMart-specific
+tools (catalogue/assortment intelligence, purchase management, supplier portal, store management) were
+delivered to the operating entities through 31 December 2024; effective 1 January 2025, the CQCA
+Recipients receive these same tools via GLSA/GLSA Kuwait/GLSA UAE sub-licensing instead, following the
+CQCA Recipients' and Delivery Hero's 29 October 2024 agreement to terminate the CQCA as it applies to
+those recipients *(Group; TLB-026, page 156)*.
 
 **One equity-accounted logistics associate (country-specific, UAE).** Zone Elite Investment LLC is named
 as talabat's UAE logistics associate (`Topics/Logistics.md`, `Corporate Structure.md`) — the only named
 non-wholly-owned operational infrastructure entity in the corpus, relevant background for any UAE-specific
 logistics-capacity assumption underlying `OPT-003` (Food-leadership CVP, targeted partly at UAE).
 
-**This plan's own decision-support infrastructure.** As established in Section 5.4, the AI-enabled
+**This plan's own decision-support infrastructure.** As described in Section 5.1 and 5.4, the AI-enabled
 decision-support layer this plan itself constitutes runs on the OS's existing agentic tooling and
 version-controlled vault architecture — no new infrastructure line is proposed for it here; its "capex" is
 analyst time and governance discipline, not hardware or cloud spend.
@@ -174,11 +189,13 @@ No document in the corpus describes talabat's internal engineering process (spri
 process, environment/staging structure, or code-ownership model) — this is a genuine gap, stated openly
 rather than invented. What *is* disclosed is how the underlying capability is provided and paid for: the
 GLSA (§8.1) sets the terms on which Delivery Hero supplies and talabat "localises and uses" the Central
-Value Baskets *(Group/market-comparison; TLB-026, pages 152-153)*, the CQCA sets equivalent terms for
-tMart-specific tools *(Group; TLB-026, page 156)*, and a further Kitchens Services Agreement (effective 1
+Value Baskets *(Group/market-comparison; TLB-026, pages 152-153)*, the CQCA set equivalent terms for
+tMart-specific tools through 31 December 2024, since when the same tools are delivered via GLSA
+sub-licensing instead *(Group; TLB-026, page 156)*, and a further Kitchens Services Agreement (effective 1
 January 2022, amended 29 October 2024) covers the Kitchens business specifically in the UAE, Bahrain,
 Kuwait, Qatar, and Jordan *(market-comparison: UAE, Bahrain, Kuwait, Qatar, Jordan; TLB-026, page 156)*.
-All three are governed by German law, with disputes resolved in German courts (TLB-026, page 156) — a
+All three are governed by German law, with disputes resolved in German courts (GLSA: TLB-026, page 153;
+CQCA and Kitchens Services Agreement: TLB-026, page 156) — a
 detail worth naming because it confirms these are formal, arm's-length inter-company contracts, not an
 informal shared-services arrangement. **So what:** "maintenance" of talabat's core technology, for the
 purposes of this programme, is contractual and inter-company, not a talabat-internal release cycle this
@@ -347,7 +364,7 @@ belongs to Section 9/12/14, where the ranges themselves are shown). No contradic
 | GLSA "Central Value Baskets" (data/logistics/customer-management/audit/quick-commerce/FinTech tools) for Bahrain, Egypt, Iraq, Oman, Jordan, Qatar | TLB-026, pages 152-153 |
 | Separate GLSA UAE / GLSA Kuwait agreements exist | TLB-026, page 156 |
 | CQCA (tMart-specific services) and Kitchens Services Agreement (UAE, Bahrain, Kuwait, Qatar, Jordan) | TLB-026, page 156 |
-| Both governed by German law, disputes in German courts | TLB-026, page 156 |
+| All three governed by German law, disputes in German courts | GLSA: TLB-026, p.153; CQCA & Kitchens Services Agreement: TLB-026, p.156 |
 | Delivery Hero Group Inter-Company DTA (15 Oct 2021, amended 30 Oct 2024); Binding Corporate Rules; EU SCCs under GDPR (Reg. (EU) 2016/679) | TLB-026, pages 156-157 |
 | December 2022 hack — 144,469 customers' personal data accessed, USD150,000 penalty | TLB-026, page 49 |
 | "Vulnerable to any security breaches or data protection issues... at the parent company level" | TLB-026, page 49 |
@@ -362,7 +379,7 @@ belongs to Section 9/12/14, where the ranges themselves are shown). No contradic
 | CEO transition (Rodriguez → Gyssels) and board-seat change (Al Jbori → Al-Halabi), unnarrated | `Corporate Structure.md`; `Entities/Executives.md` |
 | Named executive roles (Alfakesh, Assadi, Makarem, Vecchio, Abu Amara, El Kadri, AlGhrawi) | `Entities/Executives.md` |
 | ~90-95% 3PL/freelance rider sourcing | `Strategic/Competitive Weaknesses.md`; `Facts/Logistics_Facts.md` |
-| tMart store count 130 → 160 (2024→2025) | TLB-002, pages 12, 14 |
+| tMart store count almost 130 (end-2024) → ~160 (2025) | TLB-001, page 17; TLB-002, pages 12, 14 |
 | "Investments rather than costs" / CVP-over-discounting framing | TLB-020, page 16 |
 | Decision-Making Process "venue pattern" (CMD / Annual Report / quarterly results) | `Strategic/Decision-Making Process.md` |
 | KPI Tree Governance family (G1-G7), all newly-instrumented | `vault/Forecasts/KPI_Tree_v2.md` |

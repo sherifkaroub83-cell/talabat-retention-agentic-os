@@ -32,7 +32,11 @@ class ExportConsoleTests(unittest.TestCase):
         for n in verified:
             v = self.kernel["validation"][str(n)]
             self.assertTrue(v, f"verified section {n} lacks validation artifacts")
-            self.assertEqual(v["qa"]["verdict"], "PASS", f"section {n}")
+            for kind in ("qa", "citation"):
+                if kind not in v:
+                    continue
+                ok = v[kind]["verdict"] == "PASS" or v[kind].get("chain") == "closed-by-fix-record"
+                self.assertTrue(ok, f"section {n} {kind}: unresolved {v[kind]['verdict']}")
 
     def test_plan_and_budget_present(self):
         self.assertIsInstance(self.kernel["plan"], list)

@@ -75,7 +75,7 @@ in Value_Driver_Tree_v2.md Stage 3-8 (N-07 through N-23).
 
 | ID | KPI | Node(s) | Lead/Lag | Baseline tag | Geography | Basis |
 |---|---|---|---|---|---|---|
-| C1 | talabat pro subscriber GMV share (% of platform GMV) | N-08 | Leading | Baseline-exists | Group | TLB-020 p.8: ~32% (FY2024) → ~49% (Q1 2026) |
+| C1 | talabat pro subscriber GMV share (% of platform GMV) | N-08 | Leading | Baseline-exists | Group | TLB-020 p.8: ~32% (Q1 2025) → ~49% (Q1 2026) |
 | C2 | Group order frequency (orders per active customer, annual) | N-16 | Leading | Baseline-exists | Group | TLB-001 p.15: 6.2x (Dec'23) → 6.7x (Dec'24) |
 | C3 | Multi-vertical customer GMV share (% of GMV) | N-11 | Leading | Baseline-exists | Group | TLB-019 p.7, TLB-020 p.8: 68% (Dec'24) → 73% (Dec'25) → 76% (Mar'26), three consecutive rising points |
 | C4 | Multi-vertical vs. food-only order-frequency multiple | N-14 | Leading | Baseline-exists (dated) | Group | TLB-012 p.9, TLB-013 p.6: 13.0x vs. 3.8x orders/month, dated July 2024 — not refreshed with a more recent figure anywhere in the corpus |

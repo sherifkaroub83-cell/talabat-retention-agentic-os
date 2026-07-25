@@ -1,7 +1,7 @@
 ---
 section: 4
 title: Value Proposition
-status: Drafted — Pass 2 fix cycle applied 2026-07-24; awaiting citation re-audit and QA re-review
+status: "Merged 2026-07-25, both verification lineages combined — (a) independent Pass 2 (FAIL 2026-07-24) → fix cycle 2026-07-24 → independent re-verification double-PASS 2026-07-25 ([[Citation_Audit_Section_04_v2_pass2_reverify]], [[QA_Review_Section_04_v2_pass2_reverify]]); (b) Pass 2/Pass 3 fixes ([[Citation_Audit_Section_04_v2_Pass2]], [[Citation_Audit_Section_04_v2_Pass3]]) → Stage 17 whole-plan citation audit ([[Citation_Audit_WholePlan_Stage17_Sections03-04]], 2026-07-25), whose two hard findings (uncited pro 32%→49% claim; uncited single-point FY2026 margin) are both satisfied in this merged text — pro claim cited (TLB-020 p.8; TLB-014 p.14), margin stated as the disclosed 4.4-4.8% guided range with ~4.6% as guided mid-range (TLB-020 pp.14/16; TLB-014). Treat as Done once Stage 17 re-clears the merged text"
 pipeline_run: 2026-07-23
 fix_cycle: 2026-07-24
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_04_Value_Proposition.md (superseded Egypt-retention draft, untouched). Fresh draft for the 2026-07-23 pivot."
@@ -24,8 +24,11 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > each statistic carries its own geography tag where it appears. Pass 2 independent citation audit
 > (`vault/Validation/Citation_Audit_Section_04_v2_pass2.md`) and QA review
 > (`vault/Validation/QA_Review_Section_04_v2_pass2.md`) returned FAIL on 2026-07-24; all hard/blocking
-> and soft/non-blocking findings are resolved in this revision (see Fix record below). Re-audit and
-> re-review pending before status can advance.
+> and soft/non-blocking findings are resolved in this revision (see Fix record below), and the
+> independent re-verification of both returned PASS on 2026-07-25
+> (`Citation_Audit_Section_04_v2_pass2_reverify.md`, `QA_Review_Section_04_v2_pass2_reverify.md`).
+> A parallel lineage's Pass 2/Pass 3 audits and the Stage 17 whole-plan citation audit are reconciled
+> in the Merge note (2026-07-25) below.
 
 ## Answer, stated first
 
@@ -130,9 +133,10 @@ multi-vertical and food-only customers (Group-wide; TLB-026) — this is the num
 argue customer-level value creation, not an invented CLV figure.
 
 **ROI, calculation logic shown, not a single point estimate:** the corpus discloses the programme's
-*cost* precisely (the FY2026 Adjusted EBITDA margin bridge: 6.0% (Q4'25A) → 4.6% of GMV, the guided
-mid-range of the disclosed 4.4-4.8% FY2026 range (TLB-020, pages 14 and 16); realized 4.8% in Q1 2026
-(TLB-020, pages 4 and 11-12; `Topics/EBITDA.md`)) but **no return figure for any bucket or initiative**
+*cost* precisely (the FY2026 Adjusted EBITDA margin: the disclosed guided range of **4.4-4.8% of
+GMV**, with ~4.6% as the guided mid-range of the bridge from 6.0% (Q4'25A) (TLB-020, pages 14 and 16;
+TLB-014; `Section_09_Financial_Plan.md` §9.3); realized 4.8% in Q1 2026 (TLB-020, pages 4 and 11-12;
+`Topics/EBITDA.md`)) but **no return figure for any bucket or initiative**
 (`Investment_Relationship_Map.md`, "What this note deliberately does not claim"). The calculation
 logic this plan uses instead: each mechanism's historical uplift statistic (e.g. talabat pro's 20-28%
 frequency uplift) is the input to `Value_Driver_Tree_v2.md`'s Assumption-tagged nodes
@@ -162,6 +166,7 @@ this section shows the mechanism, Section 9 shows the (appropriately bounded) fi
 | UAE/Kuwait/Qatar M1 retention -4% y/y | UAE/Kuwait/Qatar | TLB-019, page 9; `Topics/Food Leadership.md` |
 | >4x monthly-spend gap, multi-vertical vs. food-only | Group | `Topics/Customer Economics.md` (TLB-026) |
 | No disclosed programme ROI/return figure | — | `Investment_Relationship_Map.md` |
+| FY2026 guided Adjusted EBITDA margin 4.4-4.8% of GMV (~4.6% guided mid-range); realized 4.8% Q1 2026 | Group | `Section_09_Financial_Plan.md` §9.3; TLB-020, pages 4, 11-12, 14, 16; TLB-014 |
 
 ## See also
 [[Section_02_Business_Description]] · [[Investment_Relationship_Map]] ·
@@ -197,3 +202,29 @@ overlap, one fix resolves both.
 by decision-steward per the audit escalation, 2026-07-24) and the tracker status update (orchestrator-
 owned). DEC-008 narrative-only compliance was confirmed by the audit and is preserved unchanged — no
 quantified 2.2:1 exhibit appears anywhere in this section.
+
+---
+
+## Merge note (2026-07-25)
+
+Two parallel verification lineages of this section were merged on 2026-07-25:
+
+- **Lineage A (this file's Fix record above):** independent Pass 2 citation audit + QA review
+  (`Citation_Audit_Section_04_v2_pass2.md` / `QA_Review_Section_04_v2_pass2.md`, both FAIL
+  2026-07-24) → fix cycle 2026-07-24 → independent re-verification, both PASS 2026-07-25
+  (`Citation_Audit_Section_04_v2_pass2_reverify.md`, `QA_Review_Section_04_v2_pass2_reverify.md`;
+  the reverify's NS-1–NS-3 pointer fixes — CARC Chains 2 and 5, TLB-002 p.16, TLB-020 pp.14/16 —
+  are applied in this text).
+- **Lineage B:** Pass 2/Pass 3 audits (`Citation_Audit_Section_04_v2_Pass2.md`,
+  `Citation_Audit_Section_04_v2_Pass3.md`) → Stage 17 whole-plan citation audit
+  (`Citation_Audit_WholePlan_Stage17_Sections03-04.md`, 2026-07-25), which independently found
+  (1) the talabat pro 32%→49% GMV-share claim carrying no citation, and (2) the FY2026 EBITDA margin
+  stated as an uncited single point ("6.0%→4.6%") conflicting with Section 3's cited disclosed range.
+
+**Reconciliation:** the merged text satisfies both lineages. The pro claim is cited inline (TLB-020,
+page 8; TLB-014, page 14; `Value_Driver_Tree_v2.md` N-08; `ASM-021`), and §4.3 states the FY2026
+margin as the disclosed 4.4-4.8% guided range with ~4.6% as the guided mid-range, cited (TLB-020,
+pages 14 and 16; TLB-014; `Section_09_Financial_Plan.md` §9.3). Lineage A's per-claim geography tags,
+corrected node IDs (N-14/N-11), MECE statement with the `ASM-033` non-additivity treatment,
+orders/month units, CARC 3-point GMV-share series, and the global-benchmark-vs-UAE-achieved 7%
+disentanglement are retained throughout (Lineage B's §4.2 block predated those fixes).

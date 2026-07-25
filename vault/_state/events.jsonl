@@ -5,3 +5,4 @@
 {"ts": "2026-07-25T11:39:16Z", "actor": "aos-validate", "type": "validation", "ref": "repo", "detail": "verdict=FAIL"}
 {"ts": "2026-07-25T11:39:38Z", "actor": "aos-validate", "type": "validation", "ref": "repo", "detail": "verdict=PASS"}
 {"ts": "2026-07-25T15:54:29Z", "actor": "operator", "type": "milestone", "ref": "repo", "detail": "M3+M4: event bus, validate harness, workflow-first console with Inspector"}
+{"ts": "2026-07-25T16:16:23Z", "actor": "operator", "type": "milestone", "ref": "repo", "detail": "Two parallel verification lineages merged (PR #8 conflict resolved): union-of-corrections across 10 files, DEC-011 collision documented, 14/14 sections verified"}

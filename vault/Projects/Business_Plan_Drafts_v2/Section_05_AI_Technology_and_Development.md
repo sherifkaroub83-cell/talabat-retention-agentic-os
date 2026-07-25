@@ -1,7 +1,7 @@
 ---
 section: 5
 title: AI Technology and Development
-status: Drafted — Pass 2 fix cycle applied 2026-07-24; independent re-audit (citation + QA) required before Done
+status: "Done (independently verified) — merged 2026-07-25, both verification lineages combined: (a) Pass 2 fix cycle 2026-07-24 → independent re-verification double-PASS 2026-07-25 ([[Citation_Audit_Section_05_v2_pass2_reverify]], [[QA_Review_Section_05_v2_pass2_reverify]]); (b) Pass 2/Pass 3 fixes and Pass 4 closure audit completed 2026-07-24 ([[Citation_Audit_Section_05_v2_Pass2]], [[Citation_Audit_Section_05_v2_Pass3]]) — DEC-009 correctly treated as resolved initiative-level sequencing while cross-market allocation remains open, and the EBITDA contribution resolves to Facts/AI_Facts.md (TLB-001 p.23; TLB-002 p.16) / Topics/AI.md / N-09. Lineage (b)'s 'MCP undecided' row superseded — DEC-011 approved 2026-07-24, read-only vault-mcp registered in .mcp.json (see §5.4 and Merge note)"
 pipeline_run: 2026-07-23
 fix_cycle: "2026-07-24"
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_05_AI_Technology_and_Development.md (superseded Egypt-retention draft, untouched). Fresh draft for the 2026-07-23 pivot."
@@ -20,10 +20,16 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > investment programme scales, and (2) the AI-enabled decision-support system this plan itself
 > proposes for ranking and monitoring the programme's allocation — this OS. Per the content map's
 > caution, no "AI budget" figure is invented for either — N-06 is explicitly not a discrete dollar
-> line in either bucket. **Status:** independent Pass 2 citation audit and QA review completed
-> 2026-07-24 (both FAIL — `Citation_Audit_Section_05_v2_pass2.md`,
-> `QA_Review_Section_05_v2_pass2.md`); all hard/blocking and soft/non-blocking findings resolved in
-> this revision (see Fix record below); re-audit still required before the section can be marked Done.
+> line in either bucket (its own EBITDA contribution is separately disclosed at N-09). **Status:**
+> independent Pass 2 citation audit and QA review completed 2026-07-24 (both FAIL —
+> `Citation_Audit_Section_05_v2_pass2.md`, `QA_Review_Section_05_v2_pass2.md`); all hard/blocking and
+> soft/non-blocking findings resolved in this revision (see Fix record below), and independent
+> re-verification of both returned PASS on 2026-07-25
+> (`Citation_Audit_Section_05_v2_pass2_reverify.md`, `QA_Review_Section_05_v2_pass2_reverify.md`).
+> A parallel lineage's Pass 2/Pass 3 audits ([[Citation_Audit_Section_05_v2_Pass2]],
+> [[Citation_Audit_Section_05_v2_Pass3]]) independently found and fixed the same core defects
+> (N-06/N-09 node mix-up, the Value_Driver_Tree_v2.md-vs-Investment_Relationship_Map.md attribution
+> error, the 7-of-8-countries overstatement) — reconciled in the Merge note (2026-07-25) below.
 
 ## Answer, stated first
 
@@ -149,10 +155,12 @@ programmes without a redesign, but this has not been tested against a larger opt
 For talabat's embedded AI: `Strategic/AI Opportunities.md` names talabat's own stated Group roadmap items
 (evidenced intent) — this plan does not add new customer-facing AI R&D beyond what talabat has already
 disclosed, since the programme's opex allocation is described as scaling, not inventing, capability. For
-this plan's decision-support system: the two largest open R&D items are (1) closing the **residual
-evidence gap** behind `DEC-009` — the ranking decision itself is approved (2026-07-23), but the
-cross-market allocation question (problem 3 in Section 2.2) remains open pending better country-level
-evidence — and (2) instrumenting the KPI Tree's Governance family (currently 7/7 newly-instrumented KPIs
+this plan's decision-support system: the two largest open R&D items are (1) resolving the cross-market
+allocation question (problem 3 in Section 2.2 — a disclosure gap in the corpus itself, distinct from
+`DEC-009`, which is already resolved (approved 2026-07-23) and settles a different question:
+initiative-level funding sequence and allocation-range presentation within each bucket, problem 2) as
+better country-level evidence becomes available, and (2) instrumenting the KPI Tree's Governance
+family (currently 7/7 newly-instrumented KPIs
 with no baseline) so future allocation rounds can be evaluated against real performance data rather than
 constructed ranges alone.
 
@@ -220,6 +228,33 @@ Applied against `Citation_Audit_Section_05_v2_pass2.md` (HF-1–HF-8, S-1–S-4)
   logic; jointly exhaustive).
 - **NB-4** — Explicit cross-reference to Section 2.3's governing hypothesis added in §5.1, linking the
   decision-support layer to the hypothesis's subject and the embedded capability to `OPT-005`/N-06.
+
+---
+
+## Merge note (2026-07-25)
+
+Two parallel verification lineages of this section were merged on 2026-07-25:
+
+- **Lineage A (this file's Fix record above):** independent Pass 2 citation audit + QA review
+  (`Citation_Audit_Section_05_v2_pass2.md` / `QA_Review_Section_05_v2_pass2.md`, both FAIL
+  2026-07-24) → fix cycle 2026-07-24 → independent re-verification, both PASS 2026-07-25
+  (`Citation_Audit_Section_05_v2_pass2_reverify.md`, `QA_Review_Section_05_v2_pass2_reverify.md`).
+- **Lineage B:** Pass 2/Pass 3 audits (`Citation_Audit_Section_05_v2_Pass2.md`,
+  `Citation_Audit_Section_05_v2_Pass3.md` — fixing, i.a., the N-06/N-09 node mix-up, a
+  `Value_Driver_Tree_v2.md`-vs-`Investment_Relationship_Map.md` attribution error, and a
+  7-of-8-countries overstatement) and a Pass 4 closure audit (2026-07-24).
+
+**Reconciliation:** Lineage A's text is retained throughout, as it carries the superset of verified
+fixes: the licensed-vs-proprietary **hybrid** stack split (DH-licensed logistics/dispatch, TLB-001 /
+TLB-026; talabat-proprietary personalisation/ranking, TLB-001 p.23), the AI EBITDA contribution
+re-cited to `Facts/AI_Facts.md` (TLB-001 p.23; TLB-002 p.16) + N-09, the corrected
+7/8-post-Feb-2025-Egypt-launch vs. 6/8-end-2024 dating with the analytical-inference label (§5.5),
+and the current §5.4 MCP statement. Lineage B's traceability row "MCP decision undecided |
+`MEMORY.md`" was **not** retained: it is factually false — `DEC-011_mcp-layer-pursue.md` was approved
+2026-07-24 and the read-only `vault-mcp` server (`scripts/vault_mcp/server.py`) is registered in
+`.mcp.json`; `MEMORY.md`'s stale line was corrected separately on 2026-07-24. Lineage B's §5.6
+wording distinguishing the open cross-market allocation question (problem 3) from the resolved
+`DEC-009` (problem 2) was retained as the clearer formulation, with the approval date added.
 
 ## See also
 [[Section_02_Business_Description]] · [[Section_04_Value_Proposition]] · [[Investment_Relationship_Map]] · [[Value_Driver_Tree_v2]]

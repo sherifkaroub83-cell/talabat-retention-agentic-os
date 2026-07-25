@@ -3,8 +3,8 @@
 Living status of the project. Update whenever a milestone moves. `SESSION_LOG.md` captures the
 day-to-day detail; this file is the high-level snapshot.
 
-**Last updated:** 2026-07-23
-**Overall status:** 🟢 **Strategic pivot complete (Phases 1-9); Section 2/4/5/9/12/13 pilot drafted; DEC-009 resolved; repository at full execution readiness.** All 14 Business Plan sections were completed, verified, and published under the original Egypt-retention problem (see the milestone table and artifacts below — that work is preserved as historical record, not discarded). On 2026-07-23, the governing problem was pivoted to Group-wide 2026 investment-programme capital allocation, per direct evidence that the corpus supports Group-level analysis far better than Egypt-specific analysis (every Egypt forecast node was capped at Low confidence). **Problem Charter status: Active — governing problem for the Agentic OS** — see `Problem_Charter.md`. All 9 architecture-pivot phases are done — see `vault/Validation/Strategic_Pivot_Final_Report_2026-07-23.md`. A Final Comprehensive Readiness Review (2026-07-23) and a follow-on Final Execution Readiness pass (same day) resolved `DEC-009` (middle path — funding sequence stated narratively, allocation ranges never a headline exhibit), classified all 19 new assumptions `Approved`, added real visual-exhibit and DOCX/PDF export capability (`scripts/`), and closed every remaining non-blocking repository gap — see `vault/Validation/Final_Execution_Readiness_Report_2026-07-23.md`. Remaining work: draft the 8 not-yet-started sections and run independent Pass 2 verification (citation audit, QA review, the three new gates) on all 6 existing sections — no open decisions currently block either.
+**Last updated:** 2026-07-25
+**Overall status:** 🟢 **Group-wide Business Plan complete, independently verified, publication-QA passed, and published on PR #6.** All 14 active v2 sections are present under `vault/Projects/Business_Plan_Drafts_v2/` and marked Done (independently verified). The targeted Pass 4 closure audit and all whole-plan gates passed: Problem Consistency, Financial Integrity, Geographic Evidence, whole-plan Citation Audit, and Template Compliance. The recovered Section 13 is the verified v2 file from commit `6e7224b`, not the superseded Egypt-retention version. The final deliverables are `Outputs/Business_Plan_Final.docx` and `Outputs/Business_Plan_Final.pdf` (25 pages), with `Outputs/Formatting_QA_Report.md` and `Outputs/Publication_QA_Report.md`; publication QA is PASS, with the formatting report disclosing the DOCX rasterization tooling limitation. These changes are isolated on `codex/final-business-plan-publication` in PR #6 and are not yet merged into `main`. Historical Egypt-retention drafts and outputs remain preserved and superseded.
 
 ---
 
@@ -30,15 +30,16 @@ mechanics) versus what is now historical (the Egypt-retention content itself).
 | 1 | Phase 1 — Problem & Charter (wk 1–2) | 🟢 Approved, one item open | Charter **approved** by Dr. Hossam Daoud (`Problem_Charter.md`) — team of 6 and 30-slide presentation confirmed. Remaining: map the 6 members onto the guide's 5 defined roles |
 | 2 | Phase 2 — OS Activation (wk 2–3) | 🟡 In progress | Template activated 20/07 (identity, memory, tracking). `business-plan-drafting` skill added 21/07 (maps all 14 GSB sections to vault sources); `AI_Business_Plan_Template.md` stored verbatim in-repo. Remaining: agent-role documentation, MCP decision, team walkthrough |
 | 3 | Phase 3 — Data Collection & Ingestion (wk 3–5) | ✅ Done | 9-doc Markdown corpus + 29-doc native-PDF corpus (annual reports, quarterly financials, investor decks, earnings calls, IPO/regulatory, consensus) collected and organized. Ingestion pipeline: extracted (incl. OCR) → 29 source notes → 14 topic fact files → 9 entity rosters → relationship map. **Extended with a semantic knowledge layer** (21/07): 30 synthesis Topic Notes, 8 domain MOCs, 12 Strategic Knowledge notes, an explicit-reasoning Business Relationships note, and semantic `[[wiki-links]]` added to all 52 pre-existing notes — 0 orphan notes, 1 fully-connected graph across 103 notes (was 103 isolated notes). All in `vault/Knowledge/`; see `_PHASE4_VALIDATION_REPORT.md`. |
-| 4 | Phase 4 — Analysis & Business Plan (wk 5–8) | 🟡 Drafting underway, 4/14 | 14 sections vs GSB template; every claim → vault note → source. Sub-phase 6 (OS architecture v1) done 21/07. Sub-phase 7 (Pilot 1) — Section 3 (Market Analysis) drafted, cited, and QA-passed (self-reviewed) 22/07. Sub-phase 7.5 ("Phase 8", evidence-based architecture v2) done 22/07. Pilot 2 done 22/07 — Section 2 (Business Description) drafted and independently QA-passed. Pilot 3 done 22/07 — Section 9 (Financial Plan), first real Forecast Layer test, fail/fix/re-verify cycle. **Pilot 4 done 22/07** (redefined mid-flight into a full-system stability test): Section 10 (Risk Analysis) drafted as a deliberate cross-subsystem integration exercise, passed through a citation-audit fail/fix/re-verify cycle plus two genuinely independent QA passes (converged on two findings, diverged on a third), fixed, and independently re-verified. Full-system stability verdict: stable, no architecture redesign needed. **All four Pilot Validation Plan pilots now complete — Phase 8 (drafting the remaining 10 sections) can begin.** 10 of 14 sections still not started |
-| 5 | Phase 5 — Finalize & Present (wk 8–9) | ⬜ Not started | Quality pass, export, OS structure doc, deck, Moodle upload — roadmap sub-phase 10 |
+| 4 | Phase 4 — Analysis & Business Plan (wk 5–8) | ✅ Done | All 14 active v2 sections drafted and independently verified. Targeted Pass 4 closure audit passed; Stages 14–18 whole-plan gates passed with zero open citation failures. See `vault/Validation/Whole_Plan_Gates_v2_2026-07-24.md` and `vault/Validation/Citation_Audit_Whole_Plan_v2_Pass4.md`. |
+| 5 | Phase 5 — Finalize & Present (wk 8–9) | 🟡 Business Plan publication complete | Final 25-page DOCX/PDF and both QA reports are complete on PR #6. Separate capstone deliverables—the OS structure document, group presentation, and Moodle submission—remain outside PR #6 and are not represented as complete here. |
 
 **Legend:** ✅ Done · 🟡 In progress · ⬜ Not started · 🔴 Blocked
 
 ## Current focus
 
-Finalize role assignments among the 6 members → close out Phase 2 (agent-role documentation, MCP
-decision). Data ingestion and the semantic knowledge layer (Phase 3) are done ahead of schedule.
+Review and merge PR #6 after confirming this documentation synchronization. The Business Plan itself
+needs no further drafting or architecture changes. Remaining capstone administration is limited to
+team-role assignment, the OS structure document, the group presentation, and final submission steps.
 
 The Agentic OS is now on **Version 2**, evolved from Phase 7's real execution evidence, not from
 design preference (`vault/Architecture/Agentic_OS_Architecture_v2.md`). Every finding from Section
@@ -95,8 +96,10 @@ instability class found (new Validation files not automatically linked into MOC 
 frontmatter going stale after an addendum) is process, not architecture — now recorded as a standing
 convention for the remaining pilots, not a redesign trigger.
 
-**All four Pilot Validation Plan pilots are now complete.** Next: Phase 8 of the roadmap — drafting the
-remaining 10 Business Plan sections — per `vault/Architecture/Implementation_Roadmap.md`.
+**All four Pilot Validation Plan pilots are complete, and their successor work is also complete.**
+The active v2 plan now has 14/14 independently verified sections, all whole-plan gates passed, and a
+publication-QA-passed 25-page final edition. `Implementation_Roadmap.md` remains a superseded historical
+roadmap for the pre-pivot Egypt-retention plan and is not an active work queue.
 
 ## Blockers / open questions
 

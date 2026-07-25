@@ -1,7 +1,7 @@
 ---
 section: 2
 title: Business Description
-status: Drafted — independent Pass 2 citation audit PASS ([[Citation_Audit_Section_02_v2_pass2]], 0 hard failures); independent Pass 2 QA review FAIL ([[QA_Review_Section_02_v2_pass2]], B1–B3 blocking); all Pass 2 findings (B1–B3, N1–N4, S-1–S-6) addressed in the 2026-07-24 fix cycle below — QA re-verification pending before any status change
+status: "Done (independently verified, dual-lineage; merged 2026-07-25) — branch lineage (lowercase pass2 artifacts): independent Pass 2 citation audit PASS ([[Citation_Audit_Section_02_v2_pass2]], 0 hard failures) + independent Pass 2 QA review FAIL ([[QA_Review_Section_02_v2_pass2]], B1–B3 blocking) → 2026-07-24 fix cycle (B1–B3, N1–N4, S-1–S-6) → QA re-verification PASS ([[QA_Review_Section_02_v2_pass2_reverify]], 2026-07-25, all three gates re-confirmed on the edited text); main lineage (capital Pass2 artifacts): Pass 2 citation audit + QA review verdict PASS WITH MINOR FIXES ([[Citation_Audit_Section_02_v2_Pass2]], [[QA_Review_Section_02_v2_Pass2]]; stale ASM-015-028 Proposed reference fixed 2026-07-24) → Stage 15 whole-plan Financial Integrity Gate ([[Financial_Integrity_Gate]], 2026-07-25) found §2.3 and its traceability table stated the FY2026 Adjusted EBITDA margin guidance as an uncited single point (6.0%→4.6% of GMV) where every other section uses the disclosed range (4.4–4.8% of GMV) — fixed 2026-07-25; merged text states both the disclosed 4.4–4.8% band (main Stage 15 fix) and the cited 6.0%→~4.6% mid-range form that passed the branch re-verification; union of both lineages' fix sets retained (see the two dated Fix records at end of file)"
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_02_Business_Description.md, which was drafted for the superseded Egypt-retention problem and stays untouched as historical record. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem."
 ---
@@ -137,7 +137,7 @@ framework to talabat's disclosed USD175 million 2026 investment programme — ra
 within-bucket and cross-market allocation undifferentiated — will raise the programme's realized GMV,
 EBITDA, and customer-lifetime-value contribution, because (a) the programme's own disclosure already
 separates a quantified cost (the FY2026 Adjusted EBITDA margin bridge, 6.0%→~4.6% of GMV — the guided
-mid-range of the 4.4–4.8% band; TLB-014, pages 6 and 19, `Topics/2026 Investment Programme.md`) from an
+mid-range of the disclosed 4.4–4.8% of GMV band; TLB-014, pages 6 and 19, `Topics/2026 Investment Programme.md`) from an
 entirely undisclosed return, meaning no evidence currently exists to confirm the programme is being spent
 optimally even on its own terms, and (b) the five identified candidate initiatives show materially
 different confidence, scalability, and reversibility profiles (`DEC-009`'s 11-criterion comparison) that
@@ -176,8 +176,9 @@ artifact this analysis produced, not a hypothetical capability:
 - **Scenario-based, range-bound forecasting** — a 45-node Value Driver Tree and base/upside/downside
   scenarios anchored to talabat's own disclosed FY2026 guidance, with genuinely new assumptions
   (`ASM-015`–`028`) tagged, confidence-rated, registered `Proposed`, and individually reviewed to
-  `Approved` status (2026-07-23) before any number is cited as settled
-  (`vault/Forecasts/Value_Driver_Tree_v2.md`, `Scenarios_v2.md`; `Assumptions_Register.md`).
+  `Approved` status (2026-07-23, a documented human-instructed classification pass — see
+  `Assumptions_Register.md`) before any number is cited as settled
+  (`vault/Forecasts/Value_Driver_Tree_v2.md`, `Scenarios_v2.md`).
 - **KPI and stage-gate infrastructure** — 50 KPIs across five families (Portfolio, Customer & growth,
   Financial, Operational, Governance), with the entire Governance family explicitly flagged as
   newly-instrumented rather than falsely presented as an existing talabat baseline
@@ -234,7 +235,7 @@ premature full-scale rollout recommendation.
 | USD175mn = ~120mn Everyday App + ~55mn Food-leadership | TLB-020 p.12, p.16; TLB-014 p.6, p.19; `Topics/2026 Investment Programme.md` |
 | "Investments rather than costs... offset the margin impact over time" | TLB-020, page 16 |
 | No disclosed internal governance mechanics | `Topics/Capital Allocation and Investment Governance.md` |
-| FY2026 EBITDA margin bridge 6.0%→~4.6% guided mid-range (4.4–4.8% band) | TLB-014, pages 6, 19; `Topics/2026 Investment Programme.md` |
+| FY2026 EBITDA margin bridge 6.0%→~4.6% guided mid-range (disclosed 4.4–4.8% of GMV band) | TLB-014, pages 6, 19; TLB-020, page 16; `Topics/2026 Investment Programme.md`; cross-section consistency: `Section_09_Financial_Plan.md` §9.3 |
 | Five candidate Investment Options and their ranking | `OPT-001`–`005`; `DEC-009` |
 | Recommended funding sequence (OPT-002/003 near-term; OPT-001/005 at pace; OPT-004 longer-horizon) | `DEC-009` (approved 2026-07-23, middle path) |
 | Geography tagging discipline | `vault/Architecture/Geographic_Evidence_Rules.md` |
@@ -268,3 +269,18 @@ Findings from [[QA_Review_Section_02_v2_pass2]] (FAIL: B1–B3, N1–N4) and
 - **S-3** → inline cite added for "three-sided marketplace" (`Strategic/How Talabat Creates Value.md`; `Facts/Marketplace_Facts.md`) plus a traceability row.
 - **S-4** → §2.1 GMV sentence restructured: USD 7,428mn attached to the transacting verticals (food delivery; groceries & retail incl. talabat mart) only; subscription/advertising/FinTech reframed as adjacent revenue/strategy pillars outside GMV (`Topics/IPO.md`; TLB-001, page 27).
 - **S-5** → IPO wording corrected to "priced November 2024" in §2.1 and §2.6 (TLB-025 is the pricing announcement); traceability row notes `Topics/IPO.md`'s November–December 2024 listing window. The `Problem_Charter.md` "December 2024" discrepancy remains a charter-side item for `decision-steward`, not fixed here.
+
+---
+
+## Fix record (2026-07-24/25, main lineage — Pass 2 + Stage 15 Financial Integrity Gate) and merge note
+
+Main-lineage fixes (capital-P artifacts), preserved verbatim in intent:
+
+- **Pass 2 minor fix (2026-07-24)** — [[Citation_Audit_Section_02_v2_Pass2]] / [[QA_Review_Section_02_v2_Pass2]] (verdict PASS WITH MINOR FIXES): the stale reference to `ASM-015`–`028` as still `Proposed` corrected in §2.4 (register shows `Approved` as of 2026-07-23, per a documented human-instructed classification pass).
+- **Stage 15 whole-plan Financial Integrity Gate (2026-07-25)** — [[Financial_Integrity_Gate]]: §2.3 and the traceability table stated the FY2026 Adjusted EBITDA margin guidance as an uncited single point (6.0%→4.6% of GMV) where every other section uses the disclosed range (4.4–4.8% of GMV); fixed by stating the disclosed band.
+
+**Merge note (2026-07-25).** The two verification lineages were merged with the union of both fix sets; no correction from either lineage was discarded:
+
+- **§2.3 and traceability bridge row:** merged text states the 6.0%→~4.6% mid-range **and** explicitly labels it the guided mid-range of the disclosed 4.4–4.8% of GMV band, with inline citations — this is the exact wording that passed the branch QA re-verification ([[QA_Review_Section_02_v2_pass2_reverify]], Financial Integrity Gate 11/11) and it satisfies main's Stage 15 requirement that the disclosed range appear, not an uncited single point. The traceability row keeps the branch's N2/S-2 citation repointing (from `Topics/EBITDA.md` to `Topics/2026 Investment Programme.md`, TLB-014 pp.6/19) and adds main's TLB-020 p.16 cite and its `Section_09_Financial_Plan.md` §9.3 cross-section-consistency pointer.
+- **§2.4:** merged text states the branch's full assumption lifecycle (registered `Proposed`, individually reviewed to `Approved`, 2026-07-23 — the restatement B1 prescribed and the reverify confirmed) **and** main's provenance detail (documented human-instructed classification pass, per `Assumptions_Register.md`).
+- **Frontmatter status:** combined into one dated line naming both lineages and their artifacts.

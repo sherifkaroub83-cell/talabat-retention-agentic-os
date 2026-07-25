@@ -1,7 +1,7 @@
 ---
 section: 3
 title: Market Analysis
-status: Drafted — independent Pass 2 returned FAIL ([[QA_Review_Section_03_v2_pass2]] 4 blocking; [[Citation_Audit_Section_03_v2_pass2]] 3 hard, 7 soft); all blocking/hard findings and soft/non-blocking items fixed 2026-07-24 (see "Fix record" at end of file); targeted re-audit of edited passages and QA re-review still required before ✅ Done
+status: "Done (independently verified, dual-lineage; merged 2026-07-25) — branch lineage (lowercase pass2 artifacts): independent Pass 2 FAIL ([[QA_Review_Section_03_v2_pass2]] 4 blocking; [[Citation_Audit_Section_03_v2_pass2]] 3 hard, 7 soft) → all findings fixed 2026-07-24 (see Fix record) → re-verification double-PASS 2026-07-25 ([[QA_Review_Section_03_v2_pass2_reverify]], [[Citation_Audit_Section_03_v2_pass2_reverify]]; the latter's one new soft finding S8 — TLB-002 p.15→p.16 on the AI/personalisation EBITDA cite — applied in this file); main lineage (capital Pass2 artifacts): Pass 2 independently verified ([[Citation_Audit_Section_03_v2_Pass2]], [[QA_Review_Section_03_v2_Pass2]]), found and fixed the non-GCC 18–21% of Group GMV period blend (FY2025 full-year vs Q1 2026 data points) 2026-07-24 → Stage 17 whole-plan citation audit ([[Citation_Audit_WholePlan_Stage17_Sections03-04]], 2026-07-25) found and fixed 2 further citation defects (AI/personalisation EBITDA figure mis-cited to `Topics/EBITDA.md`; talabat pro GMV-share figure mis-cited to Topics notes instead of `Facts/Talabat_Pro.md`) 2026-07-25, Stages 14–16 gates PASS; union of both lineages' fix sets retained (see the two dated Fix records at end of file)"
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_03_Market_Analysis.md, which was drafted for the superseded Egypt-retention problem (the Phase 7 pilot, 2026-07-22 — see vault/Validation/Phase7_Pilot_Execution_Report_Section_03.md) and stays untouched as historical record. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem; it reuses the same underlying vault evidence where the evidence itself is Group/GCC-level and unaffected by the pivot, but reframes every conclusion around the new decision question."
 ---
@@ -67,6 +67,20 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > **"Drafted — self-reviewed," not the unqualified "✅ Done."** A genuinely independent Pass 2 (a fresh,
 > separately-invoked citation audit and QA review) is still required before this section is
 > submission-final.
+>
+> **Addendum, 2026-07-24 (independent Pass 2 review — complete).** A fresh, independently-invoked citation
+> audit and QA review found and fixed one defect: the non-GCC "18–21% of Group GMV" figure (Answer, §3.3
+> Opportunities, §3.4) silently blended two different time periods — 18% is the FY2025 full-year
+> non-GCC GMV contribution (TLB-019, page 14) and 21% is the Q1 2026 quarterly figure (TLB-011, page 2,
+> up from 16% a year earlier) — presented as if it were one internally consistent range rather than two
+> dated data points bracketing a trend. This is now stated explicitly at each occurrence below, consistent
+> with this section's own stated discipline (already applied correctly elsewhere in this section, e.g. the
+> order-frequency and GCC-share-table discussions) of never silently blending different measurement
+> periods. See [[Citation_Audit_Section_03_v2_Pass2]] and [[QA_Review_Section_03_v2_Pass2]] for the full
+> independent review. All other claims independently re-verified against `Facts/GMV_Facts.md`,
+> `Facts/Marketplace_Facts.md`, `Facts/Competition_Facts.md`, `Facts/Orders_Facts.md`, `Facts/Q-Commerce.md`,
+> `Entities/Countries.md`, `Topics/GCC vs non-GCC.md`, and `vault/Forecasts/Value_Driver_Tree_v2.md` — no
+> other defect found. This section is now **✅ Done (independently verified)**.
 
 ---
 
@@ -80,7 +94,8 @@ scale shows the largest unrealized headroom sits in grocery/retail (penetrated a
 a USD 104–150bn+ addressable category) and in the faster-growing but still-minority non-GCC geography —
 on the GMV-by-geography disclosure basis, **which includes Egypt**: +57% GMV growth y/y against GCC's
 +22%, yet only 18% of Group GMV in FY2025 and 21% in Q1 2026 *(non-GCC incl. Egypt, GMV-by-geography
-basis; TLB-019, page 14; TLB-011, page 2)*. Grocery/retail expansion is a disclosed component of the
+basis; TLB-019, page 14; TLB-011, page 2 — two dated data points, not a blended range)*. Grocery/retail
+expansion is a disclosed component of the
 ~USD 120mn Everyday App bucket; that the bucket is also weighted toward these faster-growing non-GCC
 markets is an **analytical inference, not a disclosed programme fact** — reasoned from the bucket's
 disclosed component list and talabat pro's 2025 Egypt and Iraq launches, because no market-level
@@ -202,8 +217,9 @@ the clearest disclosed instance of the "minority of segments carrying the majori
 McKinsey Lens asks this section to name. By vertical, Food remains the majority of GMV (>70%) despite
 G&R's faster growth. **Early adopters / primary users, stated as the "so what":** the two segments this
 plan's investment thesis is actually built on are talabat pro subscribers, whose share of platform GMV
-rose from 32% (Q1 2025) to 49% (Q1 2026) *(Group, talabat-only excl. instashop; TLB-020, page 8;
-TLB-014, page 14)* — a ~17pp shift over roughly five quarters; no FY2024 baseline for this metric is
+rose from 32% (Q1 2025) to 49% (Q1 2026) *(Group, talabat-only excl. instashop; `Facts/Talabat_Pro.md` —
+TLB-020, page 8; TLB-014, page 14)* — a ~17pp shift over roughly five quarters; no FY2024 baseline for
+this metric is
 disclosed anywhere in the corpus. A separately disclosed same-tier figure — pro subscribers at 25% of
 GMV, "1.9x growth," Q4 2025 *(TLB-019, page 7)* — sits in unexplained tension with that 32%→49%
 series (plausibly a different metric basis, but the corpus does not say so); both are shown here,
@@ -263,7 +279,8 @@ own.
 **Opportunities.** Grocery/retail penetration of only ~1–3% against a USD 104–150bn+ addressable
 category (§3.1); the non-GCC geography's premium GMV growth rate (+57% y/y vs. GCC's +22%; GMV-by-geography
 basis, **non-GCC incl. Egypt** — TLB-019, p.14) while still
-representing only 18% (FY2025, TLB-019, p.14) to 21% (Q1 2026, TLB-011, p.2) of Group GMV; the disclosed
+representing only 18% (FY2025, TLB-019, p.14) to 21% (Q1 2026, TLB-011, p.2) of Group GMV — two dated
+data points, not a single blended figure; the disclosed
 AdTech monetization gap versus talabat's own ~7%
 benchmark; and the AI/personalisation capability's still-rising management-estimated EBITDA trajectory. **So what:** three of
 these four opportunity threads map directly onto ranked candidate Investment Options already identified
@@ -341,13 +358,15 @@ rate/margin than Food — an explicit, disclosed (0.5)–(0.7)pp Adjusted EBITDA
 product-mix shift (`Topics/Grocery and Retail.md`; TLB-014, page 6). This is a genuine growth-versus-margin
 trade-off the plan engages with directly (consistent with `OPT-001`'s framing) rather than presenting
 grocery GMV growth as equivalent in value to Food GMV growth. The non-GCC geography (+57% y/y GMV
-growth, still only 18–21% of Group GMV — GMV-by-geography basis, **non-GCC incl. Egypt**; TLB-019,
-p.14; TLB-011, p.2) is the second clear underserved-market opportunity by the same logic — a genuinely
+growth in FY2025, still only 18% of Group GMV that year, rising to 21% by Q1 2026 — GMV-by-geography
+basis, **non-GCC incl. Egypt**; TLB-019,
+p.14; TLB-011, p.2; two dated data points presented separately, not blended) is the second clear
+underserved-market opportunity by the same logic — a genuinely
 higher-growth geography that remains structurally under-penetrated relative to its GCC counterpart's
 maturity (2023 monthly orders per capita: GCC 1.28x vs. non-GCC 0.13x, a ~10x gap, TLB-026, page 121;
 `GCC vs non-GCC.md`). **Composition qualifier:** the 2023 per-capita figure uses the pre-FY2025
 "non-GCC" definition — **Egypt + Jordan + Iraq** (TLB-026, page 41) — which matches the Egypt-inclusive
-composition of the +57%/18–21% GMV figures in this same sentence, but is *distinct from* §3.2's
+composition of the +57% / 18%→21% GMV figures in this same sentence, but is *distinct from* §3.2's
 Jordan+Iraq-only IFRS 8 revenue segment; the ~10x per-capita gap is therefore evidence about the
 Egypt-inclusive non-GCC geography as a whole, and any application of it to the current Jordan+Iraq
 revenue segment specifically would be a labeled `inferred-applicability` claim, which this section
@@ -399,13 +418,13 @@ DEC-009 headline-exhibit restrictions therefore do not apply here and are not vi
 | GCC/non-GCC/Egypt audited segment revenue, gross profit, net profit — since-inception 485-day period (3 Sep 2024 – 31 Dec 2025), **not FY2025**; FY2025 calendar Group revenue USD3,876mn mgmt / USD3,756mn IFRS for reference | TLB-002, p.111; TLB-008, p.61; TLB-002, p.20 |
 | GCC >75% of Group revenue/assets (IFRS8 threshold) | TLB-004, p.37 |
 | GCC 82% of pro-forma FY2025 GMV (USD6,332mn) — flagged tension vs. TLB-019's 81%/USD7,702mn table | `GCC vs non-GCC.md`; TLB-002, p.18; TLB-019, p.14 |
-| Non-GCC GMV +57% y/y (USD1,719mn, 18% of Group, FY2025) vs. GCC +22% y/y — GMV-by-geography basis, non-GCC **incl. Egypt** (no Jordan+Iraq-only growth figure disclosed); 21% of Group GMV Q1 2026, same basis | TLB-019, p.14 and Source Note; TLB-011, p.2 |
+| Non-GCC GMV +57% y/y (USD1,719mn, 18% of Group, FY2025) vs. GCC +22% y/y — GMV-by-geography basis, non-GCC **incl. Egypt** (no Jordan+Iraq-only growth figure disclosed); 21% of Group GMV Q1 2026 (up from 16% a year earlier), same basis — two dated data points, not a blended range | TLB-019, p.14 and Source Note; TLB-011, p.2 |
 | Food USD6,652mn (+20%) vs. G&R USD2,768mn (+47%), FY2025 GMV | TLB-002, p.18 |
 | G&R/"Groceries" FY2025 GMV shown two ways: USD2.77bn (TLB-002 vertical table) vs. USD3.5bn ("Groceries," TLB-014) — presented as unreconciled, not blended | TLB-002, p.18; TLB-014, p.5 |
-| talabat pro GMV share 32% (Q1'25) → 49% (Q1'26), Group, talabat-only excl. instashop — no FY2024 baseline disclosed; separately disclosed 25% (Q4'25) flagged as unexplained same-tier tension | TLB-020, p.8; TLB-014, p.14; TLB-019, p.7 |
+| talabat pro GMV share 32% (Q1'25) → 49% (Q1'26), Group, talabat-only excl. instashop — no FY2024 baseline disclosed; separately disclosed 25% (Q4'25) flagged as unexplained same-tier tension | `Facts/Talabat_Pro.md` (TLB-020, p.8; TLB-014, p.14); TLB-019, p.7; `Value_Driver_Tree_v2.md` N-08 |
 | Multi-vertical GMV share 68%→73%→76% (Dec'24→Dec'25→Mar'26) | `Topics/Multi-Verticality.md`; TLB-019 p.7; TLB-020 p.8 |
 | Jordan/Iraq never individually disclosed | `GCC vs non-GCC.md` Open Questions |
-| AI/personalisation **management-estimated** EBITDA contribution >USD14mn→>USD30mn (FY2024→FY2025) | `Facts/AI_Facts.md` (TLB-001, p.23; TLB-002, p.16) |
+| AI/personalisation **management-estimated** EBITDA contribution >USD14mn→>USD30mn (FY2024→FY2025) | `Facts/AI_Facts.md` (TLB-001, p.23; TLB-002, p.16); `Value_Driver_Tree_v2.md` N-09 |
 | AdTech CPG investment ratio 8% vs. 2% benchmark | TLB-015, p.108 |
 | ~90-95% non-employed rider workforce | TLB-001, p.34/47; TLB-026, p.138 (provider concentration: p.51) |
 | AdTech revenue 3.4-3.5% of GMV vs. ~7% benchmark (UAE tMart only) | `Strategic/Competitive Weaknesses.md`; TLB-001 p.21; TLB-002 pp.11/14/19; TLB-014 p.19 |
@@ -457,3 +476,20 @@ was invented, softened, or removed.
 | QA non-blocking #1 | **Not fixable in this file:** the AI-market-sub-bullet reframing decision record requires a `DEC-` entry via decision-steward (out of scope for this draft-only edit pass); flagged for escalation before Stage 18. |
 | QA non-blocking #3 | No prose change required per the report; the suggested `Topics/GMV.md` Open Questions annotation is a vault-side edit outside this pass's single-file scope. |
 | H3 escalation (upstream) | The unsupported "AI-supported" attribute in `Strategic/Competitive Advantages.md` / `Topics/Advertising.md` is flagged for a separate vault-side correction (outside this pass's single-file scope). |
+
+---
+
+## Fix record (2026-07-24/25, main lineage — Pass 2 + Stage 17) and merge note
+
+Main-lineage fixes (capital-P artifacts), preserved in intent:
+
+- **Pass 2 (2026-07-24)** — [[Citation_Audit_Section_03_v2_Pass2]] / [[QA_Review_Section_03_v2_Pass2]] (see the 2026-07-24 addendum in the provenance note above): found and fixed the silent blend of the non-GCC "18–21% of Group GMV" figures — 18% is the FY2025 full-year contribution (TLB-019, p.14) and 21% is the Q1 2026 quarterly figure (TLB-011, p.2, up from 16% a year earlier) — restated at each occurrence as two dated data points, not a blended range.
+- **Stage 17 whole-plan citation audit (2026-07-25)** — [[Citation_Audit_WholePlan_Stage17_Sections03-04]]: (1) hard failure — AI/personalisation EBITDA figure mis-cited to `Topics/EBITDA.md`, re-pointed away from it; (2) moderate — talabat pro GMV-share figure mis-cited to `Topics/Talabat Pro.md`/`Topics/Multi-Verticality.md`, re-pointed to `Facts/Talabat_Pro.md`. Both fixed 2026-07-25.
+
+**Merge note (2026-07-25).** The two verification lineages were merged with the union of both fix sets; no correction from either lineage was discarded:
+
+- **Non-GCC 18%/21% series (Answer, §3.3 Opportunities, §3.4, traceability):** merged text carries main's de-blended, dated two-data-point phrasing **inside** the branch's B1 corrections — the "non-GCC incl. Egypt, GMV-by-geography basis" tags, the Jordan+Iraq-only caveat, and (§3.4) the branch's H2 pre-FY2025 composition qualifier (Egypt+Jordan+Iraq, TLB-026 p.41).
+- **talabat pro GMV share (§3.2, traceability):** merged text keeps the branch's H1/S1 corrections (basis label "Group, talabat-only excl. instashop"; the no-FY2024-baseline negative claim; the 25% Q4'25 same-tier tension flag; direct TLB-020 p.8 / TLB-014 p.14 page cites) **and** main's Stage 17 re-point to `Facts/Talabat_Pro.md` plus its `Value_Driver_Tree_v2.md` N-08 pointer.
+- **AI/personalisation EBITDA (§3.3 Strengths, traceability):** merged text keeps the branch's S4 evidence-category relabel ("management-estimated", per the sources' own "estimated to generate/contribute" wording) and its Facts-layer citation `Facts/AI_Facts.md` (TLB-001 p.23; TLB-002 p.16 — the re-verification's S8 page correction applied), plus main's `Value_Driver_Tree_v2.md` N-09 pointer. This satisfies main's Stage 17 hard failure (the mis-cite to `Topics/EBITDA.md`) at a deeper evidence tier than its own `Topics/AI.md` re-point — `Topics/EBITDA.md` is cited nowhere for this figure.
+- **Answer-block bucket-weighting claim:** the branch's B3 correction (weighting toward non-GCC markets is an explicitly-labeled analytical inference, not a disclosed programme fact) is retained; main's "precisely the two areas the bucket is weighted toward" phrasing is superseded by that correction, since presenting the weighting as fact was a defect the branch's independent Pass 2 identified.
+- **Frontmatter status:** combined into one dated line naming both lineages and their artifacts.

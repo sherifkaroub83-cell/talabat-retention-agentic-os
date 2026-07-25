@@ -1,7 +1,7 @@
 ---
 section: 10
 title: Risk Analysis
-status: Drafted — self-reviewed (Pass 1); citation audit run in-session ([[Citation_Audit_Section_10_v2]]); independent Pass 2 citation re-check and QA review (incl. the three new gates) still required before ✅ Done
+status: Done (independently verified) — Pass 2 citation audit + QA review complete ([[Citation_Audit_Section_10_v2_Pass2]], [[QA_Review_Section_10_v2_Pass2]]), verdict PASS (0 defects found); all 17 risks and every cited figure, including the raw-primary-source TECH-02/REG-04 breach citation, independently re-verified 2026-07-24
 pipeline_run: 2026-07-24
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_10_Risk_Analysis.md, which was drafted for the superseded Egypt-retention problem and stays untouched as historical record — not read as an input to this draft, per the standing instruction never to read from the non-_v2 drafts directory. Likewise, the pre-pivot vault/Validation/Citation_Audit_Section_10.md and QA_Review_Section_10_*.md files are historical record for the retired problem and were not read or reused as evidence for this draft or its companion validation files. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem (Problem_Charter.md)."
 ---
@@ -79,6 +79,17 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > owners as a hard prerequisite, the risk list below (§10.8) is written to be directly citable by name and
 > ID without waiting for Pass 2** — Pass 2 may refine mitigation wording or owners but is not expected to
 > change the risk universe itself, which is grounded in already-disclosed evidence and prior pipeline output.
+>
+> **Addendum, 2026-07-24 (independent Pass 2 review).** An independent citation audit and QA review
+> ([[Citation_Audit_Section_10_v2_Pass2]], [[QA_Review_Section_10_v2_Pass2]]) re-verified all 26 traceable
+> claims across the section's 17 risks directly against primary sources and Topic Notes — including
+> independently re-locating the TECH-02/REG-04 data-breach and DTA citations in the raw
+> `Talabat-Holding-plc_International-Offering-Memorandum.txt` source text rather than trusting Section 8's
+> own citation of the same facts. **0 defects found.** The section's own dual-comparator handling of the
+> Q1 2026 4.8% EBITDA figure (year-on-year via `Problem_Charter.md` vs. quarter-on-quarter via this
+> section) was independently re-verified as accurate for both framings, correctly not merged into one
+> number. This section is now **Done (independently verified)**; per this section's own provenance note,
+> Section 11's dependency on its risk list stands unaffected by this Pass 2 outcome.
 
 ---
 

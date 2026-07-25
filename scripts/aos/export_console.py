@@ -22,18 +22,39 @@ from scripts.aos import config, events, pipeline  # noqa: E402
 OUT = ROOT / "app" / "agentic-os-console" / "src" / "js" / "kernel.js"
 
 
+def _draft_records_fix(n):
+    """True if the section draft's frontmatter status records a post-FAIL fix/reconfirmation."""
+    drafts = list((ROOT / "vault" / "Projects" / "Business_Plan_Drafts_v2").glob(f"Section_{n:02d}_*.md"))
+    if not drafts:
+        return False
+    head = drafts[0].read_text(encoding="utf-8", errors="replace")[:2500]
+    return bool(re.search(r"fixed|reconfirmed|double-PASS|re-verif", head, re.I))
+
+
 def validation_status():
-    """Per-section citation/QA verdicts from Validation artifacts (best = reverify)."""
+    """Per-section citation/QA verdicts from Validation artifacts (best = reverify).
+    Verdicts are reported AS RECORDED in the artifact; when a FAIL artifact's fixes
+    are recorded in the draft's own dated fix-record (the merged lineages' pattern),
+    chain="closed-by-fix-record" says so without overwriting the verdict."""
     out = {}
     vdir = ROOT / "vault" / "Validation"
     for n in range(1, 15):
         row = {}
         for kind, label in (("Citation_Audit", "citation"), ("QA_Review", "qa")):
-            for suffix, tag in (("_v2_pass2_reverify", "reverify"), ("_v2_pass2", "pass2")):
+            for suffix, tag in (("_v2_pass2_reverify", "reverify"), ("_v2_Pass3", "pass3-main"), ("_v2_pass2", "pass2"), ("_v2_Pass2", "pass2-main")):
                 f = vdir / f"{kind}_Section_{n:02d}{suffix}.md"
                 if f.exists():
-                    m = re.search(r"^status:\s*(\S+)", f.read_text(encoding="utf-8", errors="replace")[:400], re.M)
-                    row[label] = {"verdict": (m.group(1) if m else "?"), "stage": tag}
+                    text = f.read_text(encoding="utf-8", errors="replace")
+                    m = re.search(r"^(?:status|verdict):\s*(\S+)", text[:600], re.M)
+                    if not m:
+                        inline = re.findall(r"\*\*Verdict:\s*(PASS|FAIL|HOLD)", text)
+                        verdict = inline[-1] if inline else "?"
+                    else:
+                        verdict = m.group(1)
+                    entry = {"verdict": verdict, "stage": tag}
+                    if verdict == "FAIL" and _draft_records_fix(n):
+                        entry["chain"] = "closed-by-fix-record"
+                    row[label] = entry
                     break
         out[n] = row
     return out

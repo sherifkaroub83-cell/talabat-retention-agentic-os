@@ -1,7 +1,7 @@
 ---
 section: 14
 title: Appendices
-status: Drafted — self-reviewed (Pass 1); citation audit run in-session ([[Citation_Audit_Section_14_v2]]); independent Pass 2 citation re-check and QA review (incl. the three new gates) still required before ✅ Done
+status: Drafted — Pass 2 and Pass 3 findings fixed and reconfirmed ([[Citation_Audit_Section_14_v2_Pass2]], [[Citation_Audit_Section_14_v2_Pass3]], all 60 traceability rows checked); Stage 17 whole-plan citation audit ([[Citation_Audit_WholePlan_Stage17_Sections13-14]], 2026-07-25) found 1 hard failure — the traceability table's Section 4 EBITDA row (and two further body/table instances) still cited `Topics/EBITDA.md` for the AI/personalisation EBITDA figure, the same defect Section 4's own Pass 3 fix retargeted to `Topics/AI.md` inside Section 4 itself but which never propagated into Section 14's table — fixed 2026-07-25 across all 3 instances. Section 13's own outstanding Stage 17 pass ([[Citation_Audit_WholePlan_Stage17_Section13]], 2026-07-25) then found the Section 13 churn-scope traceability row here was also stale (said "Group or country level," no longer matching Section 13's own already-corrected "Group or Egypt specifically" wording) — fixed 2026-07-25. Not yet reconfirmed by a fresh independent pass; treat as Done only once Stage 17 fully re-clears it
 pipeline_run: 2026-07-24
 supersedes_note: "A prior vault/Projects/Business_Plan_Drafts/Section_14_Appendices.md exists (no _v2 suffix), drafted for the superseded Egypt-retention problem. Per the standing instruction never to read from or write to that directory, it was not read or reused as an input to this draft — this file is written fresh against the 2026-07-23 pivot's Group-wide capital-allocation problem (Problem_Charter.md) and the 12 companion _v2 section drafts (Sections 2-13) that now exist."
 ---
@@ -44,6 +44,12 @@ supersedes_note: "A prior vault/Projects/Business_Plan_Drafts/Section_14_Appendi
 >   Readiness pass. This section does not silently inherit that stale framing (the traceability table
 >   below cites the *current* `Approved` status), and does not edit Section 9 itself, which is outside
 >   this task's scope — flagged here for the next Pass 2/re-draft pass on Section 9.
+>
+>   **Addendum, 2026-07-24 (independent Pass 3 review).** This flag is now historical, not a live gap:
+>   Section 9 underwent its own independent Pass 2 citation audit and QA review on 2026-07-24
+>   ([[Citation_Audit_Section_09_v2_Pass2]]), which fixed this exact staleness — `Section_09_Financial_Plan.md`
+>   now correctly states `ASM-015`–`028` as `Approved` and `DEC-009` as resolved throughout, independently
+>   reconfirmed by a further Pass 3 ([[Citation_Audit_Section_09_v2_Pass3]]) with no remaining defects.
 > - **13.4 External Research Resolution (`research-agent` role)** — determined **not applicable**: this
 >   section compiles and cross-references claims already drafted and cited elsewhere; it introduces no new
 >   external-research claim.
@@ -76,6 +82,19 @@ supersedes_note: "A prior vault/Projects/Business_Plan_Drafts/Section_14_Appendi
 > **"Drafted — self-reviewed," not the unqualified "✅ Done."** A genuinely independent Pass 2 (a fresh,
 > separately-invoked citation audit and QA review) is still required before this section is
 > submission-final.
+>
+> **Addendum, 2026-07-24 (independent Pass 2 review).** An independent citation audit and QA review
+> ([[Citation_Audit_Section_14_v2_Pass2]], [[QA_Review_Section_14_v2_Pass2]]) found and fixed 3 defects,
+> all sharing one root cause: this section was drafted before Sections 4, 5, and 12 underwent their own
+> independent Pass 2 fixes, so its §14.2 traceability table and §14.8 cross-section check inherited each
+> section's **pre-fix** content — wrong `Value_Driver_Tree_v2.md` node IDs for the multi-vertical/AI-EBITDA
+> rows (Section 4's fix), a stale "7 of 8 countries" figure (Section 5's fix, corrected to 6 of 8), and a
+> stale `DEC-009` Tier 2/3 description that misread `OPT-003` as a separately-tiered, pilot-suited option
+> rather than `DEC-009`'s resolved near-term-priority pairing with `OPT-002` (Section 12's fix — the same
+> misreading independently found and fixed in Sections 7 and 12 this session). Fixing the DEC-009 item also
+> resolved a pre-existing internal inconsistency within this section itself (§14.3 already stated the
+> correct resolved sequence; §14.2/§14.8 did not, until this fix). All fixes cross-verified directly
+> against each source section's current, Pass-2-cleared text — re-confirmation still required.
 
 ---
 
@@ -153,19 +172,20 @@ per `Geographic_Evidence_Rules.md`.
 | 3 | Grocery/retail penetration ~1–3% of a USD104–150bn+ addressable category (two unreconciled TAM figures, both stated) | — | TLB-014, pages 5, 19; TLB-020, page 16 |
 | 3 | GCC/non-GCC/Egypt FY2025 segment revenue, gross profit, net profit (Egypt-standalone; GCC/non-GCC country-comparison) | `Topics/GCC vs non-GCC.md` | TLB-002, page 111 |
 | 3 | Non-GCC GMV +57% y/y vs. GCC +22% y/y, FY2025 (market-comparison) | — | TLB-019, page 14 |
-| 3 | talabat pro subscriber GMV share 32%→49% (FY2024→Q1 2026), Group | `Topics/Talabat Pro.md` | corpus-wide |
+| 3 | talabat pro subscriber GMV share 32%→49% (Q1 2025→Q1 2026), Group | `Topics/Talabat Pro.md` | corpus-wide |
 | 3 | Multi-vertical GMV share 68%→73%→76% (Dec'24→Dec'25→Mar'26), Group | `Topics/Multi-Verticality.md` | TLB-019 p.7; TLB-020 p.8 |
 | 3 | Egypt category-share figure inconsistent across the corpus (10x+ vs. 1x+→4x+), both stated, neither resolved | `Topics/Egypt.md`; `Topics/Competition.md` | TLB-001 p.5; TLB-002 p.5; TLB-014 p.4; TLB-026 p.114 |
 | 3 | Non-high-value M1 retention -4% y/y (market-comparison: UAE, Kuwait, Qatar only) | `Topics/Food Leadership.md` | TLB-019, page 9 |
 | 3 | Only Deliveroo/Careem/noon/Jahez/Snoonu named anywhere in the primary corpus, all from one document | `Entities/Competitors.md` | TLB-026, page 146 |
-| 4 | Multi-vertical 13.0x vs. 3.8x order frequency (Group) | `Topics/Multi-Verticality.md`; `Value_Driver_Tree_v2.md` N-19/N-20 | TLB-012 p.9; TLB-013 p.6 |
+| 4 | Multi-vertical 13.0x vs. 3.8x order frequency (Group) | `Topics/Multi-Verticality.md`; `Value_Driver_Tree_v2.md` N-14 (order frequency), N-11 (GMV-share trend) | TLB-012 p.9; TLB-013 p.6 |
 | 4 | talabat pro 20-28% frequency uplift / 26-32% retention uplift (GCC+Jordan cohort, six markets pre-Dec 2024, excludes Egypt/Iraq) | `ASM-016` (Approved) | TLB-001 p.18; TLB-015 pp.78,104; TLB-019 p.11 |
 | 4 | Rewards >15%, PostPaid 14% order-frequency uplift (Group) | `Business_Relationships.md` Chain 1 | TLB-001, pp.18-19; TLB-026, p.134 |
-| 4 | AI/personalisation EBITDA contribution USD14mn+ (FY2024) → USD30mn+ (FY2025), Group; not a discrete dollar line in either bucket | `Topics/EBITDA.md`; `Value_Driver_Tree_v2.md` N-06 | TLB-001 p.23; TLB-002 p.15 |
+| 4 | AI/personalisation EBITDA contribution USD14mn+ (FY2024) → USD30mn+ (FY2025), Group | `Topics/AI.md`; `Value_Driver_Tree_v2.md` N-09 | TLB-001 p.23; TLB-002 p.15 |
+| 4 | AI/personalisation EBITDA contribution not a discrete dollar line in either bucket | `Value_Driver_Tree_v2.md` N-06 | — |
 | 4 | Advertising revenue USD246mn→USD323mn (+32% y/y) vs. ~7%-of-GMV UAE benchmark not yet reached Group-wide | `Topics/Revenue Drivers.md` | TLB-001 p.21; TLB-002 pp.10,14,19; TLB-014 p.19 |
 | 4 | No disclosed ROI, payback period, or return figure for either investment bucket (Group, absence-of-disclosure finding) | `Investment_Relationship_Map.md` | corpus-wide |
 | 5 | talabat's technology stack is licensed from Delivery Hero SE, a partner arrangement, not a standalone build | `Entities/Technology_Platforms.md` | `Topics/AI.md` |
-| 5 | talabat pro live in 7 of 8 countries by end-2024 | — | TLB-001, pages 11-12 |
+| 5 | talabat pro live in 6 of 8 countries by end-2024 (excludes Egypt, Iraq) | `Value_Driver_Tree_v2.md` N-08/N-13 | TLB-012, TLB-013, TLB-015, TLB-016, TLB-026 |
 | 5 | This plan's own decision-support system's MCP-integration status remains undecided | — | `MEMORY.md` |
 | 6 | FY2024/FY2025 revenue by fee type (Commission, Delivery & Service, Subscription & Other Income, Advertising & Listing, Vouchers) — MECE by talabat's own Management Revenue convention | `Strategic/Revenue Model.md`; `Facts/Revenue.md` | TLB-001 p.27; TLB-002 p.20; TLB-009 p.4 |
 | 6 | Blended take rate ~40% (FY2024) → ~41% (FY2025); 38%→39% of GMV Q1 2025→Q1 2026, Group | — | TLB-001 p.27; TLB-002 p.20; TLB-020 pp.4,10 |
@@ -183,7 +203,7 @@ per `Geographic_Evidence_Rules.md`.
 | 8 | 7S alignment check: Systems and Skills rated "Not ready" — no disclosed capital-allocation committee/stage-gate; no named data-science or portfolio-management function | new synthesis, first built in Section 8 | `Topics/Capital Allocation and Investment Governance.md`; `Entities/Executives.md` |
 | 9 | FY2026 Group guidance: GMV +11-14% cFX; Revenue +14-17% cFX; Adjusted EBITDA 4.4-4.8% of GMV; FCF 3.2-3.6% of GMV — the plan's only headline financial exhibit, per `DEC-008` | `Scenarios_v2.md` top-level scenarios | TLB-020; TLB-014 |
 | 9 | Q1 2026 Adjusted EBITDA margin 4.8% actual, at the guided range's low end | `Scenarios_v2.md` downside case | TLB-020 |
-| 9 | No disclosed break-even, payback, or ROI figure for either bucket | `Investment_Relationship_Map.md`; `Topics/EBITDA.md` | corpus-wide |
+| 9 | No disclosed break-even, payback, or ROI figure for either bucket | `Investment_Relationship_Map.md` | corpus-wide |
 | 10 | 17 material risks across 5 MECE categories; priority quadrant (High×High): `FIN-01`, `MKT-01`, `ORG-01` | new synthesis (probability-impact matrix, pre-mortem) | `Strategic/Strategic Risks.md`; `Scenarios_v2.md` downside case |
 | 10 | Group Adjusted EBITDA margin 6.7%→6.5% (FY2024→FY2025); FY2026 guided 4.4-4.8%; Q1 2026 actual 4.8% (-9% y/y EBITDA, -18% y/y Net Income) | — | TLB-020, pages 4, 10-11, 14 |
 | 10 | No internal capital-allocation stage-gate/approval-threshold disclosed (`ORG-01`, the plan's single largest governance gap) | `Topics/Capital Allocation and Investment Governance.md` | corpus-wide absence finding |
@@ -192,11 +212,11 @@ per `Geographic_Evidence_Rules.md`.
 | 11 | `DEC-008`/`DEC-009` as the plan's own already-exercised false-precision controls (`ORG-02`) | `Section_10_Risk_Analysis.md` §10.4/10.8 | `DEC-008`; `DEC-009` |
 | 11 | EV delivery fleet: UAE 240 vehicles (Jan 2026), Egypt 200 vehicles (end 2025, Cairo, scaling planned 2026); Jordan/Oman pilots | — | TLB-002, pages 42-44 |
 | 11 | Group 2025 emissions 875,157 tCO2e (Scope 1: 8,177; Scope 2: 8,847; Scope 3: 858,132); delivery vehicles ~43% of total | — | TLB-002, pages 41-42 |
-| 12 | `DEC-009` tiering: Tier 1 (`OPT-001`, `OPT-005`) continue-at-pace; Tier 2 (`OPT-003`) strong/narrow; Tier 3 (`OPT-002`, `OPT-004`) pilot/longer-horizon | `DEC-009` | 11-criterion comparison table |
-| 12 | `OPT-002` (talabat pro Egypt/Iraq) is the cheapest, most reversible of the five options — recommended H1 pilot | `DEC-009` | — |
+| 12 | `DEC-009`'s underlying evidence tiering (OPT-001/OPT-005 strongest, continue-at-pace) vs. its resolved funding sequence: `OPT-002` and `OPT-003` jointly as the near-term priority pair; `OPT-004` a longer-horizon build | `DEC-009` (Decision section) | 11-criterion comparison table |
+| 12 | `OPT-002` (talabat pro Egypt/Iraq) is the cheapest, most reversible of the five options — recommended H1 pilot; `OPT-003` (Food-leadership CVP) is an already-evidenced, already-operating mechanism `DEC-009` funds now via a targeted budget weighting, not a pilot | `DEC-009`; `Investment_Options/OPT-003...md` | — |
 | 12 | No disclosed market-level (country/GCC/non-GCC/Egypt) allocation logic anywhere in the corpus | `Topics/Capital Allocation and Investment Governance.md` | corpus-wide absence finding |
 | 13 | KPI Tree: 50 KPIs across 5 families (Portfolio, Customer & growth, Financial, Operational, Governance); 30 with a disclosed baseline, 20 newly-instrumented | `KPI_Tree_v2.md` | Forecast Layer, Phase 5 |
-| 13 | No churn rate, definition, or cohort analysis exists anywhere in the corpus, Group or country level | `Topics/Customer Churn.md` | corpus-wide absence finding |
+| 13 | No churn rate, definition, or cohort analysis exists anywhere in the corpus, at Group level or for Egypt specifically (the only country the corpus addresses this question for) | `Topics/Customer Churn.md` | corpus-wide absence finding |
 | 13 | Entire Governance family (7 KPIs, G1-G7) newly-instrumented — zero corpus baseline | `KPI_Tree_v2.md`; `Topics/Capital Allocation and Investment Governance.md` | corpus-wide absence finding |
 | 14 | `OPT-001`–`005` base/upside/downside cost ranges (§14.3 below) | `Investment_Portfolio_Register.md`; `ASM-029`–`033` | `DEC-009` |
 
@@ -282,7 +302,7 @@ separation Section 5 established between the two distinct AI systems in scope:
   dispatch optimisation, licensed from parent Delivery Hero SE's shared technology stack
   (`Entities/Technology_Platforms.md`), processing over 235 terabytes of data daily (Group; TLB-002, page
   15), with a disclosed, growing estimated EBITDA contribution (>USD14mn FY2024 → >USD30mn FY2025,
-  `Topics/EBITDA.md`). No proprietary algorithm or patent is disclosed anywhere in the corpus — the
+  `Topics/AI.md`). No proprietary algorithm or patent is disclosed anywhere in the corpus — the
   capability is described functionally, not architecturally.
 - **This plan's own decision-support system (the Agentic OS)** — a structured, multi-agent pipeline
   (`vault/Architecture/Business_Plan_Generation_Pipeline.md`, 19 stages: Part A plan-level setup, Part B
@@ -361,9 +381,10 @@ with, and does not duplicate as a headline claim, Section 9's own narrative-only
 five options and their recommended funding sequence — Section 9 states the sequence in words and points
 here for the dollar ranges; this section shows the ranges with the required disclosure sentence and both
 caveats; neither section contradicts the other's figures. Checked against `Section_12_Implementation_
-Plan.md`: the Three Horizons sequencing (Tier 1 `OPT-001`/`OPT-005` continue-at-pace; `OPT-002` piloted in
-H1; `OPT-003` monitored; `OPT-004` begun in H2) matches this section's own restatement of the recommended
-sequence in §14.3's closing paragraph — no figure or tier assignment was altered in transcription. Checked
+Plan.md`: the Three Horizons sequencing (`OPT-001`/`OPT-005` continue-at-pace; `OPT-002` piloted in H1;
+`OPT-003` funded now in H1 via a targeted budget weighting, not piloted or merely monitored; `OPT-004`
+begun in H2) matches this section's own restatement of the recommended sequence in §14.3's closing
+paragraph — no figure or sequencing was altered in transcription. Checked
 against `DEC-008`: no `ASM-018` (2.2:1 Everyday App:Food-leadership) figure is shown anywhere in this
 section, quantified or otherwise — not implicated. Checked against `Geographic_Evidence_Rules.md`: every
 geography tag reproduced in §14.2's traceability table matches the tag already stated in its originating
@@ -372,8 +393,13 @@ carried forward rather than silently fixed: `Section_09_Financial_Plan.md`'s own
 `ASM-015`–`028` as `Proposed` and `DEC-009` as open, both now stale relative to `Assumptions_Register.md`'s
 and `DEC-009`'s current `Approved`/resolved status (see the Gap Detection note above) — this section does
 not restate that stale framing, but flags it explicitly for whoever runs Section 9's own next revision
-pass, rather than editing Section 9 directly, which is outside this task's scope. No other contradiction
-found.
+pass, rather than editing Section 9 directly, which is outside this task's scope.
+
+**Addendum, 2026-07-24 (independent Pass 3 review):** this flag is now resolved — Section 9 has since
+been independently corrected and re-verified ([[Citation_Audit_Section_09_v2_Pass2]],
+[[Citation_Audit_Section_09_v2_Pass3]]), and now correctly states `ASM-015`–`028` as `Approved` and
+`DEC-009` as resolved throughout, matching `Assumptions_Register.md` and `DEC-009`'s current status. No
+other contradiction found.
 
 ---
 
@@ -388,7 +414,7 @@ found.
 | No talabat-side pilot exists for the allocation recommendation | `Investment_Options_Register.md` (all five `status: candidate`) |
 | Phase 7-9 pipeline pilot history | `vault/MOC/Validation and Audit.md` |
 | Source Register / 29-document corpus index | `vault/MOC/Source Register.md` |
-| Section 9 staleness (ASM-015-028/DEC-009 framing) flagged, not fixed here | `Section_09_Financial_Plan.md` vs. `Assumptions_Register.md`, `DEC-009` |
+| Section 9 staleness (ASM-015-028/DEC-009 framing), flagged 2026-07-24, since independently fixed and re-verified in Section 9's own Pass 2/Pass 3 | `Citation_Audit_Section_09_v2_Pass2.md`, `Citation_Audit_Section_09_v2_Pass3.md` |
 
 ## See also
 [[Section_02_Business_Description]] · [[Section_09_Financial_Plan]] · [[Section_12_Implementation_Plan]] ·

@@ -1,7 +1,7 @@
 ---
 section: 6
 title: Business Model and Revenue Streams
-status: Drafted — self-reviewed (Pass 1); independent Pass 2 QA review ([[QA_Review_Section_06_v2_pass2]]) and citation audit ([[Citation_Audit_Section_06_v2_pass2]]) returned FAIL on 2026-07-25; all Pass 2 findings fixed in this file same day (see Fix record at end); Pass 1 audit [[Citation_Audit_Section_06_v2]] is superseded on its item 14 (B1/HF-1) and item 3 (B3); a fresh independent citation re-check of the changed passages is still required before ✅ Done
+status: Done (independently verified) — two parallel verification lineages, merged 2026-07-25. Branch lineage: independent Pass 2 QA + citation audit FAIL 2026-07-25 ([[QA_Review_Section_06_v2_pass2]], [[Citation_Audit_Section_06_v2_pass2]], lowercase artifacts) → all findings fixed same day (Fix record at end, incl. DEC-013 container re-issuance and DEC-014 fee-mix root-cause) → independent re-verification double-PASS ([[Citation_Audit_Section_06_v2_pass2_reverify]], [[QA_Review_Section_06_v2_pass2_reverify]]). Main lineage: its own Pass 2 PASS 2026-07-24 ([[Citation_Audit_Section_06_v2_Pass2]], [[QA_Review_Section_06_v2_Pass2]], capital-P artifacts) + Stage 17 whole-plan audit + Stages 14-16 gates PASS
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_06_Business_Model_and_Revenue_Streams.md, which was drafted for the superseded Egypt-retention problem and stays untouched as historical record. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem; it reuses the same underlying vault evidence where the evidence itself is Group-level and unaffected by the pivot, but reframes every conclusion around the new decision question."
 ---
@@ -74,6 +74,21 @@ supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Pl
 > **"Drafted — self-reviewed," not the unqualified "✅ Done."** A genuinely independent Pass 2 (a fresh,
 > separately-invoked citation audit and QA review) is still required before this section is
 > submission-final.
+>
+> **Addendum, 2026-07-24 (independent Pass 2 review).** An independent citation audit and QA review
+> ([[Citation_Audit_Section_06_v2_Pass2]], [[QA_Review_Section_06_v2_Pass2]]) re-verified every numeric
+> claim in this section directly against `Facts/Revenue.md`, `vault/Forecasts/Value_Driver_Tree_v2.md`,
+> `vault/Decisions/Assumptions_Register.md`, and the relevant Topic Notes — including a specific check
+> that every `Value_Driver_Tree_v2.md` node ID cited (N-05 through N-30) matches that file's actual node
+> definitions (this session's specific brief, given wrong-node-ID defects found in other sections' Pass 2
+> reviews), and a specific check that the pro subscriber GMV-share figure correctly reads "Q1 2025→Q1
+> 2026" throughout, not the "FY2024→Q1 2026" mislabeling found and fixed elsewhere in the repo this
+> session. **0 defects found.** The §6.1 TLB-019 p.13 discrepancy this section already flags (rather than
+> force-reconciling) was independently re-derived and confirmed correct: the Q1 2026 mix table sums to
+> the section's own stated 39% take rate, while TLB-019 p.13's separate FY'25 range is materially
+> inconsistent with it and with the corroborated 3.4-3.5% Advertising figure — the section's decision not
+> to use the TLB-019 p.13 range is the correct handling, not an unresolved defect. This section is now
+> **Done (independently verified)**.
 
 ---
 

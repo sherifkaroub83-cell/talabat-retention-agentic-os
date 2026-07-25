@@ -6,6 +6,37 @@ writes these entries for you.
 
 ---
 
+## Session 11 — 2026-07-24/25 (final v2 recovery, whole-plan gates, publication, and PR #6)
+
+**Focus:** recover the missing verified v2 Section 13, close the final independent-verification and
+whole-plan gates, publish the Group-wide Business Plan, and integrate only the approved work on an
+isolated branch.
+
+**Done:**
+- Recovered `vault/Projects/Business_Plan_Drafts_v2/Section_13_Monitoring_and_Evaluation.md` from
+  commit `6e7224b`; its Git blob matches that verified v2 version exactly and includes the reviewed
+  cadence, KPI-baseline-period, and churn-scope corrections. No historical/superseded section was used.
+- Confirmed all 14 active v2 sections are present and Done (independently verified). Targeted Pass 4
+  closure and Stages 14–18 whole-plan gates passed, including zero open whole-plan citation failures.
+- Generated `Outputs/Business_Plan_Final.docx` and `Outputs/Business_Plan_Final.pdf`; verified both open,
+  all 14 section headings are present, and the PDF contains exactly 25 pages.
+- Added `Outputs/Formatting_QA_Report.md` and `Outputs/Publication_QA_Report.md`. Publication QA passed;
+  the formatting report records the limited inability to rasterize the DOCX directly while confirming
+  its OOXML structure and content.
+- Scanned final outputs for TODO, TBD, FIXME, placeholder, and drafting-note language; no residual
+  markers were found.
+- Preserved all historical outputs and added the final artifacts under distinct filenames.
+- Committed the approved publication work as `299daf4` on
+  `codex/final-business-plan-publication`, pushed the branch, and opened PR #6 against `main`.
+
+**Current state:** PR #6 is open and unmerged. The Business Plan publication work is complete; this
+documentation synchronization is being committed separately before merge review.
+
+**Next:** review PR #6 and merge only with explicit owner approval. The OS structure document, group
+presentation, team-role assignment, and submission remain separate capstone tasks.
+
+---
+
 ## Session 10 — 2026-07-24 (Agentic OS Console: professional UI + Windows/Android/macOS packaging)
 
 **Focus:** designed and built a professional user interface for the Agentic OS itself — a
@@ -76,6 +107,78 @@ read-only command console over the repository's governing documents — delivera
 gates per section, fresh threads), then whole-plan gates 14–18 → publication (19) → deck + OS
 structure doc. Step 9 (role mapping) needs the team. decision-steward should also disposition
 the 4 proposed ASM candidates from RES-005..007 and the 3 flagged KPI gaps.
+
+---
+
+## Session 10 — 2026-07-24 (Pass 3 independent re-verification of the 7 Pass-2-fixed sections)
+
+**Focus:** on the `claude/talabat-inputs-directory-7azjx2` branch, run a third independent citation/
+consistency re-verification pass on the 7 Business Plan sections (4, 5, 7, 8, 9, 12, 14) that Pass 2
+(Session 9) had found defects in and fixed — per this project's own two/three-pass discipline, a fix is
+not "Done" until re-confirmed by a fresh, independently-invoked thread with no memory of the fix itself.
+
+**Done:**
+- Housekeeping first: cleaned up an iCloud Drive sync artifact — `Section_13_Monitoring_and_Evaluation.md`
+  had been deleted with an untracked ` 2.md` duplicate left in its place. Confirmed the duplicate was
+  byte-identical (not divergent content), restored the original, deleted the duplicate. This same artifact
+  recurred twice more during the session (evidently from the 7 parallel agents/iCloud sync interacting) and
+  was re-cleaned each time.
+- Ran 7 independent Pass 3 verifications in parallel, one per section, each a genuinely fresh
+  `evidence-citation-agent` thread with no memory of the original drafting or Pass 2 fixing session,
+  instructed to re-trace every claim against its cited source from scratch (not just re-check the
+  previously-flagged spots) and report only — no edits during the verification itself.
+- **Result: Section 9 (Financial Plan) — PASS, 0 new defects.** Pass 2's pp-vs-% fix was independently
+  reconfirmed by recomputing straight from the raw Q1 2026 press release; DEC-008/DEC-009 compliance and
+  the USD175mn=120+55 reconciliation were independently re-derived and confirmed clean.
+- **Result: the other 6 sections each had at least one genuine, previously-uncaught defect survive Pass 2**
+  — a real demonstration that each additional independent pass earns its keep:
+  - **Section 4** — EBITDA figure mis-cited to `Topics/EBITDA.md`/N-06 instead of `Topics/AI.md`/N-09
+    (hard); pro-uplift range mis-cited to `Business_Relationships.md` Chain 4 instead of
+    `Value_Driver_Tree_v2.md` N-15/N-20 (moderate).
+  - **Section 5** — §5.6 mischaracterized `DEC-009` as governing the still-open cross-market allocation
+    question, when `DEC-009` is resolved and actually covers a different question, initiative-level
+    funding sequence (hard); the same `Topics/EBITDA.md`-vs-`Topics/AI.md` mis-citation as Section 4
+    (moderate).
+  - **Section 7** — §7.6 pointed to the wrong Section 6 subsection (§6.4 instead of §6.1) and silently
+    asserted "no contradiction" between two different, unreconciled same-tier disclosed figures (CARC's
+    USD89mn voucher component vs. Section 6's USD120mn contra-revenue line) rather than flagging the
+    discrepancy per the evidence-ranking skill's own rule (moderate).
+  - **Section 8** — §8.1/§8.2 described the CQCA in the present tense as still the operative mechanism for
+    tMart tool delivery, when the very page cited (TLB-026, p.156) discloses it was terminated effective 31
+    December 2024 and replaced by GLSA/GLSA Kuwait/GLSA UAE sub-licensing from 1 January 2025 (hard); the
+    "all governed by German law" claim omitted GLSA's own citation (TLB-026, p.153) (moderate).
+  - **Section 12** — an H2 bullet claimed a Decision might be needed to fund Food-leadership "beyond the
+    disclosed ~USD55mn," contradicted by OPT-003's own record, whose upside (dry-powder-deployed) case
+    stays within the ~USD55mn bucket (hard).
+  - **Section 14** — §13.3's provenance note and §14.8 both asserted, present-tense, that Section 9 "still"
+    describes `ASM-015`–`028` as `Proposed` and `DEC-009` as open — no longer true since Section 9's own
+    Pass 2 fix (this session's finding, not a Pass 2 defect; Section 14's *own* claims were otherwise
+    independently re-verified clean across all 60 traceability-table rows).
+- Fixed every finding above directly in the section drafts (not just noted): re-targeted citations,
+  reworded the two hard-narrative defects (Section 8's CQCA tense, Section 12's OPT-003 spend claim) using
+  the actual source text, and added a dated addendum (not a silent edit) to Section 14 per this project's
+  standing discipline for correcting cross-section claims after the fact.
+- Wrote 7 new Validation reports: `vault/Validation/Citation_Audit_Section_0{4,5,7,8,9,12,14}_v2_Pass3.md`.
+- Updated each of the 7 sections' own frontmatter `status` line to record the Pass 3 finding(s) and fix,
+  and updated `vault/Projects/Talabat-Group-AI-Investment-Allocation-Business-Plan.md` (status summary,
+  the 14-section checklist table, and the Open Decisions/next-actions note) to reflect the new state.
+
+**Current status:** Section 9 is now ✅ Done (independently verified) — 9 of 14 sections total. The other
+6 (4, 5, 7, 8, 12, 14) remain 🟡 Fixed, re-verification pending: each has now been through Pass 2 fix +
+Pass 3 fix, but not yet a pass that found zero new defects, so per this project's discipline they are not
+marked Done until either a targeted Pass 4 or Stage 17's whole-plan citation audit re-clears them with no
+further findings.
+
+**Explicitly not done:** no whole-plan gate (Problem Consistency, Financial Integrity, Geographic
+Evidence, whole-plan Citation Audit, Template Compliance) has run yet; no Pass 4 has been run on the 6
+still-🟡 sections; nothing was committed to git this session (all changes left as uncommitted working-tree
+edits, per no explicit instruction to commit).
+
+**Next:** run a targeted Pass 4 on Sections 4, 5, 7, 8, 12, and 14 (or fold their re-confirmation directly
+into Stage 17's whole-plan citation audit), then proceed to the Part C whole-plan gates once all 14
+sections read ✅ Done.
+
+---
 
 ## Session 9 — 2026-07-23 (pivot Phases 3–9 completed; instructor-approval cleanup; merged to main; leakage-gap fixes; final comprehensive readiness review)
 
