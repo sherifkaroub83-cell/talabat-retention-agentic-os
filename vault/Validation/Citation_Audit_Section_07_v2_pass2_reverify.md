@@ -2,7 +2,7 @@
 type: validation
 section: 7
 pass: "2-reverify"
-status: FAIL
+status: PASS
 date: "2026-07-25"
 built_by: evidence-citation-agent
 target: vault/Projects/Business_Plan_Drafts_v2/Section_07_Marketing_and_Sales_Strategy.md
@@ -12,12 +12,14 @@ pipeline_stage: 13.9 (targeted Pass 2 re-verification of the post-fix-cycle draf
 
 # Citation Audit — Section 7, Pass 2 Re-verification (fresh thread)
 
-**Verdict: FAIL — on one newly-arisen hard failure only (NF-1, a stale cross-section claim in §7.6
-falsified by Section 6's parallel 2026-07-25 fix cycle; one-sentence fix).** Every hard, blocking,
-soft, and in-draft non-blocking finding from the two Pass 2 reports is **genuinely resolved**, with
-correct citations at correct scope, verified independently against the Facts tier (not the fix
-record's own claims). The synthetic-funnel labeling is intact and undisturbed. No other
-newly-introduced defect was found in any edited passage.
+**Verdict: PASS.** Every hard, blocking, soft, and in-draft non-blocking finding from the two
+Pass 2 reports is **genuinely resolved**, with correct citations at correct scope, verified
+independently against the Facts tier (not the fix record's own claims). The synthetic-funnel
+labeling is intact and undisturbed. This audit's initial run (earlier on 2026-07-25) surfaced one
+newly-arisen hard failure — **NF-1**, a §7.6 coordination note falsified by Section 6's parallel
+same-day fix cycle — which has since been fixed exactly as prescribed and re-audited; see the
+dated closure note at the end of this file. No other newly-introduced defect was found in any
+edited passage.
 
 ## Method
 
@@ -44,7 +46,7 @@ post-its-own-fix-cycle state). The fix record was read but not relied on as evid
 | **HF-4 / B2** (fused savings statistic) | **Resolved** | §7.2 now carries two separate sentences with a "different periods, different funders, not one statistic" preamble: (1) Partner-funded savings all-time-high 7% of GMV, Q1 2026 (TLB-020 p.7 — verified `Sources/TLB-020` lines 34/54); (2) aggregate annual customer savings >AED 1,567.7mn over a 12-month period, Nov-2024 ITF, funded by Partners, B2B, and bank partnerships — not Partners alone (TLB-023 p.6 — verified `Facts/_raw/TLB-023_facts.md` line 41 / `Facts/Retention.md` line 137, window 29 Sep 2023–29 Sep 2024). "Trailing" deleted everywhere. Traceability split into two matching rows with the funder attribution stated. (Optional polish, non-blocking: the exact 29 Sep 2023–29 Sep 2024 window could be stated instead of "a 12-month period"; current wording is accurate and matches the QA B2 prescription.) |
 | **HF-5** (false "no partner-retention figure anywhere") | **Resolved** | §7.3 now uses N-10's scoped wording — "no disclosed partner-retention percentage or count *that this investment is expected to move*" — verified verbatim against `Value_Driver_Tree_v2.md` N-10 (lines 100-104). The ~99% Partner retention among pro-participating vendors, 2024 (TLB-001 p.21) is now acknowledged at its disclosed scope (different population, not a general partner-retention series) — verified `Facts/Retention.md` line 15 / `Sources/TLB-001` line 103. Traceability row added and accurate. |
 | **B1** (support/training silently missing) | **Resolved — every citation in the new paragraph carries what is claimed** | (1) "Priority customer support" as a named talabat pro benefit: TLB-002 p.13 (`Sources/TLB-002` line 149), TLB-009 p.3 (`_raw/TLB-009_facts.md` line 19), TLB-011 p.2 (`_raw/TLB-011_facts.md` line 16) — all verified. (2) Customer support among the Aug-2024 survey attributes, five markets Kuwait/UAE/Egypt/Qatar/Bahrain, 80%+ ranked #1: TLB-015 pp.39, 44 (`Sources/TLB-015` line 58) and TLB-012 p.7 (`Sources/TLB-012` line 56) — verified, market-comparison tag matches the five named survey countries. (3) Egypt SME academy with the German Chamber of Commerce, 200+ SMEs by July 2024: TLB-001 p.46 (`Sources/TLB-001` line 82; raw source text line 3471) — verified, Egypt-standalone tag correct. (4) "tcamp" rider training, five named markets Egypt/UAE/Bahrain/Kuwait/Oman: TLB-001 p.49 (`Sources/TLB-001` line 84) and TLB-026 p.138 (`Sources/TLB-026` line 74; IOM raw text line 9814) — verified. The closing gap statement (no standalone customer-support metrics, no customer-facing training programme) is a true negative — no contradicting Fact found. Characterizations correct: support = product-embedded benefit + surveyed attribute; training = partner-/rider-facing only. |
-| **B3 / SF-1** (CARC endpoint-only) | **Resolved in Section 7** | §7.2, §7.6, and the traceability row now show the full disclosed three-point series — USD 89mn (1.5%, 2023) → USD 103mn (1.4%, 2024) → USD 155mn (1.6%, 2025) — with the dollar path stated as monotonic and the share-of-GMV path stated as non-monotonic (1.5% → 1.4% → 1.6%). Verified: `Facts/_raw/TLB-001_facts.md` line 76 (2023/2024, TLB-001 p.28) and `Facts/_raw/TLB-002_facts.md` lines 124-126 (2025, TLB-002 p.21, incl. the USD 89mn 2025 vouchering component). Consistent with ASM-024's stated trajectory. **See NF-1 below** on the §7.6 coordination note about Section 6. |
+| **B3 / SF-1** (CARC endpoint-only) | **Resolved in Section 7** | §7.2, §7.6, and the traceability row now show the full disclosed three-point series — USD 89mn (1.5%, 2023) → USD 103mn (1.4%, 2024) → USD 155mn (1.6%, 2025) — with the dollar path stated as monotonic and the share-of-GMV path stated as non-monotonic (1.5% → 1.4% → 1.6%). Verified: `Facts/_raw/TLB-001_facts.md` line 76 (2023/2024, TLB-001 p.28) and `Facts/_raw/TLB-002_facts.md` lines 124-126 (2025, TLB-002 p.21, incl. the USD 89mn 2025 vouchering component). Consistent with ASM-024's stated trajectory. The related §7.6 coordination note about Section 6 was initially stale (NF-1, below) and is now fixed and re-audited — closed. |
 
 ### Soft / non-blocking findings — all resolved (spot-verified)
 
@@ -70,23 +72,24 @@ statement stands. No arithmetic combination with disclosed figures was introduce
 
 ---
 
-## New hard failure (1)
+## NF-1 (raised and closed within this re-verification, 2026-07-25)
 
-### NF-1. §7.6: "Section 6 still presents the CARC share-of-GMV series endpoint-only" — falsified by Section 6's own 2026-07-25 fix cycle
-- **Claim:** "(Coordination note for stage 13.10: Section 6 still presents the CARC share-of-GMV
-  series endpoint-only — flagged by QA Pass 2 (B3 out-of-scope flag) for fixing when Section 6 is
-  next touched; not fixed from here...)"
-- **Evidence:** `Section_06_Business_Model_and_Revenue_Streams.md` was touched: its own fix record
-  (dated 2026-07-25, "CARC (from Section 7 QA)" row, line 386) states §6.4 and its traceability row
-  now show the full three-point series — confirmed directly at Section 6 lines 279 (§6.4: "USD 89mn
-  (1.5% of GMV, 2023) → USD 103mn (1.4% of GMV, 2024) → USD 155mn...") and 345 (traceability,
-  "non-monotonic as % of GMV"). The two fix cycles ran in parallel on the same day; Section 7's
-  sentence was true when written but is false against current repo state — the same class as Pass
-  2's HF-3, and it actively misdirects stage 13.10 (invites a duplicate fix of Section 6).
-- **Fix (one sentence):** restate the note as performed/closed, e.g.: "(Coordination note for stage
-  13.10: Section 6's formerly endpoint-only CARC presentation — QA Pass 2's B3 out-of-scope flag —
-  was fixed in Section 6's own 2026-07-25 fix cycle; both sections now show the full three-point
-  series.)"
+### NF-1. §7.6: "Section 6 still presents the CARC share-of-GMV series endpoint-only" — falsified by Section 6's own 2026-07-25 fix cycle — **FIXED and re-audited, closed**
+- **Original finding (initial run of this audit):** the §7.6 coordination note claimed Section 6
+  still carried the endpoint-only CARC presentation, "for fixing when Section 6 is next touched."
+  `Section_06_Business_Model_and_Revenue_Streams.md` had in fact already been fixed in its own
+  parallel 2026-07-25 fix cycle ("CARC (from Section 7 QA)" row, fix record line 386): §6.4
+  (line 279) and its traceability row (line 345) carry the full three-point series with the
+  non-monotonic %-of-GMV path stated. Both fix cycles ran the same day; Section 7's sentence was
+  true when written but false against current repo state — the same class as Pass 2's HF-3, and it
+  misdirected stage 13.10 toward a duplicate fix.
+- **Fix applied (by the Orchestrator, as prescribed):** the note now reads "(Coordination note for
+  stage 13.10, closed 2026-07-25: Section 6's own Pass 2 fix cycle applied the same full
+  three-point CARC series the same day — both sections now present 89mn/1.5% → 103mn/1.4% →
+  155mn/1.6% identically; no further coordination action required.)" (Section 7, lines 359-362).
+- **Re-audit result:** the corrected sentence is true against Section 6's current text — the series
+  and its share-of-GMV path match identically at Section 6 lines 279 and 345, and the "no further
+  coordination action required" conclusion follows. No new defect introduced by the edit. **Closed.**
 
 ## Advisory notes (non-blocking)
 
@@ -105,8 +108,26 @@ statement stands. No arithmetic combination with disclosed figures was introduce
 
 ## Verdict
 
-**FAIL — solely on NF-1.** All ten Pass 2 hard/blocking findings and all ten soft/non-blocking
-fixes are genuinely resolved with correct citations at correct scope; the synthetic-funnel handling
-is untouched and compliant; no other new defect exists in any edited passage. Closure requires only
-the one-sentence NF-1 fix in §7.6; re-audit of that single sentence is sufficient — no other
-passage needs re-checking.
+**PASS.** All ten Pass 2 hard/blocking findings and all ten soft/non-blocking fixes are genuinely
+resolved with correct citations at correct scope; the synthetic-funnel handling is untouched and
+compliant; NF-1 (the one defect newly arisen from the parallel Section 6 fix cycle) has been fixed
+as prescribed and re-audited closed. No open citation-audit failure remains — from this audit's
+perspective, Section 7 is clear to proceed past stage 13.9. (The advisory notes AN-1–AN-3 are
+non-blocking and routed to the named owners; final ✅ Done additionally requires the QA reviewer's
+own re-check of the fixed passages per its Pass 2 disposition.)
+
+---
+
+## Closure note — NF-1 re-audit (2026-07-25)
+
+Appended after the Orchestrator applied the prescribed one-sentence fix. Re-read Section 7
+§7.6 (lines 354-372): the coordination note is now stated as closed, attributing the fix to
+Section 6's own 2026-07-25 Pass 2 fix cycle. Verified true against
+`Section_06_Business_Model_and_Revenue_Streams.md` current text: §6.4 line 279 ("USD 89mn (1.5% of
+GMV, 2023) → USD 103mn (1.4% of GMV, 2024) → USD 155mn...") and traceability line 345 ("...USD155mn
+(1.6% of GMV, 2025), non-monotonic as % of GMV"), matching Section 6's fix-record row "CARC (from
+Section 7 QA)" (line 386). The two sections now present the identical full three-point series.
+Scope of this re-audit was the single fixed sentence, per the initial report's closure condition;
+no other passage was changed (verified by re-reading the surrounding §7.6 text, which is otherwise
+unaltered). Frontmatter `status` flipped FAIL → PASS accordingly. — evidence-citation-agent,
+2026-07-25.
