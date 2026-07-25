@@ -405,7 +405,7 @@ DEC-009 headline-exhibit restrictions therefore do not apply here and are not vi
 | talabat pro GMV share 32% (Q1'25) → 49% (Q1'26), Group, talabat-only excl. instashop — no FY2024 baseline disclosed; separately disclosed 25% (Q4'25) flagged as unexplained same-tier tension | TLB-020, p.8; TLB-014, p.14; TLB-019, p.7 |
 | Multi-vertical GMV share 68%→73%→76% (Dec'24→Dec'25→Mar'26) | `Topics/Multi-Verticality.md`; TLB-019 p.7; TLB-020 p.8 |
 | Jordan/Iraq never individually disclosed | `GCC vs non-GCC.md` Open Questions |
-| AI/personalisation **management-estimated** EBITDA contribution >USD14mn→>USD30mn (FY2024→FY2025) | `Facts/AI_Facts.md` (TLB-001, p.23; TLB-002, p.15) |
+| AI/personalisation **management-estimated** EBITDA contribution >USD14mn→>USD30mn (FY2024→FY2025) | `Facts/AI_Facts.md` (TLB-001, p.23; TLB-002, p.16) |
 | AdTech CPG investment ratio 8% vs. 2% benchmark | TLB-015, p.108 |
 | ~90-95% non-employed rider workforce | TLB-001, p.34/47; TLB-026, p.138 (provider concentration: p.51) |
 | AdTech revenue 3.4-3.5% of GMV vs. ~7% benchmark (UAE tMart only) | `Strategic/Competitive Weaknesses.md`; TLB-001 p.21; TLB-002 pp.11/14/19; TLB-014 p.19 |

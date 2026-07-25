@@ -86,7 +86,7 @@ programme has not yet reached comparable maturity).
 within 30 days (Group; TLB-001, page 19; `Business_Relationships.md` Chain 1); PostPaid adopters show a
 14% frequency increase (Group disclosure — TLB-001, page 18; `Facts/Orders_Facts.md`; the product's
 footprint at measurement was the five GCC markets). Both are funded by CARC, which rose from USD89mn
-(2023) to USD155mn (2025) (Group; `Business_Relationships.md` Chains 2 and 4) — monotonically in
+(2023) to USD155mn (2025) (Group; `Business_Relationships.md` Chains 2 and 5) — monotonically in
 dollar terms, though as a share of GMV the path dipped before rising (1.5%→1.4%→1.6%,
 2023→2024→2025; TLB-002, page 21). Unlike pro, PostPaid has a directly evidenced non-GCC rollout
 precedent (Egypt PostPaid + CIB co-branded card — Egypt-specific; `Topics/FinTech.md`, TLB-002,
@@ -97,7 +97,7 @@ category because the corpus quantifies them only jointly, via the AI/personalisa
 contribution. The capability is embedded (not a discrete budget line) across recommendation ranking,
 offer timing, and dispatch optimisation in both investment buckets (`Value_Driver_Tree_v2.md` N-06 —
 the capability-deployment evidence); the Group-level estimated EBITDA contribution rose from >USD14mn
-(FY2024) to >USD30mn (FY2025) (Group; `Facts/AI_Facts.md`, TLB-001 page 23, TLB-002 page 15;
+(FY2024) to >USD30mn (FY2025) (Group; `Facts/AI_Facts.md`, TLB-001 page 23, TLB-002 page 16;
 `Value_Driver_Tree_v2.md` N-09). This is the direct evidence base for `OPT-005` — with the `ASM-033`
 non-additivity treatment stated in the MECE note above.
 
@@ -131,7 +131,7 @@ argue customer-level value creation, not an invented CLV figure.
 
 **ROI, calculation logic shown, not a single point estimate:** the corpus discloses the programme's
 *cost* precisely (the FY2026 Adjusted EBITDA margin bridge: 6.0% (Q4'25A) → 4.6% of GMV, the guided
-mid-range of the disclosed 4.4-4.8% FY2026 range (TLB-020, page 16); realized 4.8% in Q1 2026
+mid-range of the disclosed 4.4-4.8% FY2026 range (TLB-020, pages 14 and 16); realized 4.8% in Q1 2026
 (TLB-020, pages 4 and 11-12; `Topics/EBITDA.md`)) but **no return figure for any bucket or initiative**
 (`Investment_Relationship_Map.md`, "What this note deliberately does not claim"). The calculation
 logic this plan uses instead: each mechanism's historical uplift statistic (e.g. talabat pro's 20-28%
@@ -154,9 +154,9 @@ this section shows the mechanism, Section 9 shows the (appropriately bounded) fi
 | talabat pro subscriber GMV share 32% (Q1 2025) → 49% (Q1 2026) | Group (platform GMV) | TLB-020, page 8; TLB-014, page 14; `Value_Driver_Tree_v2.md` N-08; `ASM-021` (corrected 2026-07-24) |
 | Rewards >15% frequency uplift within 30 days | Group | `Business_Relationships.md` Chain 1; TLB-001, page 19 |
 | PostPaid 14% frequency uplift | Group (footprint at measurement: 5 GCC markets) | TLB-001, page 18; `Facts/Orders_Facts.md` |
-| CARC USD89mn (2023) → USD155mn (2025); % of GMV 1.5→1.4→1.6 | Group | `Business_Relationships.md` Chains 2 and 4; TLB-002, page 21 |
+| CARC USD89mn (2023) → USD155mn (2025); % of GMV 1.5→1.4→1.6 | Group | `Business_Relationships.md` Chains 2 and 5; TLB-002, page 21 |
 | Egypt PostPaid + CIB co-branded card | Egypt | `Topics/FinTech.md` (TLB-002, pages 14 and 19) |
-| AI/personalisation EBITDA contribution >USD14mn→>USD30mn (FY2024→FY2025) | Group (estimated) | `Facts/AI_Facts.md` (TLB-001, page 23; TLB-002, page 15); `Value_Driver_Tree_v2.md` N-09 (contribution), N-06 (embedded deployment) |
+| AI/personalisation EBITDA contribution >USD14mn→>USD30mn (FY2024→FY2025) | Group (estimated) | `Facts/AI_Facts.md` (TLB-001, page 23; TLB-002, page 16); `Value_Driver_Tree_v2.md` N-09 (contribution), N-06 (embedded deployment) |
 | Advertising revenue USD246mn→USD323mn vs. ~7%-of-GMV global peer benchmark | Group (benchmark: external/global) | `Topics/Revenue Drivers.md`; TLB-001, page 21; `Facts/Advertising_Facts.md` |
 | talabat mart UAE adtech margin 7% of tMart GMV (Q4'25) | UAE, tMart-specific (not Group-wide) | TLB-002, page 10; TLB-014, page 19; `Value_Driver_Tree_v2.md` N-29 |
 | UAE/Kuwait/Qatar M1 retention -4% y/y | UAE/Kuwait/Qatar | TLB-019, page 9; `Topics/Food Leadership.md` |
@@ -185,7 +185,7 @@ overlap, one fix resolves both.
 | B5 | Process finding — no draft edit required; the Pass 2 independent citation audit now exists on file. The stale "no independent citation audit exists" wording in the provenance note was replaced with pointers to both Pass 2 artifacts and their FAIL status pending re-audit. |
 | B6 | Explicit MECE statement added at the top of §4.2: MECE by template value category; AI/personalisation named as the deliberate cross-cutting overlap, with the ASM-033 non-additivity treatment stated (measured separately, never summed with mechanism uplifts). |
 | S1 / NB-1 | "13.0x vs. 3.8x" corrected in all three occurrences (Answer, §4.2, table) to 13.0 vs. 3.8 **orders/month** (≈3.4x multiple); July 2024 date and unrefreshed caveat added; GMV-share trend noted as current through March 2026. |
-| S3 / NB-4 | Targeted-incentives sourcing untangled: Rewards >15% → Chain 1 + TLB-001 p.19; PostPaid 14% → TLB-001 p.18 + `Facts/Orders_Facts.md` (not Chain 1); CARC → Chains 2 and 4. |
+| S3 / NB-4 | Targeted-incentives sourcing untangled: Rewards >15% → Chain 1 + TLB-001 p.19; PostPaid 14% → TLB-001 p.18 + `Facts/Orders_Facts.md` (not Chain 1); CARC → Chains 2 and 5. |
 | S5 | "realized 4.8% in Q1 2026" now cited inline (TLB-020, pages 4 and 11-12; `Topics/EBITDA.md`). |
 | S6 / NB-3 | CARC "as a share of GMV" gloss corrected: dollar rise stated as monotonic, GMV-share path stated explicitly as 1.5%→1.4%→1.6% (dip before rise), with citation (TLB-002 p.21). |
 | NB-2 | "4.6% guided" restated as the guided **mid-range** of the disclosed 4.4-4.8% FY2026 range (TLB-020 p.16). |
