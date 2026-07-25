@@ -196,6 +196,16 @@ TOOLS = {
         "description": "Fetch an Investment Option record by id (e.g. 'OPT-002').",
         "schema": {"type": "object", "properties": {"id": {"type": "string", "description": "Option id, e.g. OPT-002"}}, "required": ["id"]},
     },
+    "get_events": {
+        "fn": lambda args: get_events(args),
+        "description": "Read the OS event log (stage transitions, agent runs, verdicts, approvals). Optional since (ISO date), type, limit.",
+        "schema": {"type": "object", "properties": {"since": {"type": "string"}, "type": {"type": "string"}, "limit": {"type": "integer", "default": 50}}, "required": []},
+    },
+    "get_validation_status": {
+        "fn": lambda args: get_validation_status(args),
+        "description": "Per-section Pass 2 verification state (citation/QA verdicts incl. re-verifications) derived from vault/Validation artifacts. Optional section number.",
+        "schema": {"type": "object", "properties": {"section": {"type": "integer"}}, "required": []},
+    },
     "search_ranked": {
         "fn": lambda args: _search_ranked(args),
         "description": "BM25-ranked hybrid search over the whole vault (aos memory layer): returns scored note paths + citation-bearing snippets. Optional type filter (e.g. 'validation', 'architecture').",
@@ -222,6 +232,40 @@ TOOLS = {
         "schema": {"type": "object", "properties": {}, "required": []},
     },
 }
+
+
+def get_events(args):
+    import sys
+    sys.path.insert(0, str(ROOT))
+    from scripts.aos import events as ev
+    rows = ev.read(since=args.get("since"), type=args.get("type"),
+                   limit=min(int(args.get("limit", 50)), 200))
+    lines = [f"# Event log ({len(rows)} events, newest last)"]
+    for e in rows:
+        lines.append(f"- {e['ts']} [{e['type']}] {e['actor']}: {e['ref']}" +
+                     (f" — {e['detail']}" if e.get("detail") else ""))
+    return clamp("\n".join(lines) if rows else "No events recorded yet.")
+
+
+def get_validation_status(args):
+    """Per-section verification state derived from vault/Validation artifacts."""
+    want = args.get("section")
+    out = ["# Validation status (Pass 2 artifacts on file)"]
+    for n in range(1, 15):
+        if want and int(want) != n:
+            continue
+        row = [f"Section {n}:"]
+        for kind, label in (("Citation_Audit", "citation"), ("QA_Review", "qa")):
+            best = None
+            for suffix in ("_v2_pass2_reverify", "_v2_pass2"):
+                f = VAULT / "Validation" / f"{kind}_Section_{n:02d}{suffix}.md"
+                if f.exists():
+                    m = re.search(r"^status:\s*(\S+)", f.read_text(encoding="utf-8", errors="replace")[:400], re.M)
+                    best = f"{label}={m.group(1) if m else '?'}{'(reverify)' if 'reverify' in suffix else ''}"
+                    break
+            row.append(best or f"{label}=none")
+        out.append("  " + " ".join(row))
+    return clamp("\n".join(out))
 
 
 def _search_ranked(args):

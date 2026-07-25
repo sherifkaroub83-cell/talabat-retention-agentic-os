@@ -214,7 +214,7 @@ Consolidated from 25 of 29 corpus documents (Phase 4 consolidation of `vault/Kno
 
 - FY'24 Management revenue (as presented): USD 2,956.02mn (39.80% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
 - FY'24 Revenue (IFRS): USD 2,871.86mn. (TLB-029, sheet: 2024 Quarterly Historicals)
-- FY'24 Commission fees: USD 1,062.43mn (16.19% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
+- FY'24 Commission fees: USD 1,062.43mn (16.19% — source-sheet row label "Commissions (% GMV-other direct income)", i.e. a GMV-less-other-direct-income denominator, NOT % of full GMV; Commission ÷ full GMV FY'24 = 14.30%, matching TLB-019 p.13). (TLB-029, sheet: 2024 Quarterly Historicals) *(denominator qualifier added 2026-07-25 per DEC-014's follow-up flag)*
 - FY'24 Subscription fee & other income: USD 952.36mn (12.82% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
 - FY'24 Delivery & service fees: USD 695.61mn (9.36% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)
 - FY'24 Advertising and listing fees: USD 245.62mn (3.31% of GMV). (TLB-029, sheet: 2024 Quarterly Historicals)

@@ -1,0 +1,6 @@
+{"ts": "2026-07-25T11:39:14Z", "actor": "operator", "type": "milestone", "ref": "repo", "detail": "M1: kernel + registries + 23-test CI (2026-07-25)"}
+{"ts": "2026-07-25T11:39:14Z", "actor": "operator", "type": "milestone", "ref": "repo", "detail": "M2: memory layer - ranked retrieval, knowledge graph, context manager"}
+{"ts": "2026-07-25T11:39:14Z", "actor": "operator", "type": "verdict", "ref": "sections 2-7", "detail": "Pass 2 wave 1+2: 6/14 sections independently verified after ~70-finding fix cycles"}
+{"ts": "2026-07-25T11:39:14Z", "actor": "operator", "type": "decision", "ref": "DEC-014", "detail": "TLB-019 fee-mix label-shift proven and corrected at Facts layer"}
+{"ts": "2026-07-25T11:39:16Z", "actor": "aos-validate", "type": "validation", "ref": "repo", "detail": "verdict=FAIL"}
+{"ts": "2026-07-25T11:39:38Z", "actor": "aos-validate", "type": "validation", "ref": "repo", "detail": "verdict=PASS"}

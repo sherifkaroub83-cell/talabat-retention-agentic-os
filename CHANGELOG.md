@@ -3,6 +3,26 @@
 All notable changes to the talabat Agentic OS. Format: keep-a-changelog-ish; dates are
 Africa/Cairo project dates. Governing decisions in `vault/Decisions/Decision_Log/`.
 
+## [0.5.0] — 2026-07-25 · Track B Milestone 3: Event bus + validation harness (per AOS_Design_Specification_v1, approved)
+
+### Added
+- **`scripts/aos/events.py`** — the event bus: append-only `vault/_state/events.jsonl`
+  (episodic-memory substrate powering replay, metrics, agent health, console timeline);
+  typed events, corrupt-line-tolerant reader, per-actor/type stats; `AOS_EVENTS_PATH`
+  override for tests/CI.
+- **`scripts/aos/validate.py`** — `aos validate`: one-command verdict (unit tests + MCP
+  selftest + freshness + pipeline state; freshness mtime findings WARN unless AOS_STRICT=1);
+  emits a validation event.
+- **`scripts/aos/config.py`** — kernel wave budget (MAX_CONCURRENT_AGENTS=4, the 2026-07-24/25
+  session-limit lesson encoded).
+- CLI: `--json` on every verb (the console bridge contract) + `events`, `emit`, `metrics`,
+  `validate` verbs; SIGPIPE fix.
+- vault-mcp tools #11–12: `get_events`, `get_validation_status` (per-section Pass 2 state
+  derived from Validation artifacts).
+- Tests: event bus + **subprocess-level MCP integration test** (real stdio round-trip) —
+  suite now 40, all green; CI runs `aos validate` as its final gate.
+- `Facts/Revenue.md` TLB-029 denominator qualifier (DEC-014's follow-up flag closed).
+
 ## [0.4.0] — 2026-07-25 · Track B Milestone 2: Memory layer (Phase 2)
 
 ### Added
