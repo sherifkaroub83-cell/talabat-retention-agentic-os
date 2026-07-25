@@ -419,3 +419,38 @@ are shown). No contradiction found.
 `vault/Decisions/Investment_Options/OPT-003_food-leadership-cvp-partner-retention-gcc3.md` ·
 [[DEC-009_investment-options-ranking-and-allocation-priority]] ·
 `vault/Architecture/Geographic_Evidence_Rules.md` · `Problem_Charter.md`
+
+---
+
+## Fix record (2026-07-25, post-Pass 2)
+
+Fix cycle against the two independent Pass 2 verification reports —
+`vault/Validation/QA_Review_Section_07_v2_pass2.md` (FAIL: B1–B3 blocking, 8 non-blocking) and
+`vault/Validation/Citation_Audit_Section_07_v2_pass2.md` (FAIL: HF-1–HF-5 hard, SF-1–SF-5 soft).
+Edits applied to this file only; tracker untouched; synthetic-funnel labeling deliberately undisturbed.
+
+| Finding | Fix applied |
+|---|---|
+| **B1** (QA, blocking) | Added a new §7.4 paragraph "Customer support and training — what the corpus actually discloses": "priority customer support" as a named talabat pro benefit (TLB-002 p.13; TLB-009 p.3; TLB-011 p.2); customer support among the Aug-2024 five-market survey attributes (TLB-015 pp.39,44; TLB-012 p.7); partner training (Egypt SME academy, TLB-001 p.46) and rider training (tcamp, TLB-001 p.49; TLB-026 p.138) as the corpus's only training disclosures; explicit gap statement for standalone support metrics and customer-facing training. Heading's promise now delivered by disclosure. |
+| **B2 / HF-4** (QA blocking / audit hard) | §7.2 sentence split into two separate disclosures with true scopes and periods: Partner-funded savings 7% of GMV, Q1 2026 (TLB-020 p.7); aggregate annual customer savings >AED 1,567.7mn over a 12-month period per the Nov-2024 ITF, funded by Partners, B2B, and bank partnerships — not Partners alone (TLB-023 p.6). "Trailing" deleted. Traceability row split into two matching rows. |
+| **B3 / SF-1** (QA blocking / audit soft) | CARC restated as the full disclosed three-point series in §7.2, §7.6, and the traceability row: USD 89mn (1.5%, 2023) → USD 103mn (1.4%, 2024) → USD 155mn (1.6%, 2025), explicitly noting dollar rise monotonic, share of GMV non-monotonic (1.5% → 1.4% → 1.6%). Section 6's identical endpoint-only presentation flagged in §7.6 as a coordination note for stage 13.10 — not fixed from here (this cycle edits Section 7 only). |
+| **HF-1** (audit hard) | Both "-4pp" restatements in §7.1 corrected to "-4% y/y" (relative y/y change per TLB-019 p.9), matching the draft's own correct first mention. |
+| **HF-2** (audit hard) | §7.4 Caution rewritten per figure: pro figures (and pro-subscriber M1 deltas) cohort-scoped to the six-of-eight-countries pre-Feb-2025 population (TLB-015 p.77) under ASM-016; Rewards and PostPaid restated as Group-level disclosures with no Egypt breakout (PostPaid five-GCC-live at CMD 2024, `Topics/FinTech.md`); Family Plan restated as a Q2 2025 Group disclosure post-dating the Egypt launch with no cohort/country breakout (TLB-018 p.6). Source note's own wording quoted ("all are Group-level, GCC-cohort-based, or explicitly Egypt-excluded"). |
+| **HF-3** (audit hard) | AI/personalisation EBITDA cite corrected to TLB-002 page 16 (per `Facts/AI_Facts.md` / N-09, repo-wide correction of 2026-07-24) in the body and the traceability row. The unrelated 6-order-threshold TLB-002 p.15 cites are correct and untouched. |
+| **HF-5** (audit hard) | §7.3 false negative replaced with N-10's scoped wording ("no disclosed partner-retention percentage or count *that this investment is expected to move*") plus the corpus's one disclosed partner-retention statistic: ~99% Partner retention among pro-participating vendors, 2024 (TLB-001 p.21), stated at its disclosed scope (different population; not a general partner-retention series). Traceability row added. |
+| **SF-2** (audit soft) | TLB-023 p.8 ("over 20%") added inline to the pro uplift citation set and to the traceability row as the frequency-uplift range's lower bound. |
+| **SF-3** (audit soft) | USD 120mn contra-revenue figure now cited directly in §7.6 (Group; TLB-002 p.20) with the locator corrected: contra-revenue sits in Section 6's §6.1 revenue-mix table; §6.4 holds the CARC discussion. Traceability row added. |
+| **SF-4** (audit soft) | +16pp/+20pp tag restated as "Group/GCC+Jordan cohort per ASM-016 — TLB-019, page 10 itself discloses no market scope"; pro-figure parenthetical now attributes cohort/timing scope to ASM-016 (the register's attribution, not TLB-019's). Traceability rows updated to match. |
+| **SF-5** (audit soft) | "29-document primary corpus" corrected to "29-document corpus — 27 primary plus 2 secondary sell-side-consensus documents, TLB-027/TLB-028." |
+| **QA NB-1** | ASM-024 now genuinely cited: added at the point of prospective reliance (§7.4, Rewards/PostPaid uplifts persisting through FY2026 as a registered Approved assumption, Medium confidence) plus a traceability row — making the 13.5 provenance note's "cited as-is" statement true. |
+| **QA NB-2** | **Not fixed — out of scope.** ASM-016's (and now ASM-024's) "Used in" register column is `Assumptions_Register.md`, not this draft; this cycle edits Section 7 only. Flagged for decision-steward. |
+| **QA NB-3** | Boxed disclosure rephrased: "No conversion percentage in the table below is a talabat-disclosed or corpus-derived figure," with the Anchor-column/conversion-column distinction stated. Synthetic labeling itself untouched. |
+| **QA NB-4** | Funnel-instrumentation sentence now cites `KPI_Tree_v2.md` C11 (Customer-journey conversion rate, Newly-instrumented, N-18) by ID. |
+| **QA NB-5** | One cross-reference sentence added in §7.1: Section 3's 80/20 analysis (GCC five markets = 82% of pro-forma FY2025 GMV; TLB-002 p.18). |
+| **QA NB-6** | Stale "(if drafted)" hedge removed from §7.6; check stated as performed against the drafted Section 4. |
+| **QA NB-7** | Explicit MECE statement added to §7.4: the five-mechanism set is a ranking, not a partition; overlap handled by ranking and by never summing uplifts. |
+| **QA NB-8** | **No draft edit required.** The independent Pass 2 citation audit now exists (`Citation_Audit_Section_07_v2_pass2.md`); its findings are fixed above. Targeted re-audit of the changed passages remains the pipeline precondition for ✅ Done. |
+
+Frontmatter `status` updated to reflect the Pass 2 FAIL verdicts and this fix cycle; per both reports'
+disposition, a targeted Pass 2 re-check of the fixed passages (plus the traceability table) is still
+required before the section may be marked ✅ Done.
