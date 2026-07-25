@@ -3,8 +3,8 @@
 Living status of the project. Update whenever a milestone moves. `SESSION_LOG.md` captures the
 day-to-day detail; this file is the high-level snapshot.
 
-**Last updated:** 2026-07-25
-**Overall status:** 🟢 **Group-wide Business Plan complete, independently verified, publication-QA passed, and published on PR #6.** All 14 active v2 sections are present under `vault/Projects/Business_Plan_Drafts_v2/` and marked Done (independently verified). The targeted Pass 4 closure audit and all whole-plan gates passed: Problem Consistency, Financial Integrity, Geographic Evidence, whole-plan Citation Audit, and Template Compliance. The recovered Section 13 is the verified v2 file from commit `6e7224b`, not the superseded Egypt-retention version. The final deliverables are `Outputs/Business_Plan_Final.docx` and `Outputs/Business_Plan_Final.pdf` (25 pages), with `Outputs/Formatting_QA_Report.md` and `Outputs/Publication_QA_Report.md`; publication QA is PASS, with the formatting report disclosing the DOCX rasterization tooling limitation. These changes are isolated on `codex/final-business-plan-publication` in PR #6 and are not yet merged into `main`. Historical Egypt-retention drafts and outputs remain preserved and superseded.
+**Last updated:** 2026-07-25 (Session 12)
+**Overall status:** 🟢 **Group-wide Business Plan complete, independently verified, and published — merged to `main` via PR #12** (superseding PR #6, which this file previously described as current; see `SESSION_LOG.md` Session 12 for the backfill). All 14 active v2 sections are present under `vault/Projects/Business_Plan_Drafts_v2/` and marked Done (independently verified). Stages 14–18 whole-plan gates all passed: Problem Consistency, Financial Integrity, Geographic Evidence, whole-plan Citation Audit (Stage 17: 8 hard failures found and fixed, independently re-verified), and Template Compliance. Three published editions exist in `Outputs/`: **`Business_Plan_Final`** (base, 25pp) and **`Business_Plan_v1.1_Executive_Visual`** (25pp) — both just regenerated this session directly from `vault/Projects/Business_Plan_Drafts_v2/` via their real, re-runnable pipelines (`scripts/build_final_publication.py`, `scripts/build_business_plan_v1_1.py`, now that Python is installed locally), confirmed content-clean; and **`Business_Plan_Final_v1.2_Executive`** (SWOT-enhanced, 47–51pp), which **still contains two known content defects** (a stale uncited EBITDA-margin figure; a stray "(Three Horizons)" in Section 12's title) because no build script exists for it — it was hand-assembled, not pipeline-built, in commit `6d1555b`. The only known correct fix for v1.2's output sits unmerged on branch `regenerate-executive-edition-post-stage17` (commit `fe44e70`); see Blockers below. DEC-011's page-count question (does the v1.2 "Executive" name match its 47–51pp reality?) is also still open.
 
 ---
 
@@ -31,15 +31,19 @@ mechanics) versus what is now historical (the Egypt-retention content itself).
 | 2 | Phase 2 — OS Activation (wk 2–3) | 🟡 In progress | Template activated 20/07 (identity, memory, tracking). `business-plan-drafting` skill added 21/07 (maps all 14 GSB sections to vault sources); `AI_Business_Plan_Template.md` stored verbatim in-repo. Remaining: agent-role documentation, MCP decision, team walkthrough |
 | 3 | Phase 3 — Data Collection & Ingestion (wk 3–5) | ✅ Done | 9-doc Markdown corpus + 29-doc native-PDF corpus (annual reports, quarterly financials, investor decks, earnings calls, IPO/regulatory, consensus) collected and organized. Ingestion pipeline: extracted (incl. OCR) → 29 source notes → 14 topic fact files → 9 entity rosters → relationship map. **Extended with a semantic knowledge layer** (21/07): 30 synthesis Topic Notes, 8 domain MOCs, 12 Strategic Knowledge notes, an explicit-reasoning Business Relationships note, and semantic `[[wiki-links]]` added to all 52 pre-existing notes — 0 orphan notes, 1 fully-connected graph across 103 notes (was 103 isolated notes). All in `vault/Knowledge/`; see `_PHASE4_VALIDATION_REPORT.md`. |
 | 4 | Phase 4 — Analysis & Business Plan (wk 5–8) | ✅ Done | All 14 active v2 sections drafted and independently verified. Targeted Pass 4 closure audit passed; Stages 14–18 whole-plan gates passed with zero open citation failures. See `vault/Validation/Whole_Plan_Gates_v2_2026-07-24.md` and `vault/Validation/Citation_Audit_Whole_Plan_v2_Pass4.md`. |
-| 5 | Phase 5 — Finalize & Present (wk 8–9) | 🟡 Business Plan publication complete | Final 25-page DOCX/PDF and both QA reports are complete on PR #6. Separate capstone deliverables—the OS structure document, group presentation, and Moodle submission—remain outside PR #6 and are not represented as complete here. |
+| 5 | Phase 5 — Finalize & Present (wk 8–9) | 🟡 Business Plan publication complete on `main`; one edition (v1.2) has a known open defect | `Business_Plan_Final` and `Business_Plan_v1.1_Executive_Visual` (25pp each) are clean and merged to `main` via PR #12, both freshly regenerated 2026-07-25 via their real build scripts. `Business_Plan_Final_v1.2_Executive` still ships a stale figure — see Overall status and Blockers. Separate capstone deliverables — the OS structure document, group presentation, and Moodle submission — remain outstanding and are not represented as complete here. |
 
 **Legend:** ✅ Done · 🟡 In progress · ⬜ Not started · 🔴 Blocked
 
 ## Current focus
 
-Review and merge PR #6 after confirming this documentation synchronization. The Business Plan itself
-needs no further drafting or architecture changes. Remaining capstone administration is limited to
-team-role assignment, the OS structure document, the group presentation, and final submission steps.
+Close the v1.2 edition gap: either merge branch `regenerate-executive-edition-post-stage17` (commit
+`fe44e70`, already pushed to `origin`, up to date with `main`, no conflicts — its OOXML-patched
+docx/pdf fix the two known content defects) as an interim fix, or write a real `scripts/build_v1_2.py`
+so v1.2 also comes from a re-runnable pipeline like the other two editions now do. Resolve DEC-011's
+v1.2 page-count question alongside it. The core Business Plan content itself needs no further drafting
+or architecture changes — all remaining work here is publication-tooling and capstone administration
+(team-role assignment, the OS structure document, the group presentation, final submission steps).
 
 The Agentic OS is now on **Version 2**, evolved from Phase 7's real execution evidence, not from
 design preference (`vault/Architecture/Agentic_OS_Architecture_v2.md`). Every finding from Section
@@ -103,6 +107,13 @@ roadmap for the pre-pivot Egypt-retention plan and is not an active work queue.
 
 ## Blockers / open questions
 
+- **v1.2 edition ships two known content defects** (stale uncited "6.0%→4.6%" EBITDA-margin figure;
+  stray "(Three Horizons)" in Section 12's title) — no build script exists for it, so it can't be
+  regenerated the way `Business_Plan_Final`/v1.1 just were. Fix sits unmerged on `fe44e70`
+  (`regenerate-executive-edition-post-stage17`). See Current focus.
+- **DEC-011 page-count question, v1.2 specifically**: the v1.2 "Executive" edition is 47–51pp,
+  outside DEC-011's 15–25pp executive-edition carve-out — undecided whether to compress it or
+  re-designate it as a separate, page-count-exempt enhanced edition.
 - ~~Charter confirmation~~ — ✅ **Resolved 21/07/2026** (original charter): team of 6 and
   30-slide presentation confirmed. Historical — see `Problem_Charter.md` for the current, pivoted
   charter, which is the OS's active governing problem regardless of course-administration status.
