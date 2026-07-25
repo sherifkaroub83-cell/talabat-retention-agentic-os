@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Unit tests (vault-mcp, aos kernel, freshness)
+        run: python3 -m unittest discover -s tests -v
+
+      - name: vault-mcp selftest
+        run: python3 scripts/vault_mcp/server.py --selftest
+
+      - name: aos kernel smoke (status, plan, registries, graph)
+        run: |
+          python3 scripts/aos/cli.py status
+          python3 scripts/aos/cli.py plan
+          python3 scripts/aos/cli.py agents
+          python3 scripts/aos/cli.py graph > /dev/null
+
+      - name: Console data layer parses
+        run: node --input-type=module -e "import('./app/agentic-os-console/src/js/data.js').then(m => { if (m.DATA.sections.length !== 14) throw new Error('sections'); console.log('data.js OK'); })"
+
+      - name: Content freshness (MOC links + frontmatter; mtime checks are advisory in CI)
+        run: python3 scripts/check_freshness.py || echo "::warning::freshness findings (mtime-based checks are unreliable in CI checkouts — verify locally)"

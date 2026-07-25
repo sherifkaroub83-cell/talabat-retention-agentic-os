@@ -47,6 +47,14 @@ Query-only by design; writes stay with ordinary file tools under the propose-the
 conventions. LLM execution policy (model routing per agent, fallback order) lives in
 `vault/Architecture/LLM_Layer.md`.
 
+**AOS kernel + tests (added 2026-07-25, per `DEC-012` scoped Track B):** `scripts/aos/` is the
+coded architecture foundation — execution graph, state manager, planner/scheduler, and the
+agent/skill/MCP/model-router registries, all derived live from the governing documents
+(`python3 scripts/aos/cli.py status|plan|agents|graph`). Test suite: `python3 -m unittest
+discover -s tests` (23 tests, stdlib only); CI runs it on every push
+(`.github/workflows/ci.yml`). Run the tests before committing changes to `scripts/` or the
+console's data layer. `CHANGELOG.md` tracks milestones.
+
 ## Source corpus
 
 `Input_Data/` is the dropzone for the project's source material.

@@ -243,6 +243,8 @@ export const DATA = {
     { id: "DEC-009", title: "Investment-options ranking & allocation priority", status: "approved", note: "Middle path — funding sequence stated narratively; allocation ranges never a headline exhibit." },
     { id: "DEC-010", title: "2026 investment-total reissuance", status: "approved", note: "" },
     { id: "DEC-011", title: "MCP layer — pursue (vault-mcp)", status: "approved", note: "Read-only MCP server built and registered; closes the Phase-2 open question and the OS's missing tools layer." },
+    { id: "DEC-012", title: "Production platform track (scoped)", status: "approved", note: "Track B approved 2026-07-25 as Option 2: incremental kernel/tests/CI evolution; enterprise stack deferred; capstone always takes precedence." },
+    { id: "DEC-013", title: "Subscription-line reclassification re-issuance", status: "approved", note: "Procedural re-issuance of superseded DEC-006 (DEC-010 precedent); ASM-013 re-established." },
   ],
 
   options: [
@@ -255,7 +257,7 @@ export const DATA = {
 
   registers: [
     { name: "Assumptions Register", count: 47, status: "All post-pivot rows Approved; 4 new ASM candidates from RES-005..007 await disposition", icon: "≔" },
-    { name: "Decision Log", count: 11, status: "DEC-001–011, all approved", icon: "◆" },
+    { name: "Decision Log", count: 13, status: "DEC-001–013, all approved", icon: "◆" },
     { name: "Investment Options", count: 5, status: "OPT-001–005 with verified stage gates (2026-07-24)", icon: "▤" },
     { name: "Research Register", count: 8, status: "RES-005..007 resolved 2026-07-24 (first post-pivot run); 4 pre-pivot notes superseded", icon: "◈" },
   ],

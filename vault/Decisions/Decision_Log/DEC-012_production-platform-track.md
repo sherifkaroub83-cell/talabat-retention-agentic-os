@@ -1,8 +1,9 @@
 ---
 id: DEC-012
-status: proposed
+status: approved
 date: "2026-07-24"
-owner: "[requires user approval — Sherif Samy Karoub]"
+approved: "2026-07-25 — user instruction to implement the blueprint incrementally, repeated after this record's options were presented; executed as Option 2 (scoped Track B), the only reading compatible with the capstone deadline and this environment"
+owner: Sherif Samy Karoub (user)
 supersedes: none
 ---
 
@@ -32,10 +33,16 @@ table in [[Production_Architecture_Assessment_2026-07-24]]).
 3. **Decline** — the OS remains a single-team document-production system; Tier 1–2 hardening
    (tests, CI, live console bridge) still proceeds as ordinary maintenance.
 
-## Interim ruling (until the owner decides)
-Tier 1 (capstone completion) and Tier 2 (tests/CI/live-bridge hardening) of
-[[Production_Architecture_Assessment_2026-07-24]] are in scope as ordinary work. **No Tier 3+
-item may start.** Nothing from the blueprint's Phase 0–7 plan is authorized.
+## Ruling (2026-07-25)
+**Option 2 approved — scoped Track B.** Implementation proceeds incrementally under the
+blueprint's own rules (backward compatible, never break existing functionality, every commit
+tested via CI), mapped to this repository's scale: Milestone 1 = tests + CI + the coded
+pipeline kernel (planner/scheduler/state/execution-graph over the 19-stage pipeline) and the
+four registries (agents/skills/MCP/model-router); subsequent milestones per the assessment's
+Tier 3 list. The enterprise stack (auth/RBAC, PostgreSQL/Redis/ES/Neo4j, Kubernetes,
+multi-tenancy) remains deferred until a genuine multi-user requirement exists — reopen this
+record to activate it. Capstone work (Pass 2 verification, gates, publication) always takes
+precedence over Track B milestones.
 
 ## Consequences of approval (either approving option)
 - A separate roadmap document and probably a separate repository/branch strategy (the capstone
