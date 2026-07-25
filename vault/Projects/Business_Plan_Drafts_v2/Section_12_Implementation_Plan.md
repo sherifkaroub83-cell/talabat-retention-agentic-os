@@ -1,12 +1,12 @@
 ---
 section: 12
-title: Implementation Plan (Three Horizons)
+title: Implementation Plan
 status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_12_v2_Pass2]], [[QA_Review_Section_12_v2_Pass2]]), Pass 2's 2 defects fixed and independently reconfirmed by Pass 3 ([[Citation_Audit_Section_12_v2_Pass3]]), which found 1 new hard failure (an H2 bullet claimed Food-leadership spend "beyond the disclosed ~USD55mn" might be proposed, contradicted by OPT-003's own record showing its upside case stays within the ~USD55mn bucket); fixed 2026-07-24, reworded to match OPT-003's own allocation-range language — not yet reconfirmed by a fourth independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_12_Implementation_Plan.md (superseded Egypt-retention draft, untouched). Fresh draft for the 2026-07-23 pivot."
 ---
 
-# 12. Implementation Plan (Three Horizons)
+# 12. Implementation Plan
 
 > **Pipeline provenance note:** Phase 9 pilot draft. Sequencing draws on `DEC-009`'s tiering of the
 > five candidate Investment Options (`OPT-001`–`005`) by evidence strength, scalability, and
