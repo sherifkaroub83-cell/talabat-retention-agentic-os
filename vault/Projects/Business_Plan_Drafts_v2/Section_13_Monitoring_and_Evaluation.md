@@ -1,7 +1,7 @@
 ---
 section: 13
 title: Monitoring and Evaluation
-status: Done (independently verified) — Pass 2 citation audit + QA review complete ([[Citation_Audit_Section_13_v2_Pass2]], [[QA_Review_Section_13_v2_Pass2]]), verdict PASS WITH MINOR FIXES (missing Review Cadence section; imprecise KPI baseline time periods; overbroad churn-scope claim); all fixed 2026-07-24
+status: Done (independently verified) — Pass 2 citation audit + QA review complete ([[Citation_Audit_Section_13_v2_Pass2]], [[QA_Review_Section_13_v2_Pass2]]), verdict PASS WITH MINOR FIXES (missing Review Cadence section; imprecise KPI baseline time periods; overbroad churn-scope claim); all fixed 2026-07-24. Repository incident, 2026-07-25: this file was found genuinely deleted from the repo (an accidental commit, not the section's content) during Stage 17's whole-plan citation audit; restored from the last good commit, then independently re-audited fresh ([[Citation_Audit_WholePlan_Stage17_Section13]]) — this section's own text is citation-clean, all 3 Pass 2 fixes confirmed genuinely present; the audit did find that the churn-scope fix here had not been propagated into Sections 1 and 14, which still carried the old, overbroad wording — fixed in those two sections 2026-07-25, not here (Section 13's own text was already correct)
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_13_Monitoring_and_Evaluation.md (superseded Egypt-retention draft, untouched). Fresh draft for the 2026-07-23 pivot."
 ---

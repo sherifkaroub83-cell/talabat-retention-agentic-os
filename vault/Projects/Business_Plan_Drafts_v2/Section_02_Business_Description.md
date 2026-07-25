@@ -1,7 +1,7 @@
 ---
 section: 2
 title: Business Description
-status: Done (independently verified) — Pass 2 citation audit + QA review complete ([[Citation_Audit_Section_02_v2_Pass2]], [[QA_Review_Section_02_v2_Pass2]]), verdict PASS WITH MINOR FIXES; the one finding (stale ASM-015-028 Proposed reference) fixed 2026-07-24
+status: Drafted — Pass 2 citation audit + QA review complete ([[Citation_Audit_Section_02_v2_Pass2]], [[QA_Review_Section_02_v2_Pass2]]), verdict PASS WITH MINOR FIXES; the one finding (stale ASM-015-028 Proposed reference) fixed 2026-07-24. Stage 15 whole-plan Financial Integrity Gate ([[Financial_Integrity_Gate]], 2026-07-25) found §2.3 and its traceability table stated the FY2026 Adjusted EBITDA margin guidance as an uncited single point ("6.0%→4.6% of GMV") where every other section uses the disclosed range ("4.4-4.8% of GMV") — fixed 2026-07-25 to match; not yet reconfirmed by a fresh independent pass
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_02_Business_Description.md, which was drafted for the superseded Egypt-retention problem and stays untouched as historical record. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem."
 ---
@@ -117,7 +117,7 @@ no decision belongs to more than one.
 framework to talabat's disclosed USD175 million 2026 investment programme — rather than leaving its
 within-bucket and cross-market allocation undifferentiated — will raise the programme's realized GMV,
 EBITDA, and customer-lifetime-value contribution, because (a) the programme's own disclosure already
-separates a quantified cost (the FY2026 Adjusted EBITDA margin bridge, 6.0%→4.6% of GMV guided) from an
+separates a quantified cost (the FY2026 Adjusted EBITDA margin bridge, 4.4-4.8% of GMV guided) from an
 entirely undisclosed return, meaning no evidence currently exists to confirm the programme is being spent
 optimally even on its own terms, and (b) the five identified candidate initiatives show materially
 different confidence, scalability, and reversibility profiles (`DEC-009`'s 11-criterion comparison) that
@@ -201,7 +201,7 @@ premature full-scale rollout recommendation.
 | USD175mn = ~120mn Everyday App + ~55mn Food-leadership | TLB-020 p.12, p.16; TLB-014 p.6, p.19; `Topics/2026 Investment Programme.md` |
 | "Investments rather than costs... offset the margin impact over time" | TLB-020, page 16 |
 | No disclosed internal governance mechanics | `Topics/Capital Allocation and Investment Governance.md` |
-| FY2026 EBITDA margin bridge 6.0%→4.6% guided | TLB-020, page 16; `Topics/EBITDA.md` |
+| FY2026 EBITDA margin bridge 4.4-4.8% of GMV guided | TLB-020, page 16; `Topics/EBITDA.md`; `Section_09_Financial_Plan.md` §9.3 |
 | Five candidate Investment Options and their ranking | `OPT-001`–`005`; `DEC-009` |
 | Geography tagging discipline | `vault/Architecture/Geographic_Evidence_Rules.md` |
 | FY2024 GMV USD7,428mn (+23% YoY) | TLB-001, page 6/26; `Topics/GMV.md` |

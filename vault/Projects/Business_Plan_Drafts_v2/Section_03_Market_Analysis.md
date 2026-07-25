@@ -1,7 +1,7 @@
 ---
 section: 3
 title: Market Analysis
-status: Done (independently verified) — Pass 2 citation audit + QA review complete ([[Citation_Audit_Section_03_v2_Pass2]], [[QA_Review_Section_03_v2_Pass2]]), verdict PASS WITH MINOR FIXES; the one finding (non-GCC "18-21% of Group GMV" figure silently blended a FY2025 full-year data point (18%, TLB-019 p.14) with a Q1 2026 quarterly data point (21%, TLB-011 p.2) as one range) fixed 2026-07-24, cross-checked directly against `Facts/GMV_Facts.md` and `Topics/GCC vs non-GCC.md`
+status: Drafted — Pass 2 (independently verified, [[Citation_Audit_Section_03_v2_Pass2]], [[QA_Review_Section_03_v2_Pass2]]) found and fixed 1 defect (non-GCC "18-21% of Group GMV" figure silently blended a FY2025 full-year data point with a Q1 2026 quarterly data point), fixed 2026-07-24; Stage 17 whole-plan citation audit ([[Citation_Audit_WholePlan_Stage17_Sections03-04]], 2026-07-25) found 2 new defects Pass 2 missed — a hard failure (AI/personalisation EBITDA figure mis-cited to `Topics/EBITDA.md` instead of `Topics/AI.md`) and a moderate finding (talabat pro GMV-share figure mis-cited to `Topics/Talabat Pro.md`/`Topics/Multi-Verticality.md` instead of `Facts/Talabat_Pro.md`) — both fixed 2026-07-25; not yet re-confirmed by a fresh independent pass; treat as Done only once Stage 17 fully re-clears it
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_03_Market_Analysis.md, which was drafted for the superseded Egypt-retention problem (the Phase 7 pilot, 2026-07-22 — see vault/Validation/Phase7_Pilot_Execution_Report_Section_03.md) and stays untouched as historical record. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem; it reuses the same underlying vault evidence where the evidence itself is Group/GCC-level and unaffected by the pivot, but reframes every conclusion around the new decision question."
 ---
@@ -200,7 +200,7 @@ McKinsey Lens asks this section to name. By vertical, Food remains the majority 
 G&R's faster growth. **Early adopters / primary users, stated as the "so what":** the two segments this
 plan's investment thesis is actually built on are talabat pro subscribers, whose share of platform GMV
 rose from 32% (Q1 2025) to 49% (Q1 2026), and multi-vertical customers, whose GMV share rose 68%→73%→76%
-(Dec'24→Dec'25→Mar'26) *(Group; `Topics/Multi-Verticality.md`, `Topics/Talabat Pro.md`)* — these two
+(Dec'24→Dec'25→Mar'26) *(Group; `Facts/Talabat_Pro.md`, `Topics/Multi-Verticality.md`)* — these two
 overlapping, still-growing cohorts are the disclosed "minority of customers driving a majority of the
 behavioural upside" the Everyday App bucket is funded to expand, and the natural anchor for Section 4's
 value-driver logic.
@@ -223,7 +223,7 @@ observation.
 
 **Strengths.** Category leadership across all 8 markets (1x+–10x+ share vs. next-closest peer, TLB-001
 p.5/TLB-002 p.5/TLB-014 p.4); an AI-personalised loyalty layer with a growing, disclosed EBITDA
-contribution (>USD 14mn FY2024 → >USD 30mn FY2025, `Topics/EBITDA.md`); an AdTech monetization
+contribution (>USD 14mn FY2024 → >USD 30mn FY2025, `Topics/AI.md`); an AdTech monetization
 differentiator on the Partner side (an 8% CPG advertising investment ratio vs. a typical 2% industry
 benchmark, TLB-015, page 108). **So what:** talabat's durable moat is shifting from first-mover category
 share toward AI-personalised loyalty depth — harder for a well-funded entrant to replicate quickly
@@ -377,10 +377,10 @@ DEC-009 headline-exhibit restrictions therefore do not apply here and are not vi
 | Non-GCC 18% of Group GMV (FY2025) rising to 21% (Q1 2026, up from 16% a year earlier) — two dated data points, not a blended range | TLB-019, p.14; TLB-011, p.2 |
 | Food USD6,652mn (+20%) vs. G&R USD2,768mn (+47%), FY2025 GMV | TLB-002, p.18 |
 | G&R/"Groceries" FY2025 GMV shown two ways: USD2.77bn (TLB-002 vertical table) vs. USD3.5bn ("Groceries," TLB-014) — presented as unreconciled, not blended | TLB-002, p.18; TLB-014, p.5 |
-| talabat pro GMV share 32%→49% (Q1'25→Q1'26) | `Topics/Talabat Pro.md` |
+| talabat pro GMV share 32%→49% (Q1'25→Q1'26) | `Facts/Talabat_Pro.md`; `Value_Driver_Tree_v2.md` N-08 |
 | Multi-vertical GMV share 68%→73%→76% (Dec'24→Dec'25→Mar'26) | `Topics/Multi-Verticality.md`; TLB-019 p.7; TLB-020 p.8 |
 | Jordan/Iraq never individually disclosed | `GCC vs non-GCC.md` Open Questions |
-| AI/personalisation EBITDA contribution >USD14mn→>USD30mn (FY2024→FY2025) | `Topics/EBITDA.md` |
+| AI/personalisation EBITDA contribution >USD14mn→>USD30mn (FY2024→FY2025) | `Topics/AI.md`; `Value_Driver_Tree_v2.md` N-09 |
 | AdTech CPG investment ratio 8% vs. 2% benchmark | TLB-015, p.108 |
 | ~90-95% non-employed rider workforce | TLB-001, p.34/47; TLB-026, p.131/138 |
 | AdTech revenue 3.4-3.5% of GMV vs. ~7% benchmark (UAE tMart only) | `Strategic/Competitive Weaknesses.md`; TLB-001 p.21; TLB-002 pp.10/14/19; TLB-014 p.19 |

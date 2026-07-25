@@ -1,7 +1,7 @@
 ---
 section: 14
 title: Appendices
-status: Done (independently verified) — Pass 4 closure audit completed 2026-07-24; all 60 traceability rows remain intact and the Section 9/DEC-009 stale-status statements are explicitly retained only as dated historical provenance
+status: Drafted — Pass 2 and Pass 3 findings fixed and reconfirmed ([[Citation_Audit_Section_14_v2_Pass2]], [[Citation_Audit_Section_14_v2_Pass3]], all 60 traceability rows checked); Stage 17 whole-plan citation audit ([[Citation_Audit_WholePlan_Stage17_Sections13-14]], 2026-07-25) found 1 hard failure — the traceability table's Section 4 EBITDA row (and two further body/table instances) still cited `Topics/EBITDA.md` for the AI/personalisation EBITDA figure, the same defect Section 4's own Pass 3 fix retargeted to `Topics/AI.md` inside Section 4 itself but which never propagated into Section 14's table — fixed 2026-07-25 across all 3 instances. Section 13's own outstanding Stage 17 pass ([[Citation_Audit_WholePlan_Stage17_Section13]], 2026-07-25) then found the Section 13 churn-scope traceability row here was also stale (said "Group or country level," no longer matching Section 13's own already-corrected "Group or Egypt specifically" wording) — fixed 2026-07-25. Not yet reconfirmed by a fresh independent pass; treat as Done only once Stage 17 fully re-clears it
 pipeline_run: 2026-07-24
 supersedes_note: "A prior vault/Projects/Business_Plan_Drafts/Section_14_Appendices.md exists (no _v2 suffix), drafted for the superseded Egypt-retention problem. Per the standing instruction never to read from or write to that directory, it was not read or reused as an input to this draft — this file is written fresh against the 2026-07-23 pivot's Group-wide capital-allocation problem (Problem_Charter.md) and the 12 companion _v2 section drafts (Sections 2-13) that now exist."
 ---
@@ -180,7 +180,7 @@ per `Geographic_Evidence_Rules.md`.
 | 4 | Multi-vertical 13.0x vs. 3.8x order frequency (Group) | `Topics/Multi-Verticality.md`; `Value_Driver_Tree_v2.md` N-14 (order frequency), N-11 (GMV-share trend) | TLB-012 p.9; TLB-013 p.6 |
 | 4 | talabat pro 20-28% frequency uplift / 26-32% retention uplift (GCC+Jordan cohort, six markets pre-Dec 2024, excludes Egypt/Iraq) | `ASM-016` (Approved) | TLB-001 p.18; TLB-015 pp.78,104; TLB-019 p.11 |
 | 4 | Rewards >15%, PostPaid 14% order-frequency uplift (Group) | `Business_Relationships.md` Chain 1 | TLB-001, pp.18-19; TLB-026, p.134 |
-| 4 | AI/personalisation EBITDA contribution USD14mn+ (FY2024) → USD30mn+ (FY2025), Group | `Topics/EBITDA.md`; `Value_Driver_Tree_v2.md` N-09 | TLB-001 p.23; TLB-002 p.15 |
+| 4 | AI/personalisation EBITDA contribution USD14mn+ (FY2024) → USD30mn+ (FY2025), Group | `Topics/AI.md`; `Value_Driver_Tree_v2.md` N-09 | TLB-001 p.23; TLB-002 p.15 |
 | 4 | AI/personalisation EBITDA contribution not a discrete dollar line in either bucket | `Value_Driver_Tree_v2.md` N-06 | — |
 | 4 | Advertising revenue USD246mn→USD323mn (+32% y/y) vs. ~7%-of-GMV UAE benchmark not yet reached Group-wide | `Topics/Revenue Drivers.md` | TLB-001 p.21; TLB-002 pp.10,14,19; TLB-014 p.19 |
 | 4 | No disclosed ROI, payback period, or return figure for either investment bucket (Group, absence-of-disclosure finding) | `Investment_Relationship_Map.md` | corpus-wide |
@@ -203,7 +203,7 @@ per `Geographic_Evidence_Rules.md`.
 | 8 | 7S alignment check: Systems and Skills rated "Not ready" — no disclosed capital-allocation committee/stage-gate; no named data-science or portfolio-management function | new synthesis, first built in Section 8 | `Topics/Capital Allocation and Investment Governance.md`; `Entities/Executives.md` |
 | 9 | FY2026 Group guidance: GMV +11-14% cFX; Revenue +14-17% cFX; Adjusted EBITDA 4.4-4.8% of GMV; FCF 3.2-3.6% of GMV — the plan's only headline financial exhibit, per `DEC-008` | `Scenarios_v2.md` top-level scenarios | TLB-020; TLB-014 |
 | 9 | Q1 2026 Adjusted EBITDA margin 4.8% actual, at the guided range's low end | `Scenarios_v2.md` downside case | TLB-020 |
-| 9 | No disclosed break-even, payback, or ROI figure for either bucket | `Investment_Relationship_Map.md`; `Topics/EBITDA.md` | corpus-wide |
+| 9 | No disclosed break-even, payback, or ROI figure for either bucket | `Investment_Relationship_Map.md` | corpus-wide |
 | 10 | 17 material risks across 5 MECE categories; priority quadrant (High×High): `FIN-01`, `MKT-01`, `ORG-01` | new synthesis (probability-impact matrix, pre-mortem) | `Strategic/Strategic Risks.md`; `Scenarios_v2.md` downside case |
 | 10 | Group Adjusted EBITDA margin 6.7%→6.5% (FY2024→FY2025); FY2026 guided 4.4-4.8%; Q1 2026 actual 4.8% (-9% y/y EBITDA, -18% y/y Net Income) | — | TLB-020, pages 4, 10-11, 14 |
 | 10 | No internal capital-allocation stage-gate/approval-threshold disclosed (`ORG-01`, the plan's single largest governance gap) | `Topics/Capital Allocation and Investment Governance.md` | corpus-wide absence finding |
@@ -216,7 +216,7 @@ per `Geographic_Evidence_Rules.md`.
 | 12 | `OPT-002` (talabat pro Egypt/Iraq) is the cheapest, most reversible of the five options — recommended H1 pilot; `OPT-003` (Food-leadership CVP) is an already-evidenced, already-operating mechanism `DEC-009` funds now via a targeted budget weighting, not a pilot | `DEC-009`; `Investment_Options/OPT-003...md` | — |
 | 12 | No disclosed market-level (country/GCC/non-GCC/Egypt) allocation logic anywhere in the corpus | `Topics/Capital Allocation and Investment Governance.md` | corpus-wide absence finding |
 | 13 | KPI Tree: 50 KPIs across 5 families (Portfolio, Customer & growth, Financial, Operational, Governance); 30 with a disclosed baseline, 20 newly-instrumented | `KPI_Tree_v2.md` | Forecast Layer, Phase 5 |
-| 13 | No churn rate, definition, or cohort analysis exists anywhere in the corpus, Group or country level | `Topics/Customer Churn.md` | corpus-wide absence finding |
+| 13 | No churn rate, definition, or cohort analysis exists anywhere in the corpus, at Group level or for Egypt specifically (the only country the corpus addresses this question for) | `Topics/Customer Churn.md` | corpus-wide absence finding |
 | 13 | Entire Governance family (7 KPIs, G1-G7) newly-instrumented — zero corpus baseline | `KPI_Tree_v2.md`; `Topics/Capital Allocation and Investment Governance.md` | corpus-wide absence finding |
 | 14 | `OPT-001`–`005` base/upside/downside cost ranges (§14.3 below) | `Investment_Portfolio_Register.md`; `ASM-029`–`033` | `DEC-009` |
 
@@ -302,7 +302,7 @@ separation Section 5 established between the two distinct AI systems in scope:
   dispatch optimisation, licensed from parent Delivery Hero SE's shared technology stack
   (`Entities/Technology_Platforms.md`), processing over 235 terabytes of data daily (Group; TLB-002, page
   15), with a disclosed, growing estimated EBITDA contribution (>USD14mn FY2024 → >USD30mn FY2025,
-  `Topics/EBITDA.md`). No proprietary algorithm or patent is disclosed anywhere in the corpus — the
+  `Topics/AI.md`). No proprietary algorithm or patent is disclosed anywhere in the corpus — the
   capability is described functionally, not architecturally.
 - **This plan's own decision-support system (the Agentic OS)** — a structured, multi-agent pipeline
   (`vault/Architecture/Business_Plan_Generation_Pipeline.md`, 19 stages: Part A plan-level setup, Part B
