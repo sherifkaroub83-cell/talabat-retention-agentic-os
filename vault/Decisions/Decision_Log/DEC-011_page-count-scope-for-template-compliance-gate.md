@@ -9,6 +9,12 @@ owner: user
 supersedes: none
 ---
 
+> **ID-collision note (2026-07-25).** Two parallel sessions allocated `DEC-011` the same day to two
+> different decisions: this record and `DEC-011_mcp-layer-pursue`. Both are genuine, both stand approved, and
+> both are preserved unrenumbered to avoid breaking the many references each has accumulated —
+> they are disambiguated by filename slug wherever precision matters. The next Decision ID
+> continues from **DEC-015**; the register's changelog carries the same note.
+
 # DEC-011 — Does the Template Compliance Gate's 15-25 page ceiling (check 10) apply to the full citation-complete draft, or to a separate executive edition?
 
 ## Question

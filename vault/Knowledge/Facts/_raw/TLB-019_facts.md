@@ -5,7 +5,9 @@
 ### Revenue
 - FY2025 Management Revenue (talabat-only): USD 3.92bn (3,876mn), +33% y/y cFX; pro-forma incl. instashop USD 4.04bn, +32% y/y (TLB-019, page 5, page 13)
 - Q4'25 Management Revenue (talabat-only, cFX): USD 1.0bn (1,039mn), +26% y/y (TLB-019, page 5, page 13)
-- Revenue by fee type (% of GMV, FY'25): Commission Fees 14.2-16.2%; Delivery & Service Fees 12.8-14.8%; Advertising & Listing Fees 8.9-9.4%; Subscription Fees & Other Income 3.3-3.5% (TLB-019, page 13)
+- ~~Revenue by fee type (% of GMV, FY'25): Commission Fees 14.2-16.2%; Delivery & Service Fees 12.8-14.8%; Advertising & Listing Fees 8.9-9.4%; Subscription Fees & Other Income 3.3-3.5% (TLB-019, page 13)~~ **[Extraction error — struck through 2026-07-25, kept for provenance per this fragment's audit-trail role; corrected per [[DEC-014_tlb019-fee-mix-label-correction|DEC-014]] against `_source_text/20260213_talabat-Q4-FY25-Results-Presentation.txt` PAGE 13. The slide shows four point values per fee line (FY'24/FY'25/Q4'24/Q4'25), not FY'25 ranges, and the labels above were shifted against the values. Verified entries:]**
+- Revenue by fee type (% of GMV, FY'24 → FY'25): Commission Fees 14.3% → 13.8%; Subscription Fees & Other Income 12.8% → 14.8%; Delivery & Service Fees 9.4% → 9.1%; Advertising & Listing Fees 3.3% → 3.4% (total 40% → 41% of GMV) (TLB-019, page 13) *(correction added 2026-07-25, DEC-014)*
+- Revenue by fee type (% of GMV, Q4'24 → Q4'25): Commission Fees 14.2% → 13.3%; Subscription Fees & Other Income 13.5% → 16.2%; Delivery & Service Fees 9.3% → 8.9%; Advertising & Listing Fees 3.3% → 3.5% (total 40% → 42% of GMV) (TLB-019, page 13) *(correction added 2026-07-25, DEC-014)*
 - FY2025 revenue growth 33% actual vs. 18-20% original guidance / 29-32% revised guidance — exceeded (TLB-019, page 5)
 - FY2026 Revenue growth guidance: 14-17% cFX (USD 4.4-4.5bn); talabat to report IFRS Revenue only from 2026 onward; FY2025 IFRS Revenue for talabat+12m instashop = USD 3,870mn (TLB-019, page 18)
 

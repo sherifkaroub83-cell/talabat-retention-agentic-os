@@ -24,7 +24,7 @@ Consolidated from 20 of 29 corpus documents (Phase 4 consolidation of `vault/Kno
   we are driving operational efficiency and improving the user experience." (TLB-002, page 7)
 - Machine learning curates personalised customer recommendations; ~6 orders needed for models to
   personalise; recommendation system extended from cuisines to items (e.g., "Meal for One"). (TLB-002, page 15)
-- Personalisation algorithm estimated to contribute USD 30mn+ incremental EBITDA p.a. (2025 estimate). (TLB-002, page 15)
+- Personalisation algorithm estimated to contribute USD 30mn+ incremental EBITDA p.a. (2025 estimate). (TLB-002, page 16) *(page ref corrected from 15 → 16, 2026-07-24, per Pass 2 citation audit of Section 5)*
 - AI used for internal operations automation (invoice matching, sales lead qualification),
   customer-facing item tagging, and preparation-time algorithms optimising delivery times. (TLB-002, page 16)
 - Predictive dispatch algorithms and dynamic route optimisation minimise delivery times and maximise

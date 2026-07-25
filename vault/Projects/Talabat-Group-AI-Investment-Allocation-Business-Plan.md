@@ -53,6 +53,17 @@ against the old problem).
 
 ## Status
 
+> **Two parallel lineages merged 2026-07-25.** This project advanced along two concurrent lines of
+> work, both starting from the same 2026-07-24 checkpoint: **Lineage A** (`origin/main`) ran its own
+> Pass 2/Pass 3 per-section verification, the Stage 17 whole-plan citation audit, the Stage 14-16
+> whole-plan gates, Stage 18, and a Stage 19 publication run; **Lineage B** (this branch) ran
+> independent Pass 2 verification waves on Sections 2-7 (fresh-thread citation audit + QA per section,
+> fix cycles, independent re-verification to double-PASS) plus Decision/Assumption governance work
+> (DEC-012/013/014, ASM-013/016/021/024). Both narratives are preserved below, dated and attributed;
+> the per-section checklist merges both histories row by row.
+
+### Lineage A (merged from `origin/main`, 2026-07-25) — Stage 17 audit, Stages 14-16 gates, Stage 18, Stage 19 publication
+
 🟢 **All 14 sections drafted, independently verified, and fixed through three per-section passes plus a
 whole-plan citation audit (Stage 17); Stages 14-16 (the three whole-plan gates) now all PASS (updated
 2026-07-25).** All 14 sections exist under `vault/Projects/Business_Plan_Drafts_v2/` and are now **✅ Done
@@ -120,33 +131,72 @@ sections the published editions draw directly on (Section 4's uncited pro GMV-sh
 single-point EBITDA figure; Section 8's false "established in Section 5.4" cross-reference; Section 14's
 recurring `Topics/EBITDA.md`→`Topics/AI.md` mis-citation and stale churn-scope traceability row — see the
 per-section checklist below). Those defects are now fixed in the merged `Business_Plan_Drafts_v2/`
-sections. **The published DOCX/PDF package (full reference edition, v1.1 executive visual, and v1.2
-executive+SWOT edition) has not yet been regenerated against the Stage-17-corrected section text** and
-should not be treated as final until it is — either by re-running the v1.1/v1.2 build scripts
-(`scripts/build_business_plan_v1_1.py`, `scripts/build_final_publication.py`) against the corrected
-sections and re-validating, or by an explicit decision that the discrepancies are immaterial to the
-published editions' specific wording (unverified either way as of this merge).
+sections.
 
-**Remaining before Publication is treated as final:** (1) reconcile the Stage 17 section fixes into the
-already-published v1.1/v1.2/reference DOCX and PDF editions and re-run their QA reports; (2) confirm
-whether the existing `Outputs/Business_Plan_Final_v1.2_Executive.docx/.pdf` satisfies the 15-25 page
-ceiling `DEC-011` carved out for a still-to-be-produced condensed executive edition, or whether that
-requirement is separately still open; (3) the 3-5 page OS structure document and the group presentation
-deck (per the original capstone charter) remain not yet started. The 14 section drafts under
-`vault/Projects/Business_Plan_Drafts/` (no `_v2` suffix) reflect the old Egypt-retention problem and
-remain historical, not valid inputs to this tracker.
+**RESOLVED 25 July 2026 (post-merge regeneration pass).** Checked all three published editions
+(`Business_Plan_Final`, `Business_Plan_v1.1_Executive_Visual`, `Business_Plan_Final_v1.2_Executive`)
+against the current corrected section text. Two of the Stage 17-adjacent defects had actually reached
+the published DOCX/PDF verbatim (the uncited "6.0%→4.6%" EBITDA figure from the Stage 15 Financial
+Integrity Gate fix, and Section 12's "(Three Horizons)" title fragment) — both confirmed present in
+`word/document.xml` in all three editions and corrected in place; the Section 8 (235TB/false
+cross-reference) and Section 14 (EBITDA.md/AI.md mis-citation, churn-scope row) defects were checked
+for and **not found** in any of the three published editions (their condensed prose either never
+restated the false cross-reference or already used corrected wording). See each edition's
+`Formatting_QA_Report*.md` / `Publication_QA_Report*.md` / `V1_2_Publication_Readiness_Report.md` for
+the full record. **Tooling note:** this session's environment has no Python interpreter (the project's
+documented `python-docx`/Playwright/ReportLab toolchain could not run), so the DOCX fixes were applied
+as surgical OOXML text substitutions and the PDFs regenerated via Microsoft Word's native PDF export
+(available and COM-automatable here) rather than the original pipelines — this changed page counts for
+rendering-engine reasons unrelated to the two-string content fix (`Business_Plan_Final` 25→31pp,
+`v1.1` 25→33pp, `v1.2` 51→47pp). Re-running the original build scripts in a Python-enabled environment
+is recommended to restore canonical, ceiling-verifiable page counts before final submission.
+
+**Remaining before Publication is treated as final:** (1) ~~reconcile the Stage 17 section fixes into
+the already-published v1.1/v1.2/reference DOCX and PDF editions~~ — **done 25 July 2026, see above**;
+(2) ~~confirm whether the existing `Outputs/Business_Plan_Final_v1.2_Executive.docx/.pdf` satisfies the
+15-25 page ceiling `DEC-011` carved out~~ — **resolved 25 July 2026: it does not.** At 47-51 pages
+(depending on rendering engine) it is 22-32 pages over the ceiling regardless, and is not the document
+DEC-011's exemption was written for — `Business_Plan_v1.1_Executive_Visual` (25 pages under its own
+original ReportLab pipeline) is the edition that actually satisfies DEC-011's intent, despite the v1.2
+edition's filename also containing "Executive." This is a real, unresolved compliance gap for the v1.2
+edition, not a false alarm — see `V1_2_Publication_Readiness_Report.md`'s update for the two ways to
+close it (compress toward 15-25 pages, or explicitly re-scope/re-name it as a distinct, page-count-exempt
+enhanced/SWOT reference edition alongside v1.1); this tracker takes no position on which, consistent
+with this project's "propose, don't execute" discipline on decisions of this kind; (3) the 3-5 page OS
+structure document and the group presentation deck (per the original capstone charter) remain not yet
+started. The 14 section drafts under `vault/Projects/Business_Plan_Drafts/` (no `_v2` suffix) reflect
+the old Egypt-retention problem and remain historical, not valid inputs to this tracker.
+
+### Lineage B (this branch, 2026-07-24/25) — independent Pass 2 verification waves, Sections 2-7, plus Decision/Assumption governance
+
+🟢 **Sections 2-7 taken through the full independent Pass 2 discipline in verification waves
+(2026-07-24/25):** each section got a genuinely fresh-thread citation audit + QA review (lowercase
+`*_v2_pass2` Validation artifacts); every section except Section 2's citation audit FAILed at least one
+pass on first run (Section 2: citation PASS but QA FAIL 3 blocking; Section 3: 3 hard + 4 blocking,
+incl. an Egypt-in-non-GCC composition defect; Section 4: 3 hard + 6 blocking; Section 5: 8 hard + 6
+blocking; Section 6: 1 hard ×3 + 4 blocking, incl. a superseded-container citation resolved by DEC-013;
+Section 7: 5 hard + 3 blocking). Every finding was fixed, then independently re-verified by fresh
+threads to PASS/double-PASS on 2026-07-25 (`*_v2_pass2_reverify` artifacts); Section 7's re-verification
+surfaced two same-day race defects (ND-1/NF-1), fixed and re-audited to double-PASS. Governance work on
+this lineage: **DEC-012, DEC-013, and DEC-014 approved**; **ASM-013 re-established** under DEC-013 (the
+subscription-line reclassification re-issuance its own convention required); **ASM-016/ASM-024 Used-in
+bookkeeping** completed (Section 7 added per re-verification NB-2); **ASM-021 period label corrected**
+(FY2024→Q1 2025, per the Sections 3-4 Pass 2 citation audits). On this lineage, Sections 1 and 8-14 had
+not yet been through independent Pass 2 at merge time — Lineage A's fuller per-section verification
+history (above, and in the checklist) covers them. (Note: this branch's own copy of this Status section
+had gone stale at 2026-07-23 and understated its checklist table; this merged narrative supersedes it.)
 
 ## 14-section checklist (GSB Template v2.0 — status against the new problem)
 
 | # | Section | Status | Notes |
 |---|---|---|---|
 | 1 | Executive Summary (SCQA) | ✅ Done (independently verified) | Pass 2: PASS, 0 defects. Stage 17 found 3 hard failures across two rounds (wrong-section GMV citation, mis-attributed EBITDA comparator, stale churn-scope wording) — fixed, independently re-verified HOLD ([[Citation_Audit_Stage17_ReVerify_Section01]]) |
-| 2 | Business Description | ✅ Done (independently verified) | Pass 2: PASS WITH MINOR FIXES, fixed 2026-07-24. Stage 15 Financial Integrity Gate found the FY2026 EBITDA-margin guidance stated as an uncited single point ("6.0%→4.6%") instead of the disclosed range — fixed 2026-07-25, independently re-confirmed on Stage 15's re-run ([[Financial_Integrity_Gate]]) |
-| 3 | Market Analysis | ✅ Done (independently verified) | Pass 2: PASS WITH MINOR FIXES, fixed 2026-07-24. Stage 17 found 1 hard failure (EBITDA figure mis-cited to `Topics/EBITDA.md`, part of the 4-instance recurring pattern) + 1 moderate — fixed, independently re-verified HOLD ([[Citation_Audit_Stage17_ReVerify_Section03]]) |
-| 4 | Value Proposition | ✅ Done (independently verified) | Pass 2 (FAIL, 2 hard + 2 moderate) and Pass 3 (1 hard + 1 moderate) fixed and reconfirmed. A parallel Pass 4 closure audit (2026-07-24) found no residual defect, but this branch's Stage 17 found 2 further hard failures Pass 4 missed (uncited pro GMV-share claim; uncited single-point EBITDA margin conflicting with Section 3) — fixed, independently re-verified HOLD ([[Citation_Audit_Stage17_ReVerify_Section04]]) |
-| 5 | AI Technology and Development | ✅ Done (independently verified) | Pass 2 (3 defects) and Pass 3 (1 hard + 1 moderate) fixed and reconfirmed. Stage 17 independently re-traced every claim and found 0 new defects — PASS |
-| 6 | Business Model and Revenue Streams | ✅ Done (independently verified) | Pass 2: PASS, 0 defects. Stage 17 found 1 open moderate note (§6.6 self-check overclaims Value-Driver-Tree node coverage — 2 of 5 streams actually trace, not all 5; wording defect, not a sourcing defect, left open) |
-| 7 | Marketing and Sales Strategy | ✅ Done (independently verified) | Pass 2 and Pass 3 fixed and reconfirmed (DEC-009/OPT-003 characterization independently re-checked). Stage 17 found 0 hard failures — PASS |
+| 2 | Business Description | ✅ Done (independently verified) | Pass 2: PASS WITH MINOR FIXES, fixed 2026-07-24. Stage 15 Financial Integrity Gate found the FY2026 EBITDA-margin guidance stated as an uncited single point ("6.0%→4.6%") instead of the disclosed range — fixed 2026-07-25, independently re-confirmed on Stage 15's re-run ([[Financial_Integrity_Gate]]). **Branch lineage (merged 2026-07-25):** branch Pass 2 (2026-07-24) citation audit PASS (0 hard) + QA FAIL (3 blocking) → fixed → independent re-verification PASS 2026-07-25 (`QA_Review_Section_02_v2_pass2_reverify.md`); non-blocking R1–R3 in backlog |
+| 3 | Market Analysis | ✅ Done (independently verified) | Pass 2: PASS WITH MINOR FIXES, fixed 2026-07-24. Stage 17 found 1 hard failure (EBITDA figure mis-cited to `Topics/EBITDA.md`, part of the 4-instance recurring pattern) + 1 moderate — fixed, independently re-verified HOLD ([[Citation_Audit_Stage17_ReVerify_Section03]]). **Branch lineage (merged 2026-07-25):** branch Pass 2 (2026-07-24) citation FAIL (3 hard) + QA FAIL (4 blocking, incl. Egypt-in-non-GCC composition) → fix cycle → independent re-verification double-PASS 2026-07-25 (`*_v2_pass2_reverify` artifacts); S8 page fix folded in |
+| 4 | Value Proposition | ✅ Done (independently verified) | Pass 2 (FAIL, 2 hard + 2 moderate) and Pass 3 (1 hard + 1 moderate) fixed and reconfirmed. A parallel Pass 4 closure audit (2026-07-24) found no residual defect, but this branch's Stage 17 found 2 further hard failures Pass 4 missed (uncited pro GMV-share claim; uncited single-point EBITDA margin conflicting with Section 3) — fixed, independently re-verified HOLD ([[Citation_Audit_Stage17_ReVerify_Section04]]). **Branch lineage (merged 2026-07-25):** branch Pass 2 (2026-07-24) citation FAIL (3 hard) + QA FAIL (6 blocking) → fix cycle → independent re-verification double-PASS 2026-07-25 (`Citation_Audit_Section_04_v2_pass2_reverify.md`, `QA_Review_Section_04_v2_pass2_reverify.md`); NS-1..3 soft pointers folded in same day |
+| 5 | AI Technology and Development | ✅ Done (independently verified) | Pass 2 (3 defects) and Pass 3 (1 hard + 1 moderate) fixed and reconfirmed. Stage 17 independently re-traced every claim and found 0 new defects — PASS. **Branch lineage (merged 2026-07-25):** branch Pass 2 (2026-07-24) citation FAIL (8 hard) + QA FAIL (6 blocking) → full fix cycle → independent re-verification double-PASS 2026-07-25 (`Citation_Audit_Section_05_v2_pass2_reverify.md`, `QA_Review_Section_05_v2_pass2_reverify.md`) |
+| 6 | Business Model and Revenue Streams | ✅ Done (independently verified) | Pass 2: PASS, 0 defects. Stage 17 found 1 open moderate note (§6.6 self-check overclaims Value-Driver-Tree node coverage — 2 of 5 streams actually trace, not all 5; wording defect, not a sourcing defect, left open). **Branch lineage (merged 2026-07-25):** branch Pass 2 (2026-07-25) citation FAIL (1 hard ×3) + QA FAIL (4 blocking, incl. superseded-container citation → resolved by DEC-013) → fix cycle → independent re-verification double-PASS 2026-07-25 (`*_v2_pass2_reverify` artifacts); residual: TLB-019 p.13 fee-mix DEC record (steward, in progress, non-blocking) |
+| 7 | Marketing and Sales Strategy | ✅ Done (independently verified) | Pass 2 and Pass 3 fixed and reconfirmed (DEC-009/OPT-003 characterization independently re-checked). Stage 17 found 0 hard failures — PASS. **Branch lineage (merged 2026-07-25):** branch Pass 2 (2026-07-25) citation FAIL (5 hard) + QA FAIL (3 blocking) → fix cycle → re-verification with two same-day race defects (ND-1/NF-1) fixed and re-audited → double-PASS 2026-07-25 (`*_v2_pass2_reverify` artifacts); synthetic-funnel labeling verified exemplary at every stage; ASM-016/024 Used-in bookkeeping done |
 | 8 | Operations Plan | ✅ Done (independently verified) | Pass 2 and Pass 3 fixed and reconfirmed. A parallel Pass 4 closure audit (2026-07-24) found no residual defect, but this branch's Stage 17 found 1 hard failure Pass 4 missed (false "established in Section 5.4" cross-reference for the 235TB/day figure) — fixed, independently re-verified HOLD ([[Citation_Audit_Stage17_ReVerify_Section08]]) |
 | 9 | Financial Plan | ✅ Done (independently verified) | Headline case per [[DEC-008_section9-headline-bucket-split-presentation\|DEC-008]] (base case only); funding sequence per [[DEC-009_investment-options-ranking-and-allocation-priority\|DEC-009]]. Pass 2 (FAIL, pp-vs-% unit mixing) fixed 2026-07-24; Pass 3 and Stage 17 both independently recomputed all arithmetic and found 0 defects |
 | 10 | Risk Analysis | ✅ Done (independently verified) | 17 risks, named owners, High×High quadrant: FIN-01, MKT-01, ORG-01. Pass 2: PASS, 0 defects, all 26 claims re-verified 2026-07-24. Stage 17 found 0 new defects — PASS |
@@ -165,22 +215,34 @@ remain historical, not valid inputs to this tracker.
 - `OPT-001`–`005` exist in `vault/Decisions/Investment_Options_Register.md`. **Resolved.**
 - `DEC-011` (approved 2026-07-25) — this full 14-section draft is the internal audit-trail/reference
   version, exempt from the 15-25 page ceiling; a separate condensed executive edition is the document that
-  requirement actually governs. **Resolved** — note a condensed executive edition (`Business_Plan_Final_
-  v1.2_Executive.docx/.pdf`) already exists from the parallel publication effort; whether it satisfies
-  `DEC-011`'s intent, and whether it needs rebuilding against the Stage 17 fixes, is unresolved (see
-  Status above).
-- **No open decision blocks further work, but one open reconciliation item does:** all 14 sections are
-  ✅ Done (independently verified) against this branch's Stage 17/18 audits, and Stages 14-16 and 18 all
-  show **PASS**. A parallel effort separately ran Stage 19 (publication) against Pass-4-cleared content
-  and opened PR #6. **Next actions:** (1) reconcile the Stage 17 fixes to Sections 4, 8, and 14 into the
-  already-published DOCX/PDF editions (full reference, v1.1 executive visual, v1.2 executive+SWOT) and
-  re-run their Formatting/Publication QA reports before treating PR #6 as final; (2) confirm the v1.2
-  executive edition's page count against the 15-25 page ceiling now that `DEC-011` scopes it out of the
-  full reference version's exemption; (3) the 3-5 page OS structure document and the group presentation
-  deck, per the original capstone charter, remain not yet started. Unrelated to gate status: the recurring
-  iCloud sync artifact on `Section_13_Monitoring_and_Evaluation.md` should be resolved at the environment
-  level (check for another device/process syncing this repo, or pause sync on this folder) before further
-  sessions, since it has recurred well over a dozen times without causing data loss but will likely keep
+  requirement actually governs. **Resolved**, including the follow-on question: checked 25 July 2026
+  against both existing candidates. `Business_Plan_v1.2_Executive.docx/.pdf` (51 pages, 47 after this
+  session's content fix) does **not** satisfy DEC-011's intent — it is a second, SWOT-enhanced reference
+  edition carrying its own repository-traceability appendix, not the condensed document DEC-011
+  anticipates. `Business_Plan_v1.1_Executive_Visual.docx/.pdf` (25 pages under its original ReportLab
+  pipeline) **does** satisfy it. See `Outputs/V1_2_Publication_Readiness_Report.md`'s 25-July update for
+  the full finding and remediation options for the v1.2 edition.
+- **No open decision blocks further work; the reconciliation item from PR #6/#9/#12 is now closed
+  (25 July 2026), with one new item opened in its place.** All 14 sections remain ✅ Done (independently
+  verified). **Done:** (1) the Stage 15/17 content fixes reaching the published DOCX/PDF editions (the
+  EBITDA-figure and Section 12-title strings, in all three of `Business_Plan_Final`,
+  `Business_Plan_v1.1_Executive_Visual`, and `Business_Plan_Final_v1.2_Executive`) are corrected and
+  their QA reports updated; (2) the v1.2 executive edition's page count is confirmed as **not**
+  satisfying the 15-25 page ceiling `DEC-011` scopes to a condensed executive edition —
+  `Business_Plan_v1.1_Executive_Visual` is the edition that does. **New:** this session's execution
+  environment had no Python interpreter, so the two content fixes were applied by direct OOXML editing
+  and the PDFs regenerated via Microsoft Word's native export (COM-automatable here) rather than this
+  project's own `scripts/build_final_publication.py` / `scripts/build_business_plan_v1_1.py` pipelines —
+  re-running those scripts in a Python-enabled environment once available is recommended to restore
+  each edition's canonical page count (Word's renderer paginates the same content differently:
+  `Business_Plan_Final` 25→31pp, `v1.1` 25→33pp, `v1.2` 51→47pp). **Still open:** (a) the v1.2 edition's
+  own page-count gap against DEC-011 remains unresolved as a scope decision (compress vs. re-designate
+  as a distinct enhanced edition — see `V1_2_Publication_Readiness_Report.md`); (b) the 3-5 page OS
+  structure document and the group presentation deck, per the original capstone charter, remain not yet
+  started. Unrelated to gate status: the recurring iCloud sync artifact on
+  `Section_13_Monitoring_and_Evaluation.md` should be resolved at the environment level (check for
+  another device/process syncing this repo, or pause sync on this folder) before further sessions,
+  since it has recurred well over a dozen times without causing data loss but will likely keep
   recurring otherwise.
 
 ## Links

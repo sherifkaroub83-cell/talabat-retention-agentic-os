@@ -2,6 +2,7 @@
 name: evidence-citation-agent
 description: Ranks competing evidence, resolves or footnotes conflicts, and verifies every claim in a drafted Business Plan section traces to a real vault note or registered assumption. Use after any section is drafted (pipeline stage 9) or whenever two sources disagree (stage 7).
 tools: Read, Grep, Glob, Write
+model: inherit
 ---
 
 # Evidence & Citation Agent

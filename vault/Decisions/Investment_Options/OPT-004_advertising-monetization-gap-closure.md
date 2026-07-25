@@ -3,6 +3,7 @@ id: OPT-004
 status: candidate
 category: Enabling capability
 date: "2026-07-23"
+updated: "2026-07-24"
 owner: decision-steward
 ---
 
@@ -83,8 +84,50 @@ before an 8-market rollout. The corpus does not specify which markets would be n
 that choice itself would require a follow-on Decision if this option is pursued.
 
 ## Stage gates
+*(Original 2026-07-23 sketch — retained for the record, formalized and superseded by the verified
+section below.)*
 Advertising revenue as % of GMV (F6) trending measurably toward the 7%-of-GMV UAE benchmark in the
 pilot market(s) within 2-3 quarters before further scale-up funding.
+
+## Stage gates (verified 2026-07-24)
+Verification pass per Pipeline Stage 12. The sketch above named a valid KPI (F6) but did not note
+that F6's baseline exists only at Group and UAE level — a *pilot-market* F6 reading is
+newly-instrumented at that geography — and lacked funding consequences. Review-cadence and threshold
+discipline follows the carried-forward methodology of `DEC-007` (superseded pre-pivot record;
+quarterly cadence, qualitative trajectory-relative criteria for zero-baseline readings, numeric
+thresholds only via a future Decision Log entry at first real baseline reading). Funding
+consequences follow `DEC-009`'s approved sequence: OPT-004 is the **longer-horizon build** — capital
+is never pulled forward from the near-term priorities (OPT-002/OPT-003) to accelerate it.
+
+1. **Gate 1 — Pilot-market monetization trend.** KPI: **F6** (advertising & listing-fees revenue,
+   USD and % of GMV — baseline-exists at Group and UAE level; the pilot-market breakout is a
+   newly-instrumented geographic reading of the same KPI, not a new metric). Threshold:
+   qualitative/directional — pilot-market ad revenue as % of GMV trending measurably toward the
+   ~7%-of-GMV UAE reference. The 7% figure is a disclosed **country-specific (UAE)** benchmark;
+   using it outside UAE is a labeled inferred-applicability reference, never a committed target,
+   and **the pilot-market threshold is to be set at first baseline reading** via a Decision Log
+   entry. Review: quarterly; decisive read 2-3 quarters after pilot launch. Consequence: trending
+   toward → next-market expansion becomes eligible (the market-selection choice itself is a
+   follow-on Decision, per the Pilot recommendation above); flat → **hold** at pilot scale — no
+   8-market rollout funding.
+2. **Gate 2 — Group ad-revenue trajectory confirmation.** KPI: **F6** at Group level
+   (baseline-exists: USD246mn → USD323mn, +32% y/y). Threshold: qualitative trajectory-relative —
+   Group advertising revenue continues its disclosed multi-year growth trend; no invented numeric
+   floor. Review: quarterly, with the full-year read at the FY2026 disclosure (approx. Q1 2027, this
+   record's review date). Consequence: sustained deceleration coinciding with OPT-003's
+   commission-rate investment → **hold** scale-up and explicitly review the shared-Partner-economics
+   tension (the named dependency) before further funding — do not net the two silently.
+3. **Gate 3 — Attribution precondition.** KPI: **P6** (AI/personalisation embedded-capability
+   investment tracked as a discrete line item — **newly-instrumented**; the adtech/ad-targeting
+   build draws on the same embedded data/personalisation layer, N-06). Threshold: qualitative — the
+   adtech capability spend is tracked as a discrete, attributable line before any scale-up beyond
+   the pilot, so Gate 1's reading can be attributed to the investment at all. Review: at each
+   funding tranche. Consequence: no discrete tracking → **hold** scale-up funding; pilot may
+   complete but not expand.
+
+**Flagged KPI gaps: none.** All gate metrics resolve to existing KPI_Tree_v2 IDs (F6, P6); the
+pilot-market F6 breakout is recorded as a geographic instrumentation note within F6's scope, not a
+new tree node.
 
 ## KPIs
 F6, O9, P6 (`vault/Forecasts/KPI_Tree_v2.md`).
@@ -99,3 +142,4 @@ Alongside next full-year advertising-revenue disclosure (approx. Q1 2027).
 - [[Investment_Relationship_Map]] · [[Value_Driver_Tree_v2]] · [[Scenarios_v2]] · [[KPI_Tree_v2]]
 - `vault/Knowledge/Topics/Advertising.md` (if present) · `vault/Knowledge/Topics/Grocery and Retail.md`
 - [[Decision_Management_Layer|Decision Management Layer]]
+- [[DEC-009_investment-options-ranking-and-allocation-priority]] · `DEC-007` (superseded; methodology carried forward)

@@ -120,9 +120,27 @@ roadmap for the pre-pivot Egypt-retention plan and is not an active work queue.
 - Role assignment: map the 6 members onto the guide's 5 defined roles (e.g., co-leads on one role,
   or a 6th custom role) — still open, needed for both Phase 1 closure and individual-contribution
   visibility.
-- MCP integration: pursue distinction credit or skip? Still undecided, past its original Phase 2 deadline.
+- ~~MCP integration: pursue distinction credit or skip?~~ — ✅ **Resolved 24/07/2026** by `DEC-011`
+  (pursue): read-only `vault-mcp` server built (`scripts/vault_mcp/`), registered in `.mcp.json`,
+  selftest + protocol smoke test passing (9 tools).
 
 ## Artifacts produced
+
+- **Agentic OS Console** (2026-07-24, branch `claude/talabat-agentic-os-ui-1nemuv`):
+  `app/agentic-os-console/` — a professional, dependency-free UI for the OS itself (8 views:
+  Command Center, Pipeline, Plan Sections, Quality Gates, Agents, Evidence, Decisions,
+  Forecasts), shipped as an installable PWA for Windows/Android/macOS/iOS plus a Tauri 2
+  scaffold for native desktop and mobile builds (`BUILD.md` has per-platform instructions).
+  Data layer is a dated repository snapshot (`src/js/data.js`, 2026-07-24). **Completeness-plan
+  execution (2026-07-24, "proceed all"):** DEC-011 + `vault-mcp` MCP server (`scripts/vault_mcp/`,
+  `.mcp.json`), `LLM_Layer.md` + per-agent model routing, `publication-agent` + 3 delivery/refresh
+  skills, `check_freshness.py` memory automation (44 MOC-link fixes), pipeline Stage 5 done
+  (RES-005..007, first post-pivot research run) and Stage 12 done (per-option gates verified,
+  3 KPI gaps flagged). Structural completeness ≈67% → ≈93%. **v2 (same day):**
+  smart-interface layer — command palette, interactive OS Map with the six-layer structural
+  scorecard, activity replay, readiness ring, "Ask the OS" assistant — plus
+  `vault/Architecture/Agentic_OS_Completeness_Assessment.md` (≈67% structural completeness;
+  9-step plan to 100%, MCP layer identified as the critical gap).
 
 - `Problem_Charter.md` (original version 2026-07-20; rewritten for the capital-allocation pivot 2026-07-23 — current status: Active)
 - `Input_Data/` — 9-doc Markdown corpus + manifest (2026-07-20); 29-doc native-PDF/XLSX corpus,

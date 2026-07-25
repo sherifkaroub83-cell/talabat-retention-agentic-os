@@ -3,6 +3,7 @@ id: OPT-001
 status: candidate
 category: Everyday App
 date: "2026-07-23"
+updated: "2026-07-24"
 owner: decision-steward
 ---
 
@@ -100,10 +101,48 @@ Recommend continuing at the disclosed pace with a formal margin-drag checkpoint 
 open-ended acceleration commitment.
 
 ## Stage gates
+*(Original 2026-07-23 sketch — retained for the record, formalized and superseded by the verified
+section below. Note: the "~40% y/y" floor in the second sketch gate was an ungrounded constructed
+threshold and is withdrawn in the verified gates.)*
 - EBITDA margin drag (F8) holding within the disclosed (0.5%)-(0.7%)pp band for two consecutive
   quarters before any upside-case acceleration is funded.
 - tMart GMV growth rate (O2) sustaining above ~40% y/y.
 - Store-count trajectory (O1) tracking the disclosed 2025 pace (130→160).
+
+## Stage gates (verified 2026-07-24)
+Verification pass per Pipeline Stage 12. The sketch above was incomplete — no per-gate review point
+or funding consequence, no `DEC-009` funding-sequence linkage, and one ungrounded numeric floor.
+Review-cadence and threshold discipline follows the carried-forward methodology of `DEC-007`
+(itself `status: superseded` as a pre-pivot record; its method — reviews at talabat's quarterly
+disclosure cadence, qualitative trajectory-relative criteria for metrics without a baseline series,
+numeric thresholds only via a future Decision Log entry once a first real baseline reading exists —
+remains this OS's standing monitoring discipline). Funding consequences follow `DEC-009`'s approved
+sequence: OPT-001 is **continue-at-pace**, with any upside acceleration explicitly gated.
+
+1. **Gate 1 — Margin-drag containment.** KPI: **F8** (G&R product-mix EBITDA margin drag —
+   baseline-exists, Group). Threshold: drag holds within the disclosed (0.5%)-(0.7%)pp band for two
+   consecutive quarterly readings (a disclosed band, not an invented number). Review: quarterly, at
+   each results disclosure from approx. Q3 2026. Consequence: pass → upside-case acceleration
+   (`ASM-029` upside range) becomes *eligible for consideration* via a new Decision Log entry, not
+   automatic; drift beyond (0.7%)pp → **hold** at continue-at-pace, no acceleration; sustained
+   widening over two consecutive quarters → **reallocate** — escalate a reassessment that shifts
+   uncommitted incremental capex toward `DEC-009`'s near-term priorities (OPT-002/OPT-003).
+2. **Gate 2 — Growth-trend continuation.** KPI: **O2** (tMart GMV growth rate — baseline-exists,
+   Group, disclosed +45-47% y/y). Threshold: qualitative trajectory-relative — growth sustaining at
+   or near the disclosed trend, with no sustained material deceleration below it (no numeric floor
+   is set; the disclosed 45-47% is the anchor, and any hard floor would be an undisclosed-data
+   construction). Review: quarterly. Consequence: sustained material deceleration *combined with*
+   Gate 1 widening → **hold** further densification tranches; deceleration alone → continue at base
+   pace with the trend flagged to the next quarterly review.
+3. **Gate 3 — Deployment pacing.** KPIs: **O1** (dark-store count — baseline-exists, disclosed
+   130→160 pace) and **P5** (dark-store capex deployment phasing vs. plan — baseline-exists,
+   qualitative only: "broadly on plan," TLB-020 p.12). Threshold: store-count and capex phasing
+   tracking the disclosed pace/phasing statement, qualitatively assessed. Review: quarterly.
+   Consequence: material slippage → **hold** release of uncommitted capex tranches (low
+   reversibility means committed spend is not clawed back — the consequence applies only to
+   not-yet-committed tranches) and escalate continue-vs-reallocate to a Decision Log entry.
+
+**Flagged KPI gaps: none.** All gate metrics resolve to existing KPI_Tree_v2 IDs (F8, O2, O1, P5).
 
 ## KPIs
 O1, O2, O3, O4, F3, F8, P2, P4, P5 (`vault/Forecasts/KPI_Tree_v2.md`).
@@ -118,3 +157,4 @@ Alongside talabat's next quarterly results disclosure following implementation (
 - [[Investment_Relationship_Map]] · [[Value_Driver_Tree_v2]] · [[Scenarios_v2]] · [[KPI_Tree_v2]]
 - `vault/Knowledge/Topics/Grocery and Retail.md` · `vault/Knowledge/Topics/Everyday App.md`
 - [[Decision_Management_Layer|Decision Management Layer]]
+- [[DEC-009_investment-options-ranking-and-allocation-priority]] · `DEC-007` (superseded; methodology carried forward)

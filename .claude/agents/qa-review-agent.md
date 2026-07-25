@@ -2,6 +2,7 @@
 name: qa-review-agent
 description: Final gate on a drafted Business Plan section - McKinsey Lens pressure test, completeness against AI_Business_Plan_Template.md, staleness check on any external research used, the drafting skill's Anti-patterns checklist, and (added 2026-07-23) the Problem Consistency, Financial Integrity, and Geographic Evidence gates. Use as the last pipeline stage before a section is marked Done.
 tools: Read, Grep, Write
+model: inherit
 ---
 
 # QA / Final Review Agent
