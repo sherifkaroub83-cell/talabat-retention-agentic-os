@@ -316,9 +316,10 @@ relationship.
 **Customer support and training — what the corpus actually discloses.** Disclosed customer-support
 content is embedded in the product rather than described as a standalone service function: "priority
 customer support" is a named talabat pro subscription benefit *(Group; TLB-002, page 13; TLB-009, page 3;
-TLB-011, page 2)*, and customer support is one of the attributes on which surveyed users ranked talabat
-#1 in the August 2024 survey *(market-comparison: Kuwait, UAE, Egypt, Qatar, Bahrain; TLB-015, pages 39,
-44; TLB-012, page 7)*. Disclosed training is partner- and rider-facing, not customer-facing: Partner
+TLB-011, page 2)*, and customer support is among the attributes measured in the August 2024 survey in
+which 80%+ of surveyed users ranked talabat #1 overall — per-attribute #1 rankings are disclosed only
+for restaurant selection (87%) and customer experience (84%), not customer support specifically
+*(market-comparison: Kuwait, UAE, Egypt, Qatar, Bahrain; TLB-015, pages 39, 44; TLB-012, page 7)*. Disclosed training is partner- and rider-facing, not customer-facing: Partner
 growth sessions including an SME academy launched in Egypt with the German Chamber of Commerce, training
 over 200 SMEs by July 2024 *(Egypt-standalone; TLB-001, page 46)*, and the "tcamp" rider-training
 platform *(five named markets: Egypt, UAE, Bahrain, Kuwait, Oman; TLB-001, page 49; TLB-026, page 138)*.
@@ -357,9 +358,9 @@ TLB-002, page 20)*) are the same figures Section 6 cites — CARC in its unit-ec
 the contra-revenue figure in its §6.1 revenue-mix table — no contradiction, no double-counting; this
 section discusses CARC as an acquisition/retention *strategy* input, Section 6 discusses it as a *cost
 line against revenue*, and neither restates the other's number differently. (Coordination note for stage
-13.10: Section 6 still presents the CARC share-of-GMV series endpoint-only — flagged by QA Pass 2 (B3
-out-of-scope flag) for fixing when Section 6 is next touched; not fixed from here, since this fix cycle
-edits Section 7 only.) Checked against
+13.10, closed 2026-07-25: Section 6's own Pass 2 fix cycle applied the same full three-point CARC
+series the same day — both sections now present 89mn/1.5% → 103mn/1.4% → 155mn/1.6% identically; no
+further coordination action required.) Checked against
 `Strategic/Customer Retention Drivers.md` and `Section_04_Value_Proposition.md`'s value-mechanism ranking
 (Section 4 is drafted; the check was performed against it): the same five-mechanism ranking (pro >
 multi-vertical > Rewards/PostPaid > Family Plan) is
