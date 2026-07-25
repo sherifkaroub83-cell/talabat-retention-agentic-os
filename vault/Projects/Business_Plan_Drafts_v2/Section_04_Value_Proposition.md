@@ -1,7 +1,7 @@
 ---
 section: 4
 title: Value Proposition
-status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_04_v2_Pass2]], [[QA_Review_Section_04_v2_Pass2]]), Pass 2's 2 hard + 2 moderate findings fixed and independently reconfirmed by Pass 3 ([[Citation_Audit_Section_04_v2_Pass3]]), which found 1 new hard failure (EBITDA contribution mis-cited to `Topics/EBITDA.md`/N-06 instead of `Topics/AI.md`/N-09) and 1 new moderate finding (pro uplift range mis-cited to `Business_Relationships.md` Chain 4 instead of `Value_Driver_Tree_v2.md` N-15/N-20); both fixed 2026-07-24 — not yet reconfirmed by a fourth independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
+status: Drafted — Pass 2 and Pass 3 findings fixed and reconfirmed ([[Citation_Audit_Section_04_v2_Pass2]], [[Citation_Audit_Section_04_v2_Pass3]]); Stage 17 whole-plan citation audit ([[Citation_Audit_WholePlan_Stage17_Sections03-04]], 2026-07-25) found 2 further hard failures Pass 2/3 missed — the talabat pro GMV-share claim (32%→49%) carried no citation at all, and the FY2026 EBITDA margin was stated as an uncited single point ("6.0%→4.6%") conflicting with Section 3's correctly-cited disclosed range ("4.4-4.8%") — both fixed 2026-07-25 (citation added; figure corrected to the disclosed range and cited to Section 9/TLB-020/TLB-014); not yet reconfirmed by a fresh independent pass; treat as Done only once Stage 17 fully re-clears it
 pipeline_run: 2026-07-23
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_04_Value_Proposition.md (superseded Egypt-retention draft, untouched). Fresh draft for the 2026-07-23 pivot."
 ---
@@ -57,7 +57,8 @@ densification, the primary lever for driving multi-vertical adoption).
 **Revenue lift — talabat pro.** Subscribers show a 20-28% order-frequency uplift and 26-32% retention
 uplift vs. matched non-subscribers, measured across the GCC+Jordan cohort where the programme was live
 before December 2024 (`ASM-016`, Low confidence for extension beyond that cohort). talabat pro subscriber
-GMV share has grown from 32% (Q1 2025) to 49% (Q1 2026) of platform GMV. This is the direct evidence base
+GMV share has grown from 32% (Q1 2025) to 49% (Q1 2026) of platform GMV (`Facts/Talabat_Pro.md`;
+`Value_Driver_Tree_v2.md` N-08). This is the direct evidence base
 for `OPT-002` (accelerating pro adoption in Egypt and Iraq, where the programme has not yet reached
 comparable maturity).
 
@@ -101,8 +102,9 @@ multi-vertical and food-only customers — this is the number this plan uses to 
 value creation, not an invented CLV figure.
 
 **ROI, calculation logic shown, not a single point estimate:** the corpus discloses the programme's
-*cost* precisely (the FY2026 Adjusted EBITDA margin bridge, 6.0%→4.6% of GMV guided, realized 4.8% in
-Q1 2026) but **no return figure for any bucket or initiative** (`Investment_Relationship_Map.md`,
+*cost* precisely (the FY2026 Adjusted EBITDA margin bridge, 4.4-4.8% of GMV guided, realized 4.8% in
+Q1 2026 — `Section_09_Financial_Plan.md` §9.3; TLB-020, TLB-014) but **no return figure for any bucket or
+initiative** (`Investment_Relationship_Map.md`,
 "What this note deliberately does not claim"). The calculation logic this plan uses instead: each
 mechanism's historical uplift statistic (e.g. talabat pro's 20-28% frequency uplift) is the input to
 `Value_Driver_Tree_v2.md`'s Assumption-tagged nodes (`ASM-021`–`028`), which project forward
@@ -119,6 +121,7 @@ the mechanism, Section 9 shows the (appropriately bounded) financial consequence
 | Multi-vertical 13.0x vs. 3.8x order frequency | `Topics/Multi-Verticality.md`; `Value_Driver_Tree_v2.md` N-14 |
 | Multi-vertical GMV share 68%→73%→76% (Dec'24→Dec'25→Mar'26) | `Value_Driver_Tree_v2.md` N-11 |
 | talabat pro 20-28% frequency / 26-32% retention uplift (GCC+Jordan cohort) | `ASM-016`; `Value_Driver_Tree_v2.md` N-15/N-20 |
+| talabat pro GMV share 32%→49% (Q1'25→Q1'26) | `Facts/Talabat_Pro.md`; `Value_Driver_Tree_v2.md` N-08 |
 | Rewards +15% frequency uplift | `Business_Relationships.md` Chain 1; TLB-001 p.19 |
 | PostPaid +14% frequency uplift; CARC USD89mn→155mn (2023-2025) | `Topics/FinTech.md` (TLB-001 p.18); `Business_Relationships.md` cross-cutting evidence (TLB-001 p.28, TLB-002 p.21) |
 | Egypt PostPaid + CIB co-branded card | `Topics/FinTech.md` |
@@ -126,6 +129,7 @@ the mechanism, Section 9 shows the (appropriately bounded) financial consequence
 | Advertising revenue USD246mn→323mn vs. ~7% UAE benchmark (talabat mart specifically, not yet Group-wide) | `Topics/Advertising.md`; TLB-001 p.21 |
 | UAE/Kuwait/Qatar M1 retention -4% y/y | TLB-019, page 9; `Topics/Food Leadership.md` |
 | No disclosed programme ROI/return figure | `Investment_Relationship_Map.md` |
+| FY2026 guided Adjusted EBITDA margin 4.4-4.8% of GMV, realized 4.8% Q1 2026 | `Section_09_Financial_Plan.md` §9.3; TLB-020; TLB-014 |
 
 ## See also
 [[Section_02_Business_Description]] · [[Investment_Relationship_Map]] ·

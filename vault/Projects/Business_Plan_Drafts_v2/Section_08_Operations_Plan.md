@@ -1,7 +1,7 @@
 ---
 section: 8
 title: Operations Plan
-status: Drafted — independent Pass 2 review complete ([[Citation_Audit_Section_08_v2_Pass2]], [[QA_Review_Section_08_v2_Pass2]]), Pass 2's one finding fixed and independently reconfirmed by Pass 3 ([[Citation_Audit_Section_08_v2_Pass3]]), which found 1 new hard failure (§8.1/§8.2 described the CQCA in the present tense as currently operative, when TLB-026 page 156 discloses it was terminated effective 31 Dec 2024 and replaced by GLSA sub-licensing from 1 Jan 2025) and 1 new moderate finding (the "all three governed by German law" claim cited only TLB-026 p.156, but GLSA's German-law clause is on p.153); both fixed 2026-07-24 — not yet reconfirmed by a fourth independent pass; treat as Done only once Stage 17's whole-plan citation audit re-clears it
+status: Drafted — Pass 2 and Pass 3 findings fixed and reconfirmed ([[Citation_Audit_Section_08_v2_Pass2]], [[Citation_Audit_Section_08_v2_Pass3]]); Stage 17 whole-plan citation audit ([[Citation_Audit_WholePlan_Stage17_Sections07-08]], 2026-07-25) found 1 further hard failure Pass 2/3 missed — §8.1 and §8.2 falsely claimed the 235TB/day data-processing figure was "already established in Section 5.4," when Section 5 §5.4 explicitly states infrastructure is not itemized in the corpus; fixed 2026-07-25 (the figure remains correctly and independently cited to TLB-002 p.15, the false cross-reference removed) — not yet reconfirmed by a fresh independent pass; treat as Done only once Stage 17 fully re-clears it
 pipeline_run: 2026-07-24
 supersedes_note: "Companion to (not a replacement of) vault/Projects/Business_Plan_Drafts/Section_08_Operations_Plan.md, which was drafted for the superseded Egypt-retention problem and stays untouched as historical record — not read as an input to this draft, per the standing instruction never to read from the non-_v2 drafts directory. This file is the fresh draft required by the 2026-07-23 pivot to the Group-wide capital-allocation problem (Problem_Charter.md)."
 ---
@@ -149,10 +149,11 @@ draw on operationally (inventory-management tools for OPT-001; loyalty/subscript
 advertising/promotion tools for OPT-004; the shared data layer for OPT-005).
 
 **Data-processing scale (Group, disclosed).** talabat processes over 235 terabytes of data daily to run
-its AI/personalisation, dispatch, and ad-targeting capability *(Group; TLB-002, page 15)* — already
-established in Section 5.4 and not repeated in full here; `OPT-005`'s own record states this infrastructure
-would need to scale further to support continued AI/personalisation investment (`vault/Decisions/
-Investment_Options/OPT-005_ai-personalisation-capability-scaling.md`).
+its AI/personalisation, dispatch, and ad-targeting capability *(Group; TLB-002, page 15)* — this figure is
+not discussed in Section 5, whose own §5.4 states infrastructure is not itemized in the corpus beyond the
+Delivery Hero licensing relationship, so it is stated here in full rather than cross-referenced; `OPT-005`'s
+own record states this infrastructure would need to scale further to support continued AI/personalisation
+investment (`vault/Decisions/Investment_Options/OPT-005_ai-personalisation-capability-scaling.md`).
 
 **In-house technical capacity exists in Egypt specifically.** Cairo is named as one of talabat's two core
 technology hubs building its logistics and service-technology stack *(country-specific, Egypt; TLB-023,
@@ -176,7 +177,7 @@ as talabat's UAE logistics associate (`Topics/Logistics.md`, `Corporate Structur
 non-wholly-owned operational infrastructure entity in the corpus, relevant background for any UAE-specific
 logistics-capacity assumption underlying `OPT-003` (Food-leadership CVP, targeted partly at UAE).
 
-**This plan's own decision-support infrastructure.** As established in Section 5.4, the AI-enabled
+**This plan's own decision-support infrastructure.** As described in Section 5.1 and 5.4, the AI-enabled
 decision-support layer this plan itself constitutes runs on the OS's existing agentic tooling and
 version-controlled vault architecture — no new infrastructure line is proposed for it here; its "capex" is
 analyst time and governance discipline, not hardware or cloud spend.
