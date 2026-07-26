@@ -2,10 +2,44 @@
 report: Business Plan Template Compliance Checklist
 run_date: 2026-07-25
 candidate_document: "the 14-section assembly under vault/Projects/Business_Plan_Drafts_v2/ (designated internal audit-trail/reference version per DEC-011)"
-verdict: PASS (structural compliance; check 10 deferred per DEC-011)
+verdict: PASS (structural compliance re-confirmed post-merge; check 10 deferred per DEC-011)
+reverified: "2026-07-25 — post-merge draft state (Stage 18 re-run)"
 ---
 
 # Business Plan Template Compliance Checklist — 2026-07-25
+
+## Re-run record — post-merge draft state (2026-07-25, Stage 18)
+
+**Why this re-run:** after the original run recorded below, the 14 section drafts were modified by a
+merge reconciliation of two parallel verification lineages (union-of-corrections across Sections 02–07,
+plus tracker and status-line updates). Because this gate owns a *structural* property, any edit pass over
+the drafts invalidates its prior evidence until re-checked — so it was re-run against the drafts as they
+now stand.
+
+**Result: PASS — structure unchanged by the merge.** Re-verified mechanically this run:
+
+| Check | Method | Result |
+|---|---|---|
+| Section count | Directory listing of `Section_*.md` | 14 files, no gaps, no duplicates |
+| Numbering | `# N.` heading extracted from every draft | 1→14 in strict sequence |
+| Titles | Every `# N. Title` diffed against the template's `## N. Title` | All 14 match **verbatim**, including Section 11's full "Corporate Social Responsibility & Responsible AI" and Section 12's corrected "Implementation Plan" |
+| Order | Filename order vs. each file's own heading number | Agree; assembly reproduces template order |
+| Subsection coverage | All 72 required sub-bullets parsed from the template and keyword-traced into their own section's draft | 72/72 represented; zero below-threshold items |
+
+**Prior caveats, now closed:** Check 1's Section 13 filename caveat is resolved — the file is present
+under its canonical name `Section_13_Monitoring_and_Evaluation.md` (no " 2" variant on disk), so the
+assembly-readiness action item that run raised is complete.
+
+**Scope limit of this re-run, stated honestly:** the subsection check is a *mechanical* keyword trace
+confirming each required sub-bullet is represented in its own section — it confirms presence, not
+substantive adequacy. The semantic judgment of whether each subsection is *well* covered was made in the
+original run's Check 8 (reproduced below in full) and by the per-section QA gates; this re-run confirms
+the merge did not drop or relocate any of it. Check 10 (page count) remains deferred per DEC-011 and is
+unaffected by the merge.
+
+---
+
+## Original run — 2026-07-25
 
 **Candidate document:** the direct 14-section assembly under `vault/Projects/Business_Plan_Drafts_v2/`
 (`Section_01_Executive_Summary.md` through `Section_14_Appendices.md`, in that numeric order — no

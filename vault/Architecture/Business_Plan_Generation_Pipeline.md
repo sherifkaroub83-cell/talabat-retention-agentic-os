@@ -94,14 +94,14 @@ Run once per section, drawing on Part A's outputs instead of raw Facts alone.
 
 ## Part C — Whole-Plan Gates (Stages 14–19, run once, after all 14 sections reach 🟡 or better)
 
-| # | Stage | Owner | What it checks | Writes |
-|---|---|---|---|---|
-| 14 | **Cross-section consistency review** | `qa-review-agent` | The **Problem Consistency Gate** run at whole-plan scope (not just per-section): do all 14 sections, taken together, reflect one coherent business problem, scope, and decision question — no section still arguing the old Egypt-retention framing while another argues the new capital-allocation one | `vault/Validation/Problem_Consistency_Gate.md` (`scope: whole plan`) |
-| 15 | **Financial consistency review** | `qa-review-agent` | The **Financial Integrity Gate** at whole-plan scope: do Sections 6/9/12/13's figures reconcile with each other, not just internally — no section citing a different USD175mn sub-split, a different EBITDA-margin trajectory, or a different headline scenario than another | `vault/Validation/Financial_Integrity_Gate.md` (`scope: whole plan`) |
-| 16 | **Geographic evidence review** | `qa-review-agent` | The **Geographic Evidence Gate** at whole-plan scope: no section applying a geography tag inconsistently with how another section tagged the same underlying evidence | `vault/Validation/Geographic_Evidence_Gate.md` (`scope: whole plan`) |
-| 17 | **Citation audit** (whole-plan) | `evidence-citation-agent` | Every claim in the assembled plan, re-checked together (catches duplicated/relocated claims individual section audits could miss) — mirrors the precedent set by the pre-pivot "whole-plan McKinsey Lens pressure test" | Whole-plan citation audit note |
-| 18 | **Template Compliance Gate** | `.claude/skills/template-compliance-gate/SKILL.md` | Section count/numbering/titles/order intact; no structural drift from any prior stage (including any executive-editing pass) | `vault/Validation/Template_Compliance_Checklist.md` |
-| 19 | **Hand off to Publication Layer** | Orchestrator | Stages 14–18 all PASS | Formal handoff to `.claude/skills/executive-document-formatting/SKILL.md` per `[[Publication_Layer]]`'s contract |
+| # | Stage | Owner | What it checks | Writes | Status as of 2026-07-26 |
+|---|---|---|---|---|---|
+| 14 | **Cross-section consistency review** | `qa-review-agent` | The **Problem Consistency Gate** run at whole-plan scope (not just per-section): do all 14 sections, taken together, reflect one coherent business problem, scope, and decision question — no section still arguing the old Egypt-retention framing while another argues the new capital-allocation one | `vault/Validation/Problem_Consistency_Gate.md` (`scope: whole plan`) | ✅ Done — PASS, re-verified post-merge 2026-07-26 |
+| 15 | **Financial consistency review** | `qa-review-agent` | The **Financial Integrity Gate** at whole-plan scope: do Sections 6/9/12/13's figures reconcile with each other, not just internally — no section citing a different USD175mn sub-split, a different EBITDA-margin trajectory, or a different headline scenario than another | `vault/Validation/Financial_Integrity_Gate.md` (`scope: whole plan`) | ✅ Done — PASS, re-verified post-merge 2026-07-26 |
+| 16 | **Geographic evidence review** | `qa-review-agent` | The **Geographic Evidence Gate** at whole-plan scope: no section applying a geography tag inconsistently with how another section tagged the same underlying evidence | `vault/Validation/Geographic_Evidence_Gate.md` (`scope: whole plan`) | ✅ Done — PASS, re-verified post-merge 2026-07-26 |
+| 17 | **Citation audit** (whole-plan) | `evidence-citation-agent` | Every claim in the assembled plan, re-checked together (catches duplicated/relocated claims individual section audits could miss) — mirrors the precedent set by the pre-pivot "whole-plan McKinsey Lens pressure test" | Whole-plan citation audit note | ✅ Done — PASS, 9/9 fixes independently re-verified, zero open citation failures |
+| 18 | **Template Compliance Gate** | `.claude/skills/template-compliance-gate/SKILL.md` | Section count/numbering/titles/order intact; no structural drift from any prior stage (including any executive-editing pass) | `vault/Validation/Template_Compliance_Checklist.md` | ✅ Done — PASS, structure re-confirmed post-merge; page-count check (10) deferred per `DEC-011` |
+| 19 | **Hand off to Publication Layer** | Orchestrator | Stages 14–18 all PASS | Formal handoff to `.claude/skills/executive-document-formatting/SKILL.md` per `[[Publication_Layer]]`'s contract | ⬜ Not started — published DOCX/PDF predates the Stage 17 fixes and needs regenerating first |
 
 **Stage 19 cannot begin unless Stages 14, 15, 16, and 18 all show PASS**, and Stage 17 shows zero open
 citation failures. A FAIL at any of 14–18 routes back to the specific section(s) and stage(s)
@@ -136,13 +136,23 @@ with each other and with Part A's decisions.
 
 ## Status
 
-**Part A: partially executed** (Stages 1, 2, 4, 6, 7, 8, 9 done as Phases 1–5 of the 2026-07-23 pivot;
-Stages 3, 5, 10, 11, 12 open, correctly deferred to the Phase 9 pilot). **Part B: executed once for
-real against the old problem** (Section 3, Market Analysis, 2026-07-22 — see
-[[Phase7_Pilot_Execution_Report_Section_03]]; not yet re-run against the new problem). **Part C: never
-executed** — the closest precedent is the pre-pivot whole-plan McKinsey Lens pressure test, which
-predates these three named gates and should not be treated as having satisfied them. See
-`vault/Architecture/Implementation_Roadmap.md` and the pivot's own Phase 9 pilot plan for what's next.
+**Current (2026-07-25/26):** **Part A: 12/12 done.** **Part B: 14/14 sections independently verified**
+(all drafted, Pass 2/Pass 3-fixed, and re-verified against the pivoted Group-wide problem — see
+`vault/Projects/Talabat-Group-AI-Investment-Allocation-Business-Plan.md` for the per-section tracker).
+**Part C: Stages 14–18 all PASS**, re-run 2026-07-25/26 against the post-merge draft state (two parallel
+verification lineages reconciled into one): Stage 14 (Problem Consistency) PASS, Stage 15 (Financial
+Integrity) PASS, Stage 16 (Geographic Evidence) PASS, Stage 17 (whole-plan citation audit) PASS — 9/9
+previously-recorded fixes independently re-verified, zero open citation failures, Stage 18 (Template
+Compliance) PASS — structure re-confirmed post-merge, page-count check (10) deferred per `DEC-011` to a
+separate executive edition. **Stage 19 (handoff to Publication) is next** — see each gate's own file
+under `vault/Validation/` for full evidence, and `vault/Architecture/Implementation_Roadmap.md` for what
+follows.
+
+**Superseded status (kept for history, do not treat as current):** an earlier version of this section
+read "Part A: partially executed... Part B: executed once for real against the old problem (Section 3,
+2026-07-22)... Part C: never executed" — that described the state immediately after the 2026-07-23 pivot,
+before Part A's remaining stages, the other 13 sections, and Part C's gates were run. See
+[[Phase7_Pilot_Execution_Report_Section_03]] for that early pilot's own record.
 
 ## See also
 [[Agentic_OS_Architecture]] · [[Agentic_OS_Architecture_v2]] · [[Phase7_Pilot_Execution_Report_Section_03]] ·

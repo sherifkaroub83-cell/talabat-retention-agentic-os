@@ -3,9 +3,38 @@ report: Problem Consistency Gate
 run_date: 2026-07-25
 scope: "whole plan (14 sections)"
 verdict: PASS
+reverified: "2026-07-25 — post-merge draft state (Stage 14 re-run)"
 ---
 
 # Problem Consistency Gate — 2026-07-25
+
+## Re-run record — post-merge draft state (2026-07-25, Stage 14)
+
+**Why this re-run:** after the run recorded below, the 14 drafts were modified by a merge reconciliation
+of two parallel verification lineages (union-of-corrections across Sections 02–07, plus tracker/status
+updates). Re-checked against the drafts as they now stand.
+
+**Result: PASS — no drift introduced by the merge.** Re-verified mechanically and by targeted re-read:
+- **MENA usage** (`grep -rn "MENA"` across all 14 drafts): all six occurrences are confined to Section 3,
+  identical in substance to the prior run's finding — the template's own generic prompt language, declined
+  and redirected to talabat's eight-market footprint in the same sentence, plus one explicitly-labeled
+  "external, non-MENA" comparator (Meituan). No section uses MENA as a stand-in for talabat's market set.
+- **Historical-framing markers:** every draft still carries its `supersedes_note` frontmatter field (zero
+  files missing it). The one "Egypt-only problem statement" reference outside Problem_Charter.md itself
+  (Section 11 §11.1 Control 2) remains explicitly framed as retired/historical, unchanged from the prior
+  run's finding.
+- **Forecast artifact citations:** zero drafts cite the pre-pivot non-`_v2` `Value_Driver_Tree.md`,
+  `KPI_Tree.md`, or `Scenarios.md` — all citations remain exclusively to the `_v2` artifacts.
+- **Section 13 filename:** the prior run's one ancillary (non-blocking) finding — the file sitting under
+  the stray `Section_13_Monitoring_and_Evaluation 2.md` name — is now resolved; the canonical
+  `Section_13_Monitoring_and_Evaluation.md` is the only Section 13 file present.
+
+The merge touched Sections 02–07 by union-of-corrections (added/reconciled content, not reframing), and
+this re-check confirms none of that touched the problem-consistency properties this gate owns.
+
+---
+
+## Original run — 2026-07-25
 
 **Scope of this run:** whole plan — all 14 sections of `vault/Projects/Business_Plan_Drafts_v2/`
 (`Section_01_Executive_Summary.md` through `Section_14_Appendices.md`), read in full, fresh, this run.

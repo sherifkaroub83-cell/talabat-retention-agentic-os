@@ -533,7 +533,7 @@ const views = {
   gates() {
     return `
       <h1 class="page-title">Quality Gates</h1>
-      <p class="page-sub">The whole-plan gates every publication must pass (Stages 14–18), plus the per-section two-pass verification protocol. All four gates run once, after all 14 sections reach Drafted or better.</p>
+      <p class="page-sub">The whole-plan gates every publication must pass (Stages 14–18), plus the per-section two-pass verification protocol. All five gates run once, after all 14 sections reach Drafted or better — re-verified post-merge 2026-07-26.</p>
       <div class="grid g-2">
         ${DATA.gates.map((g) => `
           <div class="card">
@@ -651,7 +651,7 @@ function answer(qRaw) {
   if (/alloc|175|budget|invest|120|55/.test(q))
     return `<b>2026 investment programme — $175m</b> (Board-approved):<br>• Everyday App initiatives: <b>$120m</b> — talabat pro, AI personalisation, cross-sell, grocery, ventures<br>• Food-leadership: <b>$55m</b> — partner growth, food CVP, delivery reliability<br>The plan recommends how to allocate <i>within</i> these, across 8 markets. ${link("#/overview", "Command Center →")}`;
   if (/gate/.test(q))
-    return `<b>4 whole-plan gates</b>, all pending (run after all sections reach Drafted):<br>${DATA.gates.map((g) => `• ${esc(g.name)} (stage ${g.stage})`).join("<br>")}<br>${link("#/gates", "Open Quality Gates →")}`;
+    return `<b>${DATA.gates.length} whole-plan gates</b>, all PASS (re-verified post-merge 2026-07-26):<br>${DATA.gates.map((g) => `• ${esc(g.name)} (stage ${g.stage})`).join("<br>")}<br>${link("#/gates", "Open Quality Gates →")}`;
   if (/kpi|forecast|scenario|driver/.test(q))
     return `<b>Forecast layer:</b> Value Driver Tree v2 (${DATA.forecasts.vdt.nodes} nodes) · Scenarios v2 (base/upside/downside × ${DATA.forecasts.scenarios.modules} modules) · KPI Tree v2 (${DATA.forecasts.kpis.count} KPIs). Every forecast is anchored to a disclosed Fact with a stated method. ${link("#/forecasts", "Open Forecasts →")}`;
   if (/agent/.test(q))

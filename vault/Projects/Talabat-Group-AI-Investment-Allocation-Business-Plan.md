@@ -3,7 +3,7 @@ type: project
 status: active
 owner: "Sherif Samy Karoub (G02)"
 started: "2026-07-23"
-updated: "2026-07-25"
+updated: "2026-07-26"
 predecessor: "vault/Projects/Talabat-Egypt-AI-Retention-Business-Plan.md (superseded 2026-07-23)"
 ---
 
@@ -52,6 +52,21 @@ against the old problem).
   ranges shown only as a labeled sensitivity/appendix exhibit, never a headline financial commitment)
 
 ## Status
+
+> **Part C gates re-verified post-merge, 2026-07-26.** The merge below (2026-07-25) combined two
+> verification lineages by union-of-corrections, which invalidated the evidentiary basis for every gate
+> that had already run against the pre-merge drafts — a content edit pass, even a reconciling one, means
+> a gate's prior PASS no longer covers the text as it now stands. All five completed Part C gates were
+> independently re-run against the post-merge draft state: **Stage 14 (Problem Consistency) PASS, Stage
+> 15 (Financial Integrity) PASS, Stage 16 (Geographic Evidence) PASS, Stage 17 (whole-plan citation
+> audit) PASS — all 9 previously-recorded fixes independently re-verified present and correct, zero open
+> citation failures, Stage 18 (Template Compliance) PASS** — structure re-confirmed, the one prior
+> ancillary finding (Section 13's filename) now resolved. Each gate's own file under `vault/Validation/`
+> carries the full re-run record above its original run, per this project's standing discipline of never
+> overwriting a finding without a visible record of what changed. **Stage 19 (handoff to Publication) is
+> next** — see "Remaining before Publication is treated as final" below, which still applies: the
+> already-published DOCX/PDF package predates the Stage 17 fixes and has not yet been regenerated against
+> the corrected section text.
 
 > **Two parallel lineages merged 2026-07-25.** This project advanced along two concurrent lines of
 > work, both starting from the same 2026-07-24 checkpoint: **Lineage A** (`origin/main`) ran its own

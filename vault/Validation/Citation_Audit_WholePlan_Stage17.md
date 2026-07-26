@@ -4,10 +4,59 @@ scope: whole plan (Stage 17 of Business_Plan_Generation_Pipeline.md)
 pipeline_stage: 17 (whole-plan citation audit)
 run_date: 2026-07-25
 auditor: 7 independent evidence-citation-agent threads (Sections 1-2, 3-4, 5-6, 7-8, 9-10, 11-12, 13-14), synthesized by the top-level session
-status: FAIL, fixes applied 2026-07-25 — 9 hard failures found across the whole plan (7 in the first 7-pair round, 2 more via Section 13's own follow-up pass); 1 resolved by file restoration, 8 fixed directly in the section drafts; none of the fixes has yet been independently re-verified by a fresh pass
+status: "PASS — 9/9 fixes independently re-verified 2026-07-25, post-merge draft state; zero open citation failures"
 ---
 
 # Stage 17 — Whole-Plan Citation Audit
+
+## Independent re-verification — post-merge draft state (2026-07-25)
+
+**Why this pass:** the summary below explicitly left the audit at "fixes applied, re-verification
+pending," per the citation-audit skill's 0%-tolerance rule that Stage 18/19 cannot proceed until a fresh
+independent pass confirms every fix holds. The drafts have also since been through a merge reconciliation
+of two parallel verification lineages (union-of-corrections, Sections 02–07), so this pass verifies
+against the drafts as they now stand, not the state at the original audit.
+
+**Method:** for each of the 9 recorded hard failures, located the claim in the current draft and traced
+its citation independently — confirming the cited note/row exists and actually supports the claim, not
+taking the fix record's word for it. Then swept the whole plan for the two root-cause defect classes
+(the `Topics/EBITDA.md` mis-citation; unlabeled single-point EBITDA framing) to catch any reintroduction
+by the merge.
+
+| # | Failure (original) | Verification result |
+|---|---|---|
+| 1 | S1: GMV figure mis-attributed to Section 2 §2.1 | **Holds.** Traceability table: "GMV of USD 9.5 billion, FY2025 \| `Problem_Charter.md`" — correct target, confirmed present. |
+| 2 | S1: "6.0% Q4 2025" comparator mis-attributed | **Holds.** Traceability table: "Q4 2025 Adjusted EBITDA margin 6.0% (comparator) \| `Section_09_Financial_Plan.md` §9.3-9.4; `Section_03_Market_Analysis.md` §3.3" — matches the fix record exactly. |
+| 3 | S1/S14: stale churn-scope claim ("Group or any country level") vs. S13's "Group or Egypt specifically" | **Holds.** S1 body: "...at Group level or for Egypt specifically — the only country the corpus addresses this question for at all." S13's own text: "...for talabat overall (Group)..." S14 traceability row 13: "...at Group level or for Egypt specifically..." All three agree. |
+| 4 | S3: AI/personalisation EBITDA cited to `Topics/EBITDA.md` | **Holds (deeper tier).** Now cites `Facts/AI_Facts.md` (TLB-001 p.23; TLB-002 p.16) plus `Value_Driver_Tree_v2.md` N-09 — the merge note explains this satisfies the Stage 17 fix "at a deeper evidence tier" than the originally-planned `Topics/AI.md` re-point. `Topics/EBITDA.md` is cited nowhere for this claim. |
+| 5 | S3: pro GMV-share mis-cited to Topics notes | **Holds.** Now cites `Facts/Talabat_Pro.md` (TLB-020 p.8; TLB-014 p.14) plus `Value_Driver_Tree_v2.md` N-08, both in prose (§3.2) and the traceability table. |
+| 6 | S4: pro 32%→49% claim uncited | **Holds.** Prose and traceability table both carry "TLB-020, page 8; TLB-014, page 14; `Value_Driver_Tree_v2.md` N-08." |
+| 7 | S4: FY2026 EBITDA margin stated as uncited single point | **Holds.** Now reads "the disclosed guided range of 4.4-4.8% of GMV, with ~4.6% as the guided mid-range" — a range, not a point, cited to TLB-020/TLB-014/Section 9 §9.3. |
+| 8 | S8: false "established in Section 5.4" cross-reference for the 235TB/day figure | **Holds.** The phrase "established in Section 5" does not occur anywhere in Section 8; the figure stands independently cited to TLB-002 page 15. |
+| 9 | S14: 3 occurrences of the `Topics/EBITDA.md` mis-citation for the AI/personalisation figure | **Holds.** Traceability row 4 now cites `Topics/AI.md` and `Value_Driver_Tree_v2.md` N-09; zero occurrences of `Topics/EBITDA.md` remain anywhere in Section 14. |
+
+**Plan-wide root-cause sweep:** grepped all 14 drafts for every remaining `Topics/EBITDA.md` occurrence.
+Three live citations remain (Section 2's EBITDA-bridge row — repointed to `Topics/2026 Investment
+Programme.md`, this string is a fix-log entry describing that repointing, not a live cite; Section 4 §4.2
+— cites `Topics/EBITDA.md` for the *realized 4.8% Q1 2026 margin* figure, a legitimate and different claim
+from the AI/personalisation contribution figure this defect class concerns; Section 5's fix-log entry
+confirming removal). No live mis-citation of the AI/personalisation EBITDA figure to `Topics/EBITDA.md`
+survives anywhere in the plan.
+
+**Spot-check beyond the 9 (2-3 load-bearing claims per section, all 14 sections):** headline GMV/revenue/
+EBITDA figures (S1, S9), the 175/120/55 investment split (S1, S2, S3, S4, S6, S9, S11, S14), talabat pro
+uplift figures (S4, S7), multi-vertical engagement stats (S3, S4, S6, S7), CARC and Rewards/PostPaid
+figures (S7), risk register figures (S10), CSR/EV figures (S11), Implementation Plan milestones (S12),
+KPI baselines (S13) — each traces to a real Facts/Sources note or an Approved Assumptions Register row.
+No new unsupported or misrouted claim found.
+
+**Conclusion: zero open citation failures.** All 9 recorded hard failures independently re-verified
+present and correct in the current (post-merge) draft state. Stage 17 is closed — Stage 18/19 are
+unblocked with respect to citation integrity.
+
+---
+
+## Original audit — 2026-07-25 (fixes applied, superseded by the re-verification above)
 
 Per `vault/Architecture/Business_Plan_Generation_Pipeline.md`, Stage 17 re-checks every claim in the
 assembled 14-section plan together, specifically to catch duplicated/relocated claims and stale

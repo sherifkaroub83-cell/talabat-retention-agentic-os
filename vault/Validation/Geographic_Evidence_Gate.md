@@ -3,9 +3,44 @@ report: Geographic Evidence Gate
 run_date: 2026-07-25
 scope: "whole plan (14 sections)"
 verdict: PASS
+reverified: "2026-07-25 — post-merge draft state (Stage 16 re-run)"
 ---
 
 # Geographic Evidence Gate — 2026-07-25
+
+## Re-run record — post-merge draft state (2026-07-25, Stage 16)
+
+**Why this re-run:** after the run recorded below, the drafts were modified by a merge reconciliation of
+two parallel verification lineages, with geography tags among the explicitly-merged corrections
+(Sections 02–07). Re-checked against the drafts as they now stand.
+
+**Result: PASS — geography-tagging discipline held, and one prior non-blocking observation is now
+resolved.**
+- **`ASM-016` inference labeling** (the gate's own highest-risk recurring case): re-swept Sections 2–7 —
+  every occurrence of the GCC+Jordan-cohort pro/multi-vertical uplift figures carries the `ASM-016` tag
+  and an explicit cohort/confidence qualifier inline (Section 4's Answer, §4.2, §4.3, and traceability
+  table; Section 7's Answer, §7.4, and traceability table). No section states the cohort figures as an
+  Egypt-measured fact.
+- **M1 retention -4% y/y scoping:** consistently confined to "UAE, Kuwait, Qatar" wherever it recurs
+  (Sections 1, 3, 4), matching the original run's finding.
+- **MENA usage:** re-confirmed clean — see the Stage 14 re-run's identical grep sweep; only Section 3, only
+  in the declined/redirected and explicitly-external-comparator forms.
+- **Section 13 filename:** the original run read this section from the stray
+  `Section_13_Monitoring_and_Evaluation 2.md` file (noted explicitly in that run's scope line). That file
+  no longer exists — Section 13 is now the canonical `Section_13_Monitoring_and_Evaluation.md` — so this
+  re-run reads the canonical file directly.
+- **Check 5's non-blocking observation, now resolved:** the original run flagged Section 4's "13.0x vs.
+  3.8x" restatement of the multi-vertical order-frequency gap as missing the July 2024 date carried by
+  Section 7's citation of the same figure — a citation-precision gap, not a geography-tagging error. The
+  merged Section 4 (fix-log entry "S1/NB-1") now states the figure as "13.0 vs. 3.8 orders/month (≈3.4x
+  multiple)... Group, July 2024" in its Answer, §4.2, and traceability table alike — confirmed present in
+  the body text, not just the fix log. This observation is fully closed, not merely carried forward.
+
+No new geography-tagging defect found on this re-check.
+
+---
+
+## Original run — 2026-07-25
 
 **Scope of this run:** All 14 sections of `vault/Projects/Business_Plan_Drafts_v2/` —
 `Section_01_Executive_Summary.md` through `Section_14_Appendices.md` (Section 13 read from

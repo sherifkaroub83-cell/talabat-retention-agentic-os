@@ -3,9 +3,40 @@ report: Financial Integrity Gate
 run_date: 2026-07-25
 scope: "whole plan (14 sections)"
 verdict: PASS
+reverified: "2026-07-25 — post-merge draft state (Stage 15 re-run)"
 ---
 
 # Financial Integrity Gate — 2026-07-25 (independent re-run)
+
+## Re-run record — post-merge draft state (2026-07-25, Stage 15)
+
+**Why this re-run:** after the run recorded below, the drafts were modified by a merge reconciliation of
+two parallel verification lineages, with Section 2's EBITDA-margin fix (the subject of the run below) as
+one of the explicitly-merged corrections, plus DEC-013 (subscription-line reclassification) and DEC-014
+(TLB-019 fee-mix correction) wording consolidated across the sections that cite them. Re-checked against
+the drafts as they now stand.
+
+**Result: PASS — the fix held through the merge, no new defect introduced.**
+- **Section 2's EBITDA-margin fix, re-confirmed:** `grep`-swept all 14 drafts for every occurrence of
+  "4.6%" — every hit sits inside an explicit "4.4-4.8% ... guided mid-range" framing (Sections 2, 3, 4, 9,
+  10, 14) or a frontmatter provenance note describing the historical defect and its fix, never a bare
+  single point. Section 2's merged text goes further than the original fix: it now states "6.0%→~4.6% of
+  GMV — the guided mid-range of the disclosed 4.4-4.8% band," which the file's own merge note records as
+  satisfying both lineages' independent Financial Integrity re-verifications (branch QA re-verify "11/11"
+  and main's Stage 15 requirement).
+- **175/120/55 split:** every occurrence across all 14 drafts (re-checked via grep, not sampled) states
+  USD175mn = ~USD120mn Everyday App + ~USD55mn Food-leadership identically; no section states a different
+  sub-split.
+- **DEC-013 (subscription-line reclassification)** and **DEC-014 (TLB-019 fee-mix correction)**: present
+  and consistently worded in every section that touches the underlying figures (DEC-013: Sections 6, 14;
+  DEC-014: Sections 1, 2, 3, 4, 6, 7, 10, 12, 13, 14) — the merge's consolidation of these two decisions'
+  wording did not introduce a contradiction between sections.
+
+No new hard-precision, unit-mixing, double-counting, or `DEC-008`-violation defect found on this re-check.
+
+---
+
+## Original run — 2026-07-25 (independent re-run)
 
 **Scope of this run:** Sections 1-14 of `vault/Projects/Business_Plan_Drafts_v2/` (Section 1 Executive
 Summary through Section 14 Appendices), read in full, fresh, with no reliance on any prior gate run's
