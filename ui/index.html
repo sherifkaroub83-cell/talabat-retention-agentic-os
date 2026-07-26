@@ -24,9 +24,10 @@
   --border: rgba(255, 255, 255, 0.12);
   --ink: #e3e2e6;
   --ink-dim: #9aa3ab;
-  --ink-faint: #6b7480;
+  --ink-faint: #8b96a3;
   --cyan: #00dbe9;
   --purple: #7701d0;
+  --purple-ink: #c9a6ff;
   --green: #00ff66;
   --amber: #ffb800;
   --red: #ff4d5e;
@@ -103,7 +104,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 .text-dim { color: var(--ink-dim); }
 .text-faint { color: var(--ink-faint); }
 .text-cyan { color: var(--cyan); }
-.text-purple { color: var(--purple); }
+.text-purple { color: var(--purple-ink); }
 .text-green { color: var(--green); }
 .text-amber { color: var(--amber); }
 .text-red { color: var(--red); }
@@ -136,7 +137,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 }
 .nav a:hover { background: rgba(255,255,255,.04); color: var(--ink); }
 .nav a.active {
-  background: rgba(119,1,208,.12); color: var(--purple); border-right-color: var(--purple);
+  background: rgba(119,1,208,.12); color: var(--purple-ink); border-right-color: var(--purple);
 }
 .nav .ic { width: 18px; text-align: center; font-size: 15px; }
 
@@ -193,7 +194,18 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 .span-5 { grid-column: span 5; }
 .span-6 { grid-column: span 6; }
 @media (max-width: 1024px) { .g-12 > * { grid-column: span 12 !important; } .g-3, .g-4 { grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 640px) { .g-2, .g-3, .g-4 { grid-template-columns: 1fr; } .sidebar { transform: translateX(-100%); } .main { margin-left: 0; } .content { padding: 18px; } }
+.menu-toggle { display: none; }
+.scrim { position: fixed; inset: 0; z-index: 39; background: rgba(0,0,0,.5); opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+.shell.nav-open .scrim { opacity: 1; pointer-events: auto; }
+@media (max-width: 640px) {
+  .g-2, .g-3, .g-4 { grid-template-columns: 1fr; }
+  .sidebar { transform: translateX(-100%); transition: transform .22s ease; }
+  .shell.nav-open .sidebar { transform: none; }
+  .main { margin-left: 0; } .content { padding: 18px; }
+  .menu-toggle { display: grid; place-items: center; }
+  .hero-stats { flex-wrap: wrap; gap: 24px; }
+  .qais-strip { position: static !important; margin-bottom: 16px; }
+}
 
 .card { padding: 22px; }
 .card-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 16px; }
@@ -203,7 +215,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 .chip { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 10.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
 .chip-green { color: var(--green); background: rgba(0,255,102,.1); border: 1px solid rgba(0,255,102,.28); }
 .chip-cyan { color: var(--cyan); background: rgba(0,219,233,.1); border: 1px solid rgba(0,219,233,.28); }
-.chip-purple { color: var(--purple); background: rgba(119,1,208,.14); border: 1px solid rgba(119,1,208,.3); }
+.chip-purple { color: var(--purple-ink); background: rgba(119,1,208,.14); border: 1px solid rgba(119,1,208,.3); }
 .chip-amber { color: var(--amber); background: rgba(255,184,0,.1); border: 1px solid rgba(255,184,0,.28); }
 .chip-dim { color: var(--ink-faint); background: rgba(255,255,255,.05); border: 1px solid var(--border); }
 
@@ -232,6 +244,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 .qais-name { font-family: var(--font-head); font-weight: 800; font-size: 15px; color: #fff; letter-spacing: .02em; }
 .qais-role { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; color: var(--cyan); text-transform: uppercase; margin-top: 1px; }
 .crew-tile { position: relative; border-radius: 14px; overflow: hidden; height: 150px; cursor: pointer; }
+.crew-tile:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
 .crew-tile .crew-bg { position: absolute; inset: 0; background-image: url('assets/team-grid.jpg'); background-size: 200% 200%; filter: saturate(.9) brightness(.75); transition: transform .4s ease, filter .4s ease; }
 .crew-tile:hover .crew-bg { transform: scale(1.06); filter: saturate(1) brightness(.85); }
 .crew-tile.q-zaid .crew-bg { background-position: 0% 0%; }
@@ -294,8 +307,6 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
 .footer a { color: var(--ink-faint); text-decoration: underline; margin-left: 16px; }
 .footer a:hover { color: var(--green); }
 
-.callout { border-left: 3px solid var(--cyan); background: rgba(0,219,233,.06); border-radius: 0 9px 9px 0; padding: 11px 14px; font-size: 12.5px; color: var(--ink-dim); }
-.kbd { font-family: var(--font-mono); font-size: 10.5px; background: rgba(255,255,255,.06); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; }
 .hint { font-size: 11.5px; color: var(--ink-faint); }
 
 /* ---------- audit view: system log ---------- */
@@ -313,7 +324,7 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
       <div class="brand-mark"><div>t</div></div>
       <div>
         <div class="brand-name">Agentic Core</div>
-        <div class="brand-sub" id="core-version">v3.5.0 Active</div>
+        <div class="brand-sub" id="core-version">--</div>
       </div>
     </div>
     <nav class="nav" id="nav">
@@ -332,9 +343,11 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
       </div>
     </div>
   </aside>
+  <div class="scrim" id="scrim"></div>
 
   <div class="main">
     <header class="topbar">
+      <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-controls="nav">&#9776;</button>
       <h1 id="crumb-view">Agentic OS</h1>
       <div class="divider-v"></div>
       <span class="tag-pill">STRATEGIC_LAYER_A1</span>
@@ -517,31 +530,49 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
  },
  "agents": [
   {
-   "id": "bp-orchestrator"
+   "id": "bp-orchestrator",
+   "name": "Yousef",
+   "nameAr": "يوسف"
   },
   {
-   "id": "research-agent"
+   "id": "research-agent",
+   "name": "Noor",
+   "nameAr": "نور"
   },
   {
-   "id": "forecasting-agent"
+   "id": "forecasting-agent",
+   "name": "Rania",
+   "nameAr": "رانيا"
   },
   {
-   "id": "decision-steward"
+   "id": "decision-steward",
+   "name": "Karim",
+   "nameAr": "كريم"
   },
   {
-   "id": "evidence-citation-agent"
+   "id": "evidence-citation-agent",
+   "name": "Salma",
+   "nameAr": "سلمى"
   },
   {
-   "id": "kpi-agent"
+   "id": "kpi-agent",
+   "name": "Tariq",
+   "nameAr": "طارق"
   },
   {
-   "id": "exec-summary-agent"
+   "id": "exec-summary-agent",
+   "name": "Dana",
+   "nameAr": "دانا"
   },
   {
-   "id": "qa-review-agent"
+   "id": "qa-review-agent",
+   "name": "Khalid",
+   "nameAr": "خالد"
   },
   {
-   "id": "publication-agent"
+   "id": "publication-agent",
+   "name": "Maya",
+   "nameAr": "مايا"
   }
  ],
  "skills": 13,
@@ -839,7 +870,6 @@ const views = {
     const r = readiness();
     const circ = 2 * Math.PI * 42;
     const offset = circ - (r.pct / 100) * circ;
-    const nextGate = DATA.pipeline.partC.find(s => s.status !== 'done');
     return `
       <h1 class="page-title enter">Command Center</h1>
       <p class="page-sub enter">${esc(DATA.meta.problem)}</p>
@@ -933,7 +963,7 @@ const views = {
           </div>
           <div style="padding:14px 22px 20px">
             <div style="display:flex;flex-wrap:wrap;gap:6px">
-              ${DATA.agents.map(a => `<span class="chip chip-dim mono" style="font-size:10px">${esc(a.id)}</span>`).join('')}
+              ${DATA.agents.map(a => `<span class="chip chip-dim mono" style="font-size:10px" title="${esc(a.id)}" dir="auto">${esc(a.nameAr)} ${esc(a.name)} &middot; ${esc(a.id)}</span>`).join('')}
             </div>
             <div style="display:flex;align-items:center;gap:8px;margin-top:16px">
               <div style="width:8px;height:8px;border-radius:50%;background:var(--green)" class="pulse-text"></div>
@@ -943,19 +973,19 @@ const views = {
         </div>
       </div>
       <div class="grid g-4" style="margin-top:18px">
-        <div class="crew-tile q-zaid enter" style="animation-delay:.35s" onclick="location.hash='#/architecture'">
+        <div class="crew-tile q-zaid enter" style="animation-delay:.35s" role="button" tabindex="0" aria-label="Open Architecture" onclick="location.hash='#/architecture'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.hash='#/architecture'}">
           <div class="crew-bg"></div><div class="crew-shade"></div>
           <div class="crew-info"><div class="crew-name">Zaid</div><div class="crew-role">&#127959; Architecture</div><div class="crew-stat">${r.a}/${r.aTotal} setup &middot; ${r.c}/${r.cTotal} gates</div></div>
         </div>
-        <div class="crew-tile q-layla enter" style="animation-delay:.4s" onclick="location.hash='#/knowledge'">
+        <div class="crew-tile q-layla enter" style="animation-delay:.4s" role="button" tabindex="0" aria-label="Open Knowledge" onclick="location.hash='#/knowledge'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.hash='#/knowledge'}">
           <div class="crew-bg"></div><div class="crew-shade"></div>
           <div class="crew-info"><div class="crew-name">Layla</div><div class="crew-role">&#128218; Knowledge</div><div class="crew-stat">${DATA.vault.totalNotes} notes &middot; ${DATA.corpus.total} sources</div></div>
         </div>
-        <div class="crew-tile q-amir enter" style="animation-delay:.45s" onclick="location.hash='#/decision'">
+        <div class="crew-tile q-amir enter" style="animation-delay:.45s" role="button" tabindex="0" aria-label="Open Decision" onclick="location.hash='#/decision'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.hash='#/decision'}">
           <div class="crew-bg"></div><div class="crew-shade"></div>
           <div class="crew-info"><div class="crew-name">Amir</div><div class="crew-role">&#9878; Decision</div><div class="crew-stat">${DATA.decisions.length} decisions &middot; ${DATA.options.length} options</div></div>
         </div>
-        <div class="crew-tile q-hana enter" style="animation-delay:.5s" onclick="location.hash='#/forecast'">
+        <div class="crew-tile q-hana enter" style="animation-delay:.5s" role="button" tabindex="0" aria-label="Open Forecast" onclick="location.hash='#/forecast'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.hash='#/forecast'}">
           <div class="crew-bg"></div><div class="crew-shade"></div>
           <div class="crew-info"><div class="crew-name">Hana</div><div class="crew-role">&#128200; Forecast</div><div class="crew-stat">${esc(DATA.forecasts.gmv)} GMV &middot; ${esc(DATA.forecasts.confidence).toUpperCase()}</div></div>
         </div>
@@ -979,7 +1009,7 @@ const views = {
             <div class="bar-track" style="width:130px"><div class="bar-fill" style="width:100%;background:var(--cyan)"></div></div>
           </div>
         </div>
-        <div class="glass card span-5 enter" style="min-height:520px;display:flex;flex-direction:column;padding:0;overflow:hidden" style="animation-delay:.1s">
+        <div class="glass card span-5 enter" style="min-height:520px;display:flex;flex-direction:column;padding:0;overflow:hidden;animation-delay:.1s">
           <div style="padding:16px 20px;border-bottom:1px solid var(--border-soft);display:flex;justify-content:space-between">
             <span class="label-caps">Section Audit — Pass 2</span>
             <span class="label-status text-faint">${DATA.sections.length} modules</span>
@@ -1132,6 +1162,7 @@ const views = {
   publication() {
     const gates = DATA.gates;
     const passed = gates.filter(g => g.status === 'done').length;
+    const r = readiness();
     return `
       <h1 class="page-title enter">Publication &amp; Export Control</h1>
       <p class="page-sub enter">Strategic output finalization — administrative authentication before global distribution.</p>
@@ -1140,13 +1171,13 @@ const views = {
           <div class="card-head" style="align-items:flex-start;margin-bottom:26px">
             <div>
               <p class="label-caps text-green" style="margin-bottom:8px">CURRENT STATE</p>
-              <p style="font-family:var(--font-head);font-size:56px;font-weight:800;line-height:1;display:flex;align-items:baseline">${readiness().pct}<span style="font-size:24px;color:var(--cyan);margin-left:4px">%</span></p>
+              <p style="font-family:var(--font-head);font-size:56px;font-weight:800;line-height:1;display:flex;align-items:baseline">${r.pct}<span style="font-size:24px;color:var(--cyan);margin-left:4px">%</span></p>
               <p class="text-dim" style="margin-top:10px;max-width:380px;font-size:13px">${passed}/${gates.length} whole-plan gates passed. ${DATA.publicationNote}</p>
             </div>
             <span class="chip ${passed===gates.length ? 'chip-purple' : 'chip-amber'}" style="padding:8px 15px">${passed===gates.length ? 'GATES CLEAR · STAGE 19 NEXT' : 'GATES IN PROGRESS'}</span>
           </div>
           <div class="bar-track" style="height:10px;margin-bottom:8px">
-            <div class="bar-fill" style="width:${readiness().pct}%;background:linear-gradient(90deg,var(--cyan),var(--purple))"></div>
+            <div class="bar-fill" style="width:${r.pct}%;background:linear-gradient(90deg,var(--cyan),var(--purple))"></div>
           </div>
           <div style="display:flex;justify-content:space-between" class="label-status text-faint">
             <span>SECTIONS + GATES MAPPED</span><span>SNAPSHOT ${esc(DATA.meta.snapshotDate)}</span>
@@ -1327,6 +1358,12 @@ $('#export-btn').addEventListener('click', () => { location.hash = '#/publicatio
 window.addEventListener('hashchange', route);
 wireSearch();
 route();
+$('#core-version').textContent = `Snapshot ${DATA.meta.snapshotDate}`;
+
+/* ---------------- mobile nav toggle ---------------- */
+$('#menu-toggle')?.addEventListener('click', () => $('.shell').classList.toggle('nav-open'));
+$('#scrim')?.addEventListener('click', () => $('.shell').classList.remove('nav-open'));
+$('#nav').addEventListener('click', (e) => { if (e.target.closest('a')) $('.shell').classList.remove('nav-open'); });
 
 /* ---------------- real-time chrome: genuine local clock + session uptime ---------------- */
 const LOAD_TS = Date.now();

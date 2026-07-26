@@ -132,6 +132,48 @@ keep this consistent with the rest of the page:
   confidence) — never an invented figure like the reference mockups'
   "14,802 active nodes" or "99.2% projected accuracy."
 
+## Agent Roster — Arabic names
+
+The 9 real technical agents (`bp-orchestrator`, `research-agent`, etc. — the
+same IDs `scripts/aos/registry.py` reports) now carry an Arabic given name
+alongside the technical ID in the Agent Roster card, e.g. "يوسف Yousef ·
+bp-orchestrator". The real agent ID always stays visible next to the name so
+nothing about the roster's traceability is lost — this is a presentation
+layer on top of the real roster, not a replacement for it. Distinct from,
+and not reused from, the 4 Zaid/Layla/Amir/Hana crew personas (different
+taxonomy: those map to nav *sections*, this maps to individual *agents*).
+
+## Independent review — fixes applied
+
+An independent code + UX review (fresh read of the file, no prior context)
+found and this file now fixes:
+
+- A duplicate `style="..." style="..."` attribute that silently dropped a
+  card's entrance-animation delay (invalid HTML; second `style` attr is
+  ignored per spec).
+- A hardcoded, fabricated `"v3.5.0 Active"` build label with no basis in any
+  repo artifact — replaced with a genuine `Snapshot ${DATA.meta.snapshotDate}`
+  populated from the data blob at load time.
+- No way to reach any of the 6 views on a phone — the sidebar slid fully
+  off-screen below 640px with no toggle. Added a hamburger `#menu-toggle` +
+  scrim, mirroring the pattern already used in `app/agentic-os-console`.
+- The 4 crew tiles were mouse-only navigation (`onclick` on a plain `div`,
+  no `role`, `tabindex`, or keyboard handler) — added `role="button"
+  tabindex="0"` and an Enter/Space `onkeydown` handler to each.
+- `--purple` (`#7701d0`) used as *text* color (nav active label, chip-purple,
+  `.text-purple`) computed to ~2.4:1 contrast against the obsidian
+  background — well under WCAG AA's 4.5:1. Added a separate `--purple-ink`
+  token (`#c9a6ff`, ~9.2:1) for text roles only; `--purple` is unchanged for
+  borders/glows/backgrounds. `--ink-faint` was similarly tightened from
+  `#6b7480` (~3.9:1) to `#8b96a3` (~6.2:1).
+- Two dead CSS selectors (`.callout`, `.kbd`) and one dead JS variable
+  (`nextGate` in `architecture()`) removed.
+- `readiness()` was called twice inside `publication()` where the other five
+  view functions cache it once into a local `const r` — made consistent.
+
+All of the above are covered by new tests in
+`tests/test_ui_aegis_command_center.py` so they can't silently regress.
+
 ## What changed from the previous draft
 
 The prior "Aegis OS" build (`#050506`/`#00F0FF`/`#9D4EDD`, Hanken Grotesk /

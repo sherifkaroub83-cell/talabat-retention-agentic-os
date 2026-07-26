@@ -92,6 +92,71 @@ class UiFileTests(unittest.TestCase):
                       "DATA.options.length", "DATA.forecasts.gmv", "DATA.forecasts.confidence"):
             self.assertIn(token, self.html)
 
+    def test_no_duplicate_style_attributes(self):
+        # A duplicate style="..." style="..." on one element silently drops the second
+        # declaration per HTML parsing rules -- caught a real bug in the knowledge() view.
+        self.assertNotRegex(self.html, r'style="[^"]*"\s+style="')
+
+    def test_no_fabricated_version_string(self):
+        # The sidebar previously hardcoded a fake "v3.5.0 Active" build label with no
+        # basis in any repo artifact. It must now be populated from the real snapshot
+        # date at load time, not hardcoded in the static markup.
+        self.assertNotRegex(self.html, r'id="core-version">\s*v\d')
+        self.assertIn("DATA.meta.snapshotDate", self.html)
+        self.assertIn("core-version", self.html)
+
+    def test_mobile_menu_toggle_present_and_ordered_correctly(self):
+        # A hamburger toggle must exist so all 6 views stay reachable when the sidebar
+        # slides off-screen below 640px -- and the unconditional ".menu-toggle{display:none}"
+        # rule must appear BEFORE the @media block that re-enables it, since two rules of
+        # equal specificity resolve by source order (a real ordering bug found and fixed
+        # in this file: the override was accidentally placed after the media query).
+        self.assertIn('id="menu-toggle"', self.html)
+        self.assertIn("menu-toggle", self.html)
+        unconditional_idx = self.html.index(".menu-toggle { display: none; }")
+        media_idx = self.html.index("@media (max-width: 640px)")
+        self.assertLess(unconditional_idx, media_idx,
+                         "unconditional .menu-toggle rule must precede the 640px media query")
+
+    def test_crew_tiles_are_keyboard_accessible(self):
+        # Crew tiles are real navigation (onclick sets location.hash), so they must be
+        # focusable and operable from the keyboard, not just the mouse.
+        tiles = re.findall(r'<div class="crew-tile[^"]*"[^>]*>', self.html)
+        self.assertEqual(len(tiles), 4)
+        for tile in tiles:
+            self.assertIn('role="button"', tile)
+            self.assertIn('tabindex="0"', tile)
+            self.assertIn("onkeydown=", tile)
+
+    def test_purple_text_color_meets_wcag_aa_contrast(self):
+        # --purple (#7701d0) is ~2.4:1 on the obsidian background -- fine for borders/glows,
+        # but was also used as *text* color (nav active label, chip-purple, .text-purple),
+        # failing WCAG AA (4.5:1). A lighter --purple-ink token must be used for text roles.
+        def luminance(hexcol):
+            hexcol = hexcol.lstrip("#")
+            r, g, b = (int(hexcol[i:i + 2], 16) / 255 for i in (0, 2, 4))
+            def f(c):
+                return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
+            r, g, b = f(r), f(g), f(b)
+            return 0.2126 * r + 0.7152 * g + 0.0722 * b
+
+        def contrast(a, b):
+            la, lb = luminance(a), luminance(b)
+            la, lb = max(la, lb), min(la, lb)
+            return (la + 0.05) / (lb + 0.05)
+
+        m = re.search(r"--purple-ink:\s*(#[0-9a-fA-F]{6})", self.html)
+        self.assertIsNotNone(m, "--purple-ink token not found")
+        self.assertGreaterEqual(contrast(m.group(1), "#051424"), 4.5)
+        self.assertIn(".text-purple { color: var(--purple-ink); }", self.html)
+        self.assertIn("color: var(--purple-ink); border-right-color: var(--purple);", self.html)
+        self.assertIn(".chip-purple { color: var(--purple-ink);", self.html)
+
+    def test_no_dead_css_selectors(self):
+        # .callout and .kbd were defined but never referenced by any rendered element.
+        self.assertNotRegex(self.html, r"\n\.callout \{")
+        self.assertNotRegex(self.html, r"\n\.kbd \{")
+
 
 class DataAgainstRepoTests(unittest.TestCase):
     """Every figure in the UI must trace to the same repo state the AOS kernel reports."""
@@ -130,6 +195,19 @@ class DataAgainstRepoTests(unittest.TestCase):
         ui_ids = {a["id"] for a in self.data["agents"]}
         self.assertTrue(ui_ids.issubset(registry_ids), ui_ids - registry_ids)
         self.assertEqual(len(self.data["agents"]), 9)
+
+    def test_every_agent_has_a_distinct_arabic_name(self):
+        arabic_range = re.compile(r"[؀-ۿ]")
+        seen_ar, seen_en = set(), set()
+        for a in self.data["agents"]:
+            self.assertIn("name", a, a)
+            self.assertIn("nameAr", a, a)
+            self.assertTrue(a["name"], a)
+            self.assertRegex(a["nameAr"], arabic_range, f"{a['id']} nameAr has no Arabic script")
+            self.assertNotIn(a["name"], seen_en, "duplicate English name")
+            self.assertNotIn(a["nameAr"], seen_ar, "duplicate Arabic name")
+            seen_en.add(a["name"])
+            seen_ar.add(a["nameAr"])
 
     def test_skill_count_matches_registry(self):
         self.assertGreaterEqual(len(registry.skills()), self.data["skills"])
