@@ -338,7 +338,7 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
  "meta": {
   "problem": "How should talabat allocate its 2026 USD 175 million investment programme across Everyday App and Food-leadership initiatives -- and within them, across markets and initiative categories -- to maximise profitable growth, CLV, retention, and long-term platform economics?",
   "snapshotDate": "2026-07-26",
-  "nextAction": "All 14 sections independently verified. Whole-plan gates 14-18 all PASS. Stage 19 (Publication handoff) next -- published DOCX/PDF predates the Stage 17 fixes and needs regenerating."
+  "nextAction": "Session 13: Business_Plan_Final and v1.1_Executive_Visual rebuilt and content-verified against the Stage 17 fixes (a silent content-drop bug was found and fixed in the shared build script). v1.2_Executive still ships 2 known open defects, fix unmerged on a separate branch. Stage 19's formal handoff has not run."
  },
  "pipeline": {
   "partA": [
@@ -770,7 +770,7 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
    "short": "Formal handoff to executive-document-formatting -- next."
   }
  ],
- "publicationNote": "The already-published DOCX/PDF package predates the Stage 17 citation fixes and has not yet been regenerated."
+ "publicationNote": "2 of 3 published editions (Final, v1.1) were rebuilt and content-verified against the Stage 17 fixes in Session 13. The v1.2 Executive edition still ships 2 known open defects (stale EBITDA figure, stray section-12 title text) -- fix exists unmerged on a separate branch. Stage 19's formal handoff has not yet run."
 }
 </script>
 <script>
@@ -1098,18 +1098,24 @@ const views = {
           <div style="display:flex;justify-content:space-between" class="label-status text-faint">
             <span>SECTIONS + GATES MAPPED</span><span>SNAPSHOT ${esc(DATA.meta.snapshotDate)}</span>
           </div>
-          <div class="grid g-2" style="margin-top:26px">
-            <div class="glass" style="padding:20px;border-color:rgba(0,255,102,.2)">
-              <div style="width:44px;height:44px;border-radius:999px;background:rgba(0,255,102,.1);border:1px solid rgba(0,255,102,.24);display:grid;place-items:center;color:var(--green);font-size:19px;margin-bottom:12px">&#128196;</div>
-              <div style="font-weight:700">Final DOCX/PDF</div>
-              <div class="label-status text-amber" style="margin-top:4px;text-transform:uppercase">stale — needs regeneration</div>
+          <div class="grid g-3" style="margin-top:26px">
+            <div class="glass" style="padding:18px;border-color:rgba(0,255,102,.2)">
+              <div style="width:40px;height:40px;border-radius:999px;background:rgba(0,255,102,.1);border:1px solid rgba(0,255,102,.24);display:grid;place-items:center;color:var(--green);font-size:17px;margin-bottom:10px">&#128196;</div>
+              <div style="font-weight:700;font-size:13px">Business_Plan_Final</div>
+              <div class="label-status text-green" style="margin-top:4px;text-transform:uppercase">rebuilt &amp; verified (24pp)</div>
             </div>
-            <div class="glass" style="padding:20px;border-color:rgba(0,240,255,.2)">
-              <div style="width:44px;height:44px;border-radius:999px;background:rgba(0,240,255,.1);border:1px solid rgba(0,240,255,.24);display:grid;place-items:center;color:var(--cyan);font-size:19px;margin-bottom:12px">&#128203;</div>
-              <div style="font-weight:700">OS Structure Doc</div>
-              <div class="label-status text-green" style="margin-top:4px;text-transform:uppercase">unblocked</div>
+            <div class="glass" style="padding:18px;border-color:rgba(0,255,102,.2)">
+              <div style="width:40px;height:40px;border-radius:999px;background:rgba(0,255,102,.1);border:1px solid rgba(0,255,102,.24);display:grid;place-items:center;color:var(--green);font-size:17px;margin-bottom:10px">&#128196;</div>
+              <div style="font-weight:700;font-size:13px">v1.1 Executive Visual</div>
+              <div class="label-status text-green" style="margin-top:4px;text-transform:uppercase">rebuilt &amp; verified (25pp)</div>
+            </div>
+            <div class="glass" style="padding:18px;border-color:rgba(255,184,0,.25)">
+              <div style="width:40px;height:40px;border-radius:999px;background:rgba(255,184,0,.1);border:1px solid rgba(255,184,0,.24);display:grid;place-items:center;color:var(--amber);font-size:17px;margin-bottom:10px">&#9888;</div>
+              <div style="font-weight:700;font-size:13px">v1.2 Executive</div>
+              <div class="label-status text-amber" style="margin-top:4px;text-transform:uppercase">2 open defects (47-51pp)</div>
             </div>
           </div>
+          <p class="hint" style="margin-top:14px">v1.2's fix sits unmerged on branch <span class="mono">regenerate-executive-edition-post-stage17</span>. OS Structure Document and group presentation deck remain unblocked but not started.</p>
         </div>
         <div class="span-4">
           <div class="glass card enter">
