@@ -93,12 +93,37 @@ npm run tauri ios build       # archive + export .ipa via Xcode signing
 
 ---
 
+## 4. CI builds — Windows, macOS, Linux, Android (no local toolchain needed)
+
+Since no single machine has every native toolchain (and this repo's own dev container is
+Linux-only), `.github/workflows/build-desktop.yml` and `.github/workflows/build-android.yml`
+build the real native artifacts on GitHub-hosted runners:
+
+- **`build-desktop.yml`** — a 3-way matrix (`windows-latest`, `macos-latest`, `ubuntu-22.04`)
+  that installs Rust + Node + platform build deps, runs `npm run icons` then `npm run tauri
+  build`, and uploads `.msi`/`-setup.exe` (Windows), `.dmg`/`.app` (macOS), `.deb`/`.AppImage`
+  (Linux) as workflow artifacts.
+- **`build-android.yml`** — installs the Android SDK/NDK and Rust Android targets on an Ubuntu
+  runner, runs `tauri android init` then `tauri android build --apk --debug`, and uploads the
+  sideloadable debug APK. A production release APK/AAB needs the team's own signing keystore
+  added as a repo secret (see §3 above) — this workflow deliberately ships an unsigned debug
+  build so it needs no secrets to run.
+- iOS is **not** covered here: Tauri iOS builds require a Mac with Xcode and a paid Apple
+  Developer account for real device signing, which CI cannot provide without the team's own
+  credentials as secrets.
+
+Trigger either workflow manually from the Actions tab (`workflow_dispatch`), or push a change
+under `app/agentic-os-console/`. Download the built installers/APK from the run's Artifacts
+list — GitHub retains them for 14 days.
+
+---
+
 ## Notes
 
 - **This repository's dev container is Linux** — it can serve the PWA and validate the web
   app, but native Windows/macOS/Android/iOS binaries must be produced on their respective
-  platforms with the toolchains above. The Tauri scaffold here is complete and standard; no
-  code changes are needed at build time.
+  platforms with the toolchains above (or via the CI workflows in §4). The Tauri scaffold here
+  is complete and standard; no code changes are needed at build time.
 - The Tauri shell grants the WebView **no** filesystem, shell, or network permissions
   (`capabilities/default.json` → `core:default` only); the console is a read-only viewer.
 - Keep `src/` self-contained (no CDN references) so desktop/mobile builds work fully offline.

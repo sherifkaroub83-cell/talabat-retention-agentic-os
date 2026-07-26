@@ -1,0 +1,65 @@
+name: Build Android App
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["claude/talabat-agentic-os-ui-1nemuv", "main"]
+    paths:
+      - "app/agentic-os-console/**"
+      - ".github/workflows/build-android.yml"
+
+env:
+  NDK_VERSION: "27.0.12077973"
+
+jobs:
+  android:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Install Android NDK
+        run: |
+          sdkmanager --install "ndk;${{ env.NDK_VERSION }}"
+          echo "NDK_HOME=$ANDROID_HOME/ndk/${{ env.NDK_VERSION }}" >> "$GITHUB_ENV"
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-linux-android,armv7-linux-androideabi,i686-linux-android,x86_64-linux-android
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install npm dependencies (Tauri CLI)
+        working-directory: app/agentic-os-console
+        run: npm install
+
+      - name: Generate full icon set from the master icon.png
+        working-directory: app/agentic-os-console
+        run: npm run icons
+
+      - name: Init Android project
+        working-directory: app/agentic-os-console
+        run: npx tauri android init
+
+      # Debug-signed APK: no keystore secret required. A production release
+      # build needs the team's own Android keystore configured as a repo
+      # secret, per app/agentic-os-console/BUILD.md.
+      - name: Build debug APK
+        working-directory: app/agentic-os-console
+        run: npx tauri android build --apk --debug
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: agentic-os-console-android-debug-apk
+          path: app/agentic-os-console/src-tauri/gen/android/app/build/outputs/apk/**/*.apk
+          if-no-files-found: warn
+          retention-days: 14
