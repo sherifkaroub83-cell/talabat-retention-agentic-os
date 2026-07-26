@@ -3,36 +3,36 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Aegis OS | talabat Agentic Command Center</title>
-<meta name="description" content="Obsidian command center for the talabat Agentic OS — AI-enabled capital allocation for the 2026 USD 175m investment programme. Dependency-free, no build step." />
+<title>Agentic OS | talabat Obsidian Command Center</title>
+<meta name="description" content="Obsidian command center for the talabat Agentic OS — AI-enabled capital allocation for the 2026 USD 175m investment programme. Dependency-free, no build step, real-time client clock." />
 <meta name="color-scheme" content="dark" />
-<meta name="theme-color" content="#050506" />
+<meta name="theme-color" content="#051424" />
 <style>
 /* ==========================================================================
-   Aegis OS — design tokens
+   Agentic OS — design tokens
    Obsidian/cyan/purple glassmorphic system, hand-written (no CDN deps) so it
-   renders identically offline or online. Swap in Hanken Grotesk / JetBrains
-   Mono via <link> tags if network access to fonts.googleapis.com is available;
-   the stacks below degrade gracefully to system fonts otherwise.
+   renders identically offline or online. Swap in Geist / Space Mono via
+   <link> tags if network access to fonts.googleapis.com is available; the
+   stacks below degrade gracefully to system fonts otherwise.
    ========================================================================== */
 :root {
-  --obsidian-deep: #050506;
-  --surface: #0d0e11;
-  --surface-card: rgba(22, 27, 34, 0.55);
-  --surface-card-hover: rgba(22, 27, 34, 0.8);
+  --obsidian-deep: #051424;
+  --surface: #0c1c2e;
+  --surface-card: rgba(15, 30, 48, 0.55);
+  --surface-card-hover: rgba(15, 30, 48, 0.8);
   --border-soft: rgba(255, 255, 255, 0.07);
   --border: rgba(255, 255, 255, 0.12);
   --ink: #e3e2e6;
   --ink-dim: #9aa3ab;
   --ink-faint: #6b7480;
-  --cyan: #00f0ff;
-  --purple: #9d4edd;
+  --cyan: #00dbe9;
+  --purple: #7701d0;
   --green: #00ff66;
   --amber: #ffb800;
   --red: #ff4d5e;
-  --font-head: "Hanken Grotesk", "Segoe UI Semibold", system-ui, -apple-system, sans-serif;
-  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --font-head: "Geist", "Segoe UI Semibold", system-ui, -apple-system, sans-serif;
+  --font-body: "Geist", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "Space Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 * { box-sizing: border-box; }
 html, body { height: 100%; }
@@ -54,8 +54,8 @@ body::before {
   inset: -50% -50% auto auto;
   width: 200%; height: 200%;
   background-image:
-    linear-gradient(rgba(0, 240, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 240, 255, 0.035) 1px, transparent 1px);
+    linear-gradient(rgba(0, 219, 233, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 219, 233, 0.035) 1px, transparent 1px);
   background-size: 50px 50px;
   transform: perspective(1000px) rotateX(60deg) translateY(-25%);
   animation: grid-move 60s linear infinite;
@@ -78,14 +78,14 @@ a { color: inherit; }
   transition: border-color .35s cubic-bezier(.2,.8,.2,1), background .35s cubic-bezier(.2,.8,.2,1), transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s cubic-bezier(.2,.8,.2,1);
 }
 .glass:hover {
-  border-color: rgba(0, 240, 255, 0.35);
+  border-color: rgba(0, 219, 233, 0.35);
   background: var(--surface-card-hover);
   transform: translateY(-3px);
-  box-shadow: 0 14px 40px -14px rgba(0, 240, 255, 0.18);
+  box-shadow: 0 14px 40px -14px rgba(0, 219, 233, 0.18);
 }
-.glow-cyan { box-shadow: 0 0 22px rgba(0, 240, 255, 0.16); }
-.glow-purple { box-shadow: 0 0 22px rgba(157, 78, 221, 0.18); }
-@keyframes pulse-border { 0%, 100% { border-color: rgba(0, 240, 255, 0.22); } 50% { border-color: rgba(157, 78, 221, 0.55); } }
+.glow-cyan { box-shadow: 0 0 22px rgba(0, 219, 233, 0.16); }
+.glow-purple { box-shadow: 0 0 22px rgba(119, 1, 208, 0.18); }
+@keyframes pulse-border { 0%, 100% { border-color: rgba(0, 219, 233, 0.22); } 50% { border-color: rgba(119, 1, 208, 0.55); } }
 .thinking-border { animation: pulse-border 3s infinite; border-width: 1.5px; }
 @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
 .shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent); background-size: 200% 100%; animation: shimmer 2.2s infinite linear; }
@@ -136,7 +136,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 }
 .nav a:hover { background: rgba(255,255,255,.04); color: var(--ink); }
 .nav a.active {
-  background: rgba(157,78,221,.12); color: var(--purple); border-right-color: var(--purple);
+  background: rgba(119,1,208,.12); color: var(--purple); border-right-color: var(--purple);
 }
 .nav .ic { width: 18px; text-align: center; font-size: 15px; }
 
@@ -147,7 +147,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
   font-family: var(--font-mono); font-weight: 700; font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
   transition: transform .18s cubic-bezier(.33,1,.68,1), box-shadow .18s ease;
 }
-.export-btn:hover { box-shadow: 0 0 20px rgba(0,240,255,.4); }
+.export-btn:hover { box-shadow: 0 0 20px rgba(0,219,233,.4); }
 .export-btn:active { transform: scale(.97); }
 .sidebar-links { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border-soft); display: grid; gap: 10px; }
 .sidebar-links a { display: flex; align-items: center; gap: 9px; color: var(--ink-faint); text-decoration: none; font-family: var(--font-mono); font-size: 11px; }
@@ -167,7 +167,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 .search-box { position: relative; display: none; }
 @media (min-width: 820px) { .search-box { display: flex; align-items: center; } }
 .search-box input {
-  background: rgba(5,5,6,.5); border: none; border-bottom: 1px solid rgba(0,240,255,.28);
+  background: rgba(5,5,6,.5); border: none; border-bottom: 1px solid rgba(0,219,233,.28);
   color: var(--ink); font-size: 13px; padding: 7px 34px 7px 12px; width: 230px; outline: none;
 }
 .search-box input:focus { border-color: var(--cyan); }
@@ -202,8 +202,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 
 .chip { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 10.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
 .chip-green { color: var(--green); background: rgba(0,255,102,.1); border: 1px solid rgba(0,255,102,.28); }
-.chip-cyan { color: var(--cyan); background: rgba(0,240,255,.1); border: 1px solid rgba(0,240,255,.28); }
-.chip-purple { color: var(--purple); background: rgba(157,78,221,.14); border: 1px solid rgba(157,78,221,.3); }
+.chip-cyan { color: var(--cyan); background: rgba(0,219,233,.1); border: 1px solid rgba(0,219,233,.28); }
+.chip-purple { color: var(--purple); background: rgba(119,1,208,.14); border: 1px solid rgba(119,1,208,.3); }
 .chip-amber { color: var(--amber); background: rgba(255,184,0,.1); border: 1px solid rgba(255,184,0,.28); }
 .chip-dim { color: var(--ink-faint); background: rgba(255,255,255,.05); border: 1px solid var(--border); }
 
@@ -213,8 +213,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 .ring-wrap { position: relative; width: 280px; height: 280px; }
 .ring-wrap svg { width: 100%; height: 100%; transform: rotate(-90deg); }
 .ring-track { fill: none; stroke: rgba(255,255,255,.06); stroke-width: 6; }
-.ring-fill { fill: none; stroke: var(--cyan); stroke-width: 6; stroke-linecap: round; filter: drop-shadow(0 0 8px rgba(0,240,255,.55)); transition: stroke-dashoffset 1.1s cubic-bezier(.22,1,.36,1); }
-.ring-outer { position: absolute; inset: 18px; border-radius: 999px; border: 2px dashed rgba(0,240,255,.2); animation: spin 22s linear infinite; }
+.ring-fill { fill: none; stroke: var(--cyan); stroke-width: 6; stroke-linecap: round; filter: drop-shadow(0 0 8px rgba(0,219,233,.55)); transition: stroke-dashoffset 1.1s cubic-bezier(.22,1,.36,1); }
+.ring-outer { position: absolute; inset: 18px; border-radius: 999px; border: 2px dashed rgba(0,219,233,.2); animation: spin 22s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .ring-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
 .ring-value { font-family: var(--font-head); font-size: 42px; font-weight: 800; color: #fff; text-shadow: 0 0 14px rgba(255,255,255,.4); }
@@ -228,8 +228,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 .bar-track { height: 8px; background: rgba(255,255,255,.06); border-radius: 6px; overflow: hidden; }
 .bar-fill { height: 100%; border-radius: 6px; }
 .spark { display: flex; align-items: flex-end; gap: 5px; height: 96px; }
-.spark > div { flex: 1; border-radius: 4px 4px 0 0; background: rgba(0,240,255,.22); transition: height .3s; min-height: 3px; }
-.spark > div:hover { background: rgba(0,240,255,.5); }
+.spark > div { flex: 1; border-radius: 4px 4px 0 0; background: rgba(0,219,233,.22); transition: height .3s; min-height: 3px; }
+.spark > div:hover { background: rgba(0,219,233,.5); }
 
 /* ---------- lists / tables ---------- */
 .ilist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
@@ -240,7 +240,7 @@ table.data td { padding: 12px 14px; border-bottom: 1px solid var(--border-soft);
 table.data tr:last-child td { border-bottom: none; }
 table.data tr:hover td { background: rgba(255,255,255,.025); }
 .scroll-y { overflow-y: auto; }
-.scroll-y::-webkit-scrollbar { width: 5px; } .scroll-y::-webkit-scrollbar-thumb { background: rgba(0,240,255,.22); border-radius: 8px; }
+.scroll-y::-webkit-scrollbar { width: 5px; } .scroll-y::-webkit-scrollbar-thumb { background: rgba(0,219,233,.22); border-radius: 8px; }
 
 /* ---------- timeline (decisions) ---------- */
 .tl-item { padding: 15px; background: rgba(255,255,255,.03); border-left: 2px solid var(--border); border-radius: 0 9px 9px 0; margin-bottom: 12px; cursor: default; transition: background .2s; }
@@ -252,7 +252,7 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
 /* ---------- QA gate checklist ---------- */
 .gate-row { display: flex; align-items: flex-start; gap: 13px; padding: 13px; border-radius: 9px; margin-bottom: 10px; }
 .gate-pass { background: rgba(0,255,102,.05); border: 1px solid rgba(0,255,102,.16); }
-.gate-next { background: rgba(157,78,221,.08); border: 1px solid rgba(157,78,221,.24); }
+.gate-next { background: rgba(119,1,208,.08); border: 1px solid rgba(119,1,208,.24); }
 .gate-check { width: 20px; height: 20px; border-radius: 6px; display: grid; place-items: center; flex: 0 0 20px; margin-top: 1px; }
 .gate-check.pass { background: var(--green); color: #04120a; }
 .gate-check.next { border: 2px solid var(--purple); }
@@ -274,9 +274,16 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
 .footer a { color: var(--ink-faint); text-decoration: underline; margin-left: 16px; }
 .footer a:hover { color: var(--green); }
 
-.callout { border-left: 3px solid var(--cyan); background: rgba(0,240,255,.06); border-radius: 0 9px 9px 0; padding: 11px 14px; font-size: 12.5px; color: var(--ink-dim); }
+.callout { border-left: 3px solid var(--cyan); background: rgba(0,219,233,.06); border-radius: 0 9px 9px 0; padding: 11px 14px; font-size: 12.5px; color: var(--ink-dim); }
 .kbd { font-family: var(--font-mono); font-size: 10.5px; background: rgba(255,255,255,.06); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; }
 .hint { font-size: 11.5px; color: var(--ink-faint); }
+
+/* ---------- audit view: system log ---------- */
+.log-panel { flex: 1; min-height: 260px; max-height: 380px; overflow-y: auto; background: rgba(0,0,0,.28); border: 1px solid var(--border-soft); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 7px; }
+.log-line { display: flex; gap: 10px; font-family: var(--font-mono); font-size: 11px; line-height: 1.4; }
+.log-line .lt { color: var(--ink-faint); white-space: nowrap; }
+.log-line.ok .lm { color: var(--green); }
+.log-line.warn .lm { color: var(--amber); }
 </style>
 </head>
 <body>
@@ -285,7 +292,7 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
     <div class="brand">
       <div class="brand-mark"><div>t</div></div>
       <div>
-        <div class="brand-name">Obsidian Core</div>
+        <div class="brand-name">Agentic Core</div>
         <div class="brand-sub" id="core-version">v3.5.0 Active</div>
       </div>
     </div>
@@ -295,6 +302,7 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
       <a href="#/decision" data-view="decision"><span class="ic">&#9878;</span>Decision</a>
       <a href="#/forecast" data-view="forecast"><span class="ic">&#8599;</span>Forecast</a>
       <a href="#/publication" data-view="publication"><span class="ic">&#8682;</span>Publication</a>
+      <a href="#/audit" data-view="audit"><span class="ic">&#9745;</span>Audit</a>
     </nav>
     <div class="sidebar-foot">
       <button class="export-btn" id="export-btn">Export Control</button>
@@ -307,9 +315,10 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
 
   <div class="main">
     <header class="topbar">
-      <h1 id="crumb-view">Aegis OS</h1>
+      <h1 id="crumb-view">Agentic OS</h1>
       <div class="divider-v"></div>
       <span class="tag-pill">STRATEGIC_LAYER_A1</span>
+      <span class="tag-pill mono" id="sys-clock" title="Local system clock — genuine real-time, not repo data">--:--:--</span>
       <div class="topbar-spacer"></div>
       <div class="search-box">
         <input type="text" placeholder="Query Intelligence Core…" id="search-input" autocomplete="off" />
@@ -323,7 +332,7 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
     <main class="content" id="view" tabindex="-1"></main>
 
     <footer class="footer">
-      <div><span class="text-green" id="foot-ready">READY</span> &nbsp;·&nbsp; talabat Agentic OS — Strategic Intelligence Tier</div>
+      <div><span class="text-green" id="foot-ready">READY</span> &nbsp;·&nbsp; talabat Agentic OS — Strategic Intelligence Tier &nbsp;·&nbsp; session uptime <span class="mono" id="sys-uptime">00:00:00</span></div>
       <div>
         <a href="#/publication">PDF Export</a>
         <a href="#/publication">DOCX Bundle</a>
@@ -333,7 +342,7 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
   </div>
 </div>
 
-<script id="aegis-data" type="application/json">
+<script id="os-data" type="application/json">
 {
  "meta": {
   "problem": "How should talabat allocate its 2026 USD 175 million investment programme across Everyday App and Food-leadership initiatives -- and within them, across markets and initiative categories -- to maximise profitable growth, CLV, retention, and long-term platform economics?",
@@ -775,14 +784,16 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
 </script>
 <script>
 /* =========================================================================
-   Aegis OS Command Center — application logic
+   Agentic OS Command Center — application logic
    Dependency-free (no build step, no CDN). Data is the repository snapshot
    embedded above (regenerate via scripts/aos/export_console.py-style
    procedure; see README_UI.md). Never fabricate figures the corpus does not
    disclose — every number here traces to the same repo state as
-   app/agentic-os-console/src/js/data.js and js/kernel.js.
+   app/agentic-os-console/src/js/data.js and js/kernel.js. The only values
+   computed client-side and NOT sourced from the snapshot are the system
+   clock and session-uptime counter (genuine local time, not business data).
    ========================================================================= */
-const DATA = JSON.parse(document.getElementById('aegis-data').textContent);
+const DATA = JSON.parse(document.getElementById('os-data').textContent);
 const $ = (sel, el = document) => el.querySelector(sel);
 const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -865,7 +876,7 @@ const views = {
         <div class="glass card enter" style="animation-delay:.2s">
           <div class="card-head">
             <div style="display:flex;align-items:center;gap:10px">
-              <div class="card-icon-box" style="background:rgba(157,78,221,.12);color:var(--purple)">&#9737;</div>
+              <div class="card-icon-box" style="background:rgba(119,1,208,.12);color:var(--purple)">&#9737;</div>
               <div><h4 style="font-size:14px">Knowledge Layer</h4><p class="label-status text-faint">Vault indexes</p></div>
             </div>
           </div>
@@ -878,7 +889,7 @@ const views = {
         <div class="glass card enter" style="animation-delay:.25s">
           <div class="card-head">
             <div style="display:flex;align-items:center;gap:10px">
-              <div class="card-icon-box" style="background:rgba(0,240,255,.12);color:var(--cyan)">&#8599;</div>
+              <div class="card-icon-box" style="background:rgba(0,219,233,.12);color:var(--cyan)">&#8599;</div>
               <div><h4 style="font-size:14px">Forecast</h4><p class="label-status text-faint">FY2026 guidance</p></div>
             </div>
             <span class="label-status text-cyan">DISCLOSED</span>
@@ -921,7 +932,7 @@ const views = {
             <span class="label-status text-faint">5 tiers · cites upward only</span>
           </div>
           <div style="flex:1;position:relative">${neuralMapSvg(tiers)}</div>
-          <div style="position:absolute;bottom:20px;left:36px;background:rgba(5,5,6,.75);border:1px solid rgba(0,240,255,.2);border-radius:9px;padding:12px 16px">
+          <div style="position:absolute;bottom:20px;left:36px;background:rgba(5,5,6,.75);border:1px solid rgba(0,219,233,.2);border-radius:9px;padding:12px 16px">
             <p class="label-caps text-cyan" style="margin-bottom:6px">CORPUS: ${DATA.corpus.total} SOURCE DOCS</p>
             <div class="bar-track" style="width:130px"><div class="bar-fill" style="width:100%;background:var(--cyan)"></div></div>
           </div>
@@ -980,7 +991,7 @@ const views = {
           </div>
           <div class="scroll-y" style="flex:1;padding:16px 16px 4px">
             ${[...DATA.decisions].reverse().slice(0,8).map(d => `
-              <div class="tl-item" style="border-left-color:${d.impact==='high'?'var(--amber)':'rgba(0,240,255,.4)'}">
+              <div class="tl-item" style="border-left-color:${d.impact==='high'?'var(--amber)':'rgba(0,219,233,.4)'}">
                 <div class="tl-top"><span>${esc(d.id)}</span><span>${esc(d.date)}</span></div>
                 <h4>${esc(d.title)}</h4>
                 <p>${esc(d.note || 'Recorded in vault/Decisions/Decision_Log.')}</p>
@@ -1034,12 +1045,12 @@ const views = {
             </div>
             <svg viewBox="0 0 800 220" style="position:absolute;inset:0;width:100%;height:100%" preserveAspectRatio="none">
               <defs>
-                <linearGradient id="gline" x1="0" x2="1"><stop offset="0%" stop-color="${'#9D4EDD'}"/><stop offset="100%" stop-color="${'#00F0FF'}"/></linearGradient>
+                <linearGradient id="gline" x1="0" x2="1"><stop offset="0%" stop-color="${'#7701D0'}"/><stop offset="100%" stop-color="${'#00DBE9'}"/></linearGradient>
               </defs>
               <path d="M0,180 Q120,150 240,160 T480,90 T800,40" fill="none" stroke="url(#gline)" stroke-width="4" stroke-linecap="round"/>
             </svg>
             <div style="position:absolute;right:6%;top:8%;text-align:center">
-              <div style="width:11px;height:11px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px rgba(0,240,255,.9);margin:0 auto"></div>
+              <div style="width:11px;height:11px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px rgba(0,219,233,.9);margin:0 auto"></div>
               <div class="glass" style="padding:8px 12px;margin-top:8px;min-width:130px">
                 <p class="label-status text-cyan">BASE CASE</p>
                 <p style="font-weight:700;font-size:15px">${esc(f.gmv)}</p>
@@ -1065,7 +1076,7 @@ const views = {
             <div class="card-head"><h3 class="card-title">Scenario Structure</h3><span class="label-status text-faint">DEC-005 / DEC-008</span></div>
             ${f.cases.map((c,i) => `
               <div style="display:flex;align-items:flex-start;gap:12px;padding:10px 0;${i<2?'border-bottom:1px solid var(--border-soft)':''}">
-                <div class="mono" style="width:26px;height:26px;border-radius:7px;background:${i===0?'rgba(0,240,255,.14)':'rgba(255,255,255,.05)'};color:${i===0?'var(--cyan)':'var(--ink-faint)'};display:grid;place-items:center;font-weight:700;font-size:11px">${['B','U','D'][i]}</div>
+                <div class="mono" style="width:26px;height:26px;border-radius:7px;background:${i===0?'rgba(0,219,233,.14)':'rgba(255,255,255,.05)'};color:${i===0?'var(--cyan)':'var(--ink-faint)'};display:grid;place-items:center;font-weight:700;font-size:11px">${['B','U','D'][i]}</div>
                 <div style="flex:1">
                   <div style="display:flex;justify-content:space-between"><strong style="font-size:12.5px">${esc(c.name)} case</strong>${i===0?'<span class="chip chip-cyan">headline</span>':'<span class="chip chip-dim">sensitivity</span>'}</div>
                   <p class="text-dim" style="font-size:11.5px;margin-top:4px">${esc(c.desc)}</p>
@@ -1137,6 +1148,88 @@ const views = {
         </div>
       </div>`;
   },
+
+  audit() {
+    const r = readiness();
+    const gates = DATA.gates;
+    const passedGates = gates.filter(g => g.status === 'done').length;
+    const circ = 2 * Math.PI * 42;
+    const offset = circ - (r.pct / 100) * circ;
+    const groups = [
+      { label: 'S1-S4', secs: DATA.sections.filter(s => s.n >= 1 && s.n <= 4) },
+      { label: 'S5-S8', secs: DATA.sections.filter(s => s.n >= 5 && s.n <= 8) },
+      { label: 'S9-S12', secs: DATA.sections.filter(s => s.n >= 9 && s.n <= 12) },
+      { label: 'S13-S14', secs: DATA.sections.filter(s => s.n >= 13 && s.n <= 14) },
+    ].map(g => ({ ...g, pct: Math.round((g.secs.filter(s => s.status === 'done_iv').length / g.secs.length) * 100), frac: `${g.secs.filter(s => s.status === 'done_iv').length}/${g.secs.length}` }));
+    groups.push({ label: 'META', pct: Math.round((passedGates / gates.length) * 100), frac: `${passedGates}/${gates.length}` });
+    const logEntries = [
+      ...[...DATA.decisions].reverse().slice(0, 6).map(d => ({ ok: true, date: d.date, text: `${d.id} recorded — ${d.title}` })),
+      ...gates.filter(g => g.status === 'done').slice(0, 4).map(g => ({ ok: true, date: DATA.meta.snapshotDate, text: `Gate PASS — ${g.name}` })),
+      ...gates.filter(g => g.status !== 'done').map(g => ({ ok: false, date: DATA.meta.snapshotDate, text: `Gate PENDING — ${g.name}: ${g.short}` })),
+    ];
+    return `
+      <h1 class="page-title enter">Audit &amp; Verification</h1>
+      <p class="page-sub enter">Every figure on this page is derived live from the same pipeline/section/gate state shown on Command Center and Publication — nothing here is a separately-fabricated audit score.</p>
+      <div class="grid g-12">
+        <div class="glass card span-4 hero-visual enter" style="min-height:300px">
+          <div class="radial-glow"></div>
+          <div class="ring-wrap" style="width:200px;height:200px">
+            <svg viewBox="0 0 100 100">
+              <circle class="ring-track" cx="50" cy="50" r="42"/>
+              <circle class="ring-fill" cx="50" cy="50" r="42" stroke-dasharray="${circ.toFixed(1)}" stroke-dashoffset="${offset.toFixed(1)}"/>
+            </svg>
+            <div class="ring-center">
+              <div class="ring-value" style="font-size:32px">${r.pct}%</div>
+              <div class="ring-label">VERIFIED</div>
+            </div>
+          </div>
+          <p class="text-dim" style="font-size:11.5px;text-align:center;margin-top:14px">Pass-2 sections (${r.b}/${r.bTotal}) + whole-plan gates (${r.c}/${r.cTotal}), same formula as Command Center.</p>
+          <div style="display:flex;gap:10px;margin-top:14px">
+            <button class="export-btn" style="width:auto;padding:9px 14px;background:rgba(255,255,255,.06);color:var(--ink)" onclick="route()">Re-run Gate Check</button>
+            <a href="#/publication" class="export-btn" style="width:auto;padding:9px 14px;text-decoration:none;display:inline-flex;align-items:center">View Publication Gate</a>
+          </div>
+        </div>
+        <div class="grid span-8 g-4" style="gap:14px">
+          ${gates.map(g => `
+            <div class="glass card enter" style="padding:16px">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+                <span class="label-caps ${g.status==='done'?'text-green':'text-amber'}" style="font-size:10px">${esc(g.name)}</span>
+                ${gateChip(g.status)}
+              </div>
+              <div class="bar-track"><div class="bar-fill" style="width:${g.status==='done'?100:35}%;background:${g.status==='done'?'var(--green)':'var(--amber)'}"></div></div>
+              <p class="text-dim" style="font-size:11px;margin-top:8px;line-height:1.4">${esc(g.short)}</p>
+            </div>`).join('')}
+        </div>
+      </div>
+      <div class="grid g-12" style="margin-top:18px">
+        <div class="glass card span-7 enter">
+          <div class="card-head"><h3 class="card-title">Module Audit — 14 Sections</h3><span class="label-status text-faint">Pass 2 verification</span></div>
+          <div class="grid g-4" style="gap:10px">
+            ${DATA.sections.map(s => `
+              <div class="glass" style="padding:12px;border-color:${s.status==='done_iv'?'rgba(0,255,102,.2)':'rgba(255,184,0,.25)'}">
+                <div class="label-status text-faint" style="font-size:9.5px">S${String(s.n).padStart(2,'0')}</div>
+                <div style="font-size:11.5px;font-weight:600;margin:4px 0;line-height:1.3">${esc(s.name)}</div>
+                <span class="chip ${s.status==='done_iv'?'chip-green':'chip-amber'}" style="font-size:9px">${s.status==='done_iv'?'Verified':'Drafted'}</span>
+              </div>`).join('')}
+          </div>
+        </div>
+        <div class="glass card span-5 enter" style="display:flex;flex-direction:column">
+          <div class="card-head"><h3 class="card-title">System Log</h3><span class="label-status text-faint">real decisions + gate events</span></div>
+          <div class="log-panel">
+            ${logEntries.map(l => `<div class="log-line ${l.ok ? 'ok' : 'warn'}"><span class="lt">${esc(l.date)}</span><span class="lm">${l.ok ? '&#10003;' : '&#8987;'} ${esc(l.text)}</span></div>`).join('')}
+          </div>
+        </div>
+      </div>
+      <div class="glass card enter" style="margin-top:18px">
+        <div class="card-head"><h3 class="card-title">Integrity Distribution</h3><span class="label-status text-faint">verified sections + gates, grouped</span></div>
+        <div class="spark" style="align-items:flex-end;height:120px">
+          ${groups.map(g => `<div style="height:${Math.max(g.pct,4)}%;background:${g.pct===100?'rgba(0,255,102,.4)':'rgba(0,219,233,.3)'}" title="${esc(g.label)}: ${esc(g.frac)}"></div>`).join('')}
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:10px">
+          ${groups.map(g => `<div style="text-align:center;flex:1"><div class="label-status text-faint" style="font-size:10px">${esc(g.label)}</div><div class="mono" style="font-size:11px;margin-top:2px">${esc(g.frac)}</div></div>`).join('')}
+        </div>
+      </div>`;
+  },
 };
 
 /* ---------------- neural map ---------------- */
@@ -1148,7 +1241,7 @@ function neuralMapSvg(tiers) {
     return { ...t, x: cx + Math.cos(angle) * rx * 0.72, y: cy + Math.sin(angle) * ry * 0.72 };
   });
   const links = nodes.map((node, i) => nodes[i+1] ? `<line class="nm-link" x1="${node.x}" y1="${node.y}" x2="${nodes[i+1].x}" y2="${nodes[i+1].y}" stroke="var(--cyan)"/>` : '').join('');
-  const colors = ['#00F0FF','#9D4EDD','#00F0FF','#9D4EDD','#FFB800'];
+  const colors = ['#00dbe9','#7701d0','#00dbe9','#7701d0','#ffb800'];
   const dots = nodes.map((node, i) => `
     <g class="nm-node" transform="translate(${node.x},${node.y})">
       <circle r="26" stroke="${colors[i % colors.length]}" opacity="0.9"/>
@@ -1182,9 +1275,9 @@ function route() {
   const id = (location.hash.replace(/^#\//, '') || 'architecture').split('?')[0];
   const view = VALID.includes(id) ? id : 'architecture';
   $$('.nav a').forEach(a => a.classList.toggle('active', a.dataset.view === view));
-  const label = { architecture: 'Aegis OS', knowledge: 'Knowledge Layer', decision: 'Decision Layer', forecast: 'Decision & Forecast', publication: 'Publication & Export' }[view];
+  const label = { architecture: 'Agentic OS', knowledge: 'Knowledge Layer', decision: 'Decision Layer', forecast: 'Decision & Forecast', publication: 'Publication & Export', audit: 'Audit & Verification' }[view];
   $('#crumb-view').textContent = label;
-  document.title = `${label} · Aegis OS`;
+  document.title = `${label} · Agentic OS`;
   $('#view').innerHTML = views[view]();
   window.scrollTo(0, 0);
 }
@@ -1192,6 +1285,24 @@ $('#export-btn').addEventListener('click', () => { location.hash = '#/publicatio
 window.addEventListener('hashchange', route);
 wireSearch();
 route();
+
+/* ---------------- real-time chrome: genuine local clock + session uptime ---------------- */
+const LOAD_TS = Date.now();
+function fmtDuration(totalSeconds) {
+  const h = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+  const m = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+  const s = String(totalSeconds % 60).padStart(2, '0');
+  return `${h}:${m}:${s}`;
+}
+function tickClock() {
+  const now = new Date();
+  const clockEl = $('#sys-clock');
+  if (clockEl) clockEl.textContent = now.toTimeString().slice(0, 8) + ' LOCAL';
+  const upEl = $('#sys-uptime');
+  if (upEl) upEl.textContent = fmtDuration(Math.floor((Date.now() - LOAD_TS) / 1000));
+}
+tickClock();
+setInterval(tickClock, 1000);
 </script>
 </body>
 </html>

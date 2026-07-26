@@ -1,4 +1,4 @@
-"""Static-content correctness tests for the Aegis OS Command Center UI (ui/index.html).
+"""Static-content correctness tests for the Agentic OS Command Center UI (ui/index.html).
 
 Data-correctness only -- verifies the embedded repository snapshot (data.js-equivalent
 JSON blob) matches real repo state and stays internally consistent. Does not render the
@@ -21,10 +21,10 @@ from scripts.aos import pipeline, registry  # noqa: E402
 def _load_data():
     html = UI_HTML.read_text(encoding="utf-8")
     m = re.search(
-        r'<script id="aegis-data" type="application/json">\s*(\{.*?\})\s*</script>',
+        r'<script id="os-data" type="application/json">\s*(\{.*?\})\s*</script>',
         html, re.S,
     )
-    assert m, "aegis-data JSON block not found in ui/index.html"
+    assert m, "os-data JSON block not found in ui/index.html"
     return json.loads(m.group(1))
 
 
@@ -36,20 +36,45 @@ class UiFileTests(unittest.TestCase):
 
     def test_no_leftover_placeholder(self):
         self.assertNotIn("__AEGIS_DATA_JSON__", self.html)
+        self.assertNotIn("__OS_DATA_JSON__", self.html)
 
     def test_no_external_network_dependency(self):
         # Dependency-free by design: no CDN <script src="...">, no Google Fonts <link href="...">.
         # (A code comment may still *mention* fonts.googleapis.com as an optional upgrade note.)
         self.assertNotRegex(self.html, r'<(script|link)[^>]+(cdn\.tailwindcss\.com|fonts\.googleapis\.com|googleusercontent\.com)')
 
-    def test_five_nav_views_present(self):
-        for view in ("architecture", "knowledge", "decision", "forecast", "publication"):
+    def test_six_nav_views_present(self):
+        for view in ("architecture", "knowledge", "decision", "forecast", "publication", "audit"):
             self.assertIn(f'data-view="{view}"', self.html)
             self.assertIn(f"#/{view}", self.html)
 
     def test_json_blob_is_valid_and_nonempty(self):
         self.assertIsInstance(self.data, dict)
         self.assertGreater(len(self.data), 5)
+
+    def test_rebranded_to_agentic_os(self):
+        # The interface was refreshed from "Aegis OS" branding to "Agentic OS" / "Agentic Core";
+        # no stray old-brand text should remain user-facing.
+        self.assertIn("Agentic OS", self.html)
+        self.assertIn("Agentic Core", self.html)
+        self.assertNotIn("Aegis OS", self.html)
+        self.assertNotIn("Obsidian Core", self.html)
+
+    def test_audit_view_has_no_separate_fabricated_score(self):
+        # The Audit view must compute its headline "VERIFIED" figure from the same
+        # readiness()/pipeline data as Command Center -- never a second, hardcoded
+        # audit-specific percentage that could drift from the real gate state.
+        audit_fn_match = re.search(r"audit\(\) \{(.*?)\n  \},\n\};", self.html, re.S)
+        self.assertIsNotNone(audit_fn_match, "audit() view function not found")
+        audit_body = audit_fn_match.group(1)
+        self.assertIn("readiness()", audit_body)
+        self.assertNotRegex(audit_body, r'"\d{1,3}%"|>\d{1,3}%<')
+
+    def test_no_fabricated_live_telemetry(self):
+        # Dynamism must come from a genuine local clock/uptime counter, never simulated
+        # business metrics (fake network load, core temperature, node counts, hashes).
+        for banned in ("NETWORK LOAD", "CORE TEMP", "THERMAL", "Math.random()"):
+            self.assertNotIn(banned, self.html)
 
 
 class DataAgainstRepoTests(unittest.TestCase):
