@@ -78,11 +78,14 @@ class UiFileTests(unittest.TestCase):
 
     def test_persona_images_are_local_assets_not_external_cdn(self):
         # The Qais/crew persona art must ship as local files alongside index.html --
-        # never a googleusercontent.com or other external image URL.
+        # never a googleusercontent.com or other external image URL. Each of the 4
+        # crew members gets its own distinct photo file (not one shared composite
+        # cropped via CSS background-position).
         self.assertIn("assets/qais-hero.jpg", self.html)
-        self.assertIn("assets/team-grid.jpg", self.html)
+        for asset in ("zaid.jpg", "layla.jpg", "amir.jpg", "hana.jpg"):
+            self.assertIn(f"assets/{asset}", self.html)
         self.assertNotRegex(self.html, r'(googleusercontent\.com|lh3\.google)')
-        for asset in ("qais-hero.jpg", "team-grid.jpg"):
+        for asset in ("qais-hero.jpg", "zaid.jpg", "layla.jpg", "amir.jpg", "hana.jpg"):
             self.assertTrue((UI_HTML.parent / "assets" / asset).is_file(), asset)
 
     def test_crew_tiles_use_real_data_not_fabricated_stats(self):

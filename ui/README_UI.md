@@ -121,11 +121,12 @@ persona layer requested for the dashboard's visual identity, distinct from
 the real 9-agent technical roster shown in the Agent Roster card. Two rules
 keep this consistent with the rest of the page:
 
-- **Local assets only.** `assets/qais-hero.jpg` and `assets/team-grid.jpg`
-  ship alongside `index.html` (resized/re-encoded from the source uploads to
-  keep the page light) — never a `googleusercontent.com`/CDN image URL. The
-  four crew portraits are one composite image cropped per-tile via CSS
-  `background-position`, not four separate files.
+- **Local assets only.** `assets/qais-hero.jpg` plus one distinct file per
+  crew member — `assets/zaid.jpg`, `assets/layla.jpg`, `assets/amir.jpg`,
+  `assets/hana.jpg` — ship alongside `index.html` (each cropped from the
+  source upload, resized to 200×200, and re-encoded to keep the page light)
+  — never a `googleusercontent.com`/CDN image URL, and never one shared
+  composite cropped via CSS `background-position`.
 - **Every crew-tile stat is real.** Each tile's number comes straight from
   `DATA` (Zaid → Part A/gate counts, Layla → vault notes/corpus size, Amir →
   decision/option counts, Hana → the disclosed GMV range + forecast

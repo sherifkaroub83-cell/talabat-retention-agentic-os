@@ -248,12 +248,12 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 .qais-role { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; color: var(--cyan); text-transform: uppercase; margin-top: 1px; }
 .crew-tile { position: relative; border-radius: 14px; overflow: hidden; height: 150px; cursor: pointer; }
 .crew-tile:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
-.crew-tile .crew-bg { position: absolute; inset: 0; background-image: url('assets/team-grid.jpg'); background-size: 200% 200%; filter: saturate(.9) brightness(.75); transition: transform .4s ease, filter .4s ease; }
+.crew-tile .crew-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: saturate(.9) brightness(.75); transition: transform .4s ease, filter .4s ease; }
 .crew-tile:hover .crew-bg { transform: scale(1.06); filter: saturate(1) brightness(.85); }
-.crew-tile.q-zaid .crew-bg { background-position: 0% 0%; }
-.crew-tile.q-layla .crew-bg { background-position: 100% 0%; }
-.crew-tile.q-amir .crew-bg { background-position: 0% 100%; }
-.crew-tile.q-hana .crew-bg { background-position: 100% 100%; }
+.crew-tile.q-zaid .crew-bg { background-image: url('assets/zaid.jpg'); }
+.crew-tile.q-layla .crew-bg { background-image: url('assets/layla.jpg'); }
+.crew-tile.q-amir .crew-bg { background-image: url('assets/amir.jpg'); }
+.crew-tile.q-hana .crew-bg { background-image: url('assets/hana.jpg'); }
 .crew-tile .crew-shade { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(5,20,36,.94) 5%, rgba(5,20,36,.15) 65%, transparent 100%); }
 .crew-tile .crew-info { position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 12px; }
 .crew-tile .crew-name { font-family: var(--font-head); font-weight: 800; font-size: 13.5px; color: #fff; }
