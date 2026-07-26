@@ -112,11 +112,32 @@ Run with the rest of the suite: `python3 -m unittest discover -s tests`.
 - Hash-routed SPA (`#/architecture`, `#/knowledge`, `#/decision`,
   `#/forecast`, `#/publication`, `#/audit`), vanilla JS, no framework.
 
+## Persona layer — Qais + the OS crew
+
+The Command Center's hero card carries a small "Qais · OS Commander" avatar
+with a mouse-parallax tilt, and a 4-tile "crew" row (Zaid/Architecture,
+Layla/Knowledge, Amir/Decision, Hana/Forecast) below it — a decorative
+persona layer requested for the dashboard's visual identity, distinct from
+the real 9-agent technical roster shown in the Agent Roster card. Two rules
+keep this consistent with the rest of the page:
+
+- **Local assets only.** `assets/qais-hero.jpg` and `assets/team-grid.jpg`
+  ship alongside `index.html` (resized/re-encoded from the source uploads to
+  keep the page light) — never a `googleusercontent.com`/CDN image URL. The
+  four crew portraits are one composite image cropped per-tile via CSS
+  `background-position`, not four separate files.
+- **Every crew-tile stat is real.** Each tile's number comes straight from
+  `DATA` (Zaid → Part A/gate counts, Layla → vault notes/corpus size, Amir →
+  decision/option counts, Hana → the disclosed GMV range + forecast
+  confidence) — never an invented figure like the reference mockups'
+  "14,802 active nodes" or "99.2% projected accuracy."
+
 ## What changed from the previous draft
 
 The prior "Aegis OS" build (`#050506`/`#00F0FF`/`#9D4EDD`, Hanken Grotesk /
 Inter / JetBrains Mono) is superseded by this "Agentic OS" refresh
 (`#051424`/`#00dbe9`/`#7701d0`, Geist / Space Mono), which also adds the
-Audit & Verification view and the genuine live-clock/uptime chrome. Zero
-external dependencies retained; verified end-to-end (all 6 views, zero
-console errors) via headless Chromium.
+Audit & Verification view, the genuine live-clock/uptime chrome, and the
+Qais/crew persona layer described above. Zero external network
+dependencies retained (images are local files, not a CDN); verified
+end-to-end (all 6 views, zero console errors) via headless Chromium.

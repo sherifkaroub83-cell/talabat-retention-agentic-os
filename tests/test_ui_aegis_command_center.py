@@ -76,6 +76,22 @@ class UiFileTests(unittest.TestCase):
         for banned in ("NETWORK LOAD", "CORE TEMP", "THERMAL", "Math.random()"):
             self.assertNotIn(banned, self.html)
 
+    def test_persona_images_are_local_assets_not_external_cdn(self):
+        # The Qais/crew persona art must ship as local files alongside index.html --
+        # never a googleusercontent.com or other external image URL.
+        self.assertIn("assets/qais-hero.jpg", self.html)
+        self.assertIn("assets/team-grid.jpg", self.html)
+        self.assertNotRegex(self.html, r'(googleusercontent\.com|lh3\.google)')
+        for asset in ("qais-hero.jpg", "team-grid.jpg"):
+            self.assertTrue((UI_HTML.parent / "assets" / asset).is_file(), asset)
+
+    def test_crew_tiles_use_real_data_not_fabricated_stats(self):
+        # Each persona tile (Zaid/Layla/Amir/Hana) must render figures pulled from the
+        # same DATA object as the rest of the page, not invented numbers.
+        for token in ("DATA.vault.totalNotes", "DATA.corpus.total", "DATA.decisions.length",
+                      "DATA.options.length", "DATA.forecasts.gmv", "DATA.forecasts.confidence"):
+            self.assertIn(token, self.html)
+
 
 class DataAgainstRepoTests(unittest.TestCase):
     """Every figure in the UI must trace to the same repo state the AOS kernel reports."""

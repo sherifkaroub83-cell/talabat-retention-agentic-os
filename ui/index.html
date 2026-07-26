@@ -224,6 +224,26 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 .hero-stat .k { font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; color: var(--ink-faint); letter-spacing: .06em; margin-bottom: 5px; }
 .hero-stat .v { display: flex; align-items: center; gap: 6px; justify-content: center; font-family: var(--font-head); font-weight: 700; font-size: 17px; }
 
+/* ---------- Qais persona header + OS crew ---------- */
+:root { --mouse-x: 0.5; --mouse-y: 0.5; }
+.qais-strip { display: flex; align-items: center; gap: 14px; position: relative; z-index: 2; margin-bottom: 6px; }
+.qais-avatar { width: 64px; height: 64px; border-radius: 999px; flex: 0 0 64px; overflow: hidden; border: 2px solid rgba(0,219,233,.4); box-shadow: 0 0 22px rgba(0,219,233,.25); transform: perspective(600px) rotateX(calc((var(--mouse-y) - 0.5) * -8deg)) rotateY(calc((var(--mouse-x) - 0.5) * 8deg)); transition: transform .1s ease-out; }
+.qais-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.qais-name { font-family: var(--font-head); font-weight: 800; font-size: 15px; color: #fff; letter-spacing: .02em; }
+.qais-role { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; color: var(--cyan); text-transform: uppercase; margin-top: 1px; }
+.crew-tile { position: relative; border-radius: 14px; overflow: hidden; height: 150px; cursor: pointer; }
+.crew-tile .crew-bg { position: absolute; inset: 0; background-image: url('assets/team-grid.jpg'); background-size: 200% 200%; filter: saturate(.9) brightness(.75); transition: transform .4s ease, filter .4s ease; }
+.crew-tile:hover .crew-bg { transform: scale(1.06); filter: saturate(1) brightness(.85); }
+.crew-tile.q-zaid .crew-bg { background-position: 0% 0%; }
+.crew-tile.q-layla .crew-bg { background-position: 100% 0%; }
+.crew-tile.q-amir .crew-bg { background-position: 0% 100%; }
+.crew-tile.q-hana .crew-bg { background-position: 100% 100%; }
+.crew-tile .crew-shade { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(5,20,36,.94) 5%, rgba(5,20,36,.15) 65%, transparent 100%); }
+.crew-tile .crew-info { position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 12px; }
+.crew-tile .crew-name { font-family: var(--font-head); font-weight: 800; font-size: 13.5px; color: #fff; }
+.crew-tile .crew-role { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .08em; color: var(--cyan); text-transform: uppercase; margin: 2px 0 5px; }
+.crew-tile .crew-stat { font-family: var(--font-mono); font-size: 9.5px; color: var(--ink-dim); }
+
 /* ---------- meters / bars ---------- */
 .bar-track { height: 8px; background: rgba(255,255,255,.06); border-radius: 6px; overflow: hidden; }
 .bar-fill { height: 100%; border-radius: 6px; }
@@ -824,8 +844,12 @@ const views = {
       <h1 class="page-title enter">Command Center</h1>
       <p class="page-sub enter">${esc(DATA.meta.problem)}</p>
       <div class="grid g-12">
-        <div class="glass card span-8 hero-visual enter" style="animation-delay:.05s">
+        <div class="glass card span-8 hero-visual enter" id="hero-container" style="animation-delay:.05s">
           <div class="radial-glow"></div>
+          <div class="qais-strip" style="position:absolute;top:22px;left:26px">
+            <div class="qais-avatar" id="qais-avatar"><img src="assets/qais-hero.jpg" alt="Qais, the Agentic OS command persona" loading="lazy"></div>
+            <div><div class="qais-name">QAIS</div><div class="qais-role">OS Commander</div></div>
+          </div>
           <div class="ring-wrap">
             <div class="ring-outer"></div>
             <svg viewBox="0 0 100 100">
@@ -916,6 +940,24 @@ const views = {
               <span class="label-caps text-dim">MCP TOOLS: ${DATA.mcpTools}</span>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="grid g-4" style="margin-top:18px">
+        <div class="crew-tile q-zaid enter" style="animation-delay:.35s" onclick="location.hash='#/architecture'">
+          <div class="crew-bg"></div><div class="crew-shade"></div>
+          <div class="crew-info"><div class="crew-name">Zaid</div><div class="crew-role">&#127959; Architecture</div><div class="crew-stat">${r.a}/${r.aTotal} setup &middot; ${r.c}/${r.cTotal} gates</div></div>
+        </div>
+        <div class="crew-tile q-layla enter" style="animation-delay:.4s" onclick="location.hash='#/knowledge'">
+          <div class="crew-bg"></div><div class="crew-shade"></div>
+          <div class="crew-info"><div class="crew-name">Layla</div><div class="crew-role">&#128218; Knowledge</div><div class="crew-stat">${DATA.vault.totalNotes} notes &middot; ${DATA.corpus.total} sources</div></div>
+        </div>
+        <div class="crew-tile q-amir enter" style="animation-delay:.45s" onclick="location.hash='#/decision'">
+          <div class="crew-bg"></div><div class="crew-shade"></div>
+          <div class="crew-info"><div class="crew-name">Amir</div><div class="crew-role">&#9878; Decision</div><div class="crew-stat">${DATA.decisions.length} decisions &middot; ${DATA.options.length} options</div></div>
+        </div>
+        <div class="crew-tile q-hana enter" style="animation-delay:.5s" onclick="location.hash='#/forecast'">
+          <div class="crew-bg"></div><div class="crew-shade"></div>
+          <div class="crew-info"><div class="crew-name">Hana</div><div class="crew-role">&#128200; Forecast</div><div class="crew-stat">${esc(DATA.forecasts.gmv)} GMV &middot; ${esc(DATA.forecasts.confidence).toUpperCase()}</div></div>
         </div>
       </div>`;
   },
@@ -1303,6 +1345,26 @@ function tickClock() {
 }
 tickClock();
 setInterval(tickClock, 1000);
+
+/* ---------------- Qais hero parallax + magnetic export button ---------------- */
+document.addEventListener('mousemove', (e) => {
+  const hero = $('#hero-container');
+  if (!hero) return;
+  const rect = hero.getBoundingClientRect();
+  if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) return;
+  hero.style.setProperty('--mouse-x', ((e.clientX - rect.left) / rect.width).toFixed(3));
+  hero.style.setProperty('--mouse-y', ((e.clientY - rect.top) / rect.height).toFixed(3));
+});
+document.addEventListener('mousemove', (e) => {
+  const btn = $('#export-btn');
+  if (!btn) return;
+  const rect = btn.getBoundingClientRect();
+  const near = e.clientX > rect.left - 24 && e.clientX < rect.right + 24 && e.clientY > rect.top - 24 && e.clientY < rect.bottom + 24;
+  if (!near) { btn.style.transform = ''; return; }
+  const x = e.clientX - (rect.left + rect.width / 2);
+  const y = e.clientY - (rect.top + rect.height / 2);
+  btn.style.transform = `translate(${(x * 0.12).toFixed(1)}px, ${(y * 0.25).toFixed(1)}px)`;
+});
 </script>
 </body>
 </html>
