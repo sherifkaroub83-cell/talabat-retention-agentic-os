@@ -157,6 +157,29 @@ class UiFileTests(unittest.TestCase):
         self.assertNotRegex(self.html, r"\n\.callout \{")
         self.assertNotRegex(self.html, r"\n\.kbd \{")
 
+    def test_qais_and_crew_pulse_animations_respect_reduced_motion(self):
+        # Qais's avatar and each crew tile's live-status dot animate continuously
+        # (core-pulse / soft-pulse); both must be disabled under
+        # prefers-reduced-motion, same as every other decorative animation on the page.
+        self.assertIn("@keyframes core-pulse", self.html)
+        self.assertIn("animation: core-pulse", self.html)
+        rules = re.findall(
+            r"@media \(prefers-reduced-motion: reduce\) \{([^}]*)\}", self.html)
+        motion_rule = next((r for r in rules if ".thinking-border" in r), None)
+        self.assertIsNotNone(motion_rule, "main reduced-motion override block not found")
+        self.assertIn(".qais-avatar", motion_rule)
+        self.assertIn(".crew-live", motion_rule)
+
+    def test_crew_tiles_have_live_status_dot(self):
+        # Each of the 4 crew tiles carries a decorative "live" status dot (a genuine
+        # UI affordance, not a fabricated data claim -- analogous to the topbar's
+        # real "OS operationally stable" indicator), and it must be hidden from
+        # assistive tech since it conveys no information beyond page-load animation.
+        tiles = re.findall(r'<div class="crew-tile[^"]*"[^>]*>.*?</div>\s*</div>', self.html, re.S)
+        self.assertEqual(len(tiles), 4)
+        for tile in tiles:
+            self.assertIn('class="crew-live" aria-hidden="true"', tile)
+
 
 class DataAgainstRepoTests(unittest.TestCase):
     """Every figure in the UI must trace to the same repo state the AOS kernel reports."""

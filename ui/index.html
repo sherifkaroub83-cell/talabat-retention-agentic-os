@@ -94,7 +94,7 @@ a { color: inherit; }
 .pulse-text { animation: soft-pulse 2.4s ease-in-out infinite; }
 @keyframes fade-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 .enter { animation: fade-up .5s cubic-bezier(.2,.8,.2,1) both; }
-@media (prefers-reduced-motion: reduce) { .thinking-border, .shimmer, .pulse-text, .enter { animation: none !important; } }
+@media (prefers-reduced-motion: reduce) { .thinking-border, .shimmer, .pulse-text, .enter, .qais-avatar, .crew-live { animation: none !important; } }
 
 /* ---------- typography ---------- */
 h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; letter-spacing: -0.01em; }
@@ -239,8 +239,10 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 /* ---------- Qais persona header + OS crew ---------- */
 :root { --mouse-x: 0.5; --mouse-y: 0.5; }
 .qais-strip { display: flex; align-items: center; gap: 14px; position: relative; z-index: 2; margin-bottom: 6px; }
-.qais-avatar { width: 64px; height: 64px; border-radius: 999px; flex: 0 0 64px; overflow: hidden; border: 2px solid rgba(0,219,233,.4); box-shadow: 0 0 22px rgba(0,219,233,.25); transform: perspective(600px) rotateX(calc((var(--mouse-y) - 0.5) * -8deg)) rotateY(calc((var(--mouse-x) - 0.5) * 8deg)); transition: transform .1s ease-out; }
+.qais-avatar { width: 64px; height: 64px; border-radius: 999px; flex: 0 0 64px; overflow: hidden; border: 2px solid rgba(0,219,233,.4); box-shadow: 0 0 22px rgba(0,219,233,.25); transform: perspective(600px) rotateX(calc((var(--mouse-y) - 0.5) * -8deg)) rotateY(calc((var(--mouse-x) - 0.5) * 8deg)); transition: transform .1s ease-out; animation: core-pulse 1.6s ease-in-out infinite; }
 .qais-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@keyframes core-pulse { 0%, 100% { box-shadow: 0 0 18px rgba(0,219,233,.25); } 50% { box-shadow: 0 0 34px rgba(0,219,233,.55), 0 0 12px rgba(119,1,208,.4); } }
+.crew-tile .crew-live { position: absolute; top: 10px; right: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px rgba(0,255,102,.7); animation: soft-pulse 1.6s ease-in-out infinite; }
 .qais-name { font-family: var(--font-head); font-weight: 800; font-size: 15px; color: #fff; letter-spacing: .02em; }
 .qais-role { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; color: var(--cyan); text-transform: uppercase; margin-top: 1px; }
 .crew-tile { position: relative; border-radius: 14px; overflow: hidden; height: 150px; cursor: pointer; }
@@ -974,19 +976,19 @@ const views = {
       </div>
       <div class="grid g-4" style="margin-top:18px">
         <div class="crew-tile q-zaid enter" style="animation-delay:.35s" role="button" tabindex="0" aria-label="Open Architecture" onclick="location.hash='#/architecture'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.hash='#/architecture'}">
-          <div class="crew-bg"></div><div class="crew-shade"></div>
+          <div class="crew-bg"></div><div class="crew-shade"></div><div class="crew-live" aria-hidden="true"></div>
           <div class="crew-info"><div class="crew-name">Zaid</div><div class="crew-role">&#127959; Architecture</div><div class="crew-stat">${r.a}/${r.aTotal} setup &middot; ${r.c}/${r.cTotal} gates</div></div>
         </div>
         <div class="crew-tile q-layla enter" style="animation-delay:.4s" role="button" tabindex="0" aria-label="Open Knowledge" onclick="location.hash='#/knowledge'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.hash='#/knowledge'}">
-          <div class="crew-bg"></div><div class="crew-shade"></div>
+          <div class="crew-bg"></div><div class="crew-shade"></div><div class="crew-live" aria-hidden="true"></div>
           <div class="crew-info"><div class="crew-name">Layla</div><div class="crew-role">&#128218; Knowledge</div><div class="crew-stat">${DATA.vault.totalNotes} notes &middot; ${DATA.corpus.total} sources</div></div>
         </div>
         <div class="crew-tile q-amir enter" style="animation-delay:.45s" role="button" tabindex="0" aria-label="Open Decision" onclick="location.hash='#/decision'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.hash='#/decision'}">
-          <div class="crew-bg"></div><div class="crew-shade"></div>
+          <div class="crew-bg"></div><div class="crew-shade"></div><div class="crew-live" aria-hidden="true"></div>
           <div class="crew-info"><div class="crew-name">Amir</div><div class="crew-role">&#9878; Decision</div><div class="crew-stat">${DATA.decisions.length} decisions &middot; ${DATA.options.length} options</div></div>
         </div>
         <div class="crew-tile q-hana enter" style="animation-delay:.5s" role="button" tabindex="0" aria-label="Open Forecast" onclick="location.hash='#/forecast'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.hash='#/forecast'}">
-          <div class="crew-bg"></div><div class="crew-shade"></div>
+          <div class="crew-bg"></div><div class="crew-shade"></div><div class="crew-live" aria-hidden="true"></div>
           <div class="crew-info"><div class="crew-name">Hana</div><div class="crew-role">&#128200; Forecast</div><div class="crew-stat">${esc(DATA.forecasts.gmv)} GMV &middot; ${esc(DATA.forecasts.confidence).toUpperCase()}</div></div>
         </div>
       </div>`;

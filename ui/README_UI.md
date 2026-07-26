@@ -132,6 +132,16 @@ keep this consistent with the rest of the page:
   confidence) — never an invented figure like the reference mockups'
   "14,802 active nodes" or "99.2% projected accuracy."
 
+Qais's avatar carries a `core-pulse` heartbeat animation (a `box-shadow`
+glow, layered on top of — not conflicting with — the existing JS-driven
+mouse-parallax `transform`), and each crew tile carries a small pulsing
+green "live" status dot (`.crew-live`, `aria-hidden="true"` since it's
+decorative, analogous to the topbar's genuine "OS operationally stable"
+indicator). Both reuse the page's existing `soft-pulse`-style motion
+language rather than introducing fabricated telemetry, and both are
+disabled under `prefers-reduced-motion: reduce` alongside every other
+decorative animation on the page.
+
 ## Agent Roster — Arabic names
 
 The 9 real technical agents (`bp-orchestrator`, `research-agent`, etc. — the
