@@ -6,6 +6,113 @@ writes these entries for you.
 
 ---
 
+## Session 13 — 2026-07-25 — Mohamed Marawan
+
+**Focus:** Fix silent content-loss bug in compression pipeline; cover page roster; §10.1 risk-selection fix.
+
+- **Root-caused a silent data-loss bug** in `build_business_plan_v1_1.py`'s `select_blocks()`:
+  the content-selection counter reset per-H2 heading instead of per-H3 subsection, causing
+  every H3 child after the first under any heading to be silently dropped. This had zeroed
+  out SWOT (all 4 quadrants), the Key Assumptions Register, Risk probability-impact and
+  mitigation tables, the §13 KPI table, and the §14 traceability table in prior builds.
+- Ported the identical fix to `build_final_publication.py` (same underlying bug, same function).
+- Fixed a secondary bug in the prose-tightening helper that could truncate a paragraph to
+  near-nothing on a spurious mid-clause period; replaced with a sentence-boundary-aware
+  version (60-140% window search before falling back to a hard cutoff).
+- Added the full team roster (name + AASTMT student ID, all 6 members) to page 1 of the
+  v1.1 Executive Visual cover, ahead of the Executive Summary.
+- Fixed §10.1 (Technical Risks) showing only a generic methodology sentence instead of an
+  actual risk — selection now prefers a risk-coded paragraph (TECH-/MKT-/FIN-/ORG-/REG-)
+  over the default first paragraph, scoped to Section 10 only. Verified no regression in
+  §3.3 SWOT or §13 KPI, which share the same selection logic.
+- Rebuilt both editions through the real Python pipeline (not the earlier manual Word-COM
+  workaround). Page counts: `Business_Plan_Final.pdf` 24pp, `Business_Plan_v1.1_Executive_
+  Visual.pdf` 25pp — both within the 15-25 page requirement.
+- Visually verified rendered PDF pages (cover, all 4 SWOT quadrants, Risk matrix + mitigation
+  table, §13 KPI table, §14 traceability excerpt) before committing.
+
+**Open item flagged, not fixed (non-blocking):** §10.7 Pre-Mortem heading splits awkwardly
+across the heading line and its first paragraph — pre-existing in the source content, not
+introduced by this session's changes.
+
+**Files changed:** `scripts/build_business_plan_v1_1.py`, `scripts/build_final_publication.py`,
+`Outputs/Business_Plan_Final.docx`, `Outputs/Business_Plan_Final.pdf`,
+`Outputs/Business_Plan_v1.1_Executive_Visual.docx`, `Outputs/Business_Plan_v1.1_Executive_Visual.pdf`
+
+---
+
+## Session 12 — 2026-07-25 (catch-up: PR #12 backfill; real-pipeline rebuild of Final + v1.1; worktree cleanup)
+
+**Focus:** two things. First, backfill this log for real work that landed on `main` after Session 11
+closed but was never recorded here (this log and `PROJECT_PROGRESS.md` had drifted well behind actual
+repo state — they still described PR #6 as current). Second, with Python now installed locally, re-run
+the project's actual build scripts to regenerate the Business Plan editions properly instead of the
+Word-COM workaround a prior background-agent session had to fall back on.
+
+**Backfill — what actually landed since Session 11 (never logged at the time):**
+- PR #6's publication work was superseded, not merged as-is: `main` advanced through PR #12 (branch
+  `claude/talabat-inputs-directory-7azjx2`), which included a Stage 17 whole-plan citation audit (8
+  hard failures found and fixed, independently re-verified), Stages 14–18 whole-plan gates all passing
+  (Problem Consistency, Financial Integrity, Geographic Evidence, Template Compliance), a v1.1 visual
+  publication edition (`Business_Plan_v1.1_Executive_Visual`, new exhibit/visual pipeline), and a v1.2
+  edition with evidence-based SWOT integration (`Business_Plan_Final_v1.2_Executive`). `main` is at
+  `b6abaa4`.
+- Separately, an unmerged branch `regenerate-executive-edition-post-stage17` (commit `fe44e70`) was
+  found sitting in a leftover worktree (`.claude/worktrees/agent-a3bd3bcbcbfcaca04`), already pushed to
+  `origin` and clean. It fixed two content defects that had leaked into all three published editions
+  (an uncited "6.0%→4.6%" EBITDA-margin figure that should have read the disclosed "4.4-4.8% of GMV"
+  range; Section 12's title incorrectly carrying "(Three Horizons)") — applied via targeted OOXML text
+  substitution and Microsoft Word's native PDF export, because that session's environment had no Python
+  interpreter and couldn't run the real build scripts. It also logged the still-open DEC-011 question:
+  the v1.2 "Executive" edition (47–51pp depending on renderer) does not satisfy DEC-011's 15–25pp
+  executive-edition carve-out despite its name; v1.1 Executive Visual (25pp) does.
+
+**Done this session:**
+- Confirmed the two content defects were already fixed at the source: `vault/Projects/Business_Plan_Drafts_v2/`
+  Sections 1, 2, 3, 4, and 9 all already carry the corrected "4.4-4.8% of GMV" figure and the clean
+  "12. Implementation Plan" title (fixed during the Stage 15/17 whole-plan gates that landed in PR #12,
+  before the worktree branch existed) — the worktree branch was only patching the built *output*
+  artifacts, not the source.
+- Installed `python-docx`, `matplotlib`, and `reportlab` (not previously in `scripts/requirements.txt`)
+  into a local `.venv_build` (gitignored) and re-ran `scripts/build_final_publication.py` and
+  `scripts/build_business_plan_v1_1.py` directly from `Business_Plan_Drafts_v2`. Both ran clean.
+- Verified the regenerated PDFs directly (`pypdf` text extraction): `Business_Plan_Final.pdf` and
+  `Business_Plan_v1.1_Executive_Visual.pdf` are both 25 pages, contain the correct "4.4-4.8%" figure,
+  contain no trace of the stale "6.0%→4.6%" figure, and Section 12's title is clean. This replaces the
+  Word-COM-patched versions with output from the project's actual, re-runnable pipeline — accurate
+  page counts, no rendering-engine substitution to disclose.
+- **v1.2 remains unfixed on `main`** — confirmed by direct inspection, not assumed: `Outputs/Business_Plan_v1.2_Remediated_Manuscript.md`
+  and the shipped `Business_Plan_Final_v1.2_Executive.docx/.pdf` on `main` still carry the stale
+  "6.0%→4.6%" figure and the "(Three Horizons)" title. Confirmed no `scripts/build_*.py` exists for
+  v1.2 at all — commit `6d1555b`, which originally published it, touched zero files under `scripts/`,
+  so v1.2 was hand-assembled rather than pipeline-built and there is currently no way to "properly"
+  regenerate it the way Final and v1.1 were just regenerated. Per explicit instruction, v1.2 was left
+  untouched this session rather than guessed at. The only known correct fix for v1.2's *output* still
+  sits, unmerged, on `fe44e70` (branch `regenerate-executive-edition-post-stage17`).
+- Removed the leftover worktree (`git worktree remove`). Confirmed first that this does not lose the
+  v1.2 fix: the branch and commit `fe44e70` persist independently in both the local repo and `origin`
+  (`git worktree remove` only deletes the checkout, not the branch/commit) — verified via `git log` and
+  `git ls-remote` after removal.
+- Left `Outputs/Formatting_QA_Report.md` and `Outputs/Publication_QA_Report.md` as-is: both already
+  correctly disclose that the PDF is generated deterministically (this session used the same
+  `reportlab`-based path, not Word) and that DOCX rasterization is a known, disclosed limitation — the
+  regenerated files still match what those reports describe.
+
+**Explicitly not done:** v1.2 was not rebuilt, patched, or otherwise touched (see above — flagged as an
+open gap, not resolved either way); `regenerate-executive-edition-post-stage17` was not merged into
+`main`; the unrelated pre-existing working-tree noise on `main` (`vault/.obsidian/graph.json`'s real
+4-line diff, and three files showing as "modified" in `git status` with an empty `git diff` — CRLF/LF
+churn on `Executive_Business_Plan.md` and the two `Final_*_2026-07-23.md` reports) was left alone, not
+in scope for this session.
+
+**Next:** decide how to close the v1.2 gap — merge `fe44e70`'s OOXML-patched output as an interim fix,
+write a real `scripts/build_v1_2.py` so v1.2 also comes from a re-runnable pipeline, or fold v1.2's
+SWOT content into the base `build_final_publication.py` pipeline directly. Also still open: DEC-011's
+v1.2-edition page-count question (noted above), role assignment, the OS structure document, and the
+group presentation — none touched this session.
+
+---
+
 ## Session 11 — 2026-07-24/25 (final v2 recovery, whole-plan gates, publication, and PR #6)
 
 **Focus:** recover the missing verified v2 Section 13, close the final independent-verification and
