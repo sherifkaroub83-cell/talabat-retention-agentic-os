@@ -183,6 +183,84 @@ class UiFileTests(unittest.TestCase):
         for tile in tiles:
             self.assertIn('class="crew-live" aria-hidden="true"', tile)
 
+    def test_all_infinite_animations_respect_reduced_motion(self):
+        # Independent audit found two infinite-loop animations (the topbar status
+        # ring pulse and the hero progress ring's dashed spin) that were NOT covered
+        # by the reduced-motion override -- both must appear in the @media query
+        # AND the manual .reduced-motion class toggle (Settings popover), so
+        # motion-sensitive users get relief either way they express the preference.
+        self.assertIn("animation: soft-pulse 2s infinite", self.html)  # status-dot-ring
+        self.assertIn("animation: spin 22s linear infinite", self.html)  # ring-outer
+        media_rules = re.findall(r"@media \(prefers-reduced-motion: reduce\) \{([^}]*)\}", self.html)
+        motion_media = next((r for r in media_rules if ".thinking-border" in r), "")
+        manual_rule = re.search(r"\.reduced-motion \.thinking-border[^{]*\{[^}]*\}", self.html)
+        self.assertIsNotNone(manual_rule, ".reduced-motion manual override rule not found")
+        for cls in (".status-dot-ring", ".ring-outer"):
+            self.assertIn(cls, motion_media, f"{cls} missing from @media reduced-motion override")
+            self.assertIn(cls, manual_rule.group(0), f"{cls} missing from .reduced-motion manual override")
+
+    def test_skip_link_present(self):
+        # Keyboard/screen-reader users must be able to bypass the sidebar nav
+        # without tabbing through all 6 links + export button on every load.
+        self.assertIn('class="skip-link"', self.html)
+        self.assertIn('href="#view"', self.html)
+        self.assertIn('id="view"', self.html)
+
+    def test_icon_only_buttons_have_aria_label(self):
+        # title="" alone is not reliably announced by screen readers on <button>;
+        # every icon-only button must also carry a real aria-label.
+        for btn_id in ("notif-btn", "settings-btn", "menu-toggle"):
+            m = re.search(rf'id="{btn_id}"[^>]*>', self.html)
+            self.assertIsNotNone(m, f"button #{btn_id} not found")
+            self.assertIn("aria-label=", m.group(0))
+
+    def test_topbar_popovers_are_wired_and_not_named_after_native_api(self):
+        # A real bug found during independent review: naming the toggle function
+        # "togglePopover" collided with the browser-native HTMLElement.prototype
+        # .togglePopover() Popover API, which silently shadowed it in inline
+        # onclick scope resolution and threw at runtime. Must never regress.
+        self.assertNotIn("togglePopover(", self.html)
+        self.assertIn("toggleTopbarPopover(", self.html)
+        self.assertIn('id="notif-popover"', self.html)
+        self.assertIn('id="settings-popover"', self.html)
+        self.assertIn("function renderNotifPopover", self.html)
+        self.assertIn("function renderSettingsPopover", self.html)
+
+    def test_reduced_motion_setting_is_real_and_persisted(self):
+        # The Settings popover's "Reduce motion" toggle must be a genuine,
+        # functioning preference (persisted client-side), not a decorative no-op.
+        self.assertIn("reduced-motion-toggle", self.html)
+        self.assertIn("localStorage.setItem('agentic-os-reduced-motion'", self.html)
+        self.assertIn("localStorage.getItem('agentic-os-reduced-motion')", self.html)
+        self.assertIn("classList.add('reduced-motion')", self.html)
+
+    def test_notifications_popover_uses_real_data_not_fabricated_alerts(self):
+        # The Notifications popover must be built from genuine DATA.decisions /
+        # DATA.gates (same source the Audit view's System Log uses), never
+        # invented/synthetic notification text.
+        m = re.search(r"function recentEvents\(\)\s*\{.*?\n\}", self.html, re.S)
+        self.assertIsNotNone(m)
+        self.assertIn("DATA.decisions", m.group(0))
+        self.assertIn("DATA.gates", m.group(0))
+
+    def test_sidebar_footer_links_match_their_label(self):
+        # "System Health" previously linked to #/publication and "Settings" to
+        # #/architecture -- neither destination matched the label. System Health
+        # must point to the Audit & Verification view (the page that actually
+        # reports system/gate health); Settings must open the real settings UI.
+        self.assertIn('<a href="#/audit">&#9877; System Health</a>', self.html)
+        self.assertNotIn('<a href="#/publication">&#9877; System Health</a>', self.html)
+        self.assertNotIn('<a href="#/architecture">&#9881; Settings</a>', self.html)
+
+    def test_architecture_and_knowledge_nav_icons_are_distinct(self):
+        # Both nav items previously used the identical &#9737; glyph, making them
+        # visually indistinguishable at a glance.
+        arch = re.search(r'href="#/architecture" data-view="architecture"><span class="ic">(&#\d+;)</span>', self.html)
+        know = re.search(r'href="#/knowledge" data-view="knowledge"><span class="ic">(&#\d+;)</span>', self.html)
+        self.assertIsNotNone(arch)
+        self.assertIsNotNone(know)
+        self.assertNotEqual(arch.group(1), know.group(1))
+
 
 class DataAgainstRepoTests(unittest.TestCase):
     """Every figure in the UI must trace to the same repo state the AOS kernel reports."""

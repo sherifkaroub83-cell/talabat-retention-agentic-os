@@ -66,6 +66,7 @@ body::before {
 }
 @keyframes grid-move { from { background-position: 0 0; } to { background-position: 0 600px; } }
 @media (prefers-reduced-motion: reduce) { body::before { animation: none; } }
+.reduced-motion body::before { animation: none; }
 
 a { color: inherit; }
 .material { font-family: initial; }
@@ -95,7 +96,11 @@ a { color: inherit; }
 .pulse-text { animation: soft-pulse 2.4s ease-in-out infinite; }
 @keyframes fade-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 .enter { animation: fade-up .5s cubic-bezier(.2,.8,.2,1) both; }
-@media (prefers-reduced-motion: reduce) { .thinking-border, .shimmer, .pulse-text, .enter, .qais-avatar, .crew-live { animation: none !important; } }
+.reduced-motion .thinking-border, .reduced-motion .shimmer, .reduced-motion .pulse-text, .reduced-motion .enter, .reduced-motion .qais-avatar, .reduced-motion .crew-live, .reduced-motion .status-dot-ring > div, .reduced-motion .ring-outer { animation: none !important; }
+@media (prefers-reduced-motion: reduce) { .thinking-border, .shimmer, .pulse-text, .enter, .qais-avatar, .crew-live, .status-dot-ring > div, .ring-outer { animation: none !important; } }
+.skip-link { position: absolute; left: 12px; top: -60px; z-index: 100; background: var(--cyan); color: var(--obsidian-deep); font-family: var(--font-mono); font-weight: 700; font-size: 12px; padding: 10px 16px; border-radius: 8px; text-decoration: none; transition: top .15s ease; }
+.skip-link:focus { top: 12px; }
+.nav a:focus-visible, .icon-btn:focus-visible, .export-btn:focus-visible, .sidebar-links a:focus-visible, .sidebar-links button:focus-visible, .footer a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; border-radius: 4px; }
 
 /* ---------- typography ---------- */
 h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; letter-spacing: -0.01em; }
@@ -152,8 +157,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 .export-btn:hover { box-shadow: 0 0 20px rgba(0,219,233,.4); }
 .export-btn:active { transform: scale(.97); }
 .sidebar-links { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border-soft); display: grid; gap: 10px; }
-.sidebar-links a { display: flex; align-items: center; gap: 9px; color: var(--ink-faint); text-decoration: none; font-family: var(--font-mono); font-size: 11px; }
-.sidebar-links a:hover { color: var(--ink); }
+.sidebar-links a, .sidebar-links button { display: flex; align-items: center; gap: 9px; color: var(--ink-faint); text-decoration: none; font-family: var(--font-mono); font-size: 11px; background: none; border: none; padding: 0; cursor: pointer; width: 100%; text-align: left; }
+.sidebar-links a:hover, .sidebar-links button:hover { color: var(--ink); }
 
 .main { margin-left: 248px; flex: 1; min-width: 0; }
 .topbar {
@@ -178,6 +183,21 @@ h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; let
 .icon-btn:hover { color: var(--cyan); }
 .status-dot-ring { width: 30px; height: 30px; border-radius: 999px; border: 1px solid rgba(0,255,102,.5); padding: 2px; }
 .status-dot-ring > div { width: 100%; height: 100%; border-radius: 999px; background: rgba(0,255,102,.22); animation: soft-pulse 2s infinite; }
+.topbar-popover-wrap { position: relative; }
+.topbar-popover { position: absolute; top: calc(100% + 10px); right: 0; width: 280px; background: rgba(10,11,14,.97); backdrop-filter: blur(18px); border: 1px solid var(--border-soft); border-radius: 12px; box-shadow: 0 18px 44px -12px rgba(0,0,0,.6); padding: 14px; z-index: 50; display: none; }
+.topbar-popover.open { display: block; }
+.topbar-popover h4 { font-size: 12px; letter-spacing: .04em; margin-bottom: 10px; }
+.popover-event { padding: 8px 0; border-top: 1px solid var(--border-soft); font-size: 11.5px; }
+.popover-event:first-of-type { border-top: none; }
+.popover-event .pt { color: var(--ink-faint); font-family: var(--font-mono); font-size: 10px; display: block; margin-bottom: 2px; }
+.settings-row { display: flex; align-items: center; justify-content: space-between; padding: 9px 0; font-size: 12px; }
+.toggle-switch { position: relative; width: 36px; height: 20px; flex: 0 0 36px; }
+.toggle-switch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.toggle-switch .track { position: absolute; inset: 0; background: rgba(255,255,255,.12); border-radius: 999px; transition: background .15s ease; }
+.toggle-switch .thumb { position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 999px; background: var(--ink); transition: transform .15s ease; }
+.toggle-switch input:checked ~ .track { background: var(--cyan); }
+.toggle-switch input:checked ~ .thumb { transform: translateX(16px); background: var(--obsidian-deep); }
+.toggle-switch input:focus-visible ~ .track { outline: 2px solid var(--cyan); outline-offset: 2px; }
 
 .content { padding: 30px; max-width: 1360px; margin: 0 auto; }
 .page-title { font-size: 26px; margin-bottom: 6px; }
@@ -321,6 +341,7 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
 </style>
 </head>
 <body>
+<a href="#view" class="skip-link">Skip to content</a>
 <div class="shell">
   <aside class="sidebar" aria-label="Primary navigation">
     <div class="brand">
@@ -332,7 +353,7 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
     </div>
     <nav class="nav" id="nav">
       <a href="#/architecture" data-view="architecture"><span class="ic">&#9737;</span>Architecture</a>
-      <a href="#/knowledge" data-view="knowledge"><span class="ic">&#9737;</span>Knowledge</a>
+      <a href="#/knowledge" data-view="knowledge"><span class="ic">&#128218;</span>Knowledge</a>
       <a href="#/decision" data-view="decision"><span class="ic">&#9878;</span>Decision</a>
       <a href="#/forecast" data-view="forecast"><span class="ic">&#8599;</span>Forecast</a>
       <a href="#/publication" data-view="publication"><span class="ic">&#8682;</span>Publication</a>
@@ -341,8 +362,8 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
     <div class="sidebar-foot">
       <button class="export-btn" id="export-btn">Export Control</button>
       <div class="sidebar-links">
-        <a href="#/publication">&#9877; System Health</a>
-        <a href="#/architecture">&#9881; Settings</a>
+        <a href="#/audit">&#9877; System Health</a>
+        <button type="button" onclick="toggleTopbarPopover('settings')">&#9881; Settings</button>
       </div>
     </div>
   </aside>
@@ -360,8 +381,14 @@ table.data tr:hover td { background: rgba(255,255,255,.025); }
         <input type="text" placeholder="Query Intelligence Core…" id="search-input" autocomplete="off" />
         <span class="ic">&#128269;</span>
       </div>
-      <button class="icon-btn" title="Notifications">&#128276;</button>
-      <button class="icon-btn" title="Settings">&#9881;</button>
+      <div class="topbar-popover-wrap">
+        <button class="icon-btn" id="notif-btn" title="Notifications" aria-label="Notifications" aria-haspopup="true" aria-expanded="false" onclick="toggleTopbarPopover('notif')">&#128276;</button>
+        <div class="topbar-popover" id="notif-popover" role="dialog" aria-label="Recent notifications"></div>
+      </div>
+      <div class="topbar-popover-wrap">
+        <button class="icon-btn" id="settings-btn" title="Settings" aria-label="Settings" aria-haspopup="true" aria-expanded="false" onclick="toggleTopbarPopover('settings')">&#9881;</button>
+        <div class="topbar-popover" id="settings-popover" role="dialog" aria-label="Settings"></div>
+      </div>
       <div class="status-dot-ring"><div></div></div>
     </header>
 
@@ -933,7 +960,7 @@ const views = {
         <div class="glass card enter" style="animation-delay:.2s">
           <div class="card-head">
             <div style="display:flex;align-items:center;gap:10px">
-              <div class="card-icon-box" style="background:rgba(119,1,208,.12);color:var(--purple)">&#9737;</div>
+              <div class="card-icon-box" style="background:rgba(119,1,208,.12);color:var(--purple)">&#128218;</div>
               <div><h4 style="font-size:14px">Knowledge Layer</h4><p class="label-status text-faint">Vault indexes</p></div>
             </div>
           </div>
@@ -951,7 +978,7 @@ const views = {
             </div>
             <span class="label-status text-cyan">DISCLOSED</span>
           </div>
-          <div class="spark">
+          <div class="spark" aria-hidden="true">
             ${DATA.forecastBars.map(v => `<div style="height:${v}%"></div>`).join('')}
           </div>
           <div style="display:flex;justify-content:space-between;border-top:1px solid var(--border-soft);padding-top:12px;margin-top:14px">
@@ -1299,7 +1326,7 @@ const views = {
       <div class="glass card enter" style="margin-top:18px">
         <div class="card-head"><h3 class="card-title">Integrity Distribution</h3><span class="label-status text-faint">verified sections + gates, grouped</span></div>
         <div class="spark" style="align-items:flex-end;height:120px">
-          ${groups.map(g => `<div style="height:${Math.max(g.pct,4)}%;background:${g.pct===100?'rgba(0,255,102,.4)':'rgba(0,219,233,.3)'}" title="${esc(g.label)}: ${esc(g.frac)}"></div>`).join('')}
+          ${groups.map(g => `<div style="height:${Math.max(g.pct,4)}%;background:${g.pct===100?'rgba(0,255,102,.4)':'rgba(0,219,233,.3)'}" role="img" aria-label="${esc(g.label)}: ${esc(g.frac)} verified" title="${esc(g.label)}: ${esc(g.frac)}"></div>`).join('')}
         </div>
         <div style="display:flex;justify-content:space-between;margin-top:10px">
           ${groups.map(g => `<div style="text-align:center;flex:1"><div class="label-status text-faint" style="font-size:10px">${esc(g.label)}</div><div class="mono" style="font-size:11px;margin-top:2px">${esc(g.frac)}</div></div>`).join('')}
@@ -1367,6 +1394,62 @@ $('#core-version').textContent = `Snapshot ${DATA.meta.snapshotDate}`;
 $('#menu-toggle')?.addEventListener('click', () => $('.shell').classList.toggle('nav-open'));
 $('#scrim')?.addEventListener('click', () => $('.shell').classList.remove('nav-open'));
 $('#nav').addEventListener('click', (e) => { if (e.target.closest('a')) $('.shell').classList.remove('nav-open'); });
+
+/* ---------------- topbar popovers: real recent-events feed + genuine reduced-motion setting ---------------- */
+function recentEvents() {
+  const decisionEvents = [...DATA.decisions].reverse().slice(0, 2).map(d => ({ date: d.date, text: `${d.id} recorded — ${d.title}` }));
+  const gateEvents = DATA.gates.filter(g => g.status === 'done').slice(0, 1).map(g => ({ date: DATA.meta.snapshotDate, text: `Gate PASS — ${g.name}` }));
+  return [...decisionEvents, ...gateEvents];
+}
+function renderNotifPopover() {
+  const events = recentEvents();
+  $('#notif-popover').innerHTML = `<h4 class="label-caps text-cyan">Recent Activity</h4>` +
+    events.map(e => `<div class="popover-event"><span class="pt">${esc(e.date)}</span>${esc(e.text)}</div>`).join('') +
+    `<div class="popover-event"><a href="#/audit" class="text-cyan" style="text-decoration:none;font-weight:600">View full System Log &rarr;</a></div>`;
+}
+function renderSettingsPopover() {
+  const reduced = document.documentElement.classList.contains('reduced-motion');
+  $('#settings-popover').innerHTML = `<h4 class="label-caps text-purple">Display</h4>
+    <div class="settings-row">
+      <span>Reduce motion</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="reduced-motion-toggle" ${reduced ? 'checked' : ''} aria-label="Reduce motion" />
+        <span class="track"></span><span class="thumb"></span>
+      </label>
+    </div>
+    <p class="text-faint" style="font-size:10.5px;margin-top:6px;line-height:1.4">Disables decorative pulse/spin/shimmer animations across the interface. Preference is saved on this device.</p>`;
+  $('#reduced-motion-toggle').addEventListener('change', (e) => {
+    document.documentElement.classList.toggle('reduced-motion', e.target.checked);
+    localStorage.setItem('agentic-os-reduced-motion', e.target.checked ? '1' : '0');
+  });
+}
+function toggleTopbarPopover(name) {
+  const popover = $(`#${name}-popover`);
+  const btn = $(`#${name}-btn`);
+  const wasOpen = popover.classList.contains('open');
+  $$('.topbar-popover.open').forEach(p => p.classList.remove('open'));
+  $$('.icon-btn[aria-expanded="true"]').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  if (wasOpen) return;
+  if (name === 'notif') renderNotifPopover();
+  if (name === 'settings') renderSettingsPopover();
+  popover.classList.add('open');
+  btn?.setAttribute('aria-expanded', 'true');
+}
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.topbar-popover-wrap')) {
+    $$('.topbar-popover.open').forEach(p => p.classList.remove('open'));
+    $$('.icon-btn[aria-expanded="true"]').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  }
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    $$('.topbar-popover.open').forEach(p => p.classList.remove('open'));
+    $$('.icon-btn[aria-expanded="true"]').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  }
+});
+if (localStorage.getItem('agentic-os-reduced-motion') === '1') {
+  document.documentElement.classList.add('reduced-motion');
+}
 
 /* ---------------- real-time chrome: genuine local clock + session uptime ---------------- */
 const LOAD_TS = Date.now();

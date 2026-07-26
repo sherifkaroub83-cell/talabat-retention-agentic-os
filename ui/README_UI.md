@@ -185,6 +185,55 @@ found and this file now fixes:
 All of the above are covered by new tests in
 `tests/test_ui_aegis_command_center.py` so they can't silently regress.
 
+## Self-assessment round 2 — gaps found and closed
+
+A second independent pass (accessibility + completeness focus) found and this
+file now fixes:
+
+- **Two infinite animations ignored `prefers-reduced-motion`.** The topbar
+  status-ring pulse and the hero progress ring's dashed spin kept running even
+  with the OS-level reduce-motion preference on — only `.qais-avatar` and
+  `.crew-live` (added earlier) were covered. Both are now in the media query.
+- **No manual reduced-motion control.** The OS-level media query is the only
+  way motion-sensitive users could get relief; there was no in-app toggle for
+  people who want it off regardless of OS setting. Added a genuine, working
+  "Reduce motion" switch in a new Settings popover — persisted to
+  `localStorage`, applies a `.reduced-motion` class that disables the same
+  animation set as the media query.
+- **Notifications and Settings icon buttons were dead ends.** Both existed
+  only as decoration (`title` attribute, no click handler, no `aria-label`).
+  Notifications now opens a real popover built from `DATA.decisions` /
+  `DATA.gates` — the same source the Audit view's System Log already uses,
+  never invented alert text. Settings opens the reduced-motion control above.
+- **No skip-to-content link.** Keyboard and screen-reader users had to tab
+  through the full sidebar (6 nav links + Export Control) before reaching
+  page content on every load. Added a standard skip link targeting `#view`.
+- **Misleading sidebar footer links.** "System Health" pointed to
+  `#/publication` and "Settings" pointed to `#/architecture` — neither
+  destination matched its label. "System Health" now correctly points to
+  `#/audit` (the page that actually reports gate/section health); "Settings"
+  opens the real settings popover instead of navigating anywhere.
+- **Architecture and Knowledge nav items shared an identical icon** (`&#9737;`
+  on both), reducing at-a-glance scannability. Knowledge now uses the same
+  book glyph (`&#128218;`) already used for its crew-tile counterpart, applied
+  consistently to its Command Center summary card too.
+- **Sparkline bars carried no accessible value.** The Command Center's
+  forecast trend bars have no independently labeled units, so they're now
+  `aria-hidden="true"` (the real GMV/Confidence figures sit as text right
+  below them) rather than presenting unlabeled bars to screen readers. The
+  Audit view's Integrity Distribution bars *do* have real per-group values
+  (`label: frac`), so those gained `role="img" aria-label="…"` instead of
+  relying on hover-only `title`.
+- **A real regression caught during testing, not just review:** the first
+  implementation named the popover-toggle function `togglePopover`, which
+  collides with the browser-native `HTMLElement.prototype.togglePopover()`
+  Popover API — inline `onclick` scope resolution silently shadowed the
+  page's own function with the native one and threw at runtime. Renamed to
+  `toggleTopbarPopover`; a regression test locks the correct name in.
+
+All of the above are covered by new tests; full suite is 80 tests
+(`python3 -m unittest discover -s tests`).
+
 ## What changed from the previous draft
 
 The prior "Aegis OS" build (`#050506`/`#00F0FF`/`#9D4EDD`, Hanken Grotesk /
