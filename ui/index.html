@@ -1,1449 +1,1191 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Aegis OS | talabat Agentic Command Center</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "obsidian-deep": "#050506",
-                        "charcoal": "#161B22",
-                        "surface": "#121316",
-                        "surface-elevated": "#1a1d23",
-                        "surface-card": "#1f232a",
-                        "cyan": "#00F0FF",
-                        "cyan-dim": "#00a8b3",
-                        "purple": "#9D4EDD",
-                        "purple-dim": "#6d2f9e",
-                        "green": "#00FF66",
-                        "green-dim": "#00b347",
-                        "amber": "#FFB800",
-                        "red": "#FF4444",
-                        "text-primary": "#e3e2e6",
-                        "text-secondary": "#9ca3af",
-                        "text-muted": "#6b7280",
-                        "border-subtle": "rgba(255,255,255,0.06)",
-                        "border-hover": "rgba(0,240,255,0.2)",
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Hanken Grotesk', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        * { scrollbar-width: thin; scrollbar-color: #1f2937 #0a0e17; }
-        *::-webkit-scrollbar { width: 6px; }
-        *::-webkit-scrollbar-track { background: #0a0e17; }
-        *::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 3px; }
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Aegis OS | talabat Agentic Command Center</title>
+<meta name="description" content="Obsidian command center for the talabat Agentic OS — AI-enabled capital allocation for the 2026 USD 175m investment programme. Dependency-free, no build step." />
+<meta name="color-scheme" content="dark" />
+<meta name="theme-color" content="#050506" />
+<style>
+/* ==========================================================================
+   Aegis OS — design tokens
+   Obsidian/cyan/purple glassmorphic system, hand-written (no CDN deps) so it
+   renders identically offline or online. Swap in Hanken Grotesk / JetBrains
+   Mono via <link> tags if network access to fonts.googleapis.com is available;
+   the stacks below degrade gracefully to system fonts otherwise.
+   ========================================================================== */
+:root {
+  --obsidian-deep: #050506;
+  --surface: #0d0e11;
+  --surface-card: rgba(22, 27, 34, 0.55);
+  --surface-card-hover: rgba(22, 27, 34, 0.8);
+  --border-soft: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.12);
+  --ink: #e3e2e6;
+  --ink-dim: #9aa3ab;
+  --ink-faint: #6b7480;
+  --cyan: #00f0ff;
+  --purple: #9d4edd;
+  --green: #00ff66;
+  --amber: #ffb800;
+  --red: #ff4d5e;
+  --font-head: "Hanken Grotesk", "Segoe UI Semibold", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--obsidian-deep);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+/* animated perspective grid backdrop */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -50% -50% auto auto;
+  width: 200%; height: 200%;
+  background-image:
+    linear-gradient(rgba(0, 240, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.035) 1px, transparent 1px);
+  background-size: 50px 50px;
+  transform: perspective(1000px) rotateX(60deg) translateY(-25%);
+  animation: grid-move 60s linear infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+@keyframes grid-move { from { background-position: 0 0; } to { background-position: 0 600px; } }
+@media (prefers-reduced-motion: reduce) { body::before { animation: none; } }
 
-        body {
-            background: #050506;
-            color: #e3e2e6;
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
+a { color: inherit; }
+.material { font-family: initial; }
 
-        .glass {
-            background: rgba(22, 27, 34, 0.6);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255,255,255,0.06);
-        }
-        .glass:hover {
-            border-color: rgba(0, 240, 255, 0.15);
-            background: rgba(22, 27, 34, 0.75);
-        }
+/* ---------- glass / motion primitives ---------- */
+.glass {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: var(--surface-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  transition: border-color .35s cubic-bezier(.2,.8,.2,1), background .35s cubic-bezier(.2,.8,.2,1), transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s cubic-bezier(.2,.8,.2,1);
+}
+.glass:hover {
+  border-color: rgba(0, 240, 255, 0.35);
+  background: var(--surface-card-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px -14px rgba(0, 240, 255, 0.18);
+}
+.glow-cyan { box-shadow: 0 0 22px rgba(0, 240, 255, 0.16); }
+.glow-purple { box-shadow: 0 0 22px rgba(157, 78, 221, 0.18); }
+@keyframes pulse-border { 0%, 100% { border-color: rgba(0, 240, 255, 0.22); } 50% { border-color: rgba(157, 78, 221, 0.55); } }
+.thinking-border { animation: pulse-border 3s infinite; border-width: 1.5px; }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+.shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent); background-size: 200% 100%; animation: shimmer 2.2s infinite linear; }
+@keyframes soft-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .78; } }
+.pulse-text { animation: soft-pulse 2.4s ease-in-out infinite; }
+@keyframes fade-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.enter { animation: fade-up .5s cubic-bezier(.2,.8,.2,1) both; }
+@media (prefers-reduced-motion: reduce) { .thinking-border, .shimmer, .pulse-text, .enter { animation: none !important; } }
 
-        .glow-cyan { box-shadow: 0 0 24px rgba(0, 240, 255, 0.08); }
-        .glow-purple { box-shadow: 0 0 24px rgba(157, 78, 221, 0.08); }
-        .glow-green { box-shadow: 0 0 24px rgba(0, 255, 102, 0.08); }
+/* ---------- typography ---------- */
+h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; font-weight: 700; letter-spacing: -0.01em; }
+.mono { font-family: var(--font-mono); }
+.label-caps { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.label-status { font-family: var(--font-mono); font-size: 11px; }
+.text-dim { color: var(--ink-dim); }
+.text-faint { color: var(--ink-faint); }
+.text-cyan { color: var(--cyan); }
+.text-purple { color: var(--purple); }
+.text-green { color: var(--green); }
+.text-amber { color: var(--amber); }
+.text-red { color: var(--red); }
 
-        .progress-ring { transform: rotate(-90deg); transform-origin: 50% 50%; }
-        .progress-ring circle { transition: stroke-dashoffset 1s ease-in-out; }
+/* ---------- layout shell ---------- */
+.shell { display: flex; min-height: 100vh; }
+.sidebar {
+  position: fixed; inset: 0 auto 0 0; width: 248px; z-index: 40;
+  background: rgba(5,5,6,0.92); backdrop-filter: blur(24px);
+  border-right: 1px solid var(--border-soft);
+  display: flex; flex-direction: column; padding: 84px 0 28px;
+}
+.brand { display: flex; align-items: center; gap: 12px; padding: 0 22px 30px; }
+.brand-mark {
+  width: 38px; height: 38px; border-radius: 12px; flex: 0 0 38px;
+  background: linear-gradient(135deg, var(--cyan), var(--purple));
+  padding: 1px;
+}
+.brand-mark > div { width: 100%; height: 100%; border-radius: 11px; background: var(--obsidian-deep); display: grid; place-items: center; font-weight: 800; color: var(--cyan); font-family: var(--font-head); }
+.brand-name { font-family: var(--font-head); font-weight: 700; font-size: 14px; line-height: 1.2; }
+.brand-sub { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-faint); margin-top: 1px; }
 
-        @keyframes pulse-border {
-            0%, 100% { border-color: rgba(0, 240, 255, 0.15); }
-            50% { border-color: rgba(157, 78, 221, 0.4); }
-        }
-        .thinking { animation: pulse-border 3s infinite; }
+.nav { flex: 1; padding: 4px 0; overflow-y: auto; }
+.nav a {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 22px; margin: 1px 0; text-decoration: none;
+  color: var(--ink-faint); font-family: var(--font-mono); font-size: 11.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  border-right: 3px solid transparent;
+  transition: all .18s ease;
+}
+.nav a:hover { background: rgba(255,255,255,.04); color: var(--ink); }
+.nav a.active {
+  background: rgba(157,78,221,.12); color: var(--purple); border-right-color: var(--purple);
+}
+.nav .ic { width: 18px; text-align: center; font-size: 15px; }
 
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
-        }
-        .shimmer {
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
-            background-size: 200% 100%;
-            animation: shimmer 2.5s infinite linear;
-        }
+.sidebar-foot { padding: 18px 22px 0; }
+.export-btn {
+  width: 100%; padding: 11px; border: none; border-radius: 10px; cursor: pointer;
+  background: linear-gradient(90deg, var(--cyan), var(--purple)); color: var(--obsidian-deep);
+  font-family: var(--font-mono); font-weight: 700; font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+  transition: transform .18s cubic-bezier(.33,1,.68,1), box-shadow .18s ease;
+}
+.export-btn:hover { box-shadow: 0 0 20px rgba(0,240,255,.4); }
+.export-btn:active { transform: scale(.97); }
+.sidebar-links { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border-soft); display: grid; gap: 10px; }
+.sidebar-links a { display: flex; align-items: center; gap: 9px; color: var(--ink-faint); text-decoration: none; font-family: var(--font-mono); font-size: 11px; }
+.sidebar-links a:hover { color: var(--ink); }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+.main { margin-left: 248px; flex: 1; min-width: 0; }
+.topbar {
+  position: sticky; top: 0; z-index: 30; height: 64px;
+  display: flex; align-items: center; gap: 16px; padding: 0 30px;
+  background: rgba(18,20,25,0.72); backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border-soft);
+}
+.topbar h1 { font-size: 22px; color: var(--cyan); letter-spacing: -0.02em; }
+.divider-v { width: 1px; height: 16px; background: var(--border); }
+.tag-pill { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); background: rgba(255,255,255,.05); padding: 4px 11px; border-radius: 999px; }
+.topbar-spacer { flex: 1; }
+.search-box { position: relative; display: none; }
+@media (min-width: 820px) { .search-box { display: flex; align-items: center; } }
+.search-box input {
+  background: rgba(5,5,6,.5); border: none; border-bottom: 1px solid rgba(0,240,255,.28);
+  color: var(--ink); font-size: 13px; padding: 7px 34px 7px 12px; width: 230px; outline: none;
+}
+.search-box input:focus { border-color: var(--cyan); }
+.search-box .ic { position: absolute; right: 9px; color: var(--ink-faint); font-size: 15px; }
+.icon-btn { background: none; border: none; color: var(--ink-dim); cursor: pointer; font-size: 17px; padding: 4px; }
+.icon-btn:hover { color: var(--cyan); }
+.status-dot-ring { width: 30px; height: 30px; border-radius: 999px; border: 1px solid rgba(0,255,102,.5); padding: 2px; }
+.status-dot-ring > div { width: 100%; height: 100%; border-radius: 999px; background: rgba(0,255,102,.22); animation: soft-pulse 2s infinite; }
 
-        .nav-item { transition: all 0.2s ease; }
-        .nav-item:hover { background: rgba(255,255,255,0.04); }
-        .nav-item.active {
-            background: linear-gradient(90deg, rgba(157,78,221,0.15), transparent);
-            border-right: 3px solid #9D4EDD;
-            color: #e0b6ff;
-        }
+.content { padding: 30px; max-width: 1360px; margin: 0 auto; }
+.page-title { font-size: 26px; margin-bottom: 6px; }
+.page-sub { color: var(--ink-dim); max-width: 760px; margin: 0 0 26px; font-size: 13.5px; }
 
-        .stage-bar { transition: all 0.3s ease; }
-        .stage-bar:hover { filter: brightness(1.2); }
+/* ---------- grid / cards ---------- */
+.grid { display: grid; gap: 18px; }
+.g-12 { grid-template-columns: repeat(12, 1fr); }
+.g-2 { grid-template-columns: repeat(2, 1fr); }
+.g-3 { grid-template-columns: repeat(3, 1fr); }
+.g-4 { grid-template-columns: repeat(4, 1fr); }
+.span-8 { grid-column: span 8; }
+.span-4 { grid-column: span 4; }
+.span-7 { grid-column: span 7; }
+.span-5 { grid-column: span 5; }
+.span-6 { grid-column: span 6; }
+@media (max-width: 1024px) { .g-12 > * { grid-column: span 12 !important; } .g-3, .g-4 { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 640px) { .g-2, .g-3, .g-4 { grid-template-columns: 1fr; } .sidebar { transform: translateX(-100%); } .main { margin-left: 0; } .content { padding: 18px; } }
 
-        .agent-card { transition: all 0.25s ease; }
-        .agent-card:hover { transform: translateY(-2px); }
+.card { padding: 22px; }
+.card-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 16px; }
+.card-title { font-size: 15px; }
+.card-icon-box { width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center; font-size: 16px; }
 
-        .badge {
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            padding: 2px 8px;
-            border-radius: 4px;
-            text-transform: uppercase;
-            font-family: 'JetBrains Mono', monospace;
-        }
+.chip { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 10.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
+.chip-green { color: var(--green); background: rgba(0,255,102,.1); border: 1px solid rgba(0,255,102,.28); }
+.chip-cyan { color: var(--cyan); background: rgba(0,240,255,.1); border: 1px solid rgba(0,240,255,.28); }
+.chip-purple { color: var(--purple); background: rgba(157,78,221,.14); border: 1px solid rgba(157,78,221,.3); }
+.chip-amber { color: var(--amber); background: rgba(255,184,0,.1); border: 1px solid rgba(255,184,0,.28); }
+.chip-dim { color: var(--ink-faint); background: rgba(255,255,255,.05); border: 1px solid var(--border); }
 
-        .chart-bar { transition: all 0.3s ease; }
-        .chart-bar:hover { filter: brightness(1.3); }
+/* ---------- hero progress ring ---------- */
+.hero-visual { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 440px; position: relative; overflow: hidden; }
+.hero-visual .radial-glow { position: absolute; inset: 0; opacity: .22; pointer-events: none; background: radial-gradient(circle at center, var(--cyan) 0%, transparent 65%); filter: blur(70px); }
+.ring-wrap { position: relative; width: 280px; height: 280px; }
+.ring-wrap svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ring-track { fill: none; stroke: rgba(255,255,255,.06); stroke-width: 6; }
+.ring-fill { fill: none; stroke: var(--cyan); stroke-width: 6; stroke-linecap: round; filter: drop-shadow(0 0 8px rgba(0,240,255,.55)); transition: stroke-dashoffset 1.1s cubic-bezier(.22,1,.36,1); }
+.ring-outer { position: absolute; inset: 18px; border-radius: 999px; border: 2px dashed rgba(0,240,255,.2); animation: spin 22s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.ring-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.ring-value { font-family: var(--font-head); font-size: 42px; font-weight: 800; color: #fff; text-shadow: 0 0 14px rgba(255,255,255,.4); }
+.ring-label { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .18em; color: var(--cyan); margin-top: 2px; }
+.hero-stats { display: flex; gap: 48px; margin-top: 30px; }
+.hero-stat { text-align: center; }
+.hero-stat .k { font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; color: var(--ink-faint); letter-spacing: .06em; margin-bottom: 5px; }
+.hero-stat .v { display: flex; align-items: center; gap: 6px; justify-content: center; font-family: var(--font-head); font-weight: 700; font-size: 17px; }
 
-        .tab-btn { transition: all 0.2s ease; }
-        .tab-btn.active {
-            color: #00F0FF;
-            border-bottom: 2px solid #00F0FF;
-        }
+/* ---------- meters / bars ---------- */
+.bar-track { height: 8px; background: rgba(255,255,255,.06); border-radius: 6px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 6px; }
+.spark { display: flex; align-items: flex-end; gap: 5px; height: 96px; }
+.spark > div { flex: 1; border-radius: 4px 4px 0 0; background: rgba(0,240,255,.22); transition: height .3s; min-height: 3px; }
+.spark > div:hover { background: rgba(0,240,255,.5); }
 
-        /* Pipeline connector line */
-        .pipeline-connector {
-            position: absolute;
-            top: 50%;
-            left: -12px;
-            width: 12px;
-            height: 2px;
-            background: rgba(0,240,255,0.2);
-        }
+/* ---------- lists / tables ---------- */
+.ilist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.ilist li { display: flex; align-items: center; justify-content: space-between; padding: 11px 13px; background: rgba(255,255,255,.03); border: 1px solid var(--border-soft); border-radius: 9px; }
+table.data { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+table.data th { text-align: left; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-faint); padding: 10px 14px; border-bottom: 1px solid var(--border-soft); position: sticky; top: 0; background: rgba(15,17,21,.92); }
+table.data td { padding: 12px 14px; border-bottom: 1px solid var(--border-soft); vertical-align: top; }
+table.data tr:last-child td { border-bottom: none; }
+table.data tr:hover td { background: rgba(255,255,255,.025); }
+.scroll-y { overflow-y: auto; }
+.scroll-y::-webkit-scrollbar { width: 5px; } .scroll-y::-webkit-scrollbar-thumb { background: rgba(0,240,255,.22); border-radius: 8px; }
 
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .material-symbols-outlined.filled {
-            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
-<base target="_blank">
+/* ---------- timeline (decisions) ---------- */
+.tl-item { padding: 15px; background: rgba(255,255,255,.03); border-left: 2px solid var(--border); border-radius: 0 9px 9px 0; margin-bottom: 12px; cursor: default; transition: background .2s; }
+.tl-item:hover { background: rgba(255,255,255,.055); }
+.tl-item .tl-top { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-faint); margin-bottom: 6px; }
+.tl-item h4 { font-family: var(--font-body); font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.tl-item p { color: var(--ink-dim); font-size: 12.5px; margin: 5px 0 0; }
+
+/* ---------- QA gate checklist ---------- */
+.gate-row { display: flex; align-items: flex-start; gap: 13px; padding: 13px; border-radius: 9px; margin-bottom: 10px; }
+.gate-pass { background: rgba(0,255,102,.05); border: 1px solid rgba(0,255,102,.16); }
+.gate-next { background: rgba(157,78,221,.08); border: 1px solid rgba(157,78,221,.24); }
+.gate-check { width: 20px; height: 20px; border-radius: 6px; display: grid; place-items: center; flex: 0 0 20px; margin-top: 1px; }
+.gate-check.pass { background: var(--green); color: #04120a; }
+.gate-check.next { border: 2px solid var(--purple); }
+
+/* ---------- neural map (SVG) ---------- */
+.neuralmap { width: 100%; height: 100%; }
+.nm-node circle { fill: var(--surface); stroke-width: 1.4; }
+.nm-node text { font-family: var(--font-mono); fill: var(--ink-dim); font-size: 10px; }
+.nm-node .nlabel { fill: #fff; font-weight: 700; font-size: 11px; }
+.nm-link { stroke-width: 1; opacity: .45; }
+
+/* footer */
+.footer {
+  position: sticky; bottom: 0; z-index: 20; height: 42px;
+  display: flex; align-items: center; justify-content: space-between; padding: 0 22px;
+  background: rgba(10,11,14,.7); backdrop-filter: blur(12px); border-top: 1px solid var(--border-soft);
+  font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-faint);
+}
+.footer a { color: var(--ink-faint); text-decoration: underline; margin-left: 16px; }
+.footer a:hover { color: var(--green); }
+
+.callout { border-left: 3px solid var(--cyan); background: rgba(0,240,255,.06); border-radius: 0 9px 9px 0; padding: 11px 14px; font-size: 12.5px; color: var(--ink-dim); }
+.kbd { font-family: var(--font-mono); font-size: 10.5px; background: rgba(255,255,255,.06); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; }
+.hint { font-size: 11.5px; color: var(--ink-faint); }
+</style>
 </head>
-<body class="min-h-screen flex">
-
-<!-- SIDEBAR -->
-<aside class="fixed left-0 top-0 h-full w-64 z-40 glass border-r border-border-subtle flex flex-col">
-    <!-- Logo -->
-    <div class="px-6 pt-6 pb-4">
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan to-purple p-[1.5px]">
-                <div class="w-full h-full rounded-[10px] bg-obsidian-deep flex items-center justify-center">
-                    <span class="material-symbols-outlined text-cyan text-lg">hub</span>
-                </div>
-            </div>
-            <div>
-                <p class="font-display font-bold text-text-primary text-sm leading-tight">Aegis OS</p>
-                <p class="font-mono text-[10px] text-text-muted">v3.5.0 Active</p>
-            </div>
-        </div>
+<body>
+<div class="shell">
+  <aside class="sidebar" aria-label="Primary navigation">
+    <div class="brand">
+      <div class="brand-mark"><div>t</div></div>
+      <div>
+        <div class="brand-name">Obsidian Core</div>
+        <div class="brand-sub" id="core-version">v3.5.0 Active</div>
+      </div>
     </div>
-
-    <!-- Navigation -->
-    <nav class="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
-        <div class="px-3 pb-2 pt-2">
-            <p class="font-mono text-[10px] text-text-muted uppercase tracking-widest">Command</p>
-        </div>
-        <a href="#dashboard" class="nav-item active flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer" onclick="showSection('dashboard')">
-            <span class="material-symbols-outlined text-lg">dashboard</span>
-            <span class="font-mono text-xs">Dashboard</span>
-        </a>
-        <a href="#pipeline" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('pipeline')">
-            <span class="material-symbols-outlined text-lg">account_tree</span>
-            <span class="font-mono text-xs">Pipeline (19)</span>
-        </a>
-        <a href="#agents" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('agents')">
-            <span class="material-symbols-outlined text-lg">smart_toy</span>
-            <span class="font-mono text-xs">Agents (9)</span>
-        </a>
-        <a href="#skills" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('skills')">
-            <span class="material-symbols-outlined text-lg">construction</span>
-            <span class="font-mono text-xs">Skills (13)</span>
-        </a>
-
-        <div class="px-3 pb-2 pt-4">
-            <p class="font-mono text-[10px] text-text-muted uppercase tracking-widest">Vault</p>
-        </div>
-        <a href="#knowledge" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('knowledge')">
-            <span class="material-symbols-outlined text-lg">database</span>
-            <span class="font-mono text-xs">Knowledge</span>
-        </a>
-        <a href="#decisions" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('decisions')">
-            <span class="material-symbols-outlined text-lg">gavel</span>
-            <span class="font-mono text-xs">Decisions</span>
-        </a>
-        <a href="#research" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('research')">
-            <span class="material-symbols-outlined text-lg">travel_explore</span>
-            <span class="font-mono text-xs">Research</span>
-        </a>
-        <a href="#forecasts" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('forecasts')">
-            <span class="material-symbols-outlined text-lg">timeline</span>
-            <span class="font-mono text-xs">Forecasts</span>
-        </a>
-        <a href="#validation" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('validation')">
-            <span class="material-symbols-outlined text-lg">verified</span>
-            <span class="font-mono text-xs">Validation</span>
-        </a>
-        <a href="#projects" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('projects')">
-            <span class="material-symbols-outlined text-lg">folder_open</span>
-            <span class="font-mono text-xs">Projects</span>
-        </a>
-
-        <div class="px-3 pb-2 pt-4">
-            <p class="font-mono text-[10px] text-text-muted uppercase tracking-widest">System</p>
-        </div>
-        <a href="#memory" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('memory')">
-            <span class="material-symbols-outlined text-lg">memory</span>
-            <span class="font-mono text-xs">Memory</span>
-        </a>
-        <a href="#logs" class="nav-item flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer text-text-secondary" onclick="showSection('logs')">
-            <span class="material-symbols-outlined text-lg">terminal</span>
-            <span class="font-mono text-xs">Session Logs</span>
-        </a>
+    <nav class="nav" id="nav">
+      <a href="#/architecture" data-view="architecture"><span class="ic">&#9737;</span>Architecture</a>
+      <a href="#/knowledge" data-view="knowledge"><span class="ic">&#9737;</span>Knowledge</a>
+      <a href="#/decision" data-view="decision"><span class="ic">&#9878;</span>Decision</a>
+      <a href="#/forecast" data-view="forecast"><span class="ic">&#8599;</span>Forecast</a>
+      <a href="#/publication" data-view="publication"><span class="ic">&#8682;</span>Publication</a>
     </nav>
-
-    <!-- Bottom Actions -->
-    <div class="px-4 pb-6 pt-2 border-t border-border-subtle space-y-3">
-        <button onclick="triggerExport()" class="w-full bg-gradient-to-r from-cyan/20 to-purple/20 border border-cyan/30 text-cyan font-mono text-xs py-2.5 rounded-lg font-semibold hover:from-cyan/30 hover:to-purple/30 transition-all flex items-center justify-center gap-2">
-            <span class="material-symbols-outlined text-sm">ios_share</span>
-            Export Control
-        </button>
-        <div class="flex items-center justify-between px-2">
-            <div class="flex items-center gap-2 text-text-muted">
-                <span class="material-symbols-outlined text-sm">emergency_home</span>
-                <span class="font-mono text-[10px]">Health</span>
-            </div>
-            <div class="flex items-center gap-1.5">
-                <div class="w-1.5 h-1.5 rounded-full bg-green animate-pulse"></div>
-                <span class="font-mono text-[10px] text-green">OPTIMAL</span>
-            </div>
-        </div>
+    <div class="sidebar-foot">
+      <button class="export-btn" id="export-btn">Export Control</button>
+      <div class="sidebar-links">
+        <a href="#/publication">&#9877; System Health</a>
+        <a href="#/architecture">&#9881; Settings</a>
+      </div>
     </div>
-</aside>
+  </aside>
 
-<!-- MAIN CONTENT -->
-<main class="ml-64 flex-1 flex flex-col min-h-screen">
-    <!-- TOP BAR -->
-    <header class="fixed top-0 right-0 left-64 z-50 h-14 glass border-b border-border-subtle flex justify-between items-center px-6">
-        <div class="flex items-center gap-4">
-            <h1 class="font-display font-bold text-xl tracking-tight text-cyan">Aegis OS</h1>
-            <div class="h-4 w-px bg-white/10"></div>
-            <span class="font-mono text-[10px] text-text-muted px-2 py-0.5 bg-white/5 rounded border border-white/5">STRATEGIC_LAYER_A1</span>
-        </div>
-        <div class="flex items-center gap-5">
-            <div class="relative">
-                <input type="text" placeholder="Query vault intelligence..." 
-                       class="bg-surface/50 border border-border-subtle focus:border-cyan/50 text-sm py-1.5 pl-3 pr-9 rounded-lg w-56 transition-all outline-none text-text-primary placeholder:text-text-muted font-mono text-xs"/>
-                <span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-text-muted text-sm">search</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <button class="relative text-text-muted hover:text-cyan transition-colors">
-                    <span class="material-symbols-outlined text-lg">notifications</span>
-                    <span class="absolute -top-0.5 -right-0.5 w-2 h-2 bg-amber rounded-full"></span>
-                </button>
-                <div class="w-7 h-7 rounded-full border border-green/40 p-[1px]">
-                    <div class="w-full h-full rounded-full bg-green/20 flex items-center justify-center">
-                        <span class="font-mono text-[9px] text-green font-bold">SK</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="main">
+    <header class="topbar">
+      <h1 id="crumb-view">Aegis OS</h1>
+      <div class="divider-v"></div>
+      <span class="tag-pill">STRATEGIC_LAYER_A1</span>
+      <div class="topbar-spacer"></div>
+      <div class="search-box">
+        <input type="text" placeholder="Query Intelligence Core…" id="search-input" autocomplete="off" />
+        <span class="ic">&#128269;</span>
+      </div>
+      <button class="icon-btn" title="Notifications">&#128276;</button>
+      <button class="icon-btn" title="Settings">&#9881;</button>
+      <div class="status-dot-ring"><div></div></div>
     </header>
 
-    <!-- CONTENT AREA -->
-    <div id="content-area" class="mt-14 p-6 flex-1 space-y-6 overflow-y-auto pb-24">
-        <!-- DYNAMIC CONTENT LOADED HERE -->
-    </div>
+    <main class="content" id="view" tabindex="-1"></main>
 
-    <!-- FOOTER -->
-    <footer class="fixed bottom-0 right-0 w-[calc(100%-16rem)] z-30 glass border-t border-border-subtle flex justify-between items-center px-6 py-2">
-        <div class="flex items-center gap-4">
-            <span class="font-mono text-[10px] text-green font-semibold">READY</span>
-            <p class="font-mono text-[10px] text-text-muted">talabat Agentic OS v3.5.0  |  MBA Capstone G02</p>
-        </div>
-        <div class="flex gap-4">
-            <button onclick="exportPDF()" class="font-mono text-[10px] text-text-muted hover:text-cyan underline transition-colors">PDF Export</button>
-            <button onclick="exportDOCX()" class="font-mono text-[10px] text-text-muted hover:text-cyan underline transition-colors">DOCX Bundle</button>
-            <button onclick="archiveSession()" class="font-mono text-[10px] text-text-muted hover:text-cyan underline transition-colors">Archive</button>
-        </div>
+    <footer class="footer">
+      <div><span class="text-green" id="foot-ready">READY</span> &nbsp;·&nbsp; talabat Agentic OS — Strategic Intelligence Tier</div>
+      <div>
+        <a href="#/publication">PDF Export</a>
+        <a href="#/publication">DOCX Bundle</a>
+        <a href="#/publication">Archive</a>
+      </div>
     </footer>
-</main>
+  </div>
+</div>
 
-<!-- JAVASCRIPT -->
+<script id="aegis-data" type="application/json">
+{
+ "meta": {
+  "problem": "How should talabat allocate its 2026 USD 175 million investment programme across Everyday App and Food-leadership initiatives -- and within them, across markets and initiative categories -- to maximise profitable growth, CLV, retention, and long-term platform economics?",
+  "snapshotDate": "2026-07-26",
+  "nextAction": "All 14 sections independently verified. Whole-plan gates 14-18 all PASS. Stage 19 (Publication handoff) next -- published DOCX/PDF predates the Stage 17 fixes and needs regenerating."
+ },
+ "pipeline": {
+  "partA": [
+   {
+    "status": "done"
+   },
+   {
+    "status": "done"
+   },
+   {
+    "status": "done"
+   },
+   {
+    "status": "done"
+   },
+   {
+    "status": "done"
+   },
+   {
+    "status": "done"
+   },
+   {
+    "status": "done"
+   },
+   {
+    "status": "done"
+   },
+   {
+    "status": "done"
+   },
+   {
+    "status": "done"
+   },
+   {
+    "status": "done"
+   },
+   {
+    "status": "done"
+   }
+  ],
+  "partC": [
+   {
+    "n": 14,
+    "status": "done"
+   },
+   {
+    "n": 15,
+    "status": "done"
+   },
+   {
+    "n": 16,
+    "status": "done"
+   },
+   {
+    "n": 17,
+    "status": "done"
+   },
+   {
+    "n": 18,
+    "status": "done"
+   },
+   {
+    "n": 19,
+    "status": "todo"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "n": 1,
+   "name": "Executive Summary (SCQA)",
+   "status": "done_iv"
+  },
+  {
+   "n": 2,
+   "name": "Business Description",
+   "status": "done_iv"
+  },
+  {
+   "n": 3,
+   "name": "Market Analysis",
+   "status": "done_iv"
+  },
+  {
+   "n": 4,
+   "name": "Value Proposition",
+   "status": "done_iv"
+  },
+  {
+   "n": 5,
+   "name": "AI Technology and Development",
+   "status": "done_iv"
+  },
+  {
+   "n": 6,
+   "name": "Business Model and Revenue Streams",
+   "status": "done_iv"
+  },
+  {
+   "n": 7,
+   "name": "Marketing and Sales Strategy",
+   "status": "done_iv"
+  },
+  {
+   "n": 8,
+   "name": "Operations Plan",
+   "status": "done_iv"
+  },
+  {
+   "n": 9,
+   "name": "Financial Plan",
+   "status": "done_iv"
+  },
+  {
+   "n": 10,
+   "name": "Risk Analysis",
+   "status": "done_iv"
+  },
+  {
+   "n": 11,
+   "name": "CSR & Responsible AI",
+   "status": "done_iv"
+  },
+  {
+   "n": 12,
+   "name": "Implementation Plan",
+   "status": "done_iv"
+  },
+  {
+   "n": 13,
+   "name": "Monitoring and Evaluation (KPIs)",
+   "status": "done_iv"
+  },
+  {
+   "n": 14,
+   "name": "Appendices + traceability note",
+   "status": "done_iv"
+  }
+ ],
+ "vault": {
+  "totalNotes": 411,
+  "semanticLinks": 937,
+  "orphans": 0
+ },
+ "corpus": {
+  "total": 37
+ },
+ "agents": [
+  {
+   "id": "bp-orchestrator"
+  },
+  {
+   "id": "research-agent"
+  },
+  {
+   "id": "forecasting-agent"
+  },
+  {
+   "id": "decision-steward"
+  },
+  {
+   "id": "evidence-citation-agent"
+  },
+  {
+   "id": "kpi-agent"
+  },
+  {
+   "id": "exec-summary-agent"
+  },
+  {
+   "id": "qa-review-agent"
+  },
+  {
+   "id": "publication-agent"
+  }
+ ],
+ "skills": 13,
+ "mcpTools": 12,
+ "forecastBars": [
+  23,
+  29,
+  29,
+  35,
+  92,
+  100
+ ],
+ "forecasts": {
+  "gmv": "+11-14% cFX",
+  "revenue": "+14-17% cFX",
+  "ebitda": "4.4-4.8% of GMV",
+  "confidence": "medium",
+  "vdtNodes": 45,
+  "scenarioModules": 8,
+  "kpiCount": 50,
+  "cases": [
+   {
+    "name": "Base",
+    "desc": "Headline case (DEC-005/DEC-008) -- disclosed FY2026 guidance trajectory with the $120m/$55m bucket split."
+   },
+   {
+    "name": "Upside",
+    "desc": "Labeled sensitivity -- faster Everyday App adoption and adtech scaling."
+   },
+   {
+    "name": "Downside",
+    "desc": "Labeled sensitivity -- margin compression persists; competitive intensity rises."
+   }
+  ]
+ },
+ "knowledgeCards": {
+  "active": {
+   "title": "Stage 19 Handoff Prep",
+   "body": "qa-review-agent and bp-orchestrator preparing the formal handoff to the executive-document-formatting skill now that Stages 14-18 all show PASS."
+  },
+  "insight": {
+   "title": "Citation Audit Closed",
+   "body": "Stage 17 whole-plan citation audit: 9/9 previously-recorded fixes independently re-verified against the post-merge draft state. Zero open citation failures."
+  },
+  "issue": {
+   "title": "Section 13 Sync Artifact",
+   "body": "A recurring iCloud sync conflict repeatedly renamed Section_13_Monitoring_and_Evaluation.md to a numbered duplicate across sessions. Content never lost; now filed under its canonical name."
+  }
+ },
+ "decisions": [
+  {
+   "id": "DEC-001",
+   "title": "Egypt category-share figure",
+   "date": "2026-07-22",
+   "note": "Two footnoted values, not blended; conservative figure leads.",
+   "impact": "medium"
+  },
+  {
+   "id": "DEC-002",
+   "title": "Egypt market-size definition",
+   "date": "2026-07-22",
+   "note": "Three explicitly-labeled market-size framings, never force-reconciled.",
+   "impact": "medium"
+  },
+  {
+   "id": "DEC-003",
+   "title": "Section 2 governing hypothesis",
+   "date": "2026-07-22",
+   "note": "First human-confirmed strategic decision (via AskUserQuestion escalation).",
+   "impact": "high"
+  },
+  {
+   "id": "DEC-004",
+   "title": "2026 investment total",
+   "date": "2026-07-22",
+   "note": "Reconciled the USD 175m discrepancy previously assumed irreconcilable.",
+   "impact": "high"
+  },
+  {
+   "id": "DEC-005",
+   "title": "Section 9 headline scenario",
+   "date": "2026-07-22",
+   "note": "Base case as headline; upside/downside as labeled sensitivities.",
+   "impact": "medium"
+  },
+  {
+   "id": "DEC-006",
+   "title": "Subscription revenue-line reclassification",
+   "date": "2026-07-22",
+   "note": "Superseded by DEC-013 re-issuance.",
+   "impact": "low"
+  },
+  {
+   "id": "DEC-007",
+   "title": "Section 13 review cadence & kill criteria",
+   "date": "2026-07-22",
+   "note": "",
+   "impact": "low"
+  },
+  {
+   "id": "DEC-008",
+   "title": "Section 9 headline bucket-split presentation",
+   "date": "2026-07-23",
+   "note": "Base case presented with the $120m/$55m bucket split.",
+   "impact": "high"
+  },
+  {
+   "id": "DEC-009",
+   "title": "Investment-options ranking & allocation priority",
+   "date": "2026-07-23",
+   "note": "Middle path -- funding sequence stated narratively; allocation ranges never a headline exhibit.",
+   "impact": "high"
+  },
+  {
+   "id": "DEC-010",
+   "title": "2026 investment-total reissuance",
+   "date": "2026-07-23",
+   "note": "Procedural re-issuance, prior decision superseded.",
+   "impact": "low"
+  },
+  {
+   "id": "DEC-011",
+   "title": "MCP layer -- pursue (vault-mcp)",
+   "date": "2026-07-24",
+   "note": "Read-only MCP server built and registered; 12 tools.",
+   "impact": "high"
+  },
+  {
+   "id": "DEC-012",
+   "title": "Production platform track (scoped)",
+   "date": "2026-07-24",
+   "note": "Track B: incremental kernel/tests/CI evolution; enterprise stack deferred.",
+   "impact": "medium"
+  },
+  {
+   "id": "DEC-013",
+   "title": "Subscription-line reclassification re-issuance",
+   "date": "2026-07-25",
+   "note": "Procedural re-issuance of superseded DEC-006; ASM-013 re-established.",
+   "impact": "medium"
+  },
+  {
+   "id": "DEC-014",
+   "title": "TLB-019 fee-mix label correction",
+   "date": "2026-07-25",
+   "note": "Label-shift confirmed by 16-value arithmetic reconstruction; Facts layer corrected at root.",
+   "impact": "high"
+  }
+ ],
+ "options": [
+  {
+   "id": "OPT-001",
+   "title": "talabat mart dark-store densification",
+   "bucket": "Everyday App"
+  },
+  {
+   "id": "OPT-002",
+   "title": "talabat pro acceleration -- Egypt & Iraq",
+   "bucket": "Everyday App"
+  },
+  {
+   "id": "OPT-003",
+   "title": "Food-leadership CVP & partner retention -- GCC-3",
+   "bucket": "Food-leadership"
+  },
+  {
+   "id": "OPT-004",
+   "title": "Advertising monetization gap closure",
+   "bucket": "Everyday App"
+  },
+  {
+   "id": "OPT-005",
+   "title": "AI personalisation capability scaling",
+   "bucket": "Everyday App"
+  }
+ ],
+ "registers": [
+  {
+   "name": "Assumptions",
+   "count": 47,
+   "icon": "≔"
+  },
+  {
+   "name": "Decisions",
+   "count": 14,
+   "icon": "◆"
+  },
+  {
+   "name": "Options",
+   "count": 5,
+   "icon": "▤"
+  },
+  {
+   "name": "Research",
+   "count": 8,
+   "icon": "◈"
+  }
+ ],
+ "evidenceTiers": [
+  {
+   "n": 1,
+   "name": "Facts",
+   "count": 14
+  },
+  {
+   "n": 2,
+   "name": "Research",
+   "count": 8
+  },
+  {
+   "n": 3,
+   "name": "Forecasts",
+   "count": 45
+  },
+  {
+   "n": 4,
+   "name": "Decisions",
+   "count": 14
+  },
+  {
+   "n": 5,
+   "name": "Plan",
+   "count": 14
+  }
+ ],
+ "gates": [
+  {
+   "name": "Problem Consistency",
+   "status": "done",
+   "short": "All 14 sections argue one coherent problem; re-verified post-merge."
+  },
+  {
+   "name": "Financial Integrity",
+   "status": "done",
+   "short": "One USD 175m split, one EBITDA trajectory, one headline scenario."
+  },
+  {
+   "name": "Geographic Evidence",
+   "status": "done",
+   "short": "Evidence used at the level talabat discloses it. Never 'MENA' as a stand-in."
+  },
+  {
+   "name": "Whole-Plan Citation Audit",
+   "status": "done",
+   "short": "9/9 previously-recorded fixes independently re-verified; zero open failures."
+  },
+  {
+   "name": "Template Compliance",
+   "status": "done",
+   "short": "14 sections, numbering, titles, order, subsection coverage intact."
+  },
+  {
+   "name": "Publication Handoff",
+   "status": "todo",
+   "short": "Formal handoff to executive-document-formatting -- next."
+  }
+ ],
+ "publicationNote": "The already-published DOCX/PDF package predates the Stage 17 citation fixes and has not yet been regenerated."
+}
+</script>
 <script>
-// ===================== DATA MODEL =====================
-const osData = {
-    meta: {
-        version: "3.5.0",
-        lastSync: "2026-07-25T20:55:00+04:00",
-        coordinator: "Sherif Karoub",
-        teamSize: 6,
-        problem: "talabat Group 2026 USD 175M Investment Allocation",
-        status: "Phase 4 - Whole-Plan Gates"
-    },
+/* =========================================================================
+   Aegis OS Command Center — application logic
+   Dependency-free (no build step, no CDN). Data is the repository snapshot
+   embedded above (regenerate via scripts/aos/export_console.py-style
+   procedure; see README_UI.md). Never fabricate figures the corpus does not
+   disclose — every number here traces to the same repo state as
+   app/agentic-os-console/src/js/data.js and js/kernel.js.
+   ========================================================================= */
+const DATA = JSON.parse(document.getElementById('aegis-data').textContent);
+const $ = (sel, el = document) => el.querySelector(sel);
+const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-    pipeline: {
-        currentStage: 14,
-        totalStages: 19,
-        stages: [
-            { id: 1, name: "Confirm Business Question", status: "done", agent: "bp-orchestrator", section: "N/A" },
-            { id: 2, name: "Assemble Investment Evidence", status: "done", agent: "research-agent", section: "N/A" },
-            { id: 3, name: "Identify Investment Options", status: "done", agent: "bp-orchestrator", section: "N/A" },
-            { id: 4, name: "Detect Evidence Gaps/Conflicts", status: "done", agent: "evidence-citation-agent", section: "N/A" },
-            { id: 5, name: "Targeted Research", status: "done", agent: "research-agent", section: "N/A" },
-            { id: 6, name: "Define Decision Criteria", status: "done", agent: "decision-steward", section: "N/A" },
-            { id: 7, name: "Build Value-Driver Trees", status: "done", agent: "forecasting-agent", section: "N/A" },
-            { id: 8, name: "Register Assumptions", status: "done", agent: "decision-steward", section: "N/A" },
-            { id: 9, name: "Build Scenarios", status: "done", agent: "forecasting-agent", section: "N/A" },
-            { id: 10, name: "Rank Investment Options", status: "done", agent: "decision-steward", section: "N/A" },
-            { id: 11, name: "Allocation Ranges / Pilot Sequencing", status: "done", agent: "bp-orchestrator", section: "N/A" },
-            { id: 12, name: "Define KPIs / Stage Gates", status: "done", agent: "kpi-agent", section: "N/A" },
-            { id: 13, name: "Per-Section Drafting Loop (14 sections, Pass 1 + Pass 2)", status: "done", agent: "bp-orchestrator", section: "1-14" },
-            { id: 14, name: "Problem Consistency Gate", status: "active", agent: "qa-review-agent", section: "ALL" },
-            { id: 15, name: "Financial Integrity Gate", status: "pending", agent: "qa-review-agent", section: "6,9,12,13" },
-            { id: 16, name: "Geographic Evidence Gate", status: "pending", agent: "qa-review-agent", section: "ALL" },
-            { id: 17, name: "Whole-Plan Citation Audit", status: "pending", agent: "evidence-citation-agent", section: "ALL" },
-            { id: 18, name: "Template Compliance Gate", status: "pending", agent: "qa-review-agent", section: "ALL" },
-            { id: 19, name: "Publication Handoff", status: "pending", agent: "publication-agent", section: "ALL" }
-        ]
-    },
+function readiness() {
+  const a = DATA.pipeline.partA.filter(s => s.status === 'done').length;
+  const b = DATA.sections.filter(s => s.status === 'done_iv').length;
+  const c = DATA.pipeline.partC.filter(s => s.status === 'done').length;
+  const total = DATA.pipeline.partA.length + DATA.sections.length + DATA.pipeline.partC.length;
+  return { a, aTotal: DATA.pipeline.partA.length, b, bTotal: DATA.sections.length, c, cTotal: DATA.pipeline.partC.length, pct: Math.round(((a+b+c)/total)*100) };
+}
 
-    agents: [
-        { id: "bp-orchestrator", name: "BP Orchestrator", role: "Pipeline Sequencer", status: "idle", lastRun: "2026-07-25", tasks: 28, successRate: 100 },
-        { id: "research-agent", name: "Research Agent", role: "External Gap-Filling", status: "idle", lastRun: "2026-07-24", tasks: 8, successRate: 100 },
-        { id: "forecasting-agent", name: "Forecasting Agent", role: "Forward Projections", status: "idle", lastRun: "2026-07-23", tasks: 6, successRate: 100 },
-        { id: "decision-steward", name: "Decision Steward", role: "Decision Log Owner", status: "idle", lastRun: "2026-07-25", tasks: 14, successRate: 100 },
-        { id: "evidence-citation-agent", name: "Evidence Citation", role: "Citation Verification", status: "idle", lastRun: "2026-07-25", tasks: 71, successRate: 100 },
-        { id: "kpi-agent", name: "KPI Agent", role: "KPI Tree Builder", status: "idle", lastRun: "2026-07-23", tasks: 2, successRate: 100 },
-        { id: "exec-summary-agent", name: "Exec Summary", role: "Section 1 Synthesis", status: "idle", lastRun: "2026-07-24", tasks: 2, successRate: 100 },
-        { id: "qa-review-agent", name: "QA Review", role: "Final Gatekeeper", status: "active", lastRun: "2026-07-25", tasks: 51, successRate: 100 },
-        { id: "publication-agent", name: "Publication Agent", role: "Phase 5 Delivery", status: "standby", lastRun: "N/A", tasks: 0, successRate: 0 }
-    ],
+function gateChip(status) {
+  if (status === 'done') return '<span class="chip chip-green">&#10003; Pass</span>';
+  if (status === 'active') return '<span class="chip chip-purple">&#8635; Active</span>';
+  return '<span class="chip chip-dim">&#8987; Pending</span>';
+}
 
-    skills: [
-        { id: "business-plan-drafting", name: "BP Drafting", triggers: ["/business-plan"], usage: 28 },
-        { id: "citation-audit", name: "Citation Audit", triggers: ["internal"], usage: 71 },
-        { id: "qa-review", name: "QA Review", triggers: ["internal"], usage: 51 },
-        { id: "decision-log", name: "Decision Log", triggers: ["/decide"], usage: 14 },
-        { id: "session-end", name: "Session End", triggers: ["/session-end"], usage: 11 },
-        { id: "external-research", name: "External Research", triggers: ["/research"], usage: 8 },
-        { id: "forecast-builder", name: "Forecast Builder", triggers: ["/forecast"], usage: 6 },
-        { id: "evidence-ranking", name: "Evidence Ranking", triggers: ["internal"], usage: 3 },
-        { id: "console-data-refresh", name: "Console Refresh", triggers: ["on repo change"], usage: 2 },
-        { id: "template-compliance-gate", name: "Template Gate", triggers: ["internal, pre-export"], usage: 0 },
-        { id: "executive-document-formatting", name: "Doc Formatting", triggers: ["post-gates"], usage: 0 },
-        { id: "os-structure-doc", name: "OS Structure Doc", triggers: ["/os-doc"], usage: 0 },
-        { id: "deck-builder", name: "Deck Builder", triggers: ["/deck"], usage: 0 }
-    ],
+/* ---------------- views ---------------- */
 
-    vault: {
-        totalNotes: 411,
-        sources: 29,
-        facts: 14,
-        entities: 9,
-        topics: 46,
-        strategic: 5,
-        mocs: 13,
-        orphans: 0,
-        semanticLinks: 937,
-        lastAudit: "2026-07-25"
-    },
+const views = {
+  architecture() {
+    const r = readiness();
+    const circ = 2 * Math.PI * 42;
+    const offset = circ - (r.pct / 100) * circ;
+    const nextGate = DATA.pipeline.partC.find(s => s.status !== 'done');
+    return `
+      <h1 class="page-title enter">Command Center</h1>
+      <p class="page-sub enter">${esc(DATA.meta.problem)}</p>
+      <div class="grid g-12">
+        <div class="glass card span-8 hero-visual enter" style="animation-delay:.05s">
+          <div class="radial-glow"></div>
+          <div class="ring-wrap">
+            <div class="ring-outer"></div>
+            <svg viewBox="0 0 100 100">
+              <circle class="ring-track" cx="50" cy="50" r="42"/>
+              <circle class="ring-fill" cx="50" cy="50" r="42" stroke-dasharray="${circ.toFixed(1)}" stroke-dashoffset="${offset.toFixed(1)}"/>
+            </svg>
+            <div class="ring-center">
+              <div class="ring-value">${r.pct}%</div>
+              <div class="ring-label">ARCHITECTURE</div>
+            </div>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="k">Pass 2 verification</div>
+              <div class="v text-green">&#10003; ${r.b}/${r.bTotal} sections</div>
+            </div>
+            <div class="hero-stat">
+              <div class="k">Whole-plan gates</div>
+              <div class="v text-cyan">&#9889; ${r.c}/${r.cTotal} passed</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid span-4" style="gap:18px">
+          <div class="glass card thinking-border enter" style="animation-delay:.1s">
+            <div class="card-head">
+              <h3 class="card-title text-purple">Next Up</h3>
+              <span class="chip chip-purple">QUEUED</span>
+            </div>
+            <div class="bar-track" style="margin-bottom:12px"><div class="bar-fill shimmer" style="width:${r.pct}%;background:var(--purple)"></div></div>
+            <p class="text-dim" style="font-size:12.5px;font-style:italic">"${esc(DATA.meta.nextAction)}"</p>
+          </div>
+          <div class="glass card enter" style="animation-delay:.15s">
+            <h3 class="card-title">Decision Readiness</h3>
+            <p class="label-status text-faint" style="margin:2px 0 14px">CORE PROTOCOL STATUS</p>
+            <div style="display:flex;align-items:flex-end;justify-content:space-between">
+              <div>
+                <div style="font-family:var(--font-head);font-size:30px;font-weight:800" class="${r.c===r.cTotal?'text-green pulse-text':'text-amber'}">${r.c===r.cTotal ? 'OPTIMAL' : 'PENDING'}</div>
+                <div style="display:flex;gap:5px;margin-top:8px">
+                  ${DATA.pipeline.partC.map(s => `<span style="height:5px;width:22px;border-radius:3px;background:${s.status==='done'?'var(--green)':'rgba(255,255,255,.1)'}"></span>`).join('')}
+                </div>
+              </div>
+              <span style="font-size:34px;opacity:.5" class="${r.c===r.cTotal?'text-green':'text-amber'}">&#128274;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid g-3" style="margin-top:18px">
+        <div class="glass card enter" style="animation-delay:.2s">
+          <div class="card-head">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div class="card-icon-box" style="background:rgba(157,78,221,.12);color:var(--purple)">&#9737;</div>
+              <div><h4 style="font-size:14px">Knowledge Layer</h4><p class="label-status text-faint">Vault indexes</p></div>
+            </div>
+          </div>
+          <ul class="ilist">
+            <li><div><div class="label-caps">${DATA.vault.totalNotes}</div><div class="label-status text-faint">total notes</div></div><span class="text-green mono" style="font-size:11px">STABLE</span></li>
+            <li><div><div class="label-caps">${DATA.vault.semanticLinks}</div><div class="label-status text-faint">semantic links</div></div><span class="text-green mono" style="font-size:11px">SYNCED</span></li>
+            <li><div><div class="label-caps">${DATA.vault.orphans}</div><div class="label-status text-faint">orphaned notes</div></div><span class="text-green mono" style="font-size:11px">CLEAN</span></li>
+          </ul>
+        </div>
+        <div class="glass card enter" style="animation-delay:.25s">
+          <div class="card-head">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div class="card-icon-box" style="background:rgba(0,240,255,.12);color:var(--cyan)">&#8599;</div>
+              <div><h4 style="font-size:14px">Forecast</h4><p class="label-status text-faint">FY2026 guidance</p></div>
+            </div>
+            <span class="label-status text-cyan">DISCLOSED</span>
+          </div>
+          <div class="spark">
+            ${DATA.forecastBars.map(v => `<div style="height:${v}%"></div>`).join('')}
+          </div>
+          <div style="display:flex;justify-content:space-between;border-top:1px solid var(--border-soft);padding-top:12px;margin-top:14px">
+            <div><p class="label-status text-faint">GMV growth</p><p style="font-weight:700">${esc(DATA.forecasts.gmv)}</p></div>
+            <div style="text-align:right"><p class="label-status text-faint">Confidence</p><p class="text-amber" style="font-weight:700">${esc(DATA.forecasts.confidence).toUpperCase()}</p></div>
+          </div>
+        </div>
+        <div class="glass card enter" style="animation-delay:.3s;padding:0;overflow:hidden">
+          <div style="padding:22px 22px 8px">
+            <h4 style="font-size:14px;margin-bottom:6px">Agent Roster</h4>
+            <p class="text-dim" style="font-size:12px">${DATA.agents.length} durable subagents, ${DATA.skills} skills.</p>
+          </div>
+          <div style="padding:14px 22px 20px">
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+              ${DATA.agents.map(a => `<span class="chip chip-dim mono" style="font-size:10px">${esc(a.id)}</span>`).join('')}
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-top:16px">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--green)" class="pulse-text"></div>
+              <span class="label-caps text-dim">MCP TOOLS: ${DATA.mcpTools}</span>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  },
 
-    decisions: {
-        total: 14,
-        approved: 14,
-        superseded: 2,
-        recent: [
-            { id: "DEC-014", title: "TLB-019 fee-mix label correction (Facts layer)", date: "2026-07-25", status: "approved", impact: "high" },
-            { id: "DEC-013", title: "Subscription-line reclassification re-issuance", date: "2026-07-25", status: "approved", impact: "medium" },
-            { id: "DEC-012", title: "Production platform track (scoped Track B)", date: "2026-07-25", status: "approved", impact: "high" },
-            { id: "DEC-011", title: "MCP layer - pursue (vault-mcp)", date: "2026-07-24", status: "approved", impact: "high" },
-            { id: "DEC-010", title: "2026 investment-total re-issuance", date: "2026-07-23", status: "approved", impact: "medium" },
-            { id: "DEC-009", title: "Options ranking & allocation priority", date: "2026-07-23", status: "approved", impact: "high" }
-        ]
-    },
+  knowledge() {
+    const tiers = DATA.evidenceTiers;
+    return `
+      <h1 class="page-title enter">Knowledge Layer</h1>
+      <p class="page-sub enter">Five-tier evidence hierarchy — a tier may only cite tiers above it. Currently at <span class="text-cyan" style="font-weight:700">Stage 19: Publication handoff</span> after all whole-plan gates passed.</p>
+      <div class="grid g-12">
+        <div class="glass card span-7 enter" style="min-height:520px;display:flex;flex-direction:column;padding:0;overflow:hidden">
+          <div style="padding:16px 20px;border-bottom:1px solid var(--border-soft);display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.02)">
+            <span class="label-caps">Semantic Network Map</span>
+            <span class="label-status text-faint">5 tiers · cites upward only</span>
+          </div>
+          <div style="flex:1;position:relative">${neuralMapSvg(tiers)}</div>
+          <div style="position:absolute;bottom:20px;left:36px;background:rgba(5,5,6,.75);border:1px solid rgba(0,240,255,.2);border-radius:9px;padding:12px 16px">
+            <p class="label-caps text-cyan" style="margin-bottom:6px">CORPUS: ${DATA.corpus.total} SOURCE DOCS</p>
+            <div class="bar-track" style="width:130px"><div class="bar-fill" style="width:100%;background:var(--cyan)"></div></div>
+          </div>
+        </div>
+        <div class="glass card span-5 enter" style="min-height:520px;display:flex;flex-direction:column;padding:0;overflow:hidden" style="animation-delay:.1s">
+          <div style="padding:16px 20px;border-bottom:1px solid var(--border-soft);display:flex;justify-content:space-between">
+            <span class="label-caps">Section Audit — Pass 2</span>
+            <span class="label-status text-faint">${DATA.sections.length} modules</span>
+          </div>
+          <div class="scroll-y" style="flex:1">
+            <table class="data">
+              <thead><tr><th>Section</th><th>Status</th><th style="text-align:right">Ref</th></tr></thead>
+              <tbody>
+                ${DATA.sections.map(s => `<tr>
+                  <td style="font-weight:600">${s.n}. ${esc(s.name)}</td>
+                  <td>${s.status==='done_iv' ? '<span class="text-green mono" style="font-size:11px">&#10003; VERIFIED</span>' : '<span class="text-amber mono" style="font-size:11px">&#8987; DRAFTED</span>'}</td>
+                  <td class="mono text-faint" style="text-align:right;font-size:11px">S${String(s.n).padStart(2,'0')}</td>
+                </tr>`).join('')}
+              </tbody>
+            </table>
+          </div>
+          <div style="padding:13px 20px;background:rgba(255,255,255,.02);border-top:1px solid var(--border-soft);display:flex;justify-content:space-between;align-items:center">
+            <div style="display:flex;gap:4px">${DATA.sections.slice(0,5).map(() => `<div style="width:6px;height:6px;background:var(--green)"></div>`).join('')}</div>
+            <span class="label-status text-faint">Global progress: ${readiness().pct}%</span>
+          </div>
+        </div>
+      </div>
+      <div class="grid g-3" style="margin-top:18px">
+        <div class="glass card enter" style="border-left:2px solid var(--cyan)">
+          <span class="label-caps text-cyan" style="display:block;margin-bottom:8px">ACTIVE FOCUS</span>
+          <h3 style="font-size:15px">${esc(DATA.knowledgeCards.active.title)}</h3>
+          <p class="text-dim" style="font-size:12.5px;margin-top:6px">${esc(DATA.knowledgeCards.active.body)}</p>
+        </div>
+        <div class="glass card enter" style="border-left:2px solid var(--purple)">
+          <span class="label-caps text-purple" style="display:block;margin-bottom:8px">RECENT INSIGHT</span>
+          <h3 style="font-size:15px">${esc(DATA.knowledgeCards.insight.title)}</h3>
+          <p class="text-dim" style="font-size:12.5px;margin-top:6px">${esc(DATA.knowledgeCards.insight.body)}</p>
+        </div>
+        <div class="glass card enter" style="border-left:2px solid var(--amber)">
+          <span class="label-caps text-amber" style="display:block;margin-bottom:8px">KNOWN ISSUE</span>
+          <h3 style="font-size:15px">${esc(DATA.knowledgeCards.issue.title)}</h3>
+          <p class="text-dim" style="font-size:12.5px;margin-top:6px">${esc(DATA.knowledgeCards.issue.body)}</p>
+        </div>
+      </div>`;
+  },
 
-    research: {
-        totalNotes: 8,
-        approved: 3,
-        rejected: 4,
-        pending: 1,
-        sources: [
-            { name: "Company Filings (talabat IR/newsroom)", type: "primary", confidence: "high" },
-            { name: "Market Research overviews", type: "secondary", confidence: "medium" },
-            { name: "Competitor disclosures", type: "secondary", confidence: "medium" },
-            { name: "Strategy News", type: "secondary", confidence: "medium" }
-        ]
-    },
+  decision() {
+    return `
+      <h1 class="page-title enter">Decision Layer</h1>
+      <p class="page-sub enter">The auditable record of who decided what, from what evidence, when — ${DATA.decisions.length} structured, dated, owned records.</p>
+      <div class="grid g-12">
+        <div class="glass card span-5 enter" style="max-height:640px;display:flex;flex-direction:column;padding:0;overflow:hidden">
+          <div style="padding:18px 20px;border-bottom:1px solid var(--border-soft);display:flex;justify-content:space-between;align-items:center">
+            <h3 class="card-title text-amber">Decision Log</h3>
+            <span class="label-status text-amber">MOST RECENT</span>
+          </div>
+          <div class="scroll-y" style="flex:1;padding:16px 16px 4px">
+            ${[...DATA.decisions].reverse().slice(0,8).map(d => `
+              <div class="tl-item" style="border-left-color:${d.impact==='high'?'var(--amber)':'rgba(0,240,255,.4)'}">
+                <div class="tl-top"><span>${esc(d.id)}</span><span>${esc(d.date)}</span></div>
+                <h4>${esc(d.title)}</h4>
+                <p>${esc(d.note || 'Recorded in vault/Decisions/Decision_Log.')}</p>
+              </div>`).join('')}
+          </div>
+        </div>
+        <div class="grid span-7" style="gap:18px">
+          <div class="glass card enter">
+            <div class="card-head">
+              <h3 class="card-title">Investment Options</h3>
+              <span class="label-status text-faint">ranked under DEC-009</span>
+            </div>
+            <table class="data">
+              <thead><tr><th>ID</th><th>Option</th><th>Bucket</th></tr></thead>
+              <tbody>
+                ${DATA.options.map(o => `<tr>
+                  <td class="mono text-cyan" style="font-size:11.5px">${esc(o.id)}</td>
+                  <td style="font-weight:600">${esc(o.title)}</td>
+                  <td>${o.bucket === 'Everyday App' ? '<span class="chip chip-cyan">Everyday App</span>' : '<span class="chip chip-purple">Food-leadership</span>'}</td>
+                </tr>`).join('')}
+              </tbody>
+            </table>
+            <p class="hint" style="margin-top:12px">Middle-path ranking (DEC-009) — funding sequence stated narratively; option-level costs never appear as a headline exhibit.</p>
+          </div>
+          <div class="grid g-4">
+            ${DATA.registers.map(r => `
+              <div class="glass card enter" style="padding:16px">
+                <div class="label-status text-faint" style="margin-bottom:6px">${esc(r.icon)} ${esc(r.name)}</div>
+                <div style="font-family:var(--font-head);font-size:24px;font-weight:800">${r.count}</div>
+              </div>`).join('')}
+          </div>
+        </div>
+      </div>`;
+  },
 
-    forecasts: {
-        scenarios: 3,
-        valueDrivers: 45,
-        kpis: 50,
-        baselineConfidence: "medium",
-        latest: [
-            { name: "Base", tag: "Headline", npv: "$11.2-11.5bn", irr: "$510-540m", probability: 90 },
-            { name: "Upside", tag: "Sensitivity", npv: "\u2265 $11.5bn", irr: "\u2265 $540m", probability: 60 },
-            { name: "Downside", tag: "Sensitivity", npv: "\u2264 $11.2bn", irr: "\u2264 $510m", probability: 40 }
-        ]
-    },
+  forecast() {
+    const f = DATA.forecasts;
+    return `
+      <h1 class="page-title enter">Decision &amp; Forecast Core</h1>
+      <p class="page-sub enter">Method-transparent projections — every forecast has a named historical anchor, a stated growth logic, three scenarios, and an assumption ID.</p>
+      <div class="grid g-12">
+        <div class="glass card span-7 enter" style="min-height:340px">
+          <div class="card-head">
+            <h3 class="card-title text-green">FY2026 Guidance Range</h3>
+            <span class="chip chip-green">DISCLOSED · TLB-020/014</span>
+          </div>
+          <div style="position:relative;height:200px;margin-top:10px">
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;opacity:.12">
+              <div style="border-bottom:1px solid #fff"></div><div style="border-bottom:1px solid #fff"></div>
+              <div style="border-bottom:1px solid #fff"></div><div style="border-bottom:1px solid #fff"></div>
+            </div>
+            <svg viewBox="0 0 800 220" style="position:absolute;inset:0;width:100%;height:100%" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="gline" x1="0" x2="1"><stop offset="0%" stop-color="${'#9D4EDD'}"/><stop offset="100%" stop-color="${'#00F0FF'}"/></linearGradient>
+              </defs>
+              <path d="M0,180 Q120,150 240,160 T480,90 T800,40" fill="none" stroke="url(#gline)" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <div style="position:absolute;right:6%;top:8%;text-align:center">
+              <div style="width:11px;height:11px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px rgba(0,240,255,.9);margin:0 auto"></div>
+              <div class="glass" style="padding:8px 12px;margin-top:8px;min-width:130px">
+                <p class="label-status text-cyan">BASE CASE</p>
+                <p style="font-weight:700;font-size:15px">${esc(f.gmv)}</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid g-3" style="margin-top:18px">
+            <div><p class="label-status text-faint">GMV growth (cFX)</p><div class="bar-track" style="margin-top:6px"><div class="bar-fill" style="width:70%;background:var(--cyan)"></div></div><p class="mono" style="font-size:11px;margin-top:4px">${esc(f.gmv)}</p></div>
+            <div><p class="label-status text-faint">Revenue growth (cFX)</p><div class="bar-track" style="margin-top:6px"><div class="bar-fill" style="width:78%;background:var(--purple)"></div></div><p class="mono" style="font-size:11px;margin-top:4px">${esc(f.revenue)}</p></div>
+            <div><p class="label-status text-faint">Adj. EBITDA margin</p><div class="bar-track" style="margin-top:6px"><div class="bar-fill" style="width:46%;background:var(--green)"></div></div><p class="mono" style="font-size:11px;margin-top:4px">${esc(f.ebitda)}</p></div>
+          </div>
+        </div>
+        <div class="grid span-5" style="gap:18px">
+          <div class="glass card enter">
+            <div class="card-head"><h3 class="card-title">Forecast Layer</h3></div>
+            <div class="ilist">
+              <li><span>Value Driver Tree v2</span><span class="mono text-cyan">${f.vdtNodes} nodes</span></li>
+              <li><span>Scenarios v2</span><span class="mono text-purple">3 × ${f.scenarioModules} modules</span></li>
+              <li><span>KPI Tree v2</span><span class="mono text-green">${f.kpiCount} KPIs</span></li>
+            </div>
+          </div>
+          <div class="glass card enter">
+            <div class="card-head"><h3 class="card-title">Scenario Structure</h3><span class="label-status text-faint">DEC-005 / DEC-008</span></div>
+            ${f.cases.map((c,i) => `
+              <div style="display:flex;align-items:flex-start;gap:12px;padding:10px 0;${i<2?'border-bottom:1px solid var(--border-soft)':''}">
+                <div class="mono" style="width:26px;height:26px;border-radius:7px;background:${i===0?'rgba(0,240,255,.14)':'rgba(255,255,255,.05)'};color:${i===0?'var(--cyan)':'var(--ink-faint)'};display:grid;place-items:center;font-weight:700;font-size:11px">${['B','U','D'][i]}</div>
+                <div style="flex:1">
+                  <div style="display:flex;justify-content:space-between"><strong style="font-size:12.5px">${esc(c.name)} case</strong>${i===0?'<span class="chip chip-cyan">headline</span>':'<span class="chip chip-dim">sensitivity</span>'}</div>
+                  <p class="text-dim" style="font-size:11.5px;margin-top:4px">${esc(c.desc)}</p>
+                </div>
+              </div>`).join('')}
+          </div>
+        </div>
+      </div>`;
+  },
 
-    validation: {
-        citationAudits: 71,
-        qaReviews: 51,
-        templateChecks: 0,
-        issuesFound: "70+",
-        issuesResolved: "70+",
-        gates: [
-            { name: "Problem Consistency", status: "pending", sections: "ALL", issues: 0 },
-            { name: "Financial Integrity", status: "pending", sections: "6,9,12,13", issues: 0 },
-            { name: "Geographic Evidence", status: "pending", sections: "ALL", issues: 0 },
-            { name: "Citation Audit", status: "pending", sections: "ALL", issues: 0 },
-            { name: "Template Compliance", status: "pending", sections: "ALL", issues: 0 },
-            { name: "Publication Handoff", status: "pending", sections: "ALL", issues: 0 }
-        ]
-    },
-
-    sessions: [
-        { id: "S-12", date: "2026-07-25", duration: "-", stages: [13,14], outcome: "In Progress" },
-        { id: "S-11", date: "2026-07-25", duration: "-", stages: [13], outcome: "Complete" },
-        { id: "S-10", date: "2026-07-24", duration: "-", stages: [13], outcome: "Complete" },
-        { id: "S-09", date: "2026-07-23", duration: "-", stages: [13], outcome: "Complete" },
-        { id: "S-08", date: "2026-07-23", duration: "-", stages: [13], outcome: "Complete" }
-    ],
-
-    businessPlan: {
-        sections: [
-            { num: 1, title: "Executive Summary (SCQA)", status: "verified", confidence: "high", words: 3130 },
-            { num: 2, title: "Business Description", status: "verified", confidence: "high", words: 3330 },
-            { num: 3, title: "Market Analysis", status: "verified", confidence: "high", words: 6410 },
-            { num: 4, title: "Value Proposition", status: "verified", confidence: "high", words: 2681 },
-            { num: 5, title: "AI Technology and Development", status: "verified", confidence: "high", words: 2667 },
-            { num: 6, title: "Business Model and Revenue Streams", status: "verified", confidence: "high", words: 5253 },
-            { num: 7, title: "Marketing and Sales Strategy", status: "verified", confidence: "high", words: 6155 },
-            { num: 8, title: "Operations Plan", status: "verified", confidence: "high", words: 4842 },
-            { num: 9, title: "Financial Plan", status: "verified", confidence: "high", words: 1280 },
-            { num: 10, title: "Risk Analysis", status: "verified", confidence: "high", words: 5579 },
-            { num: 11, title: "CSR & Responsible AI", status: "verified", confidence: "high", words: 4068 },
-            { num: 12, title: "Implementation Plan", status: "verified", confidence: "high", words: 1288 },
-            { num: 13, title: "Monitoring and Evaluation (KPIs)", status: "verified", confidence: "high", words: 1188 },
-            { num: 14, title: "Appendices + Traceability", status: "verified", confidence: "high", words: 5433 }
-        ]
-    }
+  publication() {
+    const gates = DATA.gates;
+    const passed = gates.filter(g => g.status === 'done').length;
+    return `
+      <h1 class="page-title enter">Publication &amp; Export Control</h1>
+      <p class="page-sub enter">Strategic output finalization — administrative authentication before global distribution.</p>
+      <div class="grid g-12">
+        <div class="glass card span-8 enter" style="min-height:380px">
+          <div class="card-head" style="align-items:flex-start;margin-bottom:26px">
+            <div>
+              <p class="label-caps text-green" style="margin-bottom:8px">CURRENT STATE</p>
+              <p style="font-family:var(--font-head);font-size:56px;font-weight:800;line-height:1;display:flex;align-items:baseline">${readiness().pct}<span style="font-size:24px;color:var(--cyan);margin-left:4px">%</span></p>
+              <p class="text-dim" style="margin-top:10px;max-width:380px;font-size:13px">${passed}/${gates.length} whole-plan gates passed. ${DATA.publicationNote}</p>
+            </div>
+            <span class="chip ${passed===gates.length ? 'chip-purple' : 'chip-amber'}" style="padding:8px 15px">${passed===gates.length ? 'GATES CLEAR · STAGE 19 NEXT' : 'GATES IN PROGRESS'}</span>
+          </div>
+          <div class="bar-track" style="height:10px;margin-bottom:8px">
+            <div class="bar-fill" style="width:${readiness().pct}%;background:linear-gradient(90deg,var(--cyan),var(--purple))"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between" class="label-status text-faint">
+            <span>SECTIONS + GATES MAPPED</span><span>SNAPSHOT ${esc(DATA.meta.snapshotDate)}</span>
+          </div>
+          <div class="grid g-2" style="margin-top:26px">
+            <div class="glass" style="padding:20px;border-color:rgba(0,255,102,.2)">
+              <div style="width:44px;height:44px;border-radius:999px;background:rgba(0,255,102,.1);border:1px solid rgba(0,255,102,.24);display:grid;place-items:center;color:var(--green);font-size:19px;margin-bottom:12px">&#128196;</div>
+              <div style="font-weight:700">Final DOCX/PDF</div>
+              <div class="label-status text-amber" style="margin-top:4px;text-transform:uppercase">stale — needs regeneration</div>
+            </div>
+            <div class="glass" style="padding:20px;border-color:rgba(0,240,255,.2)">
+              <div style="width:44px;height:44px;border-radius:999px;background:rgba(0,240,255,.1);border:1px solid rgba(0,240,255,.24);display:grid;place-items:center;color:var(--cyan);font-size:19px;margin-bottom:12px">&#128203;</div>
+              <div style="font-weight:700">OS Structure Doc</div>
+              <div class="label-status text-green" style="margin-top:4px;text-transform:uppercase">unblocked</div>
+            </div>
+          </div>
+        </div>
+        <div class="span-4">
+          <div class="glass card enter">
+            <div class="card-head"><h3 class="card-title">QA Gate</h3><span style="color:var(--purple)">&#128274;</span></div>
+            ${gates.map(g => `
+              <div class="gate-row ${g.status==='done'?'gate-pass':'gate-next'}">
+                <div class="gate-check ${g.status==='done'?'pass':'next'}">${g.status==='done' ? '&#10003;' : ''}</div>
+                <div>
+                  <p style="font-size:12.5px;font-weight:600">${esc(g.name)}</p>
+                  <p class="text-dim" style="font-size:11px;margin-top:2px;line-height:1.4">${esc(g.short)}</p>
+                </div>
+              </div>`).join('')}
+          </div>
+          <div class="glass card enter" style="margin-top:18px;padding:18px">
+            <div style="display:flex;justify-content:space-between;margin-bottom:8px"><span class="label-status text-faint">EXPORT_BUNDLE</span><span class="label-status text-amber">PENDING STAGE 19</span></div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:10px"><span class="label-status text-faint">DATA_SET</span><span class="label-status">${esc(DATA.meta.snapshotDate)}</span></div>
+            <div style="padding:9px 11px;background:rgba(255,255,255,.03);border-radius:7px" class="mono text-faint" style="font-size:10px">REF: business-plan-drafts_v2 · 14/14 verified</div>
+          </div>
+        </div>
+      </div>`;
+  },
 };
 
-// ===================== RENDER FUNCTIONS =====================
-
-function showSection(sectionId) {
-    // Update nav
-    document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.nav-item').forEach(el => {
-        if(el.getAttribute('onclick') && el.getAttribute('onclick').includes(sectionId)) {
-            el.classList.add('active');
-            el.classList.remove('text-text-secondary');
-        }
-    });
-
-    const content = document.getElementById('content-area');
-    content.innerHTML = '';
-
-    switch(sectionId) {
-        case 'dashboard': renderDashboard(content); break;
-        case 'pipeline': renderPipeline(content); break;
-        case 'agents': renderAgents(content); break;
-        case 'skills': renderSkills(content); break;
-        case 'knowledge': renderKnowledge(content); break;
-        case 'decisions': renderDecisions(content); break;
-        case 'research': renderResearch(content); break;
-        case 'forecasts': renderForecasts(content); break;
-        case 'validation': renderValidation(content); break;
-        case 'projects': renderProjects(content); break;
-        case 'memory': renderMemory(content); break;
-        case 'logs': renderLogs(content); break;
-    }
+/* ---------------- neural map ---------------- */
+function neuralMapSvg(tiers) {
+  const n = tiers.length;
+  const cx = 380, cy = 250, rx = 300, ry = 170;
+  const nodes = tiers.map((t, i) => {
+    const angle = (Math.PI * 2 * i) / n - Math.PI / 2;
+    return { ...t, x: cx + Math.cos(angle) * rx * 0.72, y: cy + Math.sin(angle) * ry * 0.72 };
+  });
+  const links = nodes.map((node, i) => nodes[i+1] ? `<line class="nm-link" x1="${node.x}" y1="${node.y}" x2="${nodes[i+1].x}" y2="${nodes[i+1].y}" stroke="var(--cyan)"/>` : '').join('');
+  const colors = ['#00F0FF','#9D4EDD','#00F0FF','#9D4EDD','#FFB800'];
+  const dots = nodes.map((node, i) => `
+    <g class="nm-node" transform="translate(${node.x},${node.y})">
+      <circle r="26" stroke="${colors[i % colors.length]}" opacity="0.9"/>
+      <circle r="26" fill="${colors[i % colors.length]}" opacity="0.08"/>
+      <text class="nlabel" text-anchor="middle" y="-34">${esc(node.n)}</text>
+      <text text-anchor="middle" y="5" fill="${colors[i % colors.length]}" style="font-weight:700;font-size:13px">${esc(node.count)}</text>
+      <text text-anchor="middle" y="46">${esc(node.name)}</text>
+    </g>`).join('');
+  return `<svg class="neuralmap" viewBox="0 0 760 500" role="img" aria-label="Evidence hierarchy neural map">${links}${dots}</svg>`;
 }
 
-function renderDashboard(container) {
-    const progress = Math.round((osData.pipeline.currentStage / osData.pipeline.totalStages) * 100);
-    const circumference = 2 * Math.PI * 42;
-    const offset = circumference - (progress / 100) * circumference;
-
-    container.innerHTML = `
-        <div class="fade-in space-y-6">
-            <!-- Hero Row -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- Main Progress Ring -->
-                <div class="lg:col-span-2 glass rounded-xl p-8 relative overflow-hidden flex flex-col items-center justify-center min-h-[420px]">
-                    <div class="absolute inset-0 opacity-5">
-                        <div class="absolute top-10 left-10 w-32 h-32 bg-cyan/20 rounded-full blur-3xl"></div>
-                        <div class="absolute bottom-10 right-10 w-40 h-40 bg-purple/20 rounded-full blur-3xl"></div>
-                    </div>
-                    <div class="relative z-10 flex flex-col items-center">
-                        <div class="relative w-72 h-72">
-                            <svg class="w-full h-full" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="5"/>
-                                <circle class="progress-ring" cx="50" cy="50" r="42" fill="none" stroke="#00F0FF" stroke-width="5" 
-                                        stroke-dasharray="${circumference}" stroke-dashoffset="${offset}" stroke-linecap="round"
-                                        style="filter: drop-shadow(0 0 8px rgba(0,240,255,0.4));"/>
-                                <circle cx="50" cy="50" r="36" fill="none" stroke="rgba(157,78,221,0.3)" stroke-width="1" stroke-dasharray="2,4"/>
-                            </svg>
-                            <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                <span class="font-display font-bold text-5xl text-white">${progress}%</span>
-                                <span class="font-mono text-[10px] text-cyan tracking-widest mt-1">PIPELINE PROGRESS</span>
-                                <span class="font-mono text-[10px] text-text-muted mt-1">Stage ${osData.pipeline.currentStage} / ${osData.pipeline.totalStages}</span>
-                            </div>
-                        </div>
-                        <div class="mt-6 flex gap-10">
-                            <div class="text-center">
-                                <p class="font-mono text-[10px] text-text-muted uppercase">Pass 1</p>
-                                <div class="flex items-center gap-1.5 text-green mt-1">
-                                    <span class="material-symbols-outlined text-sm filled">check_circle</span>
-                                    <span class="font-display font-semibold text-sm">COMPLETE</span>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <p class="font-mono text-[10px] text-text-muted uppercase">Pass 2</p>
-                                <div class="flex items-center gap-1.5 text-green mt-1">
-                                    <span class="material-symbols-outlined text-sm filled">check_circle</span>
-                                    <span class="font-display font-semibold text-sm">COMPLETE</span>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <p class="font-mono text-[10px] text-text-muted uppercase">Sync</p>
-                                <div class="flex items-center gap-1.5 text-cyan mt-1">
-                                    <span class="material-symbols-outlined text-sm">bolt</span>
-                                    <span class="font-display font-semibold text-sm">LIVE</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Side Cards -->
-                <div class="space-y-6">
-                    <!-- Active Agent -->
-                    <div class="glass rounded-xl p-6 thinking border border-cyan/20 min-h-[200px]">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-display font-semibold text-purple">Active Agent</h3>
-                            <span class="bg-purple/20 text-purple text-[10px] px-2 py-0.5 rounded border border-purple/30 font-mono">NEXT UP</span>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-8 rounded-lg bg-purple/20 flex items-center justify-center">
-                                    <span class="material-symbols-outlined text-purple text-sm">psychology</span>
-                                </div>
-                                <div>
-                                    <p class="font-mono text-xs text-text-primary font-semibold">QA Review Agent</p>
-                                    <p class="font-mono text-[10px] text-text-muted">Stage 14: Problem Consistency Gate</p>
-                                </div>
-                            </div>
-                            <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                                <div class="h-full w-2/3 bg-purple shimmer rounded-full"></div>
-                            </div>
-                            <p class="font-mono text-[10px] text-text-muted italic leading-relaxed">
-                                "All 14 sections independently verified (Pass 2 complete). Next: whole-plan gates 14-19 - problem consistency, financial integrity, geography, citations, template."
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Decision Readiness -->
-                    <div class="glass rounded-xl p-6 min-h-[200px] flex flex-col justify-between">
-                        <div>
-                            <h3 class="font-display font-semibold text-text-primary">Decision Readiness</h3>
-                            <p class="font-mono text-[10px] text-text-muted mt-1">CORE PROTOCOL STATUS</p>
-                        </div>
-                        <div class="flex items-end justify-between">
-                            <div>
-                                <p class="font-display font-bold text-3xl text-green">OPTIMAL</p>
-                                <div class="flex gap-1.5 mt-2">
-                                    <span class="h-1.5 w-6 rounded bg-green"></span>
-                                    <span class="h-1.5 w-6 rounded bg-green"></span>
-                                    <span class="h-1.5 w-6 rounded bg-green"></span>
-                                    <span class="h-1.5 w-6 rounded bg-white/10"></span>
-                                </div>
-                            </div>
-                            <span class="material-symbols-outlined text-green text-4xl opacity-40">verified_user</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Stats Row -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="glass rounded-xl p-5">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-8 h-8 rounded-lg bg-cyan/10 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-cyan text-sm">smart_toy</span>
-                        </div>
-                        <span class="font-mono text-[10px] text-text-muted uppercase">Agents</span>
-                    </div>
-                    <p class="font-display font-bold text-2xl text-white">${osData.agents.length}</p>
-                    <p class="font-mono text-[10px] text-green mt-1">1 active  |  1 standby  |  7 idle</p>
-                </div>
-                <div class="glass rounded-xl p-5">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-8 h-8 rounded-lg bg-purple/10 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-purple text-sm">construction</span>
-                        </div>
-                        <span class="font-mono text-[10px] text-text-muted uppercase">Skills</span>
-                    </div>
-                    <p class="font-display font-bold text-2xl text-white">${osData.skills.length}</p>
-                    <p class="font-mono text-[10px] text-text-muted mt-1">${osData.skills.reduce((a,s)=>a+s.usage,0)} recorded invocations</p>
-                </div>
-                <div class="glass rounded-xl p-5">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-8 h-8 rounded-lg bg-green/10 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-green text-sm">description</span>
-                        </div>
-                        <span class="font-mono text-[10px] text-text-muted uppercase">Vault Notes</span>
-                    </div>
-                    <p class="font-display font-bold text-2xl text-white">${osData.vault.totalNotes}</p>
-                    <p class="font-mono text-[10px] text-green mt-1">0 orphans  |  937 links</p>
-                </div>
-                <div class="glass rounded-xl p-5">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-8 h-8 rounded-lg bg-amber/10 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-amber text-sm">gavel</span>
-                        </div>
-                        <span class="font-mono text-[10px] text-text-muted uppercase">Decisions</span>
-                    </div>
-                    <p class="font-display font-bold text-2xl text-white">${osData.decisions.total}</p>
-                    <p class="font-mono text-[10px] text-green mt-1">${osData.decisions.approved} approved  |  ${osData.decisions.superseded} superseded-and-reissued</p>
-                </div>
-            </div>
-
-            <!-- Knowledge + Forecast Row -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- Knowledge Breakdown -->
-                <div class="glass rounded-xl p-6">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-purple/10 flex items-center justify-center">
-                                <span class="material-symbols-outlined text-purple text-sm">database</span>
-                            </div>
-                            <h4 class="font-display font-semibold text-text-primary">Knowledge Layer</h4>
-                        </div>
-                        <span class="font-mono text-[10px] text-purple">${osData.vault.lastAudit}</span>
-                    </div>
-                    <div class="space-y-3">
-                        ${renderKnowledgeBar('Sources', osData.vault.sources, 40, 'cyan')}
-                        ${renderKnowledgeBar('Facts', osData.vault.facts, 20, 'green')}
-                        ${renderKnowledgeBar('Entities', osData.vault.entities, 15, 'purple')}
-                        ${renderKnowledgeBar('Topics', osData.vault.topics, 35, 'amber')}
-                        ${renderKnowledgeBar('Strategic', osData.vault.strategic, 15, 'red')}
-                        ${renderKnowledgeBar('MOCs', osData.vault.mocs, 15, 'text-muted')}
-                    </div>
-                </div>
-
-                <!-- Forecast Chart -->
-                <div class="glass rounded-xl p-6">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-cyan/10 flex items-center justify-center">
-                                <span class="material-symbols-outlined text-cyan text-sm">timeline</span>
-                            </div>
-                            <h4 class="font-display font-semibold text-text-primary">Forecast Scenarios</h4>
-                        </div>
-                        <span class="font-mono text-[10px] text-cyan">REAL-TIME</span>
-                    </div>
-                    <div class="space-y-4">
-                        ${osData.forecasts.latest.map((f, i) => `
-                            <div class="flex items-center gap-3">
-                                <span class="font-mono text-[10px] text-text-muted w-16">${f.name}</span>
-                                <div class="flex-1 h-6 bg-white/5 rounded overflow-hidden relative">
-                                    <div class="chart-bar h-full rounded" style="width: ${f.probability}%; background: ${i===0?'rgba(0,240,255,0.4)':i===1?'rgba(0,255,102,0.4)':'rgba(255,68,68,0.4)'};"></div>
-                                    <span class="absolute inset-0 flex items-center px-2 font-mono text-[10px] text-white">${f.tag}  |  FY26 GMV ${f.npv}  |  Adj. EBITDA ${f.irr}</span>
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
-                    <div class="mt-4 pt-4 border-t border-white/5 flex justify-between">
-                        <div>
-                            <p class="font-mono text-[10px] text-text-muted">Value Drivers</p>
-                            <p class="font-display font-semibold text-white">${osData.forecasts.valueDrivers}</p>
-                        </div>
-                        <div class="text-right">
-                            <p class="font-mono text-[10px] text-text-muted">KPIs</p>
-                            <p class="font-display font-semibold text-white">${osData.forecasts.kpis}</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Recent Decisions -->
-                <div class="glass rounded-xl p-6">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-amber/10 flex items-center justify-center">
-                                <span class="material-symbols-outlined text-amber text-sm">gavel</span>
-                            </div>
-                            <h4 class="font-display font-semibold text-text-primary">Recent Decisions</h4>
-                        </div>
-                        <span class="font-mono text-[10px] text-text-muted">${osData.decisions.total} total</span>
-                    </div>
-                    <div class="space-y-3">
-                        ${osData.decisions.recent.slice(0,5).map(d => `
-                            <div class="p-3 bg-white/5 rounded-lg border border-white/5 hover:border-amber/20 transition-colors">
-                                <div class="flex items-center justify-between mb-1">
-                                    <span class="font-mono text-[10px] text-amber font-semibold">${d.id}</span>
-                                    <span class="badge ${d.impact==='high'?'bg-red/20 text-red border border-red/30':'bg-amber/20 text-amber border border-amber/30'}">${d.impact}</span>
-                                </div>
-                                <p class="font-mono text-xs text-text-primary">${d.title}</p>
-                                <p class="font-mono text-[10px] text-text-muted mt-1">${d.date}</p>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-            </div>
-
-            <!-- Business Plan Progress -->
-            <div class="glass rounded-xl p-6">
-                <div class="flex items-center justify-between mb-6">
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-cyan/10 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-cyan text-sm">description</span>
-                        </div>
-                        <h4 class="font-display font-semibold text-text-primary">Business Plan Progress</h4>
-                    </div>
-                    <div class="flex gap-2">
-                        <span class="badge bg-green/20 text-green border border-green/30">${osData.businessPlan.sections.filter(s=>s.status==='verified').length} Verified</span>
-                        <span class="badge bg-cyan/20 text-cyan border border-cyan/30">${osData.businessPlan.sections.filter(s=>s.status==='drafting').length} Drafting</span>
-                        <span class="badge bg-white/10 text-text-muted border border-white/10">${osData.businessPlan.sections.filter(s=>s.status==='pending').length} Pending</span>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-                    ${osData.businessPlan.sections.map(s => `
-                        <div class="p-3 rounded-lg border ${s.status==='verified'?'bg-green/5 border-green/20':s.status==='drafting'?'bg-cyan/5 border-cyan/20':'bg-white/5 border-white/5'} hover:border-cyan/30 transition-all cursor-pointer">
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="font-mono text-[10px] text-text-muted">Sec ${s.num}</span>
-                                ${s.status==='verified' 
-                                    ? '<span class="material-symbols-outlined text-green text-sm filled">check_circle</span>'
-                                    : s.status==='drafting'
-                                    ? '<span class="material-symbols-outlined text-cyan text-sm animate-spin">progress_activity</span>'
-                                    : '<span class="material-symbols-outlined text-text-muted text-sm">circle</span>'
-                                }
-                            </div>
-                            <p class="font-mono text-xs text-text-primary font-semibold truncate">${s.title}</p>
-                            <div class="flex items-center justify-between mt-2">
-                                <span class="font-mono text-[10px] ${s.confidence==='high'?'text-green':s.confidence==='medium'?'text-amber':'text-text-muted'}">${s.confidence}</span>
-                                <span class="font-mono text-[10px] text-text-muted">${s.words>0?s.words+' words':''}</span>
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-
-            <!-- Validation Gates -->
-            <div class="glass rounded-xl p-6">
-                <div class="flex items-center justify-between mb-6">
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-green/10 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-green text-sm">verified</span>
-                        </div>
-                        <h4 class="font-display font-semibold text-text-primary">Validation Gates</h4>
-                    </div>
-                    <span class="font-mono text-[10px] text-text-muted">${osData.validation.issuesResolved}/${osData.validation.issuesFound} issues resolved</span>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-                    ${osData.validation.gates.map(g => `
-                        <div class="p-4 rounded-lg border text-center ${g.status==='pass'?'bg-green/5 border-green/20':g.status==='warn'?'bg-amber/5 border-amber/20':g.status==='pending'?'bg-white/5 border-white/10':'bg-red/5 border-red/20'}">
-                            <span class="material-symbols-outlined ${g.status==='pass'?'text-green':g.status==='warn'?'text-amber':g.status==='pending'?'text-text-muted':'text-red'} text-2xl mb-2">
-                                ${g.status==='pass'?'check_circle':g.status==='warn'?'warning':g.status==='pending'?'pending':'error'}
-                            </span>
-                            <p class="font-mono text-xs text-text-primary font-semibold">${g.name}</p>
-                            <p class="font-mono text-[10px] text-text-muted mt-1">${g.sections}</p>
-                            ${g.issues>0?`<span class="badge bg-red/20 text-red border border-red/30 mt-2 inline-block">${g.issues} issues</span>`:''}
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-        </div>
-    `;
+/* ---------------- Ask / search (rule-based, local data only) ---------------- */
+function wireSearch() {
+  const input = $('#search-input');
+  if (!input) return;
+  input.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter') return;
+    const q = input.value.trim().toLowerCase();
+    if (!q) return;
+    if (/dec[-\s]?0*(\d+)/.test(q)) location.hash = '#/decision';
+    else if (/sec(tion)?\s*0*(\d+)|knowledge|vault/.test(q)) location.hash = '#/knowledge';
+    else if (/forecast|kpi|scenario/.test(q)) location.hash = '#/forecast';
+    else if (/publi|export|gate/.test(q)) location.hash = '#/publication';
+    else location.hash = '#/architecture';
+  });
 }
 
-function renderKnowledgeBar(label, value, max, color) {
-    const pct = Math.round((value / max) * 100);
-    const colorMap = {
-        cyan: '#00F0FF', green: '#00FF66', purple: '#9D4EDD', 
-        amber: '#FFB800', red: '#FF4444', 'text-muted': '#6b7280'
-    };
-    return `
-        <div class="flex items-center gap-3">
-            <span class="font-mono text-[10px] text-text-muted w-20">${label}</span>
-            <div class="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
-                <div class="h-full rounded-full" style="width: ${pct}%; background: ${colorMap[color]}; opacity: 0.7;"></div>
-            </div>
-            <span class="font-mono text-[10px] text-text-primary w-8 text-right">${value}</span>
-        </div>
-    `;
+/* ---------------- router ---------------- */
+const VALID = Object.keys(views);
+function route() {
+  const id = (location.hash.replace(/^#\//, '') || 'architecture').split('?')[0];
+  const view = VALID.includes(id) ? id : 'architecture';
+  $$('.nav a').forEach(a => a.classList.toggle('active', a.dataset.view === view));
+  const label = { architecture: 'Aegis OS', knowledge: 'Knowledge Layer', decision: 'Decision Layer', forecast: 'Decision & Forecast', publication: 'Publication & Export' }[view];
+  $('#crumb-view').textContent = label;
+  document.title = `${label} · Aegis OS`;
+  $('#view').innerHTML = views[view]();
+  window.scrollTo(0, 0);
 }
-
-function renderPipeline(container) {
-    container.innerHTML = `
-        <div class="fade-in space-y-6">
-            <div class="flex items-center justify-between">
-                <h2 class="font-display font-bold text-2xl text-text-primary">Business Plan Generation Pipeline</h2>
-                <div class="flex gap-2">
-                    <span class="badge bg-green/20 text-green border border-green/30">${osData.pipeline.stages.filter(s=>s.status==='done').length} Complete</span>
-                    <span class="badge bg-cyan/20 text-cyan border border-cyan/30">1 Active</span>
-                    <span class="badge bg-white/10 text-text-muted border border-white/10">${osData.pipeline.stages.filter(s=>s.status==='pending').length} Pending</span>
-                </div>
-            </div>
-
-            <div class="glass rounded-xl p-6">
-                <div class="relative">
-                    <!-- Connector line -->
-                    <div class="absolute left-6 top-12 bottom-12 w-0.5 bg-white/5"></div>
-
-                    <div class="space-y-4">
-                        ${osData.pipeline.stages.map((stage, i) => {
-                            const isActive = stage.status === 'active';
-                            const isDone = stage.status === 'done';
-                            return `
-                                <div class="flex items-start gap-4 relative ${isActive?'opacity-100':'opacity-80'}">
-                                    <div class="relative z-10 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${isDone?'bg-green/20 border border-green/30':isActive?'bg-cyan/20 border border-cyan/30 thinking':'bg-white/5 border border-white/10'}">
-                                        <span class="font-mono text-sm font-bold ${isDone?'text-green':isActive?'text-cyan':'text-text-muted'}">${stage.id}</span>
-                                    </div>
-                                    <div class="flex-1 glass rounded-lg p-4 ${isActive?'border-cyan/30':''}">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <h4 class="font-mono text-sm text-text-primary font-semibold">${stage.name}</h4>
-                                            <div class="flex items-center gap-2">
-                                                ${stage.section !== 'N/A' ? `<span class="font-mono text-[10px] text-text-muted bg-white/5 px-2 py-0.5 rounded">Sec ${stage.section}</span>` : ''}
-                                                <span class="badge ${isDone?'bg-green/20 text-green border border-green/30':isActive?'bg-cyan/20 text-cyan border border-cyan/30':'bg-white/10 text-text-muted border border-white/10'}">${stage.status}</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-4">
-                                            <div class="flex items-center gap-1.5">
-                                                <span class="material-symbols-outlined text-[10px] text-text-muted">smart_toy</span>
-                                                <span class="font-mono text-[10px] text-text-muted">${stage.agent}</span>
-                                            </div>
-                                            ${isActive ? `
-                                                <div class="flex-1 h-1.5 bg-white/5 rounded-full overflow-hidden max-w-[200px]">
-                                                    <div class="h-full bg-cyan shimmer rounded-full" style="width: 65%;"></div>
-                                                </div>
-                                                <span class="font-mono text-[10px] text-cyan">65%</span>
-                                            ` : ''}
-                                        </div>
-                                    </div>
-                                </div>
-                            `;
-                        }).join('')}
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-}
-
-function renderAgents(container) {
-    container.innerHTML = `
-        <div class="fade-in space-y-6">
-            <div class="flex items-center justify-between">
-                <h2 class="font-display font-bold text-2xl text-text-primary">Agent Fleet</h2>
-                <span class="font-mono text-[10px] text-text-muted">8 agents  |  374 total tasks</span>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                ${osData.agents.map(agent => `
-                    <div class="agent-card glass rounded-xl p-5 border ${agent.status==='active'?'border-cyan/30 glow-cyan':agent.status==='standby'?'border-amber/30':'border-white/5'}">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="w-10 h-10 rounded-xl ${agent.status==='active'?'bg-cyan/20':agent.status==='standby'?'bg-amber/20':'bg-white/5'} flex items-center justify-center">
-                                <span class="material-symbols-outlined ${agent.status==='active'?'text-cyan':agent.status==='standby'?'text-amber':'text-text-muted'} text-lg">
-                                    ${agent.id.includes('orchestrator')?'account_tree':agent.id.includes('research')?'travel_explore':agent.id.includes('forecast')?'timeline':agent.id.includes('decision')?'gavel':agent.id.includes('citation')?'fact_check':agent.id.includes('kpi')?'analytics':agent.id.includes('exec')?'summarize':'verified'}
-                                </span>
-                            </div>
-                            <span class="badge ${agent.status==='active'?'bg-cyan/20 text-cyan border border-cyan/30':agent.status==='standby'?'bg-amber/20 text-amber border border-amber/30':'bg-white/10 text-text-muted border border-white/10'}">${agent.status}</span>
-                        </div>
-                        <h4 class="font-mono text-sm text-text-primary font-semibold">${agent.name}</h4>
-                        <p class="font-mono text-[10px] text-text-muted mt-1">${agent.role}</p>
-                        <div class="mt-4 pt-4 border-t border-white/5 grid grid-cols-2 gap-3">
-                            <div>
-                                <p class="font-mono text-[10px] text-text-muted">Tasks</p>
-                                <p class="font-display font-semibold text-white">${agent.tasks}</p>
-                            </div>
-                            <div>
-                                <p class="font-mono text-[10px] text-text-muted">Success</p>
-                                <p class="font-display font-semibold ${agent.successRate>=95?'text-green':'text-amber'}">${agent.tasks ? agent.successRate + '%' : '—'}</p>
-                            </div>
-                        </div>
-                        <p class="font-mono text-[10px] text-text-muted mt-3">Last: ${agent.lastRun}</p>
-                    </div>
-                `).join('')}
-            </div>
-        </div>
-    `;
-}
-
-function renderSkills(container) {
-    container.innerHTML = `
-        <div class="fade-in space-y-6">
-            <div class="flex items-center justify-between">
-                <h2 class="font-display font-bold text-2xl text-text-primary">Skill Registry</h2>
-                <span class="font-mono text-[10px] text-text-muted">${osData.skills.length} skills  |  ${osData.skills.reduce((a,s)=>a+s.usage,0)} recorded invocations</span>
-            </div>
-            <div class="glass rounded-xl overflow-hidden">
-                <table class="w-full">
-                    <thead>
-                        <tr class="border-b border-white/5">
-                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase tracking-wider">Skill</th>
-                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase tracking-wider">Trigger</th>
-                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase tracking-wider">Usage</th>
-                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase tracking-wider">Activity</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${osData.skills.map(skill => {
-                            const maxUsage = Math.max(...osData.skills.map(s=>s.usage));
-                            const pct = Math.round((skill.usage / maxUsage) * 100);
-                            return `
-                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                    <td class="p-4">
-                                        <div class="flex items-center gap-3">
-                                            <div class="w-8 h-8 rounded-lg bg-purple/10 flex items-center justify-center">
-                                                <span class="material-symbols-outlined text-purple text-sm">construction</span>
-                                            </div>
-                                            <span class="font-mono text-sm text-text-primary">${skill.name}</span>
-                                        </div>
-                                    </td>
-                                    <td class="p-4">
-                                        ${skill.triggers.map(t => `<span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-cyan">${t}</span>`).join(' ')}
-                                    </td>
-                                    <td class="p-4">
-                                        <span class="font-mono text-sm text-text-primary font-semibold">${skill.usage}</span>
-                                    </td>
-                                    <td class="p-4">
-                                        <div class="w-24 h-1.5 bg-white/5 rounded-full overflow-hidden">
-                                            <div class="h-full bg-purple rounded-full" style="width: ${pct}%"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            `;
-                        }).join('')}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    `;
-}
-
-function renderKnowledge(container) {
-    container.innerHTML = `
-        <div class="fade-in space-y-6">
-            <div class="flex items-center justify-between">
-                <h2 class="font-display font-bold text-2xl text-text-primary">Knowledge Vault</h2>
-                <div class="flex gap-2">
-                    <span class="badge bg-green/20 text-green border border-green/30">0 orphans</span>
-                    <span class="badge bg-cyan/20 text-cyan border border-cyan/30">937 links</span>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                ${[
-                    {label:'Sources', value:osData.vault.sources, icon:'description', color:'cyan'},
-                    {label:'Facts', value:osData.vault.facts, icon:'check_circle', color:'green'},
-                    {label:'Entities', value:osData.vault.entities, icon:'group', color:'purple'},
-                    {label:'Topics', value:osData.vault.topics, icon:'topic', color:'amber'},
-                    {label:'Strategic', value:osData.vault.strategic, icon:'strategy', color:'red'},
-                    {label:'MOCs', value:osData.vault.mocs, icon:'map', color:'text-muted'}
-                ].map(item => `
-                    <div class="glass rounded-xl p-5 text-center">
-                        <div class="w-10 h-10 rounded-xl bg-${item.color}/10 flex items-center justify-center mx-auto mb-3">
-                            <span class="material-symbols-outlined text-${item.color}">${item.icon}</span>
-                        </div>
-                        <p class="font-display font-bold text-2xl text-white">${item.value}</p>
-                        <p class="font-mono text-[10px] text-text-muted mt-1">${item.label}</p>
-                    </div>
-                `).join('')}
-            </div>
-
-            <div class="glass rounded-xl p-6">
-                <h3 class="font-display font-semibold text-text-primary mb-4">Evidence Hierarchy</h3>
-                <div class="space-y-3">
-                    ${[
-                        {tier:'Tier 1', name:'Primary Sources', desc:'talabat Annual Reports, Delivery Hero filings', count:29, color:'green'},
-                        {tier:'Tier 2', name:'Secondary Analysis', desc:'McKinsey, Redseer, industry reports', count:14, color:'cyan'},
-                        {tier:'Tier 3', name:'Synthesized Facts', desc:'Extracted claims with DocID citations', count:14, color:'purple'},
-                        {tier:'Tier 4', name:'Strategic Inferences', desc:'Topic-level synthesis and mapping', count:30, color:'amber'},
-                        {tier:'Tier 5', name:'Business Plan Claims', desc:'Final document assertions', count:12, color:'red'}
-                    ].map(t => `
-                        <div class="flex items-center gap-4 p-4 rounded-lg bg-white/5 border border-white/5">
-                            <div class="w-12 h-12 rounded-xl bg-${t.color}/20 flex items-center justify-center shrink-0">
-                                <span class="font-mono text-xs font-bold text-${t.color}">${t.tier}</span>
-                            </div>
-                            <div class="flex-1">
-                                <h4 class="font-mono text-sm text-text-primary font-semibold">${t.name}</h4>
-                                <p class="font-mono text-[10px] text-text-muted">${t.desc}</p>
-                            </div>
-                            <span class="font-display font-bold text-xl text-white">${t.count}</span>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-        </div>
-    `;
-}
-
-function renderDecisions(container) {
-    container.innerHTML = `
-        <div class="fade-in space-y-6">
-            <div class="flex items-center justify-between">
-                <h2 class="font-display font-bold text-2xl text-text-primary">Decision Log</h2>
-                <div class="flex gap-2">
-                    <span class="badge bg-green/20 text-green border border-green/30">${osData.decisions.approved} Approved</span>
-                    <span class="badge bg-white/10 text-text-muted border border-white/10">${osData.decisions.superseded} Superseded</span>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- Registers -->
-                <div class="lg:col-span-1 space-y-4">
-                    <div class="glass rounded-xl p-5">
-                        <h4 class="font-display font-semibold text-text-primary mb-3">Assumptions Register</h4>
-                        <div class="space-y-2">
-                            <div class="flex justify-between items-center p-2 bg-white/5 rounded">
-                                <span class="font-mono text-xs text-text-primary">Total Assumptions</span>
-                                <span class="font-mono text-sm text-white font-semibold">47</span>
-                            </div>
-                            <div class="flex justify-between items-center p-2 bg-green/5 rounded border border-green/20">
-                                <span class="font-mono text-xs text-green">Approved</span>
-                                <span class="font-mono text-sm text-green font-semibold">33</span>
-                            </div>
-                            <div class="flex justify-between items-center p-2 bg-amber/5 rounded border border-amber/20">
-                                <span class="font-mono text-xs text-amber">Pending</span>
-                                <span class="font-mono text-sm text-amber font-semibold">4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="glass rounded-xl p-5">
-                        <h4 class="font-display font-semibold text-text-primary mb-3">Investment Options</h4>
-                        <div class="space-y-2">
-                            ${['OPT-001 Mart dark-store densification','OPT-002 talabat pro acceleration (Egypt & Iraq)','OPT-003 Food CVP & partner retention (GCC-3)','OPT-004 Advertising monetization gap closure','OPT-005 AI personalisation capability scaling'].map((opt,i) => `
-                                <div class="flex items-center gap-2 p-2 bg-white/5 rounded">
-                                    <span class="w-5 h-5 rounded bg-purple/20 flex items-center justify-center font-mono text-[10px] text-purple">${String.fromCharCode(65+i)}</span>
-                                    <span class="font-mono text-xs text-text-primary">${opt}</span>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Decision Timeline -->
-                <div class="lg:col-span-2">
-                    <div class="glass rounded-xl p-6">
-                        <h4 class="font-display font-semibold text-text-primary mb-4">Decision Timeline</h4>
-                        <div class="space-y-4">
-                            ${osData.decisions.recent.map((d, i) => `
-                                <div class="flex gap-4 relative">
-                                    ${i < osData.decisions.recent.length - 1 ? '<div class="absolute left-3 top-8 bottom-[-16px] w-0.5 bg-white/10"></div>' : ''}
-                                    <div class="w-6 h-6 rounded-full ${d.impact==='high'?'bg-red/30 border border-red/50':'bg-amber/30 border border-amber/50'} flex items-center justify-center shrink-0 z-10">
-                                        <div class="w-2 h-2 rounded-full ${d.impact==='high'?'bg-red':'bg-amber'}"></div>
-                                    </div>
-                                    <div class="flex-1 pb-4">
-                                        <div class="flex items-center gap-2 mb-1">
-                                            <span class="font-mono text-xs text-amber font-semibold">${d.id}</span>
-                                            <span class="badge ${d.status==='approved'?'bg-green/20 text-green border border-green/30':'bg-red/20 text-red border border-red/30'}">${d.status}</span>
-                                            <span class="badge ${d.impact==='high'?'bg-red/20 text-red border border-red/30':'bg-amber/20 text-amber border border-amber/30'}">${d.impact}</span>
-                                        </div>
-                                        <p class="font-mono text-sm text-text-primary">${d.title}</p>
-                                        <p class="font-mono text-[10px] text-text-muted mt-1">${d.date}</p>
-                                    </div>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-}
-
-function renderResearch(container) {
-    container.innerHTML = `
-        <div class="fade-in space-y-6">
-            <div class="flex items-center justify-between">
-                <h2 class="font-display font-bold text-2xl text-text-primary">External Research Layer</h2>
-                <span class="font-mono text-[10px] text-text-muted">${osData.research.totalNotes} register items  |  37-document corpus</span>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div class="glass rounded-xl p-6">
-                    <h4 class="font-display font-semibold text-text-primary mb-4">Source Quality</h4>
-                    <div class="space-y-3">
-                        ${osData.research.sources.map(s => `
-                            <div class="flex items-center justify-between p-3 bg-white/5 rounded-lg border border-white/5">
-                                <div class="flex items-center gap-3">
-                                    <span class="material-symbols-outlined ${s.type==='primary'?'text-cyan':'text-purple'} text-sm">${s.type==='primary'?'verified':'article'}</span>
-                                    <div>
-                                        <p class="font-mono text-xs text-text-primary">${s.name}</p>
-                                        <p class="font-mono text-[10px] text-text-muted">${s.type}</p>
-                                    </div>
-                                </div>
-                                <span class="badge ${s.confidence==='high'?'bg-green/20 text-green border border-green/30':'bg-amber/20 text-amber border border-amber/30'}">${s.confidence}</span>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-
-                <div class="glass rounded-xl p-6">
-                    <h4 class="font-display font-semibold text-text-primary mb-4">Research Status</h4>
-                    <div class="grid grid-cols-3 gap-4 mb-6">
-                        <div class="text-center p-4 bg-green/5 rounded-lg border border-green/20">
-                            <p class="font-display font-bold text-2xl text-green">${osData.research.approved}</p>
-                            <p class="font-mono text-[10px] text-text-muted mt-1">Approved</p>
-                        </div>
-                        <div class="text-center p-4 bg-amber/5 rounded-lg border border-amber/20">
-                            <p class="font-display font-bold text-2xl text-amber">${osData.research.pending}</p>
-                            <p class="font-mono text-[10px] text-text-muted mt-1">Pending</p>
-                        </div>
-                        <div class="text-center p-4 bg-red/5 rounded-lg border border-red/20">
-                            <p class="font-display font-bold text-2xl text-red">${osData.research.rejected}</p>
-                            <p class="font-mono text-[10px] text-text-muted mt-1">Superseded (pre-pivot)</p>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-cyan/5 rounded-lg border border-cyan/20">
-                        <div class="flex items-center gap-2 mb-2">
-                            <span class="material-symbols-outlined text-cyan text-sm">info</span>
-                            <span class="font-mono text-xs text-cyan font-semibold">Provider Filter Active</span>
-                        </div>
-                        <p class="font-mono text-[10px] text-text-muted">Acceptable: McKinsey, BCG, Bain, Redseer, Euromonitor. Rejected: Unattributed blogs, paywalled summaries.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-}
-
-function renderForecasts(container) {
-    container.innerHTML = `
-        <div class="fade-in space-y-6">
-            <div class="flex items-center justify-between">
-                <h2 class="font-display font-bold text-2xl text-text-primary">Forecasting Layer</h2>
-                <span class="font-mono text-[10px] text-text-muted">${osData.forecasts.scenarios} scenarios  |  ${osData.forecasts.valueDrivers} drivers  |  ${osData.forecasts.kpis} KPIs</span>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                ${osData.forecasts.latest.map((f, i) => `
-                    <div class="glass rounded-xl p-6 ${i===0?'border-cyan/20 glow-cyan':i===1?'border-green/20 glow-green':'border-red/20'}">
-                        <div class="flex items-center justify-between mb-4">
-                            <h4 class="font-display font-semibold text-text-primary">${f.name} Case</h4>
-                            <span class="badge ${i===0?'bg-cyan/20 text-cyan border border-cyan/30':i===1?'bg-green/20 text-green border border-green/30':'bg-red/20 text-red border border-red/30'}">${f.tag}</span>
-                        </div>
-                        <div class="space-y-4">
-                            <div>
-                                <p class="font-mono text-[10px] text-text-muted">FY2026 GMV (guidance anchor)</p>
-                                <p class="font-display font-bold text-3xl ${i===0?'text-cyan':i===1?'text-green':'text-red'}">${f.npv}</p>
-                            </div>
-                            <div>
-                                <p class="font-mono text-[10px] text-text-muted">FY2026 Adj. EBITDA</p>
-                                <p class="font-display font-bold text-xl text-white">${f.irr}</p>
-                            </div>
-                            <div class="h-2 bg-white/5 rounded-full overflow-hidden">
-                                <div class="h-full rounded-full ${i===0?'bg-cyan':i===1?'bg-green':'bg-red'}" style="width: ${f.probability}%; opacity: 0.6;"></div>
-                            </div>
-                        </div>
-                    </div>
-                `).join('')}
-            </div>
-
-            <div class="glass rounded-xl p-6">
-                <h4 class="font-display font-semibold text-text-primary mb-4">Value Driver Tree</h4>
-                <div class="flex items-center justify-center py-8">
-                    <div class="relative">
-                        <!-- Root -->
-                        <div class="w-48 p-3 bg-cyan/10 border border-cyan/30 rounded-lg text-center mx-auto">
-                            <p class="font-mono text-xs text-cyan font-semibold">Group NPV</p>
-                            <p class="font-mono text-[10px] text-text-muted">USD 1.2B (Base)</p>
-                        </div>
-                        <!-- Branches -->
-                        <div class="flex justify-center gap-8 mt-6">
-                            <div class="w-36 p-3 bg-purple/10 border border-purple/30 rounded-lg text-center">
-                                <p class="font-mono text-xs text-purple font-semibold">Revenue Growth</p>
-                                <p class="font-mono text-[10px] text-text-muted">CAGR 18%</p>
-                            </div>
-                            <div class="w-36 p-3 bg-green/10 border border-green/30 rounded-lg text-center">
-                                <p class="font-mono text-xs text-green font-semibold">Margin Expansion</p>
-                                <p class="font-mono text-[10px] text-text-muted">+400bps</p>
-                            </div>
-                            <div class="w-36 p-3 bg-amber/10 border border-amber/30 rounded-lg text-center">
-                                <p class="font-mono text-xs text-amber font-semibold">Market Share</p>
-                                <p class="font-mono text-[10px] text-text-muted">+12pp</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-}
-
-function renderValidation(container) {
-    container.innerHTML = `
-        <div class="fade-in space-y-6">
-            <div class="flex items-center justify-between">
-                <h2 class="font-display font-bold text-2xl text-text-primary">Validation & QA</h2>
-                <div class="flex gap-2">
-                    <span class="badge bg-green/20 text-green border border-green/30">${osData.validation.gates.filter(g=>g.status==='pass').length} Pass</span>
-                    <span class="badge bg-amber/20 text-amber border border-amber/30">${osData.validation.gates.filter(g=>g.status==='warn').length} Warn</span>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                <div class="glass rounded-xl p-5 text-center">
-                    <p class="font-mono text-[10px] text-text-muted uppercase">Citation Audits</p>
-                    <p class="font-display font-bold text-3xl text-cyan mt-1">${osData.validation.citationAudits}</p>
-                </div>
-                <div class="glass rounded-xl p-5 text-center">
-                    <p class="font-mono text-[10px] text-text-muted uppercase">QA Reviews</p>
-                    <p class="font-display font-bold text-3xl text-purple mt-1">${osData.validation.qaReviews}</p>
-                </div>
-                <div class="glass rounded-xl p-5 text-center">
-                    <p class="font-mono text-[10px] text-text-muted uppercase">Template Checks</p>
-                    <p class="font-display font-bold text-3xl text-green mt-1">${osData.validation.templateChecks}</p>
-                </div>
-            </div>
-
-            <div class="glass rounded-xl p-6">
-                <h4 class="font-display font-semibold text-text-primary mb-4">Quality Gates</h4>
-                <div class="space-y-3">
-                    ${osData.validation.gates.map(g => `
-                        <div class="flex items-center gap-4 p-4 rounded-lg ${g.status==='pass'?'bg-green/5 border border-green/20':g.status==='warn'?'bg-amber/5 border border-amber/20':'bg-red/5 border border-red/20'}">
-                            <span class="material-symbols-outlined ${g.status==='pass'?'text-green':g.status==='warn'?'text-amber':'text-red'} text-2xl">
-                                ${g.status==='pass'?'check_circle':g.status==='warn'?'warning':'error'}
-                            </span>
-                            <div class="flex-1">
-                                <h5 class="font-mono text-sm text-text-primary font-semibold">${g.name}</h5>
-                                <p class="font-mono text-[10px] text-text-muted">Sections: ${g.sections}</p>
-                            </div>
-                            <span class="badge ${g.status==='pass'?'bg-green/20 text-green border border-green/30':g.status==='warn'?'bg-amber/20 text-amber border border-amber/30':'bg-red/20 text-red border border-red/30'}">${g.status.toUpperCase()}</span>
-                            ${g.issues > 0 ? `<span class="font-mono text-xs text-red font-semibold">${g.issues} issues</span>` : ''}
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-
-            <div class="glass rounded-xl p-6">
-                <h4 class="font-display font-semibold text-text-primary mb-4">McKinsey Lens Checklist</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    ${['SCQA structure enforced','Pyramid Principle applied','MECE breakdown verified','Hypothesis-driven analysis','Value driver tree complete','Leading/lagging KPIs split','So-what? test passed','Action-oriented recommendations'].map(item => `
-                        <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
-                            <span class="material-symbols-outlined text-green text-sm filled">check_circle</span>
-                            <span class="font-mono text-xs text-text-primary">${item}</span>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-        </div>
-    `;
-}
-
-function renderProjects(container) {
-    container.innerHTML = `
-        <div class="fade-in space-y-6">
-            <div class="flex items-center justify-between">
-                <h2 class="font-display font-bold text-2xl text-text-primary">Projects & Deliverables</h2>
-                <span class="font-mono text-[10px] text-text-muted">MBA Capstone G02  |  AASTMT</span>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div class="glass rounded-xl p-6">
-                    <h4 class="font-display font-semibold text-text-primary mb-4">Active Deliverables</h4>
-                    <div class="space-y-3">
-                        <div class="p-4 bg-cyan/5 rounded-lg border border-cyan/20">
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="font-mono text-xs text-cyan font-semibold">Business Plan v2</span>
-                                <span class="badge bg-cyan/20 text-cyan border border-cyan/30">DRAFTING</span>
-                            </div>
-                            <div class="h-2 bg-white/5 rounded-full overflow-hidden">
-                                <div class="h-full bg-cyan rounded-full" style="width: 73%;"></div>
-                            </div>
-                            <p class="font-mono text-[10px] text-text-muted mt-2">14 sections  |  11,500 words  |  Stage 14/19</p>
-                        </div>
-                        <div class="p-4 bg-purple/5 rounded-lg border border-purple/20">
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="font-mono text-xs text-purple font-semibold">OS Structure Document</span>
-                                <span class="badge bg-amber/20 text-amber border border-amber/30">PLANNED</span>
-                            </div>
-                            <p class="font-mono text-[10px] text-text-muted">Required capstone deliverable  |  Not yet started</p>
-                        </div>
-                        <div class="p-4 bg-green/5 rounded-lg border border-green/20">
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="font-mono text-xs text-green font-semibold">Group Presentation</span>
-                                <span class="badge bg-amber/20 text-amber border border-amber/30">PLANNED</span>
-                            </div>
-                            <p class="font-mono text-[10px] text-text-muted">30 slides  |  5 min x 6 members  |  Blocked on role assignment</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass rounded-xl p-6">
-                    <h4 class="font-display font-semibold text-text-primary mb-4">Export Status</h4>
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                            <div class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-cyan">description</span>
-                                <span class="font-mono text-xs text-text-primary">DOCX Export</span>
-                            </div>
-                            <span class="badge bg-green/20 text-green border border-green/30">READY</span>
-                        </div>
-                        <div class="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                            <div class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-red">picture_as_pdf</span>
-                                <span class="font-mono text-xs text-text-primary">PDF Export</span>
-                            </div>
-                            <span class="badge bg-amber/20 text-amber border border-amber/30">CHROMIUM</span>
-                        </div>
-                        <div class="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-                            <div class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-purple">archive</span>
-                                <span class="font-mono text-xs text-text-primary">Vault Archive</span>
-                            </div>
-                            <span class="badge bg-green/20 text-green border border-green/30">CURRENT</span>
-                        </div>
-                    </div>
-                    <div class="mt-4 p-3 bg-amber/5 rounded-lg border border-amber/20">
-                        <p class="font-mono text-[10px] text-amber">Note: PDF export uses Chromium workaround. LibreOffice unavailable in this environment.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-}
-
-function renderMemory(container) {
-    container.innerHTML = `
-        <div class="fade-in space-y-6">
-            <div class="flex items-center justify-between">
-                <h2 class="font-display font-bold text-2xl text-text-primary">System Memory</h2>
-                <span class="font-mono text-[10px] text-text-muted">4 tracking files  |  3 identity files</span>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                ${[
-                    {file:'CLAUDE.md', desc:'Project instructions', size:'4.2 KB', status:'current'},
-                    {file:'MEMORY.md', desc:'Facts & decisions', size:'8.1 KB', status:'current'},
-                    {file:'PROJECT_PROGRESS.md', desc:'Milestones', size:'3.5 KB', status:'current'},
-                    {file:'SESSION_LOG.md', desc:'Session history', size:'12.3 KB', status:'current'}
-                ].map(m => `
-                    <div class="glass rounded-xl p-5">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="material-symbols-outlined text-cyan text-sm">description</span>
-                            <span class="font-mono text-xs text-text-primary font-semibold">${m.file}</span>
-                        </div>
-                        <p class="font-mono text-[10px] text-text-muted">${m.desc}</p>
-                        <div class="flex items-center justify-between mt-3 pt-3 border-t border-white/5">
-                            <span class="font-mono text-[10px] text-text-muted">${m.size}</span>
-                            <span class="badge bg-green/20 text-green border border-green/30">${m.status}</span>
-                        </div>
-                    </div>
-                `).join('')}
-            </div>
-
-            <div class="glass rounded-xl p-6">
-                <h4 class="font-display font-semibold text-text-primary mb-4">Identity Configuration</h4>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="p-4 bg-purple/5 rounded-lg border border-purple/20">
-                        <p class="font-mono text-[10px] text-purple uppercase mb-1">soul.md</p>
-                        <p class="font-mono text-xs text-text-primary">AI behavior rules and ethical constraints</p>
-                    </div>
-                    <div class="p-4 bg-cyan/5 rounded-lg border border-cyan/20">
-                        <p class="font-mono text-[10px] text-cyan uppercase mb-1">identity.md</p>
-                        <p class="font-mono text-xs text-text-primary">AI role definition and capabilities</p>
-                    </div>
-                    <div class="p-4 bg-green/5 rounded-lg border border-green/20">
-                        <p class="font-mono text-[10px] text-green uppercase mb-1">user.md</p>
-                        <p class="font-mono text-xs text-text-primary">Owner profile and preferences</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-}
-
-function renderLogs(container) {
-    container.innerHTML = `
-        <div class="fade-in space-y-6">
-            <div class="flex items-center justify-between">
-                <h2 class="font-display font-bold text-2xl text-text-primary">Session Logs</h2>
-                <span class="font-mono text-[10px] text-text-muted">${osData.sessions.length} sessions  |  Newest first</span>
-            </div>
-
-            <div class="glass rounded-xl overflow-hidden">
-                <table class="w-full">
-                    <thead>
-                        <tr class="border-b border-white/5">
-                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase">Session</th>
-                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase">Date</th>
-                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase">Duration</th>
-                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase">Stages</th>
-                            <th class="text-left p-4 font-mono text-[10px] text-text-muted uppercase">Outcome</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${osData.sessions.map(s => `
-                            <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                <td class="p-4">
-                                    <span class="font-mono text-xs text-cyan font-semibold">${s.id}</span>
-                                </td>
-                                <td class="p-4 font-mono text-xs text-text-primary">${s.date}</td>
-                                <td class="p-4 font-mono text-xs text-text-primary">${s.duration}</td>
-                                <td class="p-4">
-                                    ${s.stages.map(st => `<span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-text-muted mr-1">${st}</span>`).join('')}
-                                </td>
-                                <td class="p-4">
-                                    <span class="badge ${s.outcome==='Complete'?'bg-green/20 text-green border border-green/30':s.outcome==='In Progress'?'bg-cyan/20 text-cyan border border-cyan/30':'bg-amber/20 text-amber border border-amber/30'}">${s.outcome}</span>
-                                </td>
-                            </tr>
-                        `).join('')}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    `;
-}
-
-// ===================== ACTIONS =====================
-
-function triggerExport() {
-    alert('Export Control: Select format (DOCX / PDF / Archive) from footer buttons.');
-}
-
-function exportPDF() {
-    alert('PDF Export: Using Chromium headless workaround. Ensure Playwright is installed.');
-}
-
-function exportDOCX() {
-    alert('DOCX Export: Ready via python-docx. Run scripts/export_business_plan.py');
-}
-
-function archiveSession() {
-    alert('Archive: Session snapshot saved to vault/_maintenance/changelists/');
-}
-
-// ===================== INIT =====================
-
-document.addEventListener('DOMContentLoaded', () => {
-    renderDashboard(document.getElementById('content-area'));
-});
+$('#export-btn').addEventListener('click', () => { location.hash = '#/publication'; });
+window.addEventListener('hashchange', route);
+wireSearch();
+route();
 </script>
 </body>
 </html>
